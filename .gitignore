@@ -1,0 +1,12 @@
+.DS_Store
+.env
+node_modules/
+dist/
+data/screenshots/
+data/downloads/
+data/traces/
+data/profiles/
+data/pw-browsers/
+data/runs/
+data/tmp/
+data/npm-cache/
