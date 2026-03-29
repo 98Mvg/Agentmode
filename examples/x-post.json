@@ -1,0 +1,92 @@
+{
+  "name": "x-post",
+  "steps": [
+    {
+      "type": "goto",
+      "url": "https://x.com/i/flow/login"
+    },
+    {
+      "type": "waitForTarget",
+      "target": {
+        "selector": "input[autocomplete='username']"
+      }
+    },
+    {
+      "type": "fill",
+      "target": {
+        "selector": "input[autocomplete='username']"
+      },
+      "value": "{{env:X_TEST_USERNAME}}"
+    },
+    {
+      "type": "click",
+      "target": {
+        "role": "button",
+        "name": "Next"
+      }
+    },
+    {
+      "type": "waitForTarget",
+      "target": {
+        "selector": "input[autocomplete='current-password']"
+      }
+    },
+    {
+      "type": "fill",
+      "target": {
+        "selector": "input[autocomplete='current-password']"
+      },
+      "value": "{{env:X_TEST_PASSWORD}}"
+    },
+    {
+      "type": "click",
+      "target": {
+        "role": "button",
+        "name": "Log in"
+      }
+    },
+    {
+      "type": "waitForUrlContains",
+      "value": "x.com"
+    },
+    {
+      "type": "goto",
+      "url": "https://x.com/compose/post"
+    },
+    {
+      "type": "waitForTarget",
+      "target": {
+        "selector": "div[role='textbox'][data-testid='tweetTextarea_0']"
+      }
+    },
+    {
+      "type": "fill",
+      "target": {
+        "selector": "div[role='textbox'][data-testid='tweetTextarea_0']"
+      },
+      "valueFile": "../content/x-post.txt"
+    },
+    {
+      "type": "screenshot",
+      "path": "x-preview.png"
+    },
+    {
+      "type": "publish",
+      "target": {
+        "selector": "[data-testid='tweetButtonInline']"
+      }
+    },
+    {
+      "type": "sleep",
+      "ms": 4000
+    },
+    {
+      "type": "screenshot",
+      "path": "x-result.png"
+    },
+    {
+      "type": "extract",
+      "path": "x-page.txt"
+    }
+  ]
+}

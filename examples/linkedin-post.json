@@ -1,0 +1,89 @@
+{
+  "name": "linkedin-post",
+  "steps": [
+    {
+      "type": "goto",
+      "url": "https://www.linkedin.com/login"
+    },
+    {
+      "type": "waitForTarget",
+      "target": {
+        "selector": "input[name='session_key']"
+      }
+    },
+    {
+      "type": "fill",
+      "target": {
+        "selector": "input[name='session_key']"
+      },
+      "value": "{{env:LINKEDIN_TEST_EMAIL}}"
+    },
+    {
+      "type": "fill",
+      "target": {
+        "selector": "input[name='session_password']"
+      },
+      "value": "{{env:LINKEDIN_TEST_PASSWORD}}"
+    },
+    {
+      "type": "click",
+      "target": {
+        "selector": "button[type='submit']"
+      }
+    },
+    {
+      "type": "waitForUrlContains",
+      "value": "linkedin.com"
+    },
+    {
+      "type": "waitForTarget",
+      "target": {
+        "role": "button",
+        "name": "Start a post"
+      }
+    },
+    {
+      "type": "click",
+      "target": {
+        "role": "button",
+        "name": "Start a post"
+      }
+    },
+    {
+      "type": "waitForTarget",
+      "target": {
+        "selector": "div[role='textbox']"
+      }
+    },
+    {
+      "type": "fill",
+      "target": {
+        "selector": "div[role='textbox']"
+      },
+      "valueFile": "../content/linkedin-post.txt"
+    },
+    {
+      "type": "screenshot",
+      "path": "linkedin-preview.png"
+    },
+    {
+      "type": "publish",
+      "target": {
+        "role": "button",
+        "name": "Post"
+      }
+    },
+    {
+      "type": "sleep",
+      "ms": 4000
+    },
+    {
+      "type": "screenshot",
+      "path": "linkedin-result.png"
+    },
+    {
+      "type": "extract",
+      "path": "linkedin-page.txt"
+    }
+  ]
+}

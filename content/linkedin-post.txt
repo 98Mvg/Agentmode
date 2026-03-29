@@ -1,0 +1,3 @@
+We built Coachi for runners who want guidance during the workout, not just before it.
+
+Real-time voice coaching, Apple Watch heart-rate awareness, and a post-run debrief in one flow.

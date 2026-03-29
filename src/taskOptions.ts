@@ -2,7 +2,6 @@ import { BrowserTaskOptions } from "./browserTask.js";
 
 export function parseTaskArgs(argv: string[]): BrowserTaskOptions {
   const options: BrowserTaskOptions = {
-    url: "",
     headless: true,
     timeoutMs: 30000
   };
@@ -14,6 +13,10 @@ export function parseTaskArgs(argv: string[]): BrowserTaskOptions {
     switch (arg) {
       case "--url":
         options.url = next || "";
+        i += 1;
+        break;
+      case "--script-file":
+        options.scriptFile = next || "";
         i += 1;
         break;
       case "--wait-for-text":
@@ -36,6 +39,9 @@ export function parseTaskArgs(argv: string[]): BrowserTaskOptions {
         options.timeoutMs = Number(next || 30000);
         i += 1;
         break;
+      case "--allow-live-publish":
+        options.allowLivePublish = true;
+        break;
       case "--headed":
         options.headless = false;
         break;
@@ -47,8 +53,8 @@ export function parseTaskArgs(argv: string[]): BrowserTaskOptions {
     }
   }
 
-  if (!options.url) {
-    throw new Error("Missing required --url");
+  if (!options.url && !options.scriptFile) {
+    throw new Error("Missing required --url or --script-file");
   }
 
   return options;

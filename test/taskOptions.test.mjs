@@ -22,6 +22,18 @@ test('parseTaskArgs parses core browser task flags', () => {
   assert.equal(result.headless, false);
 });
 
-test('parseTaskArgs requires url', () => {
-  assert.throws(() => parseTaskArgs([]), /Missing required --url/);
+test('parseTaskArgs parses script and publish flags', () => {
+  const result = parseTaskArgs([
+    '--script-file', 'examples/x-post.json',
+    '--run-label', 'publish-dry-run',
+    '--allow-live-publish'
+  ]);
+
+  assert.equal(result.scriptFile, 'examples/x-post.json');
+  assert.equal(result.runLabel, 'publish-dry-run');
+  assert.equal(result.allowLivePublish, true);
+});
+
+test('parseTaskArgs requires url or script file', () => {
+  assert.throws(() => parseTaskArgs([]), /Missing required --url or --script-file/);
 });

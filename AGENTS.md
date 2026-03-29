@@ -7,6 +7,7 @@ This repo packages Playwright browser automation so Codex cloud can run real bro
 - Keep one runtime path for browser automation.
 - Use Playwright directly from repo scripts for Codex cloud tasks.
 - Keep artifacts in `data/`.
+- Extend the existing `browser:task` runner rather than adding parallel task runners.
 
 ## Stack
 - Node.js
@@ -36,5 +37,6 @@ npm run build
 ```bash
 npm run browser:smoke
 npm run browser:task -- --url https://example.com --wait-for-text "Example Domain" --screenshot smoke.png --extract smoke.txt
+npm run browser:task -- --script-file examples/x-post.json --run-label x-dry-run
 npm test
 ```
