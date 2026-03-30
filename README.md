@@ -21,6 +21,8 @@ npm run install:browsers
 npm run build
 ```
 
+The browser install step uses Playwright's `--with-deps` mode so Linux cloud environments pull the required browser system libraries automatically.
+
 ## Verify locally
 ```bash
 npm test
@@ -85,6 +87,8 @@ String values can reference secrets from the environment:
    ```text
    Run `npm run browser:task -- --script-file examples/x-post.json --run-label x-test-dry-run` and return the preview screenshot path.
    ```
+
+If a cloud run still complains that `--url` is required when using `--script-file`, the environment is on an older commit. Refresh the environment to the latest `main` before testing publish scripts.
 
 ## Recommended Codex cloud settings
 - Enable internet access only for required domains.

@@ -7,7 +7,7 @@
     "dev": "PLAYWRIGHT_BROWSERS_PATH=./data/pw-browsers BROWSER_MCP_DATA_ROOT=./data tsx src/server.ts",
     "build": "tsc -p tsconfig.json",
     "start": "PLAYWRIGHT_BROWSERS_PATH=./data/pw-browsers BROWSER_MCP_DATA_ROOT=./data node dist/server.js",
-    "install:browsers": "PLAYWRIGHT_BROWSERS_PATH=./data/pw-browsers playwright install chromium",
+    "install:browsers": "PLAYWRIGHT_BROWSERS_PATH=./data/pw-browsers playwright install --with-deps chromium",
     "browser:task": "PLAYWRIGHT_BROWSERS_PATH=./data/pw-browsers BROWSER_MCP_DATA_ROOT=./data node dist/tasks/cloudTask.js",
     "browser:smoke": "PLAYWRIGHT_BROWSERS_PATH=./data/pw-browsers BROWSER_MCP_DATA_ROOT=./data node dist/tasks/smoke.js",
     "test": "npm run build -- --pretty false && node --test test/*.test.mjs"
