@@ -26,12 +26,14 @@ test('parseTaskArgs parses script and publish flags', () => {
   const result = parseTaskArgs([
     '--script-file', 'examples/x-post.json',
     '--run-label', 'publish-dry-run',
-    '--allow-live-publish'
+    '--allow-live-publish',
+    '--ignore-https-errors'
   ]);
 
   assert.equal(result.scriptFile, 'examples/x-post.json');
   assert.equal(result.runLabel, 'publish-dry-run');
   assert.equal(result.allowLivePublish, true);
+  assert.equal(result.ignoreHttpsErrors, true);
 });
 
 test('parseTaskArgs requires url or script file', () => {

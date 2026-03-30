@@ -14,6 +14,7 @@ export type BrowserTaskOptions = {
   runLabel?: string;
   timeoutMs?: number;
   allowLivePublish?: boolean;
+  ignoreHttpsErrors?: boolean;
 };
 
 export type BrowserTaskResult = {
@@ -47,7 +48,14 @@ export async function runBrowserTask(options: BrowserTaskOptions): Promise<Brows
 
   console.error(`[browserTask] launching chromium headless=${options.headless ?? defaultHeadless}`);
   const browser = await chromium.launch({ headless: options.headless ?? defaultHeadless });
-  const context = await browser.newContext({ acceptDownloads: true });
+  const ignoreHttpsErrors = options.ignoreHttpsErrors ?? process.env.BROWSER_MCP_IGNORE_HTTPS_ERRORS === "true";
+  if (ignoreHttpsErrors) {
+    console.error(`[browserTask] ignoring HTTPS errors for this run`);
+  }
+  const context = await browser.newContext({
+    acceptDownloads: true,
+    ignoreHTTPSErrors: ignoreHttpsErrors
+  });
   const page = await context.newPage();
 
   try {

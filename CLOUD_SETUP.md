@@ -31,14 +31,14 @@ Use a dedicated test-account environment first. Add credentials as environment s
 
 Example X dry run:
 ```text
-Run `npm run browser:task -- --script-file examples/x-post.json --run-label x-dry-run` and return the preview screenshot path plus any missing-selector errors.
+Run `npm run browser:task -- --script-file examples/x-post.json --run-label x-dry-run --ignore-https-errors` and return the preview screenshot path plus any missing-selector errors.
 ```
 
 If the environment still says `--url` is required, it is running an older checkout from before commit `82133e2`. Refresh or recreate the environment so it pulls the latest `main`.
 
 Example X live publish:
 ```text
-Run `npm run browser:task -- --script-file examples/x-post.json --run-label x-live --allow-live-publish` and return the resulting URL, screenshots, and extracted page text.
+Run `npm run browser:task -- --script-file examples/x-post.json --run-label x-live --allow-live-publish --ignore-https-errors` and return the resulting URL, screenshots, and extracted page text.
 ```
 
 Good first secrets:
@@ -48,3 +48,5 @@ Good first secrets:
 - `LINKEDIN_TEST_PASSWORD`
 
 For browser login and publish flows, allow `POST` requests at minimum in the Codex cloud environment.
+
+If a target site fails with `ERR_CERT_AUTHORITY_INVALID` in the cloud environment, rerun with `--ignore-https-errors`. Use that only for trusted test-account flows.

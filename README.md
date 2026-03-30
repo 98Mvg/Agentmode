@@ -41,12 +41,12 @@ The same `browser:task` entrypoint now supports JSON action scripts.
 
 Example dry run:
 ```bash
-npm run browser:task -- --script-file examples/x-post.json --run-label x-dry-run
+npm run browser:task -- --script-file examples/x-post.json --run-label x-dry-run --ignore-https-errors
 ```
 
 Example live publish:
 ```bash
-npm run browser:task -- --script-file examples/x-post.json --run-label x-live --allow-live-publish
+npm run browser:task -- --script-file examples/x-post.json --run-label x-live --allow-live-publish --ignore-https-errors
 ```
 
 Supported step types:
@@ -64,6 +64,8 @@ Supported step types:
 - `publish`
 
 `publish` is guarded: it is skipped unless `--allow-live-publish` is present.
+
+If the cloud environment hits certificate errors on a trusted target, add `--ignore-https-errors` for that run. Do not enable it by default for sensitive production credentials.
 
 String values can reference secrets from the environment:
 ```json

@@ -42,6 +42,9 @@ export function parseTaskArgs(argv: string[]): BrowserTaskOptions {
       case "--allow-live-publish":
         options.allowLivePublish = true;
         break;
+      case "--ignore-https-errors":
+        options.ignoreHttpsErrors = true;
+        break;
       case "--headed":
         options.headless = false;
         break;
