@@ -50,3 +50,13 @@ Good first secrets:
 For browser login and publish flows, allow `POST` requests at minimum in the Codex cloud environment.
 
 If a target site fails with `ERR_CERT_AUTHORITY_INVALID` in the cloud environment, rerun with `--ignore-https-errors`. Use that only for trusted test-account flows.
+
+### X-specific allowlist
+X's login shell usually needs more than `x.com` alone. If the browser shows `Something went wrong. Try reloading.` before the login form appears, expand the environment allowlist to include:
+- `x.com`
+- `api.x.com`
+- `abs.twimg.com`
+- `pbs.twimg.com`
+- `twitter.com`
+
+That error often means the app shell loaded but required X assets or auth endpoints were blocked by the cloud environment.

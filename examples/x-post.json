@@ -8,13 +8,13 @@
     {
       "type": "waitForTarget",
       "target": {
-        "selector": "input[autocomplete='username']"
+        "selector": "input[autocomplete='username'], input[name='text']"
       }
     },
     {
       "type": "fill",
       "target": {
-        "selector": "input[autocomplete='username']"
+        "selector": "input[autocomplete='username'], input[name='text']"
       },
       "value": "{{env:X_TEST_USERNAME}}"
     },
@@ -28,13 +28,13 @@
     {
       "type": "waitForTarget",
       "target": {
-        "selector": "input[autocomplete='current-password']"
+        "selector": "input[autocomplete='current-password'], input[name='password']"
       }
     },
     {
       "type": "fill",
       "target": {
-        "selector": "input[autocomplete='current-password']"
+        "selector": "input[autocomplete='current-password'], input[name='password']"
       },
       "value": "{{env:X_TEST_PASSWORD}}"
     },

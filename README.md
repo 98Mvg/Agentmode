@@ -67,6 +67,15 @@ Supported step types:
 
 If the cloud environment hits certificate errors on a trusted target, add `--ignore-https-errors` for that run. Do not enable it by default for sensitive production credentials.
 
+For X browser flows, allowlist more than `x.com` in Codex cloud. A minimal working set is usually:
+- `x.com`
+- `api.x.com`
+- `abs.twimg.com`
+- `pbs.twimg.com`
+- `twitter.com`
+
+If you only allow `x.com`, X often renders the `Something went wrong. Try reloading.` shell instead of the real login form.
+
 String values can reference secrets from the environment:
 ```json
 { "value": "{{env:X_TEST_USERNAME}}" }
