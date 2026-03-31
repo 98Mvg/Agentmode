@@ -49,15 +49,35 @@ Why it fits:
 - same short-form correction content works here
 - stronger trust layer than TikTok
 - better profile-level conversion surface once someone checks the brand
+- serious beginners and intermediate runners can be converted here after the pain hook lands
 
 What Coachi should do:
 - repost TikTok-native runner mistake videos
+- keep the feed centered on runner pain before product explanation
 - pin the clearest "start here" content
 - keep profile messaging tight around `AI coach, not tracking app`
+
+Instagram content split:
+- `70%` runner mistakes
+- `20%` Coachi app
+- `10%` build story
+
+Instagram format split:
+- Reels are the main driver and should be about `80%` of posts
+- carousels should be used `1 to 2` times per week for depth and saves
+- stories are daily engagement support when useful
+
+Reels default structure:
+1. hook
+2. problem
+3. fix
+4. CTA
 
 Creative rule:
 - reuse the same runner face across related Instagram and TikTok organic visuals
 - keep the same hook and message unless the platform context clearly demands a rewrite
+- keep the look clean, minimal, and performance-focused
+- use the existing asset system and video pipeline rather than building an Instagram-only workflow
 
 Why it ranks second:
 - lower creation cost because it reuses TikTok
@@ -185,6 +205,7 @@ Why it ranks seventh:
 
 - TikTok is the primary free-reach engine.
 - Instagram Reels is the reuse-and-trust layer.
+- Instagram is also the first visual conversion layer after TikTok attention.
 - SEO is the long-term compounding layer.
 - ASO is the highest-intent free discovery layer.
 - Reddit is for insight first, traffic second.
@@ -206,8 +227,9 @@ Why it ranks seventh:
 
 1. Build TikTok hooks around one runner mistake at a time.
 2. Reuse the best TikTok pieces on Instagram Reels.
-3. Turn recurring questions into SEO pages on `Coachi.no`.
-4. Tighten App Store screenshots and keyword positioning.
-5. Use comments daily to borrow attention from larger creators.
-6. Use Reddit selectively for insight and occasional authority.
-7. Capture email only after the landing page message is working.
+3. Turn the clearest recurring runner-confusion topics into Instagram carousels.
+4. Turn recurring questions into SEO pages on `Coachi.no`.
+5. Tighten App Store screenshots and keyword positioning.
+6. Use comments daily to borrow attention from larger creators.
+7. Use Reddit selectively for insight and occasional authority.
+8. Capture email only after the landing page message is working.

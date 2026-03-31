@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-Generate Coachi marketing images with Gemini 2.5 Flash Image.
+Low-level Gemini image backend for Coachi marketing assets.
 
-Single image:
+Primary public CLI:
+  scripts/gemini-cli image generate ...
+  scripts/gemini-cli image generate-batch ...
+
+Low-level backend debug examples:
   python3 scripts/generate_gemini_images.py generate \
     --prompt-file inputs/notes/watch-check-prompt.txt \
     --output content/ads/generated/watch-check-v1.png
@@ -24,6 +28,7 @@ from pathlib import Path
 
 
 DEFAULT_MODEL = "gemini-2.5-flash-image"
+DEFAULT_TEXT_MODEL = "gemini-2.5-flash"
 
 
 def load_api_key() -> str:
@@ -89,6 +94,31 @@ def extract_first_image(response) -> bytes:
     raise RuntimeError("No image returned from Gemini response.")
 
 
+def extract_text(response) -> str:
+    text_parts: list[str] = []
+    part_groups = []
+    response_parts = getattr(response, "parts", None)
+    if response_parts:
+        part_groups.append(response_parts)
+
+    candidates = getattr(response, "candidates", None) or []
+    for candidate in candidates:
+        content = getattr(candidate, "content", None)
+        parts = getattr(content, "parts", None)
+        if parts:
+            part_groups.append(parts)
+
+    for parts in part_groups:
+        for part in parts:
+            text = getattr(part, "text", None)
+            if text and text.strip():
+                text_parts.append(text.strip())
+
+    if text_parts:
+        return "\n".join(text_parts).strip()
+    raise RuntimeError("No text returned from Gemini response.")
+
+
 def generate_image(client, genai, prompt: str, model: str) -> bytes:
     attempts = [
         {
@@ -113,6 +143,88 @@ def generate_image(client, genai, prompt: str, model: str) -> bytes:
             last_error = exc
 
     raise last_error or RuntimeError("Gemini image generation failed.")
+
+
+def generate_text(client, prompt: str, model: str) -> str:
+    response = client.models.generate_content(
+        model=model,
+        contents=[prompt],
+    )
+    return extract_text(response)
+
+
+def _extract_json_object(raw_text: str) -> dict[str, object]:
+    text = raw_text.strip()
+    if text.startswith("```"):
+        lines = text.splitlines()
+        if len(lines) >= 3:
+            text = "\n".join(lines[1:-1]).strip()
+
+    start = text.find("{")
+    end = text.rfind("}")
+    if start == -1 or end == -1 or end <= start:
+        raise RuntimeError(f"Gemini text optimizer did not return JSON: {raw_text[:400]}")
+
+    payload = json.loads(text[start : end + 1])
+    if not isinstance(payload, dict):
+        raise RuntimeError("Gemini text optimizer response must be a JSON object.")
+    return payload
+
+
+def optimize_video_text_spec(client, spec: dict[str, object], model: str = DEFAULT_TEXT_MODEL) -> dict[str, object]:
+    hook_text = str(spec.get("hook_text") or "").strip()
+    body_text = str(spec.get("body_text") or spec.get("subtitle_text") or "").strip()
+    cta_text = str(spec.get("cta_text") or "").strip()
+    voiceover_text = str(spec.get("voiceover_text") or "").strip()
+    prompt = f"""
+You are optimizing on-screen text for Coachi short-form videos.
+
+Rules:
+- Audience: serious beginners to intermediate runners
+- Goal: high-clarity correction-style messaging for Instagram Reels and TikTok
+- Hook must be short, bold, and curiosity-driving
+- Body must explain one correction clearly
+- CTA must be subtle and short
+- Keep the text optimized for one message per screen
+- Do not over-brand the content
+- Return strict JSON only
+
+Allowed keys:
+- hook_text
+- body_text
+- cta_text
+- accent_type
+- voiceover_text
+
+accent_type must be one of: "none", "wrong", "correct"
+
+Current spec:
+{json.dumps({
+    "hook_text": hook_text,
+    "body_text": body_text,
+    "cta_text": cta_text,
+    "voiceover_text": voiceover_text,
+}, ensure_ascii=False)}
+""".strip()
+
+    raw = generate_text(client, prompt, model)
+    optimized = _extract_json_object(raw)
+
+    accent_type = str(optimized.get("accent_type") or "none").strip().lower()
+    if accent_type not in {"none", "wrong", "correct"}:
+        accent_type = "none"
+
+    merged = dict(spec)
+    if optimized.get("hook_text"):
+        merged["hook_text"] = str(optimized["hook_text"]).strip()
+    if optimized.get("body_text"):
+        merged["body_text"] = str(optimized["body_text"]).strip()
+    if optimized.get("cta_text") is not None:
+        merged["cta_text"] = str(optimized.get("cta_text") or "").strip()
+    merged["accent_type"] = accent_type
+    if optimized.get("voiceover_text"):
+        merged["voiceover_text"] = str(optimized["voiceover_text"]).strip()
+    return merged
 
 
 def read_prompt(prompt: str | None, prompt_file: str | None) -> str:

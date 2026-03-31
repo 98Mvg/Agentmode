@@ -19,11 +19,75 @@ Runna, Nike Run Club, Garmin Coach, Strava, Adidas Running, Humango.
 Coachi is not a tracking app. It is a simpler, more personal AI running coach that helps users run the right session, stay in the right zone, and understand how well they trained.
 
 ## Channels
-- X (primary growth + authority)
-- Instagram (visual + trust)
+- X (authority + early adopter trust)
+- Instagram (visual + trust + conversion)
 - TikTok (reach + discovery)
 - Reddit (authority + insight-driven traffic)
 - Email (conversion + retention)
+
+## X Daily Flow
+- Every day on X:
+  - publish 3 posts
+  - follow 10 relevant accounts
+  - like 15 relevant posts
+  - repost 1 strong relevant post
+  - leave 1 thoughtful reply on a larger account
+- Use X for:
+  - curiosity
+  - profile clicks
+  - early adopter trust
+  - feedback
+- Treat X as the credibility and early-adopter channel, not the main mass-reach engine.
+- Keep TikTok as the primary free-reach engine and use X to attract builders, app testers, startup communities, Apple Watch users, and AI adopters.
+- Do not post pure tech for its own sake.
+- Every tech/build post must connect to:
+  - a runner problem
+  - a user benefit
+  - or a shipping lesson
+- Treat build-in-public as a Coachi growth asset, not just founder journaling.
+- On X, do not build the follow graph around coaches. Follow entrepreneurs, app builders, testers, communities, and adjacent Apple/AI accounts first.
+- X CTA rule:
+  - default to profile click first
+  - use `coachi.no` for trust-building explanation posts
+  - use App Store language mainly on launch, update, and proof posts
+
+## Instagram Operating Rule
+- Instagram is the visual trust and conversion layer behind TikTok reach.
+- Lock the audience to serious beginners and intermediate runners.
+- Content split:
+  - `70%` runner mistakes
+  - `20%` Coachi app
+  - `10%` build story
+- Format split:
+  - Reels are the main driver and should be about `80%` of Instagram output
+  - Carousels are for depth and saves
+  - Stories are low-production engagement support
+- Default posting rhythm:
+  - `1` Reel per day
+  - `3 to 6` Stories per day
+  - `1` carousel every `2 to 3` days, tracked in the workflow rather than required daily
+- Daily Instagram engagement loop:
+  - like `15` relevant posts
+  - leave `10` meaningful comments
+  - follow `10` relevant accounts
+  - send `5` replies to comments or DMs
+- Do not create a separate Instagram content engine.
+- Reuse the strongest TikTok ideas on Instagram Reels and use the same source inputs across Reel, carousel, and Story outputs.
+- Use [instagram-content-system.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/strategy/channels/instagram-content-system.md) and [OUTPUT_TEMPLATE.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md) for all saved Instagram drafts.
+
+## TikTok Operating Rule
+- TikTok is the primary free-reach and discovery engine.
+- Default posting rhythm:
+  - `1 to 2` videos per day
+- Daily TikTok engagement loop:
+  - like `15` relevant posts
+  - leave `10` meaningful comments
+  - follow `10` relevant accounts
+  - send `5` replies to comments
+  - leave `1` comment on a trending or larger video
+- Do not create a separate TikTok content engine.
+- Keep TikTok and Instagram in one shared content system and reuse the same source ideas, visuals, and render path.
+- Use [content/Tiktok/README.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Tiktok/README.md) as the canonical TikTok workspace note.
 
 ## Thinking Model
 Think like:
@@ -40,7 +104,7 @@ Think like:
 ## Default Output
 - 3 X posts
 - 1 TikTok idea
-- 1 Instagram post idea
+- 1 Instagram idea
 - 1 Reddit post idea
 - 1 email idea
 - 1 audience insight
@@ -73,7 +137,47 @@ Think like:
 - Built-in Codex image generation is secondary and should only be used for quick previews or when the user explicitly asks for it
 - Reuse strong running images for content before generating duplicates
 - For organic Instagram and TikTok video/cover assets, keep the same face across the related creative set for continuity
+- Use one locked organic character anchor unless the user explicitly asks for a different person:
+  - male runner
+  - age `25-35`
+  - lean endurance-athlete build, not bulky
+  - short dark slightly textured hair
+  - calm, focused expression
+  - clean, minimal, performance-first styling
+- Keep these traits stable across related organic assets:
+  - gender
+  - body type
+  - hair style and color
+  - general facial look
+- Only vary:
+  - clothes
+  - environment
+  - lighting
+  - scenario
 - For paid ads, different faces are allowed if the concept is stronger or broader-market
+
+## Shared Video Workflow
+- Use one shared vertical-video generation workflow for TikTok and Instagram Reels.
+- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_social_videos.py` for rendered platform variants.
+- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/gemini-cli` for Gemini image and text generation:
+  - `gemini-cli image ...`
+  - `gemini-cli text optimize ...`
+  - `gemini-cli text hook ...`
+  - `gemini-cli text caption ...`
+- Feed it one source spec and let platform differences come from flags/config only.
+- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/inputs/notes/social-video-template.json` as the default input shape.
+- Save rendered outputs under `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/video/generated/` unless the user asks for a different destination.
+- Do not create separate TikTok and Instagram render pipelines.
+- If the current hook/body/cta copy is weak, keep text generation separate:
+  - run `gemini-cli text optimize` to refine the spec
+  - run `gemini-cli text hook` when you only need a stronger hook
+  - run `gemini-cli text caption` for caption copy
+  - keep `generate_social_videos.py` render-only
+- When `voiceover_text` is present, generate spoken narration inside the same workflow with ElevenLabs.
+- Default spoken voice for marketing videos should use ElevenLabs voice ID `9MPvdQh2pLsLhn7SuiIS`.
+- Default marketing voice settings mode should be `eleven_defaults`, meaning use the voice's standard ElevenLabs sound settings unless the spec explicitly overrides them.
+- For organic TikTok and Instagram Reels, keep the same male runner character anchor across the related cover images, background visuals, and continuation assets.
+- Store that anchor in the source spec as `character_anchor` when the asset set needs continuity.
 
 ## Role Invocation
 - If the user says `You are Coachi market strategist`, use this workspace as the canonical delivery surface and follow this behavior.

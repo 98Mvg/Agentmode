@@ -1,0 +1,37 @@
+{
+  "slug": "easy-pace-no-face",
+  "hook_text": "You think this is easy pace?",
+  "body_text": "If your heart rate drifts up, it is not easy anymore.",
+  "cta_text": "Slow down and save this.",
+  "accent_type": "wrong",
+  "background": "/Users/mariusgaarder/Documents/treningscoach/.claude/worktrees/elegant-bardeen/marketing/assets/website/runner-open-road.png",
+  "character_anchor": {
+    "profile": "organic_runner_v1",
+    "gender": "male",
+    "age_range": "25-35",
+    "body_type": "lean endurance athlete",
+    "hair": "short dark slightly textured",
+    "style": "clean minimal performance-focused",
+    "expression": "focused calm",
+    "locked_traits": [
+      "gender",
+      "body_type",
+      "hair",
+      "general_look"
+    ],
+    "allowed_variations": [
+      "clothes",
+      "environment",
+      "lighting",
+      "scenario"
+    ]
+  },
+  "audio": null,
+  "voiceover_text": "You think this is easy pace? If your heart rate drifts up, it is not easy anymore. Slow down until the effort feels controlled again. Save this for your next easy run.",
+  "voice_language": "en",
+  "voice_persona": "personal_trainer",
+  "voice_id_override": "9MPvdQh2pLsLhn7SuiIS",
+  "voice_settings_mode": "eleven_defaults",
+  "logo": null,
+  "duration_seconds": 10
+}

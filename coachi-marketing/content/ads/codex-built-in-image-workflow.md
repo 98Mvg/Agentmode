@@ -118,6 +118,18 @@ Do not overwrite an existing winner unless the new version is intentionally repl
 
 - Reuse strong running images for content before creating new ones.
 - If you are creating a related Instagram + TikTok organic set, keep the same face across the visuals.
+- Default organic runner anchor:
+  - male
+  - age `25-35`
+  - lean endurance-athlete build
+  - short dark slightly textured hair
+  - calm, focused expression
+  - clean, minimal, performance-focused look
+- Keep those traits locked and only vary:
+  - clothes
+  - environment
+  - lighting
+  - scenario
 - If you are creating ads, different faces are acceptable.
 
 ## Post-Generation Workflow

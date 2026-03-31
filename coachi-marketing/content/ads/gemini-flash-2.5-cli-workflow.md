@@ -25,7 +25,9 @@ This is the default Coachi marketing workflow for saved image generation.
 - model: `gemini-2.5-flash-image`
 - SDK: `google-genai`
 - auth: `GEMINI_API_KEY`
-- workspace script:
+- workspace CLI:
+  - [/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/gemini-cli](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/gemini-cli)
+- backend image script:
   - [/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_gemini_images.py](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_gemini_images.py)
 
 ## Setup
@@ -56,7 +58,7 @@ Then run:
 ```bash
 cd /Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing
 
-python3 scripts/generate_gemini_images.py generate \
+scripts/gemini-cli image generate \
   --prompt-file inputs/notes/watch-check-prompt.txt \
   --output content/ads/generated/watch-check-v1.png
 ```
@@ -92,10 +94,30 @@ Run it with:
 ```bash
 cd /Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing
 
-python3 scripts/generate_gemini_images.py generate-batch \
+scripts/gemini-cli image generate-batch \
   --input inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl \
   --out-dir content/ads/generated/carousel-openers \
   --sleep-seconds 1
+```
+
+## Text Helpers
+
+Use the same CLI for short-form copy work without touching the render pipeline:
+
+```bash
+scripts/gemini-cli text optimize \
+  --spec inputs/notes/social-video-template.json \
+  --output outputs/daily/social-video-template.optimized.json
+```
+
+```bash
+scripts/gemini-cli text hook \
+  --spec inputs/notes/social-video-template.json
+```
+
+```bash
+scripts/gemini-cli text caption \
+  --spec inputs/notes/social-video-template.json
 ```
 
 ## Output Rules
@@ -117,6 +139,23 @@ Do not overwrite an existing winner unless the new image is intentionally replac
 
 - Reuse existing strong running images for content before generating new duplicates.
 - For organic Instagram and TikTok video or cover assets, keep the same face across the related image set so the campaign feels like one person/story.
+- Default organic character anchor:
+  - male runner
+  - age `25-35`
+  - lean endurance-athlete build, not bulky
+  - short dark slightly textured hair
+  - calm, focused expression
+  - clean, minimal, performance-focused styling
+- Keep these traits fixed across related organic assets:
+  - gender
+  - body type
+  - hair style and color
+  - general facial look
+- Only vary:
+  - clothes
+  - environment
+  - lighting
+  - scenario
 - For paid ads, different faces are acceptable if the angle is stronger or the audience is broader.
 - If you generate a continuation asset for Instagram and TikTok from the same concept, treat the first approved runner face as the visual anchor and keep subsequent prompts aligned to that person.
 
