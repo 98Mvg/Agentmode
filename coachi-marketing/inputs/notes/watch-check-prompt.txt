@@ -1,0 +1,16 @@
+Generate a premium realistic vertical social image for Coachi, an AI running coach app.
+
+Concept: Stop checking your watch every 20 seconds.
+
+Scene: a runner outdoors mid-run, repeatedly glancing at their watch with visible frustration and uncertainty.
+
+Brand position: Coachi is an AI coach, not a tracking app.
+
+Style: premium realistic fitness photography, cinematic but believable, emotionally sharp, not generic stock-photo energy.
+
+Constraints:
+- no app UI
+- no text on image
+- no logos from other brands
+- do not make it look like a smartwatch advertisement
+- focus on one clear runner problem: too much checking, too much guessing, not enough coaching

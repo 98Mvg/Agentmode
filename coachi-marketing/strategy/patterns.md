@@ -38,3 +38,9 @@ Best examples:
 - "not sure whether to slow down or push"
 - "phone stays in your pocket"
 - "your coach tells you in the moment"
+
+### 7. TikTok First, Instagram Reuse
+For Coachi's free traffic model:
+- build original correction content for TikTok
+- reuse the strongest pieces on Instagram Reels
+- use Instagram more as trust and profile conversion than as a separate ideation engine

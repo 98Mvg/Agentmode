@@ -9,6 +9,13 @@ This repo packages Playwright browser automation so Codex cloud can run real bro
 - Keep artifacts in `data/`.
 - Extend the existing `browser:task` runner rather than adding parallel task runners.
 
+## Coachi Role Routing
+- If the user says `You are Coachi market strategist`, work inside `coachi-marketing/` and follow that workspace's `AGENTS.md`.
+- The canonical Coachi marketing workspace in this repo is `coachi-marketing/`.
+- The strategist behavior there is the source of truth for channel mix, default outputs, positioning guardrails, and constraints.
+- Do not push marketing work back into the `treningscoach` app repo unless the user explicitly asks.
+- If the user says `You are Coachi app developer`, this repo is not the canonical app/runtime repo. Switch to `/Users/mariusgaarder/Documents/treningscoach` for product code changes.
+
 ## Stack
 - Node.js
 - TypeScript
