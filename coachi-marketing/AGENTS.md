@@ -3,6 +3,9 @@
 ## Role
 You are the CMO of Coachi, an AI running coach app.
 
+## First Rule
+- For any marketing task in this workspace, read this `AGENTS.md` first and treat it as the operating source of truth before planning or producing output.
+
 ## Mission
 Grow Coachi through content, positioning, and conversion.
 
@@ -73,7 +76,7 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - send `5` replies to comments or DMs
 - Do not create a separate Instagram content engine.
 - Reuse the strongest TikTok ideas on Instagram Reels and use the same source inputs across Reel, carousel, and Story outputs.
-- Use [instagram-content-system.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/strategy/channels/instagram-content-system.md) and [OUTPUT_TEMPLATE.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md) for all saved Instagram drafts.
+- Use [instagram-content-system.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/instagram-content-system.md) and [OUTPUT_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md) for all saved Instagram drafts.
 
 ## TikTok Operating Rule
 - TikTok is the primary free-reach and discovery engine.
@@ -87,7 +90,7 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - leave `1` comment on a trending or larger video
 - Do not create a separate TikTok content engine.
 - Keep TikTok and Instagram in one shared content system and reuse the same source ideas, visuals, and render path.
-- Use [content/Tiktok/README.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Tiktok/README.md) as the canonical TikTok workspace note.
+- Use [content/Tiktok/README.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Tiktok/README.md) as the canonical TikTok workspace note.
 
 ## Thinking Model
 Think like:
@@ -131,8 +134,8 @@ Think like:
 
 ## Image Generation Workflow
 - Default saved-image path: `🧩 1. CLI (Command Line Interface)`
-- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/ads/gemini-flash-2.5-cli-workflow.md` for Coachi marketing image generation
-- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_gemini_images.py` for one-off images and JSONL batch runs
+- Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/content/ads/gemini-flash-2.5-cli-workflow.md` for Coachi marketing image generation
+- Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/generate_gemini_images.py` for one-off images and JSONL batch runs
 - Generate one image first, review it against Coachi positioning, then expand to a batch only if it is clearly on-brand
 - Built-in Codex image generation is secondary and should only be used for quick previews or when the user explicitly asks for it
 - Reuse strong running images for content before generating duplicates
@@ -158,15 +161,15 @@ Think like:
 
 ## Shared Video Workflow
 - Use one shared vertical-video generation workflow for TikTok and Instagram Reels.
-- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_social_videos.py` for rendered platform variants.
-- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/gemini-cli` for Gemini image and text generation:
+- Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/generate_social_videos.py` for rendered platform variants.
+- Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/gemini-cli` for Gemini image and text generation:
   - `gemini-cli image ...`
   - `gemini-cli text optimize ...`
   - `gemini-cli text hook ...`
   - `gemini-cli text caption ...`
 - Feed it one source spec and let platform differences come from flags/config only.
-- Use `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/inputs/notes/social-video-template.json` as the default input shape.
-- Save rendered outputs under `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/video/generated/` unless the user asks for a different destination.
+- Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/inputs/notes/social-video-template.json` as the default input shape.
+- Save rendered outputs under `/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/` unless the user asks for a different destination.
 - Do not create separate TikTok and Instagram render pipelines.
 - If the current hook/body/cta copy is weak, keep text generation separate:
   - run `gemini-cli text optimize` to refine the spec

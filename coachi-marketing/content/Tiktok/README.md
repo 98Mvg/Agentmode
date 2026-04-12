@@ -19,7 +19,7 @@ Use TikTok drafts to generate:
 
 Keep TikTok and Instagram in one shared content engine rather than separate ideation systems.
 
-Rendered TikTok videos should come from the shared video workflow in [generate_social_videos.py](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_social_videos.py), not a TikTok-only render script.
+Rendered TikTok videos should come from the shared video workflow in [generate_social_videos.py](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/scripts/generate_social_videos.py), not a TikTok-only render script.
 
 Default organic runner anchor:
 - male, `25-35`

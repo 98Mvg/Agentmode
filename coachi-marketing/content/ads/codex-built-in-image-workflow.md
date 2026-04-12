@@ -5,7 +5,7 @@
 Use Codex's built-in image generation path to create one strong Coachi-native social image at a time, review it, iterate once if needed, and save only the selected final.
 
 If the built-in image tool is unavailable in-session, use the Gemini CLI fallback:
-- [gemini-flash-2.5-cli-workflow.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/ads/gemini-flash-2.5-cli-workflow.md)
+- [gemini-flash-2.5-cli-workflow.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/ads/gemini-flash-2.5-cli-workflow.md)
 
 For the Coachi marketing workspace, this is the secondary image path. The default saved-image workflow is `🧩 1. CLI (Command Line Interface)` with Gemini 2.5 Flash Image.
 
@@ -105,7 +105,7 @@ If the generated image is only a preview, it can stay in Codex's default generat
 
 If it is a selected Coachi asset, move or copy it into:
 
-`/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/ads/generated`
+`/Volumes/Riot APFS/Agentmode/coachi-marketing/content/ads/generated`
 
 Use filenames like:
 - `watch-check-v1.png`

@@ -40,14 +40,14 @@ CTA:
 ## Saved Files
 
 - shared render spec:
-  - [2026-03-31-easy-pace-social-video.json](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/inputs/notes/2026-03-31-easy-pace-social-video.json)
+  - [2026-03-31-easy-pace-social-video.json](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/inputs/notes/2026-03-31-easy-pace-social-video.json)
 - TikTok draft:
-  - [2026-03-31-easy-pace-no-face-video.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Tiktok/2026-03-31-easy-pace-no-face-video.md)
+  - [2026-03-31-easy-pace-no-face-video.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Tiktok/2026-03-31-easy-pace-no-face-video.md)
 - Instagram draft:
-  - [2026-03-31-easy-pace-no-face-reel.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/2026-03-31-easy-pace-no-face-reel.md)
+  - [2026-03-31-easy-pace-no-face-reel.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/2026-03-31-easy-pace-no-face-reel.md)
 - voiced renders:
-  - [easy-pace-no-face-tiktok.mp4](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/video/generated/2026-03-31-easy-pace-voice/easy-pace-no-face-tiktok.mp4)
-  - [easy-pace-no-face-instagram.mp4](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/video/generated/2026-03-31-easy-pace-voice/easy-pace-no-face-instagram.mp4)
+  - [easy-pace-no-face-tiktok.mp4](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/video/generated/2026-03-31-easy-pace-voice/easy-pace-no-face-tiktok.mp4)
+  - [easy-pace-no-face-instagram.mp4](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/video/generated/2026-03-31-easy-pace-voice/easy-pace-no-face-instagram.mp4)
 
 ## Voice
 

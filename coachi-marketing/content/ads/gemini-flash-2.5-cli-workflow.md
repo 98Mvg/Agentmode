@@ -26,9 +26,9 @@ This is the default Coachi marketing workflow for saved image generation.
 - SDK: `google-genai`
 - auth: `GEMINI_API_KEY`
 - workspace CLI:
-  - [/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/gemini-cli](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/gemini-cli)
+  - [/Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/gemini-cli](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/scripts/gemini-cli)
 - backend image script:
-  - [/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_gemini_images.py](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_gemini_images.py)
+  - [/Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/generate_gemini_images.py](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/scripts/generate_gemini_images.py)
 
 ## Setup
 
@@ -56,7 +56,7 @@ Create a prompt file like:
 Then run:
 
 ```bash
-cd /Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing
+cd "/Volumes/Riot APFS/Agentmode/coachi-marketing"
 
 scripts/gemini-cli image generate \
   --prompt-file inputs/notes/watch-check-prompt.txt \
@@ -87,12 +87,12 @@ Constraints:
 ## Batch Generation
 
 The existing Coachi batch file already works for this CLI:
-- [2026-03-30-gpt-image-1-carousel-batch.jsonl](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl)
+- [2026-03-30-gpt-image-1-carousel-batch.jsonl](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl)
 
 Run it with:
 
 ```bash
-cd /Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing
+cd "/Volumes/Riot APFS/Agentmode/coachi-marketing"
 
 scripts/gemini-cli image generate-batch \
   --input inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl \

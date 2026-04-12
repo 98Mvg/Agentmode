@@ -5,8 +5,8 @@ Use this folder for rendered TikTok and Instagram Reel exports that come from on
 Rules:
 - do not create separate TikTok and Instagram render pipelines
 - generate both platform variants from the same core input
-- use [generate_social_videos.py](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_social_videos.py)
-- use [social-video-template.json](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/inputs/notes/social-video-template.json) as the starting spec shape
+- use [generate_social_videos.py](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/scripts/generate_social_videos.py)
+- use [social-video-template.json](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/inputs/notes/social-video-template.json) as the starting spec shape
 - use the shared short-form text UI:
   - `hook_text` for the large all-caps top hook
   - `body_text` for the centered correction insight

@@ -26,6 +26,6 @@ Rules:
   - lean endurance-athlete build
   - short dark slightly textured hair
   - calm, focused expression
-- save drafts with [OUTPUT_TEMPLATE.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md)
-- use [instagram-content-system.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/strategy/channels/instagram-content-system.md) as the canonical Instagram playbook
-- rendered Reels should come from the shared video workflow in [generate_social_videos.py](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/scripts/generate_social_videos.py), not a separate Instagram-only renderer
+- save drafts with [OUTPUT_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md)
+- use [instagram-content-system.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/instagram-content-system.md) as the canonical Instagram playbook
+- rendered Reels should come from the shared video workflow in [generate_social_videos.py](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/scripts/generate_social_videos.py), not a separate Instagram-only renderer

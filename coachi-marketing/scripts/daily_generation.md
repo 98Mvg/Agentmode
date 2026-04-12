@@ -33,8 +33,8 @@ Generate Coachi traffic content from the latest research and positioning files.
 - The default Instagram output should be a `reel`.
 - Switch to a `carousel` when the every-`2 to 3`-day depth slot is due or when the topic needs step-by-step explanation.
 - Use `story` output for low-production engagement, reposts, or conversion support.
-- Use [strategy/channels/instagram-content-system.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/strategy/channels/instagram-content-system.md) as the canonical Instagram rule set.
-- Save Instagram drafts with [content/Instagram/OUTPUT_TEMPLATE.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md).
+- Use [strategy/channels/instagram-content-system.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/instagram-content-system.md) as the canonical Instagram rule set.
+- Save Instagram drafts with [content/Instagram/OUTPUT_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md).
 
 ## Instagram Content Rules
 - Audience:

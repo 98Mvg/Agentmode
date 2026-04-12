@@ -190,4 +190,4 @@ Every Instagram draft should declare:
 - `reuse_source`: `tiktok` | `instagram-native` | `existing-asset`
 - `same_face_set`: `yes` | `no`
 
-Use [OUTPUT_TEMPLATE.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md) for all saved Instagram drafts.
+Use [OUTPUT_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md) for all saved Instagram drafts.

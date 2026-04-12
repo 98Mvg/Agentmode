@@ -8,20 +8,20 @@ Run the saved Instagram daily loop inside the existing Coachi content engine.
 
 ### Reel
 - ready:
-  - [2026-03-31-easy-pace-no-face-reel.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/2026-03-31-easy-pace-no-face-reel.md)
+  - [2026-03-31-easy-pace-no-face-reel.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/2026-03-31-easy-pace-no-face-reel.md)
 - rendered asset:
-  - [easy-pace-no-face-instagram.mp4](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/video/generated/2026-03-31-easy-pace-v3/easy-pace-no-face-instagram.mp4)
+  - [easy-pace-no-face-instagram.mp4](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/video/generated/2026-03-31-easy-pace-v3/easy-pace-no-face-instagram.mp4)
 - visual check frame:
-  - [2026-03-31-easy-pace-v3-frame.png](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/outputs/daily/2026-03-31-easy-pace-v3-frame.png)
+  - [2026-03-31-easy-pace-v3-frame.png](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/outputs/daily/2026-03-31-easy-pace-v3-frame.png)
 
 ### Stories
 - ready:
-  - [2026-03-31-easy-pace-story-set.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/2026-03-31-easy-pace-story-set.md)
+  - [2026-03-31-easy-pace-story-set.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/2026-03-31-easy-pace-story-set.md)
 
 ### Carousel
 - due today: `yes`
 - ready:
-  - [2026-03-31-why-runs-feel-hard-carousel.md](/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/content/Instagram/2026-03-31-why-runs-feel-hard-carousel.md)
+  - [2026-03-31-why-runs-feel-hard-carousel.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/2026-03-31-why-runs-feel-hard-carousel.md)
 
 ## Engagement Targets
 

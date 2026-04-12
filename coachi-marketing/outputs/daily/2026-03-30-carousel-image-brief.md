@@ -6,7 +6,7 @@ Generate 5 Coachi-native social image concepts for carousel/opening-slide use, t
 ## Generation Status
 - Image generation was not executed in this session because the built-in image tool was unavailable and `OPENAI_API_KEY` was not set for the approved fallback CLI path.
 - The ready-to-run batch file is:
-  - `/Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing/inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl`
+  - `/Volumes/Riot APFS/Agentmode/coachi-marketing/inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl`
 
 ## Run Command
 ```bash
@@ -14,7 +14,7 @@ export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 export IMAGE_GEN="$CODEX_HOME/skills/.system/imagegen/scripts/image_gen.py"
 export OPENAI_API_KEY="YOUR_KEY_HERE"
 
-cd /Users/mariusgaarder/Documents/treningscoach/tmp/agentmode-cloud/coachi-marketing
+cd "/Volumes/Riot APFS/Agentmode/coachi-marketing"
 python "$IMAGE_GEN" generate-batch \
   --input inputs/notes/2026-03-30-gpt-image-1-carousel-batch.jsonl \
   --out-dir content/ads/generated/carousel-openers
