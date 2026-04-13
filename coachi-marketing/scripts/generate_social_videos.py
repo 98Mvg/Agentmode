@@ -402,6 +402,13 @@ def wrap_lines(draw: ImageDraw.ImageDraw, text: str, font, max_width: int) -> li
     return lines
 
 
+def effective_line_gap(requested_gap: int, font_size: int, line_count: int) -> int:
+    if line_count <= 1:
+        return max(0, requested_gap)
+    minimum_gap = max(14, int(font_size * 0.18))
+    return max(requested_gap, minimum_gap)
+
+
 def resolve_stroke_fill(preset: dict[str, Any]) -> tuple[int, int, int, int]:
     raw = preset.get("text_stroke_fill")
     if isinstance(raw, str) and raw.strip():
@@ -535,7 +542,12 @@ def render_hook_layer(spec: dict[str, Any], output_path: Path) -> None:
         bbox = draw.textbbox((0, 0), line, font=hook_font)
         widths.append(bbox[2] - bbox[0])
         heights.append(bbox[3] - bbox[1])
-    text_height = sum(heights) + max(0, len(heights) - 1) * int(preset["hook_line_gap"])
+    hook_line_gap = effective_line_gap(
+        int(preset["hook_line_gap"]),
+        int(preset["hook_font_size"]),
+        len(hook_lines),
+    )
+    text_height = sum(heights) + max(0, len(heights) - 1) * hook_line_gap
     panel_width = min(TARGET_W - preset["safe_left"] - preset["safe_right"], max(widths, default=0) + 92)
     panel_height = text_height + 46
     accent_color = spec.get("accent_color")
@@ -569,7 +581,7 @@ def render_hook_layer(spec: dict[str, Any], output_path: Path) -> None:
         font=hook_font,
         fill=(255, 255, 255, 255),
         shadow_fill=(0, 0, 0, 150),
-        line_gap=int(preset["hook_line_gap"]),
+        line_gap=hook_line_gap,
         stroke_width=int(preset.get("hook_stroke_width", 0)),
         stroke_fill=resolve_stroke_fill(preset),
     )
@@ -594,7 +606,12 @@ def render_body_layer(spec: dict[str, Any], output_path: Path) -> None:
         bbox = draw.textbbox((0, 0), line, font=body_font)
         widths.append(bbox[2] - bbox[0])
         heights.append(bbox[3] - bbox[1])
-    text_height = sum(heights) + max(0, len(heights) - 1) * int(preset["body_line_gap"])
+    body_line_gap = effective_line_gap(
+        int(preset["body_line_gap"]),
+        int(preset["body_font_size"]),
+        len(body_lines),
+    )
+    text_height = sum(heights) + max(0, len(heights) - 1) * body_line_gap
     panel_width = min(TARGET_W - preset["safe_left"] - preset["safe_right"], max(widths, default=0) + 104)
     panel_height = text_height + 54
     body_panel_alpha = int(preset.get("body_panel_alpha", preset["panel_alpha"]))
@@ -620,7 +637,7 @@ def render_body_layer(spec: dict[str, Any], output_path: Path) -> None:
         font=body_font,
         fill=(245, 247, 250, 255),
         shadow_fill=(0, 0, 0, 138),
-        line_gap=int(preset["body_line_gap"]),
+        line_gap=body_line_gap,
         stroke_width=int(preset.get("body_stroke_width", 0)),
         stroke_fill=resolve_stroke_fill(preset),
     )
@@ -645,7 +662,12 @@ def render_cta_layer(spec: dict[str, Any], output_path: Path) -> None:
         bbox = draw.textbbox((0, 0), line, font=cta_font)
         widths.append(bbox[2] - bbox[0])
         heights.append(bbox[3] - bbox[1])
-    text_height = sum(heights) + max(0, len(heights) - 1) * int(preset["cta_line_gap"])
+    cta_line_gap = effective_line_gap(
+        int(preset["cta_line_gap"]),
+        int(preset["cta_font_size"]),
+        len(cta_lines),
+    )
+    text_height = sum(heights) + max(0, len(heights) - 1) * cta_line_gap
     panel_width = min(TARGET_W - preset["safe_left"] - preset["safe_right"], max(widths, default=0) + 92)
     panel_height = text_height + 34
     cta_panel_alpha = int(preset.get("cta_panel_alpha", preset["cta_alpha"]))
@@ -674,7 +696,7 @@ def render_cta_layer(spec: dict[str, Any], output_path: Path) -> None:
         font=cta_font,
         fill=(255, 255, 255, 245),
         shadow_fill=(0, 0, 0, 128),
-        line_gap=int(preset["cta_line_gap"]),
+        line_gap=cta_line_gap,
         stroke_width=int(preset.get("cta_stroke_width", 0)),
         stroke_fill=resolve_stroke_fill(preset),
     )
