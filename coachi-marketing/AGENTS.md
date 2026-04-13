@@ -22,10 +22,10 @@ Runna, Nike Run Club, Garmin Coach, Strava, Adidas Running, Humango.
 Coachi is not a tracking app. It is a simpler, more personal AI running coach that helps users run the right session, stay in the right zone, and understand how well they trained.
 
 ## Channels
-- X (authority + early adopter trust)
+- X (AI-building learnings + founder credibility + early adopter trust)
 - Instagram (visual + trust + conversion)
 - TikTok (reach + discovery)
-- Reddit (authority + insight-driven traffic)
+- Reddit (reply-first authority + insight mining + selective traffic)
 - Email (conversion + retention)
 
 ## X Daily Flow
@@ -36,23 +36,36 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - repost 1 strong relevant post
   - leave 1 thoughtful reply on a larger account
 - Use X for:
-  - curiosity
-  - profile clicks
+  - learning in public
+  - founder credibility
+  - AI-building insight
   - early adopter trust
   - feedback
-- Treat X as the credibility and early-adopter channel, not the main mass-reach engine.
-- Keep TikTok as the primary free-reach engine and use X to attract builders, app testers, startup communities, Apple Watch users, and AI adopters.
+- Treat X as the learning-in-public and credibility channel, not the main mass-reach engine.
+- Keep TikTok as the primary free-reach engine and use X to attract builders, app testers, startup communities, Apple Watch users, AI adopters, and curious early users.
+- Default X mix:
+  - `2` posts on what building Coachi with AI taught you
+  - `1` post on a runner problem, product truth, or user insight
+- Log each X post in the daily run note with one required type:
+  - `AI lesson`
+  - `shipping lesson`
+  - `runner truth`
+- At the end of the run, note which of those types looked strongest and which one was weakest or missing.
 - Do not post pure tech for its own sake.
 - Every tech/build post must connect to:
   - a runner problem
   - a user benefit
   - or a shipping lesson
-- Treat build-in-public as a Coachi growth asset, not just founder journaling.
+- Treat build-in-public as applied learning, not journaling and not ad copy.
+- If a post reads like marketing first and learning second, rewrite it.
+- Most X posts should not carry a direct CTA.
+- Let the profile and pinned post handle most conversion work.
 - On X, do not build the follow graph around coaches. Follow entrepreneurs, app builders, testers, communities, and adjacent Apple/AI accounts first.
 - X CTA rule:
-  - default to profile click first
-  - use `coachi.no` for trust-building explanation posts
-  - use App Store language mainly on launch, update, and proof posts
+  - default to no link
+  - use profile click second
+  - use `coachi.no` only when the post naturally earns an explanation
+  - use App Store language only on launch, update, and proof posts
 
 ## Instagram Operating Rule
 - Instagram is the visual trust and conversion layer behind TikTok reach.
@@ -91,6 +104,29 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
 - Do not create a separate TikTok content engine.
 - Keep TikTok and Instagram in one shared content system and reuse the same source ideas, visuals, and render path.
 - Use [content/Tiktok/README.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Tiktok/README.md) as the canonical TikTok workspace note.
+
+## Reddit Operating Rule
+- Reddit is reply-first, not promo-first.
+- Use Reddit for:
+  - insight mining
+  - language mining
+  - authority through useful answers
+  - selective traffic only when the thread clearly earns it
+- Default daily Reddit behavior:
+  - find `3 to 5` relevant threads
+  - leave `1 to 3` useful replies
+  - create `0 or 1` new post only if there is a clean angle and subreddit fit
+- Lead like a runner first and a founder second.
+- Do not drop links unless the question clearly asks for a practical tool or next step.
+- Save thread URLs, comment URLs, and useful language patterns in the daily output.
+- Log each Reddit reply under one thread pattern:
+  - `watch-checking anxiety`
+  - `heart-rate confusion`
+  - `Apple Watch interpretation`
+  - `Garmin interpretation`
+  - `beginner uncertainty`
+  - `easy-run pace drift`
+- At the end of the run, note which thread patterns produced the best replies, follow-up questions, or profile curiosity.
 
 ## Thinking Model
 Think like:

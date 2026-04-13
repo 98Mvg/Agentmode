@@ -14,7 +14,10 @@ Generate Coachi traffic content from the latest research and positioning files.
 - 3 X posts
 - 1 TikTok idea
 - 1 Instagram idea
-- 1 Reddit post idea
+- 1 Reddit action plan, reply matrix, or post idea
+- 1 dated daily run note that includes:
+  - X post type tracker
+  - Reddit thread pattern tracker
 
 ## TikTok Operating Loop
 - TikTok is the primary free-reach engine.
@@ -81,9 +84,13 @@ Generate Coachi traffic content from the latest research and positioning files.
 - leave 1 thoughtful reply on a larger account
 
 ## X Post Mix
-- 1 runner insight post
-- 1 build-in-public or shipping lesson post
-- 1 product-truth or honest progress post
+- 2 posts about what building Coachi with AI is teaching you
+- 1 post about a runner problem, product truth, or honest progress
+
+Required X tracker labels:
+- `AI lesson`
+- `shipping lesson`
+- `runner truth`
 
 ## X Quality Rule
 - Do not post pure tech for its own sake
@@ -93,21 +100,50 @@ Generate Coachi traffic content from the latest research and positioning files.
   - or a shipping lesson
 - Optimize for:
   - curiosity
-  - profile click
   - trust
-  - website/App Store intent
+  - recognition from builders, testers, and early adopters
+- Default to no link
+- Use `coachi.no` only when the post naturally earns an explanation
+- Use direct App Store language only on launch, update, and proof posts
+- If the post sounds like a landing page line instead of a real founder learning, rewrite it
 
 ## Content Standard
-- Lead with uncertainty, relief, or coach-in-your-ear differentiation
-- Sound like a calm, sharp running coach
-- Optimize for curiosity and clicks to `Coachi.no`
+- Lead with a real lesson, changed assumption, or concrete observation
+- Sound like a founder-operator learning in public, not a brand account trying to force a CTA
+- Keep Coachi in the story, but do not make every post a pitch
 - Avoid feature dumping
+
+## Reddit Operating Loop
+- Default to reply-first
+- Daily Reddit loop:
+  - find `3 to 5` relevant threads
+  - leave `1 to 3` useful replies
+  - create `0 or 1` new post only if there is a clean subreddit fit
+- Prefer:
+  - watch-checking anxiety
+  - heart-rate zone confusion
+  - Apple Watch and Garmin training interpretation
+  - beginner runner uncertainty
+- Link only when the person clearly asks for a practical tool or next step
+
+Required Reddit thread pattern labels:
+- `watch-checking anxiety`
+- `heart-rate confusion`
+- `Apple Watch interpretation`
+- `Garmin interpretation`
+- `beginner uncertainty`
+- `easy-run pace drift`
 
 ## Packaging
 - Save final drafts into the relevant folder under `content/`
 - Save a dated daily rollup under `outputs/daily/`
 - Reuse the same source idea across TikTok and Instagram wherever possible.
 - Add platform-specific logic through format flags and templates, not through a separate pipeline.
+- In the daily rollup, always include:
+  - one table or bullet list tagging each X post by type
+  - one table or bullet list tagging each Reddit thread/reply by thread pattern
+  - a short note on which X type looked strongest
+  - a short note on which Reddit pattern created the best response or curiosity
 
 ## Image Workflow
 - Primary path: `🧩 1. CLI (Command Line Interface)`
