@@ -36,11 +36,15 @@ def load_api_key() -> str:
     if api_key:
         return api_key
 
+    env_override = os.environ.get("TRENINGSCOACH_REPO_ROOT")
     search_roots = [
         Path.cwd(),
         Path(__file__).resolve().parents[4],
         Path(__file__).resolve().parents[1],
+        Path("/Users/mariusgaarder/Documents/treningscoach"),
     ]
+    if env_override:
+        search_roots.insert(0, Path(env_override).expanduser())
     seen: set[Path] = set()
     for root in search_roots:
         env_path = root / ".env"

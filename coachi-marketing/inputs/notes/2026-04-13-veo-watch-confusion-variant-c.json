@@ -1,6 +1,6 @@
 {
-  "slug": "easy-run-watch-confusion",
-  "hook_text": "THIS FEELS EASY",
+  "slug": "veo-watch-confusion-c",
+  "hook_text": "MOST RUNNERS PANIC HERE",
   "body_text": "YOUR WATCH IS NOT THE WHOLE STORY.",
   "cta_text": "FOLLOW FOR PART 2",
   "accent_type": "wrong",
@@ -8,10 +8,10 @@
   "source_video_mode": "veo",
   "source_video_prompt": "Vertical 9:16 cinematic handheld running shot at blue hour on a quiet road. Male runner age 25-35 with lean endurance build, short dark slightly textured hair, alone outdoors. He is mid easy run, calm breathing, natural sweat, premium but grounded realism. He glances subtly at his sports watch, expression shifts from calm to uncertain for one beat, then keeps running. No logos, no text burned into the image, no product shots, no extra characters, no gym, no influencer posing. Keep motion natural and believable.",
   "source_video_asset": "content/video/generated/sources/2026-04-13-easy-run-watch-confusion-source.mp4",
-  "variant_goal": "Follower growth through runner uncertainty, not product conversion.",
+  "variant_goal": "Comment-first confession hook for runner pain and shareability.",
   "platform_hook_text": {
-    "tiktok": "THIS FEELS EASY",
-    "instagram": "THIS FEELS EASY"
+    "tiktok": "MOST RUNNERS PANIC HERE",
+    "instagram": "MOST RUNNERS PANIC HERE"
   },
   "comment_bait_text": "What stresses you out more during a run: pace or heart rate?",
   "character_anchor": {

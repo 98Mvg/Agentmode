@@ -33,8 +33,42 @@ VIDEO_SUFFIXES = {".mp4", ".mov", ".m4v", ".webm"}
 DEFAULT_MARKETING_VOICE_ID = "9MPvdQh2pLsLhn7SuiIS"
 DEFAULT_MARKETING_VOICE_SETTINGS_MODE = "eleven_defaults"
 
-REPO_ROOT = Path(__file__).resolve().parents[4]
-MARKETING_ROOT = Path(__file__).resolve().parents[1]
+SCRIPT_PATH = Path(__file__)
+RESOLVED_SCRIPT_PATH = SCRIPT_PATH.resolve()
+MARKETING_ROOT = RESOLVED_SCRIPT_PATH.parents[1]
+
+
+def discover_repo_root() -> Path:
+    env_override = os.environ.get("TRENINGSCOACH_REPO_ROOT")
+    if env_override:
+        candidate = Path(env_override).expanduser().resolve()
+        if (candidate / "locale_config.py").exists():
+            return candidate
+
+    candidates: list[Path] = []
+    for base in (
+        Path.cwd(),
+        SCRIPT_PATH.parent,
+        *SCRIPT_PATH.parents,
+        RESOLVED_SCRIPT_PATH.parent,
+        *RESOLVED_SCRIPT_PATH.parents,
+        Path("/Users/mariusgaarder/Documents/treningscoach"),
+    ):
+        if base not in candidates:
+            candidates.append(base)
+
+    for candidate in candidates:
+        if (
+            (candidate / "locale_config.py").exists()
+            and (candidate / "elevenlabs_tts.py").exists()
+            and (candidate / "tools" / "app_store_screenshots" / "finalize_collection.py").exists()
+        ):
+            return candidate
+
+    raise RuntimeError("Unable to discover treningscoach repo root for shared video helpers.")
+
+
+REPO_ROOT = discover_repo_root()
 
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
@@ -223,11 +257,20 @@ def load_spec(path: Path) -> dict[str, Any]:
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise RuntimeError("Video spec must be a JSON object.")
-    required = ["hook_text", "background"]
-    missing = [key for key in required if not str(data.get(key, "")).strip()]
-    if missing:
-        raise RuntimeError(f"Spec is missing required field(s): {', '.join(missing)}")
+    if not str(data.get("hook_text", "")).strip():
+        raise RuntimeError("Spec is missing required field: hook_text")
+    if not str(data.get("background", "")).strip() and not str(data.get("source_video_asset", "")).strip():
+        raise RuntimeError("Spec is missing required media input: background or source_video_asset")
     return data
+
+
+def resolve_optional_media_path(raw_value: str | None, spec_path: Path) -> Path | None:
+    if not raw_value:
+        return None
+    try:
+        return resolve_media_path(raw_value, spec_path)
+    except RuntimeError:
+        return None
 
 
 def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
@@ -238,13 +281,29 @@ def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
     accent_type = str(spec.get("accent_type") or "none").strip().lower() or "none"
     if accent_type not in ACCENT_COLORS:
         raise RuntimeError(f"Unsupported accent_type: {accent_type}")
+    background_fallback = resolve_optional_media_path(str(spec.get("background") or "").strip() or None, spec_path)
+    source_video_asset_value = str(spec.get("source_video_asset") or "").strip() or None
+    source_video_asset = resolve_optional_media_path(source_video_asset_value, spec_path)
+    platform_hook_text = spec.get("platform_hook_text") or {}
+    if platform_hook_text and not isinstance(platform_hook_text, dict):
+        raise RuntimeError("platform_hook_text must be a JSON object keyed by platform.")
+    layout_overrides = spec.get("layout_overrides") or {}
+    if layout_overrides and not isinstance(layout_overrides, dict):
+        raise RuntimeError("layout_overrides must be a JSON object.")
+    normalized_platform_hooks = {
+        str(platform).strip().lower(): str(text).strip()
+        for platform, text in platform_hook_text.items()
+        if str(text).strip()
+    }
+
     normalized = {
         "slug": slugify(slug_source),
         "hook_text": str(spec["hook_text"]).strip(),
         "body_text": body_text,
         "cta_text": cta_text,
         "accent_type": accent_type,
-        "background": resolve_media_path(str(spec["background"]).strip(), spec_path),
+        "background": source_video_asset or background_fallback,
+        "background_fallback": background_fallback,
         "audio": resolve_media_path(spec.get("audio"), spec_path),
         "logo": resolve_media_path(spec.get("logo"), spec_path),
         "duration_seconds": clamp_duration(base_duration),
@@ -253,6 +312,14 @@ def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
         "voice_persona": str(spec.get("voice_persona") or "personal_trainer").strip() or "personal_trainer",
         "voice_id_override": str(spec.get("voice_id_override") or "").strip() or None,
         "voice_settings_mode": str(spec.get("voice_settings_mode") or DEFAULT_MARKETING_VOICE_SETTINGS_MODE).strip() or DEFAULT_MARKETING_VOICE_SETTINGS_MODE,
+        "source_video_mode": str(spec.get("source_video_mode") or "").strip().lower() or None,
+        "source_video_prompt": str(spec.get("source_video_prompt") or "").strip() or None,
+        "source_video_asset": source_video_asset,
+        "source_video_asset_hint": source_video_asset_value,
+        "variant_goal": str(spec.get("variant_goal") or "").strip() or None,
+        "comment_bait_text": str(spec.get("comment_bait_text") or "").strip() or None,
+        "platform_hook_text": normalized_platform_hooks,
+        "layout_overrides": layout_overrides,
     }
     if normalized["background"] is None:
         raise RuntimeError("Background asset is required.")
@@ -263,18 +330,19 @@ def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
 
 
 def build_platform_spec(spec: dict[str, Any], platform: str) -> dict[str, Any]:
-    preset = PLATFORM_PRESETS[platform]
+    preset = {**PLATFORM_PRESETS[platform], **dict(spec.get("layout_overrides") or {})}
     if spec.get("duration_seconds"):
         duration = clamp_duration(float(spec["duration_seconds"]) + float(preset["duration_offset"]))
     else:
         duration = clamp_duration(float(preset["default_duration"]))
+    hook_text = str(spec.get("platform_hook_text", {}).get(platform) or spec["hook_text"]).strip()
 
     return {
         **spec,
         "platform": platform,
         "preset": preset,
         "duration_seconds": duration,
-        "hook_render_text": spec["hook_text"].upper() if preset["hook_uppercase"] else spec["hook_text"],
+        "hook_render_text": hook_text.upper() if preset["hook_uppercase"] else hook_text,
         "body_render_text": spec.get("body_text") or "",
         "cta_render_text": spec.get("cta_text") or "",
         "accent_color": ACCENT_COLORS[str(spec.get("accent_type") or "none")],
@@ -334,6 +402,14 @@ def wrap_lines(draw: ImageDraw.ImageDraw, text: str, font, max_width: int) -> li
     return lines
 
 
+def resolve_stroke_fill(preset: dict[str, Any]) -> tuple[int, int, int, int]:
+    raw = preset.get("text_stroke_fill")
+    if isinstance(raw, str) and raw.strip():
+        color = hex_to_rgb(raw.strip())
+        return (*color, 255)
+    return (0, 0, 0, 255)
+
+
 def draw_text_block(
     draw: ImageDraw.ImageDraw,
     lines: list[str],
@@ -344,11 +420,23 @@ def draw_text_block(
     fill: tuple[int, int, int, int],
     shadow_fill: tuple[int, int, int, int],
     line_gap: int,
+    stroke_width: int = 0,
+    stroke_fill: tuple[int, int, int, int] | None = None,
 ) -> int:
     cursor = y
     for line in lines:
-        draw.text((x + 4, cursor + 4), line, font=font, fill=shadow_fill)
-        draw.text((x, cursor), line, font=font, fill=fill)
+        if stroke_width > 0:
+            draw.text(
+                (x, cursor),
+                line,
+                font=font,
+                fill=fill,
+                stroke_width=stroke_width,
+                stroke_fill=stroke_fill or (0, 0, 0, 255),
+            )
+        else:
+            draw.text((x + 4, cursor + 4), line, font=font, fill=shadow_fill)
+            draw.text((x, cursor), line, font=font, fill=fill)
         bbox = draw.textbbox((x, cursor), line, font=font)
         cursor += (bbox[3] - bbox[1]) + line_gap
     return cursor
@@ -379,6 +467,8 @@ def centered_lines(
     fill: tuple[int, int, int, int],
     shadow_fill: tuple[int, int, int, int],
     line_gap: int,
+    stroke_width: int = 0,
+    stroke_fill: tuple[int, int, int, int] | None = None,
 ) -> tuple[int, int]:
     heights: list[int] = []
     widths: list[int] = []
@@ -392,8 +482,18 @@ def centered_lines(
     max_width = max(widths) if widths else 0
     for line, width, height in zip(lines, widths, heights):
         x = (TARGET_W - width) // 2
-        draw.text((x + 4, cursor + 4), line, font=font, fill=shadow_fill)
-        draw.text((x, cursor), line, font=font, fill=fill)
+        if stroke_width > 0:
+            draw.text(
+                (x, cursor),
+                line,
+                font=font,
+                fill=fill,
+                stroke_width=stroke_width,
+                stroke_fill=stroke_fill or (0, 0, 0, 255),
+            )
+        else:
+            draw.text((x + 4, cursor + 4), line, font=font, fill=shadow_fill)
+            draw.text((x, cursor), line, font=font, fill=fill)
         cursor += height + line_gap
     return max_width, total_height
 
@@ -444,15 +544,24 @@ def render_hook_layer(spec: dict[str, Any], output_path: Path) -> None:
     if accent_color is not None:
         outline = (*accent_color, 215)
         outline_width = 3
-    panel_box = draw_centered_panel(
-        draw,
-        y=int(preset["hook_y"]) - 22,
-        width=panel_width,
-        height=panel_height,
-        fill=(10, 14, 28, int(preset["panel_alpha"])),
-        outline=outline,
-        outline_width=outline_width,
-    )
+    hook_panel_alpha = int(preset.get("hook_panel_alpha", preset["panel_alpha"]))
+    if hook_panel_alpha > 0:
+        panel_box = draw_centered_panel(
+            draw,
+            y=int(preset["hook_y"]) - 22,
+            width=panel_width,
+            height=panel_height,
+            fill=(10, 14, 28, hook_panel_alpha),
+            outline=outline,
+            outline_width=outline_width,
+        )
+    else:
+        panel_box = (
+            (TARGET_W - panel_width) // 2,
+            int(preset["hook_y"]) - 22,
+            (TARGET_W + panel_width) // 2,
+            int(preset["hook_y"]) - 22 + panel_height,
+        )
     centered_lines(
         draw,
         hook_lines,
@@ -461,6 +570,8 @@ def render_hook_layer(spec: dict[str, Any], output_path: Path) -> None:
         fill=(255, 255, 255, 255),
         shadow_fill=(0, 0, 0, 150),
         line_gap=int(preset["hook_line_gap"]),
+        stroke_width=int(preset.get("hook_stroke_width", 0)),
+        stroke_fill=resolve_stroke_fill(preset),
     )
     image.save(output_path)
 
@@ -486,13 +597,22 @@ def render_body_layer(spec: dict[str, Any], output_path: Path) -> None:
     text_height = sum(heights) + max(0, len(heights) - 1) * int(preset["body_line_gap"])
     panel_width = min(TARGET_W - preset["safe_left"] - preset["safe_right"], max(widths, default=0) + 104)
     panel_height = text_height + 54
-    panel_box = draw_centered_panel(
-        draw,
-        y=int(preset["body_y"]) - 24,
-        width=panel_width,
-        height=panel_height,
-        fill=(10, 14, 28, int(preset["panel_alpha"])),
-    )
+    body_panel_alpha = int(preset.get("body_panel_alpha", preset["panel_alpha"]))
+    if body_panel_alpha > 0:
+        panel_box = draw_centered_panel(
+            draw,
+            y=int(preset["body_y"]) - 24,
+            width=panel_width,
+            height=panel_height,
+            fill=(10, 14, 28, body_panel_alpha),
+        )
+    else:
+        panel_box = (
+            (TARGET_W - panel_width) // 2,
+            int(preset["body_y"]) - 24,
+            (TARGET_W + panel_width) // 2,
+            int(preset["body_y"]) - 24 + panel_height,
+        )
     centered_lines(
         draw,
         body_lines,
@@ -501,6 +621,8 @@ def render_body_layer(spec: dict[str, Any], output_path: Path) -> None:
         fill=(245, 247, 250, 255),
         shadow_fill=(0, 0, 0, 138),
         line_gap=int(preset["body_line_gap"]),
+        stroke_width=int(preset.get("body_stroke_width", 0)),
+        stroke_fill=resolve_stroke_fill(preset),
     )
     image.save(output_path)
 
@@ -526,15 +648,25 @@ def render_cta_layer(spec: dict[str, Any], output_path: Path) -> None:
     text_height = sum(heights) + max(0, len(heights) - 1) * int(preset["cta_line_gap"])
     panel_width = min(TARGET_W - preset["safe_left"] - preset["safe_right"], max(widths, default=0) + 92)
     panel_height = text_height + 34
-    panel_box = draw_centered_panel(
-        draw,
-        y=int(preset["cta_y"]) - 18,
-        width=panel_width,
-        height=panel_height,
-        fill=(10, 14, 28, int(preset["cta_alpha"])),
-        outline=(255, 255, 255, int(preset["cta_border_alpha"])),
-        outline_width=2,
-    )
+    cta_panel_alpha = int(preset.get("cta_panel_alpha", preset["cta_alpha"]))
+    cta_border_alpha = int(preset.get("cta_border_alpha", preset["cta_border_alpha"]))
+    if cta_panel_alpha > 0 or cta_border_alpha > 0:
+        panel_box = draw_centered_panel(
+            draw,
+            y=int(preset["cta_y"]) - 18,
+            width=panel_width,
+            height=panel_height,
+            fill=(10, 14, 28, cta_panel_alpha),
+            outline=(255, 255, 255, cta_border_alpha) if cta_border_alpha > 0 else None,
+            outline_width=2 if cta_border_alpha > 0 else 0,
+        )
+    else:
+        panel_box = (
+            (TARGET_W - panel_width) // 2,
+            int(preset["cta_y"]) - 18,
+            (TARGET_W + panel_width) // 2,
+            int(preset["cta_y"]) - 18 + panel_height,
+        )
     centered_lines(
         draw,
         cta_lines,
@@ -543,6 +675,8 @@ def render_cta_layer(spec: dict[str, Any], output_path: Path) -> None:
         fill=(255, 255, 255, 245),
         shadow_fill=(0, 0, 0, 128),
         line_gap=int(preset["cta_line_gap"]),
+        stroke_width=int(preset.get("cta_stroke_width", 0)),
+        stroke_fill=resolve_stroke_fill(preset),
     )
     image.save(output_path)
 

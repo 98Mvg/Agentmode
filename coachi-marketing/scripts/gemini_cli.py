@@ -28,6 +28,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 IMAGE_MODULE_PATH = SCRIPT_DIR / "generate_gemini_images.py"
+VIDEO_MODULE_PATH = SCRIPT_DIR / "generate_gemini_videos.py"
 
 
 def load_image_module():
@@ -39,9 +40,20 @@ def load_image_module():
     return module
 
 
+def load_video_module():
+    spec = importlib.util.spec_from_file_location("coachi_gemini_videos", VIDEO_MODULE_PATH)
+    if not spec or not spec.loader:
+        raise RuntimeError(f"Unable to load Gemini video module from {VIDEO_MODULE_PATH}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 _IMAGE = load_image_module()
+_VIDEO = load_video_module()
 DEFAULT_IMAGE_MODEL = _IMAGE.DEFAULT_MODEL
 DEFAULT_TEXT_MODEL = _IMAGE.DEFAULT_TEXT_MODEL
+DEFAULT_VIDEO_MODEL = _VIDEO.DEFAULT_VIDEO_MODEL
 load_api_key = _IMAGE.load_api_key
 get_client = _IMAGE.get_client
 generate_text = _IMAGE.generate_text
@@ -169,6 +181,10 @@ def run_text_caption(args: argparse.Namespace) -> int:
     return write_output(caption + "\n", args.output)
 
 
+def run_video_generate(args: argparse.Namespace) -> int:
+    return _VIDEO.run_generate(args)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Unified Gemini CLI for Coachi marketing image and text workflows."
@@ -191,6 +207,24 @@ def build_parser() -> argparse.ArgumentParser:
     image_batch.add_argument("--model", default=DEFAULT_IMAGE_MODEL, help=f"Default Gemini image model (default: {DEFAULT_IMAGE_MODEL}).")
     image_batch.add_argument("--sleep-seconds", type=float, default=0.0, help="Optional delay between batch requests.")
     image_batch.set_defaults(func=run_image_batch)
+
+    video = top.add_parser("video", help="Gemini video generation commands.")
+    video_sub = video.add_subparsers(dest="video_command", required=True)
+
+    video_generate = video_sub.add_parser("generate", help="Generate one Veo video from a prompt or shared spec.")
+    video_generate.add_argument("--spec", help="Path to a JSON video spec with source_video_* fields.")
+    video_generate.add_argument("--prompt", help="Inline prompt text.")
+    video_generate.add_argument("--prompt-file", help="Path to a UTF-8 prompt file.")
+    video_generate.add_argument("--output", help="Output .mp4 path. Defaults to source_video_asset in --spec.")
+    video_generate.add_argument("--model", default=DEFAULT_VIDEO_MODEL, help=f"Gemini video model (default: {DEFAULT_VIDEO_MODEL}).")
+    video_generate.add_argument("--aspect-ratio", default=_VIDEO.DEFAULT_ASPECT_RATIO, help=f"Aspect ratio (default: {_VIDEO.DEFAULT_ASPECT_RATIO}).")
+    video_generate.add_argument("--resolution", default=_VIDEO.DEFAULT_RESOLUTION, help=f"Resolution (default: {_VIDEO.DEFAULT_RESOLUTION}).")
+    video_generate.add_argument("--duration-seconds", type=int, default=_VIDEO.DEFAULT_DURATION_SECONDS, help=f"Duration seconds (default: {_VIDEO.DEFAULT_DURATION_SECONDS}).")
+    video_generate.add_argument("--negative-prompt", default=_VIDEO.DEFAULT_NEGATIVE_PROMPT, help="Negative prompt to avoid low-quality artifacts.")
+    video_generate.add_argument("--poll-seconds", type=float, default=_VIDEO.DEFAULT_POLL_SECONDS, help=f"Polling interval in seconds (default: {_VIDEO.DEFAULT_POLL_SECONDS}).")
+    video_generate.add_argument("--enhance-prompt", action="store_true", help="Allow Veo to enhance the prompt.")
+    video_generate.add_argument("--generate-audio", action="store_true", help="Generate native video audio.")
+    video_generate.set_defaults(func=run_video_generate)
 
     text = top.add_parser("text", help="Gemini text generation commands.")
     text_sub = text.add_subparsers(dest="text_command", required=True)

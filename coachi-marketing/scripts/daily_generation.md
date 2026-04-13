@@ -178,6 +178,13 @@ Required Reddit thread pattern labels:
   - `scripts/gemini-cli text hook ...`
   - `scripts/gemini-cli text caption ...`
 - Use `inputs/notes/social-video-template.json` as the default input shape.
+- If the source footage is AI-generated, keep it inside the same spec with:
+  - `source_video_mode`
+  - `source_video_prompt`
+  - `source_video_asset`
+  - `variant_goal`
+  - `platform_hook_text`
+  - `comment_bait_text`
 - Save rendered outputs under `content/video/generated/` unless the task needs a different folder.
 - If the on-screen copy feels weak, keep text generation separate:
   - `scripts/gemini-cli text optimize --spec ...` to refine `hook_text`, `body_text`, `cta_text`, and `accent_type`
