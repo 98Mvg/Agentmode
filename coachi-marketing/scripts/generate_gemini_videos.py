@@ -24,6 +24,7 @@ from google.genai import types
 from generate_gemini_images import get_client, load_api_key
 
 
+MARKETING_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_VIDEO_MODEL = "veo-3.1-generate-preview"
 DEFAULT_ASPECT_RATIO = "9:16"
 DEFAULT_RESOLUTION = "1080p"
@@ -54,23 +55,29 @@ def load_prompt(prompt: str | None, prompt_file: str | None, spec: dict[str, obj
     raise RuntimeError("Provide --prompt, --prompt-file, or a spec with source_video_prompt.")
 
 
-def load_output_path(output: str | None, spec: dict[str, object] | None) -> Path:
+def load_output_path(output: str | None, spec: dict[str, object] | None, spec_path: Path | None) -> Path:
     if output:
-        return Path(output).expanduser()
+        candidate = Path(output).expanduser()
+        return candidate if candidate.is_absolute() else (MARKETING_ROOT / candidate).resolve()
     if spec:
         value = str(spec.get("source_video_asset") or "").strip()
         if value:
-            return Path(value).expanduser()
+            candidate = Path(value).expanduser()
+            if candidate.is_absolute():
+                return candidate
+            return (MARKETING_ROOT / candidate).resolve()
     raise RuntimeError("Provide --output or a spec with source_video_asset.")
 
 
 def run_generate(args: argparse.Namespace) -> int:
     spec: dict[str, object] | None = None
+    spec_path: Path | None = None
     if args.spec:
-        spec = read_json_spec(Path(args.spec))
+        spec_path = Path(args.spec).expanduser().resolve()
+        spec = read_json_spec(spec_path)
 
     prompt = load_prompt(args.prompt, args.prompt_file, spec)
-    output_path = load_output_path(args.output, spec)
+    output_path = load_output_path(args.output, spec, spec_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     api_key = load_api_key()
@@ -82,17 +89,21 @@ def run_generate(args: argparse.Namespace) -> int:
     negative_prompt = args.negative_prompt
 
     print(f"Starting Veo generation -> {output_path}")
+    config_kwargs: dict[str, object] = {
+        "aspect_ratio": aspect_ratio,
+        "resolution": resolution,
+        "duration_seconds": duration_seconds,
+        "negative_prompt": negative_prompt,
+    }
+    if args.enhance_prompt:
+        config_kwargs["enhance_prompt"] = True
+    if args.generate_audio:
+        config_kwargs["generate_audio"] = True
+
     operation = client.models.generate_videos(
         model=args.model,
         prompt=prompt,
-        config=types.GenerateVideosConfig(
-            aspect_ratio=aspect_ratio,
-            resolution=resolution,
-            duration_seconds=duration_seconds,
-            negative_prompt=negative_prompt,
-            enhance_prompt=args.enhance_prompt,
-            generate_audio=args.generate_audio,
-        ),
+        config=types.GenerateVideosConfig(**config_kwargs),
     )
 
     while not operation.done:
