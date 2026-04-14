@@ -15,3 +15,5 @@ For each saved daily pack, label every post with one type:
 - `runner truth`
 
 That same type label must be copied into the dated daily run note under `outputs/daily/`.
+
+Before publishing any daily X pack, run [X_PREFLIGHT_CHECKLIST.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/x-posts/X_PREFLIGHT_CHECKLIST.md).

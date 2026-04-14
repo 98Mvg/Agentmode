@@ -46,6 +46,13 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
 - Default X mix:
   - `2` posts on what building Coachi with AI taught you
   - `1` post on a runner problem, product truth, or user insight
+- Minimum X loop:
+  - `3` posts
+  - `5` likes
+  - `3` follows
+  - `1` thoughtful reply
+- Stretch X loop:
+  - full default loop above
 - Log each X post in the daily run note with one required type:
   - `AI lesson`
   - `shipping lesson`
@@ -58,6 +65,12 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - or a shipping lesson
 - Treat build-in-public as applied learning, not journaling and not ad copy.
 - If a post reads like marketing first and learning second, rewrite it.
+- Run the X preflight before posting any daily pack:
+  - exactly `1` true `AI lesson`
+  - exactly `1` true `shipping lesson`
+  - exactly `1` true `runner truth`
+  - no more than `1` direct CTA or link across the 3-post set
+  - every post must answer: what changed, what did it teach, why does it matter for runners or product quality
 - Most X posts should not carry a direct CTA.
 - Let the profile and pinned post handle most conversion work.
 - On X, do not build the follow graph around coaches. Follow entrepreneurs, app builders, testers, communities, and adjacent Apple/AI accounts first.
@@ -87,6 +100,14 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - leave `10` meaningful comments
   - follow `10` relevant accounts
   - send `5` replies to comments or DMs
+- Minimum Instagram loop:
+  - `1` Reel
+  - `1 to 3` Stories
+  - `5` likes
+  - `3` meaningful comments
+  - `3` follows
+- Stretch Instagram loop:
+  - full default loop above
 - Do not create a separate Instagram content engine.
 - Reuse the strongest TikTok ideas on Instagram Reels and use the same source inputs across Reel, carousel, and Story outputs.
 - Use [instagram-content-system.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/instagram-content-system.md) and [OUTPUT_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Instagram/OUTPUT_TEMPLATE.md) for all saved Instagram drafts.
@@ -101,6 +122,14 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - follow `10` relevant accounts
   - send `5` replies to comments
   - leave `1` comment on a trending or larger video
+- Minimum TikTok loop:
+  - `1` video
+  - `5` likes
+  - `3` meaningful comments
+  - `3` follows
+  - `1` comment on a larger or relevant video
+- Stretch TikTok loop:
+  - full default loop above
 - Do not create a separate TikTok content engine.
 - Keep TikTok and Instagram in one shared content system and reuse the same source ideas, visuals, and render path.
 - Use [content/Tiktok/README.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Tiktok/README.md) as the canonical TikTok workspace note.
@@ -116,6 +145,11 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - find `3 to 5` relevant threads
   - leave `1 to 3` useful replies
   - create `0 or 1` new post only if there is a clean angle and subreddit fit
+- Minimum Reddit loop:
+  - find the best `1 to 2` threads
+  - leave `1` useful reply
+- Stretch Reddit loop:
+  - full default loop above
 - Lead like a runner first and a founder second.
 - Do not drop links unless the question clearly asks for a practical tool or next step.
 - Save thread URLs, comment URLs, and useful language patterns in the daily output.
@@ -165,6 +199,10 @@ Think like:
 - Favor concrete copy, hooks, channel ideas, and experiments over abstract strategy summaries
 - Store raw findings under `inputs/`
 - Store final drafts under `outputs/` and `content/`
+- Every posting day must also create or update:
+  - one dated scorecard under `inputs/performance/`
+  - `inputs/performance/WINNER_LIBRARY.md`
+  - `inputs/research/reddit-winning-language-bank.md` when Reddit produces useful phrasing
 - Keep English and Norwegian separated when useful
 - Use `/Users/mariusgaarder/Documents/treningscoach/docs/plans/2026-03-29-coachi-full-marketing-strategy.md` as the current strategy anchor unless the user provides a newer one
 
@@ -217,6 +255,15 @@ Think like:
 - Default marketing voice settings mode should be `eleven_defaults`, meaning use the voice's standard ElevenLabs sound settings unless the spec explicitly overrides them.
 - For organic TikTok and Instagram Reels, keep the same male runner character anchor across the related cover images, background visuals, and continuation assets.
 - Store that anchor in the source spec as `character_anchor` when the asset set needs continuity.
+
+## Optimization Loop
+- Treat the 14-day plan as a theme bank, not a locked production schedule.
+- Only the next `3` days should be considered execution-locked at any time.
+- At the end of each 3-day window:
+  - review the latest scorecards
+  - update the winner library
+  - update the Reddit language bank
+  - rewrite the next 3-day block based on what actually performed
 
 ## Role Invocation
 - If the user says `You are Coachi market strategist`, use this workspace as the canonical delivery surface and follow this behavior.

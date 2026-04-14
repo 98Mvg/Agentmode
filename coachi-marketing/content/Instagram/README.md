@@ -17,6 +17,16 @@ Default use:
   - `10` follows
   - `5` replies to comments or DMs
 
+Minimum loop:
+- `1` Reel
+- `1 to 3` Stories
+- `5` likes
+- `3` meaningful comments
+- `3` follows
+
+Stretch loop:
+- full default loop above
+
 Rules:
 - do not invent a separate Instagram ideation engine
 - reuse the strongest TikTok source ideas

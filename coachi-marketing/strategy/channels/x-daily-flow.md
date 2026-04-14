@@ -47,6 +47,18 @@ At the end of the run, add:
 - weakest or missing type today
 - one short note on what the mix suggests for tomorrow
 
+## X Preflight
+Before publishing the 3-post pack, check all of these:
+- exactly `1` post is a true `AI lesson`
+- exactly `1` post is a true `shipping lesson`
+- exactly `1` post is a true `runner truth`
+- no more than `1` post uses a direct link or direct CTA
+- every post answers:
+  - what changed
+  - what it taught
+  - why it matters for runners or product quality
+- if one post sounds like marketing copy first and lived learning second, rewrite it before posting
+
 ## Hard Rules
 
 - Do not post pure tech for its own sake.
@@ -170,3 +182,13 @@ Operational rules:
 - open the direct tweet page before the thoughtful reply
 - open the repost menu and confirm repost explicitly
 - save live post URLs and reply URLs in the daily run log every session
+
+## Minimum Versus Stretch
+Minimum X day:
+- publish the 3-post mix
+- `5` likes
+- `3` follows
+- `1` thoughtful reply
+
+Stretch X day:
+- full default loop

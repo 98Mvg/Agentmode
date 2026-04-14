@@ -126,6 +126,16 @@ Every day on Instagram:
 - follow `10` relevant accounts
 - send `5` replies to comments or DMs
 
+Minimum day:
+- `1` Reel
+- `1 to 3` Story slides
+- `5` likes
+- `3` meaningful comments
+- `3` follows
+
+Stretch day:
+- full default loop above
+
 Carousel cadence:
 - create `1` carousel every `2 to 3` days
 - track whether the carousel slot is due inside the existing workflow

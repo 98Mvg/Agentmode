@@ -3,6 +3,10 @@
 ## Objective
 Generate Coachi traffic content from the latest research and positioning files.
 
+Planning layer:
+- for the next two weeks, use [14-day-social-engine.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/14-day-social-engine.md) as the operating calendar for TikTok, Instagram, X, Reddit, and story packaging
+- treat that file as a theme bank, but only lock the next `3` days of execution at a time
+
 ## Inputs
 - `strategy/audience/ideal-customer.md`
 - `strategy/positioning/core-positioning.md`
@@ -18,6 +22,10 @@ Generate Coachi traffic content from the latest research and positioning files.
 - 1 dated daily run note that includes:
   - X post type tracker
   - Reddit thread pattern tracker
+- 1 dated performance scorecard under `inputs/performance/`
+- updates to:
+  - `inputs/performance/WINNER_LIBRARY.md`
+  - `inputs/research/reddit-winning-language-bank.md` when Reddit produces useful wording
 
 ## TikTok Operating Loop
 - TikTok is the primary free-reach engine.
@@ -28,6 +36,14 @@ Generate Coachi traffic content from the latest research and positioning files.
   - `10` follows
   - `5` replies to comments
   - `1` comment on a trending or larger video
+- Minimum TikTok loop:
+  - `1` video posted
+  - `5` likes
+  - `3` meaningful comments
+  - `3` follows
+  - `1` relevant larger-video comment
+- Stretch TikTok loop:
+  - full default loop above
 - Keep TikTok inside the same shared content engine as Instagram.
 - Reuse the same source idea across TikTok and Instagram wherever possible.
 - Use the shared vertical-video workflow for rendered outputs.
@@ -58,6 +74,14 @@ Generate Coachi traffic content from the latest research and positioning files.
   - `10` meaningful comments
   - `10` follows
   - `5` replies to comments or DMs
+- Minimum Instagram loop:
+  - `1` Reel
+  - `1 to 3` Stories
+  - `5` likes
+  - `3` meaningful comments
+  - `3` follows
+- Stretch Instagram loop:
+  - full default loop above
 - Carousel cadence:
   - `1` carousel every `2 to 3` days
   - track the carousel slot in the workflow
@@ -82,6 +106,13 @@ Generate Coachi traffic content from the latest research and positioning files.
 - like 15 relevant posts
 - repost 1 strong relevant post
 - leave 1 thoughtful reply on a larger account
+- Minimum X loop:
+  - publish 3 X posts
+  - follow 3 relevant accounts
+  - like 5 relevant posts
+  - leave 1 thoughtful reply
+- Stretch X loop:
+  - full default loop above
 
 ## X Post Mix
 - 2 posts about what building Coachi with AI is teaching you
@@ -91,6 +122,14 @@ Required X tracker labels:
 - `AI lesson`
 - `shipping lesson`
 - `runner truth`
+
+## X Preflight Gate
+Do not publish the X pack until all are true:
+- exactly `1` post is a true `AI lesson`
+- exactly `1` post is a true `shipping lesson`
+- exactly `1` post is a true `runner truth`
+- the set contains at most `1` direct CTA or direct link
+- no post reads like landing-page copy first and lived learning second
 
 ## X Quality Rule
 - Do not post pure tech for its own sake
@@ -119,6 +158,11 @@ Required X tracker labels:
   - find `3 to 5` relevant threads
   - leave `1 to 3` useful replies
   - create `0 or 1` new post only if there is a clean subreddit fit
+- Minimum Reddit loop:
+  - find the best `1 to 2` threads
+  - leave `1` useful reply
+- Stretch Reddit loop:
+  - full default loop above
 - Prefer:
   - watch-checking anxiety
   - heart-rate zone confusion
@@ -144,6 +188,10 @@ Required Reddit thread pattern labels:
   - one table or bullet list tagging each Reddit thread/reply by thread pattern
   - a short note on which X type looked strongest
   - a short note on which Reddit pattern created the best response or curiosity
+- In the scorecard, always include a decision on each asset:
+  - `repeat`
+  - `iterate`
+  - `stop`
 
 ## Image Workflow
 - Primary path: `🧩 1. CLI (Command Line Interface)`
@@ -204,3 +252,8 @@ Required Reddit thread pattern labels:
   - more aggressive hook treatment
 - Do not create a second render flow just for Instagram.
 - Reuse TikTok source clips, app UI captures, and existing running assets before generating new material.
+
+## Rolling 3-Day Rule
+- Keep only the next `3` days locked as execution work.
+- Days `4 to 14` are theme backlog and should be rewritten after each 3-day review.
+- At the end of every 3 days, create a short optimization note using [ROLLING_3_DAY_OPTIMIZATION_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/outputs/daily/ROLLING_3_DAY_OPTIMIZATION_TEMPLATE.md).

@@ -20,6 +20,7 @@ Reddit should be reply-first, not promo-first.
   - the exact runner language that felt useful
   - thread pattern
   - whether the thread created any follow-up question, upvote traction, or profile curiosity
+- when a phrase, objection, or reply shape feels reusable, add it to [reddit-winning-language-bank.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/inputs/research/reddit-winning-language-bank.md)
 
 ## Required Thread Pattern Labels
 Use one of these labels for each thread you touch:
@@ -126,3 +127,11 @@ In the daily run note, log for every Reddit thread/reply:
 At the end of the run, add:
 - which thread pattern produced the best response
 - which pattern is worth repeating tomorrow
+
+## Reusable Language Rule
+Do not let useful Reddit phrasing die inside one daily note.
+Promote reusable material into the language bank:
+- exact runner phrases
+- repeated fears or objections
+- reply openings that felt natural
+- lines that created follow-up questions or visible curiosity

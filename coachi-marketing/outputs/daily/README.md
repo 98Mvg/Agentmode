@@ -10,6 +10,7 @@ Minimum daily rollup:
 - 1 growth experiment
 - 1 competitor observation
 - 1 operational result note for what actually shipped
+- 1 dated scorecard under `inputs/performance/`
 
 ## Required Social Tracking
 
@@ -48,3 +49,13 @@ Close every run with:
 - weakest or missing X type today
 - strongest Reddit thread pattern today
 - one thing to repeat tomorrow
+
+## Rolling Optimization Rule
+Every 3 days, create one short optimization note using [ROLLING_3_DAY_OPTIMIZATION_TEMPLATE.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/outputs/daily/ROLLING_3_DAY_OPTIMIZATION_TEMPLATE.md).
+
+That note should answer:
+- what won
+- what underperformed
+- what to repeat
+- what to kill
+- how the next 3-day block changes

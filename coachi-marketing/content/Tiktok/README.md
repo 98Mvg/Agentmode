@@ -12,6 +12,16 @@ Daily loop target:
 - `5` replies to comments
 - `1` comment on a trending or larger video
 
+Minimum loop:
+- `1` video posted
+- `5` likes
+- `3` meaningful comments
+- `3` follows
+- `1` relevant larger-video comment
+
+Stretch loop:
+- full default loop above
+
 Use TikTok drafts to generate:
 - short correction Reels on Instagram
 - supporting carousel topics
