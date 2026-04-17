@@ -29,6 +29,42 @@ Daily 3-post mix:
 2. one specific shipping lesson or product decision that changed because of AI, users, or constraints
 3. one runner-problem, product-truth, or honest progress post
 
+## Default Writing Structure
+
+Most Coachi X posts should follow this shape:
+1. strong hook
+2. insight
+3. real-world observation
+4. short conclusion
+
+This should feel like a founder sharing something learned from:
+- real product building
+- real workouts
+- real user behavior
+
+Not like brand copy.
+
+## Length Rule
+
+- aim for `20 to 120` words
+- use `40 to 120` as the hard-gate safe range for saved daily packs
+- prefer `60 to 120` words when the idea needs development
+- keep it shorter when the post is stronger short
+- every line should earn its place
+
+## Tone Guardrails
+
+Keep the voice:
+- thoughtful
+- smart
+- simple
+- slightly contrarian
+- founder / product-builder
+- fitness / coaching / human performance
+- calm, not cringe
+- not hypey
+- not salesy
+
 ## Required Daily Tracking
 
 In the daily run note, tag each published X post with one type:
@@ -49,10 +85,21 @@ At the end of the run, add:
 
 ## X Preflight
 Before publishing the 3-post pack, check all of these:
+- the validator passes:
+  - `python3 /Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/validate_x_pack.py /Volumes/Riot APFS/Agentmode/coachi-marketing/content/x-posts/YYYY-MM-DD-daily-pack.md`
 - exactly `1` post is a true `AI lesson`
 - exactly `1` post is a true `shipping lesson`
 - exactly `1` post is a true `runner truth`
 - no more than `1` post uses a direct link or direct CTA
+- the first line is strong enough to stand alone as the hook
+- the structure reads clearly as:
+  - hook
+  - insight
+  - observation
+  - conclusion
+- the post is within the target range:
+  - `40 to 120` words for the hard gate
+  - preferably `60 to 120` when the idea needs development
 - every post answers:
   - what changed
   - what it taught
@@ -158,9 +205,10 @@ Preferred CTA shapes:
 ## Best Current X Post Shape
 
 Use this structure more often than product-claim format:
-1. what I assumed
-2. what building with AI actually taught me
-3. why that matters for runners or for product quality
+1. strong hook
+2. what I assumed or what changed
+3. what building with AI or real runner behavior actually taught me
+4. why that matters for runners or for product quality
 
 Examples of good source material:
 - prompt failures that revealed the wrong product question

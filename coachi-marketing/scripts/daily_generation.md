@@ -125,11 +125,15 @@ Required X tracker labels:
 
 ## X Preflight Gate
 Do not publish the X pack until all are true:
+- the pack passes:
+  - `python3 /Volumes/Riot APFS/Agentmode/coachi-marketing/scripts/validate_x_pack.py /Volumes/Riot APFS/Agentmode/coachi-marketing/content/x-posts/YYYY-MM-DD-daily-pack.md`
 - exactly `1` post is a true `AI lesson`
 - exactly `1` post is a true `shipping lesson`
 - exactly `1` post is a true `runner truth`
 - the set contains at most `1` direct CTA or direct link
 - no post reads like landing-page copy first and lived learning second
+- every post is within the hard-gate safe range:
+  - `40 to 120` words
 
 ## X Quality Rule
 - Do not post pure tech for its own sake
