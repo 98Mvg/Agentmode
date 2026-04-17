@@ -1,39 +1,39 @@
-# X Daily Pack — 2026-04-23
+# X Daily Pack - 2026-04-23
 
 ## Post 1
 Type: `AI lesson`
 
-AI will happily optimize the life out of a run.
+Single-run interpretation is often too loud.
 
-That is one of the easiest traps in this category.
+That is one of the clearest lessons from building Coachi.
 
-The system can always generate tighter targets, cleaner rules, and more corrections. That does not mean the coaching is helping a real runner on a real easy day.
+Runners want immediate meaning, but a product that overweights one messy session can push the user toward the same emotional overreaction they already have. The system has to know when to zoom out.
 
-More optimization is not the same as better coaching.
+Sometimes the smartest answer is trend, not drama.
 
 ## Post 2
 Type: `shipping lesson`
 
-Some product choices demo well and coach badly.
+The product should reinforce the block, not the blip.
 
-I have to keep killing that version on purpose.
+That is a harder product decision than it sounds.
 
-It would turn every run into a compliance test, reward over-monitoring, and make the product feel sharp while the runner gets tighter and more anxious.
+It is easy to make every workout feel important because importance creates intensity. But good training depends on helping runners trust the ordinary days too. I would rather ship calm trend thinking than daily theater.
 
-Good product work is knowing what not to optimize.
+Progress needs a wider frame than one run.
 
 ## Post 3
 Type: `runner truth`
 
-Zone 2 obsession can make easy running feel harder.
+One bad run does not cancel a good block.
 
-Not because easy running is wrong.
+It just feels louder than the rest.
 
-Because some runners start treating every drift as failure, every slower split as danger, and every imperfect day as proof they messed up.
+A lot of runners lose confidence because one awkward workout gets treated like the truth and the quiet consistency around it gets ignored. That is an emotional math problem, not a fitness one.
 
-The run becomes control instead of rhythm.
+Zoom out before you rewrite the story of the block.
 
 ## Suggested Reply Prompts
-- Has Zone 2 made you calmer or more anxious?
-- What part of running gets worse when you over-optimize it?
-- Do you think some running advice creates more stress than progress?
+- Do you overreact more to one bad run or one great run?
+- What helps you zoom out after a messy workout?
+- Should coaching products show the block before the blip?

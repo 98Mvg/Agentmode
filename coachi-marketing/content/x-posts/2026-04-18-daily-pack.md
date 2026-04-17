@@ -1,39 +1,39 @@
-# X Daily Pack — 2026-04-18
+# X Daily Pack - 2026-04-18
 
 ## Post 1
 Type: `AI lesson`
 
-AI loves clean rules. Real runners break them.
+The first kilometer is noisy.
 
 That keeps showing up while I build Coachi.
 
-One day Zone 2 looks like one pace. The next day sleep, heat, hills, or stress move the effort without asking permission.
+A runner can look too fast, too tense, or too high on the watch before the body actually settles. Early data feels precise. Early context is usually thin.
 
-Coaching gets worse the moment the product pretends the body is static.
+Good coaching should help the runner settle before it acts certain.
 
 ## Post 2
 Type: `shipping lesson`
 
-Precision theater ruins coaching products.
+Do not coach the first minute like the final verdict.
 
-I keep having to fight that instinct.
+That is an easy product mistake to make.
 
-It is tempting to say stay exactly here or you are wrong. That looks sharp in a demo and starts coaching real runners badly the moment real life shows up.
+If the app reacts too hard to the opening surge, it teaches runners to panic at the most unstable part of the run. I would rather ship restraint than false certainty.
 
-Good products leave room for context.
+The product should calm the run down, not speed the anxiety up.
 
 ## Post 3
 Type: `runner truth`
 
-Some runners are not running easy too hard.
+Starting too fast does not mean you lost fitness.
 
-They are trying to run easy too perfectly.
+Sometimes it just means you left too hard.
 
-One pace becomes the rule. One HR band becomes the truth. The whole run becomes a compliance test instead of an easy day.
+A lot of runners turn one aggressive first kilometer into a story about the whole workout. Then the rest of the run gets judged through that lens.
 
-That mindset creates more stress than progress.
+Settle first. Decide what the run is second.
 
 ## Suggested Reply Prompts
-- Did Zone 2 help you or stress you out at first?
-- What part of easy running feels too rigid right now?
-- Have you ever treated one pace or HR number like the only correct answer?
+- Do you usually start too fast or settle too late?
+- What helps you calm the first kilometer down?
+- Should coaching apps react less in the opening minutes?

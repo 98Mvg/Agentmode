@@ -1,39 +1,39 @@
-# X Daily Pack — 2026-04-20
+# X Daily Pack - 2026-04-20
 
 ## Post 1
 Type: `AI lesson`
 
-The model is not the bottleneck. Interpretation is.
+Optimization pressure can ruin good coaching.
 
-Building Coachi keeps making that more obvious.
+I keep running into that while building Coachi.
 
-The hard part is not generating feedback. The hard part is deciding what matters right now, what is noise, and what the runner should hear while still moving.
+A product that only feels smart when it pushes, corrects, and intensifies will quietly teach runners that every day needs to prove something. That is not how good training works.
 
-That judgment layer is where coaching quality lives.
+Real coaching has to protect the easy day too.
 
 ## Post 2
 Type: `shipping lesson`
 
-One metric should not become the whole truth.
+The product should reward restraint too.
 
-That is usually a product mistake before it is a model mistake.
+That is harder to ship than it sounds.
 
-One slow split or one HR spike can steal the whole story for the runner if the system does not force context to speak before certainty.
+Intensity is easy to visualize in a demo. Patience looks less dramatic, but it is often the better coaching decision for the runner on the day. I would rather build for the right behavior than the louder one.
 
-The product gets better every time I slow that down.
+Good products make restraint feel valid.
 
 ## Post 3
 Type: `runner truth`
 
-Runners misread runs in predictable ways.
+Recovery days are still training.
 
-One HR spike becomes panic. One slow split becomes regression. One messy day becomes a story about lost fitness.
+They just do not flatter the ego the same way.
 
-The body can still be fine while the interpretation goes off the rails.
+A lot of runners turn an easy or recovery run into a small exam because slowing down feels unproductive. Then the day designed to support progress starts working against it.
 
-A lot of running stress starts in the meaning, not the metric.
+Sometimes the right run is the one that stays boring.
 
 ## Suggested Reply Prompts
-- What is the easiest running metric to overreact to?
-- Have you ever let one split change the story of the whole run?
-- What kind of mid-run feedback actually helps you stay calm?
+- What is harder for you: going hard or holding back?
+- Do recovery runs ever turn into little performance tests for you?
+- Should coaching products reward restraint more clearly?

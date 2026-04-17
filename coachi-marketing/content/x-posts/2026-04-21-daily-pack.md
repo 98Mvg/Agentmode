@@ -1,39 +1,39 @@
-# X Daily Pack — 2026-04-21
+# X Daily Pack - 2026-04-21
 
 ## Post 1
 Type: `AI lesson`
 
-Sensors get trusted faster than bodies do.
+Sometimes the useful signal shows up before the number.
 
-That keeps showing up while I build Coachi.
+That matters a lot while I build Coachi.
 
-If the watch says hard and the breathing says easy, the product cannot blindly side with the number and call that smart.
+A runner can feel the shoulders rise, the breathing shorten, and the body tighten before the watch reflects anything useful. If the model only listens to the number, it joins the panic too late.
 
-Good coaching should restore balance, not reinforce panic.
+Good coaching needs earlier body cues, not just later outcomes.
 
 ## Post 2
 Type: `shipping lesson`
 
-A coaching product eventually has to choose whose signal wins first.
+Mechanical tension deserves product attention.
 
-That is one of the harder shipping decisions here.
+It is easy to miss because it is not flashy data.
 
-The device, the body, and the route do not always agree. If the logic picks the same winner every time, you are not building a coach. You are building a tracker with opinions.
+If the app only reacts to pace or heart rate, it ignores the runner clues that often show up first. I would rather ship one calm body correction than another loud metric prompt.
 
-Context decides the winner.
+The product should catch tension before it becomes the story of the run.
 
 ## Post 3
 Type: `runner truth`
 
-A lot of runners stop trusting their own breathing too early.
+Sometimes the run felt worse because you got tight.
 
-The watch says hard, so the run starts feeling wrong.
+Not because your fitness suddenly disappeared.
 
-Even when effort is still controlled, one number can overpower the body and turn a normal run into doubt.
+A lot of runners miss how fast shoulders, jaw, and breathing can turn a normal easy run into a stressful one. Then they blame fitness for a body-state problem.
 
-That habit creates more anxiety than clarity.
+Loosen first. Reinterpret second.
 
 ## Suggested Reply Prompts
-- Do you trust your breathing or your watch first?
-- Has your device ever made an easy run feel harder than it was?
-- What signal do you listen to when the watch and body disagree?
+- What tightens first for you: shoulders, jaw, or breathing?
+- Have you ever blamed fitness for a body-tension problem?
+- Should coaching apps pay more attention to breathing cues?

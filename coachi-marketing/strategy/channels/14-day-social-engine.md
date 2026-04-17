@@ -30,6 +30,7 @@ That means:
 - do not generate separate Veo clips for TikTok and Instagram by default
 - generate one strong source clip, then make platform variants from it
 - use the third daily Veo slot only as a recovery or bonus slot, not as the default plan
+- do not reuse the same scene recipe on consecutive days
 
 ## Capacity Model
 ### Default daily content output
@@ -69,6 +70,22 @@ Operational rule:
 - plan the day around `1` strong source clip and `1` optional backup
 - if the first clip is clearly usable, keep the third slot unused
 
+## Variety Rule
+Do not let the engine collapse into one narrow cluster like:
+- heart rate panic
+- Apple Watch interpretation
+- device disagreement
+
+Across any rolling `7`-day block, the plan should cover at least `4` different tension families:
+- metrics and interpretation
+- pacing and effort control
+- route and environment context
+- recovery and consistency
+- emotional regulation and confidence
+- mechanical tension and breathing
+
+If two consecutive days already lean on watches, HR, or device conflict, the next day should pivot to a different runner tension.
+
 ## Engine Structure
 Every day runs through the same five layers:
 
@@ -103,6 +120,18 @@ Required mix:
 - `shipping lesson`
 - `runner truth`
 
+Writing rule for all 3:
+- strong hook
+- insight
+- real-world observation
+- short conclusion
+
+Length rule:
+- `20 to 120` words
+- prefer `60 to 120` words when the post needs development
+- stay shorter if the post is stronger short
+- every line must earn its place
+
 ### Reddit
 Use for:
 - answer real questions connected to the same daily theme
@@ -129,24 +158,35 @@ One source clip should usually generate:
 
 Do not generate extra footage when packaging is the real bottleneck.
 
+## Consecutive Clip Rule
+For every new daily hero clip:
+- keep the same runner identity continuity
+- change the angle
+- change the background / route
+- change the clothes
+- change the weather feel
+- change the lighting setup
+
+Do not approve a new day’s clip if it looks like the same scene with new text.
+
 ## 14-Day Calendar
 
-| Day | Core Tension | Veo Plan | TikTok | Instagram | X | Reddit |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | Easy run feels easy, HR is high | `1` hero clip on easy-run HR confusion | Post main interruption cut + one stronger hook variant if needed | Reel from strongest TikTok variant + story poll `pace / heart rate` | `AI lesson`: what AI got wrong about runner context. `shipping lesson`: why “high HR” cannot be handled like a generic alert. `runner truth`: one bad number changes the whole run. | `heart-rate confusion` and `Apple Watch interpretation` replies |
-| 2 | Checking the watch too often ruins the run | `1` hero clip on watch-glance anxiety | Comment-bait clip about checking numbers every minute | Reel + 3 story cards on what to trust first | `AI lesson`: real-time coaching means choosing what not to say. `shipping lesson`: fewer prompts, better run. `runner truth`: too much checking creates more stress than clarity. | `watch-checking anxiety` replies |
-| 3 | Easy pace is slower today, runner panics | `1` hero clip on pace drift | Clip around “easy pace changed, now what?” | Reel + story question box | `AI lesson`: models love clean baselines, bodies do not. `shipping lesson`: daily readiness changes interpretation. `runner truth`: easy pace is not a fixed identity. | `easy-run pace drift` and `beginner uncertainty` |
-| 4 | Watch says spike, body feels normal | `1` hero clip, keep reserve slot unused unless source fails | Clip on not overreacting to one number | Reel + carousel slot if due: how to read one bad data point | `AI lesson`: confidence is dangerous when the signal is noisy. `shipping lesson`: uncertainty must be productized. `runner truth`: one spike is not the whole run. | `Apple Watch interpretation` |
-| 5 | Runner thinks Zone 2 is one exact pace | `1` hero clip on effort vs strict pace | Clip about chasing a pace instead of effort | Reel + story slider | `AI lesson`: rigid rules sound smart but coach badly. `shipping lesson`: effort-first coaching beats static pace rules. `runner truth`: easy effort moves with the day. | `heart-rate confusion` and `easy-run pace drift` |
-| 6 | Bad sleep / stress / heat changed the run | `1` hero clip, optional second if first concept is weak | Clip on why the number changed today | Reel + 3 story frames on stress, heat, sleep | `AI lesson`: context beats raw data. `shipping lesson`: runners need interpretation, not just measurement. `runner truth`: stress shows up in the run. | `beginner uncertainty` |
-| 7 | Week-1 synthesis: what runners misread most | no mandatory new Veo clip unless a gap needs filling | Reuse strongest week-1 clip with a new hook or comment-led angle | Reel repost or best performer recap + carousel if due | `AI lesson`: biggest false assumption this week. `shipping lesson`: what content taught us. `runner truth`: the same panic keeps repeating. | best-performing pattern from days 1 to 6 |
-| 8 | Apple Watch says hard, breathing says easy | `1` hero clip on device-vs-body conflict | Clip built around watch vs breathing mismatch | Reel + story poll `watch / body` | `AI lesson`: sensors have authority users obey too quickly. `shipping lesson`: product has to rebalance that. `runner truth`: breathing often tells the truth faster. | `Apple Watch interpretation` |
-| 9 | Garmin/Apple discrepancies create confusion | `1` hero clip if footage can stay generic and not brand-dependent | Clip on different devices, same anxiety | Reel + story question box | `AI lesson`: the same runner can get two stories from two devices. `shipping lesson`: interpretation must survive platform differences. `runner truth`: tools disagree more than runners expect. | `Garmin interpretation` and `Apple Watch interpretation` |
-| 10 | Zone 2 obsession is making the run worse | `1` hero clip on overcorrection | Clip calling out panic from perfect-zone chasing | Reel + carousel slot if due | `AI lesson`: optimization obsession creates worse product and worse running. `shipping lesson`: coaching should calm, not escalate. `runner truth`: some runners are overfitting every run. | `heart-rate confusion` |
-| 11 | Uphill / wind / terrain changed the number | `1` hero clip on terrain context | Clip around “this number changed because the route changed” | Reel + story sticker | `AI lesson`: environment is part of the model. `shipping lesson`: terrain context matters more than static thresholds. `runner truth`: the route changes the reading. | `beginner uncertainty` and `heart-rate confusion` |
-| 12 | Wrist HR is useful but imperfect | `1` hero clip on useful-but-imperfect signal | Clip that keeps trust while lowering panic | Reel + 3 story frames on when to question wrist HR | `AI lesson`: certainty is easy to generate and hard to deserve. `shipping lesson`: we need better confidence handling. `runner truth`: the watch is useful, not absolute. | `Apple Watch interpretation` |
-| 13 | Easy run should feel calm, not like an exam | `1` hero clip on emotional relief | Clip focused on the psychological cost of constant checking | Reel + deeper caption | `AI lesson`: reducing mental load is product value. `shipping lesson`: better coaching often means less noise. `runner truth`: some runs are ruined by interpretation, not effort. | `watch-checking anxiety` |
-| 14 | Two-week synthesis: what to trust first during a run | optional new Veo only if a stronger synthesis clip is clearly needed | Best-of or synthesis clip from strongest theme | Reel recap + carousel if due + story question box | `AI lesson`: biggest two-week product lesson. `shipping lesson`: what changed in the system because of real runner confusion. `runner truth`: what runners should trust first. | repeat the best-performing thread pattern and test one stronger original post only if earned |
+| Day | Date | Core Tension | Veo Plan | TikTok | Instagram | X | Reddit |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 2026-04-17 | Founder proof on easy-day pacing | `1` founder-proof clip with the same runner identity and a fresh no-face angle | Founder-proof pacing clip with lived credibility, not generic advice | Clean Reel cut that turns the founder story into trust | Founder-proof learning on real-time correction, pacing, and product timing | `easy-run pace drift` replies where lived experience matters |
+| 2 | 2026-04-18 | Starting too fast | `1` primary clip on the first kilometer being misleading; keep reserve unused unless framing fails | Fast first-kilometer interruption cut with a calmer settling message | Cleaner Reel on why an early surge does not define the run | Founder posts on early-run noise, product restraint, and pacing identity | `beginner uncertainty` and `easy-run pace drift` replies |
+| 3 | 2026-04-19 | Route context | `1` primary clip on hills, wind, or terrain changing the reading | Context clip that blames the route before the runner | Trust Reel on terrain, wind, and interpretation | Founder posts on environment in the model, not outside it | `beginner uncertainty` and route-driven confusion replies |
+| 4 | 2026-04-20 | Recovery days are training too | `1` primary clip on restraint and recovery discipline; reuse only if a new source fails | Recovery-day clip that reframes doing less as good training | Trust Reel on restraint, patience, and non-heroic consistency | Founder posts on products rewarding restraint instead of only intensity | `easy-run pace drift` and `beginner uncertainty` replies about recovery discipline |
+| 5 | 2026-04-21 | Tension and breathing | `1` primary clip on upper-body tension showing up before the numbers do | Physical-tension clip that makes the runner check posture and breathing before panicking | Trust Reel on shoulders, jaw, and breathing cues | Founder posts on detecting tension before outcomes | `beginner uncertainty` replies about breathing and tightness |
+| 6 | 2026-04-22 | Easy pace drift | `1` primary clip on easy pace moving with the day | Clip that normalizes easy pace drift instead of treating it like failure | Trust Reel on why the same effort can produce a different pace | Founder posts on dynamic baselines and day-to-day interpretation | `easy-run pace drift` and `beginner uncertainty` replies |
+| 7 | 2026-04-23 | Progress is consistency, not one perfect day | `1` primary clip on zooming out and trusting the block, not the one run | Zoom-out clip that fights perfectionism and single-run overreaction | Trust Reel on block-level progress | Founder posts on trend thinking instead of single-day drama | `easy-run pace drift` replies on one bad day not erasing a good block |
+| 8 | 2026-04-24 | Checking the watch too often ruins the run | `1` primary clip on compulsive watch checking and mental tension | Interruption clip about turning the run into an exam | Cleaner Reel about what over-checking does to the body | Founder posts on reducing prompts and mental load | `watch-checking anxiety` replies |
+| 9 | 2026-04-25 | Zone 2 obsession creates false precision | `1` primary clip on over-optimization and rigid targets | Clip that calls out false precision and rigid Zone 2 behavior | Trust Reel on effort-first thinking | Founder posts on rigid rules coaching badly in real life | `heart-rate confusion` and `easy-run pace drift` replies |
+| 10 | 2026-04-26 | Sleep, stress, and life changed the run | `1` primary clip on life context changing interpretation | Clip that reframes a strange run through life context | Trust Reel on the body showing life load | Founder posts on context beating raw data | `beginner uncertainty` replies about sleep, stress, and fatigue |
+| 11 | 2026-04-27 | Device vs body | `1` primary clip on when the body feels controlled but the device looks alarming | Clip about letting the body get a vote before the device writes the story | Trust Reel on signal conflict without blind trust | Founder posts on resolving signal conflict calmly | `Apple Watch interpretation` and `Garmin interpretation` replies |
+| 12 | 2026-04-28 | Patience beats forcing progress | `1` primary clip on restraint, patience, and not chasing progress every day | Patience clip that counters forcing adaptation | Trust Reel on staying with the process | Founder posts on products that lower pressure instead of raising it | `beginner uncertainty` replies on trying to force improvement |
+| 13 | 2026-04-29 | One spike is not the whole story | `1` primary clip on a single alarming reading without full panic | Clip that de-escalates one scary spike without dismissing the device | Trust Reel on not over-narrating one blip | Founder posts on uncertainty and avoiding single-point overreaction | `Apple Watch interpretation` replies about one bad reading |
+| 14 | 2026-04-30 | What to trust first during a run | Reuse the strongest prior source only if it is clearly better; otherwise generate `1` synthesis clip | Synthesis clip on the order of trust during a run | Recap Reel that turns two weeks of learning into one calm framework | Founder posts on what changed in the product and what runners should trust first | Best-performing reply pattern repeated with a stronger synthesis angle |
 
 ## Posting Rhythm
 ### TikTok
@@ -169,6 +209,21 @@ Every day publish:
 
 All three should connect to the same daily theme so the system compounds instead of fragmenting.
 
+Build each post using:
+- hook
+- insight
+- observation
+- conclusion
+
+Keep the voice:
+- thoughtful
+- smart
+- simple
+- slightly contrarian
+- founder / product-builder
+- not hypey
+- not salesy
+
 ### Reddit
 Every day:
 - find `3 to 5` threads related to that day's theme
@@ -180,21 +235,42 @@ Every day:
 1. choose the day's theme from the calendar
 2. decide whether the day needs `1` or `2` Veo source clips
 3. write one Veo prompt and one backup prompt
-4. generate the primary source clip
-5. if the source works, stop generating and package it
-6. render TikTok and Instagram variants from the same source
-7. write the story pack from the same theme
-8. write the `3` X posts from the same theme:
+4. compare the new clip plan against the last approved clip and note the required scene changes:
+   - angle
+   - background / route
+   - clothes
+   - weather
+   - lighting
+5. generate the primary source clip
+6. if the source works, stop generating and package it
+7. render TikTok and Instagram variants from the same source
+8. decide whether the clip needs ElevenLabs voiceover:
+   - only add it if the spoken line improves clarity or founder credibility
+   - keep it short and natural
+9. write the story pack from the same theme
+10. write the `3` X posts from the same theme:
    - `AI lesson`
    - `shipping lesson`
    - `runner truth`
-9. prepare Reddit reply angles using the same theme and pattern tags
-10. log what performed best
+   - each post must use the X writing shape:
+     - strong hook
+     - insight
+     - real-world observation
+     - short conclusion
+11. prepare Reddit reply angles using the same theme and pattern tags
+12. log what performed best
 
 ## Daily Logging Rule
 Track these every day:
 - which Veo clip was generated
+- which scene changes were used versus the previous clip:
+  - angle
+  - background / route
+  - clothes
+  - weather
+  - lighting
 - whether the second or third Veo slot was used
+- whether ElevenLabs voiceover was used
 - which TikTok hook won
 - which Instagram Reel was posted
 - whether a carousel was due and posted

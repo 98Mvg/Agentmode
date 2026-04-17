@@ -1,40 +1,39 @@
-# X Daily Pack — 2026-04-19
+# X Daily Pack - 2026-04-19
 
 ## Post 1
 Type: `AI lesson`
 
-The model wants one reason.
-Real runs usually have three.
+Environment has to live inside the model.
 
-That changed how I think about AI coaching in Coachi.
+Building Coachi keeps making that more obvious.
 
-Bad sleep, high stress, heat, and leftover fatigue do not show up the same way, but they can all make the same run feel off.
+The same pace and the same watch reading do not mean the same thing on flat ground, in wind, on a hill, or late in a hard week. Context is not decoration. It changes the answer.
 
-Simple coaching only works when the product respects messy context underneath.
+If the product ignores that, it sounds smart at exactly the wrong time.
 
 ## Post 2
 Type: `shipping lesson`
 
-Most running apps are better at recording context than using it.
+A lot of coaching logic breaks when the route changes.
 
-That is a product problem, not a data problem.
+That is a product problem, not a runner problem.
 
-Sleep was bad. Stress is high. It is warm. The route rolls. If the logic ignores all that, the feedback sounds precise and lands wrong.
+If the app treats hills, wind, and terrain like noise outside the system, it will overcorrect the runner and underread the run. I keep having to design against that false certainty.
 
-Context should change the coaching, not just the chart.
+The route needs to be part of the coaching surface.
 
 ## Post 3
 Type: `runner truth`
 
-Sometimes the run feels harder because life came with you.
+Sometimes the route changed the number.
 
-That does not make the run a failure.
+Not your fitness.
 
-Bad sleep shows up. Stress shows up. Heat shows up. A lot of runners blame fitness when the real story is the day they brought into the run.
+A lot of runners blame themselves for what the hill, the wind, or the terrain actually caused. The body feels suddenly worse, but the environment asked more from the same body.
 
-Interpretation matters more than panic.
+Blame the route before you rewrite the story of the run.
 
 ## Suggested Reply Prompts
-- What changes your run most: sleep, stress, or heat?
-- Have you ever judged a run too harshly after a bad night of sleep?
-- What context do you wish your running app actually respected?
+- What changes your numbers more: hills, wind, or heat?
+- Have you ever blamed your fitness for what the route caused?
+- Should running apps treat terrain as first-class context?
