@@ -14,11 +14,11 @@ Recovery days count.
 ## Veo Plan
 - target source clips: `1`
 - reserve slot: `1` only if the first source feels too close to the previous day
-- new scene recipe: quiet gravel park loop, light grey tee, overcast morning, rear medium-wide shot
+- new scene recipe: quiet gravel park loop, washed charcoal top, muted olive shorts, flat overcast morning, moving rear-three-quarter to side-rear tracking shot
 - same runner identity, no-face framing, one continuous scene
 
 ## Veo Source Brief
-Vertical 9:16 cinematic handheld running shot on a quiet gravel park loop under soft overcast light. Use the same male runner identity as the previous Coachi organic clips: age 25-35, lean endurance build, short dark slightly textured hair, grounded performance styling, alone outdoors. Keep the framing no-face with a rear medium-wide shot that reads calm and controlled. He keeps the pace deliberately relaxed, checks the watch once, then stays patient instead of forcing anything. One continuous single-scene clip, stable relaxed cadence, believable easy effort, no logos, no text in source footage, no extra people, no stride reset.
+Vertical 9:16 cinematic handheld tracking shot on a quiet gravel park loop under flat overcast light. Use the same male runner identity as the previous approved Coachi organic clip: age 25-35, lean endurance build, short dark slightly textured hair, same skin tone and overall color continuity, grounded performance styling, alone outdoors. Keep the framing no-face. Start in a rear three-quarter medium shot from behind-left, then smoothly drift into a side-rear tracking angle so the clip feels in motion instead of locked behind him. He keeps the pace deliberately relaxed, checks the watch once, exhales, then stays patient instead of forcing anything. One single unbroken clip, one continuous single-scene run, stable relaxed cadence, believable easy effort, no logos, no text in source footage, no extra people, no double-step, no cadence glitch, no stride reset.
 
 ## Hook Variants
 ### Variant A

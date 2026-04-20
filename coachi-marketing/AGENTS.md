@@ -46,6 +46,18 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
 - Default X mix:
   - `2` posts on what building Coachi with AI taught you
   - `1` post on a runner problem, product truth, or user insight
+- Default X writing shape:
+  - strong hook
+  - insight
+  - real-world observation
+  - short conclusion
+- X length target:
+  - `20 to 120` words
+  - prefer `60 to 120` when the idea needs development
+  - keep it shorter when the post is stronger short
+- Keep X posts founder-first:
+  - sound like a product builder learning from real users, real runs, and real product constraints
+  - not like brand copy
 - Minimum X loop:
   - `3` posts
   - `5` likes
@@ -65,6 +77,8 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - or a shipping lesson
 - Treat build-in-public as applied learning, not journaling and not ad copy.
 - If a post reads like marketing first and learning second, rewrite it.
+- If the first line is weak, rewrite it.
+- If the post does not follow hook -> insight -> observation -> conclusion cleanly enough, rewrite it.
 - Run the X preflight before posting any daily pack:
   - exactly `1` true `AI lesson`
   - exactly `1` true `shipping lesson`
@@ -226,11 +240,20 @@ Think like:
   - body type
   - hair style and color
   - general facial look
-- Only vary:
+- For every new organic video, deliberately vary the scene design while keeping the character anchor stable.
+- Required per-video variation set:
+  - angle
+  - background / route
   - clothes
-  - environment
+  - weather
   - lighting
-  - scenario
+- Do not repeat the same combination on consecutive clips.
+- Keep a clip visibly different from the previous one before approving it.
+- Only keep stable:
+  - runner identity
+  - body type
+  - hair
+  - general movement feel
 - For paid ads, different faces are allowed if the concept is stronger or broader-market
 
 ## Shared Video Workflow
@@ -244,13 +267,19 @@ Think like:
 - Feed it one source spec and let platform differences come from flags/config only.
 - Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/inputs/notes/social-video-template.json` as the default input shape.
 - Save rendered outputs under `/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/` unless the user asks for a different destination.
+- ElevenLabs voiceover is the default on the shared video path unless a clip should explicitly stay silent.
+- Default rule for organic clips:
+  - keep spoken copy short, calm, and natural
+  - derive the spoken line from the hook/body/cta when `voiceover_text` is blank
+  - set `voiceover_enabled: false` only when silence is the better creative choice
+  - keep voiceover short, calm, and natural
 - Do not create separate TikTok and Instagram render pipelines.
 - If the current hook/body/cta copy is weak, keep text generation separate:
   - run `gemini-cli text optimize` to refine the spec
   - run `gemini-cli text hook` when you only need a stronger hook
   - run `gemini-cli text caption` for caption copy
   - keep `generate_social_videos.py` render-only
-- When `voiceover_text` is present, generate spoken narration inside the same workflow with ElevenLabs.
+- Generate spoken narration inside the same workflow with ElevenLabs by default.
 - Default spoken voice for marketing videos should use ElevenLabs voice ID `9MPvdQh2pLsLhn7SuiIS`.
 - Default marketing voice settings mode should be `eleven_defaults`, meaning use the voice's standard ElevenLabs sound settings unless the spec explicitly overrides them.
 - For organic TikTok and Instagram Reels, keep the same male runner character anchor across the related cover images, background visuals, and continuation assets.

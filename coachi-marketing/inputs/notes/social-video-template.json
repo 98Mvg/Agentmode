@@ -1,12 +1,13 @@
 {
   "slug": "easy-run-watch-confusion",
   "hook_text": "THIS FEELS EASY",
-  "body_text": "YOUR WATCH IS NOT THE WHOLE STORY.",
+  "body_text": "SO WHY IS MY HR 168?",
   "cta_text": "",
   "accent_type": "wrong",
   "background": "content/ads/generated/watch-check-v1.png",
   "source_video_mode": "veo",
   "source_video_prompt": "Vertical 9:16 cinematic handheld running shot at blue hour on a quiet road. Male runner age 25-35 with lean endurance build, short dark slightly textured hair, alone outdoors. He is mid easy run, calm breathing, natural sweat, premium but grounded realism. He glances subtly at his sports watch, expression shifts from calm to uncertain for one beat, then keeps running. No logos, no text burned into the image, no product shots, no extra characters, no gym, no influencer posing. Keep motion natural and believable.",
+  "source_video_negative_prompt": "",
   "source_video_asset": "content/video/generated/sources/2026-04-13-easy-run-watch-confusion-source.mp4",
   "variant_goal": "Follower growth through runner uncertainty, not product conversion.",
   "platform_hook_text": {
@@ -54,14 +55,18 @@
       "general_look"
     ],
     "allowed_variations": [
+      "angle",
+      "background_route",
       "clothes",
       "environment",
+      "weather",
       "lighting",
       "scenario"
     ]
   },
   "audio": null,
-  "voiceover_text": null,
+  "voiceover_enabled": true,
+  "voiceover_text": "",
   "voice_language": "en",
   "voice_persona": "personal_trainer",
   "voice_id_override": "9MPvdQh2pLsLhn7SuiIS",

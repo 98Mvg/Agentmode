@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Any
 
 from PIL import Image, ImageDraw
+from PIL import ImageFont
 
 
 TARGET_W = 1080
@@ -36,6 +37,18 @@ DEFAULT_MARKETING_VOICE_SETTINGS_MODE = "eleven_defaults"
 SCRIPT_PATH = Path(__file__)
 RESOLVED_SCRIPT_PATH = SCRIPT_PATH.resolve()
 MARKETING_ROOT = RESOLVED_SCRIPT_PATH.parents[1]
+FONT_CANDIDATES = {
+    "heavy": [
+        "/System/Library/Fonts/Helvetica.ttc",
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        "/System/Library/Fonts/Supplemental/Helvetica.ttc",
+    ],
+    "medium": [
+        "/System/Library/Fonts/Helvetica.ttc",
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/System/Library/Fonts/Supplemental/Helvetica.ttc",
+    ],
+}
 
 
 def discover_repo_root() -> Path:
@@ -61,7 +74,7 @@ def discover_repo_root() -> Path:
         if (
             (candidate / "locale_config.py").exists()
             and (candidate / "elevenlabs_tts.py").exists()
-            and (candidate / "tools" / "app_store_screenshots" / "finalize_collection.py").exists()
+            and (candidate / "tools" / "app_store_screenshots" / "render.py").exists()
         ):
             return candidate
 
@@ -74,19 +87,38 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 
-def load_render_helpers():
-    helper_path = REPO_ROOT / "tools" / "app_store_screenshots" / "finalize_collection.py"
-    spec = importlib.util.spec_from_file_location("coachi_screenshot_helpers", helper_path)
-    if not spec or not spec.loader:
-        raise RuntimeError(f"Unable to load render helpers from {helper_path}")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
+def hex_to_rgb(value: str) -> tuple[int, int, int]:
+    stripped = value.strip().lstrip("#")
+    if len(stripped) != 6:
+        raise RuntimeError(f"Invalid color value: {value}")
+    return tuple(int(stripped[index : index + 2], 16) for index in (0, 2, 4))
 
 
-_HELPERS = load_render_helpers()
-fit_font = _HELPERS.fit_font
-hex_to_rgb = _HELPERS.hex_to_rgb
+def _resolve_font_path(weight: str) -> str | None:
+    for candidate in FONT_CANDIDATES.get(weight, []):
+        if Path(candidate).exists():
+            return candidate
+    for candidates in FONT_CANDIDATES.values():
+        for candidate in candidates:
+            if Path(candidate).exists():
+                return candidate
+    return None
+
+
+def fit_font(weight: str, size: int, text: str, max_width: int):
+    font_path = _resolve_font_path(weight)
+    draw = ImageDraw.Draw(Image.new("RGBA", (TARGET_W, TARGET_H), (0, 0, 0, 0)))
+    for candidate_size in range(int(size), 15, -2):
+        if font_path:
+            font = ImageFont.truetype(font_path, size=candidate_size)
+        else:
+            font = ImageFont.load_default()
+        bbox = draw.textbbox((0, 0), text or "A", font=font)
+        if (bbox[2] - bbox[0]) <= max_width or candidate_size <= 18:
+            return font
+    return ImageFont.load_default()
+
+
 ACCENT_COLORS: dict[str, tuple[int, int, int] | None] = {
     "none": None,
     "wrong": hex_to_rgb("#FF5A5F"),
@@ -273,6 +305,34 @@ def resolve_optional_media_path(raw_value: str | None, spec_path: Path) -> Path 
         return None
 
 
+def parse_bool_flag(value: Any, default: bool = True) -> bool:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    text = str(value).strip().lower()
+    if text in {"1", "true", "yes", "on"}:
+        return True
+    if text in {"0", "false", "no", "off"}:
+        return False
+    return default
+
+
+def derive_default_voiceover_text(hook_text: str, body_text: str, cta_text: str) -> str | None:
+    parts: list[str] = []
+    for raw in (hook_text, body_text, cta_text):
+        cleaned = str(raw or "").strip()
+        if not cleaned:
+            continue
+        cleaned = re.sub(r"\s*\n+\s*", ". ", cleaned)
+        cleaned = re.sub(r"\s{2,}", " ", cleaned).strip()
+        if cleaned and cleaned[-1] not in ".!?":
+            cleaned = f"{cleaned}."
+        parts.append(cleaned)
+    combined = " ".join(parts).strip()
+    return combined or None
+
+
 def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
     slug_source = str(spec.get("slug") or spec["hook_text"])
     base_duration = float(spec.get("duration_seconds") or 9.0)
@@ -295,6 +355,10 @@ def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
         for platform, text in platform_hook_text.items()
         if str(text).strip()
     }
+    voiceover_enabled = parse_bool_flag(spec.get("voiceover_enabled"), default=True)
+    voiceover_text = str(spec.get("voiceover_text") or "").strip() or None
+    if voiceover_enabled and not voiceover_text:
+        voiceover_text = derive_default_voiceover_text(str(spec["hook_text"]).strip(), body_text, cta_text)
 
     normalized = {
         "slug": slugify(slug_source),
@@ -307,7 +371,8 @@ def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
         "audio": resolve_media_path(spec.get("audio"), spec_path),
         "logo": resolve_media_path(spec.get("logo"), spec_path),
         "duration_seconds": clamp_duration(base_duration),
-        "voiceover_text": str(spec.get("voiceover_text") or "").strip() or None,
+        "voiceover_enabled": voiceover_enabled,
+        "voiceover_text": voiceover_text,
         "voice_language": str(spec.get("voice_language") or "en").strip().lower() or "en",
         "voice_persona": str(spec.get("voice_persona") or "personal_trainer").strip() or "personal_trainer",
         "voice_id_override": str(spec.get("voice_id_override") or "").strip() or None,
@@ -723,23 +788,38 @@ def render_overlay_layers(spec: dict[str, Any], temp_dir: Path) -> list[dict[str
     layers: list[dict[str, Any]] = []
     background_tint = temp_dir / f"{spec['platform']}-bg-tint.png"
     build_background_tint(background_tint, preset)
-    layers.append({"path": background_tint, "start": 0.0, "slide_offset": 0})
+    layers.append({"path": background_tint, "start": 0.0, "slide_offset": 0, "end": None})
 
     hook_path = temp_dir / f"{spec['platform']}-hook.png"
     render_hook_layer(spec, hook_path)
-    layers.append({"path": hook_path, "start": float(preset["hook_start_seconds"]), "slide_offset": int(preset["hook_slide_offset"])})
+    layers.append({
+        "path": hook_path,
+        "start": float(preset["hook_start_seconds"]),
+        "slide_offset": int(preset["hook_slide_offset"]),
+        "end": float(preset["hook_end_seconds"]) if preset.get("hook_end_seconds") is not None else None,
+    })
 
     body_path = temp_dir / f"{spec['platform']}-body.png"
     render_body_layer(spec, body_path)
-    layers.append({"path": body_path, "start": float(preset["body_start_seconds"]), "slide_offset": int(preset["body_slide_offset"])})
+    layers.append({
+        "path": body_path,
+        "start": float(preset["body_start_seconds"]),
+        "slide_offset": int(preset["body_slide_offset"]),
+        "end": float(preset["body_end_seconds"]) if preset.get("body_end_seconds") is not None else None,
+    })
 
     cta_path = temp_dir / f"{spec['platform']}-cta.png"
     render_cta_layer(spec, cta_path)
-    layers.append({"path": cta_path, "start": float(preset["cta_start_seconds"]), "slide_offset": int(preset["cta_slide_offset"])})
+    layers.append({
+        "path": cta_path,
+        "start": float(preset["cta_start_seconds"]),
+        "slide_offset": int(preset["cta_slide_offset"]),
+        "end": float(preset["cta_end_seconds"]) if preset.get("cta_end_seconds") is not None else None,
+    })
 
     logo_path = temp_dir / f"{spec['platform']}-logo.png"
     render_logo_layer(spec, logo_path)
-    layers.append({"path": logo_path, "start": float(preset["cta_start_seconds"]), "slide_offset": 0})
+    layers.append({"path": logo_path, "start": float(preset["cta_start_seconds"]), "slide_offset": 0, "end": None})
     return layers
 
 
@@ -801,16 +881,25 @@ def build_ffmpeg_command(
         start = float(layer["start"])
         slide_offset = int(layer["slide_offset"])
         end = start + fade_seconds
-        filter_parts.append(
-            f"[{overlay_idx}:v]format=rgba,fade=t=in:st={start:.2f}:d={fade_seconds:.2f}:alpha=1[{prepared_label}]"
-        )
+        end_value = layer.get("end")
+        if end_value is not None:
+            end = max(start + fade_seconds, min(float(end_value), float(spec["duration_seconds"])))
+        if end_value is not None:
+            fade_out_start = max(start + fade_seconds, end - fade_seconds)
+            filter_parts.append(
+                f"[{overlay_idx}:v]format=rgba,fade=t=in:st={start:.2f}:d={fade_seconds:.2f}:alpha=1,fade=t=out:st={fade_out_start:.2f}:d={fade_seconds:.2f}:alpha=1[{prepared_label}]"
+            )
+        else:
+            filter_parts.append(
+                f"[{overlay_idx}:v]format=rgba,fade=t=in:st={start:.2f}:d={fade_seconds:.2f}:alpha=1[{prepared_label}]"
+            )
         next_label = "v" if overlay_idx == len(overlay_paths) else f"bg{overlay_idx}"
         if slide_offset == 0:
             y_expr = "0"
         else:
             y_expr = (
                 f"if(lt(t,{start:.2f}),{slide_offset},"
-                f"if(lt(t,{end:.2f}),{slide_offset}*(({end:.2f}-t)/{fade_seconds:.2f}),0))"
+                f"if(lt(t,{start + fade_seconds:.2f}),{slide_offset}*(({start + fade_seconds:.2f}-t)/{fade_seconds:.2f}),0))"
             )
         filter_parts.append(
             f"[{current_label}][{prepared_label}]overlay=0:'{y_expr}':format=auto[{next_label}]"

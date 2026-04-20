@@ -69,6 +69,16 @@ def load_output_path(output: str | None, spec: dict[str, object] | None, spec_pa
     raise RuntimeError("Provide --output or a spec with source_video_asset.")
 
 
+def load_negative_prompt(base_negative_prompt: str | None, spec: dict[str, object] | None) -> str:
+    base = str(base_negative_prompt or "").strip()
+    extra = ""
+    if spec:
+        extra = str(spec.get("source_video_negative_prompt") or "").strip()
+    if base and extra:
+        return f"{base}, {extra}"
+    return extra or base
+
+
 def run_generate(args: argparse.Namespace) -> int:
     spec: dict[str, object] | None = None
     spec_path: Path | None = None
@@ -86,7 +96,7 @@ def run_generate(args: argparse.Namespace) -> int:
     aspect_ratio = args.aspect_ratio
     resolution = args.resolution
     duration_seconds = args.duration_seconds
-    negative_prompt = args.negative_prompt
+    negative_prompt = load_negative_prompt(args.negative_prompt, spec)
 
     print(f"Starting Veo generation -> {output_path}")
     config_kwargs: dict[str, object] = {

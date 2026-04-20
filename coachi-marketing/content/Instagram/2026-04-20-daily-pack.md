@@ -12,7 +12,7 @@ Trust and permission to recover well.
 ## Veo Plan
 - same source concept as TikTok
 - keep the reel minimal and calm
-- same runner identity, fresh overcast park route, no-face rear angle
+- same runner identity and same skin tone/color continuity as the prior approved clip, fresh overcast park route, no-face moving camera angle with rear-three-quarter drift into side-rear tracking, one single unbroken clip
 
 ## Hook Options
 - `RECOVERY DAYS STILL COUNT`

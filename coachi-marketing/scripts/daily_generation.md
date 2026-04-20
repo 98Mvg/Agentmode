@@ -233,6 +233,7 @@ Required Reddit thread pattern labels:
 - If the source footage is AI-generated, keep it inside the same spec with:
   - `source_video_mode`
   - `source_video_prompt`
+  - `source_video_negative_prompt`
   - `source_video_asset`
   - `variant_goal`
   - `platform_hook_text`
@@ -242,9 +243,11 @@ Required Reddit thread pattern labels:
   - `scripts/gemini-cli text optimize --spec ...` to refine `hook_text`, `body_text`, `cta_text`, and `accent_type`
   - `scripts/gemini-cli text hook --spec ...` when only the top hook is weak
   - `scripts/gemini-cli text caption --spec ...` for platform caption copy
-- If `voiceover_text` is present, generate ElevenLabs narration inside the same render workflow.
+- Generate ElevenLabs narration by default inside the same render workflow.
 - Default video voice should use ElevenLabs voice ID `9MPvdQh2pLsLhn7SuiIS`.
 - Default marketing voice settings mode should be `eleven_defaults`, so the voice keeps the standard ElevenLabs sound unless the spec explicitly overrides it.
+- If `voiceover_text` is blank, derive spoken copy from the hook/body/cta overlay text.
+- Set `voiceover_enabled: false` only when the clip should stay silent.
 - If an organic TikTok + Instagram pair needs visual continuity, include a `character_anchor` block in the source spec and keep the same male runner across the pair.
 - For Instagram Reels, use the same core input as TikTok and apply only parameter-level differences:
   - stricter safe margins

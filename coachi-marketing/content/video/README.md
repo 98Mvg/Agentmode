@@ -2,6 +2,9 @@
 
 Use this folder for rendered TikTok and Instagram Reel exports that come from one shared source spec.
 
+Blueprint:
+- use [VEO_3_1_SHORT_BLUEPRINT.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/video/VEO_3_1_SHORT_BLUEPRINT.md) when the source footage should come from Veo 3.1 and the final exports should follow the approved lower-third organic text style
+
 Rules:
 - do not create separate TikTok and Instagram render pipelines
 - generate both platform variants from the same core input
@@ -22,7 +25,7 @@ Rules:
   - `comment_bait_text` for caption/comment strategy that sits next to the render spec
 - if `source_video_asset` exists, the renderer should use it as the live background
 - if the Veo clip is not generated yet, keep `background` as a fallback preview asset so the spec still validates and the layout can still be tested
-- when `voiceover_text` is present, generate ElevenLabs voiceover inside the same render workflow
+- generate ElevenLabs voiceover by default inside the same render workflow
 - default spoken voice should use ElevenLabs voice ID `9MPvdQh2pLsLhn7SuiIS`
 - default marketing voice settings mode should be `eleven_defaults` so the voice keeps its standard ElevenLabs sound profile unless the spec overrides it
 - for organic Instagram + TikTok sets, keep one `character_anchor` across the paired assets:
@@ -31,7 +34,28 @@ Rules:
   - lean endurance-athlete build
   - short dark slightly textured hair
   - calm, focused expression
-- only vary clothes, environment, lighting, and scenario across the related pair
+- vary the scene design on every new clip:
+  - angle
+  - background / route
+  - clothes
+  - weather
+  - lighting
+- do not repeat the same scene recipe on consecutive clips
+- keep continuity through the runner anchor, not through identical visuals
+- optional spoken-audio fields:
+  - `voiceover_enabled`
+  - `voiceover_text`
+  - `voice_language`
+  - `voice_persona`
+  - `voice_id_override`
+  - `voice_settings_mode`
+- when `voiceover_enabled` is omitted, the renderer treats it as `true`
+- when `voiceover_text` is empty and `voiceover_enabled` is `true`, the renderer derives default spoken copy from the hook/body/cta overlay text
+- set `voiceover_enabled: false` when a clip should stay silent
+- default rule:
+  - voiceover on by default
+  - keep the spoken line short, calm, and natural
+  - disable it explicitly only when silence is the better creative choice
 
 Default output:
 - `*-tiktok.mp4`
