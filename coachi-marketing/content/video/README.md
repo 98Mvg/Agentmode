@@ -23,8 +23,9 @@ Rules:
   - `variant_goal` for the test intent of the current hook variant
   - `platform_hook_text` for per-platform top-hook overrides while keeping one shared spec
   - `comment_bait_text` for caption/comment strategy that sits next to the render spec
-- if `source_video_asset` exists, the renderer should use it as the live background
-- if the Veo clip is not generated yet, keep `background` as a fallback preview asset so the spec still validates and the layout can still be tested
+- if `source_video_asset` is declared, it must exist before rendering
+- if the Veo clip is not generated yet, omit `source_video_asset` and keep `background` as a preview asset so the layout can still be tested
+- invalid `voiceover_enabled` values and unsupported `layout_overrides` keys should fail fast; fix the spec instead of relying on silent defaults
 - generate ElevenLabs voiceover by default inside the same render workflow
 - default spoken voice should use ElevenLabs voice ID `9MPvdQh2pLsLhn7SuiIS`
 - default marketing voice settings mode should be `eleven_defaults` so the voice keeps its standard ElevenLabs sound profile unless the spec overrides it
@@ -76,6 +77,12 @@ Example:
 python3 scripts/generate_social_videos.py generate \
   --spec inputs/notes/social-video-template.json \
   --out-dir content/video/generated/demo
+```
+
+Validate a spec without rendering:
+```bash
+python3 scripts/generate_social_videos.py validate \
+  --spec inputs/notes/social-video-template.json
 ```
 
 If the source footage should come from Veo first, generate that source clip before rendering the platform variants:

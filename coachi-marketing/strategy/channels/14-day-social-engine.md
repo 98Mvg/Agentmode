@@ -15,7 +15,7 @@ Build a two-week content engine that:
 
 ## Live Day Alignment
 As of `2026-04-23`, the active run resumes at `Day 5`.
-Use the engine day number as the source of truth for what to ship next, then map that day onto the current real date.
+Use the engine day number as the active theme pointer, then map that day onto the current real date. The execution-locked source of truth is still the latest dated daily packs plus the newest scorecards and winner notes.
 
 ## Execution Rule
 - Only the next `3` days are execution-locked at any time.

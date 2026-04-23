@@ -34,6 +34,20 @@ The video should feel like:
 
 The viewer should understand the tension before they finish reading the first line.
 
+## Simplification Rule
+If a Veo clip starts looking synthetic, simplify the source prompt before adding more direction.
+
+Default fix order:
+- remove acting beats
+- remove watch checks and gestures
+- keep one steady jog
+- keep a no-face angle
+- keep the camera smooth
+- let text and voiceover carry the story
+
+Working default prompt shape:
+`Male runner, age 25-35, lean endurance build, short dark slightly textured hair, medium tan complexion, jogging steadily along <route>. Side/back no-face angle. Smooth tracking camera.`
+
 ## Character Anchor
 Default organic runner anchor:
 - male

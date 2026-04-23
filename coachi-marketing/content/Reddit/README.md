@@ -114,8 +114,8 @@ Best original post shapes:
 - whether data makes runners calmer or more stressed
 
 Use the dedicated traffic system and post pack when drafting original posts:
-- strategy: [reddit-traffic-recipe.md](/Users/mariusgaarder/Documents/treningscoach/coachi-marketing/strategy/channels/reddit-traffic-recipe.md)
-- post pack: [REDDIT_TRAFFIC_POST_PACK.md](/Users/mariusgaarder/Documents/treningscoach/coachi-marketing/content/Reddit/REDDIT_TRAFFIC_POST_PACK.md)
+- strategy: [reddit-traffic-recipe.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/reddit-traffic-recipe.md)
+- post pack: [REDDIT_TRAFFIC_POST_PACK.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/Reddit/REDDIT_TRAFFIC_POST_PACK.md)
 
 ## Execution Notes
 - use the signed-in live browser path when doing live Reddit work

@@ -6,6 +6,7 @@ Generate Coachi traffic content from the latest research and positioning files.
 Planning layer:
 - for the next two weeks, use [14-day-social-engine.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/14-day-social-engine.md) as the operating calendar for TikTok, Instagram, X, Reddit, and story packaging
 - treat that file as a theme bank, but only lock the next `3` days of execution at a time
+- use the source hierarchy in [AGENTS.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/AGENTS.md) when docs disagree: role rules first, then performance learnings, then this execution playbook, then channel-specific docs
 
 ## Inputs
 - `strategy/audience/ideal-customer.md`
@@ -239,6 +240,8 @@ Required Reddit thread pattern labels:
   - `scripts/gemini-cli text hook ...`
   - `scripts/gemini-cli text caption ...`
 - Use `inputs/notes/social-video-template.json` as the default input shape.
+- If a spec declares `source_video_asset`, that file must already exist before rendering. For layout-only previews, omit `source_video_asset` and use `background`.
+- Before rendering, run `python3 scripts/generate_social_videos.py validate --spec <spec>` to catch bad booleans, typoed layout overrides, and missing declared media.
 - If the source footage is AI-generated, keep it inside the same spec with:
   - `source_video_mode`
   - `source_video_prompt`

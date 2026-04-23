@@ -217,6 +217,72 @@ PLATFORM_PRESETS: dict[str, dict[str, Any]] = {
     },
 }
 
+IMPLICIT_LAYOUT_OVERRIDE_KEYS = {
+    "hook_panel_alpha",
+    "body_panel_alpha",
+    "cta_panel_alpha",
+    "hook_stroke_width",
+    "body_stroke_width",
+    "cta_stroke_width",
+    "hook_end_seconds",
+    "body_end_seconds",
+    "cta_end_seconds",
+    "text_stroke_fill",
+}
+ALLOWED_LAYOUT_OVERRIDE_KEYS = set().union(
+    *(preset.keys() for preset in PLATFORM_PRESETS.values()),
+    IMPLICIT_LAYOUT_OVERRIDE_KEYS,
+)
+ALPHA_LAYOUT_KEYS = {
+    "overlay_top_alpha",
+    "overlay_bottom_alpha",
+    "panel_alpha",
+    "cta_alpha",
+    "cta_border_alpha",
+    "hook_panel_alpha",
+    "body_panel_alpha",
+    "cta_panel_alpha",
+}
+POSITIVE_INT_LAYOUT_KEYS = {
+    "hook_max_width",
+    "body_max_width",
+    "cta_max_width",
+    "safe_left",
+    "safe_right",
+    "safe_top",
+    "safe_bottom",
+    "hook_font_size",
+    "body_font_size",
+    "cta_font_size",
+    "logo_width",
+}
+NON_NEGATIVE_INT_LAYOUT_KEYS = {
+    "hook_line_gap",
+    "body_line_gap",
+    "cta_line_gap",
+    "hook_y",
+    "body_y",
+    "cta_y",
+    "hook_stroke_width",
+    "body_stroke_width",
+    "cta_stroke_width",
+}
+TIMING_LAYOUT_KEYS = {
+    "hook_start_seconds",
+    "body_start_seconds",
+    "cta_start_seconds",
+    "hook_end_seconds",
+    "body_end_seconds",
+    "cta_end_seconds",
+    "layer_fade_seconds",
+    "default_duration",
+}
+SLIDE_OFFSET_KEYS = {
+    "hook_slide_offset",
+    "body_slide_offset",
+    "cta_slide_offset",
+}
+
 
 def slugify(value: str) -> str:
     value = re.sub(r"[^a-zA-Z0-9]+", "-", value.strip().lower())
@@ -225,6 +291,85 @@ def slugify(value: str) -> str:
 
 def clamp_duration(value: float) -> float:
     return max(6.0, min(15.0, round(value, 2)))
+
+
+def warn(message: str) -> None:
+    print(f"WARN: {message}", file=sys.stderr)
+
+
+def is_plain_int(value: Any) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool)
+
+
+def is_plain_number(value: Any) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def validate_layout_overrides(raw_overrides: Any) -> dict[str, Any]:
+    if not raw_overrides:
+        return {}
+    if not isinstance(raw_overrides, dict):
+        raise RuntimeError("layout_overrides must be a JSON object.")
+
+    overrides = dict(raw_overrides)
+    for key, value in overrides.items():
+        if key not in ALLOWED_LAYOUT_OVERRIDE_KEYS:
+            raise RuntimeError(f"Unsupported layout_overrides key: {key}")
+
+        if key in ALPHA_LAYOUT_KEYS:
+            if not is_plain_int(value) or not 0 <= value <= 255:
+                raise RuntimeError(f"layout_overrides.{key} must be an integer between 0 and 255.")
+        elif key in POSITIVE_INT_LAYOUT_KEYS:
+            if not is_plain_int(value) or value <= 0:
+                raise RuntimeError(f"layout_overrides.{key} must be a positive integer.")
+            if key.endswith("_max_width") and value > TARGET_W:
+                raise RuntimeError(f"layout_overrides.{key} cannot exceed the {TARGET_W}px canvas width.")
+            if key.endswith("_font_size") and value > 240:
+                raise RuntimeError(f"layout_overrides.{key} is too large for the vertical canvas.")
+        elif key in NON_NEGATIVE_INT_LAYOUT_KEYS:
+            if not is_plain_int(value) or value < 0:
+                raise RuntimeError(f"layout_overrides.{key} must be a non-negative integer.")
+            if key.endswith("_y") and value > TARGET_H:
+                raise RuntimeError(f"layout_overrides.{key} cannot exceed the {TARGET_H}px canvas height.")
+            if key.endswith("_stroke_width") and value > 30:
+                raise RuntimeError(f"layout_overrides.{key} is too large for readable text rendering.")
+        elif key in TIMING_LAYOUT_KEYS:
+            if not is_plain_number(value) or not 0 <= float(value) <= 15:
+                raise RuntimeError(f"layout_overrides.{key} must be a number between 0 and 15 seconds.")
+        elif key in SLIDE_OFFSET_KEYS:
+            if not is_plain_number(value) or not -500 <= float(value) <= 500:
+                raise RuntimeError(f"layout_overrides.{key} must be a number between -500 and 500.")
+        elif key == "duration_offset":
+            if not is_plain_number(value) or not -5 <= float(value) <= 5:
+                raise RuntimeError("layout_overrides.duration_offset must be a number between -5 and 5.")
+        elif key == "music_volume":
+            if not is_plain_number(value) or not 0 <= float(value) <= 1:
+                raise RuntimeError("layout_overrides.music_volume must be a number between 0 and 1.")
+        elif key == "hook_uppercase":
+            if not isinstance(value, bool):
+                raise RuntimeError("layout_overrides.hook_uppercase must be true or false.")
+        elif key == "text_stroke_fill":
+            if not isinstance(value, str):
+                raise RuntimeError("layout_overrides.text_stroke_fill must be a hex color string.")
+            hex_to_rgb(value)
+        elif key == "eq":
+            if not isinstance(value, dict):
+                raise RuntimeError("layout_overrides.eq must be a JSON object.")
+            allowed_eq_keys = {"contrast", "saturation", "brightness"}
+            extra_eq_keys = sorted(set(value) - allowed_eq_keys)
+            if extra_eq_keys:
+                raise RuntimeError(f"Unsupported layout_overrides.eq keys: {', '.join(extra_eq_keys)}")
+            for eq_key, eq_value in value.items():
+                if not is_plain_number(eq_value):
+                    raise RuntimeError(f"layout_overrides.eq.{eq_key} must be numeric.")
+
+    for section in ("hook", "body", "cta"):
+        start_key = f"{section}_start_seconds"
+        end_key = f"{section}_end_seconds"
+        if start_key in overrides and end_key in overrides and float(overrides[end_key]) <= float(overrides[start_key]):
+            raise RuntimeError(f"layout_overrides.{end_key} must be greater than {start_key}.")
+
+    return overrides
 
 
 def is_image_path(path: Path) -> bool:
@@ -305,7 +450,7 @@ def resolve_optional_media_path(raw_value: str | None, spec_path: Path) -> Path 
         return None
 
 
-def parse_bool_flag(value: Any, default: bool = True) -> bool:
+def parse_bool_flag(value: Any, default: bool = True, field_name: str = "boolean field") -> bool:
     if value is None:
         return default
     if isinstance(value, bool):
@@ -315,7 +460,7 @@ def parse_bool_flag(value: Any, default: bool = True) -> bool:
         return True
     if text in {"0", "false", "no", "off"}:
         return False
-    return default
+    raise RuntimeError(f"{field_name} must be true or false, got: {value!r}")
 
 
 def derive_default_voiceover_text(hook_text: str, body_text: str, cta_text: str) -> str | None:
@@ -343,22 +488,25 @@ def normalize_spec(spec: dict[str, Any], spec_path: Path) -> dict[str, Any]:
         raise RuntimeError(f"Unsupported accent_type: {accent_type}")
     background_fallback = resolve_optional_media_path(str(spec.get("background") or "").strip() or None, spec_path)
     source_video_asset_value = str(spec.get("source_video_asset") or "").strip() or None
-    source_video_asset = resolve_optional_media_path(source_video_asset_value, spec_path)
+    source_video_asset = resolve_media_path(source_video_asset_value, spec_path) if source_video_asset_value else None
     platform_hook_text = spec.get("platform_hook_text") or {}
     if platform_hook_text and not isinstance(platform_hook_text, dict):
         raise RuntimeError("platform_hook_text must be a JSON object keyed by platform.")
-    layout_overrides = spec.get("layout_overrides") or {}
-    if layout_overrides and not isinstance(layout_overrides, dict):
-        raise RuntimeError("layout_overrides must be a JSON object.")
+    layout_overrides = validate_layout_overrides(spec.get("layout_overrides") or {})
     normalized_platform_hooks = {
         str(platform).strip().lower(): str(text).strip()
         for platform, text in platform_hook_text.items()
         if str(text).strip()
     }
-    voiceover_enabled = parse_bool_flag(spec.get("voiceover_enabled"), default=True)
+    voiceover_enabled = parse_bool_flag(spec.get("voiceover_enabled"), default=True, field_name="voiceover_enabled")
     voiceover_text = str(spec.get("voiceover_text") or "").strip() or None
     if voiceover_enabled and not voiceover_text:
         voiceover_text = derive_default_voiceover_text(str(spec["hook_text"]).strip(), body_text, cta_text)
+    if source_video_asset is None and background_fallback is not None and str(spec.get("source_video_mode") or "").strip().lower() == "veo":
+        warn(
+            "source_video_mode is `veo` but source_video_asset is not set; "
+            f"rendering preview background instead: {background_fallback}"
+        )
 
     normalized = {
         "slug": slugify(slug_source),
@@ -1007,6 +1155,21 @@ def run_generate(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_validate(args: argparse.Namespace) -> int:
+    spec_path = Path(args.spec).resolve()
+    spec = normalize_spec(load_spec(spec_path), spec_path)
+
+    selected_platforms = SUPPORTED_PLATFORMS if args.platform == "both" else (args.platform,)
+    for platform in selected_platforms:
+        build_platform_spec(spec, platform)
+
+    print(f"OK {spec_path}")
+    print(f"- slug: {spec['slug']}")
+    print(f"- background: {spec['background']}")
+    print(f"- voiceover_enabled: {spec['voiceover_enabled']}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Generate TikTok and Instagram variants from one Coachi social-video spec."
@@ -1023,6 +1186,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Which platform variants to render. Default: both.",
     )
     generate.set_defaults(func=run_generate)
+
+    validate = subparsers.add_parser("validate", help="Validate a shared social-video spec without rendering.")
+    validate.add_argument("--spec", required=True, help="Path to a JSON video spec.")
+    validate.add_argument(
+        "--platform",
+        choices=("both", "tiktok", "instagram"),
+        default="both",
+        help="Which platform variants to validate. Default: both.",
+    )
+    validate.set_defaults(func=run_validate)
     return parser
 
 

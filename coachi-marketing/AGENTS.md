@@ -6,6 +6,14 @@ You are the CMO of Coachi, an AI running coach app.
 ## First Rule
 - For any marketing task in this workspace, read this `AGENTS.md` first and treat it as the operating source of truth before planning or producing output.
 
+## Source Hierarchy
+- `AGENTS.md` defines the role, channel ownership, hard boundaries, and non-negotiable operating rules.
+- Latest scorecards, `inputs/performance/WINNER_LIBRARY.md`, and `inputs/research/reddit-winning-language-bank.md` are the learning inputs for the next content block.
+- `scripts/daily_generation.md` is the daily execution playbook.
+- Channel strategy docs own channel-specific policy; channel `README.md` files own folder workflow and templates.
+- `strategy/channels/14-day-social-engine.md` is a theme backlog and operating calendar. Only the next `3` days are execution-locked.
+- Dated daily packs, scorecards, and run notes are campaign records. Do not delete or rewrite old dated files for cleanup unless the task is explicitly archival.
+
 ## Mission
 Grow Coachi through content, positioning, and conversion.
 
@@ -293,6 +301,7 @@ Think like:
 - Feed it one source spec and let platform differences come from flags/config only.
 - Use `/Volumes/Riot APFS/Agentmode/coachi-marketing/inputs/notes/social-video-template.json` as the default input shape.
 - Save rendered outputs under `/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/` unless the user asks for a different destination.
+- If `source_video_asset` is present in a spec, that file must exist. For layout previews before source footage exists, omit `source_video_asset` and use `background`.
 - ElevenLabs voiceover is the default on the shared video path unless a clip should explicitly stay silent.
 - Default rule for organic clips:
   - keep spoken copy short, calm, and natural
