@@ -52,7 +52,7 @@
   - follow-up questions:
   - upvotes if visible:
   - profile curiosity if visible:
-  - early traffic note: `the Apple Watch original post reached 41 views within the first few minutes and the profile conversion post is live directly above it on the user profile`
+  - early traffic note: `the Apple Watch original post reached 300 views with 2 upvotes and 0 comments within the first few minutes; the profile conversion post is live directly under it on the user profile with 6 early views`
 
 ## Learnings
 - strongest hook: `THE RUN GOT TIGHT FIRST`
@@ -63,6 +63,7 @@
 - strongest Reddit conversion surface: `profile post explaining the problem -> Coachi link`
 - biggest execution bottleneck: `the first Day 5 TikTok and Instagram render files were corrupt, and Reddit post submission needed flair handling in the live browser flow`
 - engagement note: `Reddit now has a real 3-reply pass plus one original post for the day; the best conversion path is still profile curiosity rather than direct links`
+- unresolved Reddit ops gap: `pinning the profile post was not exposed cleanly in the visible UI, and custom social-link setup did not persist`
 
 ## Tomorrow
 - repeat: `simple real-jog source prompts with no-face continuity and story carried by text + voiceover`
