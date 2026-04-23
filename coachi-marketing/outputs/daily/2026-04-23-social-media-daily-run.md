@@ -82,7 +82,12 @@ Keep the daily route on a broader runner tension:
   - post URL: `https://www.reddit.com/r/AppleWatch/comments/1sti8v2/if_your_apple_watch_makes_easy_runs_feel/`
   - title: `If your Apple Watch makes easy runs feel stressful, the problem might be interpretation, not fitness`
   - flair: `Discussion`
+  - early signal: `41 views` within the first few minutes on the live profile feed
   - strategy note: variation on the two strongest historical winners, kept strictly non-promotional to push conversion through profile curiosity instead of links
+- surface: `profile conversion post`
+  - post URL: `https://www.reddit.com/user/AlarmingTradition961/comments/1stiawf/im_building_coachi_an_ai_running_coach_for_people/`
+  - title: `I'm building Coachi, an AI running coach for people who trust the watch too much`
+  - role: `convert profile visitors from the Apple Watch thread into clear Coachi context and a clean link`
 
 ## Today's Decisions
 - simplify the Veo source prompt down to one real jogging shot
@@ -92,10 +97,11 @@ Keep the daily route on a broader runner tension:
 - treat the newest TikTok and Instagram URLs as canonical after the rerun
 - treat Reddit as more than a single-reply checkbox and complete a 3-reply pass for the day
 - use `r/AppleWatch` as the highest-ROI original-post surface because that is where the existing profile has already proven large view volume
+- add a profile conversion post immediately after the subreddit post so traffic has a stronger destination than the bio line alone
 
 ## End-of-Run Read
 - strongest X type today: `runner truth`
 - weakest or missing X type today: `shipping lesson was live but thinner than the tightened post-pack version`
 - strongest Reddit thread pattern today: `beginner uncertainty`
 - one thing to repeat tomorrow: `simple real jogging prompts with story carried by overlay + voiceover, plus at least 2 Reddit replies by default`
-- traffic move launched: `one new non-promotional Apple Watch original post built from the proven winner pattern`
+- traffic move launched: `one new non-promotional Apple Watch original post built from the proven winner pattern, backed by a live profile conversion post`

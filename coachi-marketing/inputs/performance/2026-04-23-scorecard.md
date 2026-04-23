@@ -21,6 +21,7 @@
 | Reddit Reply 2 | Breathing-start reply | talk test before panic | authority | `https://www.reddit.com/r/beginnerrunning/comments/1rrbfl3/comment/oht81sg/` | `live` | `monitor` |
 | Reddit Reply 3 | Beginner pacing reply | easy first, watch second | authority | `https://www.reddit.com/r/C25K/comments/1sg5ml1/comment/oht84fv/` | `live` | `monitor` |
 | Reddit Post | Apple Watch interpretation original | watch made easy runs stressful | traffic + profile curiosity | `https://www.reddit.com/r/AppleWatch/comments/1sti8v2/if_your_apple_watch_makes_easy_runs_feel/` | `live` | `monitor` |
+| Reddit Profile Post | Coachi explainer | runners who trust the watch too much | profile conversion | `https://www.reddit.com/user/AlarmingTradition961/comments/1stiawf/im_building_coachi_an_ai_running_coach_for_people/` | `live` | `monitor` |
 
 ## Proxy Metrics
 - TikTok:
@@ -47,9 +48,11 @@
 - Reddit:
   - replies posted: `3`
   - original posts: `1`
+  - profile posts: `1`
   - follow-up questions:
   - upvotes if visible:
   - profile curiosity if visible:
+  - early traffic note: `the Apple Watch original post reached 41 views within the first few minutes and the profile conversion post is live directly above it on the user profile`
 
 ## Learnings
 - strongest hook: `THE RUN GOT TIGHT FIRST`
@@ -57,6 +60,7 @@
 - strongest caption or comment prompt: `What tightens first for you: shoulders, jaw, or breathing?`
 - strongest Reddit reply angle: `sometimes the body got tense before the run truly got hard`
 - strongest Reddit original-post angle: `Apple Watch made the run feel more stressful than it needed to`
+- strongest Reddit conversion surface: `profile post explaining the problem -> Coachi link`
 - biggest execution bottleneck: `the first Day 5 TikTok and Instagram render files were corrupt, and Reddit post submission needed flair handling in the live browser flow`
 - engagement note: `Reddit now has a real 3-reply pass plus one original post for the day; the best conversion path is still profile curiosity rather than direct links`
 
