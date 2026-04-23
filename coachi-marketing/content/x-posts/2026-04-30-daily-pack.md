@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-Order of trust is the biggest product lesson.
+A product can accidentally raise pressure instead of lowering it.
 
-That has changed how I think about Coachi.
+That is a design risk I think about a lot in coaching products.
 
-If the system starts with the watch and ends with the watch, it will amplify panic faster than it creates clarity. The model needs body feel, breathing, and context in the room before it speaks with confidence.
+If every run gets framed like a test of improvement, the system teaches urgency where the athlete actually needs patience. That is how a helpful tool starts shaping worse behavior.
 
-Interpretation quality starts with what gets to speak first.
+Good coaching should reduce forced proving, not intensify it.
 
 ## Post 2
 Type: `shipping lesson`
 
-The product should coach in the right order.
+Coaching products should make patience feel valid.
 
-That is more important than adding another signal.
+That is a surprisingly important build decision.
 
-I would rather ship a cleaner hierarchy of trust than one more metric surface. When the order is wrong, useful data becomes stressful data for runners mid-run. When the order is right, the same data becomes coaching.
+Urgency looks motivating in product language, but it often pushes runners to chase confirmation instead of staying with the process. I would rather ship calm consistency than synthetic pressure.
 
-Good product design is often sequence design.
+The product should protect the long game.
 
 ## Post 3
 Type: `runner truth`
 
-A lot of runners start with panic.
+A lot of runners are trying to force progress.
 
-That is understandable and still expensive.
+That is different from training for progress.
 
-One weird number shows up, and the run gets interpreted from the most alarming place first. The easier path is not more data. It is a calmer order of trust inside the run.
+The pace gets pushed. The easy day gets compromised. The whole week starts carrying a little too much urgency because every run is supposed to prove something.
 
-Body first. Context second. Device third.
+Patience often works better than another push.
 
 ## Suggested Reply Prompts
-- What do you trust first during a run right now?
-- Would a simple trust order reduce your mid-run panic?
-- Is the problem usually bad data or bad interpretation order?
+- What are you most impatient about right now: pace, fitness, or consistency?
+- Do you ever feel like every run needs to prove improvement?
+- Should coaching products lower urgency more deliberately?

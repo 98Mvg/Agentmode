@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-Real-time coaching is partly about choosing what not to say.
+Models love a stable baseline. Bodies do not.
 
-That has become a core lesson while I build Coachi.
+That shows up constantly once real life hits the model.
 
-If the product reacts to every small movement in the watch signal, it trains the runner to keep checking, interpreting, and second-guessing. More feedback can quietly create more noise.
+A runner can hit the same controlled effort and still see a different easy pace because sleep, fatigue, heat, or stress moved the day. If the product treats that drift like failure, it teaches the wrong lesson.
 
-Sometimes the smartest prompt is less prompting.
+The system has to adapt faster than the runner panics.
 
 ## Post 2
 Type: `shipping lesson`
 
-Fewer prompts can make a better coaching product.
+Daily pacing drift should not trigger product drama.
 
-That is harder to believe when you are shipping.
+That is a design choice, not a technical accident.
 
-A packed interface looks helpful in a demo. In a run, it can push the runner back into checking behavior every minute. I keep having to cut what feels useful in theory but stressful in motion.
+If the app treats every slower easy pace like a problem to solve, the runner starts feeling judged for normal variability. I want the product to explain more and accuse less.
 
-Good products lower the mental load of the run.
+Good coaching leaves room for a changing day.
 
 ## Post 3
 Type: `runner truth`
 
-Too much checking can ruin an easy run.
+A slower easy pace today is not an identity crisis.
 
-Even if the data is technically fine.
+It is often just a different day.
 
-A lot of runners do not get more clarity from constant watch checks. They get more tension, more self-judgment, and a run that feels like an exam instead of training.
+A lot of runners make the run feel worse by treating one slower split like proof that fitness disappeared. Then the number gets louder than the actual effort in the body.
 
-Less checking is sometimes the real fix.
+The pace can drift without the run becoming a problem.
 
 ## Suggested Reply Prompts
-- What do you check too often: pace, heart rate, or distance?
-- Has a watch ever made an easy run feel more stressful?
-- Should coaching products say less during steady running?
+- What throws you off more: slower pace or higher heart rate?
+- Do you tie confidence too closely to one easy pace?
+- Should coaching products explain daily drift more clearly?

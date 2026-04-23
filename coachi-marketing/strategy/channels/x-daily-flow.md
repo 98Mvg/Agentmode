@@ -7,11 +7,44 @@ Use X for:
 - founder credibility
 - AI-building insight
 - early adopter trust
-- feedback from builders, app testers, startup communities, Apple Watch users, AI adopters, and runner-curious early users
+- feedback from builders, app testers, startup communities, AI adopters, investors, and runner-curious early users
 
 X is not the main mass-reach engine.
-It is the learning-in-public, credibility, and early-adopter channel.
-TikTok is the primary free-reach engine. X is where Coachi sounds like a real founder building with AI in public.
+It is the personal journey, learning-in-public, and credibility channel.
+TikTok is the primary free-reach engine. X should make people want to follow the person building Coachi, not only the app.
+
+## Core Account Angle
+
+Build the X account around this identity:
+- AI builder
+- founder / operator
+- investor / allocator
+- runner
+
+Coachi is the proving ground and case study.
+It should not be the whole identity of the account.
+
+Default posture:
+- person-led first
+- product insight second
+- direct product promotion third
+
+Direct Coachi mention budget:
+- default to `0` direct Coachi mentions in a 3-post daily set
+- allow `1` direct Coachi mention only when naming the product adds real proof or clarity
+- across any rolling `10`-day block (`30` posts), keep direct Coachi mentions to `3 to 6` posts total
+- if the lesson still works after removing `Coachi`, that is usually the better version
+
+Suggested profile theme options:
+- `Building with AI | Founder | Investor | Runner`
+- `Building Coachi with AI | Founder | Investor | Runner`
+- `AI Builder | Founder | Investor | Runner`
+
+Suggested bio angle:
+- `Follow me building with AI, investing, and running.`
+
+## Canonical Pack
+Use [X_PERSONAL_JOURNEY_CONTENT_PACK.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/content/x-posts/X_PERSONAL_JOURNEY_CONTENT_PACK.md) as the canonical profile, bio, pinned-tweet, pillar, hook, CTA, and idea bank for this account.
 
 ## Daily Execution
 
@@ -26,8 +59,15 @@ Every day:
 
 Daily 3-post mix:
 1. one specific AI-building learning
-2. one specific shipping lesson or product decision that changed because of AI, users, or constraints
+2. one specific founder / shipping / investor-style lesson about decisions, tradeoffs, or allocation
 3. one runner-problem, product-truth, or honest progress post
+
+Keep the labels in saved packs as:
+- `AI lesson`
+- `shipping lesson`
+- `runner truth`
+
+But the `shipping lesson` should usually read like founder or investor judgment, not a feature recap.
 
 ## Default Writing Structure
 
@@ -60,10 +100,24 @@ Keep the voice:
 - simple
 - slightly contrarian
 - founder / product-builder
+- investor / allocator aware
 - fitness / coaching / human performance
 - calm, not cringe
 - not hypey
 - not salesy
+
+## Journey Rule
+
+The account should make people want to follow the journey.
+Not just read isolated app posts.
+
+Across any rolling `7`-day block:
+- at least `2` posts should feel clearly person-led, not app-led
+- at least `1` post should use an investor or allocator lens
+- do not let all `3` daily posts collapse into feature narration
+
+Across any rolling `10`-day block:
+- at least `24` of `30` posts should still work without the word `Coachi`
 
 ## Required Daily Tracking
 
@@ -91,6 +145,8 @@ Before publishing the 3-post pack, check all of these:
 - exactly `1` post is a true `shipping lesson`
 - exactly `1` post is a true `runner truth`
 - no more than `1` post uses a direct link or direct CTA
+- no more than `1` post names `Coachi` directly
+- default target is `0` direct Coachi mentions in the set
 - the first line is strong enough to stand alone as the hook
 - the structure reads clearly as:
   - hook
@@ -120,13 +176,17 @@ Before publishing the 3-post pack, check all of these:
 
 ## Profile Rule
 
-The profile must convert curiosity into trust.
+The profile must convert curiosity into trust and into a follow.
 
 Keep:
-- brand-forward display name
+- a person-led display theme
 - clear bio
 - website link to `coachi.no`
 - pinned intro post
+
+Default rule:
+- people should understand who to follow before they understand what to click
+- the profile should sell the journey, not only the product
 
 ## Content Filters
 
@@ -149,9 +209,9 @@ Prioritize:
 - consumer app founders
 - product testers and early adopters
 - startup and maker communities
-- Apple Watch / wearable creators
-- builders shipping consumer apps
 - AI-native founders
+- consumer-tech investors and allocator thinkers
+- builders shipping consumer apps
 
 Do not build the graph around running coaches.
 Use runner-specific accounts selectively for language mining, not as the main follower base.
@@ -164,12 +224,11 @@ Like posts that reinforce:
 - AI-building lessons
 - product comprehension
 - shipping with constraints
+- investor or allocator thinking that maps to product decisions
 - wearable and in-run UX problems
 - pacing mistakes
 - Zone 2 confusion
-- heart-rate interpretation
 - founder shipping lessons
-- Apple Watch running habits
 
 ## What To Repost
 

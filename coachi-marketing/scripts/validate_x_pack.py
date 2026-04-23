@@ -39,6 +39,10 @@ RUNNER_TERMS = (
     "effort",
     "zone",
 )
+BRAND_PATTERNS = (
+    r"\bcoachi\b",
+    r"coachi\.no",
+)
 
 
 def parse_posts(markdown: str) -> list[dict[str, object]]:
@@ -76,6 +80,7 @@ def validate_posts(posts: list[dict[str, object]]) -> list[str]:
         )
 
     cta_count = 0
+    coachi_post_count = 0
     for index, post in enumerate(posts, start=1):
         post_type = str(post["type"])
         body = str(post["body"])
@@ -107,8 +112,14 @@ def validate_posts(posts: list[dict[str, object]]) -> list[str]:
         if any(pattern in normalized for pattern in CTA_PATTERNS):
             cta_count += 1
 
+        if any(re.search(pattern, normalized) for pattern in BRAND_PATTERNS):
+            coachi_post_count += 1
+
     if cta_count > 1:
         errors.append("The 3-post set can contain at most 1 direct CTA or link.")
+
+    if coachi_post_count > 1:
+        errors.append("The 3-post set can mention `Coachi` directly in at most 1 post.")
 
     return errors
 

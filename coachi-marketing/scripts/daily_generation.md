@@ -115,8 +115,14 @@ Planning layer:
   - full default loop above
 
 ## X Post Mix
-- 2 posts about what building Coachi with AI is teaching you
+- 1 post about what building with AI taught you
+- 1 post about founder / operator / investor judgment
 - 1 post about a runner problem, product truth, or honest progress
+
+Direct Coachi mention budget:
+- default to `0` direct Coachi mentions in the 3-post daily set
+- allow `1` direct Coachi mention only when the product name adds proof or needed specificity
+- across the active rolling `10`-day block (`30` posts), keep direct Coachi mentions to `3 to 6` posts total
 
 Required X tracker labels:
 - `AI lesson`
@@ -131,6 +137,7 @@ Do not publish the X pack until all are true:
 - exactly `1` post is a true `shipping lesson`
 - exactly `1` post is a true `runner truth`
 - the set contains at most `1` direct CTA or direct link
+- the set contains at most `1` direct Coachi mention
 - no post reads like landing-page copy first and lived learning second
 - every post is within the hard-gate safe range:
   - `40 to 120` words
@@ -154,19 +161,21 @@ Do not publish the X pack until all are true:
 - Lead with a real lesson, changed assumption, or concrete observation
 - Sound like a founder-operator learning in public, not a brand account trying to force a CTA
 - Keep Coachi in the story, but do not make every post a pitch
+- if the idea still works without naming Coachi, prefer the version without it
 - Avoid feature dumping
 
 ## Reddit Operating Loop
 - Default to reply-first
 - Daily Reddit loop:
-  - find `3 to 5` relevant threads
-  - leave `1 to 3` useful replies
+  - find `4 to 6` relevant threads
+  - leave `2 to 4` useful replies
   - create `0 or 1` new post only if there is a clean subreddit fit
 - Minimum Reddit loop:
-  - find the best `1 to 2` threads
-  - leave `1` useful reply
+  - find the best `2 to 3` threads
+  - leave `2` useful replies
 - Stretch Reddit loop:
-  - full default loop above
+  - leave `3` useful replies across at least `2` threads
+  - revisit one live reply when there is visible follow-up
 - Prefer:
   - watch-checking anxiety
   - heart-rate zone confusion

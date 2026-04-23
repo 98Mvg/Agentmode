@@ -14,6 +14,9 @@ If the validator fails, do not publish the pack.
 - exactly `1` post is a true `AI lesson`
 - exactly `1` post is a true `shipping lesson`
 - exactly `1` post is a true `runner truth`
+- the `shipping lesson` reads like founder / operator / investor judgment, not a feature recap
+- no more than `1` post names `Coachi` directly
+- default target is `0` direct Coachi mentions in the set
 
 ## Quality Check
 For each post, answer:
@@ -36,4 +39,6 @@ If one of those answers is weak, rewrite the post.
 - no post reads like landing-page copy first
 - no post is pure tech for its own sake
 - no more than `1` post in the set has a direct CTA or direct link
+- at least `1` post in the set makes the account more followable as a person, not only more promotable as an app
+- if you remove `Coachi` from a post and the lesson still holds, prefer the version without it
 - if the set feels marketing-first and learning-second, rewrite before posting

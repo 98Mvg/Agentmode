@@ -22,7 +22,7 @@ Runna, Nike Run Club, Garmin Coach, Strava, Adidas Running, Humango.
 Coachi is not a tracking app. It is a simpler, more personal AI running coach that helps users run the right session, stay in the right zone, and understand how well they trained.
 
 ## Channels
-- X (AI-building learnings + founder credibility + early adopter trust)
+- X (AI builder + founder + investor + runner journey)
 - Instagram (visual + trust + conversion)
 - TikTok (reach + discovery)
 - Reddit (reply-first authority + insight mining + selective traffic)
@@ -41,10 +41,25 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - AI-building insight
   - early adopter trust
   - feedback
-- Treat X as the learning-in-public and credibility channel, not the main mass-reach engine.
-- Keep TikTok as the primary free-reach engine and use X to attract builders, app testers, startup communities, Apple Watch users, AI adopters, and curious early users.
+- Treat X as the personal journey, learning-in-public, and credibility channel, not the main mass-reach engine.
+- Keep TikTok as the primary free-reach engine and use X to attract builders, app testers, startup communities, AI adopters, investors, and curious early users.
+- Core X account angle:
+  - AI builder
+  - founder / operator
+  - investor / allocator
+  - runner
+- Goal:
+  - people should follow the journey, not only the app
+  - Coachi should act as the proving ground, not the whole identity of the account
+- Suggested profile wording options:
+  - `Building with AI | Founder | Investor | Runner`
+  - `Building Coachi with AI | Founder | Investor | Runner`
+  - `AI Builder | Founder | Investor | Runner`
+- Suggested bio direction:
+  - `Follow me building with AI, investing, and running.`
 - Default X mix:
-  - `2` posts on what building Coachi with AI taught you
+  - `1` post on what building with AI taught you
+  - `1` founder / shipping / investor-style lesson about tradeoffs, allocation, or judgment
   - `1` post on a runner problem, product truth, or user insight
 - Default X writing shape:
   - strong hook
@@ -58,6 +73,7 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
 - Keep X posts founder-first:
   - sound like a product builder learning from real users, real runs, and real product constraints
   - not like brand copy
+  - make the account feel person-led, not app-led
 - Minimum X loop:
   - `3` posts
   - `5` likes
@@ -69,6 +85,12 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - `AI lesson`
   - `shipping lesson`
   - `runner truth`
+- Keep the labels above for tooling consistency.
+- Interpret `shipping lesson` as:
+  - founder judgment
+  - operator tradeoff
+  - investor or allocator thinking
+  - not feature narration
 - At the end of the run, note which of those types looked strongest and which one was weakest or missing.
 - Do not post pure tech for its own sake.
 - Every tech/build post must connect to:
@@ -87,6 +109,9 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - every post must answer: what changed, what did it teach, why does it matter for runners or product quality
 - Most X posts should not carry a direct CTA.
 - Let the profile and pinned post handle most conversion work.
+- Default account ratio:
+  - roughly `70%` person-led journey and learning
+  - roughly `30%` direct Coachi framing
 - On X, do not build the follow graph around coaches. Follow entrepreneurs, app builders, testers, communities, and adjacent Apple/AI accounts first.
 - X CTA rule:
   - default to no link
@@ -156,14 +181,15 @@ Coachi is not a tracking app. It is a simpler, more personal AI running coach th
   - authority through useful answers
   - selective traffic only when the thread clearly earns it
 - Default daily Reddit behavior:
-  - find `3 to 5` relevant threads
-  - leave `1 to 3` useful replies
+  - find `4 to 6` relevant threads
+  - leave `2 to 4` useful replies
   - create `0 or 1` new post only if there is a clean angle and subreddit fit
 - Minimum Reddit loop:
-  - find the best `1 to 2` threads
-  - leave `1` useful reply
+  - find the best `2 to 3` threads
+  - leave `2` useful replies
 - Stretch Reddit loop:
-  - full default loop above
+  - leave `3` useful replies across at least `2` threads
+  - revisit one live reply when there is visible follow-up
 - Lead like a runner first and a founder second.
 - Do not drop links unless the question clearly asks for a practical tool or next step.
 - Save thread URLs, comment URLs, and useful language patterns in the daily output.

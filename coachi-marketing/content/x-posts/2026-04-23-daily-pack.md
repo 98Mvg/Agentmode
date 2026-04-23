@@ -3,37 +3,43 @@
 ## Post 1
 Type: `AI lesson`
 
-Single-run interpretation is often too loud.
+Sometimes the signal shows up before the number.
 
-That is one of the clearest lessons from building Coachi.
+Building Coachi with AI keeps teaching me that.
 
-Runners want immediate meaning, but a product that overweights one messy session can push the user toward the same emotional overreaction they already have. The system has to know when to zoom out.
+A runner can feel the shoulders rise and breathing shorten before the watch says anything useful.
 
-Sometimes the smartest answer is trend, not drama.
+If the model waits for the metric, it joins the panic late.
 
 ## Post 2
 Type: `shipping lesson`
 
-The product should reinforce the block, not the blip.
+Building and investing reward the same skill:
 
-That is a harder product decision than it sounds.
+better filters.
 
-It is easy to make every workout feel important because importance creates intensity. But good training depends on helping runners trust the ordinary days too. I would rather ship calm trend thinking than daily theater.
+The best move is often not adding another metric.
 
-Progress needs a wider frame than one run.
+It is deciding which signal matters first.
+
+When tension shows up early, shoulders and breathing beat the number.
+
+Better products usually start with better signal order.
 
 ## Post 3
 Type: `runner truth`
 
-One bad run does not cancel a good block.
+I still do this in my own running.
 
-It just feels louder than the rest.
+The run feels worse, and my first instinct is to blame fitness.
 
-A lot of runners lose confidence because one awkward workout gets treated like the truth and the quiet consistency around it gets ignored. That is an emotional math problem, not a fitness one.
+Sometimes it was just tension: shoulders up, jaw tight, breathing short.
 
-Zoom out before you rewrite the story of the block.
+The number looked scary later, but the body changed first.
+
+Loosen first. Judge later.
 
 ## Suggested Reply Prompts
-- Do you overreact more to one bad run or one great run?
-- What helps you zoom out after a messy workout?
-- Should coaching products show the block before the blip?
+- What tightens first for you: shoulders, jaw, or breathing?
+- Have you ever blamed fitness for a body-tension problem?
+- Should coaching apps pay more attention to breathing cues?

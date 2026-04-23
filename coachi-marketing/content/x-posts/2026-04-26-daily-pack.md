@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-Context beats raw data more often than people want.
+Real-time coaching is partly about choosing what not to say.
 
-That becomes clearer every time I work on Coachi.
+That has become a core lesson in this build.
 
-Sleep, stress, heat, and life load can move the same run without changing the athlete underneath it. If the model only reads the output, it confuses a heavier day with a weaker runner.
+If the product reacts to every small movement in the watch signal, it trains the runner to keep checking, interpreting, and second-guessing. More feedback can quietly create more noise.
 
-The system has to interpret the day, not just the metric.
+Sometimes the smartest prompt is less prompting.
 
 ## Post 2
 Type: `shipping lesson`
 
-Runners need interpretation, not just measurement.
+Fewer prompts can make a better coaching product.
 
-That is a shipping rule now, not a slogan.
+That is harder to believe when you are shipping.
 
-A product that shows more numbers without helping the runner locate the context creates smarter-looking confusion. I would rather build a calmer explanation layer than another loud signal layer.
+A packed interface looks helpful in a demo. In a run, it can push the runner back into checking behavior every minute. I keep having to cut what feels useful in theory but stressful in motion.
 
-The job is to make the day legible, not just observable.
+Good products lower the mental load of the run.
 
 ## Post 3
 Type: `runner truth`
 
-Some runs feel off because life was heavy first.
+Too much checking can ruin an easy run.
 
-Not because fitness disappeared overnight.
+Even if the data is technically fine.
 
-A lot of runners blame the body for what sleep, stress, heat, or life load actually did. Then the run becomes another place where the day feels personal.
+A lot of runners do not get more clarity from constant watch checks. They get more tension, more self-judgment, and a run that feels like an exam instead of training.
 
-Sometimes the run is just telling the truth about the week.
+Less checking is sometimes the real fix.
 
 ## Suggested Reply Prompts
-- What changes your run more: sleep, stress, or heat?
-- Have you ever mistaken life load for lost fitness?
-- Should coaching products read context before they judge the run?
+- What do you check too often: pace, heart rate, or distance?
+- Has a watch ever made an easy run feel more stressful?
+- Should coaching products say less during steady running?

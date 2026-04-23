@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-Confidence is most dangerous when the signal is noisy.
+Signal conflict is where products show their character.
 
-That is one of the clearest product lessons from building Coachi.
+That becomes obvious the moment the watch and body disagree.
 
-One spike, one odd reading, one alarming moment can trick both the runner and the system into over-narrating. If the product treats a blip like a verdict, it amplifies noise into meaning.
+When the watch says hard and the body still feels controlled, the system has to resolve disagreement without pretending one input is automatically the truth. This is where false certainty does the most damage.
 
-Good coaching has to respect uncertainty before it performs certainty.
+Good coaching handles conflict better than it handles clean data.
 
 ## Post 2
 Type: `shipping lesson`
 
-Uncertainty needs to be productized.
+The product should arbitrate, not just echo.
 
-Otherwise the loudest blip keeps winning.
+That matters most when inputs disagree.
 
-It is easy to build a system that reacts instantly to whatever number spikes first. It is harder to build one that slows interpretation down when the signal is thin and the runner still feels controlled. That harder path is the better product path.
+If the app simply amplifies the loudest device reading, it stops coaching and starts relaying. I want Coachi to weigh the watch, the body, and the context before it speaks with confidence.
 
-The app should de-escalate before it dramatizes.
+A useful product thinks before it repeats.
 
 ## Post 3
 Type: `runner truth`
 
-One spike is not the whole story.
+The watch should not get the only vote.
 
-It just feels emotionally expensive in the moment.
+The body still matters.
 
-A lot of runners let one strange reading take over the session mentally even when the body still feels mostly controlled. Then the run becomes a reaction to a blip instead of an interpretation of the whole picture.
+A lot of runners spiral when the device says one thing and the effort says another. Then the whole run gets narrated by the most alarming signal instead of the most complete picture.
 
-Do not let one number win too easily.
+Calm interpretation beats blind obedience.
 
 ## Suggested Reply Prompts
-- What number makes you spiral fastest during a run?
-- Do you trust one spike too quickly?
-- Should coaching products show uncertainty more explicitly?
+- What do you trust first when the watch and body disagree?
+- Have you had a device reading ruin a run mentally?
+- Should coaching apps arbitrate more and echo less?

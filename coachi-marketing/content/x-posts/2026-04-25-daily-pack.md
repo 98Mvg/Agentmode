@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-AI loves crisp rules. Real runners break them.
+Single-run interpretation is often too loud.
 
-That tension shows up every week while I build Coachi.
+That is one of the clearest lessons from building in public.
 
-A rigid Zone 2 rule looks elegant in a system and brittle in a body. Sleep, stress, heat, terrain, and fatigue move the effort without asking permission from the model.
+Runners want immediate meaning, but a product that overweights one messy session can push the user toward the same emotional overreaction they already have. The system has to know when to zoom out.
 
-Coaching gets worse the moment the product pretends the body is static.
+Sometimes the smartest answer is trend, not drama.
 
 ## Post 2
 Type: `shipping lesson`
 
-Precision theater ruins coaching products.
+The product should reinforce the block, not the blip.
 
-I keep having to fight that instinct.
+That is a harder product decision than it sounds.
 
-It is tempting to say stay exactly here or the run is wrong because that looks clean in a demo. Real runners do not live inside demo conditions. They live inside changing days.
+It is easy to make every workout feel important because importance creates intensity. But good training depends on helping runners trust the ordinary days too. I would rather ship calm trend thinking than daily theater.
 
-Good products leave room for context without losing structure.
+Progress needs a wider frame than one run.
 
 ## Post 3
 Type: `runner truth`
 
-Some runners are not running easy too hard.
+One bad run does not cancel a good block.
 
-They are trying to run easy too perfectly.
+It just feels louder than the rest.
 
-One pace becomes the rule. One heart-rate band becomes the truth. The whole run becomes a compliance test instead of an easy day that adapts to the body.
+A lot of runners lose confidence because one awkward workout gets treated like the truth and the quiet consistency around it gets ignored. That is an emotional math problem, not a fitness one.
 
-That mindset creates more stress than progress.
+Zoom out before you rewrite the story of the block.
 
 ## Suggested Reply Prompts
-- Did Zone 2 make you calmer or more stressed at first?
-- What part of easy running feels too rigid right now?
-- Should coaching apps protect runners from false precision?
+- Do you overreact more to one bad run or one great run?
+- What helps you zoom out after a messy workout?
+- Should coaching products show the block before the blip?

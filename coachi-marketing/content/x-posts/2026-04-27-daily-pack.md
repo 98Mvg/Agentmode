@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-Signal conflict is where products show their character.
+AI loves crisp rules. Real runners break them.
 
-That is very obvious while I build Coachi.
+That tension shows up every time clean rules meet a real runner.
 
-When the watch says hard and the body still feels controlled, the system has to resolve disagreement without pretending one input is automatically the truth. This is where false certainty does the most damage.
+A rigid Zone 2 rule looks elegant in a system and brittle in a body. Sleep, stress, heat, terrain, and fatigue move the effort without asking permission from the model.
 
-Good coaching handles conflict better than it handles clean data.
+Coaching gets worse the moment the product pretends the body is static.
 
 ## Post 2
 Type: `shipping lesson`
 
-The product should arbitrate, not just echo.
+Precision theater ruins coaching products.
 
-That matters most when inputs disagree.
+I keep having to fight that instinct.
 
-If the app simply amplifies the loudest device reading, it stops coaching and starts relaying. I want Coachi to weigh the watch, the body, and the context before it speaks with confidence.
+It is tempting to say stay exactly here or the run is wrong because that looks clean in a demo. Real runners do not live inside demo conditions. They live inside changing days.
 
-A useful product thinks before it repeats.
+Good products leave room for context without losing structure.
 
 ## Post 3
 Type: `runner truth`
 
-The watch should not get the only vote.
+Some runners are not running easy too hard.
 
-The body still matters.
+They are trying to run easy too perfectly.
 
-A lot of runners spiral when the device says one thing and the effort says another. Then the whole run gets narrated by the most alarming signal instead of the most complete picture.
+One pace becomes the rule. One heart-rate band becomes the truth. The whole run becomes a compliance test instead of an easy day that adapts to the body.
 
-Calm interpretation beats blind obedience.
+That mindset creates more stress than progress.
 
 ## Suggested Reply Prompts
-- What do you trust first when the watch and body disagree?
-- Have you had a device reading ruin a run mentally?
-- Should coaching apps arbitrate more and echo less?
+- Did Zone 2 make you calmer or more stressed at first?
+- What part of easy running feels too rigid right now?
+- Should coaching apps protect runners from false precision?

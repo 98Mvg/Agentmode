@@ -3,37 +3,37 @@
 ## Post 1
 Type: `AI lesson`
 
-A product can accidentally raise pressure instead of lowering it.
+Context beats raw data more often than people want.
 
-That is a design risk I think about a lot with Coachi.
+That becomes clearer every time life load hits the run first.
 
-If every run gets framed like a test of improvement, the system teaches urgency where the athlete actually needs patience. That is how a helpful tool starts shaping worse behavior.
+Sleep, stress, heat, and life load can move the same run without changing the athlete underneath it. If the model only reads the output, it confuses a heavier day with a weaker runner.
 
-Good coaching should reduce forced proving, not intensify it.
+The system has to interpret the day, not just the metric.
 
 ## Post 2
 Type: `shipping lesson`
 
-Coaching products should make patience feel valid.
+Runners need interpretation, not just measurement.
 
-That is a surprisingly important build decision.
+That is a shipping rule now, not a slogan.
 
-Urgency looks motivating in product language, but it often pushes runners to chase confirmation instead of staying with the process. I would rather ship calm consistency than synthetic pressure.
+A product that shows more numbers without helping the runner locate the context creates smarter-looking confusion. I would rather build a calmer explanation layer than another loud signal layer.
 
-The product should protect the long game.
+The job is to make the day legible, not just observable.
 
 ## Post 3
 Type: `runner truth`
 
-A lot of runners are trying to force progress.
+Some runs feel off because life was heavy first.
 
-That is different from training for progress.
+Not because fitness disappeared overnight.
 
-The pace gets pushed. The easy day gets compromised. The whole week starts carrying a little too much urgency because every run is supposed to prove something.
+A lot of runners blame the body for what sleep, stress, heat, or life load actually did. Then the run becomes another place where the day feels personal.
 
-Patience often works better than another push.
+Sometimes the run is just telling the truth about the week.
 
 ## Suggested Reply Prompts
-- What are you most impatient about right now: pace, fitness, or consistency?
-- Do you ever feel like every run needs to prove improvement?
-- Should coaching products lower urgency more deliberately?
+- What changes your run more: sleep, stress, or heat?
+- Have you ever mistaken life load for lost fitness?
+- Should coaching products read context before they judge the run?
