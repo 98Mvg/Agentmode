@@ -1,0 +1,180 @@
+# Source Of Truth - X Article Adaptation
+
+This document adapts the X article opened on `2026-04-26` into Coachi's slideshow content engine.
+
+Source:
+
+`https://x.com/alexcooldev/status/2047715075457507452`
+
+Detailed research note:
+
+`inputs/research/2026-04-26-x-alexcooldev-slideshow-automation-source.md`
+
+## What We Adopt
+
+### 1. Format Library First
+
+The repeatable asset is not one slideshow. It is the extracted format.
+
+Every winning slideshow should become a JSON-like schema:
+
+```json
+{
+  "format_name": "runner_mistake_reframe_v1",
+  "total_slides": 7,
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text_template": "{data_point} IS LYING TO YOU",
+      "visual_style_notes": "large contrast text over realistic running image",
+      "image_prompt_template": "runner on {route} showing {emotion}, vertical 9:16"
+    }
+  ]
+}
+```
+
+### 2. Reverse-Engineer Structure, Not Content
+
+Use Codex GPT-5.5 to inspect screenshots of viral slideshows and extract:
+
+- hook pattern
+- payoff pattern
+- final CTA pattern
+- layout system
+- text placement
+- image-to-text ratio
+- pacing
+
+Do not copy the niche content or creator-specific visual identity.
+
+### 3. Hybrid Image System
+
+For Coachi:
+
+- Slide 1: use ChatGPT Images 2.0 for a custom hook image.
+- Slides 2 to 6: use approved Coachi visual library or generated reusable images.
+- Slide 7: use a reusable comment-prompt background or brand-safe image.
+
+This keeps quality high while reducing generation cost.
+
+### 4. Local Text Composition
+
+Text should be composited locally rather than baked into every generated image.
+
+Benefits:
+
+- consistent typography
+- easier edits
+- fewer image regeneration loops
+- better legibility
+- reusable source images
+
+Preferred stack:
+
+- Node.js
+- `sharp`
+- `@napi-rs/canvas`
+- local font files
+- export to `1080x1920`
+
+### 5. Queue Later, Manual Handoff Now
+
+The source article recommends BullMQ, Redis, and Postiz for scale.
+
+Coachi should use this in phases:
+
+- now: Codex prepares pack, user publishes manually
+- next: local render queue for daily pack creation
+- later: Postiz scheduler for approved posts only
+
+Do not automate final public posting without explicit action-time approval.
+
+## What We Reject
+
+- mass posting to many accounts
+- scraping unlicensed recognizable people
+- copying full content
+- reposting identical slideshows
+- hashtag stuffing
+- using volume as the main strategy
+
+## Coachi Operating Version
+
+Daily slideshow production:
+
+1. Pick one runner problem.
+2. Select a proven format schema.
+3. Fill the schema with Coachi-native copy.
+4. Generate or select images.
+5. Compose slides locally.
+6. Prepare TikTok and Instagram captions.
+7. Open upload pages and Finder folder.
+8. User reviews and publishes.
+9. Log results in the daily scorecard.
+
+## First Coachi Format Schemas To Build
+
+### Runner Mistake Reframe
+
+```json
+{
+  "format_name": "runner_mistake_reframe_v1",
+  "total_slides": 7,
+  "slides": [
+    { "slide_number": 1, "role": "hook", "text_template": "{RUNNER BELIEF} IS LYING TO YOU" },
+    { "slide_number": 2, "role": "problem", "text_template": "You think {number} means {bad_outcome}." },
+    { "slide_number": 3, "role": "context", "text_template": "{factor_1} changes it." },
+    { "slide_number": 4, "role": "context", "text_template": "{factor_2} changes it too." },
+    { "slide_number": 5, "role": "reframe", "text_template": "The better signal is {better_signal}." },
+    { "slide_number": 6, "role": "rule", "text_template": "{simple_rule}" },
+    { "slide_number": 7, "role": "comment", "text_template": "What throws you off more: {choice_a} or {choice_b}?" }
+  ]
+}
+```
+
+### Beginner Confidence Reset
+
+```json
+{
+  "format_name": "beginner_confidence_reset_v1",
+  "total_slides": 6,
+  "slides": [
+    { "slide_number": 1, "role": "hook", "text_template": "BEGINNERS GET THIS WRONG" },
+    { "slide_number": 2, "role": "belief", "text_template": "You think progress means {false_signal}." },
+    { "slide_number": 3, "role": "truth", "text_template": "Early progress is usually {true_signal}." },
+    { "slide_number": 4, "role": "observation", "text_template": "That is why {common_problem} happens." },
+    { "slide_number": 5, "role": "rule", "text_template": "Your next run only needs {simple_action}." },
+    { "slide_number": 6, "role": "comment", "text_template": "Save this before your next easy run." }
+  ]
+}
+```
+
+### Data Is Not Coaching
+
+```json
+{
+  "format_name": "data_is_not_coaching_v1",
+  "total_slides": 7,
+  "slides": [
+    { "slide_number": 1, "role": "hook", "text_template": "DATA IS NOT COACHING" },
+    { "slide_number": 2, "role": "problem", "text_template": "Your watch gives you {data_type}." },
+    { "slide_number": 3, "role": "gap", "text_template": "It does not always tell you {missing_context}." },
+    { "slide_number": 4, "role": "context", "text_template": "A coach asks what changed today." },
+    { "slide_number": 5, "role": "reframe", "text_template": "The number needs context." },
+    { "slide_number": 6, "role": "coachi", "text_template": "That is the gap Coachi is built around." },
+    { "slide_number": 7, "role": "comment", "text_template": "What number messes with your run most?" }
+  ]
+}
+```
+
+## Implementation Backlog
+
+1. Build `content/slideshows/` folder structure.
+2. Add format schema JSON files.
+3. Add local Node compositor.
+4. Add a daily slideshow pack generator.
+5. Add approved visual library metadata.
+6. Add QA command.
+7. Add posting handoff checklist.
+8. Feed results into `WINNER_LIBRARY.md`.

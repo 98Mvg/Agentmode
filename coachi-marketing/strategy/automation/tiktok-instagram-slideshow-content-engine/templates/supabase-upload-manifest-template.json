@@ -1,0 +1,33 @@
+{
+  "campaign_date": "YYYY-MM-DD",
+  "slug": "easy-pace",
+  "supabase_project": "coachi-marketing-assets",
+  "public_bucket": "slideshow-public",
+  "private_bucket": "slideshow-private",
+  "objects": [
+    {
+      "local_path": "content/slideshows/YYYY-MM-DD-slug/slides/01-hook.png",
+      "bucket_id": "slideshow-public",
+      "object_path": "slideshows/YYYY-MM-DD/slug/public/slides/01-hook.png",
+      "asset_role": "hook_slide",
+      "platform": "shared",
+      "content_type": "image/png",
+      "public_url": "https://PROJECT.supabase.co/storage/v1/object/public/slideshow-public/slideshows/YYYY-MM-DD/slug/public/slides/01-hook.png"
+    },
+    {
+      "local_path": "content/slideshows/YYYY-MM-DD-slug/source/prompts.md",
+      "bucket_id": "slideshow-private",
+      "object_path": "slideshows/YYYY-MM-DD/slug/private/source/prompts.md",
+      "asset_role": "source_prompt",
+      "platform": null,
+      "content_type": "text/markdown",
+      "public_url": null
+    }
+  ],
+  "safety": {
+    "uses_app_supabase_project": false,
+    "contains_user_data": false,
+    "contains_app_secrets": false,
+    "final_publish_automated": false
+  }
+}
