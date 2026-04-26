@@ -38,6 +38,13 @@ Instagram:
 - stronger caption
 - better carousel depth
 
+Pinterest:
+
+- search and evergreen discovery
+- one strong vertical image
+- clear beginner-running keyword angle
+- traffic support for proven hooks
+
 The same source idea can feed both, but the caption and first slide should be platform-tuned.
 
 ## 3. Content Rules
@@ -151,7 +158,11 @@ content/slideshows/YYYY-MM-DD-slug/
   copy/
     tiktok-caption.txt
     instagram-caption.txt
+    pinterest-title.txt
+    pinterest-description.txt
     hashtags.txt
+  pinterest/
+    final-pinterest.png
   qa.md
 ```
 
@@ -166,6 +177,7 @@ Optional storage handoff:
 - use the separate `coachi-marketing-assets` Supabase project
 - never use the Coachi app Supabase project or app runtime credentials
 - follow `SUPABASE_STORAGE_PLAN.md`
+- `--execute` uploads assets and upserts metadata rows into `marketing_asset_objects`
 
 Dry-run the upload manifest before using real credentials:
 

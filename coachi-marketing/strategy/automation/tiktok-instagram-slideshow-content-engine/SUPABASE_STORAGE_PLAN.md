@@ -7,6 +7,7 @@ This is for marketing assets only:
 
 - generated slideshow images
 - final slideshow MP4 exports
+- Pinterest/static image exports
 - source prompts
 - reference images
 - captions
@@ -84,6 +85,7 @@ slideshows/YYYY-MM-DD/slug/public/slides/01-hook.png
 slideshows/YYYY-MM-DD/slug/public/slides/02-problem.png
 slideshows/YYYY-MM-DD/slug/public/final-tiktok.mp4
 slideshows/YYYY-MM-DD/slug/public/final-instagram.mp4
+slideshows/YYYY-MM-DD/slug/public/pinterest/final-pinterest.png
 slideshows/YYYY-MM-DD/slug/private/source/prompts.md
 slideshows/YYYY-MM-DD/slug/private/source/reference-face.png
 slideshows/YYYY-MM-DD/slug/private/copy/tiktok-caption.txt
@@ -120,7 +122,7 @@ Use it to track what was uploaded, when, and from which campaign:
 - `sha256`
 - `source_tool`
 
-Keep row-level security enabled. The default setup blocks anonymous and authenticated table reads. The marketing upload script should use the separate marketing secret key locally.
+Keep row-level security enabled. The default setup blocks anonymous and authenticated table reads. The marketing upload script uses the separate marketing secret key locally through the `service_role` database role grants.
 
 If public dashboards are needed later, add narrow read policies. Do not loosen RLS globally.
 
@@ -154,7 +156,7 @@ python3 scripts/upload_slideshow_assets.py \
   --manifest-out content/slideshows/2026-04-26-easy-pace/upload-manifest.json
 ```
 
-The script does not publish anything to TikTok or Instagram. It only uploads files into the isolated marketing Supabase project.
+The script does not publish anything to TikTok, Instagram, or Pinterest. It only uploads files into the isolated marketing Supabase project and upserts rows into `marketing_asset_objects`. The generated `upload-manifest.json` remains local so reruns do not recursively upload stale manifests.
 
 ## Safety Checklist
 Before using this with real credentials:

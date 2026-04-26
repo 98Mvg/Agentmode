@@ -1,0 +1,105 @@
+{
+  "campaign_date": "2026-04-26",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": true,
+  "objects": [
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-private",
+      "byte_size": 364,
+      "content_type": "text/plain",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/copy/hashtags.txt",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/copy/hashtags.txt",
+      "platform": null,
+      "public_url": null,
+      "sha256": "982c3c9db8c7bb014abdedbf63382e47960c3c7259079e8afc86e00a2931745e"
+    },
+    {
+      "asset_role": "instagram_asset",
+      "bucket_id": "slideshow-private",
+      "byte_size": 450,
+      "content_type": "text/plain",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/copy/instagram-caption.txt",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/copy/instagram-caption.txt",
+      "platform": "instagram",
+      "public_url": null,
+      "sha256": "4d66421289be13f422b85403fbc223219cbcf5cd119553784ac01aca80f58cf7"
+    },
+    {
+      "asset_role": "pinterest_asset",
+      "bucket_id": "slideshow-private",
+      "byte_size": 201,
+      "content_type": "text/plain",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/copy/pinterest-description.txt",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/copy/pinterest-description.txt",
+      "platform": "pinterest",
+      "public_url": null,
+      "sha256": "e1a6c0a25e088fcfad0b08265fe002f308c814e577a543600663af97b860cdf8"
+    },
+    {
+      "asset_role": "pinterest_asset",
+      "bucket_id": "slideshow-private",
+      "byte_size": 26,
+      "content_type": "text/plain",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/copy/pinterest-title.txt",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/copy/pinterest-title.txt",
+      "platform": "pinterest",
+      "public_url": null,
+      "sha256": "0959aa5ecde69670edc8dc0e0d950035b485554ad96ef85d8a5cd14ed6dc0a9c"
+    },
+    {
+      "asset_role": "tiktok_asset",
+      "bucket_id": "slideshow-private",
+      "byte_size": 225,
+      "content_type": "text/plain",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/copy/tiktok-caption.txt",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/copy/tiktok-caption.txt",
+      "platform": "tiktok",
+      "public_url": null,
+      "sha256": "9a92f43e7d724a251d625a38473b27273f67dc9aa859e256d488acdc95be7f35"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-private",
+      "byte_size": 357,
+      "content_type": "text/markdown",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/pinterest/README.md",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/pinterest/README.md",
+      "platform": "pinterest",
+      "public_url": null,
+      "sha256": "b994218cfa2d43e52bc45ddb75f9268a613a9c9392a1d1faca054b9e123c5b2b"
+    },
+    {
+      "asset_role": "qa_note",
+      "bucket_id": "slideshow-private",
+      "byte_size": 551,
+      "content_type": "text/markdown",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/qa.md",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/qa.md",
+      "platform": null,
+      "public_url": null,
+      "sha256": "1602383fc5501a6030737f003453865e8c312770e80a2143d9f582c69bd8a894"
+    },
+    {
+      "asset_role": "source_prompt",
+      "bucket_id": "slideshow-private",
+      "byte_size": 2402,
+      "content_type": "text/markdown",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-04-26-pace-is-lying/source/prompts.md",
+      "object_path": "slideshows/2026-04-26/pace-is-lying/private/source/prompts.md",
+      "platform": null,
+      "public_url": null,
+      "sha256": "783421a4d28812135bb877950e9fcc36eae1335d9e3ed25aeccee7834906fbed"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "pace-is-lying"
+}

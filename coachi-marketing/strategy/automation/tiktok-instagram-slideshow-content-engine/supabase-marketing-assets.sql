@@ -62,7 +62,7 @@ create table if not exists public.marketing_asset_objects (
   constraint marketing_asset_objects_platform_check
     check (
       platform is null
-      or platform in ('tiktok', 'instagram', 'x', 'reddit', 'shared')
+      or platform in ('tiktok', 'instagram', 'pinterest', 'x', 'reddit', 'shared')
     )
 );
 
@@ -84,6 +84,9 @@ alter table public.marketing_asset_objects enable row level security;
 
 revoke all on table public.marketing_asset_objects from anon;
 revoke all on table public.marketing_asset_objects from authenticated;
+
+grant select, insert, update on table public.marketing_asset_objects to service_role;
+grant usage, select on sequence public.marketing_asset_objects_id_seq to service_role;
 
 comment on table public.marketing_asset_objects is
   'Marketing-only asset upload manifest. Isolated from the Coachi app runtime.';

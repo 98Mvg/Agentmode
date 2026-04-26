@@ -36,7 +36,8 @@ Use slideshows when:
 - 1 caption per platform
 - 1 hook test note
 - 1 short QA note before upload
-- optional Supabase upload manifest after local QA
+- local Supabase upload manifest after local QA
+- optional Pinterest image/title/description when the idea fits search intent
 
 ## Asset Storage
 Use Supabase only as an isolated marketing asset store.
@@ -54,6 +55,8 @@ python3 scripts/upload_slideshow_assets.py \
   --campaign-date YYYY-MM-DD \
   --slug slug
 ```
+
+When `--execute` is used, the helper uploads files and upserts object rows into `marketing_asset_objects`. The generated `upload-manifest.json` stays local and is not uploaded back into storage.
 
 ## Canonical Workspace
 All outputs from this strategy should stay inside:

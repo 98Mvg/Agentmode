@@ -18,14 +18,23 @@ PUBLIC_DIRS = {"slides", "public", "exports", "final"}
 PUBLIC_FILENAMES = {
     "final-tiktok.mp4",
     "final-instagram.mp4",
+    "final-pinterest.png",
+    "final-pinterest.jpg",
+    "final-pinterest.jpeg",
+    "final-pinterest.webp",
     "tiktok.mp4",
     "instagram.mp4",
+    "pinterest.png",
+    "pinterest.jpg",
+    "pinterest.jpeg",
+    "pinterest.webp",
     "cover.png",
     "cover.jpg",
     "cover.jpeg",
     "cover.webp",
 }
 PRIVATE_DIRS = {"source", "copy", "private", "drafts"}
+GENERATED_FILENAMES = {"upload-manifest.json"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -51,6 +60,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--private-bucket",
         default=os.getenv("MARKETING_SUPABASE_PRIVATE_BUCKET", "slideshow-private"),
+    )
+    parser.add_argument(
+        "--skip-metadata",
+        action="store_true",
+        help="Upload files without upserting rows into marketing_asset_objects.",
     )
     return parser.parse_args()
 
@@ -110,6 +124,8 @@ def asset_role(path: Path) -> str:
         return "tiktok_asset"
     if "instagram" in stem:
         return "instagram_asset"
+    if "pinterest" in stem or stem.startswith("pin-"):
+        return "pinterest_asset"
     if "caption" in stem:
         return "caption"
     if "prompt" in stem:
@@ -127,6 +143,8 @@ def platform(path: Path) -> str | None:
         return "tiktok"
     if "instagram" in lowered:
         return "instagram"
+    if "pinterest" in lowered:
+        return "pinterest"
     if "slides" in path.parts or "public" in path.parts:
         return "shared"
     return None
@@ -137,6 +155,10 @@ def public_url(supabase_url: str | None, bucket_id: str, public_bucket: str, obj
         return None
     quoted = parse.quote(object_path, safe="/")
     return f"{supabase_url.rstrip('/')}/storage/v1/object/public/{bucket_id}/{quoted}"
+
+
+def should_upload(path: Path) -> bool:
+    return path.name.lower() not in GENERATED_FILENAMES
 
 
 def upload_file(supabase_url: str, api_key: str, bucket_id: str, object_path: str, path: Path, mime: str) -> None:
@@ -158,6 +180,50 @@ def upload_file(supabase_url: str, api_key: str, bucket_id: str, object_path: st
         raise RuntimeError(f"Upload failed for {path}: {exc.code} {detail}") from exc
 
 
+def upsert_metadata(supabase_url: str, api_key: str, manifest: dict[str, Any]) -> None:
+    rows = [
+        {
+            "campaign_date": manifest["campaign_date"],
+            "slug": manifest["slug"],
+            "platform": item["platform"],
+            "asset_role": item["asset_role"],
+            "bucket_id": item["bucket_id"],
+            "object_path": item["object_path"],
+            "content_type": item["content_type"],
+            "byte_size": item["byte_size"],
+            "sha256": item["sha256"],
+            "source_tool": "codex",
+        }
+        for item in manifest["objects"]
+    ]
+    if not rows:
+        return
+
+    url = (
+        f"{supabase_url.rstrip('/')}/rest/v1/marketing_asset_objects"
+        "?on_conflict=bucket_id,object_path"
+    )
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "apikey": api_key,
+        "Content-Type": "application/json",
+        "Prefer": "resolution=merge-duplicates,return=minimal",
+    }
+    req = request.Request(
+        url,
+        data=json.dumps(rows).encode("utf-8"),
+        headers=headers,
+        method="POST",
+    )
+    try:
+        with request.urlopen(req, timeout=60) as response:
+            if response.status not in {200, 201, 204}:
+                raise RuntimeError(f"Unexpected metadata upsert status {response.status}")
+    except error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Metadata upsert failed: {exc.code} {detail}") from exc
+
+
 def build_manifest(args: argparse.Namespace, supabase_url: str | None) -> dict[str, Any]:
     root = Path(args.root).expanduser().resolve()
     if not root.exists():
@@ -166,7 +232,7 @@ def build_manifest(args: argparse.Namespace, supabase_url: str | None) -> dict[s
         raise SystemExit(f"--root must be a folder: {root}")
 
     objects: list[dict[str, Any]] = []
-    for path in sorted(item for item in root.rglob("*") if item.is_file()):
+    for path in sorted(item for item in root.rglob("*") if item.is_file() and should_upload(item)):
         relative = path.relative_to(root)
         bucket_id = classify_bucket(relative, args.public_bucket, args.private_bucket)
         object_path = remote_path(args.campaign_date, args.slug, bucket_id, args.private_bucket, relative)
@@ -191,6 +257,8 @@ def build_manifest(args: argparse.Namespace, supabase_url: str | None) -> dict[s
         "dry_run": not args.execute,
         "public_bucket": args.public_bucket,
         "private_bucket": args.private_bucket,
+        "metadata_upsert": bool(args.execute and not args.skip_metadata),
+        "metadata_table": "marketing_asset_objects",
         "objects": objects,
         "safety": {
             "uses_app_supabase_project": False,
@@ -227,6 +295,8 @@ def main() -> None:
                 path=Path(item["local_path"]),
                 mime=item["content_type"],
             )
+        if not args.skip_metadata:
+            upsert_metadata(supabase_url=supabase_url, api_key=api_key, manifest=manifest)
 
     output = json.dumps(manifest, indent=2, sort_keys=True)
     if args.manifest_out:
