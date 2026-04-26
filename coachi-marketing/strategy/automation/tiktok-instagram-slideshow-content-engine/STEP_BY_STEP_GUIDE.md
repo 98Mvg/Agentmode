@@ -22,6 +22,14 @@ This should not feel like generic motivation. It should feel like a real coachin
 
 The most important update from the X article: build the reusable format library before building the automation. The format schema is the asset.
 
+Execution order:
+
+1. Format library
+2. Coachi visual library
+3. Local text compositor
+4. Supabase asset storage
+5. Queue/scheduler only after the manual workflow repeatedly works
+
 ## 2. Channel Role
 
 TikTok:
@@ -44,8 +52,9 @@ Pinterest:
 - one strong vertical image
 - clear beginner-running keyword angle
 - traffic support for proven hooks
+- style and search-intent research for future slideshow visuals
 
-The same source idea can feed both, but the caption and first slide should be platform-tuned.
+The same source idea can feed TikTok, Instagram, and Pinterest, but the caption and first slide should be platform-tuned.
 
 ## 3. Content Rules
 
@@ -60,6 +69,8 @@ Use these constraints by default:
 - no app mention unless it naturally fits
 - Coachi appears in 10 to 20 percent of posts, not every post
 - make the first slide strong enough to stop scrolling
+- use local text overlay instead of baking text into every generated base image
+- do not copy creator-specific visuals, captions, or content from source examples
 
 Best slideshow formats:
 
@@ -135,6 +146,15 @@ Use ChatGPT Images 2.0 for:
 - carousel covers
 - visual metaphors for runner data
 - no-face or visible-face runner sets
+
+Use Pinterest-style research for:
+
+- aesthetics
+- composition ideas
+- keyword intent
+- mood/color tagging
+
+Do not reuse recognizable, watermarked, or creator-owned images as Coachi assets unless they are clearly licensed or created for us.
 
 Use the API path later only when we need scripted batch generation. OpenAI's image docs support image generation and editing through the Image API and image generation tool in the Responses API, including reference images and output controls.
 

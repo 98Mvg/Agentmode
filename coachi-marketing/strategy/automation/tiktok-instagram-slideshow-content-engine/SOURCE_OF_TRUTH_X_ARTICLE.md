@@ -12,6 +12,18 @@ Detailed research note:
 
 ## What We Adopt
 
+### 0. Source Hierarchy
+
+Use the X article as the source of truth for the slideshow production architecture:
+
+1. Format library
+2. Visual library
+3. Local compositor
+4. Asset storage
+5. Queue/scheduler only after manual workflow is repeatable
+
+For Coachi, this source does not override brand strategy, platform safety, or publish-approval rules. It gives the production model, not permission to copy content or mass-post.
+
 ### 1. Format Library First
 
 The repeatable asset is not one slideshow. It is the extracted format.
@@ -58,6 +70,14 @@ For Coachi:
 
 This keeps quality high while reducing generation cost.
 
+Treat Pinterest as:
+
+- a style research source
+- a search-intent source
+- a way to understand what aesthetics humans already curate
+
+Do not blindly scrape or reuse recognizable, watermarked, or creator-owned images as Coachi assets.
+
 ### 4. Local Text Composition
 
 Text should be composited locally rather than baked into every generated image.
@@ -78,7 +98,29 @@ Preferred stack:
 - local font files
 - export to `1080x1920`
 
-### 5. Queue Later, Manual Handoff Now
+Default overlay rule:
+
+- base image has no text
+- local compositor adds all post text
+- first slide gets the largest hook
+- middle slides get one sentence max
+- final slide asks for a comment or save
+
+### 5. Supabase As The Asset Library
+
+The article uses storage as part of the asset system. Coachi's version is the separate `coachi-marketing-assets` Supabase project.
+
+Use Supabase for:
+
+- approved source images
+- finished slides
+- final static/Pinterest exports
+- captions and QA metadata
+- upload manifests and object metadata
+
+Do not use the Coachi app Supabase project. Do not store user data or app secrets.
+
+### 6. Queue Later, Manual Handoff Now
 
 The source article recommends BullMQ, Redis, and Postiz for scale.
 
@@ -107,11 +149,12 @@ Daily slideshow production:
 2. Select a proven format schema.
 3. Fill the schema with Coachi-native copy.
 4. Generate or select images.
-5. Compose slides locally.
-6. Prepare TikTok and Instagram captions.
-7. Open upload pages and Finder folder.
-8. User reviews and publishes.
-9. Log results in the daily scorecard.
+5. Compose slides locally with consistent text overlay.
+6. Upload approved assets into marketing Supabase.
+7. Prepare TikTok, Instagram, and Pinterest copy when relevant.
+8. Open upload pages and Finder folder.
+9. User reviews and publishes.
+10. Log results in the daily scorecard and winner library.
 
 ## First Coachi Format Schemas To Build
 
