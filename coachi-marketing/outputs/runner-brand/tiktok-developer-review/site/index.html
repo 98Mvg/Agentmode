@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Everyday Runner Lab</title>
+    <meta name="description" content="Everyday Runner Lab publishes simple running education for beginner and intermediate runners.">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #161616;
+        --muted: #5f625c;
+        --paper: #f7f1e7;
+        --accent: #2f6b4f;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top left, #ffffff 0, var(--paper) 52%, #e8dcca 100%);
+      }
+
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 48px 22px;
+      }
+
+      section {
+        max-width: 760px;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      h1 {
+        font-size: clamp(48px, 8vw, 92px);
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        margin: 0 0 28px;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font: 700 13px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      nav {
+        display: flex;
+        gap: 18px;
+        margin-top: 34px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 14px;
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="eyebrow">Runner education</div>
+        <h1>Simple running lessons for everyday runners.</h1>
+        <p>
+          Everyday Runner Lab publishes original running tips, training lessons, and short-form education for people who want running to feel more consistent, less confusing, and easier to repeat.
+        </p>
+        <p>
+          We use Postiz as an internal publishing tool to schedule original content to our owned social accounts, including TikTok.
+        </p>
+        <nav>
+          <a href="/terms">Terms</a>
+          <a href="/privacy">Privacy</a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>

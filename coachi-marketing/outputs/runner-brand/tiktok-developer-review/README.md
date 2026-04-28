@@ -1,0 +1,42 @@
+# Everyday Runner Lab TikTok Developer Review Package
+
+Purpose: configure TikTok Developer + Postiz for runner-content publishing only.
+
+This package is intentionally separate from Coachi app/runtime. Use it for the TikTok developer app that connects Postiz to the owned TikTok account and publishes original running education content.
+
+## Required Public URLs
+
+TikTok requires public, verified URLs before review:
+
+- Landing page: `https://<runner-brand-domain>/`
+- Terms: `https://<runner-brand-domain>/terms`
+- Privacy: `https://<runner-brand-domain>/privacy`
+
+Do not submit review with `localhost` URLs. If no runner-brand domain exists yet, publish the included static pages to a small Render static site or another owned domain first.
+
+## Files
+
+- `landing.html`: simple public landing page.
+- `terms.html`: lightweight terms page for the runner content brand.
+- `privacy.html`: lightweight privacy page.
+- `site/`: deploy-ready static site with clean `/`, `/terms`, and `/privacy` paths.
+- `render-dashboard-settings.md`: exact Render setup values.
+- `tiktok-developer-field-values.md`: exact TikTok Developer form values.
+
+## Review Positioning
+
+The TikTok app should not say it is connected to Coachi or the Coachi iOS app.
+
+Correct framing:
+
+> Everyday Runner Lab uses Postiz as an internal publishing tool to schedule and publish original running education content to its owned TikTok account.
+
+## Remaining Before Review
+
+- Publish these pages to a public domain.
+- Verify the URL property in TikTok Developer.
+- Upload app icon.
+- Add `Login Kit` and `Content Posting API`.
+- Add only the scopes required by Postiz.
+- Upload a demo video showing the exact Postiz -> TikTok connection and publishing flow.
+- Save only after the fields match the published domain.
