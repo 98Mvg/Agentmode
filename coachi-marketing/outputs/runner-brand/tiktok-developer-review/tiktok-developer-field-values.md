@@ -1,6 +1,6 @@
 # TikTok Developer Field Values
 
-Use these values for the non-Coachi runner-content TikTok app.
+Use these values for the non-Coachi runner creator TikTok app.
 
 ## Basic Information
 
@@ -13,13 +13,13 @@ Everyday Runner Lab
 Category:
 
 ```text
-Health & Fitness
+Productivity
 ```
 
 Description:
 
 ```text
-Runner education account using Postiz to schedule original TikTok training tips and running content.
+A web app that helps runners and fitness creators create, preview, and schedule original TikTok training content.
 ```
 
 Platform:
@@ -73,7 +73,7 @@ video.publish
 ## App Review Explanation
 
 ```text
-We use TikTok Login and Content Posting through Postiz to connect our owned Everyday Runner Lab TikTok account and schedule original running education content. Flow: admin opens Postiz, chooses TikTok integration, signs in with TikTok OAuth, grants video upload/publish and profile scopes, uploads or schedules original slideshow/video content, and Postiz publishes to the connected TikTok account. We request user.info.basic/profile/stats to identify the connected account in Postiz, video.list to view/manage published TikTok videos, and video.upload/video.publish to upload and publish scheduled content.
+Everyday Runner Lab is a web app for runners and fitness creators who create original TikTok training content. The flow lets a creator open the web app, connect TikTok with OAuth, grant the requested profile and content-posting scopes, upload or prepare original running slideshow/video content, and schedule or publish it to the connected TikTok account. We request user.info.basic/profile/stats to identify the connected creator account, video.list to show/manage TikTok content status, and video.upload/video.publish to upload and publish scheduled content.
 ```
 
 ## Demo Video Checklist
@@ -81,7 +81,7 @@ We use TikTok Login and Content Posting through Postiz to connect our owned Ever
 Show the full flow:
 
 1. Open the published runner-brand website.
-2. Open Postiz.
+2. Open the creator workspace.
 3. Click TikTok integration.
 4. OAuth into TikTok.
 5. Grant only the requested scopes.
