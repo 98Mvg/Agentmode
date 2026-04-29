@@ -1,8 +1,8 @@
 # Everyday Runner Lab TikTok Developer Review Package
 
-Purpose: configure TikTok Developer + Postiz for runner-content publishing only.
+Purpose: configure TikTok Developer for a runner creator workflow.
 
-This package is intentionally separate from Coachi app/runtime. Use it for the TikTok developer app that connects Postiz to the owned TikTok account and publishes original running education content.
+This package is intentionally separate from Coachi app/runtime. Use it for the TikTok developer app that lets runners and fitness creators connect TikTok, prepare original running education content, and schedule or publish it from a creator workspace.
 
 ## Required Public URLs
 
@@ -29,7 +29,7 @@ The TikTok app should not say it is connected to Coachi or the Coachi iOS app.
 
 Correct framing:
 
-> Everyday Runner Lab uses Postiz as an internal publishing tool to schedule and publish original running education content to its owned TikTok account.
+> Everyday Runner Lab is a web app that helps runners and fitness creators create, preview, and schedule original TikTok training content.
 
 ## Remaining Before Review
 
