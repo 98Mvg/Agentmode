@@ -24,6 +24,15 @@ Use one scorecard per posting day:
 | Reddit Reply |  |  |  |  |  | `repeat / iterate / stop` |
 
 ## Proxy Metrics
+- Outbound engagement:
+  - candidates generated:
+  - duplicate candidates suppressed:
+  - likes approved:
+  - follows approved:
+  - comments/replies approved:
+  - reposts approved:
+  - replies received from outbound actions:
+  - new follows after outbound session:
 - TikTok:
   - views:
   - likes:

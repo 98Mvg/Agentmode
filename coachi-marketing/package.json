@@ -1,0 +1,39 @@
+{
+  "name": "coachi-marketing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "slideshow:validate": "node scripts/validate_slideshow_engine.mjs",
+    "slideshow:render": "node scripts/render_slideshow_deck.mjs",
+    "slideshow:assets": "node scripts/prepare_slideshow_assets.mjs",
+    "slideshow:materialize": "node scripts/materialize_slideshow_sources.mjs",
+    "slideshow:import-pinterest": "node scripts/import_pinterest_library.mjs",
+    "slideshow:owned-assets": "node scripts/generate_owned_visual_library_assets.mjs",
+    "slideshow:approve-library": "node scripts/approve_visual_library_assets.mjs",
+    "slideshow:supabase-library": "node scripts/build_supabase_visual_library_manifest.mjs",
+    "slideshow:upload-library": "python3 scripts/upload_supabase_visual_library.py",
+    "slideshow:openai-hook": "node scripts/generate_openai_hook_image.mjs",
+    "slideshow:topics": "node scripts/generate_slideshow_topics.mjs",
+    "slideshow:queue": "node scripts/slideshow_queue_worker.mjs",
+    "slideshow:queue-smoke": "node scripts/slideshow_queue_smoke.mjs",
+    "slideshow:prod-preflight": "node scripts/slideshow_prod_preflight.mjs",
+    "slideshow:log-result": "node scripts/log_slideshow_result.mjs",
+    "slideshow:readiness": "node scripts/slideshow_readiness_report.mjs",
+    "slideshow:carousel-pack": "node scripts/prepare_slideshow_carousel_pack.mjs",
+    "slideshow:qa": "node scripts/qa_slideshow_pack.mjs",
+    "slideshow:pipeline": "node scripts/run_slideshow_pipeline.mjs",
+    "slideshow:full-loop": "node scripts/slideshow_full_loop.mjs",
+    "slideshow:social-loop": "scripts/slideshow_social_loop_4h.sh run-now",
+    "growth:daily": "node scripts/coachi_growth_daily.mjs",
+    "growth:engagement-candidates": "node scripts/build_engagement_candidates.mjs",
+    "growth:log-engagement": "node scripts/log_engagement_action.mjs",
+    "growth:loop": "zsh scripts/coachi_growth_loop_4h.sh"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.77",
+    "bullmq": "^5.34.2",
+    "dotenv": "^16.4.7",
+    "ioredis": "^5.4.2",
+    "sharp": "^0.34.0"
+  }
+}

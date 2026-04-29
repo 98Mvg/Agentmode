@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "purpose": "Cross-platform engagement ledger for dedupe, cooldowns, and quality feedback.",
+  "cooldown_days": 21,
+  "actions": []
+}

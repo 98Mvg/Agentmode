@@ -3,6 +3,25 @@
 ## Objective
 Generate Coachi traffic content from the latest research and positioning files.
 
+Canonical command:
+
+```bash
+npm run growth:daily -- --date YYYY-MM-DD --mode minimum --execute --open
+```
+
+Use [coachi-growth-command.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/automation/coachi-growth-command.md) as the single command wrapper for the daily social loop. It integrates X, Reddit, TikTok, Instagram, and the slideshow handoff. Do not create a separate daily engagement command unless it wraps or intentionally replaces that command.
+
+Four-hour loop:
+
+```bash
+npm run growth:loop -- install --mode minimum --interval-seconds 14400
+```
+
+Use this for recurring engagement preparation. It calls the canonical `growth:daily` command every `4` hours.
+
+Every `growth:daily` run must also write `outputs/daily/YYYY-MM-DD-engagement-candidates.json`.
+Use that ranked queue before broad browsing. It scores X, Reddit, TikTok, and Instagram opportunities and suppresses recent duplicates from `inputs/performance/engagement-ledger.json`.
+
 Planning layer:
 - for the next two weeks, use [14-day-social-engine.md](/Volumes/Riot%20APFS/Agentmode/coachi-marketing/strategy/channels/14-day-social-engine.md) as the operating calendar for TikTok, Instagram, X, Reddit, and story packaging
 - treat that file as a theme bank, but only lock the next `3` days of execution at a time
