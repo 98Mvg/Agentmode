@@ -31,19 +31,31 @@ Web
 Web/Desktop URL:
 
 ```text
-https://<runner-brand-domain>/
+https://everyday-runner-lab.onrender.com/
 ```
 
 Terms of Service URL:
 
 ```text
-https://<runner-brand-domain>/terms
+https://everyday-runner-lab.onrender.com/terms/
 ```
 
 Privacy Policy URL:
 
 ```text
-https://<runner-brand-domain>/privacy
+https://everyday-runner-lab.onrender.com/privacy/
+```
+
+Login page / creator entry point:
+
+```text
+https://everyday-runner-lab.onrender.com/login/
+```
+
+TikTok redirect URI:
+
+```text
+https://everyday-runner-lab.onrender.com/integrations/social/tiktok
 ```
 
 ## Products
@@ -73,7 +85,13 @@ video.publish
 ## App Review Explanation
 
 ```text
-Everyday Runner Lab is a web app for runners and fitness creators who create original TikTok training content. The flow lets a creator open the web app, connect TikTok with OAuth, grant the requested profile and content-posting scopes, upload or prepare original running slideshow/video content, and schedule or publish it to the connected TikTok account. We request user.info.basic/profile/stats to identify the connected creator account, video.list to show/manage TikTok content status, and video.upload/video.publish to upload and publish scheduled content.
+Everyday Runner Lab is a web app for runners and fitness creators who create original TikTok training content. Creators open https://everyday-runner-lab.onrender.com, use the visible Creator Login entry point, connect TikTok with OAuth, grant the requested profile and content-posting scopes, upload or prepare original running slideshow/video content, and publish or schedule it to the connected TikTok account. We request user.info.basic/profile/stats to identify the connected creator account, video.list to show/manage TikTok content status, and video.upload/video.publish to upload and publish scheduled content.
+```
+
+## Resubmission Reason
+
+```text
+Updated app name, website URL, login entry, Terms, Privacy, and redirect URI so all surfaces use Everyday Runner Lab consistently.
 ```
 
 ## Demo Video Checklist
@@ -81,8 +99,8 @@ Everyday Runner Lab is a web app for runners and fitness creators who create ori
 Show the full flow:
 
 1. Open the published runner-brand website.
-2. Open the creator workspace.
-3. Click TikTok integration.
+2. Click the visible `Creator Login` or `Connect TikTok` entry point.
+3. Open the creator workspace / TikTok integration.
 4. OAuth into TikTok.
 5. Grant only the requested scopes.
 6. Upload or select a slideshow/video.

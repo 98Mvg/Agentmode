@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Everyday Runner Lab</title>
-    <meta name="description" content="Everyday Runner Lab helps runners and fitness creators create, preview, and schedule original TikTok training content.">
+    <title>Everyday Runner Lab | TikTok Creator Workspace</title>
+    <meta name="description" content="Everyday Runner Lab is a web app where runners and fitness creators sign in with TikTok, prepare original running content, and publish or schedule it with the Content Posting API.">
     <style>
       :root {
         color-scheme: light;
@@ -55,6 +55,7 @@
 
       nav {
         display: flex;
+        flex-wrap: wrap;
         gap: 18px;
         margin-top: 34px;
         font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -64,20 +65,30 @@
       a {
         color: var(--accent);
       }
+
+      .button {
+        display: inline-block;
+        padding: 12px 16px;
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
     <main>
       <section>
-        <div class="eyebrow">Runner creator studio</div>
-        <h1>Plan clearer running content for TikTok.</h1>
+        <div class="eyebrow">Everyday Runner Lab</div>
+        <h1>TikTok creator workspace for running content.</h1>
         <p>
-          Everyday Runner Lab helps runners and fitness creators turn real training questions into short educational posts, slideshow outlines, captions, and publishing schedules.
+          Everyday Runner Lab is a web app for runners and fitness creators who create, preview, upload, schedule, and publish original TikTok training content.
         </p>
         <p>
-          The web workflow connects to TikTok so approved creators can sign in, prepare original running education content, and schedule posts from one creator workspace.
+          Creators use the login entry below to connect a TikTok account with TikTok Login, grant the approved profile and content-posting scopes, and use the Content Posting API workflow from the creator workspace.
         </p>
         <nav>
+          <a class="button" href="/login">Creator Login</a>
+          <a class="button" href="/connect-tiktok">Connect TikTok</a>
           <a href="/terms">Terms</a>
           <a href="/privacy">Privacy</a>
         </nav>
