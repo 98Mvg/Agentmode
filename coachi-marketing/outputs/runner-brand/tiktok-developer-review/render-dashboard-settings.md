@@ -44,10 +44,23 @@ Replace `<render-url>` with the URL Render gives you:
 https://<render-url>/
 https://<render-url>/terms
 https://<render-url>/privacy
+https://<render-url>/login
+https://<render-url>/connect-tiktok
+https://<render-url>/integrations/social/tiktok
 ```
 
 Use those three in TikTok Developer until you have a custom runner-brand domain.
 
+For the current review package, use:
+
+```text
+https://everyday-runner-lab.onrender.com/
+https://everyday-runner-lab.onrender.com/terms/
+https://everyday-runner-lab.onrender.com/privacy/
+https://everyday-runner-lab.onrender.com/login/
+https://everyday-runner-lab.onrender.com/integrations/social/tiktok
+```
+
 ## Why Not Use Coachi.no
 
-The TikTok app is for runner content publishing through Postiz, not for the Coachi app runtime. The review domain, demo video, and explanation should all match the runner-content use case.
+The TikTok app is for the Everyday Runner Lab creator workflow, not for the Coachi app runtime. The app name, website title, Terms, Privacy, login entry point, redirect URI, demo video, and review explanation should all use `Everyday Runner Lab`.
