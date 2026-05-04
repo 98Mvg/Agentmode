@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "updated": "2026-04-28",
+  "purpose": "Approved visual metadata for Coachi TikTok, Instagram, and Pinterest slideshow production.",
+  "library_scale_target": {
+    "source": "x_article_adaptation",
+    "target_images_per_aesthetic": {
+      "min": 500,
+      "max": 1000
+    },
+    "current_user_curated_count": 66,
+    "next_step": "Expand only after the first slideshow workflow is repeatable and assets pass rights review."
+  },
+  "source_rules": {
+    "allowed": [
+      "Coachi-generated images",
+      "user-approved original assets",
+      "licensed stock or owned photography",
+      "Marketing Supabase public bucket assets",
+      "Pinterest-inspired style notes without copying the image"
+    ],
+    "blocked": [
+      "recognizable unlicensed people",
+      "watermarked images",
+      "creator-owned images copied directly from social platforms",
+      "images with baked-in text unless intentionally marked as final"
+    ]
+  },
+  "hybrid_cost_model": {
+    "name": "one_ai_hook_six_library_assets",
+    "source": "x_article_adaptation",
+    "default_total_slides": 8,
+    "supported_total_slides": {
+      "min": 5,
+      "max": 8
+    },
+    "naive_model": {
+      "description": "Comparison-only baseline. Do not use this as the Coachi production path.",
+      "ai_images_per_slideshow": 7,
+      "estimated_cost_per_slideshow_usd": {
+        "low": 0.7,
+        "high": 1.0
+      }
+    },
+    "hybrid_model": {
+      "description": "Generate only the hook image, use tagged Supabase visual-library assets for payoff and CTA slides, then composite text locally.",
+      "ai_images_per_slideshow": 1,
+      "library_images_per_slideshow": 7,
+      "estimated_cost_per_slideshow_usd": {
+        "target": 0.15
+      },
+      "slide_source_rules": [
+        {
+          "slide_range": "1",
+          "role": "hook",
+          "asset_source": "images_2_0",
+          "reason": "custom scene must match the topic exactly"
+        },
+        {
+          "slide_range": "2-6",
+          "role": "payoff_content",
+          "asset_source": "supabase_library",
+          "reason": "approved marketing-library visuals in Supabase plus local text overlay are cheaper and operationally cleaner"
+        },
+        {
+          "slide_range": "7",
+          "role": "cta",
+          "asset_source": "supabase_template",
+          "reason": "ending slide can reuse a clean CTA/comment/save background from the Supabase library"
+        }
+      ]
+    },
+    "monthly_cost_example": {
+      "slideshows_per_day": 30,
+      "naive_monthly_usd": {
+        "low": 600,
+        "high": 900
+      },
+      "hybrid_monthly_usd": 135
+    },
+    "caveats": [
+      "avoid recognizable public figures",
+      "avoid brand watermarks",
+      "crop and color grade locally for a consistent Coachi palette",
+      "rotate library images aggressively",
+      "tag by mood, role, context, route, and platform"
+    ],
+    "images_2_0_guardrail": {
+      "max_images_per_slideshow": 1,
+      "allowed_slide_roles": [
+        "hook"
+      ],
+      "blocked_patterns": [
+        "do not generate all slideshow images with Images 2.0",
+        "do not use Images 2.0 for slides 2-7 in the default pipeline",
+        "do not bake slide text into generated images"
+      ]
+    }
+  },
+  "rotation_policy": {
+    "max_uses_per_asset_per_30_days": 2,
+    "max_reuse_in_last_posts": 10,
+    "prefer_zero_use_assets": true,
+    "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+  },
+  "default_identity": "organic_runner_male_v2",
+  "identities": [
+    {
+      "id": "organic_runner_male_v2",
+      "status": "approved_reference",
+      "description": "Photorealistic athletic male runner, lean muscular endurance-athlete build, tan complexion, short dark slightly textured hair, realistic sweat, serious calm focused expression, same face family across posts, stronger 2026-04-26 watch-stole-the-run viral face style, rotating realistic runner kit.",
+      "continuity_rules": [
+        "same face family across daily running visuals",
+        "same tan complexion, short dark textured hair, lean muscular endurance build, and stronger cinematic face detail",
+        "natural post-run or easy-run movement",
+        "rotate pre-workout, during-workout, and post-workout moments across posts",
+        "rotate top, headwear, eyewear, shorts, route, weather, lighting, and camera angle",
+        "watches are disabled by default; watch-anxiety hooks may include one small unbranded sports watch, but never readable UI, close-ups, or watch-checking poses",
+        "no exaggerated model posing",
+        "avoid static hands-on-hips hero posing unless the topic specifically needs it",
+        "avoid distorted hands, knees, ankles, watch-checking poses, readable watch UI, or watch close-ups",
+        "prefer the 2026-04-26 watch-stole-the-run face/style direction over the too-clean park-portrait look for slideshow hook images"
+      ],
+      "reference_paths": [
+        "content/ads/reference/organic-runner-face-v2-reference.png",
+        "content/ads/reference/organic-runner-face-v1-full.png",
+        "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png"
+      ],
+      "prompt_anchor": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic",
+      "workout_phase_rotation_policy": {
+        "phase_variants": [
+          "pre-workout preparation with light warmup movement and route visible",
+          "during-workout steady controlled running effort with natural stride",
+          "post-workout cooldown or just-finished moment with sweat and calm satisfaction"
+        ],
+        "phase_constraints": [
+          "keep phase realistic and non-posed",
+          "no fake celebration",
+          "no watch-checking unless concept specifically needs it",
+          "no stutter step or unnatural turn during running"
+        ]
+      },
+      "gear_rotation_policy": {
+        "watch_mode": "disabled",
+        "watch_variants": [
+          "no visible watch"
+        ],
+        "watch_constraints": [
+          "no Apple Watch",
+          "no Garmin watch",
+          "no smartwatch",
+          "no GPS watch",
+          "no readable watch UI",
+          "no watch-checking pose",
+          "no watch close-up"
+        ],
+        "top_variants": [
+          "black fitted short-sleeve running shirt",
+          "white lightweight running singlet",
+          "navy fitted long-sleeve performance shirt",
+          "heather grey performance t-shirt",
+          "olive sleeveless running top",
+          "cream lightweight long-sleeve running shirt",
+          "shirtless warm-weather running look"
+        ],
+        "headwear_variants": [
+          "no hat",
+          "black running cap",
+          "white running cap",
+          "grey trail cap",
+          "thin black running headband"
+        ],
+        "eyewear_variants": [
+          "no glasses",
+          "dark sport sunglasses",
+          "brown sport sunglasses",
+          "clear running glasses"
+        ],
+        "shorts_variants": [
+          "black split shorts",
+          "charcoal running shorts",
+          "cobalt blue 5-inch split shorts",
+          "forest green running shorts",
+          "navy running shorts",
+          "dark green trail shorts",
+          "burnt orange split shorts"
+        ]
+      },
+      "safe_angles": [
+        "tight three-quarter post-run action close-up",
+        "waist-up walking cooldown angle",
+        "side tracking",
+        "side/back angle",
+        "three-quarter running angle",
+        "low three-quarter trail angle",
+        "wider side angle with route depth",
+        "distant front angle only when face quality is strong"
+      ],
+      "blocked_angles": [
+        "extreme face-only close-up while running",
+        "watch-checking close-up",
+        "static hands-on-hips hero pose",
+        "unnatural head turn to camera",
+        "hands raised while jogging"
+      ]
+    }
+  ],
+  "route_tags": [
+    {
+      "id": "riverside_morning",
+      "description": "Riverside path, early morning light, natural city/nature background.",
+      "best_for": [
+        "pace anxiety",
+        "easy-run drift",
+        "controlled effort"
+      ],
+      "mood_tags": [
+        "calm",
+        "focused",
+        "premium",
+        "believable"
+      ],
+      "prompt_fragment": "riverside running path, early morning light, realistic city nature background, no blur, no fake cinematic haze"
+    },
+    {
+      "id": "gentle_uphill",
+      "description": "Mild hill or rolling road where pace naturally changes.",
+      "best_for": [
+        "hills change pace",
+        "context changes numbers",
+        "effort over split"
+      ],
+      "mood_tags": [
+        "slightly tense",
+        "honest",
+        "useful"
+      ],
+      "prompt_fragment": "gentle uphill road, natural stride, realistic road gradient, clean sky area for overlay text"
+    },
+    {
+      "id": "open_windy_path",
+      "description": "Open path with visible but realistic wind cues.",
+      "best_for": [
+        "wind changes pace",
+        "weather context",
+        "easy run adjustment"
+      ],
+      "mood_tags": [
+        "realistic",
+        "exposed",
+        "controlled"
+      ],
+      "prompt_fragment": "open coastal or riverside path, light wind visible through clothing and trees, natural posture, no dramatic storm"
+    },
+    {
+      "id": "quiet_recovery_path",
+      "description": "Simple quiet path for calmer reframe and save/comment slides.",
+      "best_for": [
+        "recovery",
+        "confidence reset",
+        "comment prompt",
+        "save prompt"
+      ],
+      "mood_tags": [
+        "calm",
+        "minimal",
+        "reflective"
+      ],
+      "prompt_fragment": "quiet running path at morning light, clean negative space, realistic background, no face required"
+    }
+  ],
+  "style_tags": [
+    {
+      "id": "realistic_smartphone_fitness",
+      "description": "Believable creator-style running footage, not polished stock imagery.",
+      "rules": [
+        "natural light",
+        "realistic stride",
+        "not overly cinematic",
+        "no fake steam",
+        "background remains visible and unblurred"
+      ]
+    },
+    {
+      "id": "premium_editorial_running",
+      "description": "Cleaner fitness editorial look for trust-building Instagram and Pinterest assets.",
+      "rules": [
+        "strong but natural color",
+        "intentional negative space",
+        "simple composition",
+        "high legibility for overlay text"
+      ]
+    }
+  ],
+  "pinterest_research_collections": [
+    {
+      "id": "cta_ending",
+      "label": "CTA (ending)",
+      "pin_count": 10,
+      "status": "user_curated",
+      "mood_tags": [
+        "calm",
+        "clear",
+        "actionable"
+      ],
+      "subject_tags": [
+        "open_path",
+        "negative_space",
+        "finish_prompt"
+      ],
+      "color_tags": [
+        "green",
+        "gold",
+        "neutral"
+      ],
+      "aesthetic_tags": [
+        "premium_editorial_running",
+        "minimal_cta_background"
+      ],
+      "usage": "Final save/comment/profile-click slides.",
+      "best_for_slide_roles": [
+        "comment",
+        "save",
+        "cta"
+      ],
+      "best_for_platforms": [
+        "tiktok",
+        "instagram",
+        "pinterest"
+      ],
+      "selection_notes": [
+        "use clean negative space",
+        "avoid cluttered endings",
+        "make the viewer know what to do next"
+      ],
+      "prompt_translation": "minimal running path or calm finish scene with strong negative space for a final question or save prompt"
+    },
+    {
+      "id": "lake_calm",
+      "label": "Lake (calm)",
+      "pin_count": 12,
+      "status": "user_curated",
+      "mood_tags": [
+        "calm",
+        "reflective",
+        "controlled"
+      ],
+      "subject_tags": [
+        "lake",
+        "easy_run",
+        "recovery",
+        "open_path"
+      ],
+      "color_tags": [
+        "blue",
+        "green",
+        "soft_gold"
+      ],
+      "aesthetic_tags": [
+        "premium_editorial_running",
+        "calm_nature_running"
+      ],
+      "usage": "Calm reframe slides where the post shifts from anxiety to control.",
+      "best_for_slide_roles": [
+        "reframe",
+        "rule",
+        "save"
+      ],
+      "best_for_platforms": [
+        "instagram",
+        "pinterest"
+      ],
+      "selection_notes": [
+        "use for lower-tension middle or ending slides",
+        "good for effort, recovery, and confidence resets",
+        "keep text short and reflective"
+      ],
+      "prompt_translation": "calm lake-side running route, soft natural light, relaxed runner posture, premium but believable fitness image"
+    },
+    {
+      "id": "details_emotion",
+      "label": "Details (emotion)",
+      "pin_count": 17,
+      "status": "user_curated",
+      "mood_tags": [
+        "tense",
+        "human",
+        "focused"
+      ],
+      "subject_tags": [
+        "runner_detail",
+        "fatigue",
+        "breathing",
+        "body_language"
+      ],
+      "color_tags": [
+        "neutral",
+        "earth",
+        "shadow"
+      ],
+      "aesthetic_tags": [
+        "realistic_smartphone_fitness",
+        "human_effort_detail"
+      ],
+      "usage": "Emotional detail slides that make the runner problem feel human.",
+      "best_for_slide_roles": [
+        "problem",
+        "belief",
+        "gap",
+        "observation"
+      ],
+      "best_for_platforms": [
+        "tiktok",
+        "instagram"
+      ],
+      "selection_notes": [
+        "use for tension before the reframe",
+        "avoid watch close-ups unless the post is explicitly about watch anxiety",
+        "prioritize body language over facial drama"
+      ],
+      "prompt_translation": "realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat"
+    },
+    {
+      "id": "nature_context",
+      "label": "Nature (context)",
+      "pin_count": 15,
+      "status": "user_curated",
+      "mood_tags": [
+        "realistic",
+        "environmental",
+        "contextual"
+      ],
+      "subject_tags": [
+        "trail",
+        "weather",
+        "terrain",
+        "forest",
+        "route_context"
+      ],
+      "color_tags": [
+        "green",
+        "blue",
+        "natural"
+      ],
+      "aesthetic_tags": [
+        "realistic_smartphone_fitness",
+        "visible_route_context"
+      ],
+      "usage": "Context slides that show route, terrain, weather, fatigue, or environment.",
+      "best_for_slide_roles": [
+        "context",
+        "truth",
+        "explanation"
+      ],
+      "best_for_platforms": [
+        "tiktok",
+        "instagram",
+        "pinterest"
+      ],
+      "selection_notes": [
+        "use when the point is that the environment changes the number",
+        "keep backgrounds visible, not blurred out",
+        "make the context obvious at thumbnail size"
+      ],
+      "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area"
+    },
+    {
+      "id": "hills_effort",
+      "label": "Hills (effort)",
+      "pin_count": 12,
+      "status": "user_curated",
+      "mood_tags": [
+        "effort",
+        "honest",
+        "useful"
+      ],
+      "subject_tags": [
+        "hill",
+        "gradient",
+        "trail",
+        "climb",
+        "pace_context"
+      ],
+      "color_tags": [
+        "green",
+        "mountain",
+        "earth"
+      ],
+      "aesthetic_tags": [
+        "realistic_smartphone_fitness",
+        "terrain_effort_context"
+      ],
+      "usage": "Effort and pace-context slides where the runner needs to understand why numbers change.",
+      "best_for_slide_roles": [
+        "context",
+        "effort",
+        "rule"
+      ],
+      "best_for_platforms": [
+        "tiktok",
+        "instagram",
+        "pinterest"
+      ],
+      "selection_notes": [
+        "use for pace-is-lying and effort-over-split ideas",
+        "show a real gradient, not a dramatic mountain",
+        "runner stride must stay natural"
+      ],
+      "prompt_translation": "same runner on a gentle uphill route, natural stride, realistic gradient, controlled effort, clean sky or path area for overlay text"
+    }
+  ],
+  "pinterest_expansion_backlog": [
+    {
+      "id": "watch_gear_context",
+      "label": "Watch / GPS gear context",
+      "status": "backlog",
+      "priority": "high",
+      "target_count": 80,
+      "why_missing": "Current watch searches skew toward wrist close-ups and treadmill/device shots. Coachi needs natural Apple Watch/Garmin context where the watch is visible but not the subject.",
+      "pinterest_search_queries": [
+        "runner apple watch trail aesthetic",
+        "garmin running watch trail runner aesthetic",
+        "running watch outdoor workout aesthetic",
+        "runner smartwatch wrist natural running aesthetic"
+      ],
+      "best_for_slide_roles": [
+        "context",
+        "observation",
+        "rule",
+        "explanation"
+      ],
+      "mood_tags": [
+        "useful",
+        "focused",
+        "realistic"
+      ],
+      "subject_tags": [
+        "apple_watch",
+        "garmin_watch",
+        "wrist_visible",
+        "runner_gear",
+        "watch_context"
+      ],
+      "color_tags": [
+        "black",
+        "neutral",
+        "outdoor"
+      ],
+      "accept_if": [
+        "watch is visible as normal runner kit",
+        "runner remains the subject",
+        "outdoor route or workout context is clear",
+        "no readable watch UI"
+      ],
+      "block_if": [
+        "watch close-up",
+        "readable watch UI",
+        "brand logo focus",
+        "treadmill-only product shot",
+        "watermark",
+        "recognizable public figure"
+      ]
+    },
+    {
+      "id": "pre_workout_prep",
+      "label": "Pre-workout prep",
+      "status": "backlog",
+      "priority": "high",
+      "target_count": 80,
+      "why_missing": "The current library has route/context and calm endings, but not enough before-the-run setup images for warmup, shoes, route choice, and getting-ready slides.",
+      "pinterest_search_queries": [
+        "running warmup outdoor aesthetic",
+        "runner tying shoes outdoor aesthetic",
+        "pre run warmup road aesthetic",
+        "runner stretching before run aesthetic"
+      ],
+      "best_for_slide_roles": [
+        "setup",
+        "belief",
+        "problem",
+        "prep"
+      ],
+      "mood_tags": [
+        "calm",
+        "anticipation",
+        "ready"
+      ],
+      "subject_tags": [
+        "warmup",
+        "pre_run",
+        "shoes",
+        "stretching",
+        "route_start"
+      ],
+      "color_tags": [
+        "neutral",
+        "morning",
+        "soft_gold"
+      ],
+      "accept_if": [
+        "feels like a real runner before a session",
+        "route or workout context is visible",
+        "good negative space for text"
+      ],
+      "block_if": [
+        "gym-only stretching",
+        "posed influencer mirror shot",
+        "large logos",
+        "watermark",
+        "recognizable public figure"
+      ]
+    },
+    {
+      "id": "during_run_steady",
+      "label": "During-run steady effort",
+      "status": "backlog",
+      "priority": "high",
+      "target_count": 120,
+      "why_missing": "The pipeline needs more natural mid-run movement so slideshows do not rely on static landscapes or post-run poses.",
+      "pinterest_search_queries": [
+        "easy run road running aesthetic",
+        "steady run trail runner aesthetic",
+        "side view runner outdoor aesthetic",
+        "runner natural stride road aesthetic"
+      ],
+      "best_for_slide_roles": [
+        "context",
+        "truth",
+        "rule",
+        "explanation"
+      ],
+      "mood_tags": [
+        "controlled",
+        "focused",
+        "steady"
+      ],
+      "subject_tags": [
+        "steady_stride",
+        "easy_run",
+        "side_angle",
+        "road_run",
+        "trail_run"
+      ],
+      "color_tags": [
+        "green",
+        "blue",
+        "natural"
+      ],
+      "accept_if": [
+        "natural stride",
+        "clear route context",
+        "not a race finish",
+        "background remains visible"
+      ],
+      "block_if": [
+        "doubled step",
+        "unnatural turn",
+        "sprint face",
+        "race bib focus",
+        "watermark",
+        "recognizable public figure"
+      ]
+    },
+    {
+      "id": "post_workout_sweat",
+      "label": "Post-workout sweat / cooldown",
+      "status": "backlog",
+      "priority": "high",
+      "target_count": 80,
+      "why_missing": "The current details folder has only 7 assets. TikTok/Instagram hooks need more real sweat, fatigue, cooldown, and satisfied-but-grounded runner emotion.",
+      "pinterest_search_queries": [
+        "post run sweaty runner aesthetic",
+        "runner cooldown sweat aesthetic",
+        "after run tired satisfied aesthetic",
+        "male runner post run sweat outdoor aesthetic"
+      ],
+      "best_for_slide_roles": [
+        "problem",
+        "truth",
+        "reframe",
+        "cta"
+      ],
+      "mood_tags": [
+        "human",
+        "satisfied",
+        "fatigued",
+        "grounded"
+      ],
+      "subject_tags": [
+        "post_run",
+        "cooldown",
+        "sweat",
+        "breathing",
+        "fatigue"
+      ],
+      "color_tags": [
+        "earth",
+        "neutral",
+        "warm"
+      ],
+      "accept_if": [
+        "sweat looks real",
+        "emotion is calm or satisfied",
+        "not a dramatic collapse",
+        "enough room for overlay text"
+      ],
+      "block_if": [
+        "medical distress",
+        "fake steam",
+        "overly glossy model pose",
+        "watermark",
+        "recognizable public figure"
+      ]
+    },
+    {
+      "id": "headwear_sunglasses_kit",
+      "label": "Headwear / sunglasses / kit variation",
+      "status": "backlog",
+      "priority": "medium",
+      "target_count": 60,
+      "why_missing": "Avatar variation now rotates cap, headband, glasses, and shorts color. The visual library should support that same variety for non-hook slides.",
+      "pinterest_search_queries": [
+        "trail running sunglasses cap aesthetic",
+        "running cap sunglasses trail runner aesthetic",
+        "runner headband sunglasses aesthetic",
+        "summer running outfit sunglasses aesthetic"
+      ],
+      "best_for_slide_roles": [
+        "context",
+        "observation",
+        "rule"
+      ],
+      "mood_tags": [
+        "premium",
+        "practical",
+        "outdoor"
+      ],
+      "subject_tags": [
+        "cap",
+        "headband",
+        "sunglasses",
+        "summer_kit",
+        "runner_outfit"
+      ],
+      "color_tags": [
+        "black",
+        "white",
+        "navy",
+        "natural"
+      ],
+      "accept_if": [
+        "kit feels like real running gear",
+        "face can be partially visible or obscured naturally",
+        "no brand logo focus"
+      ],
+      "block_if": [
+        "selfie-first composition",
+        "posed fashion shot",
+        "large logos",
+        "watermark",
+        "recognizable public figure"
+      ]
+    },
+    {
+      "id": "road_weather_context",
+      "label": "Road / weather context",
+      "status": "backlog",
+      "priority": "medium",
+      "target_count": 80,
+      "why_missing": "Current context assets skew nature/trail. Coachi needs road, wind, heat, rain, and everyday-route context for Apple Watch and pace/effort posts.",
+      "pinterest_search_queries": [
+        "road running rain aesthetic",
+        "hot weather running road aesthetic",
+        "windy run road aesthetic",
+        "suburban running road aesthetic"
+      ],
+      "best_for_slide_roles": [
+        "context",
+        "explanation",
+        "truth"
+      ],
+      "mood_tags": [
+        "realistic",
+        "environmental",
+        "everyday"
+      ],
+      "subject_tags": [
+        "road",
+        "rain",
+        "heat",
+        "wind",
+        "suburban_route"
+      ],
+      "color_tags": [
+        "grey",
+        "green",
+        "warm",
+        "neutral"
+      ],
+      "accept_if": [
+        "weather context is obvious but not extreme",
+        "runner or route feels everyday",
+        "good text-safe area"
+      ],
+      "block_if": [
+        "storm disaster look",
+        "unsafe traffic context",
+        "watermark",
+        "recognizable public figure"
+      ]
+    }
+  ],
+  "text_overlay_defaults": {
+    "width": 1080,
+    "height": 1920,
+    "font_family": "Arial Black, Impact, sans-serif",
+    "text_color": "#FFFFFF",
+    "stroke_color": "#111111",
+    "stroke_width": 8,
+    "gradient_opacity": 0.64,
+    "safe_margin": 96,
+    "default_text_position": "lower_middle",
+    "placement_rule": "Keep overlays in the center or lower-middle safe zone; treat legacy bottom as lower_middle to avoid TikTok and Instagram UI overlap."
+  }
+}
