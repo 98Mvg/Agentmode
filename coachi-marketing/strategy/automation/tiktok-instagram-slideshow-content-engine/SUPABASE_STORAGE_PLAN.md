@@ -6,7 +6,8 @@ Use Supabase as a marketing asset store for TikTok and Instagram slideshow files
 This is for marketing assets only:
 
 - generated slideshow images
-- final slideshow MP4 exports
+- final photo-carousel slide exports
+- optional MP4 fallback exports
 - Pinterest/static image exports
 - source prompts
 - reference images
@@ -49,9 +50,9 @@ The upload script also accepts `MARKETING_SUPABASE_SERVICE_ROLE_KEY` as a legacy
 ### `slideshow-public`
 Use for final assets that can safely be public:
 
-- final TikTok slideshow MP4
-- final Instagram Reel/Carousel MP4
+- approved visual-library source images used in slideshows
 - final rendered slide images
+- optional final TikTok/Instagram MP4 fallback
 - public cover images
 
 Purpose:
@@ -92,6 +93,8 @@ slideshows/YYYY-MM-DD/slug/private/copy/tiktok-caption.txt
 slideshows/YYYY-MM-DD/slug/private/copy/instagram-caption.txt
 slideshows/YYYY-MM-DD/slug/private/qa.md
 slideshows/YYYY-MM-DD/slug/private/upload-manifest.json
+visual-library/hills_effort/hills_effort_001.jpg
+visual-library/nature_context/nature_context_001.jpg
 ```
 
 Local folder structure can stay the same:
@@ -131,9 +134,10 @@ If public dashboards are needed later, add narrow read policies. Do not loosen R
 2. Run `supabase-marketing-assets.sql` in that project.
 3. Add the `MARKETING_SUPABASE_*` variables to the marketing workspace local environment only.
 4. Generate a slideshow pack under `content/slideshows/YYYY-MM-DD-slug/`.
-5. Dry-run the upload helper.
-6. Execute upload only after the local pack passes QA.
-7. Save the generated manifest next to the campaign files.
+5. Build `content/slideshows/visual-library/supabase-library-manifest.json` from the curated library.
+6. Dry-run the upload helper.
+7. Execute upload only after the local pack passes QA.
+8. Save the generated manifest next to the campaign files.
 
 ## Upload Commands
 Dry-run:
@@ -148,15 +152,58 @@ python3 scripts/upload_slideshow_assets.py \
 Execute:
 
 ```bash
-python3 scripts/upload_slideshow_assets.py \
+npm run slideshow:upload-assets -- \
   --root content/slideshows/2026-04-26-easy-pace \
   --campaign-date 2026-04-26 \
   --slug easy-pace \
   --execute \
-  --manifest-out content/slideshows/2026-04-26-easy-pace/upload-manifest.json
+  --manifest-out content/slideshows/2026-04-26-easy-pace/upload-manifest.json \
+  --skip-metadata
 ```
 
-The script does not publish anything to TikTok, Instagram, or Pinterest. It only uploads files into the isolated marketing Supabase project and upserts rows into `marketing_asset_objects`. The generated `upload-manifest.json` remains local so reruns do not recursively upload stale manifests.
+The script does not publish anything to TikTok, Instagram, or Pinterest. It only uploads files into the isolated marketing Supabase project. Use `--skip-metadata` for the lowest-friction path when the storage bucket exists but the optional `marketing_asset_objects` table is not needed for the run. The generated `upload-manifest.json` remains local so reruns do not recursively upload stale manifests.
+
+Apply uploaded public media URLs to an existing Postiz schedule:
+
+```bash
+npm run slideshow:apply-public-media -- \
+  --pack content/slideshows/2026-04-26-easy-pace \
+  --manifest content/slideshows/2026-04-26-easy-pace/upload-manifest.json
+```
+
+For new live-intent packs, the pipeline can do the upload and schedule rewrite in one pass:
+
+```bash
+npm run slideshow:pipeline -- \
+  --date 2026-04-26 \
+  --production \
+  --generate-openai-hook \
+  --live-schedule \
+  --schedule-platform tiktok \
+  --publish-mode direct-public \
+  --upload-public-media
+```
+
+Build the render-time visual-library manifest:
+
+```bash
+npm run slideshow:supabase-library -- \
+  --supabase-url https://PROJECT.supabase.co
+```
+
+The slideshow asset picker uses this manifest for slides 2-7. Local Pinterest/library files remain available as fallback if public Supabase URLs are not yet uploaded or reachable.
+
+Dry-run visual-library upload:
+
+```bash
+npm run slideshow:upload-library
+```
+
+Execute visual-library upload:
+
+```bash
+npm run slideshow:upload-library -- --execute
+```
 
 ## Safety Checklist
 Before using this with real credentials:

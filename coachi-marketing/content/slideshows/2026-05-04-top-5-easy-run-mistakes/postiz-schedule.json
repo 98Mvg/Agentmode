@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "dry_run": false,
+  "publish_mode": "direct-public",
+  "generated_at": "2026-05-04T17:34:48.450Z",
+  "safety": {
+    "use_official_integrations_only": true,
+    "requires_live_env_flag": "POSTIZ_ENABLE_LIVE_POSTING=1",
+    "no_duplicate_payloads": true,
+    "public_media_host": "coachi-marketing-assets Supabase storage",
+    "local_postiz_ok_when_media_paths_are_public_https": true
+  },
+  "rate_limits": {
+    "max_posts_per_account_per_day": 2,
+    "min_hours_between_posts_per_account": 4,
+    "max_posts_per_hour_global": 4
+  },
+  "platform_rate_limits": {
+    "tiktok": {
+      "max_posts_per_account_per_day": 2,
+      "min_hours_between_posts_per_account": 4
+    },
+    "instagram": {
+      "max_posts_per_account_per_day": 1,
+      "min_hours_between_posts_per_account": 8
+    }
+  },
+  "accounts": [
+    {
+      "account_id": "cmoikbpne0001q96s054598iz",
+      "platform": "tiktok",
+      "status": "env_configured"
+    }
+  ],
+  "posts": [
+    {
+      "slideshow_id": "2026-05-04-top-5-easy-run-mistakes",
+      "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-04-top-5-easy-run-mistakes",
+      "account_id": "cmoikbpne0001q96s054598iz",
+      "platform": "tiktok",
+      "type": "tiktok-slideshow",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "media_paths": [
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/01-hook.png",
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/02-point-1.png",
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/03-point-2.png",
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/04-point-3.png",
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/05-point-4.png",
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/06-point-5.png",
+        "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-05-04/top-5-easy-run-mistakes/public/slides/rendered/07-cta.png"
+      ],
+      "caption_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-04-top-5-easy-run-mistakes/copy/tiktok-postiz-caption.txt",
+      "scheduled_at": "2026-05-04T21:32:37.142Z"
+    }
+  ],
+  "media_transport": "supabase_public_https",
+  "public_media_manifest": "content/slideshows/2026-05-04-top-5-easy-run-mistakes/upload-manifest.json"
+}

@@ -37,6 +37,30 @@ PRIVATE_DIRS = {"source", "copy", "private", "drafts"}
 GENERATED_FILENAMES = {"upload-manifest.json"}
 
 
+def load_env_file(path: Path) -> None:
+    if not path.exists():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[len("export "):].strip()
+        if "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip("\"'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+def load_local_env() -> None:
+    cwd = Path.cwd()
+    load_env_file(cwd / ".env")
+    load_env_file(cwd / ".env.local")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Upload slideshow campaign assets to marketing-only Supabase storage."
@@ -270,6 +294,7 @@ def build_manifest(args: argparse.Namespace, supabase_url: str | None) -> dict[s
 
 
 def main() -> None:
+    load_local_env()
     args = parse_args()
     validate_date(args.campaign_date)
 
@@ -278,7 +303,7 @@ def main() -> None:
 
     if args.execute and (not supabase_url or not api_key):
         raise SystemExit(
-            "Set MARKETING_SUPABASE_URL and MARKETING_SUPABASE_SECRET_KEY before using --execute."
+            "Set MARKETING_SUPABASE_URL and MARKETING_SUPABASE_SECRET_KEY or MARKETING_SUPABASE_SERVICE_ROLE_KEY before using --execute."
         )
 
     manifest = build_manifest(args, supabase_url)
