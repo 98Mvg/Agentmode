@@ -503,6 +503,9 @@ function suggestedFixesForFailure(message) {
   if (/Images 2\.0|full-deck/i.test(message)) {
     fixes.push("Use Images 2.0 only for slide 1 and library/branded assets for the rest.");
   }
+  if (/CTA\/app-proof|Coachi app CTA visual/i.test(message)) {
+    fixes.push("Keep CTA/app-proof imagery on the final slide only, and use Coachi app CTA assets only when the final CTA explicitly mentions Coachi.");
+  }
   if (/visual|world|lighting/i.test(message)) {
     fixes.push("Keep one visual world and one lighting family across all slides.");
   }
@@ -655,6 +658,39 @@ async function validateProductionAssets({ packDir, allowNeedsReview }) {
   return checked;
 }
 
+function isCoachiAppCtaAsset(asset) {
+  const id = String(asset?.id || "");
+  const sourceKind = String(asset?.source_kind || "");
+  const subjectTags = asset?.subject_tags || [];
+  const bestRoles = asset?.best_for_slide_roles || [];
+  return id.startsWith("coachi_cta_")
+    || /coachi.*cta|coachi.*app_ui|app_proof/i.test(sourceKind)
+    || subjectTags.includes("app_proof")
+    || bestRoles.includes("app_proof");
+}
+
+function isCtaVisualAsset(asset) {
+  const id = String(asset?.id || "");
+  const sourceKind = String(asset?.source_kind || "");
+  const subjectTags = asset?.subject_tags || [];
+  const bestRoles = asset?.best_for_slide_roles || [];
+  return isCoachiAppCtaAsset(asset)
+    || /^cta_ending_/i.test(id)
+    || /cta|app_proof/i.test(sourceKind)
+    || subjectTags.includes("cta")
+    || subjectTags.includes("app_proof")
+    || bestRoles.includes("cta")
+    || bestRoles.includes("app_proof");
+}
+
+function slideAllowsCoachiAppCtaAsset(slide, finalSlideNumber) {
+  return slide.slide_number === finalSlideNumber
+    && slide.role === "cta"
+    && slide.coachi_app_cta === true
+    && (slide.preferred_asset_ids || []).some((assetId) => String(assetId).startsWith("coachi_cta_"))
+    && /\bcoachi\b/i.test(String(slide.text || ""));
+}
+
 async function validateAssetPicklistQuality({ packDir, production }) {
   const picklistPath = path.join(packDir, "asset-picklist.json");
   if (!(await exists(picklistPath))) {
@@ -665,9 +701,23 @@ async function validateAssetPicklistQuality({ packDir, production }) {
   const picklist = await readJson(picklistPath);
   const checked = [];
   const topAssetSlides = new Map();
+  const nonHookSlides = (picklist.slides || []).filter((slide) => slide.asset_source !== "images_2_0");
+  const finalSlideNumber = Math.max(...(picklist.slides || []).map((slide) => slide.slide_number));
   for (const slide of picklist.slides || []) {
     if (slide.asset_source === "images_2_0") continue;
     const candidates = slide.instruction?.candidate_assets || [];
+    const isFinalCtaSlide = slide.slide_number === finalSlideNumber && slide.role === "cta";
+    const allowCoachiAppCta = slideAllowsCoachiAppCtaAsset(slide, finalSlideNumber);
+    for (const candidate of candidates) {
+      assert(
+        isFinalCtaSlide || !isCtaVisualAsset(candidate),
+        `Slide ${slide.slide_number} includes CTA/app-proof visual ${candidate.id}. CTA visuals must be final-slide-only.`
+      );
+      assert(
+        !isCoachiAppCtaAsset(candidate) || allowCoachiAppCta,
+        `Slide ${slide.slide_number} includes Coachi app CTA visual ${candidate.id} without a final Coachi CTA policy.`
+      );
+    }
     assert(candidates.length > 0, `Slide ${slide.slide_number} has no library candidates.`);
     const first = candidates[0];
     if (!first.selection_quality && !production) {
@@ -709,6 +759,7 @@ async function validateAssetPicklistQuality({ packDir, production }) {
 
   return {
     path: path.relative(process.cwd(), picklistPath),
+    non_hook_slides_checked: nonHookSlides.length,
     checked_assets: checked
   };
 }

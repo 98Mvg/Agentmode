@@ -271,6 +271,158 @@ test("qa_slideshow_pack rejects full-deck AI image generation", async () => {
   assert.equal(qaReport.pass, false);
 });
 
+test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-qa-cta-asset-"));
+  const packDir = path.join(tmpDir, "2026-05-14-cta-asset-pack");
+  await fs.mkdir(path.join(packDir, "source"), { recursive: true });
+  await fs.mkdir(path.join(packDir, "copy"), { recursive: true });
+
+  await writeJson(path.join(packDir, "render-manifest.json"), {
+    base_dir: ".",
+    output_dir: "slides/rendered",
+    width: 1080,
+    height: 1920,
+    hybrid_cost_model: "one_ai_hook_six_library_assets",
+    emotion: "frustrated",
+    visual_world: "city park path",
+    lighting_family: "soft morning light",
+    avatar_world_required: true,
+    cta_required: true,
+    hook_quality: {
+      hook: "Easy runs feel too hard",
+      score: 55,
+      min_score: 52,
+      passes_quality_gate: true
+    },
+    slides: [
+      { slide_number: 1, role: "hook", input_image: "slides/source/01-hook.png", output_file: "01-hook.png", text: "Easy runs feel too hard", asset_source: "images_2_0", text_position: "center" },
+      { slide_number: 2, role: "problem", input_image: "slides/source/02-problem.png", output_file: "02-problem.png", text: "Easy days become workouts.", asset_source: "supabase_library", text_position: "lower_middle" },
+      { slide_number: 3, role: "insight_1", input_image: "slides/source/03-insight.png", output_file: "03-insight.png", text: "Your pace creeps up early.", asset_source: "supabase_library", text_position: "lower_middle" },
+      { slide_number: 4, role: "insight_2", input_image: "slides/source/04-insight.png", output_file: "04-insight.png", text: "Slow should feel controlled.", asset_source: "supabase_library", text_position: "center" },
+      { slide_number: 5, role: "cta", input_image: "slides/source/05-cta.png", output_file: "05-cta.png", text: "Save this for your next easy run.", asset_source: "supabase_template", text_position: "center" }
+    ]
+  });
+
+  await writeJson(path.join(packDir, "source/hook-candidates.json"), {
+    schema_version: 1,
+    selected_hook: "Easy runs feel too hard",
+    selected_hook_quality: {
+      hook: "Easy runs feel too hard",
+      score: 55,
+      min_score: 52,
+      passes_quality_gate: true
+    },
+    candidates: Array.from({ length: 8 }, (_, index) => ({
+      hook: index === 0 ? "Easy runs feel too hard" : `Easy run mistake ${index}`,
+      score: 55,
+      min_score: 52,
+      passes_quality_gate: true
+    }))
+  });
+  await fs.writeFile(path.join(packDir, "source/hook.txt"), "Easy runs feel too hard\n");
+  await writeJson(path.join(packDir, "source/hook-brief.json"), {
+    hook: "Easy runs feel too hard",
+    theme: "easy run control",
+    source_problem: "The runner keeps turning easy days into workouts.",
+    cta: "Save this for your next easy run.",
+    emotion: "frustrated",
+    visual_world: "city park path",
+    lighting_family: "soft morning light",
+    avatar_world_required: true,
+    cta_required: true,
+    first_image_prompt_adaptation: "runner holding a relaxed pace during an easy run",
+    reddit_background_and_vibe: {
+      background: "city park path during an easy run",
+      vibe: "controlled, honest, slightly frustrated",
+      reddit_background: "runner overpaces easy days",
+      visual_keywords: ["easy run", "park path"],
+      avoid: ["watch close-up"]
+    },
+    character_anchor: {
+      identity_id: "organic_runner_male_v2",
+      reference_image: "content/ads/reference/organic-runner-face-v2-reference.png"
+    },
+    workout_phase: {
+      id: "during_workout",
+      prompt_cue: "show the runner during a controlled easy run",
+      moment: "mid-run on a quiet path"
+    },
+    avatar_variation: {
+      watch: "no visible watch",
+      top: "black running shirt",
+      shorts: "black split shorts",
+      angle: "three-quarter angle",
+      weather: "fresh morning",
+      lighting: "soft morning light"
+    },
+    prompt_compiler: {
+      coherence_status: "passed"
+    }
+  });
+  await fs.writeFile(path.join(packDir, "source/images-2-0-hook-prompt.md"), `# Images 2.0 Hook Prompt
+Production rule: generate exactly ONE image for slide 1.
+Do not create an 8-slide deck.
+Reddit Source Context
+Workout Phase For This Image
+Avatar Variation For This Image
+Required Slideshow Spine
+Selected visual world: city park path
+Easy runs feel too hard
+No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
+`);
+  await fs.writeFile(path.join(packDir, "copy/tiktok-caption.txt"), "Easy runs should feel controlled.\n");
+  await fs.writeFile(path.join(packDir, "copy/instagram-caption.txt"), "Easy runs should feel controlled.\n");
+  await fs.writeFile(path.join(packDir, "copy/hashtags.txt"), "#running #runtok #easyrun #runningtips\n");
+  await writeJson(path.join(packDir, "asset-picklist.json"), {
+    slides: [
+      { slide_number: 1, role: "hook", text: "Easy runs feel too hard", asset_source: "images_2_0", instruction: { candidate_assets: [] } },
+      {
+        slide_number: 2,
+        role: "problem",
+        text: "Easy days become workouts.",
+        asset_source: "supabase_library",
+        coachi_app_cta: false,
+        preferred_asset_ids: [],
+        instruction: {
+          candidate_assets: [
+            {
+              id: "coachi_cta_003_phone_image2_48min",
+              source_kind: "owned_coachi_phone_ui_cta_image2",
+              source_rights: "owned",
+              subject_tags: ["app_proof"],
+              best_for_slide_roles: ["cta", "app_proof"],
+              selection_quality: {
+                quality_score: 96,
+                visual_match_score: 30,
+                freshness_penalty: 0,
+                selection_score: 126,
+                recent_use_rank: null
+              },
+              visual_fit_metadata: {
+                requested_context: {
+                  visual_world: "city park path"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  });
+
+  const result = await runNode([
+    "scripts/qa_slideshow_pack.mjs",
+    "--pack",
+    packDir
+  ], { expectFailure: true });
+
+  assert.notEqual(result.code, 0);
+  assert.match(result.stderr, /CTA\/app-proof visual/i);
+  const qaReport = JSON.parse(await fs.readFile(path.join(packDir, "source/qa-report.json"), "utf8"));
+  assert.equal(qaReport.pass, false);
+  assert.match(qaReport.suggested_fixes.join(" "), /final slide only/i);
+});
+
 test("prepare_slideshow_assets ranks fresh assets and emits selection quality", async () => {
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-asset-quality-"));
   const manifestPath = path.join(tmpDir, "render-manifest.json");
@@ -333,4 +485,64 @@ test("prepare_slideshow_assets ranks fresh assets and emits selection quality", 
   assert.equal(typeof topAsset.selection_quality.selection_score, "number");
   assert.equal(typeof topAsset.selection_quality.visual_match_score, "number");
   assert.ok(topAsset.visual_fit_metadata.requested_context);
+});
+
+test("prepare_slideshow_assets keeps CTA visuals on the final slide", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-asset-cta-policy-"));
+  const manifestPath = path.join(tmpDir, "render-manifest.json");
+  const outPath = path.join(tmpDir, "asset-picklist.json");
+
+  await writeJson(manifestPath, {
+    base_dir: ".",
+    output_dir: "slides/rendered",
+    hybrid_cost_model: "one_ai_hook_six_library_assets",
+    slides: [
+      {
+        slide_number: 1,
+        role: "hook",
+        asset_source: "images_2_0",
+        visual_collection: "details_emotion",
+        input_image: "slides/source/01-hook.png",
+        output_file: "01-hook.png",
+        text: "Hook"
+      },
+      {
+        slide_number: 2,
+        role: "problem",
+        asset_source: "supabase_library",
+        visual_collection: "cta_ending",
+        preferred_asset_ids: ["coachi_cta_003_phone_image2_48min"],
+        input_image: "slides/source/02-problem.png",
+        output_file: "02-problem.png",
+        text: "This slide should not use app proof."
+      },
+      {
+        slide_number: 3,
+        role: "cta",
+        asset_source: "supabase_template",
+        visual_collection: "cta_ending",
+        preferred_asset_ids: ["coachi_cta_003_phone_image2_48min"],
+        coachi_app_cta: true,
+        input_image: "slides/source/03-cta.png",
+        output_file: "03-cta.png",
+        text: "Try Coachi if you always run too fast."
+      }
+    ]
+  });
+
+  await runNode([
+    "scripts/prepare_slideshow_assets.mjs",
+    "--manifest",
+    manifestPath,
+    "--out",
+    outPath,
+    "--local-library"
+  ]);
+
+  const picklist = JSON.parse(await fs.readFile(outPath, "utf8"));
+  const nonFinal = picklist.slides.find((item) => item.slide_number === 2);
+  const final = picklist.slides.find((item) => item.slide_number === 3);
+  assert.equal(nonFinal.instruction.candidate_assets.length, 0);
+  assert.equal(final.instruction.candidate_assets[0].id, "coachi_cta_003_phone_image2_48min");
+  assert.equal(final.coachi_app_cta, true);
 });

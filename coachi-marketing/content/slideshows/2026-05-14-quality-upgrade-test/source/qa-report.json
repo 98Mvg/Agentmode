@@ -1,12 +1,12 @@
 {
   "ok": true,
   "pass": true,
-  "generated_at": "2026-05-14T20:46:09.520Z",
+  "generated_at": "2026-05-14T20:59:51.295Z",
   "pack": "content/slideshows/2026-05-14-quality-upgrade-test",
   "slides": 7,
   "hybrid_cost_model": "one_ai_hook_six_library_assets",
-  "production": false,
-  "allow_needs_review": true,
+  "production": true,
+  "allow_needs_review": false,
   "reasons": [],
   "suggested_fixes": [],
   "improved_version": null,
@@ -30,58 +30,107 @@
   },
   "asset_quality": {
     "path": "content/slideshows/2026-05-14-quality-upgrade-test/asset-picklist.json",
+    "non_hook_slides_checked": 6,
     "checked_assets": [
       {
         "slide_number": 2,
-        "asset_id": "nature_context_005",
-        "selection_score": 12,
+        "asset_id": "nature_context_013",
+        "selection_score": 25,
         "quality_score": 83,
         "visual_match_score": 20,
-        "freshness_penalty": 91
+        "freshness_penalty": 78
       },
       {
         "slide_number": 3,
-        "asset_id": "details_emotion_016",
-        "selection_score": 36,
+        "asset_id": "details_emotion_012",
+        "selection_score": 45,
         "quality_score": 83,
         "visual_match_score": 5,
-        "freshness_penalty": 52
+        "freshness_penalty": 43
       },
       {
         "slide_number": 4,
-        "asset_id": "details_emotion_017",
-        "selection_score": 36,
+        "asset_id": "details_emotion_013",
+        "selection_score": 45,
         "quality_score": 83,
         "visual_match_score": 5,
-        "freshness_penalty": 52
+        "freshness_penalty": 43
       },
       {
         "slide_number": 5,
-        "asset_id": "nature_context_006",
-        "selection_score": 12,
+        "asset_id": "nature_context_014",
+        "selection_score": 25,
         "quality_score": 83,
         "visual_match_score": 20,
-        "freshness_penalty": 91
+        "freshness_penalty": 78
       },
       {
         "slide_number": 6,
-        "asset_id": "nature_context_007",
-        "selection_score": 9,
+        "asset_id": "nature_context_015",
+        "selection_score": 22,
         "quality_score": 83,
         "visual_match_score": 20,
-        "freshness_penalty": 94
+        "freshness_penalty": 81
       },
       {
         "slide_number": 7,
-        "asset_id": "coachi_cta_012_watch_lake_calm_35min",
-        "selection_score": 79,
+        "asset_id": "coachi_cta_010_watch_forest_morning_39min",
+        "selection_score": 85,
         "quality_score": 88,
         "visual_match_score": 13,
-        "freshness_penalty": 22
+        "freshness_penalty": 16
       }
     ]
   },
-  "production_checks": null,
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-05-14-quality-upgrade-test/source/hook-provenance.json",
+      "generator": "chatgpt_images_2_0"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_013",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "details_emotion_012",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "details_emotion_013",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_014",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_015",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_010_watch_forest_morning_39min",
+        "source_rights": "owned",
+        "source_kind": "local"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-05-14-quality-upgrade-test",
+      "posted_before": false
+    }
+  },
   "copy": {
     "hashtag_count": 8,
     "source_backing": null

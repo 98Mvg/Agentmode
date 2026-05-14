@@ -305,12 +305,37 @@ function hasPreferredCoachiAppCta(slide) {
   return (slide?.preferred_asset_ids || []).some((assetId) => String(assetId).startsWith("coachi_cta_"));
 }
 
-function filterAppCtaCandidatesWhenNotPreferred(slide, candidates) {
-  if (slide.visual_collection !== "cta_ending" || hasPreferredCoachiAppCta(slide)) {
-    return candidates;
-  }
-  const filtered = (candidates || []).filter((candidate) => !isCoachiAppCtaCandidate(candidate));
-  return filtered.length > 0 ? filtered : candidates;
+function isCtaVisualCandidate(candidate) {
+  const id = String(candidate?.id || "");
+  const sourceKind = String(candidate?.source_kind || "");
+  const subjectTags = candidate?.subject_tags || [];
+  const bestRoles = candidate?.best_for_slide_roles || [];
+  return isCoachiAppCtaCandidate(candidate)
+    || /^cta_ending_/i.test(id)
+    || /cta|app_proof/i.test(sourceKind)
+    || subjectTags.includes("cta")
+    || subjectTags.includes("app_proof")
+    || bestRoles.includes("cta")
+    || bestRoles.includes("app_proof");
+}
+
+function slideAllowsCoachiAppCta(slide, finalSlideNumber) {
+  return slide.slide_number === finalSlideNumber
+    && slide.role === "cta"
+    && slide.coachi_app_cta === true
+    && hasPreferredCoachiAppCta(slide)
+    && /\bcoachi\b/i.test(String(slide.text || ""));
+}
+
+function filterCtaCandidatesForSlide(slide, candidates, finalSlideNumber) {
+  const isFinalCtaSlide = slide.slide_number === finalSlideNumber && slide.role === "cta";
+  const allowCoachiAppCta = slideAllowsCoachiAppCta(slide, finalSlideNumber);
+
+  return (candidates || []).filter((candidate) => {
+    if (isCoachiAppCtaCandidate(candidate)) return allowCoachiAppCta;
+    if (isCtaVisualCandidate(candidate)) return isFinalCtaSlide;
+    return true;
+  });
 }
 
 function avoidAlreadySelectedWhenPossible(candidates, selectedAssetIds) {
@@ -482,6 +507,7 @@ async function main() {
   assert(Array.isArray(manifest.slides) && manifest.slides.length > 0, "Manifest must include slides.");
 
   const selectedAssetIds = new Set();
+  const finalSlideNumber = Math.max(...manifest.slides.map((slide) => slide.slide_number));
   const slides = manifest.slides.map((slide) => {
     const collection = slide.visual_collection ? collections.get(slide.visual_collection) : undefined;
     const requestedContext = requestedContextForSlide(slide, manifest);
@@ -502,11 +528,11 @@ async function main() {
       ? [...explicitOwnedCandidates, ...supabaseCandidates]
       : localFallbackCandidates;
     const candidates = avoidAlreadySelectedWhenPossible(
-      filterAppCtaCandidatesWhenNotPreferred(slide, rawCandidates),
+      filterCtaCandidatesForSlide(slide, rawCandidates, finalSlideNumber),
       selectedAssetIds
     );
     const fallbackCandidates = avoidAlreadySelectedWhenPossible(
-      filterAppCtaCandidatesWhenNotPreferred(slide, localFallbackCandidates),
+      filterCtaCandidatesForSlide(slide, localFallbackCandidates, finalSlideNumber),
       selectedAssetIds
     );
     if (production && slide.asset_source !== "images_2_0") {
@@ -548,6 +574,7 @@ async function main() {
         ? slide.asset_source.replace("pinterest", "supabase")
         : slide.asset_source || "manual",
       visual_collection: slide.visual_collection || null,
+      coachi_app_cta: slide.coachi_app_cta === true,
       preferred_asset_ids: Array.isArray(slide.preferred_asset_ids) ? slide.preferred_asset_ids : [],
       expected_input_image: slide.input_image,
       output_file: slide.output_file,
