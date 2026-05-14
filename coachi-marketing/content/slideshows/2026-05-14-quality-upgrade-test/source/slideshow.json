@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-05-14-quality-upgrade-test",
+  "format_id": "heart_rate_training_myths",
+  "schema": "top_5_mistakes_v1",
+  "topic": "A high heart rate does not automatically mean you failed the run.",
+  "selected_hook": "Most runners miss easy runs",
+  "hook_score": 62,
+  "hook_quality": {
+    "hook": "Most runners miss easy runs",
+    "score": 62,
+    "max_score": 70,
+    "min_score": 52,
+    "passes_quality_gate": true,
+    "word_count": 5,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 7,
+      "simplicity": 10,
+      "emotional_relatability": 5,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 62,
+      "max_score": 70,
+      "word_count": 5,
+      "banned_matches": []
+    },
+    "rationale": "62/70; 5 words; viral_hook_bank_fallback; pain 10/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+  },
+  "target_audience": "heart-rate runners / Apple Watch runners / Garmin runners",
+  "source_problem": {
+    "id": "rp_heart_rate_too_high_for_slow_pace",
+    "problem_type": "heart-rate panic",
+    "exact_words": "My heart rate looks too high for how slow I run.",
+    "source_url": "inputs/research/reddit-winning-language-bank.md"
+  },
+  "visual_system": {
+    "emotion": "embarrassed",
+    "visual_world": "open city park path",
+    "lighting": "bright natural daylight",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Most runners miss easy runs",
+      "visual_direction": "embarrassed; natural running moment; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "heart-rate panic hook open city park path bright natural daylight embarrassed",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "1. Running easy too fast.",
+      "visual_direction": "real runner effort; movement; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "heart-rate panic setup open city park path bright natural daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "2. Trusting one number.",
+      "visual_direction": "real runner effort; movement; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "heart-rate panic value open city park path bright natural daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "3. Ignoring the weather.",
+      "visual_direction": "real runner effort; movement; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "heart-rate panic value open city park path bright natural daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "4. Fighting walk breaks.",
+      "visual_direction": "real runner effort; movement; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "heart-rate panic value open city park path bright natural daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi gives simple guidance before one number ruins the run.",
+      "visual_direction": "controlled and useful; controlled movement; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "runner controlled effort voice coaching moment open city park path bright natural daylight controlled and useful",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "I use Coachi to stay in my zone.",
+      "visual_direction": "calm confidence; static; open city park path; bright natural daylight; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background open city park path bright natural daylight calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Most runners miss easy runs\n\nA high heart rate does not automatically mean you failed the run.\n\nSave this before your next run.",
+  "hashtags": [
+    "#running",
+    "#runtok",
+    "#beginnerrunner",
+    "#runningtips",
+    "#easyrun",
+    "#runcoach",
+    "#marathontraining",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-05-14-quality-upgrade-test/source/qa-report.json",
+  "qa_checked_at": "2026-05-14T20:46:09.518Z"
+}

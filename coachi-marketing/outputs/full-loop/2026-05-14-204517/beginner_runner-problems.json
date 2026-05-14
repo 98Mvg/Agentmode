@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-14T20:45:17.037Z",
+  "source_problem_file": "inputs/research/raw-runner-problems.json",
+  "niche": {
+    "id": "beginner_runner",
+    "label": "Beginner runners",
+    "problem_types": [
+      "beginner uncertainty",
+      "comparison spiral",
+      "easy-run pace drift"
+    ],
+    "min_score": 12
+  },
+  "problems": [
+    {
+      "id": "rp_easy_run_turns_medium_hard",
+      "source_url": "inputs/research/reddit-winning-language-bank.md",
+      "platform": "reddit",
+      "date_captured": "2026-04-26",
+      "source_type": "reddit",
+      "persona": "intermediate runner",
+      "exact_words": "Zone 2 keeps drifting into zone 3 and 4.",
+      "problem_type": "easy-run pace drift",
+      "watch_or_app_context": "heart-rate zone control and easy-run effort",
+      "emotion": "skeptical",
+      "failed_workaround": "trying to force the same pace or zone every day",
+      "repeated_language": "zone 2 drifting into zone 3 and 4",
+      "sourced_mistakes": [
+        {
+          "text": "Starting too fast.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Speeding up a little without noticing.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Forcing yesterday's pace.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Racing the easy day.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Calling medium-hard \"easy.\"",
+          "source_url": "https://www.reddit.com/r/trailrunning/comments/1pt7bui/struggling_with_running_slow_zone_2/"
+        }
+      ],
+      "product_angle": "Coachi can guide effort live and explain when to back off.",
+      "content_angle": "Zone 2 usually drifts upward slowly, not suddenly.",
+      "risk_level": "normal",
+      "score_frequency_1_5": 5,
+      "score_emotion_1_5": 4,
+      "score_product_fit_1_5": 5,
+      "score_content_clarity_1_5": 5,
+      "total_score": 19
+    },
+    {
+      "id": "rp_vo2_max_low_despite_training",
+      "source_url": "https://www.reddit.com/r/AppleWatch/comments/mrxdut/extremely_low_vo2_max_24/",
+      "platform": "reddit",
+      "date_captured": "2026-04-26",
+      "source_type": "reddit",
+      "persona": "Apple Watch runner",
+      "exact_words": "I was freaking out when I saw my VO2 max score.",
+      "problem_type": "comparison spiral",
+      "watch_or_app_context": "Apple Watch cardio fitness / VO2 max estimate",
+      "emotion": "anxious",
+      "failed_workaround": "treating a watch estimate like a full fitness diagnosis",
+      "repeated_language": "VO2 max is low even though I exercise",
+      "product_angle": "Coachi can teach runners to use trend and context instead of panicking over a single estimate.",
+      "content_angle": "Your watch score is not your whole fitness story.",
+      "risk_level": "device_troubleshooting",
+      "score_frequency_1_5": 5,
+      "score_emotion_1_5": 5,
+      "score_product_fit_1_5": 4,
+      "score_content_clarity_1_5": 5,
+      "total_score": 19
+    },
+    {
+      "id": "rp_first_minutes_gasping_for_air",
+      "source_url": "inputs/research/reddit-winning-language-bank.md",
+      "platform": "reddit",
+      "date_captured": "2026-05-08",
+      "source_type": "reddit",
+      "persona": "beginner runner",
+      "exact_words": "The first 10-12 minutes it feels like I'm gasping for air.",
+      "problem_type": "beginner uncertainty",
+      "watch_or_app_context": "early-run pacing, breathing, and effort control",
+      "emotion": "discouraged",
+      "failed_workaround": "assuming the whole run is going badly instead of starting easier and letting breathing settle",
+      "repeated_language": "gasping for air at the start",
+      "sourced_mistakes": [
+        {
+          "text": "Start slower.",
+          "source_url": "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md"
+        },
+        {
+          "text": "Walk breaks count.",
+          "source_url": "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md"
+        },
+        {
+          "text": "Repeat weeks.",
+          "source_url": "inputs/research/tiktok-running-hook-pattern-bank.md"
+        },
+        {
+          "text": "Easy matters.",
+          "source_url": "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md"
+        },
+        {
+          "text": "Keep showing up.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        }
+      ],
+      "product_angle": "Coachi can help the runner start easier and respond before the run feels out of control.",
+      "content_angle": "The first minutes can lie.",
+      "risk_level": "normal",
+      "score_frequency_1_5": 4,
+      "score_emotion_1_5": 5,
+      "score_product_fit_1_5": 5,
+      "score_content_clarity_1_5": 5,
+      "total_score": 19
+    },
+    {
+      "id": "rp_2026_05_13_easy_runs_turn_into_workouts",
+      "source_url": "https://www.tiktok.com/@shredathletics/video/7500539580563787010",
+      "platform": "tiktok",
+      "date_captured": "2026-05-13",
+      "source_type": "tiktok",
+      "persona": "beginner runner",
+      "exact_words": "My easy runs always turn into a workout.",
+      "problem_type": "easy-run pace drift",
+      "watch_or_app_context": "runner starts easy but keeps creeping faster until the watch/HR spikes and the run feels like work",
+      "emotion": "frustrated",
+      "failed_workaround": "trying to \"fix\" it mid-run by watching pace/HR more often",
+      "repeated_language": "easy runs turn into workouts",
+      "sourced_mistakes": [
+        {
+          "text": "Starting the first 10 minutes too fast.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Chasing a pace target on days meant to be easy.",
+          "source_url": "inputs/research/tiktok-viral-storagebag.jsonl"
+        },
+        {
+          "text": "Letting 'I feel good today' override the easy-day ceiling.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Reacting to instant pace noise and overcorrecting.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Treating Zone 2 like a pace, not an effort ceiling.",
+          "source_url": "inputs/research/tiktok-viral-storagebag.jsonl"
+        }
+      ],
+      "product_angle": "Coachi can set a simple effort ceiling and alert you before easy drifts into medium-hard.",
+      "content_angle": "Easy runs fail quietly: small creep early, big cost later.",
+      "risk_level": "normal",
+      "score_frequency_1_5": 5,
+      "score_emotion_1_5": 4,
+      "score_product_fit_1_5": 5,
+      "score_content_clarity_1_5": 5,
+      "total_score": 19
+    },
+    {
+      "id": "rp_2026_05_13_easy_pace_is_not_a_flex",
+      "source_url": "https://www.tiktok.com/@honestmiles1/photo/7634852439799221526?q=easy%20run",
+      "platform": "tiktok",
+      "date_captured": "2026-05-13",
+      "source_type": "tiktok_scan",
+      "persona": "beginner/intermediate runner",
+      "exact_words": "What your easy run pace says about you.",
+      "problem_type": "easy-run pace drift",
+      "watch_or_app_context": "pace and heart rate become a social flex (Strava / watch), so easy runs turn into medium-hard",
+      "emotion": "pressured",
+      "failed_workaround": "trying to hold a 'good easy pace' instead of protecting an easy effort ceiling",
+      "repeated_language": "easy run pace",
+      "sourced_mistakes": [
+        {
+          "text": "Treating easy runs like a quiet race (the pace becomes the goal).",
+          "source_url": "inputs/research/tiktok-viral-storagebag.jsonl"
+        },
+        {
+          "text": "Starting too fast because you feel good in the first 5–10 minutes.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Speeding up every time the watch shows a slower split.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Letting hills/heat turn the whole run into a threshold session.",
+          "source_url": "inputs/research/tiktok-viral-storagebag.jsonl"
+        },
+        {
+          "text": "Not setting a simple ceiling (effort/HR/talk test) before pace starts drifting.",
+          "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md"
+        }
+      ],
+      "product_angle": "Coachi helps you hold an easy ceiling so pace can float without turning the run into a test.",
+      "content_angle": "Your easy pace is not a flex: protect the ceiling, let pace do what it does.",
+      "risk_level": "normal",
+      "score_frequency_1_5": 5,
+      "score_emotion_1_5": 4,
+      "score_product_fit_1_5": 5,
+      "score_content_clarity_1_5": 5,
+      "total_score": 19
+    },
+    {
+      "id": "rp_2026_05_12_how_to_run_for_longer",
+      "source_url": "https://www.tiktok.com/@noahszabo_/video/7466172206460964128",
+      "platform": "tiktok",
+      "date_captured": "2026-05-12",
+      "source_type": "tiktok",
+      "persona": "beginner runner",
+      "exact_words": "How to run for longer",
+      "problem_type": "beginner uncertainty",
+      "watch_or_app_context": "run-walk vs continuous running, pacing the first half",
+      "emotion": "stuck",
+      "failed_workaround": "trying to force continuous running too early and turning every run into a grind",
+      "repeated_language": "run for longer",
+      "product_angle": "Coachi can pace the session and tell you when to slow down or walk so you finish feeling in control.",
+      "content_angle": "Running longer is mostly staying easier, earlier.",
+      "risk_level": "normal",
+      "score_frequency_1_5": 4,
+      "score_emotion_1_5": 4,
+      "score_product_fit_1_5": 4,
+      "score_content_clarity_1_5": 5,
+      "total_score": 17
+    },
+    {
+      "id": "rp_2026_05_14_easy_is_the_workout",
+      "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md",
+      "platform": "tiktok",
+      "date_captured": "2026-05-14",
+      "source_type": "viral_hook_bank",
+      "persona": "beginner/intermediate runner",
+      "exact_words": "Easy is the workout.",
+      "problem_type": "easy-run pace drift",
+      "watch_or_app_context": "pace/HR makes easy feel like you should push, so 'easy' turns into medium every time",
+      "emotion": "impatient",
+      "failed_workaround": "speeding up whenever it feels too easy, then wondering why you feel cooked for the next session",
+      "repeated_language": "easy",
+      "sourced_mistakes": [
+        {
+          "text": "Turning easy runs into 'prove you're fit' runs.",
+          "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md"
+        },
+        {
+          "text": "Using pace as the goal even when heat/hills/sleep change effort.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Checking the watch so much the numbers decide the effort.",
+          "source_url": "inputs/research/tiktok-viral-storagebag.jsonl"
+        },
+        {
+          "text": "Skipping the warm-up and immediately trying to 'lock in' a pace.",
+          "source_url": "inputs/research/tiktok-viral-storagebag.jsonl"
+        },
+        {
+          "text": "Making the long run hard too, so nothing is actually recoverable.",
+          "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md"
+        }
+      ],
+      "product_angle": "Coachi helps you hold your easy effort ceiling so easy stays easy (and workouts feel better).",
+      "content_angle": "If every run becomes medium, the easy run failed. Easy is the workout.",
+      "risk_level": "normal",
+      "score_frequency_1_5": 4,
+      "score_emotion_1_5": 4,
+      "score_product_fit_1_5": 5,
+      "score_content_clarity_1_5": 4,
+      "total_score": 17
+    }
+  ]
+}

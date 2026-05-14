@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-05-14-how-to-do-an-easy-run",
+  "format_id": "easy_run_too_fast",
+  "schema": "top_5_mistakes_v1",
+  "topic": "Zone 2 usually drifts upward slowly, not suddenly.",
+  "selected_hook": "How to do an easy run",
+  "hook_score": 60,
+  "hook_quality": {
+    "hook": "How to do an easy run",
+    "score": 60,
+    "max_score": 70,
+    "min_score": 52,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 7,
+      "simplicity": 10,
+      "emotional_relatability": 3,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 60,
+      "max_score": 70,
+      "word_count": 6,
+      "banned_matches": []
+    },
+    "rationale": "60/70; 6 words; viral_format_pattern; pain 10/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+  },
+  "target_audience": "beginner runners / overpacers / easy-run runners",
+  "source_problem": {
+    "id": "rp_easy_run_turns_medium_hard",
+    "problem_type": "easy-run pace drift",
+    "exact_words": "Zone 2 keeps drifting into zone 3 and 4.",
+    "source_url": "inputs/research/reddit-winning-language-bank.md"
+  },
+  "visual_system": {
+    "emotion": "skeptical",
+    "visual_world": "forest road",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "How to do an easy run",
+      "visual_direction": "skeptical; natural running moment; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run pace drift hook forest road soft green morning forest light skeptical",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "You speed up once.",
+      "visual_direction": "real runner effort; movement; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run pace drift setup forest road soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Then again.",
+      "visual_direction": "real runner effort; movement; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run pace drift value forest road soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Now it is zone 3.",
+      "visual_direction": "real runner effort; movement; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run pace drift value forest road soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Then zone 4.",
+      "visual_direction": "real runner effort; movement; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run pace drift value forest road soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "That is why Coachi speaks up when easy turns too hard.",
+      "visual_direction": "controlled and useful; controlled movement; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "runner controlled effort voice coaching moment forest road soft green morning forest light controlled and useful",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "I use Coachi to stay in my zone.",
+      "visual_direction": "calm confidence; static; forest road; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest road soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Easy runs usually do not fail all at once.\n\nYou speed up once.\nThen again.\nThen zone 2 becomes zone 3.\n\nIf your easy run keeps drifting into zone 3 and 4, catch it early.\n\nComment \"easy\" if this happens to you.",
+  "hashtags": [
+    "#running",
+    "#runtok",
+    "#easyrun",
+    "#runningtips",
+    "#marathontraining",
+    "#beginnerrunner",
+    "#runcoach",
+    "#runmotivation"
+  ],
+  "qa_status": "pending"
+}

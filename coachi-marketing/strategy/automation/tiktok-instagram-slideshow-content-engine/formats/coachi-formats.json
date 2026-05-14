@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "updated": "2026-05-14",
+  "purpose": "Canonical Coachi TikTok/Instagram slideshow format catalog. Copy structure only; all public copy must be original Coachi runner language.",
+  "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+  "default_slide_structure": [
+    { "slide_number": 1, "role": "hook", "purpose": "Make the runner feel the exact problem immediately." },
+    { "slide_number": 2, "role": "problem", "purpose": "Name the behavior that creates the pain." },
+    { "slide_number": 3, "role": "insight_1", "purpose": "Give one useful correction." },
+    { "slide_number": 4, "role": "insight_2", "purpose": "Add context that makes the correction believable." },
+    { "slide_number": 5, "role": "insight_3", "purpose": "Give the runner a simple rule they can use." },
+    { "slide_number": 6, "role": "coachi_connection", "purpose": "Connect the problem to Coachi only if it feels like the natural next step." },
+    { "slide_number": 7, "role": "cta", "purpose": "Ask for a save, follow, comment, or soft Coachi trial." }
+  ],
+  "production_rules": [
+    "Slides 1-5 teach before Coachi is mentioned.",
+    "Slide 6 may mention Coachi once when the problem fits live guidance, zone control, voice coaching, or Coachi Score.",
+    "Slide 7 uses a soft CTA, never a hard sales push.",
+    "Use one visual world and one lighting family per deck.",
+    "Use Images 2.0 for slide 1 only; use library/branded assets for the rest.",
+    "Keep hook text under 10 words unless a list format truly needs the number."
+  ],
+  "formats": [
+    {
+      "format_id": "top_running_mistakes",
+      "format_name": "Top Running Mistakes",
+      "hook_pattern": "Top {count} {specific running problem} mistakes",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Fast list energy, but avoid stuffing five tiny tips into the deck. Use three memorable mistakes and one practical rule.",
+      "visual_style_notes": "High-contrast runner visuals, real training moments, no medical charts or watch close-ups.",
+      "cta_style": "Save this before your next run.",
+      "coachi_use_cases": ["easy-run drift", "workout racing", "watch-checking anxiety", "beginner pacing mistakes"]
+    },
+    {
+      "format_id": "easy_run_too_fast",
+      "format_name": "Easy Run Too Fast",
+      "hook_pattern": "Your easy runs are probably too hard",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Start with ego/pacing pain, then make slowing down feel useful rather than embarrassing.",
+      "visual_style_notes": "Calm road or forest route, steady effort, controlled breathing, no race visuals.",
+      "cta_style": "Save this for your next easy run.",
+      "coachi_use_cases": ["heart-rate zone ceiling", "live voice pacing cue", "easy-run control"]
+    },
+    {
+      "format_id": "nobody_talks_about_zone2",
+      "format_name": "Nobody Talks About Zone 2",
+      "hook_pattern": "Nobody talks about how slow Zone 2 feels",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Use reassurance first, then explain context like heat, hills, and walking without sounding clinical.",
+      "visual_style_notes": "Quiet neighborhood or park path, soft light, calm confusion turning into control.",
+      "cta_style": "Follow for smarter easy runs.",
+      "coachi_use_cases": ["zone 2 coaching", "walk-break permission", "voice feedback during the run"]
+    },
+    {
+      "format_id": "beginner_runner_rules",
+      "format_name": "Beginner Runner Rules",
+      "hook_pattern": "{count} rules for beginner runners",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Reassure before instructing. The runner should feel less judged after every slide.",
+      "visual_style_notes": "Approachable park or city route, clean negative space, human not elite-athlete energy.",
+      "cta_style": "Your next run should feel controlled.",
+      "coachi_use_cases": ["beginner confidence", "session guidance", "simple workout interpretation"]
+    },
+    {
+      "format_id": "why_you_plateau",
+      "format_name": "Why You Plateau",
+      "hook_pattern": "This is why your running stopped improving",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Avoid blame. Show how too many medium-hard runs flatten progress.",
+      "visual_style_notes": "Repeating route, tired-but-real runner, muted training-day light.",
+      "cta_style": "Save this if every run feels medium-hard.",
+      "coachi_use_cases": ["training balance", "Coachi Score", "post-run interpretation"]
+    },
+    {
+      "format_id": "stop_racing_easy_runs",
+      "format_name": "Stop Racing Easy Runs",
+      "hook_pattern": "Most runners train like every run is a test",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Contrarian but supportive. Make restraint feel athletic.",
+      "visual_style_notes": "During-workout steady movement, restrained effort, no finish-line or sprint imagery.",
+      "cta_style": "Try Coachi if you always run too fast.",
+      "coachi_use_cases": ["overpacing", "live zone alerts", "voice coaching"]
+    },
+    {
+      "format_id": "heart_rate_training_myths",
+      "format_name": "Heart Rate Training Myths",
+      "hook_pattern": "Your heart rate needs context",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Explain context without medical claims. Keep it practical: heat, hills, sleep, stress, effort.",
+      "visual_style_notes": "Real route context that explains effort; avoid medical visuals or device UI close-ups.",
+      "cta_style": "Save this before judging one run.",
+      "coachi_use_cases": ["heart-rate zone coaching", "effort context", "post-run Coachi Score"]
+    },
+    {
+      "format_id": "things_i_wish_i_knew_running",
+      "format_name": "Things I Wish I Knew Running",
+      "hook_pattern": "{count} things I wish I knew before running",
+      "slide_count": 7,
+      "slide_roles": ["hook", "problem", "insight_1", "insight_2", "insight_3", "coachi_connection", "cta"],
+      "pacing_notes": "Founder-led and humble. Use lessons, not commandments.",
+      "visual_style_notes": "Warm, human, post-workout or during-workout moments; avoid polished ad poses.",
+      "cta_style": "Follow for smarter running.",
+      "coachi_use_cases": ["founder-led education", "beginner confidence", "simple coaching guidance"]
+    }
+  ]
+}

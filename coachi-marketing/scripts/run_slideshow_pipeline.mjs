@@ -30,6 +30,28 @@ const DEFAULT_HASHTAGS = [
   "#marathontraining",
   "#coachi"
 ];
+const TARGET_AUDIENCE_BY_PROBLEM_TYPE = {
+  "easy-run pace drift": "beginner runners / overpacers / easy-run runners",
+  "zone-2 confusion": "zone 2 runners / beginner runners / overpacers",
+  "heart-rate panic": "heart-rate runners / Apple Watch runners / Garmin runners",
+  "watch-checking anxiety": "watch-checking runners / pace-anxious runners",
+  "pace disbelief": "pace-focused runners / easy-run runners",
+  "workout-racing": "intermediate runners / interval runners / overpacers",
+  "metric setup confusion": "heart-rate zone runners / watch users",
+  "beginner uncertainty": "beginner runners / returning runners",
+  "data-without-coaching": "watch users / runners who want coaching",
+  "comparison spiral": "beginner runners / confidence-building runners"
+};
+const COACHI_APP_CTA_TEXT = "I use Coachi to stay in my zone.";
+const COACHI_APP_CTA_ASSET_IDS = [
+  "coachi_cta_003_phone_image2_48min",
+  "coachi_cta_004_watch_image2_52min",
+  "coachi_cta_009_phone_forest_morning_44min",
+  "coachi_cta_010_watch_forest_morning_39min",
+  "coachi_cta_011_phone_lake_calm_47min",
+  "coachi_cta_012_watch_lake_calm_35min",
+  "coachi_cta_013_phone_mountain_morning_51min"
+];
 
 function parseArgs(argv) {
   const args = new Map();
@@ -145,10 +167,10 @@ const AVATAR_VARIATIONS = [
     lighting: "soft golden-hour side light"
   },
   {
-    id: "navy_long_sleeve_charcoal_side",
+    id: "navy_long_sleeve_charcoal_side_no_headwear",
     watch: "no visible watch",
     top: "navy fitted long-sleeve performance shirt",
-    headwear: "black lightweight running cap",
+    headwear: "no headwear",
     eyewear: "no glasses",
     shorts: "charcoal running shorts",
     angle: "side-tracking action angle with natural arm swing",
@@ -156,11 +178,11 @@ const AVATAR_VARIATIONS = [
     lighting: "soft diffused daylight"
   },
   {
-    id: "grey_tee_green_shorts_side_back",
+    id: "grey_tee_green_shorts_side_back_no_headwear",
     watch: "no visible watch",
     top: "heather grey fitted performance t-shirt",
-    headwear: "white running cap",
-    eyewear: "dark sport sunglasses",
+    headwear: "no headwear",
+    eyewear: "black running glasses",
     shorts: "forest green running shorts",
     angle: "side/back angle with the face partially visible and consistent",
     weather: "dry windy afternoon",
@@ -171,14 +193,14 @@ const AVATAR_VARIATIONS = [
     watch: "no visible watch",
     top: "shirtless warm-weather running look",
     headwear: "no hat",
-    eyewear: "sport sunglasses",
+    eyewear: "black running glasses",
     shorts: "black 5-inch running shorts",
     angle: "waist-up cooldown angle on the selected route",
     weather: "warm dry evening",
     lighting: "warm golden-hour light"
   },
   {
-    id: "black_tee_orange_shorts_trail",
+    id: "black_tee_orange_shorts_trail_headband",
     watch: "no visible watch",
     top: "black fitted short-sleeve running shirt",
     headwear: "thin black running headband",
@@ -189,11 +211,11 @@ const AVATAR_VARIATIONS = [
     lighting: "soft early sunlight"
   },
   {
-    id: "olive_singlet_navy_shorts_side",
+    id: "olive_singlet_navy_shorts_side_no_headwear",
     watch: "no visible watch",
     top: "olive sleeveless running top",
-    headwear: "black cap worn forward",
-    eyewear: "brown sport sunglasses",
+    headwear: "no headwear",
+    eyewear: "black running glasses",
     shorts: "navy running shorts",
     angle: "slightly wider side angle with visible route depth",
     weather: "sunny but mild",
@@ -204,17 +226,17 @@ const AVATAR_VARIATIONS = [
     watch: "no visible watch",
     top: "cream lightweight long-sleeve running shirt",
     headwear: "no hat",
-    eyewear: "clear running glasses",
+    eyewear: "black running glasses",
     shorts: "black split shorts",
     angle: "tight medium-close cooldown frame, chest to waist",
     weather: "cool clear day",
     lighting: "clean low-angle sunlight"
   },
   {
-    id: "rust_tee_green_shorts_controlled_effort",
+    id: "rust_tee_green_shorts_controlled_effort_no_headwear",
     watch: "no visible watch",
     top: "rust red breathable running t-shirt",
-    headwear: "grey trail running cap",
+    headwear: "no headwear",
     eyewear: "no glasses",
     shorts: "dark green trail shorts",
     angle: "side angle on the selected route with controlled effort",
@@ -247,6 +269,111 @@ const WORKOUT_PHASES = [
   }
 ];
 
+const WORKOUT_PHASE_BY_PROBLEM_TYPE = {
+  "zone-2 confusion": "during_workout",
+  "heart-rate panic": "during_workout",
+  "watch-checking anxiety": "during_workout",
+  "pace disbelief": "during_workout",
+  "easy-run pace drift": "during_workout",
+  "data-without-coaching": "post_workout",
+  "workout-racing": "post_workout",
+  "metric setup confusion": "pre_workout",
+  "exercise-ring frustration": "post_workout",
+  "comparison spiral": "post_workout",
+  "beginner uncertainty": "pre_workout"
+};
+
+function workoutPhaseById(phaseId) {
+  return WORKOUT_PHASES.find((phase) => phase.id === phaseId) || WORKOUT_PHASES[0];
+}
+
+function coherentWeatherForLighting(lightingFamily, fallback) {
+  const lower = String(lightingFamily || "").toLowerCase();
+  if (/overcast|diffused/.test(lower)) return "cool overcast conditions";
+  if (/late afternoon|golden|low-angle|evening/.test(lower)) return "dry mild late-afternoon conditions";
+  if (/morning|green|soft/.test(lower)) return "fresh mild morning conditions";
+  if (/indoor|gym/.test(lower)) return "controlled indoor training conditions";
+  if (/bright|clear/.test(lower)) return "clear dry training conditions";
+  return fallback || "mild realistic running conditions";
+}
+
+function compileAvatarVariationForTheme(avatarVariation, theme) {
+  return {
+    ...avatarVariation,
+    weather: coherentWeatherForLighting(theme.lighting_family, avatarVariation.weather),
+    lighting: theme.lighting_family || avatarVariation.lighting
+  };
+}
+
+function promptConflictPatternsForPhase(phaseId) {
+  if (phaseId === "pre_workout") {
+    return [/post[- ]?workout/i, /post[- ]?run/i, /cool(?:ing)? down/i, /after intervals/i, /just finished/i, /finished the session/i];
+  }
+  if (phaseId === "during_workout") {
+    return [/preparing before/i, /before starting/i, /post[- ]?workout/i, /cool(?:ing)? down/i, /just finished/i];
+  }
+  if (phaseId === "post_workout") {
+    return [/preparing before/i, /before starting/i, /warmup movement/i, /moments before starting/i];
+  }
+  return [];
+}
+
+function buildPromptCompilerReport({ candidate, theme, workoutPhase, avatarVariation }) {
+  const textToCheck = [
+    theme.background,
+    theme.vibe,
+    theme.first_image_prompt_adaptation,
+    workoutPhase.moment,
+    workoutPhase.prompt_cue,
+    avatarVariation.weather,
+    avatarVariation.lighting
+  ].filter(Boolean).join("\n");
+  const conflicts = promptConflictPatternsForPhase(workoutPhase.id)
+    .filter((pattern) => pattern.test(textToCheck))
+    .map((pattern) => pattern.source);
+  return {
+    version: 1,
+    source_of_truth: "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    selected_by: WORKOUT_PHASE_BY_PROBLEM_TYPE[candidate.problem_type] ? "problem_type_mapping" : "stable_hash_fallback",
+    coherence_status: conflicts.length === 0 ? "passed" : "failed",
+    conflict_patterns: conflicts,
+    checks: [
+      "single workout phase selected before prompt generation",
+      "avatar lighting normalized to deck lighting family",
+      "weather normalized to selected lighting family",
+      "hook image remains slide-1-only",
+      "base image remains text-free for local Sharp/Canvas overlay"
+    ]
+  };
+}
+
+function adaptThemeForWorkoutPhase(theme, workoutPhase) {
+  if (workoutPhase.id === "pre_workout") {
+    return {
+      ...theme,
+      background: String(theme.background || "quiet outdoor running route").replace(/after (a )?(workout|run|intervals)/gi, "before an easy run"),
+      vibe: String(theme.vibe || "calm realistic training").replace(/post[- ]?workout|post[- ]?run|cooldown/gi, "pre-run"),
+      first_image_prompt_adaptation: "pre-run preparation moment: the runner is warming up naturally near the selected route, calm and ready, not posing"
+    };
+  }
+  if (workoutPhase.id === "during_workout") {
+    return {
+      ...theme,
+      first_image_prompt_adaptation: String(theme.first_image_prompt_adaptation || "runner moving naturally during the session")
+        .replace(/post[- ]?run|post[- ]?workout|cool(?:ing)? down|just finished/gi, "during-run")
+        .replace(/pre[- ]?workout|before starting/gi, "during-run")
+    };
+  }
+  if (workoutPhase.id === "post_workout") {
+    return {
+      ...theme,
+      first_image_prompt_adaptation: String(theme.first_image_prompt_adaptation || "sweaty runner cooling down after a controlled session")
+        .replace(/preparing before|before starting|warmup movement/gi, "cooling down after")
+    };
+  }
+  return theme;
+}
+
 function stableHash(value) {
   let hash = 0;
   for (const char of String(value)) {
@@ -254,6 +381,17 @@ function stableHash(value) {
     hash |= 0;
   }
   return Math.abs(hash);
+}
+
+function shouldUseCoachiAppCta({ slug, candidate }) {
+  const seed = [
+    slug,
+    candidate.problem_id,
+    candidate.problem_type,
+    candidate.hook,
+    "coachi_app_cta_v1"
+  ].filter(Boolean).join("|");
+  return stableHash(seed) % 10 < 7;
 }
 
 function pickAvatarVariation(candidate) {
@@ -267,6 +405,9 @@ function pickAvatarVariation(candidate) {
 }
 
 function pickWorkoutPhase(candidate) {
+  const mappedPhaseId = WORKOUT_PHASE_BY_PROBLEM_TYPE[candidate.problem_type];
+  if (mappedPhaseId) return workoutPhaseById(mappedPhaseId);
+
   const seed = [
     candidate.problem_id,
     candidate.problem_type,
@@ -293,7 +434,7 @@ function buildCharacterAnchor(avatarVariation) {
       "sharper cheek and brow detail in the stronger 2026-04-26 watch-stole-the-run style",
       "natural outdoor running context"
     ],
-    variation_policy: "Keep the Coachi face family stable, but prefer the stronger 2026-04-26 watch-stole-the-run viral face/style direction over the too-clean park-portrait look. Rotate workout phase, top, headwear, eyewear, shorts, weather, light, and camera angle per pack.",
+    variation_policy: "Keep the Coachi face family stable, but prefer the stronger 2026-04-26 watch-stole-the-run viral face/style direction over the too-clean park-portrait look. Rotate workout phase, top, eyewear, shorts, weather, light, and camera angle per pack. Default to no headwear; use caps/headbands only occasionally so every video does not look the same. If eyewear is selected, it must be black running glasses.",
     watch_rule: "Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses.",
     selected_variation_id: avatarVariation.id
   };
@@ -333,28 +474,38 @@ function slideFileName(slideNumber, role) {
   return `${String(slideNumber).padStart(2, "0")}-${slugify(role || "slide")}.png`;
 }
 
-function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber }) {
+function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, useCoachiAppCta }) {
   const slideNumber = index + 1;
   const assetSource = schemaSlide.asset_source
     || (slideNumber === 1 ? "images_2_0" : slideNumber === finalSlideNumber ? "supabase_template" : "supabase_library");
   const role = draftSlide?.role || schemaSlide.role || `slide-${slideNumber}`;
+  const isFinalCta = slideNumber === finalSlideNumber && role === "cta";
+  const appCtaFields = isFinalCta && useCoachiAppCta
+    ? {
+        text: COACHI_APP_CTA_TEXT,
+        preferred_asset_ids: COACHI_APP_CTA_ASSET_IDS,
+        coachi_app_cta: true
+      }
+    : {};
 
   return {
     slide_number: slideNumber,
     role,
     input_image: `slides/source/${slideFileName(slideNumber, role)}`,
     output_file: slideFileName(slideNumber, role),
-    text: draftSlide?.text || schemaSlide.example_text || schemaSlide.text_template,
+    text: appCtaFields.text || draftSlide?.text || schemaSlide.example_text || schemaSlide.text_template,
     asset_source: assetSource,
     visual_collection: schemaSlide.visual_collection || null,
-    text_position: normalizeTextPosition(schemaSlide.text_position || "lower_middle"),
-    font_size: slideNumber === 1 ? 92 : 76,
-    max_chars_per_line: slideNumber === 1 ? 14 : 24
+    text_position: normalizeTextPosition(isFinalCta && useCoachiAppCta ? "top" : schemaSlide.text_position || "lower_middle"),
+    font_size: isFinalCta && useCoachiAppCta ? 58 : slideNumber === 1 ? 92 : 76,
+    max_chars_per_line: isFinalCta && useCoachiAppCta ? 20 : slideNumber === 1 ? 14 : 24,
+    ...appCtaFields
   };
 }
 
-function buildRenderManifest({ candidate, schema, hookBrief }) {
+function buildRenderManifest({ candidate, schema, hookBrief, slug }) {
   const finalSlideNumber = schema.slides.length;
+  const useCoachiAppCta = shouldUseCoachiAppCta({ slug, candidate });
   return {
     base_dir: ".",
     output_dir: "slides/rendered",
@@ -368,11 +519,22 @@ function buildRenderManifest({ candidate, schema, hookBrief }) {
     source_problem_id: candidate.problem_id,
     source_url: candidate.source_url,
     schema: candidate.schema,
+    format_id: candidate.format_id || candidate.schema,
+    format_catalog: candidate.format_catalog || `${ENGINE_DIR}/formats/coachi-formats.json`,
+    source_of_truth: "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    format_library_required: true,
+    hook_quality: candidate.selected_hook_quality || null,
     emotion: candidate.emotion || hookBrief?.emotion || null,
     visual_world: hookBrief?.visual_world || candidate.visual_world || null,
     lighting_family: hookBrief?.lighting_family || candidate.lighting_family || null,
     avatar_world_required: true,
     cta_required: true,
+    coachi_app_cta_policy: {
+      target_share: 0.7,
+      selected_for_this_pack: useCoachiAppCta,
+      text: COACHI_APP_CTA_TEXT,
+      app_cta_asset_ids: useCoachiAppCta ? COACHI_APP_CTA_ASSET_IDS : []
+    },
     defaults: {
       font_family: "Arial Black, Impact, sans-serif",
       font_weight: 900,
@@ -389,7 +551,8 @@ function buildRenderManifest({ candidate, schema, hookBrief }) {
       schemaSlide,
       draftSlide: candidate.slide_draft?.[index],
       index,
-      finalSlideNumber
+      finalSlideNumber,
+      useCoachiAppCta
     }))
   };
 }
@@ -421,15 +584,118 @@ function buildCaptions(candidate) {
 
   if (candidate.problem_type === "easy-run pace drift") {
     return {
-      tiktok: `Easy runs usually do not fail all at once.\n\nThey fail when every small surge turns into a slightly harder mile.\n\nIf your long run always drifts from easy to medium-hard, this is the cue:\nstop racing easy.\n\nComment "easy" if this happens to you.`,
-      instagram: `Easy runs usually fail slowly.\n\nA few small surges.\nA pace you do not want to let go.\nA heart rate that creeps up late.\n\nThen the run that was supposed to build you starts taking more from you.\n\nThe win is finishing easy.\n\nComment "easy" if your easy runs drift too hard.`,
+      tiktok: `Easy runs usually do not fail all at once.\n\nYou speed up once.\nThen again.\nThen zone 2 becomes zone 3.\n\nIf your easy run keeps drifting into zone 3 and 4, catch it early.\n\nComment "easy" if this happens to you.`,
+      instagram: `Easy runs usually fail slowly.\n\nYou speed up once.\nThen again.\nYour heart rate creeps up.\nZone 2 becomes zone 3 or 4.\n\nThe win is finishing easy.\n\nComment "easy" if your easy runs drift too hard.`,
       hashtags: "#running #runtok #easyrun #runningtips #marathontraining #beginnerrunner #runcoach #runmotivation\n"
     };
   }
   const insight = candidate.problem || candidate.why_this_can_work || candidate.exact_words;
   const tiktok = `${hook}\n\n${insight}\n\nSave this before your next run.`;
-  const instagram = `${hook}\n\nMost runners do not need more noise. They need one useful cue they can apply on the next run.\n\nSave this before your next easy run.`;
+  const instagram = `${hook}\n\nMost runners do not need more noise. They need one useful next step they can apply on the run.\n\nSave this before your next easy run.`;
   return { tiktok, instagram, hashtags: `${DEFAULT_HASHTAGS.join(" ")}\n` };
+}
+
+function hashtagsArray(hashtags) {
+  return String(hashtags || "")
+    .split(/\s+/)
+    .map((tag) => tag.trim())
+    .filter((tag) => tag.startsWith("#"));
+}
+
+function imageSourcePreference(slide, finalSlideNumber) {
+  if (slide.asset_source === "images_2_0") return "ai";
+  if (slide.slide_number === finalSlideNumber || slide.asset_source === "supabase_template") return "branded_template";
+  return "library";
+}
+
+function visualMoodForRole(role, candidate) {
+  if (role === "hook") return candidate.emotion || "focused";
+  if (role === "coachi_connection") return "controlled and useful";
+  if (role === "cta") return "calm confidence";
+  return "real runner effort";
+}
+
+function movementForSlide(slide) {
+  if (slide.role === "cta") return "static";
+  if (slide.role === "coachi_connection") return "controlled movement";
+  return slide.slide_number === 1 ? "natural running moment" : "movement";
+}
+
+function visualDirectionForSlide({ slide, hookBrief, candidate }) {
+  const mood = visualMoodForRole(slide.role, candidate);
+  const movement = movementForSlide(slide);
+  return [
+    mood,
+    movement,
+    hookBrief.visual_world,
+    hookBrief.lighting_family,
+    "clean negative space for local overlay text"
+  ].filter(Boolean).join("; ");
+}
+
+function imageQueryForSlide({ slide, hookBrief, candidate }) {
+  const subject = slide.role === "cta"
+    ? "minimal branded running app proof background"
+    : slide.role === "coachi_connection"
+      ? "runner controlled effort voice coaching moment"
+      : `${candidate.problem_type || "runner"} ${slide.role || "training"}`;
+  return [
+    subject,
+    hookBrief.visual_world,
+    hookBrief.lighting_family,
+    visualMoodForRole(slide.role, candidate)
+  ].filter(Boolean).join(" ");
+}
+
+function ctaTypeForSlide(slide) {
+  if (slide.role !== "cta") return null;
+  if (slide.coachi_app_cta) return "coachi_app_proof";
+  if (/\btry coachi\b/i.test(slide.text || "")) return "soft_product";
+  if (/\bsave\b/i.test(slide.text || "")) return "save";
+  if (/\bfollow\b/i.test(slide.text || "")) return "follow";
+  return "soft_engagement";
+}
+
+function buildCanonicalSlideshowJson({ slug, candidate, manifest, hookBrief, captions }) {
+  const finalSlideNumber = Math.max(...(manifest.slides || []).map((slide) => slide.slide_number));
+  return {
+    schema_version: 1,
+    slideshow_id: slug,
+    format_id: candidate.format_id || manifest.format_id || candidate.schema,
+    schema: candidate.schema,
+    topic: candidate.problem || candidate.why_this_can_work || candidate.problem_type,
+    selected_hook: candidate.hook,
+    hook_score: candidate.selected_hook_quality?.score ?? 0,
+    hook_quality: candidate.selected_hook_quality || null,
+    target_audience: TARGET_AUDIENCE_BY_PROBLEM_TYPE[candidate.problem_type] || "beginner runners / zone 2 runners / overpacers",
+    source_problem: {
+      id: candidate.problem_id,
+      problem_type: candidate.problem_type,
+      exact_words: candidate.exact_words || null,
+      source_url: candidate.source_url || null
+    },
+    visual_system: {
+      emotion: hookBrief.emotion,
+      visual_world: hookBrief.visual_world,
+      lighting: hookBrief.lighting_family,
+      workout_phase: hookBrief.workout_phase?.id || null,
+      hybrid_strategy: "slide_1_ai_slides_2_6_library_final_branded_template"
+    },
+    slides: (manifest.slides || []).map((slide) => ({
+      slide_number: slide.slide_number,
+      role: slide.role,
+      text: slide.text,
+      visual_direction: visualDirectionForSlide({ slide, hookBrief, candidate }),
+      image_query: imageQueryForSlide({ slide, hookBrief, candidate }),
+      image_source_preference: imageSourcePreference(slide, finalSlideNumber),
+      text_position: slide.text_position,
+      font_size: slide.font_size,
+      cta_type: ctaTypeForSlide(slide)
+    })),
+    caption: captions.tiktok,
+    hashtags: hashtagsArray(captions.hashtags),
+    qa_status: "pending"
+  };
 }
 
 function themeBriefForCandidate(candidate) {
@@ -522,10 +788,11 @@ function themeBriefForCandidate(candidate) {
 }
 
 function buildHookBriefJson({ candidate, schema }) {
-  const theme = themeBriefForCandidate(candidate);
   const hookSlide = schema.slides[0] || {};
-  const avatarVariation = pickAvatarVariation(candidate);
   const workoutPhase = pickWorkoutPhase(candidate);
+  const theme = adaptThemeForWorkoutPhase(themeBriefForCandidate(candidate), workoutPhase);
+  const avatarVariation = compileAvatarVariationForTheme(pickAvatarVariation(candidate), theme);
+  const promptCompiler = buildPromptCompilerReport({ candidate, theme, workoutPhase, avatarVariation });
 
   return {
     schema_version: 1,
@@ -533,16 +800,20 @@ function buildHookBriefJson({ candidate, schema }) {
     problem_id: candidate.problem_id,
     problem_type: candidate.problem_type,
     source_url: candidate.source_url,
+    source_problem: candidate.problem || candidate.why_this_can_work || candidate.exact_words || null,
     exact_reddit_language: candidate.exact_words || null,
     emotion: candidate.emotion || "confused",
     pattern: candidate.pattern || null,
+    format_id: candidate.format_id || null,
     tiktok_text_bank: candidate.tiktok_text_bank || null,
     hook_source: candidate.hook_source || null,
     slide_text_source: candidate.slide_text_source || null,
+    hook_quality: candidate.selected_hook_quality || null,
     theme: theme.theme,
     route_tag: theme.route_tag,
     visual_world: theme.visual_world,
     lighting_family: theme.lighting_family,
+    cta: candidate.slide_draft?.find((slide) => slide.role === "cta")?.text || null,
     avatar_world_required: true,
     avatar_source: DEFAULT_HOOK_REFERENCE_IMAGE,
     viral_face_style_reference: DEFAULT_HOOK_STYLE_REFERENCE_IMAGE,
@@ -558,6 +829,7 @@ function buildHookBriefJson({ candidate, schema }) {
     character_anchor: buildCharacterAnchor(avatarVariation),
     workout_phase: workoutPhase,
     avatar_variation: avatarVariation,
+    prompt_compiler: promptCompiler,
     schema_prompt_template: hookSlide.image_prompt_template || null,
     production_rules: [
       "Every slideshow has an explicit emotion, one Images 2.0 hook, one generated avatar world, and one final CTA.",
@@ -613,7 +885,14 @@ ${candidate.hook}
 - Hook source signal: ${hookBrief.hook_source?.source_signal || "n/a"}
 - Hook source URL: ${hookBrief.hook_source?.source_url || "n/a"}
 - Slide text set: ${hookBrief.slide_text_source?.slide_set_id || "fallback"}
+- Hook quality score: ${hookBrief.hook_quality?.score || "n/a"}/${hookBrief.hook_quality?.max_score || 70}
 - Rule: use this as proven structure and simplicity only. Do not copy creator-specific wording.
+
+## Prompt Compiler Quality Gate
+- Source of truth: ${hookBrief.prompt_compiler?.source_of_truth || "X article slideshow workflow"}
+- Coherence status: ${hookBrief.prompt_compiler?.coherence_status || "unknown"}
+- Selected by: ${hookBrief.prompt_compiler?.selected_by || "unknown"}
+- Checks: ${(hookBrief.prompt_compiler?.checks || []).join("; ")}
 
 ## Reddit Source Context
 - Problem type: ${candidate.problem_type}
@@ -660,6 +939,7 @@ ${hookBrief.first_image_prompt_adaptation}
 - Headwear: ${avatarVariation.headwear}
 - Eyewear: ${avatarVariation.eyewear}
 - Shorts: ${avatarVariation.shorts}
+- Running equipment rule: visible kit must read as real running equipment, not casual streetwear. Use technical running clothing, running shorts, realistic sweat, and black running glasses if eyewear appears. Do not add headwear unless explicitly selected. No brand logos.
 - Camera angle: ${avatarVariation.angle}
 - Weather: ${avatarVariation.weather}
 - Lighting: ${avatarVariation.lighting}
@@ -675,7 +955,7 @@ Use the clean Coachi avatar reference for identity continuity, then use the 2026
 
 Workout phase: ${workoutPhase.label}. Capture this moment: ${workoutPhase.moment}. Body language should show ${workoutPhase.body_language}. ${workoutPhase.prompt_cue}.
 
-Wardrobe and gear for this image: ${avatarVariation.top}, ${avatarVariation.shorts}, ${avatarVariation.headwear}, and ${avatarVariation.eyewear}. Default to no visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
+Wardrobe and running equipment for this image: ${avatarVariation.top}, ${avatarVariation.shorts}, ${avatarVariation.headwear}, and ${avatarVariation.eyewear}. The visible kit must clearly read as real running equipment: technical running fabric, proper running shorts, natural sweat, and black running glasses if eyewear appears. Avoid casual streetwear. If headwear is "no headwear", do not add a cap, hat, beanie, headband, or other headwear. Default to no visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
 
 Scene: ${vibe.background}. Keep the image inside the selected visual world: ${hookBrief.visual_world}. The image should feel like ${vibe.vibe}. Weather: ${avatarVariation.weather}. Lighting: ${avatarVariation.lighting}. Match the deck lighting family: ${hookBrief.lighting_family}. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
 
@@ -1016,10 +1296,24 @@ async function main() {
 
   const captions = buildCaptions(candidate);
   const hookBrief = buildHookBriefJson({ candidate, schema });
-  const manifest = buildRenderManifest({ candidate, schema, hookBrief });
+  assert(hookBrief.prompt_compiler?.coherence_status === "passed", `Hook prompt compiler found phase conflicts: ${(hookBrief.prompt_compiler?.conflict_patterns || []).join(", ")}`);
+  const manifest = buildRenderManifest({ candidate, schema, hookBrief, slug });
+  const canonicalSlideshow = buildCanonicalSlideshowJson({ slug, candidate, manifest, hookBrief, captions });
   const images20Prompt = buildImages20Prompt({ schema, candidate, hookBrief });
   await writeJson(path.join(packDir, "render-manifest.json"), manifest);
+  await writeJson(path.join(packDir, "source/slideshow.json"), canonicalSlideshow);
   await writeJson(path.join(packDir, "source/hook-brief.json"), hookBrief);
+  await writeJson(path.join(packDir, "source/hook-candidates.json"), {
+    schema_version: 1,
+    generated_at: new Date().toISOString(),
+    source_of_truth: "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    text_bank: candidate.tiktok_text_bank || null,
+    selected_hook: candidate.hook,
+    selected_hook_quality: candidate.selected_hook_quality || null,
+    minimum_score: candidate.selected_hook_quality?.min_score || 52,
+    rule: "Generate 8-10 source-backed or viral-format hook candidates, score each 1-10 across the Coachi quality rubric, and render only if the selected hook passes.",
+    candidates: candidate.hook_candidates || []
+  });
   await writeText(path.join(packDir, "source/hook.txt"), `${candidate.hook}\n`);
   await writeText(path.join(packDir, "source/images-2-0-hook-prompt.md"), images20Prompt);
   await writeText(path.join(packDir, "copy/tiktok-caption.txt"), `${captions.tiktok}\n`);
@@ -1166,15 +1460,19 @@ async function main() {
     candidate: {
       problem_id: candidate.problem_id,
       schema: candidate.schema,
+      format_id: candidate.format_id || null,
       hook: candidate.hook,
       source_url: candidate.source_url,
       exact_words: candidate.exact_words || null,
       problem_type: candidate.problem_type,
+      selected_hook_quality: candidate.selected_hook_quality || null,
       hook_source: candidate.hook_source || null,
       slide_text_source: candidate.slide_text_source || null,
       tiktok_text_bank: candidate.tiktok_text_bank || null
     },
     hook_brief: path.relative(process.cwd(), path.join(packDir, "source/hook-brief.json")),
+    slideshow_json: path.relative(process.cwd(), path.join(packDir, "source/slideshow.json")),
+    hook_candidates: path.relative(process.cwd(), path.join(packDir, "source/hook-candidates.json")),
     hook_text: path.relative(process.cwd(), path.join(packDir, "source/hook.txt")),
     theme: hookBrief.theme,
     reddit_background_and_vibe: hookBrief.reddit_background_and_vibe,

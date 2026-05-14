@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-05-14T20:45:19.045Z",
+  "picklist": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/asset-picklist.json",
+  "prefer_remote": false,
+  "dry_run": false,
+  "results": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "status": "manual_images_2_0_required",
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/01-hook.png",
+      "prompt_hint": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic. realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat. photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "status": "materialized",
+      "selected_asset_id": "nature_context_013",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/02-setup.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg"
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "status": "materialized",
+      "selected_asset_id": "details_emotion_012",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_012-instagram.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/03-value.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_012-instagram.jpg"
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "status": "materialized",
+      "selected_asset_id": "details_emotion_013",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_013-nike-trail-pim-rinkes.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/04-value.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_013-nike-trail-pim-rinkes.jpg"
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "status": "materialized",
+      "selected_asset_id": "nature_context_014",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/05-value.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg"
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "status": "materialized",
+      "selected_asset_id": "nature_context_015",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/06-coachi-connection.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg"
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "status": "materialized",
+      "selected_asset_id": "coachi_cta_010_watch_forest_morning_39min",
+      "selected_source_rights": "owned",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-010-watch-forest-morning-39min.png",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/source/07-cta.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-010-watch-forest-morning-39min.png"
+    }
+  ],
+  "usage_log_update": {
+    "path": "content/slideshows/visual-library/usage-log.json",
+    "appended_uses": 6,
+    "slideshow_id": "2026-05-14-how-to-do-an-easy-run"
+  }
+}

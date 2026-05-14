@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "generated_at": "2026-05-14T20:45:22.500Z",
+  "source_article": "https://x.com/alexcooldev/status/2047715075457507452",
+  "mode": "dry-run",
+  "queue_mode": "direct",
+  "publish_mode": "manual-review",
+  "live_posting_enabled": true,
+  "live_schedule_requested": false,
+  "schedule_platform": "all",
+  "live_posting_note": "Postiz queue remains dry-run unless --live-schedule and POSTIZ_ENABLE_LIVE_POSTING=1 are present.",
+  "active_niches": "strategy/automation/tiktok-instagram-slideshow-content-engine/active-niches.json",
+  "problem_bank": "inputs/research/raw-runner-problems.json",
+  "run_dir": "outputs/full-loop/2026-05-14-204517",
+  "pack_out_root": "outputs/full-loop/2026-05-14-204517/packs",
+  "duplicate_guard": {
+    "enabled": true,
+    "existing_pack_count": 0,
+    "existing_problem_count": 0,
+    "existing_hook_count": 0
+  },
+  "requested_count": 1,
+  "created_count": 1,
+  "results": [
+    {
+      "niche_id": "beginner_runner",
+      "status": "created",
+      "scheduled_at": "2026-05-15T00:45:17.037Z",
+      "queue_mode": "direct",
+      "problem_count": 7,
+      "candidate": {
+        "problem_id": "rp_easy_run_turns_medium_hard",
+        "problem_type": "easy-run pace drift",
+        "schema": "top_5_mistakes_v1",
+        "hook": "How to do an easy run",
+        "source_url": "inputs/research/reddit-winning-language-bank.md"
+      },
+      "topics": "outputs/full-loop/2026-05-14-204517/beginner_runner-topics.json",
+      "problems": "outputs/full-loop/2026-05-14-204517/beginner_runner-problems.json",
+      "pack_dir": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run",
+      "render_manifest": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/render-manifest.json",
+      "schedule": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/postiz-schedule.json"
+    }
+  ]
+}

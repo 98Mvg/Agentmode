@@ -23,7 +23,7 @@ Slides `1-6` must use `inputs/research/tiktok-proven-slideshow-text-bank.json` b
 
 Do not mix hills, lakes, and mountains in one deck. Pick one world, keep the avatar/route/lighting coherent, and rotate the Supabase/library images inside that world.
 
-CTA visual rule: use Supabase `cta_ending` images as the standard Coachi marketing CTA source and rotate them for variety. The owned watch UI asset `coachi_watch_ui_cta_001` is only for explicit app-proof/watch try-on endings; it must not become the default CTA image.
+CTA visual rule: use Supabase `cta_ending` images as the standard Coachi marketing CTA source and rotate them for variety. When the CTA is an earned Coachi app-proof ending, rotate between the owned phone and watch variants in `coachi-app-cta-rotation`; do not repeat the same device family every time. Current app-proof variants use a 55:00 workout duration, not the old 00:30/00:23 timer.
 
 Top-level daily command:
 
@@ -49,6 +49,7 @@ Use slideshows when:
 - `STEP_BY_STEP_GUIDE.md` - the operating strategy and daily workflow.
 - `POSTIZ_SETUP.md` - dry-run-first Postiz setup and live scheduling guardrails.
 - `SUPABASE_STORAGE_PLAN.md` - isolated marketing asset storage setup.
+- `formats/coachi-formats.json` - canonical Coachi-specific viral format catalog.
 - `schemas/` - reusable slideshow format schemas.
 - `supabase-marketing-assets.sql` - SQL bootstrap for the separate marketing Supabase project.
 - `templates/slideshow-day-pack-template.md` - daily pack format.
@@ -67,6 +68,7 @@ Use slideshows when:
 - 1 Instagram carousel or Reel-style slideshow
 - 1 explicit emotion, 1 selected visual world, and 1 generated-avatar hook brief
 - 1 source-backed TikTok text-bank hook, 1 Images 2.0 hook prompt, plus 6 Supabase visual-library asset picks from the same visual world
+- `source/slideshow.json`, `source/hook-candidates.json`, `source/hook-brief.json`, and `source/qa-report.json`
 - 1 caption per platform
 - 1 hook test note
 - 1 short QA note before upload
@@ -172,8 +174,12 @@ npm run slideshow:pipeline -- \
 Production QA requires:
 - exactly one Images 2.0 hook image
 - `source/hook-provenance.json`
+- `source/slideshow.json` with format id, selected hook, target audience, slide visual directions, image source preferences, caption, and hashtags
+- `source/qa-report.json` written for both pass and fail states
 - an explicit `emotion`, `visual_world`, and generated avatar/world brief in the pack source
+- 8-10 scored hook candidates using the 1-10 Coachi rubric for runner pain, curiosity, simplicity, emotional relatability, Coachi fit, TikTok-native wording, and non-marketing tone
 - hook and slide text provenance from `inputs/research/tiktok-proven-slideshow-text-bank.json`, unless the pack is an explicitly marked local test
+- no hard-sell CTA, no corporate fitness wording, and no Coachi mention before slide 6
 - approved, owned, or licensed non-hook assets
 - no already-posted slideshow id
 - list hooks such as `Top 5` must deliver five numbered point slides
@@ -298,7 +304,13 @@ npm run slideshow:log-result -- \
   --slideshow-id YYYY-MM-DD-slug \
   --platform tiktok \
   --hook "HOOK TEXT" \
+  --format-id easy_run_too_fast \
   --views-24h 1000 \
+  --saves 60 \
+  --comments 8 \
+  --profile-visits 20 \
+  --app-store-clicks 4 \
+  --installs 1 \
   --decision repeat
 ```
 

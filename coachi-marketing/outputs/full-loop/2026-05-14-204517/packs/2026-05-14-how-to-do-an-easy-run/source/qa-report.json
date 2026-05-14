@@ -1,0 +1,157 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-05-14T20:45:22.483Z",
+  "pack": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": false,
+  "allow_needs_review": true,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "hook_quality": {
+    "hook": "How to do an easy run",
+    "candidate_file": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/source/hook-candidates.json",
+    "selected_score": 60,
+    "candidates": 10
+  },
+  "prompt_artifacts": {
+    "hook": "How to do an easy run",
+    "theme": "easy-run drift",
+    "prompt_coherence": {
+      "phase": "during_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/source/images-2-0-hook-prompt.md",
+    "hook_brief": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/asset-picklist.json",
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_013",
+        "selection_score": 25,
+        "quality_score": 83,
+        "visual_match_score": 20,
+        "freshness_penalty": 78
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "details_emotion_012",
+        "selection_score": 45,
+        "quality_score": 83,
+        "visual_match_score": 5,
+        "freshness_penalty": 43
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "details_emotion_013",
+        "selection_score": 45,
+        "quality_score": 83,
+        "visual_match_score": 5,
+        "freshness_penalty": 43
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_014",
+        "selection_score": 25,
+        "quality_score": 83,
+        "visual_match_score": 20,
+        "freshness_penalty": 78
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_015",
+        "selection_score": 22,
+        "quality_score": 83,
+        "visual_match_score": 20,
+        "freshness_penalty": 81
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_010_watch_forest_morning_39min",
+        "selection_score": 85,
+        "quality_score": 88,
+        "visual_match_score": 13,
+        "freshness_penalty": 16
+      }
+    ]
+  },
+  "production_checks": null,
+  "copy": {
+    "hashtag_count": 8,
+    "source_backing": null
+  },
+  "creative_rules": {
+    "coachi_mentions": 2,
+    "first_coachi_mention_slide": 6,
+    "canonical_slideshow": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/02-setup.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/03-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/04-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/05-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/06-coachi-connection.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "outputs/full-loop/2026-05-14-204517/packs/2026-05-14-how-to-do-an-easy-run/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

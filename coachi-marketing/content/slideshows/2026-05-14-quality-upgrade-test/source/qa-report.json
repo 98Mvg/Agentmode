@@ -1,0 +1,158 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-05-14T20:46:09.520Z",
+  "pack": "content/slideshows/2026-05-14-quality-upgrade-test",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": false,
+  "allow_needs_review": true,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-05-14-quality-upgrade-test/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Most runners miss easy runs",
+    "candidate_file": "content/slideshows/2026-05-14-quality-upgrade-test/source/hook-candidates.json",
+    "selected_score": 62,
+    "candidates": 10
+  },
+  "prompt_artifacts": {
+    "hook": "Most runners miss easy runs",
+    "theme": "heart-rate panic",
+    "prompt_coherence": {
+      "phase": "during_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-05-14-quality-upgrade-test/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-05-14-quality-upgrade-test/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-05-14-quality-upgrade-test/asset-picklist.json",
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_005",
+        "selection_score": 12,
+        "quality_score": 83,
+        "visual_match_score": 20,
+        "freshness_penalty": 91
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "details_emotion_016",
+        "selection_score": 36,
+        "quality_score": 83,
+        "visual_match_score": 5,
+        "freshness_penalty": 52
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "details_emotion_017",
+        "selection_score": 36,
+        "quality_score": 83,
+        "visual_match_score": 5,
+        "freshness_penalty": 52
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_006",
+        "selection_score": 12,
+        "quality_score": 83,
+        "visual_match_score": 20,
+        "freshness_penalty": 91
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_007",
+        "selection_score": 9,
+        "quality_score": 83,
+        "visual_match_score": 20,
+        "freshness_penalty": 94
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_012_watch_lake_calm_35min",
+        "selection_score": 79,
+        "quality_score": 88,
+        "visual_match_score": 13,
+        "freshness_penalty": 22
+      }
+    ]
+  },
+  "production_checks": null,
+  "copy": {
+    "hashtag_count": 8,
+    "source_backing": null
+  },
+  "creative_rules": {
+    "coachi_mentions": 2,
+    "first_coachi_mention_slide": 6,
+    "canonical_slideshow": "content/slideshows/2026-05-14-quality-upgrade-test/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/02-setup.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/03-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/04-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/05-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/06-coachi-connection.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-14-quality-upgrade-test/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

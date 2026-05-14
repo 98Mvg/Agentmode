@@ -1,0 +1,1897 @@
+{
+  "generated_at": "2026-05-14T20:45:18.243Z",
+  "date": "2026-05-14",
+  "source_problem_file": "/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/full-loop/2026-05-14-204517/beginner_runner-problems.json",
+  "format_catalog": "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json",
+  "rule": "Raw problem first. AI may rewrite only after the candidate comes from a sourced problem.",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "problem_id": "rp_easy_run_turns_medium_hard",
+      "source_url": "inputs/research/reddit-winning-language-bank.md",
+      "problem_type": "easy-run pace drift",
+      "exact_words": "Zone 2 keeps drifting into zone 3 and 4.",
+      "sourced_mistakes": [
+        {
+          "text": "Starting too fast.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Speeding up a little without noticing.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Forcing yesterday's pace.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Racing the easy day.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        },
+        {
+          "text": "Calling medium-hard \"easy.\"",
+          "source_url": "https://www.reddit.com/r/trailrunning/comments/1pt7bui/struggling_with_running_slow_zone_2/"
+        }
+      ],
+      "problem": "Zone 2 usually drifts upward slowly, not suddenly.",
+      "emotion": "skeptical",
+      "pattern": "inconsistency",
+      "visual_world": "forest road",
+      "route_tag": "forest_road",
+      "lighting_family": "soft green morning forest light",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "score": 19,
+      "schema": "top_5_mistakes_v1",
+      "format_id": "easy_run_too_fast",
+      "format_catalog": "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json",
+      "hook": "How to do an easy run",
+      "hooks": [
+        "How to do an easy run",
+        "5 things runners get wrong",
+        "6 rules for better running",
+        "7 things I wish I knew",
+        "My top 5 running tips",
+        "The running routine that works",
+        "How to start running",
+        "How to run longer",
+        "Make running feel easier",
+        "Simple running tips that work",
+        "Running hacks I wish I knew",
+        "3 rules for beginner runners",
+        "4 mistakes new runners make",
+        "Stop doing this on runs",
+        "What nobody tells beginner runners",
+        "Slow down to run better",
+        "4 weeks of consistent running",
+        "The best beginner running routine",
+        "How to actually make progress running",
+        "Small fixes for easier runs",
+        "Try this on your next run",
+        "This made running easier",
+        "You do not need a perfect plan",
+        "Getting into running can be scary"
+      ],
+      "top_hooks": [
+        {
+          "hook": "How to do an easy run",
+          "score": 60,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "easy-run search results use direct educational hooks",
+          "rationale": "60/70; 6 words; viral_format_pattern; pain 10/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "score": 56,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "broad, simple, and native to TikTok/Instagram slideshows",
+          "rationale": "56/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "6 rules for better running",
+          "score": 54,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "rule-based list format creates saves",
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to start running",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple how-to phrasing appears in high-fit beginner search results",
+          "rationale": "52/70; 4 words; viral_format_pattern; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to run longer",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "direct beginner pain point from running-tip results",
+          "rationale": "52/70; 4 words; viral_format_pattern; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "3 rules for beginner runners",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "rules/list structure is easy to save and swipe",
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "Slow down to run better",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "zone 2 results cluster around slow-down advice",
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 8/10; curiosity 3/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to actually make progress running",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "rationale": "52/70; 6 words; viral_hook_bank_fallback; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "What nobody tells beginner runners",
+          "score": 51,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "curiosity format observed in running-tip examples",
+          "rationale": "51/70; 5 words; viral_format_pattern; pain 5/10; curiosity 8/10; simplicity 10/10",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "My top 5 running tips",
+          "score": 50,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "native creator language from runner-tip search surfaces",
+          "rationale": "50/70; 5 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to do an easy run",
+          "score": 60,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "selected by the Coachi hook quality scorer"
+        },
+        {
+          "hook": "5 mistakes that ruin easy run",
+          "why_it_works": "mistake framing creates tension and high save potential"
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "why_it_works": "broad, simple, and beginner-friendly without sounding technical"
+        },
+        {
+          "hook": "Simple running tips that work",
+          "why_it_works": "TikTok-native simplicity promise with broad beginner appeal"
+        },
+        {
+          "hook": "Running hacks I wish I knew",
+          "why_it_works": "uses a proven wish-I-knew structure without copying exact creator wording"
+        },
+        {
+          "hook": "How to fix easy runs",
+          "why_it_works": "direct how-to hook that maps cleanly to a 7-slide payoff"
+        }
+      ],
+      "hook_candidates": [
+        {
+          "hook": "How to do an easy run",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "easy-run search results use direct educational hooks",
+          "score": 60,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 10,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 10,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 60,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "60/70; 6 words; viral_format_pattern; pain 10/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "broad, simple, and native to TikTok/Instagram slideshows",
+          "score": 56,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 9,
+            "coachi_fit": 3,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 56,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "56/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "6 rules for better running",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "rule-based list format creates saves",
+          "score": 54,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 54,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to start running",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple how-to phrasing appears in high-fit beginner search results",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 4 words; viral_format_pattern; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to run longer",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "direct beginner pain point from running-tip results",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 4 words; viral_format_pattern; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "3 rules for beginner runners",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "rules/list structure is easy to save and swipe",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 5,
+            "coachi_fit": 3,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "Slow down to run better",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "zone 2 results cluster around slow-down advice",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 8,
+            "curiosity": 3,
+            "simplicity": 10,
+            "emotional_relatability": 7,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 8/10; curiosity 3/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to actually make progress running",
+          "source": "viral_hook_bank_fallback",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 6 words; viral_hook_bank_fallback; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "What nobody tells beginner runners",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "curiosity format observed in running-tip examples",
+          "score": 51,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 8,
+            "simplicity": 10,
+            "emotional_relatability": 5,
+            "coachi_fit": 3,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 51,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "51/70; 5 words; viral_format_pattern; pain 5/10; curiosity 8/10; simplicity 10/10"
+        },
+        {
+          "hook": "My top 5 running tips",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "native creator language from runner-tip search surfaces",
+          "score": 50,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 5,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 50,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "50/70; 5 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10"
+        }
+      ],
+      "selected_hook_quality": {
+        "hook": "How to do an easy run",
+        "score": 60,
+        "max_score": 70,
+        "min_score": 52,
+        "passes_quality_gate": true,
+        "word_count": 6,
+        "breakdown": {
+          "runner_pain_specificity": 10,
+          "curiosity": 7,
+          "simplicity": 10,
+          "emotional_relatability": 3,
+          "coachi_fit": 10,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 60,
+          "max_score": 70,
+          "word_count": 6,
+          "banned_matches": []
+        },
+        "rationale": "60/70; 6 words; viral_format_pattern; pain 10/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+      },
+      "hook_source": null,
+      "slide_text_source": {
+        "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+        "slide_set_id": "zone2_drift_simple",
+        "source_family_ids": [
+          "zone_2_reality",
+          "proper_easy_run"
+        ]
+      },
+      "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+      "recent_duplicate_risk": false,
+      "why_this_can_work": "Zone 2 usually drifts upward slowly, not suddenly.",
+      "product_angle": "Coachi can guide effort live and explain when to back off.",
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "How to do an easy run"
+        },
+        {
+          "slide_number": 2,
+          "role": "setup",
+          "text": "You speed up once."
+        },
+        {
+          "slide_number": 3,
+          "role": "value",
+          "text": "Then again."
+        },
+        {
+          "slide_number": 4,
+          "role": "value",
+          "text": "Now it is zone 3."
+        },
+        {
+          "slide_number": 5,
+          "role": "value",
+          "text": "Then zone 4."
+        },
+        {
+          "slide_number": 6,
+          "role": "coachi_connection",
+          "text": "That is why Coachi speaks up when easy turns too hard."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Try Coachi if you always run too fast."
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "How to do an easy run"
+        },
+        {
+          "slide_number": 2,
+          "role": "setup",
+          "text": "You speed up once."
+        },
+        {
+          "slide_number": 3,
+          "role": "value",
+          "text": "Then again."
+        },
+        {
+          "slide_number": 4,
+          "role": "value",
+          "text": "Now it is zone 3."
+        },
+        {
+          "slide_number": 5,
+          "role": "value",
+          "text": "Then zone 4."
+        },
+        {
+          "slide_number": 6,
+          "role": "coachi_connection",
+          "text": "That is why Coachi speaks up when easy turns too hard."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Try Coachi if you always run too fast."
+        }
+      ],
+      "visual_mapping": [
+        {
+          "slide_number": 1,
+          "asset_source": "images_2_0",
+          "label": "Generated Avatar Hook",
+          "visual_world": "forest road"
+        },
+        {
+          "slide_number": 2,
+          "visual_collection": "nature_context",
+          "label": "Same-world context",
+          "visual_world": "forest road"
+        },
+        {
+          "slide_number": 3,
+          "visual_collection": "details_emotion",
+          "label": "Same-world effort/problem",
+          "visual_world": "forest road"
+        },
+        {
+          "slide_number": 4,
+          "visual_collection": "details_emotion",
+          "label": "Same-world emotion detail",
+          "visual_world": "forest road"
+        },
+        {
+          "slide_number": 5,
+          "visual_collection": "nature_context",
+          "label": "Same-world calm/rule",
+          "visual_world": "forest road"
+        },
+        {
+          "slide_number": 6,
+          "visual_collection": "nature_context",
+          "label": "Same-world reframe",
+          "visual_world": "forest road"
+        },
+        {
+          "slide_number": 7,
+          "visual_collection": "cta_ending",
+          "label": "Same-world CTA",
+          "visual_world": "forest road"
+        }
+      ]
+    },
+    {
+      "problem_id": "rp_vo2_max_low_despite_training",
+      "source_url": "https://www.reddit.com/r/AppleWatch/comments/mrxdut/extremely_low_vo2_max_24/",
+      "problem_type": "comparison spiral",
+      "exact_words": "I was freaking out when I saw my VO2 max score.",
+      "sourced_mistakes": [],
+      "problem": "Your watch score is not your whole fitness story.",
+      "emotion": "anxious",
+      "pattern": "overthinking",
+      "visual_world": "city park path",
+      "route_tag": "city_park_path",
+      "lighting_family": "soft morning park light",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "score": 19,
+      "schema": "myth_breaker_v1",
+      "format_id": "things_i_wish_i_knew_running",
+      "format_catalog": "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json",
+      "hook": "How to actually make progress running",
+      "hooks": [
+        "How to actually make progress running",
+        "5 things runners forget",
+        "Top 5 running mistakes",
+        "Top 5 running rules",
+        "5 things runners get wrong",
+        "6 rules for better running",
+        "7 things I wish I knew",
+        "My top 5 running tips",
+        "The running routine that works",
+        "How to start running",
+        "How to run longer",
+        "Make running feel easier",
+        "Simple running tips that work",
+        "Running hacks I wish I knew",
+        "3 rules for beginner runners",
+        "4 mistakes new runners make",
+        "Stop doing this on runs",
+        "What nobody tells beginner runners",
+        "How to do an easy run",
+        "Slow down to run better",
+        "4 weeks of consistent running",
+        "The best beginner running routine",
+        "Small fixes for easier runs",
+        "Try this on your next run",
+        "This made running easier",
+        "You do not need a perfect plan",
+        "Getting into running can be scary"
+      ],
+      "top_hooks": [
+        {
+          "hook": "How to actually make progress running",
+          "score": 56,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "rationale": "56/70; 6 words; viral_hook_bank_fallback; pain 8/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "Top 5 running rules",
+          "score": 54,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "direct TikTok slideshow format with clear payoff",
+          "rationale": "54/70; 4 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "6 rules for better running",
+          "score": 54,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "rule-based list format creates saves",
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to start running",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple how-to phrasing appears in high-fit beginner search results",
+          "rationale": "52/70; 4 words; viral_format_pattern; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "broad, simple, and native to TikTok/Instagram slideshows",
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 2/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to do an easy run",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "easy-run search results use direct educational hooks",
+          "rationale": "52/70; 6 words; viral_format_pattern; pain 4/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "Top 5 running mistakes",
+          "score": 50,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "simple list hook; easy to understand before swiping",
+          "rationale": "50/70; 4 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "My top 5 running tips",
+          "score": 50,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "native creator language from runner-tip search surfaces",
+          "rationale": "50/70; 5 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "4 weeks of consistent running",
+          "score": 50,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "progress-documentation hooks appear in zone 2/running results",
+          "rationale": "50/70; 5 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "5 things runners forget",
+          "score": 49,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "earned beginner lessons shape from source-backed TikTok hook (338.9K).",
+          "rationale": "49/70; 4 words; bank family top_tips; pain 3/10; curiosity 9/10; simplicity 10/10",
+          "source_family_id": "top_tips",
+          "source_signal": "338.9K",
+          "source_url": "https://www.tiktok.com/@marthaawalsh/video/7219212809664548102"
+        },
+        {
+          "hook": "How to actually make progress running",
+          "score": 56,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "selected by the Coachi hook quality scorer"
+        },
+        {
+          "hook": "5 mistakes that ruin running",
+          "why_it_works": "mistake framing creates tension and high save potential"
+        },
+        {
+          "hook": "Top 5 running rules",
+          "why_it_works": "rule-based list hooks feel native to TikTok slideshow content"
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "why_it_works": "broad, simple, and beginner-friendly without sounding technical"
+        },
+        {
+          "hook": "Simple running tips that work",
+          "why_it_works": "TikTok-native simplicity promise with broad beginner appeal"
+        },
+        {
+          "hook": "Running hacks I wish I knew",
+          "why_it_works": "uses a proven wish-I-knew structure without copying exact creator wording"
+        },
+        {
+          "hook": "How to fix running comparison",
+          "why_it_works": "direct how-to hook that maps cleanly to a 7-slide payoff"
+        }
+      ],
+      "hook_candidates": [
+        {
+          "hook": "How to actually make progress running",
+          "source": "viral_hook_bank_fallback",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "score": 56,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 8,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 56,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "56/70; 6 words; viral_hook_bank_fallback; pain 8/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "Top 5 running rules",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "direct TikTok slideshow format with clear payoff",
+          "score": 54,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 54,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "54/70; 4 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "6 rules for better running",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "rule-based list format creates saves",
+          "score": 54,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 54,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to start running",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple how-to phrasing appears in high-fit beginner search results",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 4 words; viral_format_pattern; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "broad, simple, and native to TikTok/Instagram slideshows",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 2,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 9,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 2/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to do an easy run",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "easy-run search results use direct educational hooks",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 4,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 6 words; viral_format_pattern; pain 4/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "Top 5 running mistakes",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple list hook; easy to understand before swiping",
+          "score": 50,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 5,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 50,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "50/70; 4 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10"
+        },
+        {
+          "hook": "My top 5 running tips",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "native creator language from runner-tip search surfaces",
+          "score": 50,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 5,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 50,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "50/70; 5 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10"
+        },
+        {
+          "hook": "4 weeks of consistent running",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "progress-documentation hooks appear in zone 2/running results",
+          "score": 50,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 5,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 50,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "50/70; 5 words; viral_format_pattern; pain 5/10; curiosity 5/10; simplicity 10/10"
+        },
+        {
+          "hook": "5 things runners forget",
+          "source": "tiktok_text_bank",
+          "source_family_id": "top_tips",
+          "source_signal": "338.9K",
+          "source_url": "https://www.tiktok.com/@marthaawalsh/video/7219212809664548102",
+          "why_it_works": "earned beginner lessons shape from source-backed TikTok hook (338.9K).",
+          "score": 49,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 5,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 49,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "49/70; 4 words; bank family top_tips; pain 3/10; curiosity 9/10; simplicity 10/10"
+        }
+      ],
+      "selected_hook_quality": {
+        "hook": "How to actually make progress running",
+        "score": 56,
+        "max_score": 70,
+        "min_score": 52,
+        "passes_quality_gate": true,
+        "word_count": 6,
+        "breakdown": {
+          "runner_pain_specificity": 8,
+          "curiosity": 7,
+          "simplicity": 10,
+          "emotional_relatability": 3,
+          "coachi_fit": 8,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 56,
+          "max_score": 70,
+          "word_count": 6,
+          "banned_matches": []
+        },
+        "rationale": "56/70; 6 words; viral_hook_bank_fallback; pain 8/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+      },
+      "hook_source": null,
+      "slide_text_source": {
+        "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+        "slide_set_id": "comparison_simple",
+        "source_family_ids": [
+          "scary_but_simple"
+        ]
+      },
+      "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+      "recent_duplicate_risk": false,
+      "why_this_can_work": "Your watch score is not your whole fitness story.",
+      "product_angle": "Coachi can teach runners to use trend and context instead of panicking over a single estimate.",
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "How to actually make progress running"
+        },
+        {
+          "slide_number": 2,
+          "role": "setup",
+          "text": "Your route is different."
+        },
+        {
+          "slide_number": 3,
+          "role": "value",
+          "text": "Your week is different."
+        },
+        {
+          "slide_number": 4,
+          "role": "value",
+          "text": "Your body is different."
+        },
+        {
+          "slide_number": 5,
+          "role": "value",
+          "text": "Borrow ideas."
+        },
+        {
+          "slide_number": 6,
+          "role": "coachi_connection",
+          "text": "Coachi keeps the feedback about your run, not someone else's."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Follow for smarter running."
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "How to actually make progress running"
+        },
+        {
+          "slide_number": 2,
+          "role": "setup",
+          "text": "Your route is different."
+        },
+        {
+          "slide_number": 3,
+          "role": "value",
+          "text": "Your week is different."
+        },
+        {
+          "slide_number": 4,
+          "role": "value",
+          "text": "Your body is different."
+        },
+        {
+          "slide_number": 5,
+          "role": "value",
+          "text": "Borrow ideas."
+        },
+        {
+          "slide_number": 6,
+          "role": "coachi_connection",
+          "text": "Coachi keeps the feedback about your run, not someone else's."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Follow for smarter running."
+        }
+      ],
+      "visual_mapping": [
+        {
+          "slide_number": 1,
+          "asset_source": "images_2_0",
+          "label": "Generated Avatar Hook",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 2,
+          "visual_collection": "nature_context",
+          "label": "Same-world context",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 3,
+          "visual_collection": "details_emotion",
+          "label": "Same-world effort/problem",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 4,
+          "visual_collection": "details_emotion",
+          "label": "Same-world emotion detail",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 5,
+          "visual_collection": "nature_context",
+          "label": "Same-world calm/rule",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 6,
+          "visual_collection": "nature_context",
+          "label": "Same-world reframe",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 7,
+          "visual_collection": "cta_ending",
+          "label": "Same-world CTA",
+          "visual_world": "city park path"
+        }
+      ]
+    },
+    {
+      "problem_id": "rp_first_minutes_gasping_for_air",
+      "source_url": "inputs/research/reddit-winning-language-bank.md",
+      "problem_type": "beginner uncertainty",
+      "exact_words": "The first 10-12 minutes it feels like I'm gasping for air.",
+      "sourced_mistakes": [
+        {
+          "text": "Start slower.",
+          "source_url": "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md"
+        },
+        {
+          "text": "Walk breaks count.",
+          "source_url": "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md"
+        },
+        {
+          "text": "Repeat weeks.",
+          "source_url": "inputs/research/tiktok-running-hook-pattern-bank.md"
+        },
+        {
+          "text": "Easy matters.",
+          "source_url": "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md"
+        },
+        {
+          "text": "Keep showing up.",
+          "source_url": "inputs/research/reddit-winning-language-bank.md"
+        }
+      ],
+      "problem": "The first minutes can lie.",
+      "emotion": "discouraged",
+      "pattern": "overthinking",
+      "visual_world": "city park path",
+      "route_tag": "city_park_path",
+      "lighting_family": "soft morning park light",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "score": 19,
+      "schema": "things_i_wish_i_knew_v1",
+      "format_id": "beginner_runner_rules",
+      "format_catalog": "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json",
+      "hook": "Top 5 beginner running rules",
+      "hooks": [
+        "Top 5 beginner running rules",
+        "How to start running",
+        "Top 5 beginner running mistakes",
+        "5 things runners get wrong",
+        "6 rules for better running",
+        "7 things I wish I knew",
+        "My top 5 running tips",
+        "The running routine that works",
+        "How to run longer",
+        "Make running feel easier",
+        "Simple running tips that work",
+        "Running hacks I wish I knew",
+        "3 rules for beginner runners",
+        "4 mistakes new runners make",
+        "Stop doing this on runs",
+        "What nobody tells beginner runners",
+        "How to do an easy run",
+        "Slow down to run better",
+        "4 weeks of consistent running",
+        "The best beginner running routine",
+        "How to actually make progress running",
+        "Small fixes for easier runs",
+        "Try this on your next run",
+        "This made running easier",
+        "You do not need a perfect plan",
+        "Getting into running can be scary"
+      ],
+      "top_hooks": [
+        {
+          "hook": "Top 5 beginner running rules",
+          "score": 58,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "direct TikTok slideshow format with clear payoff",
+          "rationale": "58/70; 5 words; viral_format_pattern; pain 8/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to start running",
+          "score": 57,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "direct how-to shape from source-backed TikTok hook (152.9K).",
+          "rationale": "57/70; 4 words; bank family how_to_run_longer; pain 9/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": "how_to_run_longer",
+          "source_signal": "152.9K",
+          "source_url": "https://www.tiktok.com/@nicofelich/video/7225731663890894123"
+        },
+        {
+          "hook": "Top 5 beginner running mistakes",
+          "score": 54,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple list hook; easy to understand before swiping",
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 8/10; curiosity 5/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "6 rules for better running",
+          "score": 54,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "rule-based list format creates saves",
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "broad, simple, and native to TikTok/Instagram slideshows",
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 2/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "3 rules for beginner runners",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "rules/list structure is easy to save and swipe",
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to do an easy run",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "easy-run search results use direct educational hooks",
+          "rationale": "52/70; 6 words; viral_format_pattern; pain 4/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "How to actually make progress running",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "rationale": "52/70; 6 words; viral_hook_bank_fallback; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "Getting into running can be scary",
+          "score": 52,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "rationale": "52/70; 6 words; viral_hook_bank_fallback; pain 8/10; curiosity 3/10; simplicity 10/10; passes quality gate",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "What nobody tells beginner runners",
+          "score": 51,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "why_it_works": "curiosity format observed in running-tip examples",
+          "rationale": "51/70; 5 words; viral_format_pattern; pain 5/10; curiosity 8/10; simplicity 10/10",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null
+        },
+        {
+          "hook": "Top 5 beginner running rules",
+          "score": 58,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "why_it_works": "selected by the Coachi hook quality scorer"
+        },
+        {
+          "hook": "5 mistakes that ruin beginner running",
+          "why_it_works": "mistake framing creates tension and high save potential"
+        },
+        {
+          "hook": "Top 5 beginner running rules",
+          "why_it_works": "rule-based list hooks feel native to TikTok slideshow content"
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "why_it_works": "broad, simple, and beginner-friendly without sounding technical"
+        },
+        {
+          "hook": "Simple running tips that work",
+          "why_it_works": "TikTok-native simplicity promise with broad beginner appeal"
+        },
+        {
+          "hook": "Running hacks I wish I knew",
+          "why_it_works": "uses a proven wish-I-knew structure without copying exact creator wording"
+        },
+        {
+          "hook": "How to fix running progress",
+          "why_it_works": "direct how-to hook that maps cleanly to a 7-slide payoff"
+        }
+      ],
+      "hook_candidates": [
+        {
+          "hook": "Top 5 beginner running rules",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "direct TikTok slideshow format with clear payoff",
+          "score": 58,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 8,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 58,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "58/70; 5 words; viral_format_pattern; pain 8/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to start running",
+          "source": "tiktok_text_bank",
+          "source_family_id": "how_to_run_longer",
+          "source_signal": "152.9K",
+          "source_url": "https://www.tiktok.com/@nicofelich/video/7225731663890894123",
+          "why_it_works": "direct how-to shape from source-backed TikTok hook (152.9K).",
+          "score": 57,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 4,
+          "breakdown": {
+            "runner_pain_specificity": 9,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 57,
+            "max_score": 70,
+            "word_count": 4,
+            "banned_matches": []
+          },
+          "rationale": "57/70; 4 words; bank family how_to_run_longer; pain 9/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "Top 5 beginner running mistakes",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple list hook; easy to understand before swiping",
+          "score": 54,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 8,
+            "curiosity": 5,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 54,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 8/10; curiosity 5/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "6 rules for better running",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "rule-based list format creates saves",
+          "score": 54,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 54,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "54/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "5 things runners get wrong",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "broad, simple, and native to TikTok/Instagram slideshows",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 2,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 9,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 2/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "3 rules for beginner runners",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "rules/list structure is easy to save and swipe",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 9,
+            "simplicity": 10,
+            "emotional_relatability": 5,
+            "coachi_fit": 3,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 5 words; viral_format_pattern; pain 5/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to do an easy run",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "easy-run search results use direct educational hooks",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 4,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 6 words; viral_format_pattern; pain 4/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "How to actually make progress running",
+          "source": "viral_hook_bank_fallback",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 6 words; viral_hook_bank_fallback; pain 5/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "Getting into running can be scary",
+          "source": "viral_hook_bank_fallback",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "simple TikTok-observed hook shape with a clear payoff before swiping",
+          "score": 52,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": true,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 8,
+            "curiosity": 3,
+            "simplicity": 10,
+            "emotional_relatability": 7,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 52,
+            "max_score": 70,
+            "word_count": 6,
+            "banned_matches": []
+          },
+          "rationale": "52/70; 6 words; viral_hook_bank_fallback; pain 8/10; curiosity 3/10; simplicity 10/10; passes quality gate"
+        },
+        {
+          "hook": "What nobody tells beginner runners",
+          "source": "viral_format_pattern",
+          "source_family_id": null,
+          "source_signal": null,
+          "source_url": null,
+          "why_it_works": "curiosity format observed in running-tip examples",
+          "score": 51,
+          "max_score": 70,
+          "min_score": 52,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 5,
+            "curiosity": 8,
+            "simplicity": 10,
+            "emotional_relatability": 5,
+            "coachi_fit": 3,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 51,
+            "max_score": 70,
+            "word_count": 5,
+            "banned_matches": []
+          },
+          "rationale": "51/70; 5 words; viral_format_pattern; pain 5/10; curiosity 8/10; simplicity 10/10"
+        }
+      ],
+      "selected_hook_quality": {
+        "hook": "Top 5 beginner running rules",
+        "score": 58,
+        "max_score": 70,
+        "min_score": 52,
+        "passes_quality_gate": true,
+        "word_count": 5,
+        "breakdown": {
+          "runner_pain_specificity": 8,
+          "curiosity": 9,
+          "simplicity": 10,
+          "emotional_relatability": 3,
+          "coachi_fit": 8,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 58,
+          "max_score": 70,
+          "word_count": 5,
+          "banned_matches": []
+        },
+        "rationale": "58/70; 5 words; viral_format_pattern; pain 8/10; curiosity 9/10; simplicity 10/10; passes quality gate"
+      },
+      "hook_source": null,
+      "slide_text_source": {
+        "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+        "slide_set_id": "beginner_simple",
+        "source_family_ids": [
+          "top_tips",
+          "scary_but_simple"
+        ]
+      },
+      "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+      "recent_duplicate_risk": false,
+      "why_this_can_work": "The first minutes can lie.",
+      "product_angle": "Coachi can help the runner start easier and respond before the run feels out of control.",
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Top 5 beginner running rules"
+        },
+        {
+          "slide_number": 2,
+          "role": "point_1",
+          "text": "1. Start slower."
+        },
+        {
+          "slide_number": 3,
+          "role": "point_2",
+          "text": "2. Walk breaks count."
+        },
+        {
+          "slide_number": 4,
+          "role": "point_3",
+          "text": "3. Repeat weeks."
+        },
+        {
+          "slide_number": 5,
+          "role": "point_4",
+          "text": "4. Easy matters."
+        },
+        {
+          "slide_number": 6,
+          "role": "point_5",
+          "text": "5. Keep showing up."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Save this before your next run."
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Top 5 beginner running rules"
+        },
+        {
+          "slide_number": 2,
+          "role": "point_1",
+          "text": "1. Start slower."
+        },
+        {
+          "slide_number": 3,
+          "role": "point_2",
+          "text": "2. Walk breaks count."
+        },
+        {
+          "slide_number": 4,
+          "role": "point_3",
+          "text": "3. Repeat weeks."
+        },
+        {
+          "slide_number": 5,
+          "role": "point_4",
+          "text": "4. Easy matters."
+        },
+        {
+          "slide_number": 6,
+          "role": "point_5",
+          "text": "5. Keep showing up."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Save this before your next run."
+        }
+      ],
+      "visual_mapping": [
+        {
+          "slide_number": 1,
+          "asset_source": "images_2_0",
+          "label": "Generated Avatar Hook",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 2,
+          "visual_collection": "nature_context",
+          "label": "Same-world context",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 3,
+          "visual_collection": "details_emotion",
+          "label": "Same-world effort/problem",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 4,
+          "visual_collection": "details_emotion",
+          "label": "Same-world emotion detail",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 5,
+          "visual_collection": "nature_context",
+          "label": "Same-world calm/rule",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 6,
+          "visual_collection": "nature_context",
+          "label": "Same-world reframe",
+          "visual_world": "city park path"
+        },
+        {
+          "slide_number": 7,
+          "visual_collection": "cta_ending",
+          "label": "Same-world CTA",
+          "visual_world": "city park path"
+        }
+      ]
+    }
+  ]
+}
