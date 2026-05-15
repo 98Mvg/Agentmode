@@ -1,0 +1,4314 @@
+{
+  "generated_at": "2026-05-15T09:24:33.001Z",
+  "manifest": "content/slideshows/2026-05-15-stop-checking-the-watch/render-manifest.json",
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "estimated_generation_cost_usd": 0.15,
+  "default_library_source": "local_curated_library",
+  "supabase_library_manifest": "content/slideshows/visual-library/supabase-library-manifest.json",
+  "pinterest_source_manifest": "content/slideshows/visual-library/pinterest-source-manifest.json",
+  "owned_source_manifest": "content/slideshows/visual-library/owned-source-manifest.json",
+  "usage_log": "content/slideshows/visual-library/usage-log.json",
+  "source_policy": {
+    "allowed": [
+      "Coachi-generated images",
+      "user-approved original assets",
+      "licensed stock or owned photography",
+      "Marketing Supabase public bucket assets",
+      "Pinterest-inspired style notes without copying the image"
+    ],
+    "blocked": [
+      "recognizable unlicensed people",
+      "watermarked images",
+      "creator-owned images copied directly from social platforms",
+      "images with baked-in text unless intentionally marked as final"
+    ]
+  },
+  "production_asset_policy": "approved, owned, or licensed assets only",
+  "allow_needs_review": false,
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Stop checking the watch",
+      "asset_source": "images_2_0",
+      "visual_collection": "details_emotion",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/01-hook.png",
+      "output_file": "01-hook.png",
+      "instruction": {
+        "action": "generate_with_images_2_0",
+        "candidate_assets": [],
+        "prompt_hint": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit by default, shirtless warm-weather running allowed occasionally when it reads like a real run, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic. realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat. photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
+      }
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "One glance becomes ten.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/02-setup.png",
+      "output_file": "02-setup.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_010",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_010-example.com.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_010-example.com.jpg",
+            "original_name": "example.com",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_011",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_011-forest.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_011-forest.jpg",
+            "original_name": "Forest.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_012",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_012-land-of-the-sky_-13-best-hikes-near-asheville-nc-lessons-learned-in-life.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_012-land-of-the-sky_-13-best-hikes-near-asheville-nc-lessons-learned-in-life.jpg",
+            "original_name": "Land of the Sky_ 13 Best Hikes Near Asheville, NC #lessons #learned #in #life #lessonslearnedinlife Asheville, North Carolina is a forest-lovers paradise, home to the highest peak in the Appalachian Mountains_ Here's our take on the best local hikes.",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_013",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "original_name": "Running in the woods.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_014",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "original_name": "sunny day🔆.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_015",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "original_name": "trail run.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "original_name": "\"Blue Lagoon Romance\".jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Pace jumps around.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/03-value.png",
+      "output_file": "03-value.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_011",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_011-forest.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_011-forest.jpg",
+            "original_name": "Forest.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_012",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_012-land-of-the-sky_-13-best-hikes-near-asheville-nc-lessons-learned-in-life.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_012-land-of-the-sky_-13-best-hikes-near-asheville-nc-lessons-learned-in-life.jpg",
+            "original_name": "Land of the Sky_ 13 Best Hikes Near Asheville, NC #lessons #learned #in #life #lessonslearnedinlife Asheville, North Carolina is a forest-lovers paradise, home to the highest peak in the Appalachian Mountains_ Here's our take on the best local hikes.",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_013",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "original_name": "Running in the woods.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_014",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "original_name": "sunny day🔆.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_015",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "original_name": "trail run.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "original_name": "\"Blue Lagoon Romance\".jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Effort tells more.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/04-value.png",
+      "output_file": "04-value.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_012",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_012-land-of-the-sky_-13-best-hikes-near-asheville-nc-lessons-learned-in-life.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_012-land-of-the-sky_-13-best-hikes-near-asheville-nc-lessons-learned-in-life.jpg",
+            "original_name": "Land of the Sky_ 13 Best Hikes Near Asheville, NC #lessons #learned #in #life #lessonslearnedinlife Asheville, North Carolina is a forest-lovers paradise, home to the highest peak in the Appalachian Mountains_ Here's our take on the best local hikes.",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_013",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "original_name": "Running in the woods.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_014",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "original_name": "sunny day🔆.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_015",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "original_name": "trail run.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "original_name": "\"Blue Lagoon Romance\".jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 117,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Keep your eyes up.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/05-value.png",
+      "output_file": "05-value.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_013",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_013-running-in-the-woods.jpg",
+            "original_name": "Running in the woods.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_014",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "original_name": "sunny day🔆.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_015",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "original_name": "trail run.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "original_name": "\"Blue Lagoon Romance\".jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 117,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_003",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "original_name": " -4.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 117,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi is built for fewer watch checks and clearer run guidance.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/06-coachi-connection.png",
+      "output_file": "06-coachi-connection.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_014",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_014-sunny-day.jpg",
+            "original_name": "sunny day🔆.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_015",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_015-trail-run.jpg",
+            "original_name": "trail run.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 101,
+              "selection_score": 27,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "original_name": "\"Blue Lagoon Romance\".jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T08:34:14.630Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test",
+                "2026-05-15-your-easy-run-is-too-hard"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 114,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 117,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_003",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "original_name": " -4.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 117,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_004",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "original_name": " .jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 9,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-15-how-to-do-an-easy-run",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 45,
+              "freshness_penalty": 117,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "I use Coachi to stay in my zone.",
+      "asset_source": "supabase_template",
+      "visual_collection": "cta_ending",
+      "coachi_app_cta": true,
+      "preferred_asset_ids": [
+        "coachi_cta_003_phone_image2_48min",
+        "coachi_cta_004_watch_image2_52min",
+        "coachi_cta_009_phone_forest_morning_44min",
+        "coachi_cta_010_watch_forest_morning_39min",
+        "coachi_cta_011_phone_lake_calm_47min",
+        "coachi_cta_012_watch_lake_calm_35min",
+        "coachi_cta_013_phone_mountain_morning_51min"
+      ],
+      "expected_input_image": "slides/source/07-cta.png",
+      "output_file": "07-cta.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "CTA (ending)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [
+          "coachi_cta_003_phone_image2_48min",
+          "coachi_cta_004_watch_image2_52min",
+          "coachi_cta_009_phone_forest_morning_44min",
+          "coachi_cta_010_watch_forest_morning_39min",
+          "coachi_cta_011_phone_lake_calm_47min",
+          "coachi_cta_012_watch_lake_calm_35min",
+          "coachi_cta_013_phone_mountain_morning_51min"
+        ],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "clear",
+            "actionable"
+          ],
+          "subject_tags": [
+            "open_path",
+            "negative_space",
+            "finish_prompt"
+          ],
+          "color_tags": [
+            "green",
+            "gold",
+            "neutral"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "coachi_cta_009_phone_forest_morning_44min",
+            "source_kind": "owned_coachi_phone_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-009-phone-forest-morning-44min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-009-phone-forest-morning-44min.png",
+            "original_name": "Coachi Image 2.0 phone-in-hand CTA, forest morning, 44-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_phone_ui",
+              "iphone",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "44_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "phone_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "phone_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "phone",
+            "workout_duration_display": "44:00",
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-08T20:25:50.612Z",
+              "slideshow_ids": [
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew"
+              ],
+              "recent_use_rank": 15
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 20,
+              "selection_score": 81,
+              "recent_use_rank": 15
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_010_watch_forest_morning_39min",
+            "source_kind": "owned_coachi_watch_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-010-watch-forest-morning-39min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-010-watch-forest-morning-39min.png",
+            "original_name": "Coachi Image 2.0 watch-on-runner-wrist CTA, forest morning, 39-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_watch_ui",
+              "apple_watch",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "39_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "watch_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "watch_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "watch",
+            "workout_duration_display": "39:00",
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-14T20:59:10.772Z",
+              "slideshow_ids": [
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 5
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 35,
+              "selection_score": 66,
+              "recent_use_rank": 5
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_011_phone_lake_calm_47min",
+            "source_kind": "owned_coachi_phone_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-011-phone-lake-calm-47min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-011-phone-lake-calm-47min.png",
+            "original_name": "Coachi Image 2.0 phone-in-hand CTA, calm lake path, 47-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_phone_ui",
+              "iphone",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "47_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "phone_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "phone_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "phone",
+            "workout_duration_display": "47:00",
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 41,
+              "selection_score": 60,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_012_watch_lake_calm_35min",
+            "source_kind": "owned_coachi_watch_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-012-watch-lake-calm-35min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-012-watch-lake-calm-35min.png",
+            "original_name": "Coachi Image 2.0 watch-on-runner-wrist CTA, calm lake path, 35-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_watch_ui",
+              "apple_watch",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "35_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "watch_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "watch_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "watch",
+            "workout_duration_display": "35:00",
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 5
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 35,
+              "selection_score": 66,
+              "recent_use_rank": 5
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_013_phone_mountain_morning_51min",
+            "source_kind": "owned_coachi_phone_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-013-phone-mountain-morning-51min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-013-phone-mountain-morning-51min.png",
+            "original_name": "Coachi Image 2.0 phone-in-hand CTA, mountain morning route, 51-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_phone_ui",
+              "iphone",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "51_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "phone_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "phone_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "phone",
+            "workout_duration_display": "51:00",
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-05-10-most-runners-train-wrong",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 41,
+              "selection_score": 60,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_003_phone_image2_48min",
+            "source_kind": "owned_coachi_phone_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-003-phone-image2-48min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-003-phone-image2-48min.png",
+            "original_name": "Coachi Image 2.0 phone-in-hand CTA, 48-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_phone_ui",
+              "iphone",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "48_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "phone_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "phone_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "phone",
+            "workout_duration_display": "48:00",
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-05-15T08:21:28.076Z",
+              "slideshow_ids": [
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 51,
+              "selection_score": 50,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_004_watch_image2_52min",
+            "source_kind": "owned_coachi_watch_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-004-watch-image2-52min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-004-watch-image2-52min.png",
+            "original_name": "Coachi Image 2.0 watch-on-runner-wrist CTA, 52-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_watch_ui",
+              "apple_watch",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "52_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "watch_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "watch_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "watch",
+            "workout_duration_display": "52:00",
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-05-15T09:17:11.185Z",
+              "slideshow_ids": [
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-stop-checking-the-watch"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 57,
+              "selection_score": 44,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "forest",
+                "route_tag": null,
+                "lighting_family": "soft green morning forest light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use clean negative space",
+          "avoid cluttered endings",
+          "make the viewer know what to do next"
+        ],
+        "prompt_translation": "minimal running path or calm finish scene with strong negative space for a final question or save prompt",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    }
+  ]
+}

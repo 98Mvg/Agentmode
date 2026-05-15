@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "dry_run": true,
+  "publish_mode": "manual-review",
+  "media_transport": "local_media_paths",
+  "generated_at": "2026-05-15T09:17:14.493Z",
+  "safety": {
+    "use_official_integrations_only": true,
+    "requires_live_env_flag": "POSTIZ_ENABLE_LIVE_POSTING=1",
+    "no_duplicate_payloads": true
+  },
+  "rate_limits": {
+    "max_posts_per_account_per_day": 2,
+    "min_hours_between_posts_per_account": 4,
+    "max_posts_per_hour_global": 4
+  },
+  "platform_rate_limits": {
+    "tiktok": {
+      "max_posts_per_account_per_day": 2,
+      "min_hours_between_posts_per_account": 4
+    },
+    "instagram": {
+      "max_posts_per_account_per_day": 1,
+      "min_hours_between_posts_per_account": 8
+    }
+  },
+  "accounts": [
+    {
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "platform": "tiktok",
+      "status": "env_configured"
+    },
+    {
+      "account_id": "manual_instagram_account",
+      "platform": "instagram",
+      "status": "manual_placeholder"
+    }
+  ],
+  "posts": [
+    {
+      "slideshow_id": "2026-05-15-stop-checking-the-watch",
+      "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "platform": "tiktok",
+      "type": "tiktok-slideshow",
+      "publish_mode": "manual-review",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "media_paths": [
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/01-hook.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/02-setup.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/03-value.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/04-value.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/05-value.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/06-coachi-connection.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/07-cta.png"
+      ],
+      "caption_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/copy/tiktok-postiz-caption.txt",
+      "scheduled_at": "2026-05-15T13:14:21.771Z"
+    },
+    {
+      "slideshow_id": "2026-05-15-stop-checking-the-watch",
+      "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch",
+      "account_id": "manual_instagram_account",
+      "platform": "instagram",
+      "type": "instagram-carousel",
+      "publish_mode": "manual-review",
+      "output_mode": "photo_carousel",
+      "media_type": "CAROUSEL_ALBUM",
+      "media_paths": [
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/01-hook.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/02-setup.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/03-value.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/04-value.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/05-value.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/06-coachi-connection.png",
+        "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/07-cta.png"
+      ],
+      "caption_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-stop-checking-the-watch/copy/instagram-postiz-caption.txt",
+      "scheduled_at": "2026-05-15T13:14:21.771Z"
+    }
+  ]
+}

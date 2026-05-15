@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "updated": "2026-04-30",
+  "purpose": "Source-backed TikTok hook and slide-text pattern bank for Coachi slideshow generation. Use this to keep slide 1 hooks and slides 1-6 simple, TikTok-native, and less AI-written.",
+  "source_policy": {
+    "use": "Use structure, pacing, vocabulary shape, and simplicity from proven TikTok search results.",
+    "do_not_use": "Do not copy creator-specific wording, exact full captions, faces, branding, watermarks, or slide designs.",
+    "public_copy_rule": "Generated Coachi copy must be adapted and Coachi-native, not pasted from a creator.",
+    "preferred_text_length": "2 to 7 words for hook slides, 3 to 9 words for payoff slides.",
+    "complexity_rule": "No abstract coaching language on slides 1-6. Prefer concrete runner words: run, easy, slow, watch, pace, breath, walk, week, effort."
+  },
+  "source_files": [
+    {
+      "path": "inputs/research/tiktok-viral-running-hooks-2026-04-28.md",
+      "collection_method": "Codex in-app browser scan of TikTok search results",
+      "visible_entries_collected": 603,
+      "unique_entries": 277,
+      "selected_source_hooks": 50
+    },
+    {
+      "path": "inputs/research/tiktok-zone2-intervals-applewatch-hooks-2026-04-28.md",
+      "collection_method": "Codex in-app browser scan of TikTok search results",
+      "visible_entries_collected": 325,
+      "unique_entries": 136,
+      "selected_source_hooks": 20
+    },
+    {
+      "path": "inputs/research/tiktok-running-hook-pattern-bank.md",
+      "collection_method": "manual pattern extraction from source-backed TikTok hooks",
+      "selected_source_hooks": 14
+    }
+  ],
+  "hook_families": [
+    {
+      "id": "no_one_teaches",
+      "source_excerpt": "No one teaches you how you're meant to breathe when you run",
+      "source_signal": "1.3M",
+      "source_url": "https://www.tiktok.com/@maraika.rose/video/7423156572714519816",
+      "mechanism": "missing lesson",
+      "problem_types": ["beginner uncertainty", "heart-rate panic", "watch-checking anxiety", "easy-run pace drift"],
+      "safe_hook_shapes": [
+        "No one teaches easy runs",
+        "No one teaches running effort",
+        "No one teaches this part"
+      ]
+    },
+    {
+      "id": "scary_but_simple",
+      "source_excerpt": "Getting into running can be scary, but it doesn't have to be",
+      "source_signal": "391K",
+      "source_url": "https://www.tiktok.com/@runclubgirl/photo/7521862040948870405",
+      "mechanism": "reassurance",
+      "problem_types": ["beginner uncertainty", "comparison spiral", "data-without-coaching"],
+      "safe_hook_shapes": [
+        "Running feels scary at first",
+        "You do not need perfect",
+        "Start simpler than this"
+      ]
+    },
+    {
+      "id": "top_tips",
+      "source_excerpt": "My top running tips as someone who started 2 months ago",
+      "source_signal": "338.9K",
+      "source_url": "https://www.tiktok.com/@marthaawalsh/video/7219212809664548102",
+      "mechanism": "earned beginner lessons",
+      "problem_types": ["beginner uncertainty", "easy-run pace drift", "zone-2 confusion"],
+      "safe_hook_shapes": [
+        "My top running tips",
+        "5 things runners miss",
+        "5 things I wish I knew"
+      ]
+    },
+    {
+      "id": "mistakes_new_runners",
+      "source_excerpt": "3 mistakes I see new runners do",
+      "source_signal": "295.8K",
+      "source_url": "https://www.tiktok.com/@its.anushkatyagi/video/7365659042502511914",
+      "mechanism": "mistake list",
+      "problem_types": ["easy-run pace drift", "heart-rate panic", "watch-checking anxiety", "workout-racing", "pace disbelief"],
+      "safe_hook_shapes": [
+        "Top 5 easy run mistakes",
+        "5 mistakes runners make",
+        "The easy run mistake"
+      ]
+    },
+    {
+      "id": "how_to_run_longer",
+      "source_excerpt": "How to run longer",
+      "source_signal": "152.9K",
+      "source_url": "https://www.tiktok.com/@nicofelich/video/7225731663890894123",
+      "mechanism": "direct how-to",
+      "problem_types": ["beginner uncertainty", "zone-2 confusion", "easy-run pace drift"],
+      "safe_hook_shapes": [
+        "How to run longer",
+        "Make running feel easier",
+        "Slow down to run better"
+      ]
+    },
+    {
+      "id": "proper_easy_run",
+      "source_excerpt": "How to do a proper easy run?",
+      "source_signal": "relevant easy-run format",
+      "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+      "mechanism": "simple instruction",
+      "problem_types": ["easy-run pace drift", "heart-rate panic", "zone-2 confusion"],
+      "safe_hook_shapes": [
+        "How to do an easy run",
+        "Easy runs are not races",
+        "Most runners miss easy runs"
+      ]
+    },
+    {
+      "id": "zone_2_reality",
+      "source_excerpt": "This is how slow a zone 2 run really is",
+      "source_signal": "141.6K",
+      "source_url": "https://www.tiktok.com/@beyond.pavements/video/7470157103458422038",
+      "mechanism": "surprising reality",
+      "problem_types": ["zone-2 confusion", "heart-rate panic", "easy-run pace drift"],
+      "safe_hook_shapes": [
+        "Zone 2 should feel slow",
+        "Zone 2 feels like walking",
+        "Slow down to run better"
+      ]
+    },
+    {
+      "id": "watch_utility",
+      "source_excerpt": "If you have an Apple Watch, use this on your next run",
+      "source_signal": "1.5K",
+      "source_url": "https://www.tiktok.com/@djc_fitness/video/7528104839318867222",
+      "mechanism": "watch-specific utility",
+      "problem_types": ["watch-checking anxiety", "data-without-coaching", "metric setup confusion", "exercise-ring frustration"],
+      "safe_hook_shapes": [
+        "Use your watch better",
+        "Stop staring at your watch",
+        "Apple Watch runners miss this"
+      ]
+    },
+    {
+      "id": "most_runners_train_wrong",
+      "source_excerpt": "Most runners train wrong",
+      "source_signal": "34.3K",
+      "source_url": "https://www.tiktok.com/@ollie.coburn/video/7519226535333825814",
+      "mechanism": "contrarian correction",
+      "problem_types": ["workout-racing", "easy-run pace drift", "heart-rate panic"],
+      "safe_hook_shapes": [
+        "Most runners train wrong",
+        "Stop racing workouts",
+        "Hard is not always better"
+      ]
+    }
+  ],
+  "problem_type_packs": {
+    "easy-run pace drift": {
+      "preferred_hook_family_ids": ["zone_2_reality", "proper_easy_run", "mistakes_new_runners"],
+      "preferred_hooks": [
+        { "text": "Zone 2 keeps drifting", "source_family_id": "zone_2_reality" },
+        { "text": "Zone 2 should feel slow", "source_family_id": "zone_2_reality" },
+        { "text": "Easy runs are not races", "source_family_id": "proper_easy_run" },
+        { "text": "Top 5 easy run mistakes", "source_family_id": "mistakes_new_runners" }
+      ],
+      "slide_sets": [
+        {
+          "id": "zone2_drift_simple",
+          "source_family_ids": ["zone_2_reality", "proper_easy_run"],
+          "slides_1_to_6": [
+            "Zone 2 keeps drifting",
+            "You speed up once.",
+            "Then again.",
+            "Now it is zone 3.",
+            "Then zone 4.",
+            "Catch it early."
+          ]
+        },
+        {
+          "id": "top5_easy_run_mistakes_simple",
+          "source_family_ids": ["mistakes_new_runners", "proper_easy_run"],
+          "slides_1_to_6": [
+            "Top 5 easy run mistakes",
+            "1. Starting too fast.",
+            "2. Chasing yesterday.",
+            "3. Speeding up without noticing.",
+            "4. Calling medium hard easy.",
+            "5. Forgetting the point."
+          ]
+        }
+      ]
+    },
+    "zone-2 confusion": {
+      "preferred_hook_family_ids": ["zone_2_reality", "proper_easy_run", "how_to_run_longer"],
+      "preferred_hooks": [
+        { "text": "Zone 2 should feel slow", "source_family_id": "zone_2_reality" },
+        { "text": "Zone 2 feels like walking", "source_family_id": "zone_2_reality" },
+        { "text": "Slow down to run better", "source_family_id": "how_to_run_longer" }
+      ],
+      "slide_sets": [
+        {
+          "id": "zone2_simple_reality",
+          "source_family_ids": ["zone_2_reality"],
+          "slides_1_to_6": [
+            "Zone 2 should feel slow",
+            "Walking can count.",
+            "Slow is the point.",
+            "Heat changes it.",
+            "Your ego hates it.",
+            "Keep it boring."
+          ]
+        }
+      ]
+    },
+    "heart-rate panic": {
+      "preferred_hook_family_ids": ["proper_easy_run", "zone_2_reality", "mistakes_new_runners"],
+      "preferred_hooks": [
+        { "text": "Top 5 easy run mistakes", "source_family_id": "mistakes_new_runners" },
+        { "text": "Your easy run is too hard", "source_family_id": "proper_easy_run" },
+        { "text": "Do not panic mid run", "source_family_id": "zone_2_reality" }
+      ],
+      "slide_sets": [
+        {
+          "id": "heart_rate_easy_run_simple",
+          "source_family_ids": ["proper_easy_run", "zone_2_reality"],
+          "slides_1_to_6": [
+            "Top 5 easy run mistakes",
+            "1. Running easy too fast.",
+            "2. Trusting one number.",
+            "3. Ignoring the weather.",
+            "4. Fighting walk breaks.",
+            "5. Forgetting easy effort."
+          ]
+        }
+      ]
+    },
+    "watch-checking anxiety": {
+      "preferred_hook_family_ids": ["watch_utility", "no_one_teaches", "mistakes_new_runners"],
+      "preferred_hooks": [
+        { "text": "Stop staring at your watch", "source_family_id": "watch_utility" },
+        { "text": "Use your watch better", "source_family_id": "watch_utility" },
+        { "text": "The watch is not the run", "source_family_id": "no_one_teaches" }
+      ],
+      "slide_sets": [
+        {
+          "id": "watch_checking_simple",
+          "source_family_ids": ["watch_utility"],
+          "slides_1_to_6": [
+            "Stop staring at your watch",
+            "One glance becomes ten.",
+            "Pace jumps around.",
+            "Effort tells more.",
+            "Keep your eyes up.",
+            "Run the run."
+          ]
+        }
+      ]
+    },
+    "pace disbelief": {
+      "preferred_hook_family_ids": ["mistakes_new_runners", "proper_easy_run"],
+      "preferred_hooks": [
+        { "text": "The easy run mistake", "source_family_id": "mistakes_new_runners" },
+        { "text": "Pace is not everything", "source_family_id": "proper_easy_run" },
+        { "text": "Most runners miss effort", "source_family_id": "mistakes_new_runners" }
+      ],
+      "slide_sets": [
+        {
+          "id": "pace_context_simple",
+          "source_family_ids": ["mistakes_new_runners"],
+          "slides_1_to_6": [
+            "The easy run mistake",
+            "Pace feels objective.",
+            "Routes change it.",
+            "Wind changes it.",
+            "Fatigue changes it.",
+            "Effort matters more."
+          ]
+        }
+      ]
+    },
+    "workout-racing": {
+      "preferred_hook_family_ids": ["most_runners_train_wrong", "mistakes_new_runners"],
+      "preferred_hooks": [
+        { "text": "Most runners train wrong", "source_family_id": "most_runners_train_wrong" },
+        { "text": "Stop racing workouts", "source_family_id": "most_runners_train_wrong" },
+        { "text": "Hard is not always better", "source_family_id": "most_runners_train_wrong" }
+      ],
+      "slide_sets": [
+        {
+          "id": "workout_racing_simple",
+          "source_family_ids": ["most_runners_train_wrong"],
+          "slides_1_to_6": [
+            "Most runners train wrong",
+            "Hard is not always better.",
+            "Win the last rep.",
+            "Do not race practice.",
+            "Recover on purpose.",
+            "Finish with control."
+          ]
+        }
+      ]
+    },
+    "data-without-coaching": {
+      "preferred_hook_family_ids": ["scary_but_simple", "watch_utility", "no_one_teaches"],
+      "preferred_hooks": [
+        { "text": "You do not need perfect", "source_family_id": "scary_but_simple" },
+        { "text": "Your watch needs context", "source_family_id": "watch_utility" },
+        { "text": "Start simpler than this", "source_family_id": "scary_but_simple" }
+      ],
+      "slide_sets": [
+        {
+          "id": "watch_context_simple",
+          "source_family_ids": ["scary_but_simple", "watch_utility"],
+          "slides_1_to_6": [
+            "You do not need perfect",
+            "Start with one run.",
+            "Keep it easy.",
+            "Repeat the week.",
+            "Adjust after.",
+            "Do not overthink it."
+          ]
+        }
+      ]
+    },
+    "metric setup confusion": {
+      "preferred_hook_family_ids": ["watch_utility", "zone_2_reality"],
+      "preferred_hooks": [
+        { "text": "Use your watch better", "source_family_id": "watch_utility" },
+        { "text": "Zone 2 feels confusing", "source_family_id": "zone_2_reality" },
+        { "text": "Apple Watch runners miss this", "source_family_id": "watch_utility" }
+      ],
+      "slide_sets": [
+        {
+          "id": "zones_simple",
+          "source_family_ids": ["watch_utility", "zone_2_reality"],
+          "slides_1_to_6": [
+            "Use your watch better",
+            "Zones can disagree.",
+            "Pick one system.",
+            "Keep it repeatable.",
+            "Do not chase formulas.",
+            "Train the run."
+          ]
+        }
+      ]
+    },
+    "comparison spiral": {
+      "preferred_hook_family_ids": ["scary_but_simple", "top_tips"],
+      "preferred_hooks": [
+        { "text": "You are not bad at running", "source_family_id": "scary_but_simple" },
+        { "text": "Running feels scary at first", "source_family_id": "scary_but_simple" },
+        { "text": "5 things runners forget", "source_family_id": "top_tips" }
+      ],
+      "slide_sets": [
+        {
+          "id": "comparison_simple",
+          "source_family_ids": ["scary_but_simple"],
+          "slides_1_to_6": [
+            "You are not bad at running",
+            "Your route is different.",
+            "Your week is different.",
+            "Your body is different.",
+            "Borrow ideas.",
+            "Skip the pressure."
+          ]
+        }
+      ]
+    },
+    "beginner uncertainty": {
+      "preferred_hook_family_ids": ["top_tips", "scary_but_simple", "how_to_run_longer"],
+      "preferred_hooks": [
+        { "text": "5 things I wish I knew", "source_family_id": "top_tips" },
+        { "text": "Running feels scary at first", "source_family_id": "scary_but_simple" },
+        { "text": "How to start running", "source_family_id": "how_to_run_longer" }
+      ],
+      "slide_sets": [
+        {
+          "id": "beginner_simple",
+          "source_family_ids": ["top_tips", "scary_but_simple"],
+          "slides_1_to_6": [
+            "5 things I wish I knew",
+            "1. Start slower.",
+            "2. Walk breaks count.",
+            "3. Repeat weeks.",
+            "4. Easy matters.",
+            "5. Keep showing up."
+          ]
+        }
+      ]
+    },
+    "default": {
+      "preferred_hook_family_ids": ["top_tips", "mistakes_new_runners", "how_to_run_longer"],
+      "preferred_hooks": [
+        { "text": "Simple running tips that work", "source_family_id": "how_to_run_longer" },
+        { "text": "5 things runners get wrong", "source_family_id": "mistakes_new_runners" },
+        { "text": "Try this on your next run", "source_family_id": "top_tips" }
+      ],
+      "slide_sets": [
+        {
+          "id": "default_simple",
+          "source_family_ids": ["top_tips"],
+          "slides_1_to_6": [
+            "Simple running tips that work",
+            "Start slower.",
+            "Keep it repeatable.",
+            "Watch effort.",
+            "Adjust one thing.",
+            "Save the run."
+          ]
+        }
+      ]
+    }
+  }
+}

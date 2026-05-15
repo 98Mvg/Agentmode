@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-05-15T09:24:52.786Z",
+  "pack": "content/slideshows/2026-05-15-stop-checking-the-watch",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-05-15-stop-checking-the-watch/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Stop checking the watch",
+    "candidate_file": "content/slideshows/2026-05-15-stop-checking-the-watch/source/hook-candidates.json",
+    "selected_score": 58,
+    "candidates": 10
+  },
+  "prompt_artifacts": {
+    "hook": "Stop checking the watch",
+    "theme": "watch-checking anxiety",
+    "prompt_coherence": {
+      "phase": "during_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-05-15-stop-checking-the-watch/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-05-15-stop-checking-the-watch/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-05-15-stop-checking-the-watch/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_010",
+        "selection_score": 27,
+        "quality_score": 83,
+        "visual_match_score": 45,
+        "freshness_penalty": 101
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_011",
+        "selection_score": 27,
+        "quality_score": 83,
+        "visual_match_score": 45,
+        "freshness_penalty": 101
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_012",
+        "selection_score": 27,
+        "quality_score": 83,
+        "visual_match_score": 45,
+        "freshness_penalty": 101
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_013",
+        "selection_score": 27,
+        "quality_score": 83,
+        "visual_match_score": 45,
+        "freshness_penalty": 101
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_014",
+        "selection_score": 27,
+        "quality_score": 83,
+        "visual_match_score": 45,
+        "freshness_penalty": 101
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_009_phone_forest_morning_44min",
+        "selection_score": 81,
+        "quality_score": 88,
+        "visual_match_score": 13,
+        "freshness_penalty": 20
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-05-15-stop-checking-the-watch/source/hook-provenance.json",
+      "generator": "chatgpt_images_2_0"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_010",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_011",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_012",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_013",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_014",
+        "source_rights": "approved",
+        "source_kind": "local"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_009_phone_forest_morning_44min",
+        "source_rights": "owned",
+        "source_kind": "local"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-05-15-stop-checking-the-watch",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 8,
+    "source_backing": null
+  },
+  "creative_rules": {
+    "coachi_mentions": 2,
+    "first_coachi_mention_slide": 6,
+    "canonical_slideshow": "content/slideshows/2026-05-15-stop-checking-the-watch/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/02-setup.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/03-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/04-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/05-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/06-coachi-connection.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-15-stop-checking-the-watch/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-05-15-stop-checking-the-watch",
+  "format_id": "stop_racing_easy_runs",
+  "schema": "top_5_mistakes_v1",
+  "topic": "The issue may be clarity, not discipline.",
+  "selected_hook": "Stop checking the watch",
+  "hook_score": 58,
+  "hook_quality": {
+    "hook": "Stop checking the watch",
+    "score": 58,
+    "max_score": 70,
+    "min_score": 52,
+    "passes_quality_gate": true,
+    "word_count": 4,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 7,
+      "simplicity": 10,
+      "emotional_relatability": 3,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 4,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 4 words; problem_type_default; pain 8/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+  },
+  "target_audience": "watch-checking runners / pace-anxious runners",
+  "source_problem": {
+    "id": "rp_watch_checking_every_30_seconds",
+    "problem_type": "watch-checking anxiety",
+    "exact_words": "I keep checking my Apple Watch every 30 seconds on easy runs.",
+    "source_url": "inputs/research/reddit-winning-language-bank.md"
+  },
+  "visual_system": {
+    "emotion": "anxious",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Stop checking the watch",
+      "visual_direction": "anxious; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch-checking anxiety hook forest soft green morning forest light anxious",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "One glance becomes ten.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch-checking anxiety setup forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Pace jumps around.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch-checking anxiety value forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Effort tells more.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch-checking anxiety value forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Keep your eyes up.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch-checking anxiety value forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi is built for fewer watch checks and clearer run guidance.",
+      "visual_direction": "controlled and useful; controlled movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "runner controlled effort voice coaching moment forest soft green morning forest light controlled and useful",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "I use Coachi to stay in my zone.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Stop checking the watch\n\nThe issue may be clarity, not discipline.\n\nSave this before your next run.",
+  "hashtags": [
+    "#running",
+    "#runtok",
+    "#beginnerrunner",
+    "#runningtips",
+    "#easyrun",
+    "#runcoach",
+    "#marathontraining",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-05-15-stop-checking-the-watch/source/qa-report.json",
+  "qa_checked_at": "2026-05-15T09:24:52.783Z"
+}

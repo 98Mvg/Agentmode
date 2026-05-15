@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "hook": "Stop checking the watch",
+  "problem_id": "rp_watch_checking_every_30_seconds",
+  "problem_type": "watch-checking anxiety",
+  "source_url": "inputs/research/reddit-winning-language-bank.md",
+  "source_problem": "The issue may be clarity, not discipline.",
+  "exact_reddit_language": "I keep checking my Apple Watch every 30 seconds on easy runs.",
+  "emotion": "anxious",
+  "pattern": "watch anxiety",
+  "format_id": "stop_racing_easy_runs",
+  "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "hook_source": null,
+  "slide_text_source": {
+    "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "slide_set_id": "watch_checking_simple",
+    "source_family_ids": [
+      "watch_utility"
+    ]
+  },
+  "hook_quality": {
+    "hook": "Stop checking the watch",
+    "score": 58,
+    "max_score": 70,
+    "min_score": 52,
+    "passes_quality_gate": true,
+    "word_count": 4,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 7,
+      "simplicity": 10,
+      "emotional_relatability": 3,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 4,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 4 words; problem_type_default; pain 8/10; curiosity 7/10; simplicity 10/10; passes quality gate"
+  },
+  "theme": "watch-checking anxiety",
+  "route_tag": "forest",
+  "visual_world": "forest",
+  "lighting_family": "soft green morning forest light",
+  "cta": "Your next run should feel controlled.",
+  "avatar_world_required": true,
+  "avatar_source": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "viral_face_style_reference": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "cta_required": true,
+  "reddit_background_and_vibe": {
+    "background": "forest running route with visible trees and path depth",
+    "vibe": "focused, slightly tense, then grounded",
+    "reddit_background": "I keep checking my Apple Watch every 30 seconds on easy runs.",
+    "visual_keywords": [
+      "forest",
+      "path depth",
+      "focused breathing",
+      "no watch checking"
+    ],
+    "avoid": [
+      "watch close-up",
+      "phone screen",
+      "city street",
+      "track lane"
+    ]
+  },
+  "background_world_lock": {
+    "selected_visual_world": "forest",
+    "required_background": "forest running route with visible trees and path depth",
+    "reference_background_policy": "Reference image controls runner appearance only; its original background is non-transferable.",
+    "generated_background_rule": "Generate a new forest background that matches the deck visual world and lighting family.",
+    "allowed_background_context": [],
+    "forbidden_background_elements": [
+      "lake",
+      "lakeside",
+      "large water background",
+      "mountain backdrop",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "first_image_prompt_adaptation": "runner moving through a forest route with eyes forward, not checking a watch",
+  "character_anchor": {
+    "identity_id": "watch_stole_the_run_runner_v1",
+    "reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+    "style_reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+    "stable_traits": [
+      "use the 2026-04-26 watch-stole-the-run runner as the primary appearance anchor",
+      "male runner, age 25-35",
+      "lean muscular endurance-athlete build",
+      "tan complexion",
+      "short dark slightly textured hair",
+      "serious calm focused expression",
+      "realistic sweat on face and shirt",
+      "sharp cheek and brow detail from the 2026-04-26 watch-stole-the-run look",
+      "fitted black or dark performance kit as the default visual language",
+      "shirtless warm-weather running is allowed as an occasional real-run variation",
+      "natural outdoor running context"
+    ],
+    "variation_policy": "Use the 2026-04-26 watch-stole-the-run runner as the primary appearance reference, not the cleaner park-portrait avatar. Keep the sharper face, sweat, and serious human expression. Dark technical running kit is the default, but shirtless warm-weather running is allowed as an occasional real-run variation with black shorts and believable sweat. Rotate workout phase, route, weather, light, and camera angle per pack. Avoid model-like posing. Default to no headwear; use caps/headbands only occasionally so every video does not look the same. If eyewear is selected, it must be black running glasses.",
+    "watch_rule": "Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses.",
+    "selected_variation_id": "shirtless_black_shorts_real_run_warm_weather"
+  },
+  "workout_phase": {
+    "id": "during_workout",
+    "label": "during-workout",
+    "moment": "runner in the middle of the session with steady controlled effort",
+    "body_language": "natural stride, consistent cadence, focused breathing, no stutter step or unnatural turn",
+    "prompt_cue": "show the runner moving naturally during the run with visible route context and believable motion"
+  },
+  "avatar_variation": {
+    "id": "shirtless_black_shorts_real_run_warm_weather",
+    "watch": "no visible watch",
+    "top": "shirtless warm-weather running look",
+    "headwear": "no headwear",
+    "eyewear": "black running glasses",
+    "shorts": "black 5-inch running shorts",
+    "angle": "medium-close real running or cooldown angle, not a posed fitness shoot",
+    "weather": "fresh mild morning conditions",
+    "lighting": "soft green morning forest light"
+  },
+  "prompt_compiler": {
+    "version": 1,
+    "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    "selected_by": "problem_type_mapping",
+    "coherence_status": "passed",
+    "conflict_patterns": [],
+    "checks": [
+      "single workout phase selected before prompt generation",
+      "avatar lighting normalized to deck lighting family",
+      "weather normalized to selected lighting family",
+      "reference image background locked out of generated avatar world",
+      "hook image remains slide-1-only",
+      "base image remains text-free for local Sharp/Canvas overlay"
+    ]
+  },
+  "schema_prompt_template": "photorealistic athletic runner in {scene}, natural route, premium but believable, clean center space for headline",
+  "production_rules": [
+    "Every slideshow has an explicit emotion, one Images 2.0 hook, one generated avatar world, and one final CTA.",
+    "Slide hook and slides 1-6 should use the source-backed TikTok slideshow text bank before any generic AI wording.",
+    "Images 2.0 generates slide 1 only.",
+    "Do not generate all slideshow images in one Images 2.0 request.",
+    "Do not bake overlay text into the image.",
+    "Keep the full deck in one visual world and one lighting family.",
+    "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
+    "Keep one primary visual world per slideshow; lake worlds may include mountains or hills as background context.",
+    "Use Supabase/curated library assets for slides 2 through the CTA slide.",
+    "Composite all text locally with Sharp/Canvas."
+  ]
+}
