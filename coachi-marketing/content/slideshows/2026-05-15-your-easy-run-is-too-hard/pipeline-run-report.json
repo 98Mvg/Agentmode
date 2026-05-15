@@ -61,7 +61,10 @@
         "zone_2_reality"
       ]
     },
-    "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json"
+    "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "visual_world": "lake",
+    "route_tag": "lake",
+    "lighting_family": "calm lake daylight"
   },
   "hook_brief": "content/slideshows/2026-05-15-your-easy-run-is-too-hard/source/hook-brief.json",
   "slideshow_json": "content/slideshows/2026-05-15-your-easy-run-is-too-hard/source/slideshow.json",
@@ -69,10 +72,11 @@
   "hook_text": "content/slideshows/2026-05-15-your-easy-run-is-too-hard/source/hook.txt",
   "theme": "heart-rate panic",
   "reddit_background_and_vibe": {
-    "background": "open city park path with light environmental stress such as sun or wind",
+    "background": "open lakeside running path with light environmental stress such as sun or wind",
     "vibe": "tense but grounded, useful correction, not alarmist",
     "reddit_background": "My heart rate looks too high for how slow I run.",
     "visual_keywords": [
+      "lake path",
       "sun",
       "wind",
       "controlled breathing",

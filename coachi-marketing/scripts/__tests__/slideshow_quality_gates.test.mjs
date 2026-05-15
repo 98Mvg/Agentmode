@@ -81,6 +81,7 @@ test("generate_slideshow_topics writes scored hook candidates", async () => {
   assert.equal(candidate.selected_hook_quality.max_score, 70);
   assert.equal(typeof candidate.selected_hook_quality.breakdown.runner_pain_specificity, "number");
   assert.equal(typeof candidate.selected_hook_quality.breakdown.non_marketing_tone, "number");
+  assert.ok(["forest", "mountain", "lake"].includes(candidate.visual_world));
   assert.equal(/\b(cue|unlock|discover|data-driven)\b/i.test(candidate.hook), false);
 });
 
@@ -130,8 +131,8 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
     source_problem_id: "rp_quality_conflict",
     schema: "how_to_fix_v1",
     emotion: "confused",
-    visual_world: "track edge",
-    lighting_family: "soft morning light",
+    visual_world: "mountain",
+    lighting_family: "clear mountain morning light",
     avatar_world_required: true,
     cta_required: true,
     hook_quality: {
@@ -142,9 +143,9 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
     },
     slides: [
       { slide_number: 1, role: "hook", input_image: "slides/source/01-hook.png", output_file: "01-hook.png", text: "Stop racing workouts", asset_source: "images_2_0", text_position: "center" },
-      { slide_number: 2, role: "setup", input_image: "slides/source/02-setup.png", output_file: "02-setup.png", text: "Hard is not always better.", asset_source: "supabase_library", text_position: "lower_middle" },
-      { slide_number: 3, role: "value", input_image: "slides/source/03-value.png", output_file: "03-value.png", text: "Do not race practice.", asset_source: "supabase_library", text_position: "lower_middle" },
-      { slide_number: 4, role: "rule", input_image: "slides/source/04-rule.png", output_file: "04-rule.png", text: "Finish with control.", asset_source: "supabase_library", text_position: "center" },
+      { slide_number: 2, role: "setup", input_image: "slides/source/02-setup.png", output_file: "02-setup.png", text: "Hard is not always better.", asset_source: "supabase_library", visual_collection: "hills_effort", text_position: "lower_middle" },
+      { slide_number: 3, role: "value", input_image: "slides/source/03-value.png", output_file: "03-value.png", text: "Do not race practice.", asset_source: "supabase_library", visual_collection: "hills_effort", text_position: "lower_middle" },
+      { slide_number: 4, role: "rule", input_image: "slides/source/04-rule.png", output_file: "04-rule.png", text: "Finish with control.", asset_source: "supabase_library", visual_collection: "hills_effort", text_position: "center" },
       { slide_number: 5, role: "cta", input_image: "slides/source/05-cta.png", output_file: "05-cta.png", text: "Comment if you race reps.", asset_source: "supabase_template", text_position: "center" }
     ]
   });
@@ -172,24 +173,24 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
     source_problem: "The runner turns workouts into races and fades late.",
     cta: "Save this before your next workout.",
     emotion: "confused",
-    visual_world: "track edge",
-    lighting_family: "soft morning light",
+    visual_world: "mountain",
+    lighting_family: "clear mountain morning light",
     avatar_world_required: true,
     cta_required: true,
     first_image_prompt_adaptation: "runner cooling down after intervals",
     reddit_background_and_vibe: {
-      background: "track edge after intervals",
+      background: "mountain route after intervals",
       vibe: "cooling down",
       reddit_background: "runner races workouts",
-      visual_keywords: ["track"],
+      visual_keywords: ["mountain"],
       avoid: ["watch close-up"]
     },
     background_world_lock: {
-      selected_visual_world: "track edge",
-      required_background: "track edge after intervals",
+      selected_visual_world: "mountain",
+      required_background: "mountain route after intervals",
       reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
-      generated_background_rule: "Generate a new track edge background that matches the deck visual world and lighting family.",
-      forbidden_background_elements: ["lake", "mountain"]
+      generated_background_rule: "Generate a new mountain background that matches the deck visual world and lighting family.",
+      forbidden_background_elements: ["lake", "dense forest route"]
     },
     character_anchor: {
       identity_id: "organic_runner_male_v2",
@@ -205,8 +206,8 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "side angle",
-      weather: "fresh morning",
-      lighting: "soft morning light"
+      weather: "fresh mountain morning",
+      lighting: "clear mountain morning light"
     },
     prompt_compiler: {
       coherence_status: "passed"
@@ -219,7 +220,7 @@ Reddit Source Context
 Workout Phase For This Image
 Avatar Variation For This Image
 Required Slideshow Spine
-Selected visual world: track edge
+Selected visual world: mountain
 Background World Lock
 Reference image background is non-transferable.
 Stop racing workouts
@@ -255,8 +256,8 @@ test("qa_slideshow_pack rejects full-deck AI image generation", async () => {
     height: 1920,
     hybrid_cost_model: "one_ai_hook_six_library_assets",
     emotion: "confused",
-    visual_world: "city park path",
-    lighting_family: "soft morning light",
+    visual_world: "lake",
+    lighting_family: "calm lake daylight",
     avatar_world_required: true,
     cta_required: true,
     slides: [
@@ -293,8 +294,8 @@ test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", a
     height: 1920,
     hybrid_cost_model: "one_ai_hook_six_library_assets",
     emotion: "frustrated",
-    visual_world: "city park path",
-    lighting_family: "soft morning light",
+    visual_world: "lake",
+    lighting_family: "calm lake daylight",
     avatar_world_required: true,
     cta_required: true,
     hook_quality: {
@@ -305,9 +306,9 @@ test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", a
     },
     slides: [
       { slide_number: 1, role: "hook", input_image: "slides/source/01-hook.png", output_file: "01-hook.png", text: "Easy runs feel too hard", asset_source: "images_2_0", text_position: "center" },
-      { slide_number: 2, role: "problem", input_image: "slides/source/02-problem.png", output_file: "02-problem.png", text: "Easy days become workouts.", asset_source: "supabase_library", text_position: "lower_middle" },
-      { slide_number: 3, role: "insight_1", input_image: "slides/source/03-insight.png", output_file: "03-insight.png", text: "Your pace creeps up early.", asset_source: "supabase_library", text_position: "lower_middle" },
-      { slide_number: 4, role: "insight_2", input_image: "slides/source/04-insight.png", output_file: "04-insight.png", text: "Slow should feel controlled.", asset_source: "supabase_library", text_position: "center" },
+      { slide_number: 2, role: "problem", input_image: "slides/source/02-problem.png", output_file: "02-problem.png", text: "Easy days become workouts.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+      { slide_number: 3, role: "insight_1", input_image: "slides/source/03-insight.png", output_file: "03-insight.png", text: "Your pace creeps up early.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+      { slide_number: 4, role: "insight_2", input_image: "slides/source/04-insight.png", output_file: "04-insight.png", text: "Slow should feel controlled.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "center" },
       { slide_number: 5, role: "cta", input_image: "slides/source/05-cta.png", output_file: "05-cta.png", text: "Save this for your next easy run.", asset_source: "supabase_template", text_position: "center" }
     ]
   });
@@ -335,24 +336,25 @@ test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", a
     source_problem: "The runner keeps turning easy days into workouts.",
     cta: "Save this for your next easy run.",
     emotion: "frustrated",
-    visual_world: "city park path",
-    lighting_family: "soft morning light",
+    visual_world: "lake",
+    lighting_family: "calm lake daylight",
     avatar_world_required: true,
     cta_required: true,
     first_image_prompt_adaptation: "runner holding a relaxed pace during an easy run",
     reddit_background_and_vibe: {
-      background: "city park path during an easy run",
+      background: "calm lake path during an easy run",
       vibe: "controlled, honest, slightly frustrated",
       reddit_background: "runner overpaces easy days",
-      visual_keywords: ["easy run", "park path"],
+      visual_keywords: ["easy run", "lake path"],
       avoid: ["watch close-up"]
     },
     background_world_lock: {
-      selected_visual_world: "city park path",
-      required_background: "city park path during an easy run",
+      selected_visual_world: "lake",
+      required_background: "calm lake path during an easy run",
       reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
-      generated_background_rule: "Generate a new city park path background that matches the deck visual world and lighting family.",
-      forbidden_background_elements: ["lake", "mountain"]
+      generated_background_rule: "Generate a new lake background that matches the deck visual world and lighting family.",
+      allowed_background_context: ["mountain backdrop", "large hill backdrop"],
+      forbidden_background_elements: ["dense forest route"]
     },
     character_anchor: {
       identity_id: "organic_runner_male_v2",
@@ -368,8 +370,8 @@ test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", a
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "three-quarter angle",
-      weather: "fresh morning",
-      lighting: "soft morning light"
+      weather: "calm lake daylight",
+      lighting: "calm lake daylight"
     },
     prompt_compiler: {
       coherence_status: "passed"
@@ -382,7 +384,7 @@ Reddit Source Context
 Workout Phase For This Image
 Avatar Variation For This Image
 Required Slideshow Spine
-Selected visual world: city park path
+Selected visual world: lake
 Background World Lock
 Reference image background is non-transferable.
 Easy runs feel too hard
@@ -418,7 +420,7 @@ No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watc
               },
               visual_fit_metadata: {
                 requested_context: {
-                  visual_world: "city park path"
+                  visual_world: "lake"
                 }
               }
             }

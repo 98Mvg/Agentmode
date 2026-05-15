@@ -25,6 +25,12 @@ const ALLOWED_TEXT_POSITIONS = new Set(["top", "center", "lower_middle"]);
 const DEFAULT_POSTED_REGISTRY_PATH = "inputs/performance/posted-slideshows.json";
 const RAW_PROBLEM_BANK_PATH = "inputs/research/raw-runner-problems.json";
 const PRODUCTION_RIGHTS = new Set(["approved", "owned", "licensed"]);
+const APPROVED_VISUAL_WORLDS = new Set(["forest", "mountain", "lake"]);
+const WORLD_COLLECTIONS = {
+  forest: "nature_context",
+  mountain: "hills_effort",
+  lake: "lake_calm"
+};
 const REJECTED_ABSTRACT_COPY = [
   /\bjudging one spike\b/i,
   /\bignoring heat\b/i,
@@ -104,6 +110,14 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function normalizedWorld(value) {
+  return String(value || "").toLowerCase().trim();
+}
+
+function isApprovedVisualWorld(value) {
+  return APPROVED_VISUAL_WORLDS.has(normalizedWorld(value));
+}
+
 function resolveFrom(baseDir, value) {
   if (!value) return value;
   if (/^https?:\/\//i.test(value)) return value;
@@ -130,6 +144,7 @@ function validateHybridSplit(manifest, label) {
   assert(finalSlide?.role === "cta", `${label}: final slide must be the CTA slide.`);
   assert(manifest.emotion, `${label}: missing explicit emotion.`);
   assert(manifest.visual_world, `${label}: missing visual_world.`);
+  assert(isApprovedVisualWorld(manifest.visual_world), `${label}: visual_world must be one of forest, mountain, or lake.`);
   assert(manifest.lighting_family, `${label}: missing lighting_family.`);
   assert(manifest.avatar_world_required === true, `${label}: avatar_world_required must be true.`);
   assert(manifest.cta_required === true, `${label}: cta_required must be true.`);
@@ -142,6 +157,13 @@ function validateHybridSplit(manifest, label) {
       allowed.includes(slide.asset_source),
       `${label}: slide ${slide.slide_number} has invalid asset_source ${slide.asset_source}.`
     );
+    if (slide.slide_number !== finalSlideNumber) {
+      const expectedCollection = WORLD_COLLECTIONS[normalizedWorld(manifest.visual_world)];
+      assert(
+        slide.visual_collection === expectedCollection,
+        `${label}: slide ${slide.slide_number} visual_collection must stay in ${manifest.visual_world} world via ${expectedCollection}, got ${slide.visual_collection}.`
+      );
+    }
   }
 }
 
@@ -572,6 +594,7 @@ async function validatePromptArtifacts({ manifest, packDir }) {
   assert(hookBrief.theme, "source/hook-brief.json missing theme.");
   assert(hookBrief.emotion, "source/hook-brief.json missing emotion.");
   assert(hookBrief.visual_world, "source/hook-brief.json missing visual_world.");
+  assert(isApprovedVisualWorld(hookBrief.visual_world), "source/hook-brief.json visual_world must be one of forest, mountain, or lake.");
   assert(hookBrief.lighting_family, "source/hook-brief.json missing lighting_family.");
   assert(hookBrief.cta, "source/hook-brief.json missing CTA.");
   assert(hookBrief.avatar_world_required === true, "source/hook-brief.json avatar_world_required must be true.");
@@ -579,6 +602,7 @@ async function validatePromptArtifacts({ manifest, packDir }) {
   assert(hookBrief.first_image_prompt_adaptation, "source/hook-brief.json missing first_image_prompt_adaptation.");
   assert(hookBrief.reddit_background_and_vibe?.background, "source/hook-brief.json missing reddit background/vibe.");
   assert(hookBrief.background_world_lock?.selected_visual_world === hookBrief.visual_world, "source/hook-brief.json background_world_lock must match visual_world.");
+  assert(isApprovedVisualWorld(hookBrief.background_world_lock?.selected_visual_world), "source/hook-brief.json background_world_lock must use forest, mountain, or lake.");
   assert(hookBrief.background_world_lock?.reference_background_policy, "source/hook-brief.json missing reference background policy.");
   assert(hookBrief.character_anchor?.identity_id, "source/hook-brief.json missing character_anchor.identity_id.");
   assert(hookBrief.character_anchor?.reference_image, "source/hook-brief.json missing character_anchor.reference_image.");
@@ -750,6 +774,16 @@ async function validateAssetPicklistQuality({ packDir, production }) {
         first.visual_fit_metadata.requested_context.visual_world,
         `Slide ${slide.slide_number} production asset missing requested visual_world context.`
       );
+      assert(
+        isApprovedVisualWorld(first.visual_fit_metadata.requested_context.visual_world),
+        `Slide ${slide.slide_number} production asset visual_world must be forest, mountain, or lake.`
+      );
+      if (!isFinalCtaSlide) {
+        assert(
+          first.selection_quality.visual_match_score >= 20,
+          `Slide ${slide.slide_number} top asset visual_match_score is too low for world coherence: ${first.selection_quality.visual_match_score}.`
+        );
+      }
     }
     checked.push({
       slide_number: slide.slide_number,

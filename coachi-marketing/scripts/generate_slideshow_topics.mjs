@@ -442,65 +442,40 @@ function hookSourceEntry(hook, sourceMeta = {}) {
   };
 }
 
-const VISUAL_WORLD_BY_TYPE = {
-  "easy-run pace drift": {
-    visual_world: "forest road",
-    route_tag: "forest_road",
+const APPROVED_VISUAL_WORLDS = {
+  forest: {
+    visual_world: "forest",
+    route_tag: "forest",
     lighting_family: "soft green morning forest light"
   },
-  "zone-2 confusion": {
-    visual_world: "quiet neighborhood road",
-    route_tag: "quiet_neighborhood_road",
-    lighting_family: "soft overcast morning light"
+  mountain: {
+    visual_world: "mountain",
+    route_tag: "mountain",
+    lighting_family: "clear mountain morning light"
   },
-  "heart-rate panic": {
-    visual_world: "open city park path",
-    route_tag: "open_city_park_path",
-    lighting_family: "bright natural daylight"
-  },
-  "watch-checking anxiety": {
-    visual_world: "city park path",
-    route_tag: "city_park_path",
-    lighting_family: "clean low-angle morning light"
-  },
-  "pace disbelief": {
-    visual_world: "track edge",
-    route_tag: "track_edge",
-    lighting_family: "clear afternoon training light"
-  },
-  "workout-racing": {
-    visual_world: "track edge",
-    route_tag: "track_edge",
-    lighting_family: "late afternoon track light"
-  },
-  "metric setup confusion": {
-    visual_world: "treadmill / indoor gym",
-    route_tag: "indoor_gym_treadmill",
-    lighting_family: "clean indoor gym light"
-  },
-  "exercise-ring frustration": {
-    visual_world: "quiet neighborhood road",
-    route_tag: "quiet_neighborhood_road",
-    lighting_family: "soft evening neighborhood light"
-  },
-  "comparison spiral": {
-    visual_world: "city park path",
-    route_tag: "city_park_path",
-    lighting_family: "soft morning park light"
-  },
-  "beginner uncertainty": {
-    visual_world: "city park path",
-    route_tag: "city_park_path",
-    lighting_family: "soft morning park light"
+  lake: {
+    visual_world: "lake",
+    route_tag: "lake",
+    lighting_family: "calm lake daylight"
   }
 };
 
+const VISUAL_WORLD_BY_TYPE = {
+  "easy-run pace drift": APPROVED_VISUAL_WORLDS.forest,
+  "zone-2 confusion": APPROVED_VISUAL_WORLDS.lake,
+  "heart-rate panic": APPROVED_VISUAL_WORLDS.lake,
+  "watch-checking anxiety": APPROVED_VISUAL_WORLDS.forest,
+  "pace disbelief": APPROVED_VISUAL_WORLDS.mountain,
+  "workout-racing": APPROVED_VISUAL_WORLDS.mountain,
+  "metric setup confusion": APPROVED_VISUAL_WORLDS.lake,
+  "exercise-ring frustration": APPROVED_VISUAL_WORLDS.forest,
+  "comparison spiral": APPROVED_VISUAL_WORLDS.lake,
+  "beginner uncertainty": APPROVED_VISUAL_WORLDS.lake,
+  "data-without-coaching": APPROVED_VISUAL_WORLDS.forest
+};
+
 function visualWorldForProblem(problem) {
-  return VISUAL_WORLD_BY_TYPE[problem.problem_type] || {
-    visual_world: "city park path",
-    route_tag: "city_park_path",
-    lighting_family: "soft natural daylight"
-  };
+  return VISUAL_WORLD_BY_TYPE[problem.problem_type] || APPROVED_VISUAL_WORLDS.forest;
 }
 
 const BEST_VIRAL_HOOK_BY_TYPE = {

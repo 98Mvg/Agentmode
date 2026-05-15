@@ -39,21 +39,22 @@ Your easy run is too hard
 ## Theme And Vibe
 - Theme: heart-rate panic
 - Route tag: open_city_park_path
-- Selected visual world: open city park path
-- Lighting family: bright natural daylight
+- Selected visual world: lake
+- Lighting family: calm lake daylight
 - Viewer emotion: embarrassed
-- Background: open city park path with light environmental stress such as sun or wind
+- Background: open lakeside running path with light environmental stress such as sun or wind
 - Vibe: tense but grounded, useful correction, not alarmist
 - Reddit-derived background: My heart rate looks too high for how slow I run.
-- Visual keywords: sun, wind, controlled breathing, real effort, environment context
+- Visual keywords: lake path, sun, wind, controlled breathing, real effort, environment context
 
 ## Background World Lock
 - Reference image background is non-transferable.
 - Use the reference image for runner face, body type, sweat, expression, and visual energy only.
-- Required generated background: open city park path with light environmental stress such as sun or wind
-- Selected avatar world: open city park path
-- Rule: Generate a new open city park path background that matches the deck visual world and lighting family.
-- Forbidden background elements for this pack: lake, lakeside, large water background, mountain, large hill backdrop, dense forest route, track lane or stadium, gym or treadmill background
+- Required generated background: open lakeside running path with light environmental stress such as sun or wind
+- Selected avatar world: lake
+- Rule: Generate a new lake background that matches the deck visual world and lighting family.
+- Allowed background context: mountain backdrop, large hill backdrop
+- Forbidden background elements for this pack: dense forest route, track lane, stadium, gym, treadmill, city street
 - If the reference image background conflicts with the selected avatar world, ignore the reference background completely.
 
 ## First Image Prompt Adapted To Theme
@@ -62,10 +63,10 @@ runner in controlled motion with visible sweat and focused breathing, scene shou
 ## Required Slideshow Spine
 - Emotion: embarrassed
 - Images 2.0: slide 1 only
-- Avatar world: generated Coachi runner avatar in open city park path
+- Avatar world: generated Coachi runner avatar in lake
 - CTA: final slide only, one simple action
-- Visual consistency: slides 2-7 must stay in open city park path with bright natural daylight
-- Background rule: slide 1 must use a newly generated open city park path background, not the reference image background.
+- Visual consistency: slides 2-7 must stay in lake with calm lake daylight
+- Background rule: slide 1 must use a newly generated lake background, not the reference image background.
 
 ## Character Continuity Anchor
 - Identity ID: watch_stole_the_run_runner_v1
@@ -89,7 +90,7 @@ runner in controlled motion with visible sweat and focused breathing, scene shou
 - Running equipment rule: visible kit must read as real running equipment, not casual streetwear. Use technical running clothing when a top is selected, or a believable shirtless warm-weather running look when shirtless is selected. Always use proper running shorts, realistic sweat, and black running glasses if eyewear appears. Do not add headwear unless explicitly selected. No brand logos.
 - Camera angle: side-tracking action angle with natural arm swing
 - Weather: clear dry training conditions
-- Lighting: bright natural daylight
+- Lighting: calm lake daylight
 - Watch rule: Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses.
 
 ## Schema Prompt Adapted To Theme
@@ -98,13 +99,13 @@ photorealistic athletic runner in runner in controlled motion with visible sweat
 ## Final Prompt To Use
 Create a photorealistic vertical 9:16 image of the same organic Coachi runner identity: male runner, age 25-35, lean endurance-athlete build, tan complexion, short dark slightly textured hair, calm focused expression, realistic sweat, and believable outdoor running presence.
 
-Use the 2026-04-26 watch-stole-the-run hook image as the primary Coachi runner appearance reference: fitted dark performance kit, visible sweat on face and shirt, sharper cheek and brow detail, cinematic contrast, shallow depth of field, and serious human expression. Preserve that runner's appearance energy while adapting the route, pose, workout phase, and lighting to this pack. Do not fall back to the cleaner park-portrait avatar. The reference image background is not part of the identity. Replace it with a new open city park path background matching this deck. Do not copy the 2026-04-26 lake/mountain background, hands-on-hips pose, or visible watch unless the hook is specifically about watch anxiety.
+Use the 2026-04-26 watch-stole-the-run hook image as the primary Coachi runner appearance reference: fitted dark performance kit, visible sweat on face and shirt, sharper cheek and brow detail, cinematic contrast, shallow depth of field, and serious human expression. Preserve that runner's appearance energy while adapting the route, pose, workout phase, and lighting to this pack. Do not fall back to the cleaner park-portrait avatar. The reference image background is not part of the identity. Replace it with a new lake background matching this deck. Do not copy the 2026-04-26 lake/mountain background, hands-on-hips pose, or visible watch unless the hook is specifically about watch anxiety.
 
 Workout phase: during-workout. Capture this moment: runner in the middle of the session with steady controlled effort. Body language should show natural stride, consistent cadence, focused breathing, no stutter step or unnatural turn. show the runner moving naturally during the run with visible route context and believable motion.
 
 Wardrobe and running equipment for this image: navy fitted long-sleeve performance shirt, charcoal running shorts, no headwear, and no glasses. The visible kit must clearly read as real running equipment: technical running fabric when a top is selected, or a believable shirtless warm-weather running look when shirtless is selected, plus proper running shorts, natural sweat, and black running glasses if eyewear appears. Avoid casual streetwear and model-like posing. If headwear is "no headwear", do not add a cap, hat, beanie, headband, or other headwear. Default to no visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
 
-Scene: open city park path with light environmental stress such as sun or wind. Keep the image inside the selected visual world: open city park path. The background must visibly fit open city park path; do not import a lake, mountain, hill, forest, gym, track, or street world unless it is explicitly the selected avatar world. The image should feel like tense but grounded, useful correction, not alarmist. Weather: clear dry training conditions. Lighting: bright natural daylight. Match the deck lighting family: bright natural daylight. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
+Scene: open lakeside running path with light environmental stress such as sun or wind. Keep the image inside the selected visual world: lake. The background must visibly fit lake; do not import dense forest, gym, track, city street, or make mountain the primary world. Mountains or hills may appear only as distant background context while the lake remains primary. The image should feel like tense but grounded, useful correction, not alarmist. Weather: calm lake daylight. Lighting: calm lake daylight. Match the deck lighting family: calm lake daylight. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
 
 Composition: side-tracking action angle with natural arm swing, no face distortion, no watch-checking pose, no hands-on-hips hero pose, no exaggerated emotion. Show the viewer emotion as embarrassed through body language and scene tension, not facial acting. Leave clean center/lower-middle negative space for the hook overlay.
 
@@ -113,5 +114,5 @@ photorealistic athletic male runner, lean muscular endurance-athlete build, masc
 
 ## Negative Constraints
 Avoid: medical emergency, fear expression, watch close-up, fake exhaustion.
-Do not mix hills, lakes, and mountains. Do not change the route/world from open city park path.
+Approved slideshow worlds are forest, mountain, and lake; use exactly one primary world per deck. Do not change the route/world from lake. Mountain background context is allowed for lake decks when water and lakeside path stay primary.
 No text, no watermark, no brand logos, no Apple Watch, no Garmin watch, no smartwatch, no GPS watch, no readable watch UI, no app UI, no extra limbs, no distorted hands, no fake steam, no blurred-out background.

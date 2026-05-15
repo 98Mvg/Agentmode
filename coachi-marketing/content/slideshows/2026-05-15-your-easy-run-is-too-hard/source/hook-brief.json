@@ -48,19 +48,20 @@
     "rationale": "58/70; 6 words; bank family proper_easy_run; pain 10/10; curiosity 3/10; simplicity 10/10; passes quality gate"
   },
   "theme": "heart-rate panic",
-  "route_tag": "open_city_park_path",
-  "visual_world": "open city park path",
-  "lighting_family": "bright natural daylight",
+  "route_tag": "lake",
+  "visual_world": "lake",
+  "lighting_family": "calm lake daylight",
   "cta": "Save this before judging one run.",
   "avatar_world_required": true,
   "avatar_source": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
   "viral_face_style_reference": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
   "cta_required": true,
   "reddit_background_and_vibe": {
-    "background": "open city park path with light environmental stress such as sun or wind",
+    "background": "open lakeside running path with light environmental stress such as sun or wind",
     "vibe": "tense but grounded, useful correction, not alarmist",
     "reddit_background": "My heart rate looks too high for how slow I run.",
     "visual_keywords": [
+      "lake path",
       "sun",
       "wind",
       "controlled breathing",
@@ -75,19 +76,21 @@
     ]
   },
   "background_world_lock": {
-    "selected_visual_world": "open city park path",
-    "required_background": "open city park path with light environmental stress such as sun or wind",
+    "selected_visual_world": "lake",
+    "required_background": "open lakeside running path with light environmental stress such as sun or wind",
     "reference_background_policy": "Reference image controls runner appearance only; its original background is non-transferable.",
-    "generated_background_rule": "Generate a new open city park path background that matches the deck visual world and lighting family.",
+    "generated_background_rule": "Generate a new lake background that matches the deck visual world and lighting family.",
+    "allowed_background_context": [
+      "mountain backdrop",
+      "large hill backdrop"
+    ],
     "forbidden_background_elements": [
-      "lake",
-      "lakeside",
-      "large water background",
-      "mountain",
-      "large hill backdrop",
       "dense forest route",
-      "track lane or stadium",
-      "gym or treadmill background"
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
     ]
   },
   "first_image_prompt_adaptation": "runner in controlled motion with visible sweat and focused breathing, scene should explain why effort can rise",
@@ -127,8 +130,8 @@
     "eyewear": "no glasses",
     "shorts": "charcoal running shorts",
     "angle": "side-tracking action angle with natural arm swing",
-    "weather": "clear dry training conditions",
-    "lighting": "bright natural daylight"
+    "weather": "calm lake daylight",
+    "lighting": "calm lake daylight"
   },
   "prompt_compiler": {
     "version": 1,
@@ -154,7 +157,7 @@
     "Do not bake overlay text into the image.",
     "Keep the full deck in one visual world and one lighting family.",
     "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
-    "Do not mix hills, lakes, and mountains in the same slideshow.",
+    "Approved slideshow worlds are forest, mountain, and lake; use exactly one per deck.",
     "Use Supabase/curated library assets for slides 2 through the CTA slide.",
     "Composite all text locally with Sharp/Canvas."
   ]

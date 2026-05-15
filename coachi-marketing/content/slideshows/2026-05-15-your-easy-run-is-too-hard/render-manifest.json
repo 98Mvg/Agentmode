@@ -36,8 +36,8 @@
     "rationale": "58/70; 6 words; bank family proper_easy_run; pain 10/10; curiosity 3/10; simplicity 10/10; passes quality gate"
   },
   "emotion": "embarrassed",
-  "visual_world": "open city park path",
-  "lighting_family": "bright natural daylight",
+  "visual_world": "lake",
+  "lighting_family": "calm lake daylight",
   "avatar_world_required": true,
   "cta_required": true,
   "coachi_app_cta_policy": {
@@ -78,7 +78,7 @@
       "output_file": "02-setup.png",
       "text": "1. Running easy too fast.",
       "asset_source": "supabase_library",
-      "visual_collection": "nature_context",
+      "visual_collection": "lake_calm",
       "text_position": "lower_middle",
       "font_size": 76,
       "max_chars_per_line": 24
@@ -90,7 +90,7 @@
       "output_file": "03-value.png",
       "text": "2. Trusting one number.",
       "asset_source": "supabase_library",
-      "visual_collection": "details_emotion",
+      "visual_collection": "lake_calm",
       "text_position": "lower_middle",
       "font_size": 76,
       "max_chars_per_line": 24
@@ -102,7 +102,7 @@
       "output_file": "04-value.png",
       "text": "3. Ignoring the weather.",
       "asset_source": "supabase_library",
-      "visual_collection": "details_emotion",
+      "visual_collection": "lake_calm",
       "text_position": "lower_middle",
       "font_size": 76,
       "max_chars_per_line": 24
@@ -114,7 +114,7 @@
       "output_file": "05-value.png",
       "text": "4. Fighting walk breaks.",
       "asset_source": "supabase_library",
-      "visual_collection": "nature_context",
+      "visual_collection": "lake_calm",
       "text_position": "center",
       "font_size": 76,
       "max_chars_per_line": 24
@@ -126,7 +126,7 @@
       "output_file": "06-coachi-connection.png",
       "text": "Coachi gives simple guidance before one number ruins the run.",
       "asset_source": "supabase_library",
-      "visual_collection": "nature_context",
+      "visual_collection": "lake_calm",
       "text_position": "center",
       "font_size": 76,
       "max_chars_per_line": 24
@@ -143,5 +143,6 @@
       "font_size": 76,
       "max_chars_per_line": 24
     }
-  ]
+  ],
+  "route_tag": "lake"
 }

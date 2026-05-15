@@ -1,7 +1,7 @@
 {
   "ok": true,
   "pass": true,
-  "generated_at": "2026-05-15T08:34:37.434Z",
+  "generated_at": "2026-05-15T09:10:53.932Z",
   "pack": "content/slideshows/2026-05-15-your-easy-run-is-too-hard",
   "slides": 7,
   "hybrid_cost_model": "one_ai_hook_six_library_assets",
@@ -34,47 +34,47 @@
     "checked_assets": [
       {
         "slide_number": 2,
-        "asset_id": "nature_context_005",
-        "selection_score": -1,
+        "asset_id": "lake_calm_003",
+        "selection_score": 103,
         "quality_score": 83,
-        "visual_match_score": 20,
-        "freshness_penalty": 104
+        "visual_match_score": 30,
+        "freshness_penalty": 10
       },
       {
         "slide_number": 3,
-        "asset_id": "details_emotion_008",
-        "selection_score": 20,
+        "asset_id": "lake_calm_004",
+        "selection_score": 103,
         "quality_score": 83,
-        "visual_match_score": 5,
-        "freshness_penalty": 68
+        "visual_match_score": 30,
+        "freshness_penalty": 10
       },
       {
         "slide_number": 4,
-        "asset_id": "details_emotion_009",
-        "selection_score": 20,
+        "asset_id": "lake_calm_005",
+        "selection_score": 103,
         "quality_score": 83,
-        "visual_match_score": 5,
-        "freshness_penalty": 68
+        "visual_match_score": 30,
+        "freshness_penalty": 10
       },
       {
         "slide_number": 5,
-        "asset_id": "nature_context_006",
-        "selection_score": -1,
+        "asset_id": "lake_calm_012",
+        "selection_score": 103,
         "quality_score": 83,
-        "visual_match_score": 20,
-        "freshness_penalty": 104
+        "visual_match_score": 30,
+        "freshness_penalty": 10
       },
       {
         "slide_number": 6,
-        "asset_id": "nature_context_007",
-        "selection_score": -1,
+        "asset_id": "lake_calm_006",
+        "selection_score": 93,
         "quality_score": 83,
-        "visual_match_score": 20,
-        "freshness_penalty": 104
+        "visual_match_score": 30,
+        "freshness_penalty": 20
       },
       {
         "slide_number": 7,
-        "asset_id": "cta_ending_002",
+        "asset_id": "cta_ending_004",
         "selection_score": 66,
         "quality_score": 83,
         "visual_match_score": 13,
@@ -90,37 +90,37 @@
     "assets": [
       {
         "slide_number": 2,
-        "asset_id": "nature_context_005",
+        "asset_id": "lake_calm_003",
         "source_rights": "approved",
         "source_kind": "local"
       },
       {
         "slide_number": 3,
-        "asset_id": "details_emotion_008",
+        "asset_id": "lake_calm_004",
         "source_rights": "approved",
         "source_kind": "local"
       },
       {
         "slide_number": 4,
-        "asset_id": "details_emotion_009",
+        "asset_id": "lake_calm_005",
         "source_rights": "approved",
         "source_kind": "local"
       },
       {
         "slide_number": 5,
-        "asset_id": "nature_context_006",
+        "asset_id": "lake_calm_012",
         "source_rights": "approved",
         "source_kind": "local"
       },
       {
         "slide_number": 6,
-        "asset_id": "nature_context_007",
+        "asset_id": "lake_calm_006",
         "source_rights": "approved",
         "source_kind": "local"
       },
       {
         "slide_number": 7,
-        "asset_id": "cta_ending_002",
+        "asset_id": "cta_ending_004",
         "source_rights": "approved",
         "source_kind": "local"
       }

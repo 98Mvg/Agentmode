@@ -186,6 +186,7 @@ function candidateVisualMatchScore(candidate, requestedContext = {}) {
   const visualWorldTags = [
     ...(candidate.visual_world_tags || []),
     ...(candidate.route_tags || []),
+    ...(candidate.subject_tags || []),
     ...(candidate.aesthetic_tags || [])
   ];
   const lightingTags = [

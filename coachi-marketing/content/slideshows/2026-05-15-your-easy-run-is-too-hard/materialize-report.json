@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T08:34:14.630Z",
+  "generated_at": "2026-05-15T09:03:17.457Z",
   "picklist": "content/slideshows/2026-05-15-your-easy-run-is-too-hard/asset-picklist.json",
   "prefer_remote": false,
   "dry_run": false,
@@ -15,85 +15,85 @@
       "slide_number": 2,
       "role": "setup",
       "status": "materialized",
-      "selected_asset_id": "nature_context_005",
+      "selected_asset_id": "lake_calm_003",
       "selected_source_rights": "approved",
       "selected_source_kind": "local",
-      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_003-image.jpg",
       "fallback_reason": null,
       "selected_supabase_asset": false,
       "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/02-setup.png",
       "supabase_public_url": null,
-      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg"
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_003-image.jpg"
     },
     {
       "slide_number": 3,
       "role": "value",
       "status": "materialized",
-      "selected_asset_id": "details_emotion_008",
+      "selected_asset_id": "lake_calm_004",
       "selected_source_rights": "approved",
       "selected_source_kind": "local",
-      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_008-alessio-pieruccii.jpg",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_004-road-lake-forest-mountains.jpg",
       "fallback_reason": null,
       "selected_supabase_asset": false,
       "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/03-value.png",
       "supabase_public_url": null,
-      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_008-alessio-pieruccii.jpg"
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_004-road-lake-forest-mountains.jpg"
     },
     {
       "slide_number": 4,
       "role": "value",
       "status": "materialized",
-      "selected_asset_id": "details_emotion_009",
+      "selected_asset_id": "lake_calm_005",
       "selected_source_rights": "approved",
       "selected_source_kind": "local",
-      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_005-fall-lake-side-walk.jpg",
       "fallback_reason": null,
       "selected_supabase_asset": false,
       "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/04-value.png",
       "supabase_public_url": null,
-      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg"
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_005-fall-lake-side-walk.jpg"
     },
     {
       "slide_number": 5,
       "role": "value",
       "status": "materialized",
-      "selected_asset_id": "nature_context_006",
+      "selected_asset_id": "lake_calm_012",
       "selected_source_rights": "approved",
       "selected_source_kind": "local",
-      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_012-this-is-a-very-amazing-experience-to-see-the.jpg",
       "fallback_reason": null,
       "selected_supabase_asset": false,
       "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/05-value.png",
       "supabase_public_url": null,
-      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg"
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_012-this-is-a-very-amazing-experience-to-see-the.jpg"
     },
     {
       "slide_number": 6,
       "role": "coachi_connection",
       "status": "materialized",
-      "selected_asset_id": "nature_context_007",
+      "selected_asset_id": "lake_calm_006",
       "selected_source_rights": "approved",
       "selected_source_kind": "local",
-      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_006-foap_com_-lake-shoreline-hiking-trail-surrounded-with-trees-and-bushes-s.jpg",
       "fallback_reason": null,
       "selected_supabase_asset": false,
       "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/06-coachi-connection.png",
       "supabase_public_url": null,
-      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg"
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_006-foap_com_-lake-shoreline-hiking-trail-surrounded-with-trees-and-bushes-s.jpg"
     },
     {
       "slide_number": 7,
       "role": "cta",
       "status": "materialized",
-      "selected_asset_id": "cta_ending_002",
+      "selected_asset_id": "cta_ending_004",
       "selected_source_rights": "approved",
       "selected_source_kind": "local",
-      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_004-5.jpg",
       "fallback_reason": null,
       "selected_supabase_asset": false,
       "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/07-cta.png",
       "supabase_public_url": null,
-      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg"
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_004-5.jpg"
     }
   ],
   "usage_log_update": {

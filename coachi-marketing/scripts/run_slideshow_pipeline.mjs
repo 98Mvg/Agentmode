@@ -53,6 +53,34 @@ const COACHI_APP_CTA_ASSET_IDS = [
   "coachi_cta_012_watch_lake_calm_35min",
   "coachi_cta_013_phone_mountain_morning_51min"
 ];
+const APPROVED_VISUAL_WORLDS = {
+  forest: {
+    visual_world: "forest",
+    route_tag: "forest",
+    lighting_family: "soft green morning forest light",
+    background: "shaded forest running route with visible path depth",
+    keywords: ["forest route", "green morning light", "trees", "path depth"],
+    forbidden: ["lake", "lakeside", "large water background", "mountain backdrop", "track lane", "stadium", "gym", "treadmill", "city street"]
+  },
+  mountain: {
+    visual_world: "mountain",
+    route_tag: "mountain",
+    lighting_family: "clear mountain morning light",
+    background: "mountain running route with visible climb or ridge context",
+    keywords: ["mountain route", "gradient", "open sky", "clear morning light"],
+    forbidden: ["lake", "lakeside", "dense forest route", "track lane", "stadium", "gym", "treadmill", "city street"]
+  },
+  lake: {
+    visual_world: "lake",
+    route_tag: "lake",
+    lighting_family: "calm lake daylight",
+    background: "calm lakeside running path with visible water and route context",
+    keywords: ["lake path", "water edge", "calm daylight", "open path"],
+    allowed_background_context: ["mountain backdrop", "large hill backdrop"],
+    forbidden: ["dense forest route", "track lane", "stadium", "gym", "treadmill", "city street"]
+  }
+};
+const APPROVED_VISUAL_WORLD_IDS = new Set(Object.keys(APPROVED_VISUAL_WORLDS));
 
 function parseArgs(argv) {
   const args = new Map();
@@ -153,6 +181,28 @@ function sentenceCase(value) {
 
 function normalizeTextPosition(position) {
   return position === "bottom" ? "lower_middle" : (position || "lower_middle");
+}
+
+function canonicalWorldId(value, fallback = "forest") {
+  const text = String(value || "").toLowerCase();
+  if (/\bmountain\b|\bhill\b|\buphill\b|\bclimb\b|\bridge\b/.test(text)) return "mountain";
+  if (/\blake\b|\briverside\b|\bwater\b|\bcoastal\b/.test(text)) return "lake";
+  if (/\bforest\b|\btrail\b|\bwood\b|\btrees?\b/.test(text)) return "forest";
+  return APPROVED_VISUAL_WORLD_IDS.has(fallback) ? fallback : "forest";
+}
+
+function approvedWorldDetails(value, fallback = "forest") {
+  return APPROVED_VISUAL_WORLDS[canonicalWorldId(value, fallback)];
+}
+
+function visualCollectionForWorld(visualWorld, schemaSlide, slideNumber, finalSlideNumber) {
+  if (slideNumber === 1 || slideNumber === finalSlideNumber || schemaSlide.role === "cta") {
+    return schemaSlide.visual_collection || null;
+  }
+  const world = canonicalWorldId(visualWorld);
+  if (world === "mountain") return "hills_effort";
+  if (world === "lake") return "lake_calm";
+  return "nature_context";
 }
 
 const AVATAR_VARIATIONS = [
@@ -361,31 +411,16 @@ function buildPromptCompilerReport({ candidate, theme, workoutPhase, avatarVaria
 }
 
 function backgroundWorldLockForTheme(theme) {
-  const visualWorld = String(theme.visual_world || "selected route world").trim();
-  const background = String(theme.background || visualWorld).trim();
-  const lower = visualWorld.toLowerCase();
-  const forbidden = [];
-  if (!/lake|riverside|coastal|water/.test(lower)) {
-    forbidden.push("lake", "lakeside", "large water background");
-  }
-  if (!/mountain|hill|trail/.test(lower)) {
-    forbidden.push("mountain", "large hill backdrop");
-  }
-  if (!/forest|trail/.test(lower)) {
-    forbidden.push("dense forest route");
-  }
-  if (!/track/.test(lower)) {
-    forbidden.push("track lane or stadium");
-  }
-  if (!/gym|treadmill|indoor/.test(lower)) {
-    forbidden.push("gym or treadmill background");
-  }
+  const world = approvedWorldDetails(theme.visual_world || theme.background);
+  const visualWorld = world.visual_world;
+  const background = String(theme.background || world.background).trim();
   return {
     selected_visual_world: visualWorld,
     required_background: background,
     reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
     generated_background_rule: `Generate a new ${visualWorld} background that matches the deck visual world and lighting family.`,
-    forbidden_background_elements: [...new Set(forbidden)]
+    allowed_background_context: world.allowed_background_context || [],
+    forbidden_background_elements: world.forbidden
   };
 }
 
@@ -518,7 +553,7 @@ function slideFileName(slideNumber, role) {
   return `${String(slideNumber).padStart(2, "0")}-${slugify(role || "slide")}.png`;
 }
 
-function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, useCoachiAppCta }) {
+function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, useCoachiAppCta, visualWorld }) {
   const slideNumber = index + 1;
   const assetSource = schemaSlide.asset_source
     || (slideNumber === 1 ? "images_2_0" : slideNumber === finalSlideNumber ? "supabase_template" : "supabase_library");
@@ -539,7 +574,7 @@ function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, us
     output_file: slideFileName(slideNumber, role),
     text: appCtaFields.text || draftSlide?.text || schemaSlide.example_text || schemaSlide.text_template,
     asset_source: assetSource,
-    visual_collection: schemaSlide.visual_collection || null,
+    visual_collection: visualCollectionForWorld(visualWorld, schemaSlide, slideNumber, finalSlideNumber),
     text_position: normalizeTextPosition(isFinalCta && useCoachiAppCta ? "top" : schemaSlide.text_position || "lower_middle"),
     font_size: isFinalCta && useCoachiAppCta ? 58 : slideNumber === 1 ? 92 : 76,
     max_chars_per_line: isFinalCta && useCoachiAppCta ? 20 : slideNumber === 1 ? 14 : 24,
@@ -596,7 +631,8 @@ function buildRenderManifest({ candidate, schema, hookBrief, slug }) {
       draftSlide: candidate.slide_draft?.[index],
       index,
       finalSlideNumber,
-      useCoachiAppCta
+      useCoachiAppCta,
+      visualWorld: hookBrief?.visual_world || candidate.visual_world
     }))
   };
 }
@@ -743,27 +779,28 @@ function buildCanonicalSlideshowJson({ slug, candidate, manifest, hookBrief, cap
 }
 
 function themeBriefForCandidate(candidate) {
+  const fallbackWorld = approvedWorldDetails(candidate.visual_world || candidate.route_tag || candidate.problem_type);
   const defaults = {
     theme: candidate.problem_type || "running progress",
-    route_tag: "city_park_path",
-    visual_world: "city park path",
-    lighting_family: "soft natural daylight",
+    route_tag: fallbackWorld.route_tag,
+    visual_world: fallbackWorld.visual_world,
+    lighting_family: fallbackWorld.lighting_family,
     reddit_background: candidate.exact_words || candidate.problem || "A runner is trying to understand a run.",
-    background: "quiet city park path with visible route context",
+    background: fallbackWorld.background,
     vibe: "realistic, calm, premium, useful, not overproduced",
     first_image_prompt_adaptation: "show a runner in a believable post-run or easy-run moment with clean negative space for overlay text",
-    visual_keywords: ["realistic running route", "natural light", "visible background", "clean overlay space"],
+    visual_keywords: [...fallbackWorld.keywords, "clean overlay space"],
     avoid: ["watch close-up", "baked-in text", "logos", "fake steam", "blurred background", "unnatural stride"]
   };
 
   const byType = {
     "easy-run pace drift": {
       theme: "easy-run drift",
-      route_tag: "forest_road",
-      visual_world: "forest road",
-      lighting_family: "soft green morning forest light",
+      route_tag: "forest",
+      visual_world: "forest",
+      lighting_family: APPROVED_VISUAL_WORLDS.forest.lighting_family,
       reddit_background: candidate.exact_words || "The runner starts easy, then the run gradually turns medium-hard.",
-      background: "long forest road, enough depth to feel like the runner has been moving for a while",
+      background: "long forest running route, enough depth to feel like the runner has been moving for a while",
       vibe: "honest endurance, slight late-run fatigue, controlled effort, not a sprint",
       first_image_prompt_adaptation: "post-run or late-run action moment: the runner is sweaty, breathing steadily, satisfied but aware he had to control the effort",
       visual_keywords: ["long path", "subtle fatigue", "controlled easy effort", "natural route depth", "premium running editorial"],
@@ -771,63 +808,80 @@ function themeBriefForCandidate(candidate) {
     },
     "zone-2 confusion": {
       theme: "zone 2 confusion",
-      route_tag: "quiet_neighborhood_road",
-      visual_world: "quiet neighborhood road",
-      lighting_family: "soft overcast morning light",
+      route_tag: "lake",
+      visual_world: "lake",
+      lighting_family: APPROVED_VISUAL_WORLDS.lake.lighting_family,
       reddit_background: candidate.exact_words || "The runner feels like zone 2 is too slow and starts doubting the session.",
-      background: "simple quiet neighborhood road, morning light, low-pressure easy-run environment",
+      background: "calm lakeside running path, daylight, low-pressure easy-run environment",
       vibe: "calm confusion turning into control",
       first_image_prompt_adaptation: "runner moving easily, relaxed shoulders, no watch checking, enough negative space for a clear hook",
-      visual_keywords: ["easy effort", "quiet path", "relaxed body language", "clean background"],
+      visual_keywords: ["easy effort", "lake path", "relaxed body language", "clean background"],
       avoid: ["lab testing", "heart-rate charts", "watch close-up", "frustrated face"]
     },
     "heart-rate panic": {
       theme: "heart-rate panic",
-      route_tag: "open_city_park_path",
-      visual_world: "open city park path",
-      lighting_family: "bright natural daylight",
+      route_tag: "lake",
+      visual_world: "lake",
+      lighting_family: APPROVED_VISUAL_WORLDS.lake.lighting_family,
       reddit_background: candidate.exact_words || "The runner sees a high effort signal and panics even though the run may be fine.",
-      background: "open city park path with light environmental stress such as sun or wind",
+      background: "open lakeside running path with light environmental stress such as sun or wind",
       vibe: "tense but grounded, useful correction, not alarmist",
       first_image_prompt_adaptation: "runner in controlled motion with visible sweat and focused breathing, scene should explain why effort can rise",
-      visual_keywords: ["sun", "wind", "controlled breathing", "real effort", "environment context"],
+      visual_keywords: ["lake path", "sun", "wind", "controlled breathing", "real effort", "environment context"],
       avoid: ["medical emergency", "fear expression", "watch close-up", "fake exhaustion"]
+    },
+    "watch-checking anxiety": {
+      theme: "watch-checking anxiety",
+      route_tag: "forest",
+      visual_world: "forest",
+      lighting_family: APPROVED_VISUAL_WORLDS.forest.lighting_family,
+      reddit_background: candidate.exact_words || "The runner keeps checking the watch and loses the feel of the run.",
+      background: "forest running route with visible trees and path depth",
+      vibe: "focused, slightly tense, then grounded",
+      first_image_prompt_adaptation: "runner moving through a forest route with eyes forward, not checking a watch",
+      visual_keywords: ["forest", "path depth", "focused breathing", "no watch checking"],
+      avoid: ["watch close-up", "phone screen", "city street", "track lane"]
     },
     "pace disbelief": {
       theme: "pace context",
-      route_tag: "track_edge",
-      visual_world: "track edge",
-      lighting_family: "clear afternoon training light",
+      route_tag: "mountain",
+      visual_world: "mountain",
+      lighting_family: APPROVED_VISUAL_WORLDS.mountain.lighting_family,
       reddit_background: candidate.exact_words || "The runner thinks pace is wrong because the route changes.",
-      background: "track edge or flat training path where pace and effort can be compared clearly",
+      background: "mountain running route where gradient makes pace and effort feel different",
       vibe: "context changes the run, practical and grounded",
       first_image_prompt_adaptation: "runner on a clear training path, natural stride, background shows route context without changing worlds",
-      visual_keywords: ["track edge", "visible route", "natural stride", "effort over split"],
+      visual_keywords: ["mountain route", "visible gradient", "natural stride", "effort over split"],
       avoid: ["route-world switching", "watch checking", "extreme terrain"]
     },
     "workout-racing": {
       theme: "workout control",
-      route_tag: "track_edge",
-      visual_world: "track edge",
-      lighting_family: "late afternoon track light",
+      route_tag: "mountain",
+      visual_world: "mountain",
+      lighting_family: APPROVED_VISUAL_WORLDS.mountain.lighting_family,
       reddit_background: candidate.exact_words || "The runner turns workouts into races and fades late.",
-      background: "track perimeter or quiet road after intervals, runner cooling down",
+      background: "mountain route after a controlled harder effort, runner cooling down",
       vibe: "discipline, restraint, useful athletic lesson",
       first_image_prompt_adaptation: "sweaty runner after a controlled workout, satisfied but not posing, premium fitness look",
-      visual_keywords: ["post-workout", "controlled effort", "cooldown", "discipline"],
+      visual_keywords: ["mountain route", "post-workout", "controlled effort", "cooldown", "discipline"],
       avoid: ["race celebration", "sprint pose", "aggressive gym energy"]
     }
   };
 
+  const typeWorldId = canonicalWorldId(byType[candidate.problem_type]?.visual_world || defaults.visual_world);
+  const world = approvedWorldDetails(candidate.visual_world, typeWorldId);
   const merged = {
     ...defaults,
-    ...(byType[candidate.problem_type] || {})
+    ...(byType[candidate.problem_type] || {}),
+    route_tag: world.route_tag,
+    visual_world: world.visual_world,
+    lighting_family: world.lighting_family
   };
   return {
     ...merged,
-    visual_world: candidate.visual_world || merged.visual_world,
-    route_tag: candidate.route_tag || merged.route_tag,
-    lighting_family: candidate.lighting_family || merged.lighting_family
+    visual_world: world.visual_world,
+    route_tag: world.route_tag,
+    lighting_family: world.lighting_family
   };
 }
 
@@ -884,7 +938,7 @@ function buildHookBriefJson({ candidate, schema }) {
       "Do not bake overlay text into the image.",
       "Keep the full deck in one visual world and one lighting family.",
       "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
-      "Do not mix hills, lakes, and mountains in the same slideshow.",
+      "Keep one primary visual world per slideshow; lake worlds may include mountains or hills as background context.",
       "Use Supabase/curated library assets for slides 2 through the CTA slide.",
       "Composite all text locally with Sharp/Canvas."
     ]
@@ -966,6 +1020,7 @@ ${candidate.hook}
 - Required generated background: ${backgroundLock.required_background}
 - Selected avatar world: ${backgroundLock.selected_visual_world}
 - Rule: ${backgroundLock.generated_background_rule}
+- Allowed background context: ${(backgroundLock.allowed_background_context || []).join(", ") || "none"}
 - Forbidden background elements for this pack: ${(backgroundLock.forbidden_background_elements || []).join(", ") || "none beyond normal brand constraints"}
 - If the reference image background conflicts with the selected avatar world, ignore the reference background completely.
 
@@ -1017,7 +1072,7 @@ Workout phase: ${workoutPhase.label}. Capture this moment: ${workoutPhase.moment
 
 Wardrobe and running equipment for this image: ${avatarVariation.top}, ${avatarVariation.shorts}, ${avatarVariation.headwear}, and ${avatarVariation.eyewear}. The visible kit must clearly read as real running equipment: technical running fabric when a top is selected, or a believable shirtless warm-weather running look when shirtless is selected, plus proper running shorts, natural sweat, and black running glasses if eyewear appears. Avoid casual streetwear and model-like posing. If headwear is "no headwear", do not add a cap, hat, beanie, headband, or other headwear. Default to no visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
 
-Scene: ${vibe.background}. Keep the image inside the selected visual world: ${hookBrief.visual_world}. The background must visibly fit ${hookBrief.visual_world}; do not import a lake, mountain, hill, forest, gym, track, or street world unless it is explicitly the selected avatar world. The image should feel like ${vibe.vibe}. Weather: ${avatarVariation.weather}. Lighting: ${avatarVariation.lighting}. Match the deck lighting family: ${hookBrief.lighting_family}. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
+Scene: ${vibe.background}. Keep the image inside the selected visual world: ${hookBrief.visual_world}. The background must visibly fit ${hookBrief.visual_world}; do not import a different primary route world such as forest, lake, mountain, gym, track, or street unless it is explicitly the selected avatar world. If the selected world is lake, mountains or hills may appear only as distant background context while the lake remains primary. The image should feel like ${vibe.vibe}. Weather: ${avatarVariation.weather}. Lighting: ${avatarVariation.lighting}. Match the deck lighting family: ${hookBrief.lighting_family}. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
 
 Composition: ${avatarVariation.angle}, no face distortion, no watch-checking pose, no hands-on-hips hero pose, no exaggerated emotion. Show the viewer emotion as ${hookBrief.emotion} through body language and scene tension, not facial acting. Leave clean center/lower-middle negative space for the hook overlay.
 
@@ -1026,7 +1081,7 @@ photorealistic athletic male runner, lean muscular endurance-athlete build, masc
 
 ## Negative Constraints
 Avoid: ${vibe.avoid.join(", ")}.
-Do not mix hills, lakes, and mountains. Do not change the route/world from ${hookBrief.visual_world}.
+Do not change the primary route/world from ${hookBrief.visual_world}. Lake decks may include mountains or hills in the background only when the lake path remains the clear primary world.
 No text, no watermark, no brand logos, no Apple Watch, no Garmin watch, no smartwatch, no GPS watch, no readable watch UI, no app UI, no extra limbs, no distorted hands, no fake steam, no blurred-out background.
 `;
 }
