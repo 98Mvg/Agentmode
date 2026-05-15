@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "hook": "Your easy run is too hard",
+  "problem_id": "rp_heart_rate_too_high_for_slow_pace",
+  "problem_type": "heart-rate panic",
+  "source_url": "inputs/research/reddit-winning-language-bank.md",
+  "source_problem": "A high heart rate does not automatically mean you failed the run.",
+  "exact_reddit_language": "My heart rate looks too high for how slow I run.",
+  "emotion": "embarrassed",
+  "pattern": "number anxiety",
+  "format_id": "heart_rate_training_myths",
+  "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "hook_source": {
+    "hook": "Your easy run is too hard",
+    "source_family_id": "proper_easy_run",
+    "source_signal": "relevant easy-run format",
+    "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+    "why_it_works": "simple instruction shape from source-backed TikTok hook (relevant easy-run format)."
+  },
+  "slide_text_source": {
+    "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "slide_set_id": "heart_rate_easy_run_simple",
+    "source_family_ids": [
+      "proper_easy_run",
+      "zone_2_reality"
+    ]
+  },
+  "hook_quality": {
+    "hook": "Your easy run is too hard",
+    "score": 58,
+    "max_score": 70,
+    "min_score": 52,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 3,
+      "simplicity": 10,
+      "emotional_relatability": 9,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 6,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 6,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 6 words; bank family proper_easy_run; pain 10/10; curiosity 3/10; simplicity 10/10; passes quality gate"
+  },
+  "theme": "heart-rate panic",
+  "route_tag": "open_city_park_path",
+  "visual_world": "open city park path",
+  "lighting_family": "bright natural daylight",
+  "cta": "Save this before judging one run.",
+  "avatar_world_required": true,
+  "avatar_source": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "viral_face_style_reference": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "cta_required": true,
+  "reddit_background_and_vibe": {
+    "background": "open city park path with light environmental stress such as sun or wind",
+    "vibe": "tense but grounded, useful correction, not alarmist",
+    "reddit_background": "My heart rate looks too high for how slow I run.",
+    "visual_keywords": [
+      "sun",
+      "wind",
+      "controlled breathing",
+      "real effort",
+      "environment context"
+    ],
+    "avoid": [
+      "medical emergency",
+      "fear expression",
+      "watch close-up",
+      "fake exhaustion"
+    ]
+  },
+  "background_world_lock": {
+    "selected_visual_world": "open city park path",
+    "required_background": "open city park path with light environmental stress such as sun or wind",
+    "reference_background_policy": "Reference image controls runner appearance only; its original background is non-transferable.",
+    "generated_background_rule": "Generate a new open city park path background that matches the deck visual world and lighting family.",
+    "forbidden_background_elements": [
+      "lake",
+      "lakeside",
+      "large water background",
+      "mountain",
+      "large hill backdrop",
+      "dense forest route",
+      "track lane or stadium",
+      "gym or treadmill background"
+    ]
+  },
+  "first_image_prompt_adaptation": "runner in controlled motion with visible sweat and focused breathing, scene should explain why effort can rise",
+  "character_anchor": {
+    "identity_id": "watch_stole_the_run_runner_v1",
+    "reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+    "style_reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+    "stable_traits": [
+      "use the 2026-04-26 watch-stole-the-run runner as the primary appearance anchor",
+      "male runner, age 25-35",
+      "lean muscular endurance-athlete build",
+      "tan complexion",
+      "short dark slightly textured hair",
+      "serious calm focused expression",
+      "realistic sweat on face and shirt",
+      "sharp cheek and brow detail from the 2026-04-26 watch-stole-the-run look",
+      "fitted black or dark performance kit as the default visual language",
+      "shirtless warm-weather running is allowed as an occasional real-run variation",
+      "natural outdoor running context"
+    ],
+    "variation_policy": "Use the 2026-04-26 watch-stole-the-run runner as the primary appearance reference, not the cleaner park-portrait avatar. Keep the sharper face, sweat, and serious human expression. Dark technical running kit is the default, but shirtless warm-weather running is allowed as an occasional real-run variation with black shorts and believable sweat. Rotate workout phase, route, weather, light, and camera angle per pack. Avoid model-like posing. Default to no headwear; use caps/headbands only occasionally so every video does not look the same. If eyewear is selected, it must be black running glasses.",
+    "watch_rule": "Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses.",
+    "selected_variation_id": "navy_long_sleeve_charcoal_side_no_headwear"
+  },
+  "workout_phase": {
+    "id": "during_workout",
+    "label": "during-workout",
+    "moment": "runner in the middle of the session with steady controlled effort",
+    "body_language": "natural stride, consistent cadence, focused breathing, no stutter step or unnatural turn",
+    "prompt_cue": "show the runner moving naturally during the run with visible route context and believable motion"
+  },
+  "avatar_variation": {
+    "id": "navy_long_sleeve_charcoal_side_no_headwear",
+    "watch": "no visible watch",
+    "top": "navy fitted long-sleeve performance shirt",
+    "headwear": "no headwear",
+    "eyewear": "no glasses",
+    "shorts": "charcoal running shorts",
+    "angle": "side-tracking action angle with natural arm swing",
+    "weather": "clear dry training conditions",
+    "lighting": "bright natural daylight"
+  },
+  "prompt_compiler": {
+    "version": 1,
+    "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    "selected_by": "problem_type_mapping",
+    "coherence_status": "passed",
+    "conflict_patterns": [],
+    "checks": [
+      "single workout phase selected before prompt generation",
+      "avatar lighting normalized to deck lighting family",
+      "weather normalized to selected lighting family",
+      "reference image background locked out of generated avatar world",
+      "hook image remains slide-1-only",
+      "base image remains text-free for local Sharp/Canvas overlay"
+    ]
+  },
+  "schema_prompt_template": "photorealistic athletic runner in {scene}, natural route, premium but believable, clean center space for headline",
+  "production_rules": [
+    "Every slideshow has an explicit emotion, one Images 2.0 hook, one generated avatar world, and one final CTA.",
+    "Slide hook and slides 1-6 should use the source-backed TikTok slideshow text bank before any generic AI wording.",
+    "Images 2.0 generates slide 1 only.",
+    "Do not generate all slideshow images in one Images 2.0 request.",
+    "Do not bake overlay text into the image.",
+    "Keep the full deck in one visual world and one lighting family.",
+    "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
+    "Do not mix hills, lakes, and mountains in the same slideshow.",
+    "Use Supabase/curated library assets for slides 2 through the CTA slide.",
+    "Composite all text locally with Sharp/Canvas."
+  ]
+}

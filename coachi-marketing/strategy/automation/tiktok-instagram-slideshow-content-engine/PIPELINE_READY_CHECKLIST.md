@@ -201,16 +201,15 @@ npm run slideshow:openai-hook -- \
   --pack content/slideshows/YYYY-MM-DD-slug
 ```
 
-Default TikTok hook generation uses two references:
+Default TikTok hook generation uses the stronger `watch-stole-the-run` runner as the primary appearance reference:
 
 ```bash
 npm run slideshow:openai-hook -- \
   --pack content/slideshows/YYYY-MM-DD-slug \
-  --reference-image content/ads/reference/organic-runner-face-v2-reference.png \
-  --style-reference-image content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png
+  --reference-image content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png
 ```
 
-The production pipeline, queue worker, and direct `slideshow:openai-hook -- --pack ...` command add those two references automatically when generating hooks.
+The production pipeline, queue worker, and direct `slideshow:openai-hook -- --pack ...` command add that reference automatically when generating hooks. The clean park-portrait avatar is legacy fallback only.
 
 The OpenAI hook generator uses the OpenClaw key source first (`OPENCLAW_OPENAI_API_KEY_FILE` or `~/.openclaw/secrets/openai-api-key`), then falls back to `OPENAI_API_KEY`, marketing `.env`, app repo `.env`, or the local OpenClaw context file. It writes `slides/source/01-hook.png` and `source/hook-provenance.json` without printing the key.
 

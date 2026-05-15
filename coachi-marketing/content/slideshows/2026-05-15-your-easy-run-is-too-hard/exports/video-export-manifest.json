@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-15T08:34:41.164Z",
+  "source_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard",
+  "output_mode": "mp4_fallback_with_music",
+  "primary_upload_mode": "photo_carousel",
+  "video_file": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/exports/2026-05-15-your-easy-run-is-too-hard-tiktok-instagram-music.mp4",
+  "slide_count": 7,
+  "slide_seconds": 2.2,
+  "audio": {
+    "type": "original_local_synth_music_bed",
+    "generated_with": "ffmpeg lavfi aevalsrc",
+    "rights_note": "Generated locally for this export; no external music asset used."
+  }
+}

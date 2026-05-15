@@ -108,7 +108,7 @@
     {
       "id": "organic_runner_male_v2",
       "status": "approved_reference",
-      "description": "Photorealistic athletic male runner, lean muscular endurance-athlete build, tan complexion, short dark slightly textured hair, realistic sweat, serious calm focused expression, same face family across posts, stronger 2026-04-26 watch-stole-the-run viral face style, rotating realistic runner kit.",
+      "description": "Photorealistic athletic male runner based primarily on the 2026-04-26 watch-stole-the-run appearance: lean muscular endurance-athlete build, tan complexion, short dark slightly textured hair, realistic sweat, serious calm focused expression, darker technical kit, rotating realistic runner context.",
       "continuity_rules": [
         "same face family across daily running visuals",
         "same tan complexion, short dark textured hair, lean muscular endurance build, and stronger cinematic face detail",
@@ -116,17 +116,19 @@
         "rotate pre-workout, during-workout, and post-workout moments across posts",
         "rotate top, headwear, eyewear, shorts, route, weather, lighting, and camera angle",
         "watches are disabled by default; watch-anxiety hooks may include one small unbranded sports watch, but never readable UI, close-ups, or watch-checking poses",
+        "reference image controls runner appearance only; regenerate the background to match the selected avatar world",
         "no exaggerated model posing",
         "avoid static hands-on-hips hero posing unless the topic specifically needs it",
         "avoid distorted hands, knees, ankles, watch-checking poses, readable watch UI, or watch close-ups",
-        "prefer the 2026-04-26 watch-stole-the-run face/style direction over the too-clean park-portrait look for slideshow hook images"
+        "use the 2026-04-26 watch-stole-the-run face/style direction as the primary slideshow hook appearance",
+        "do not use the clean park-portrait avatar as the default hook identity"
       ],
       "reference_paths": [
+        "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
         "content/ads/reference/organic-runner-face-v2-reference.png",
-        "content/ads/reference/organic-runner-face-v1-full.png",
-        "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png"
+        "content/ads/reference/organic-runner-face-v1-full.png"
       ],
-      "prompt_anchor": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic",
+      "prompt_anchor": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit by default, shirtless warm-weather running allowed occasionally when it reads like a real run, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic",
       "workout_phase_rotation_policy": {
         "phase_variants": [
           "pre-workout preparation with light warmup movement and route visible",

@@ -5,7 +5,8 @@ Use this as the default organic runner identity for Coachi TikTok and Instagram 
 ## Reference Assets
 - Full screenshot reference: `content/ads/reference/organic-runner-face-v1-full.png`
 - Cropped face reference: `content/ads/reference/organic-runner-face-v1-crop.png`
-- Current clean synthetic face reference: `content/ads/reference/organic-runner-face-v2-reference.png`
+- Legacy clean synthetic face reference: `content/ads/reference/organic-runner-face-v2-reference.png`
+- Current slideshow appearance reference: `content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png`
 
 ## Locked Identity
 - male runner
@@ -19,11 +20,11 @@ Use this as the default organic runner identity for Coachi TikTok and Instagram 
 ## New Default
 The runner face can be visible. The priority is that the face stays consistent across videos.
 
-Use `content/ads/reference/organic-runner-face-v2-reference.png` as the primary `reference_image_assets` entry in new Veo specs whenever the runner face is visible.
+Use `content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png` as the primary appearance reference for TikTok/Instagram slideshow hook images. The old clean park-portrait reference is only a fallback when explicitly requested.
 
-For TikTok/Instagram slideshow hook images, the cleaner face reference should not make the output too static or polished. Use `content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png` as the preferred style reference for the stronger viral face direction: fitted black kit, visible sweat, sharper cheek/brow detail, cinematic warm contrast, and a serious human expression.
+The desired default is the stronger viral face direction: fitted black kit, visible sweat, sharper cheek/brow detail, cinematic warm contrast, and a serious human expression.
 
-Borrow the face/style energy only. Do not copy its mixed lake/mountain world, hands-on-hips pose, or visible watch unless the concept explicitly needs watch anxiety.
+Borrow the face/style energy only. The reference background is non-transferable: always regenerate the background to match the current avatar world / visual world. Do not copy its mixed lake/mountain world, hands-on-hips pose, or visible watch unless the concept explicitly needs watch anxiety.
 
 ## Motion Rules
 - one continuous running clip
@@ -44,7 +45,7 @@ Vary these every video:
 - camera angle
 - route/background
 - clothes
-- headwear
+- headwear only occasionally; no hat/no cap should be the default
 - eyewear
 - shorts color
 - weather
@@ -81,23 +82,21 @@ Exception: if the hook is explicitly about watch anxiety, one small unbranded sp
 
 Allowed clothing rotation:
 - black fitted short-sleeve running shirt
-- white lightweight running singlet
+- black lightweight running singlet
 - navy fitted long-sleeve performance shirt
-- heather grey performance t-shirt
+- charcoal performance t-shirt
 - olive sleeveless running top
-- cream lightweight long-sleeve running shirt
-- shirtless warm-weather running look
+- black lightweight long-sleeve running shirt
+- shirtless warm-weather running look, only when it feels like a real warm run or cooldown rather than a posed fitness shoot
 
 Allowed accessory rotation:
-- no hat
-- black running cap
-- white running cap
-- grey trail cap
-- thin black running headband
-- no glasses
-- dark sport sunglasses
-- brown sport sunglasses
-- clear running glasses
+- default: no hat, no cap, no headwear
+- occasional: black running cap
+- occasional: white running cap
+- occasional: grey trail cap
+- occasional: thin black running headband
+- default: no glasses
+- occasional: black running glasses
 
 Allowed shorts rotation:
 - black split shorts

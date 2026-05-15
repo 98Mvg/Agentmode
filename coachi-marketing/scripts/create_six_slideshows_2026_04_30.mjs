@@ -10,8 +10,8 @@ const SUMMARY_PATH = path.join(ROOT, "outputs/daily/2026-04-30-six-slideshows.md
 const USAGE_LOG_PATH = path.join(ROOT, "content/slideshows/visual-library/usage-log.json");
 const SUPABASE_MANIFEST_PATH = path.join(ROOT, "content/slideshows/visual-library/supabase-library-manifest.json");
 const COACHI_AVATAR_ASSET_ID = "coachi_ai_avatar_001";
-const COACHI_AVATAR_SOURCE = "content/ads/reference/organic-runner-face-v2-reference.png";
 const VIRAL_FACE_STYLE_REFERENCE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const COACHI_AVATAR_SOURCE = VIRAL_FACE_STYLE_REFERENCE;
 const VIRAL_TEXT_BANK_PATH = "inputs/research/coachi-viral-hooks-and-text-bank-2026-04-30.md";
 const GENERATE_CONTEXTUAL_HOOKS = process.argv.includes("--generate-hooks");
 const ONLY_SLUGS = new Set(process.argv.flatMap((arg, index, argv) => arg === "--only" && argv[index + 1] ? [argv[index + 1]] : []));
@@ -40,15 +40,15 @@ const packs = [
     ctaAsset: "cta_ending_005",
     slides: [
       "Easy runs fail slowly",
-      "One small surge.",
-      "Then one more.",
+      "You speed up once.",
+      "Then again.",
       "The whole run changes.",
       "Catch it early.",
       "Keep easy cheap.",
       "Save this for your next run."
     ],
-    tiktokCaption: "Easy runs fail slowly.\n\nIt starts as one small surge. Then one more. Then the whole run changes. Catch it early.",
-    instagramCaption: "Easy runs fail slowly.\n\nIt starts as one small surge. Then one more. Then the whole run changes. Catch it early."
+    tiktokCaption: "Easy runs fail slowly.\n\nIt starts when you speed up once. Then again. Then the whole run changes. Catch it early.",
+    instagramCaption: "Easy runs fail slowly.\n\nIt starts when you speed up once. Then again. Then the whole run changes. Catch it early."
   },
   {
     slug: "2026-04-30-your-watch-needs-context",
@@ -348,10 +348,17 @@ function hookBrief(pack) {
       visual_keywords: [pack.visualWorld, pack.lighting, "consistent lighting", "single visual world"],
       avoid: ["mixed hills lakes mountains", "watch close-up", "baked-in text", "logos", "overdramatic lighting"]
     },
-    first_image_prompt_adaptation: "Use the locked Coachi AI avatar as the identity reference, but generate a new contextual hook image for this slideshow.",
+    background_world_lock: {
+      selected_visual_world: pack.visualWorld,
+      required_background: pack.visualWorld,
+      reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
+      generated_background_rule: `Generate a new ${pack.visualWorld} background that matches this deck visual world and lighting family.`,
+      forbidden_background_elements: ["lake or lakeside world unless selected", "mountain or large hill backdrop unless selected", "track/gym/forest world unless selected"]
+    },
+    first_image_prompt_adaptation: "Use the 2026-04-26 watch-stole-the-run runner as the primary appearance reference, but generate a new contextual hook image for this slideshow.",
     character_anchor: {
-      identity_id: "organic_runner_male_v2",
-      reference_image: "content/ads/reference/organic-runner-face-v2-reference.png",
+      identity_id: "watch_stole_the_run_runner_v1",
+      reference_image: VIRAL_FACE_STYLE_REFERENCE,
       stable_traits: [
         "male runner, age 25-35",
         "lean muscular endurance-athlete build",
@@ -359,9 +366,11 @@ function hookBrief(pack) {
         "short dark slightly textured hair",
         "serious calm focused expression",
         "visible realistic sweat and high-detail skin texture",
-        "stronger cinematic fitness-editorial face like 2026-04-26-watch-stole-the-run"
+        "stronger cinematic fitness-editorial face from 2026-04-26-watch-stole-the-run",
+        "dark technical running kit as the default visual language",
+        "shirtless warm-weather running allowed as an occasional real-run variation"
       ],
-      variation_policy: "Preserve the same face family, hair, complexion, and believable runner build, but prefer the stronger viral face style from 2026-04-26-watch-stole-the-run over the cleaner park-portrait look. Vary scene, kit, angle, and workout moment to match the slideshow context.",
+      variation_policy: "Use the 2026-04-26 watch-stole-the-run runner as the primary appearance reference, not the cleaner park-portrait avatar. Vary scene, kit, angle, and workout moment to match the slideshow context while keeping the sharper face, sweat, and serious expression. Dark technical running kit is the default, but shirtless warm-weather running is allowed occasionally when it reads like a real run, not a model pose. If eyewear is selected, it must be black running glasses.",
       watch_rule: "Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses."
     },
     workout_phase: {
@@ -375,7 +384,7 @@ function hookBrief(pack) {
       watch: "no visible watch",
       top: pack.hookKit,
       headwear: "optional low-profile running cap",
-      eyewear: "no glasses unless already natural in the source image",
+      eyewear: "no glasses unless black running glasses are natural in the source image",
       shorts: pack.hookKit,
       angle: pack.hookAngle,
       weather: "stable mild outdoor weather",
@@ -388,8 +397,7 @@ function hookPrompt(pack) {
   return `# Images 2.0 Hook Prompt
 
 Production rule: generate exactly ONE image for slide 1, and only slide 1.
-Use the locked Coachi AI avatar reference only as the identity anchor.
-Use the 2026-04-26 watch-stole-the-run hook image only as the stronger viral face/style reference.
+Use the 2026-04-26 watch-stole-the-run hook image as the primary Coachi runner appearance reference.
 Do not generate slides 2-7 with Images 2.0.
 Do not create a different runner identity.
 Do not create an 8-slide deck.
@@ -406,8 +414,8 @@ ${pack.hook}
 - Emotion: ${pack.emotion}
 - Selected visual world: ${pack.visualWorld}
 - Lighting family: ${pack.lighting}
-- Slide 1: new context-based image using the locked Coachi AI avatar identity.
-- Viral face direction: borrow the stronger 2026-04-26 watch-stole-the-run face style: fitted black kit, visible sweat, sharp facial detail, cinematic contrast, serious human expression, premium but believable fitness-editorial feel.
+- Slide 1: new context-based image using the 2026-04-26 watch-stole-the-run runner appearance.
+- Viral face direction: keep the stronger 2026-04-26 watch-stole-the-run face style: fitted black kit, visible sweat, sharp facial detail, cinematic contrast, serious human expression, premium but believable fitness-editorial feel.
 - Slide 3: exactly one details/emotion slide from \`details_emotion\`.
 - Slide 7: exactly one CTA slide from \`cta_ending\`.
 - Details/emotion and CTA are slide roles/collections, not visual worlds.
@@ -420,20 +428,27 @@ ${pack.hook}
 ## Avatar Variation For This Image
 - Watch: no visible watch
 - Kit: ${pack.hookKit}
+- Running equipment: real technical running equipment, not casual streetwear. If glasses appear, they must be black running glasses. No brand logos.
 - Camera angle: ${pack.hookAngle}
 - Lighting: ${pack.lighting}
 - Watch rule: No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
 
+## Background World Lock
+- Reference image background is non-transferable.
+- Use the reference image for runner face, body type, sweat, expression, and visual energy only.
+- Required generated background: ${pack.visualWorld}
+- If the reference image background conflicts with ${pack.visualWorld}, ignore the reference background completely.
+
 ## Final Prompt To Use
 Create one photorealistic vertical 9:16 hook image for a TikTok/Instagram running coaching slideshow.
 
-Use the provided clean Coachi avatar reference image to preserve the same face family: tan complexion, short dark textured hair, lean muscular endurance-runner build, serious calm focused presence, and believable everyday runner look. Generate a new scene; do not copy the original park portrait.
-
-Use the 2026-04-26 watch-stole-the-run hook image as the viral face/style reference only: stronger angular face detail, fitted black performance kit, realistic sweat on face and shirt, cinematic golden-hour contrast, shallow depth of field, premium fitness editorial look, human relief/frustration instead of a bland stock expression. Do not copy its lake/mountain background, hands-on-hips pose, or visible watch unless this exact pack is about watch anxiety.
+Use the 2026-04-26 watch-stole-the-run hook image as the primary Coachi runner appearance reference: tan complexion, short dark textured hair, lean muscular endurance-runner build, serious calm focused presence, stronger angular face detail, fitted black performance kit, realistic sweat on face and shirt, cinematic golden-hour contrast, shallow depth of field, premium fitness editorial look, and human relief/frustration instead of a bland stock expression. Generate a new scene in ${pack.visualWorld}. The reference image background is not part of the identity; do not copy its lake/mountain background, hands-on-hips pose, or visible watch unless this exact pack is about watch anxiety.
 
 Scene: ${pack.hookScene}
 
-Visual world lock: ${pack.visualWorld}. Keep this as one route/world only. Do not mix hills, lakes, and mountains in the same image.
+Running equipment: the visible kit must clearly read as real running equipment: technical running fabric, proper running shorts, natural sweat, and black running glasses if eyewear appears. Avoid casual streetwear and visible brand logos.
+
+Visual world lock: ${pack.visualWorld}. Keep this as one route/world only. The background must visibly fit ${pack.visualWorld}; do not import a lake, mountain, hill, forest, gym, track, or street world unless it is explicitly the selected visual world. Do not mix hills, lakes, and mountains in the same image.
 
 Lighting: ${pack.lighting}. Match the lighting family so the image can sit beside the rest of the slideshow.
 

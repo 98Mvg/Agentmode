@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-05-15T08:34:14.630Z",
+  "picklist": "content/slideshows/2026-05-15-your-easy-run-is-too-hard/asset-picklist.json",
+  "prefer_remote": false,
+  "dry_run": false,
+  "results": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "status": "manual_images_2_0_required",
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/01-hook.png",
+      "prompt_hint": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit by default, shirtless warm-weather running allowed occasionally when it reads like a real run, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic. realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat. photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "status": "materialized",
+      "selected_asset_id": "nature_context_005",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/02-setup.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg"
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "status": "materialized",
+      "selected_asset_id": "details_emotion_008",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_008-alessio-pieruccii.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/03-value.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_008-alessio-pieruccii.jpg"
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "status": "materialized",
+      "selected_asset_id": "details_emotion_009",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/04-value.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg"
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "status": "materialized",
+      "selected_asset_id": "nature_context_006",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/05-value.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg"
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "status": "materialized",
+      "selected_asset_id": "nature_context_007",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/06-coachi-connection.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg"
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "status": "materialized",
+      "selected_asset_id": "cta_ending_002",
+      "selected_source_rights": "approved",
+      "selected_source_kind": "local",
+      "selected_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg",
+      "fallback_reason": null,
+      "selected_supabase_asset": false,
+      "expected_input_image": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-15-your-easy-run-is-too-hard/slides/source/07-cta.png",
+      "supabase_public_url": null,
+      "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg"
+    }
+  ],
+  "usage_log_update": {
+    "path": "content/slideshows/visual-library/usage-log.json",
+    "appended_uses": 6,
+    "slideshow_id": "2026-05-15-your-easy-run-is-too-hard"
+  }
+}

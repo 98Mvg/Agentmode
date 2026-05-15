@@ -149,10 +149,10 @@ npm run slideshow:openai-hook -- \
 ```
 
 Default TikTok slideshow hook standard:
-- identity reference: `content/ads/reference/organic-runner-face-v2-reference.png`
-- viral face/style reference: `content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png`
+- primary appearance reference: `content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png`
+- legacy clean avatar reference: `content/ads/reference/organic-runner-face-v2-reference.png` only for manual fallback, not default hook generation
 
-Production automation and direct `slideshow:openai-hook -- --pack ...` calls pass both references automatically. This keeps the Coachi face family consistent while using the stronger `watch-stole-the-run` look: darker kit, visible sweat, sharper face detail, cinematic contrast, and a more human scroll-stopping expression.
+Production automation and direct `slideshow:openai-hook -- --pack ...` calls use the stronger `watch-stole-the-run` runner as the default appearance anchor: darker kit, visible sweat, sharper face detail, cinematic contrast, and a more human scroll-stopping expression. Do not fall back to the cleaner park-portrait avatar unless explicitly requested.
 
 The generator uses the OpenClaw key source first (`OPENCLAW_OPENAI_API_KEY_FILE` or `~/.openclaw/secrets/openai-api-key`), then falls back to `OPENAI_API_KEY`, the marketing `.env`, the app repo `.env`, or the local OpenClaw context file. It writes:
 

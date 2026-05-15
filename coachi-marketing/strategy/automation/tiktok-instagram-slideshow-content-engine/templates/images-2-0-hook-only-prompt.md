@@ -20,10 +20,10 @@ Viewer emotion:
 <confused / frustrated / anxious / skeptical / embarrassed / curious / annoyed>
 
 Runner identity:
-Same organic Coachi runner face family across posts, but use the stronger `2026-04-26-watch-stole-the-run-8-slide` visual direction as the default viral face style: photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, serious calm focused expression, visible realistic sweat on face and shirt, sharp cheek/brow detail, fitted black or dark performance kit, believable everyday runner look, premium fitness-editorial aesthetic.
+Use the `2026-04-26-watch-stole-the-run-8-slide` runner as the primary Coachi appearance anchor: photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, serious calm focused expression, visible realistic sweat on face and shirt, sharp cheek/brow detail, fitted black or dark performance kit by default, believable everyday runner look, premium fitness-editorial aesthetic. Shirtless warm-weather running is allowed occasionally when it reads like a real run, not a model pose. Do not use the cleaner park-portrait avatar as the default appearance.
 
 Avatar world rule:
-Place the generated Coachi runner avatar inside the selected visual world only. The lighting, weather, route type, and mood should be reusable for slides 2-7. Do not include hills, lakes, and mountains in the same image or imply a different world than the rest of the slideshow.
+Place the generated Coachi runner avatar inside the selected visual world only. The reference image controls runner appearance only; its original background is non-transferable. The lighting, weather, route type, and mood should be regenerated to match slides 2-7. Do not include hills, lakes, mountains, gym, track, city street, or forest elements unless they are explicitly part of the selected visual world. If the reference image background conflicts with the selected visual world, ignore the reference background completely.
 
 Workout Phase:
 Rotate the moment in the workout while keeping it realistic:
@@ -34,12 +34,13 @@ Rotate the moment in the workout while keeping it realistic:
 Avatar Variation:
 Keep face, hair, complexion, and body type stable. Rotate the visible kit per slideshow:
 - Watch: default no visible watch. If the concept is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, watch close-up, or watch-checking pose. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, or branded watch details.
-- Top: black fitted tee, white singlet, navy long-sleeve, grey performance tee, olive sleeveless top, cream long-sleeve, or shirtless warm-weather running look.
-- Headwear: none, black running cap, white running cap, grey trail cap, or thin running headband.
-- Eyewear: none, dark sport sunglasses, brown sport sunglasses, or clear running glasses.
+- Top: black fitted tee, black singlet, navy long-sleeve, charcoal performance tee, olive sleeveless top, black long-sleeve, or shirtless warm-weather running look.
+- Headwear: default none. Use black running cap, white running cap, grey trail cap, or thin running headband only occasionally; do not put cap/headwear on every hook image.
+- Eyewear: none or black running glasses. If glasses appear, they must be black running glasses.
 - Shorts: black, charcoal, cobalt blue, forest green, navy, dark green, or burnt orange running shorts.
 - Angle: medium-close three-quarter, side-tracking, side/back, waist-up cooldown, low trail angle, or wider route-depth angle.
 - Conditions: rotate weather and lighting while keeping the scene realistic.
+- Running equipment: the runner should look properly equipped for a real run, not casual streetwear. Show technical running fabric, running shorts, natural sweat, and black running glasses only when eyewear is selected. Do not add headwear unless explicitly selected. Avoid brand logos.
 
 Style:
 Photorealistic, premium but believable, natural light, realistic running route, cinematic contrast, shallow depth of field, high-detail sweaty face, no stock-photo polish. Match the selected emotion without exaggerated facial acting.

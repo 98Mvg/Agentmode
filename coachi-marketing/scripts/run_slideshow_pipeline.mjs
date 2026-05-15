@@ -18,8 +18,9 @@ const ENGINE_DIR = "strategy/automation/tiktok-instagram-slideshow-content-engin
 const SCHEMA_DIR = `${ENGINE_DIR}/schemas`;
 const DEFAULT_OUTPUT_ROOT = "content/slideshows";
 const DEFAULT_TOPIC_OUT = "outputs/daily";
-const DEFAULT_HOOK_REFERENCE_IMAGE = "content/ads/reference/organic-runner-face-v2-reference.png";
-const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const WATCH_STOLE_THE_RUN_HOOK_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const DEFAULT_HOOK_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
+const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
 const DEFAULT_HASHTAGS = [
   "#running",
   "#runtok",
@@ -83,7 +84,7 @@ function printHelp() {
   node scripts/run_slideshow_pipeline.mjs --date 2026-04-27 --production --generate-openai-hook --live-schedule --schedule-platform tiktok
   node scripts/run_slideshow_pipeline.mjs --date 2026-04-27 --production --generate-openai-hook --live-schedule --schedule-platform tiktok --publish-mode direct-public
   node scripts/run_slideshow_pipeline.mjs --date 2026-04-27 --production --generate-openai-hook --live-schedule --schedule-platform tiktok --publish-mode direct-public --upload-public-media
-  node scripts/run_slideshow_pipeline.mjs --date 2026-04-27 --production --generate-openai-hook --hook-style-reference-image content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png
+  node scripts/run_slideshow_pipeline.mjs --date 2026-04-27 --production --generate-openai-hook --hook-reference-image content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png
 
 Runs the Coachi slideshow pipeline end to end:
 1. validate engine
@@ -156,12 +157,12 @@ function normalizeTextPosition(position) {
 
 const AVATAR_VARIATIONS = [
   {
-    id: "white_singlet_blue_shorts_three_quarter",
+    id: "black_singlet_black_shorts_three_quarter",
     watch: "no visible watch",
-    top: "white lightweight running singlet",
+    top: "black lightweight running singlet",
     headwear: "no hat",
     eyewear: "no glasses",
-    shorts: "cobalt blue 5-inch split shorts",
+    shorts: "black 5-inch split shorts",
     angle: "medium-close three-quarter post-run action angle",
     weather: "clear mild morning",
     lighting: "soft golden-hour side light"
@@ -178,20 +179,20 @@ const AVATAR_VARIATIONS = [
     lighting: "soft diffused daylight"
   },
   {
-    id: "grey_tee_green_shorts_side_back_no_headwear",
+    id: "charcoal_tee_black_shorts_side_back_no_headwear",
     watch: "no visible watch",
-    top: "heather grey fitted performance t-shirt",
+    top: "charcoal fitted performance t-shirt",
     headwear: "no headwear",
     eyewear: "black running glasses",
-    shorts: "forest green running shorts",
+    shorts: "black running shorts",
     angle: "side/back angle with the face partially visible and consistent",
     weather: "dry windy afternoon",
     lighting: "clean natural daylight"
   },
   {
-    id: "shirtless_black_shorts_warm_evening",
+    id: "black_short_sleeve_black_shorts_warm_evening",
     watch: "no visible watch",
-    top: "shirtless warm-weather running look",
+    top: "black fitted short-sleeve running shirt",
     headwear: "no hat",
     eyewear: "black running glasses",
     shorts: "black 5-inch running shorts",
@@ -200,12 +201,23 @@ const AVATAR_VARIATIONS = [
     lighting: "warm golden-hour light"
   },
   {
-    id: "black_tee_orange_shorts_trail_headband",
+    id: "shirtless_black_shorts_real_run_warm_weather",
+    watch: "no visible watch",
+    top: "shirtless warm-weather running look",
+    headwear: "no headwear",
+    eyewear: "black running glasses",
+    shorts: "black 5-inch running shorts",
+    angle: "medium-close real running or cooldown angle, not a posed fitness shoot",
+    weather: "warm dry training conditions",
+    lighting: "warm natural daylight"
+  },
+  {
+    id: "black_tee_charcoal_shorts_trail_headband",
     watch: "no visible watch",
     top: "black fitted short-sleeve running shirt",
     headwear: "thin black running headband",
     eyewear: "no glasses",
-    shorts: "burnt orange split shorts",
+    shorts: "charcoal split shorts",
     angle: "low three-quarter trail angle with stable natural stride",
     weather: "crisp morning after light rain",
     lighting: "soft early sunlight"
@@ -222,9 +234,9 @@ const AVATAR_VARIATIONS = [
     lighting: "bright natural morning light"
   },
   {
-    id: "cream_long_sleeve_black_shorts_close",
+    id: "black_long_sleeve_black_shorts_close",
     watch: "no visible watch",
-    top: "cream lightweight long-sleeve running shirt",
+    top: "black lightweight long-sleeve running shirt",
     headwear: "no hat",
     eyewear: "black running glasses",
     shorts: "black split shorts",
@@ -233,12 +245,12 @@ const AVATAR_VARIATIONS = [
     lighting: "clean low-angle sunlight"
   },
   {
-    id: "rust_tee_green_shorts_controlled_effort_no_headwear",
+    id: "dark_burgundy_tee_black_shorts_controlled_effort_no_headwear",
     watch: "no visible watch",
-    top: "rust red breathable running t-shirt",
+    top: "dark burgundy breathable running t-shirt",
     headwear: "no headwear",
     eyewear: "no glasses",
-    shorts: "dark green trail shorts",
+    shorts: "black trail shorts",
     angle: "side angle on the selected route with controlled effort",
     weather: "dry mild morning",
     lighting: "soft cinematic daylight"
@@ -341,9 +353,39 @@ function buildPromptCompilerReport({ candidate, theme, workoutPhase, avatarVaria
       "single workout phase selected before prompt generation",
       "avatar lighting normalized to deck lighting family",
       "weather normalized to selected lighting family",
+      "reference image background locked out of generated avatar world",
       "hook image remains slide-1-only",
       "base image remains text-free for local Sharp/Canvas overlay"
     ]
+  };
+}
+
+function backgroundWorldLockForTheme(theme) {
+  const visualWorld = String(theme.visual_world || "selected route world").trim();
+  const background = String(theme.background || visualWorld).trim();
+  const lower = visualWorld.toLowerCase();
+  const forbidden = [];
+  if (!/lake|riverside|coastal|water/.test(lower)) {
+    forbidden.push("lake", "lakeside", "large water background");
+  }
+  if (!/mountain|hill|trail/.test(lower)) {
+    forbidden.push("mountain", "large hill backdrop");
+  }
+  if (!/forest|trail/.test(lower)) {
+    forbidden.push("dense forest route");
+  }
+  if (!/track/.test(lower)) {
+    forbidden.push("track lane or stadium");
+  }
+  if (!/gym|treadmill|indoor/.test(lower)) {
+    forbidden.push("gym or treadmill background");
+  }
+  return {
+    selected_visual_world: visualWorld,
+    required_background: background,
+    reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
+    generated_background_rule: `Generate a new ${visualWorld} background that matches the deck visual world and lighting family.`,
+    forbidden_background_elements: [...new Set(forbidden)]
   };
 }
 
@@ -420,21 +462,23 @@ function pickWorkoutPhase(candidate) {
 
 function buildCharacterAnchor(avatarVariation) {
   return {
-    identity_id: "organic_runner_male_v2",
+    identity_id: "watch_stole_the_run_runner_v1",
     reference_image: DEFAULT_HOOK_REFERENCE_IMAGE,
     style_reference_image: DEFAULT_HOOK_STYLE_REFERENCE_IMAGE,
     stable_traits: [
-      "same face family across all Coachi organic running visuals",
+      "use the 2026-04-26 watch-stole-the-run runner as the primary appearance anchor",
       "male runner, age 25-35",
       "lean muscular endurance-athlete build",
       "tan complexion",
       "short dark slightly textured hair",
       "serious calm focused expression",
       "realistic sweat on face and shirt",
-      "sharper cheek and brow detail in the stronger 2026-04-26 watch-stole-the-run style",
+      "sharp cheek and brow detail from the 2026-04-26 watch-stole-the-run look",
+      "fitted black or dark performance kit as the default visual language",
+      "shirtless warm-weather running is allowed as an occasional real-run variation",
       "natural outdoor running context"
     ],
-    variation_policy: "Keep the Coachi face family stable, but prefer the stronger 2026-04-26 watch-stole-the-run viral face/style direction over the too-clean park-portrait look. Rotate workout phase, top, eyewear, shorts, weather, light, and camera angle per pack. Default to no headwear; use caps/headbands only occasionally so every video does not look the same. If eyewear is selected, it must be black running glasses.",
+    variation_policy: "Use the 2026-04-26 watch-stole-the-run runner as the primary appearance reference, not the cleaner park-portrait avatar. Keep the sharper face, sweat, and serious human expression. Dark technical running kit is the default, but shirtless warm-weather running is allowed as an occasional real-run variation with black shorts and believable sweat. Rotate workout phase, route, weather, light, and camera angle per pack. Avoid model-like posing. Default to no headwear; use caps/headbands only occasionally so every video does not look the same. If eyewear is selected, it must be black running glasses.",
     watch_rule: "Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses.",
     selected_variation_id: avatarVariation.id
   };
@@ -825,6 +869,7 @@ function buildHookBriefJson({ candidate, schema }) {
       visual_keywords: theme.visual_keywords,
       avoid: theme.avoid
     },
+    background_world_lock: backgroundWorldLockForTheme(theme),
     first_image_prompt_adaptation: theme.first_image_prompt_adaptation,
     character_anchor: buildCharacterAnchor(avatarVariation),
     workout_phase: workoutPhase,
@@ -838,6 +883,7 @@ function buildHookBriefJson({ candidate, schema }) {
       "Do not generate all slideshow images in one Images 2.0 request.",
       "Do not bake overlay text into the image.",
       "Keep the full deck in one visual world and one lighting family.",
+      "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
       "Do not mix hills, lakes, and mountains in the same slideshow.",
       "Use Supabase/curated library assets for slides 2 through the CTA slide.",
       "Composite all text locally with Sharp/Canvas."
@@ -861,6 +907,10 @@ function buildImages20Prompt({ schema, candidate, hookBrief }) {
   const characterAnchor = hookBrief.character_anchor;
   const workoutPhase = hookBrief.workout_phase;
   const avatarVariation = hookBrief.avatar_variation;
+  const backgroundLock = hookBrief.background_world_lock || backgroundWorldLockForTheme({
+    visual_world: hookBrief.visual_world,
+    background: vibe.background
+  });
   return `# Images 2.0 Hook Prompt
 
 Production rule: generate exactly ONE image for slide 1.
@@ -910,6 +960,15 @@ ${candidate.hook}
 - Reddit-derived background: ${vibe.reddit_background}
 - Visual keywords: ${vibe.visual_keywords.join(", ")}
 
+## Background World Lock
+- Reference image background is non-transferable.
+- Use the reference image for runner face, body type, sweat, expression, and visual energy only.
+- Required generated background: ${backgroundLock.required_background}
+- Selected avatar world: ${backgroundLock.selected_visual_world}
+- Rule: ${backgroundLock.generated_background_rule}
+- Forbidden background elements for this pack: ${(backgroundLock.forbidden_background_elements || []).join(", ") || "none beyond normal brand constraints"}
+- If the reference image background conflicts with the selected avatar world, ignore the reference background completely.
+
 ## First Image Prompt Adapted To Theme
 ${hookBrief.first_image_prompt_adaptation}
 
@@ -919,6 +978,7 @@ ${hookBrief.first_image_prompt_adaptation}
 - Avatar world: generated Coachi runner avatar in ${hookBrief.visual_world}
 - CTA: final slide only, one simple action
 - Visual consistency: slides 2-7 must stay in ${hookBrief.visual_world} with ${hookBrief.lighting_family}
+- Background rule: slide 1 must use a newly generated ${hookBrief.visual_world} background, not the reference image background.
 
 ## Character Continuity Anchor
 - Identity ID: ${characterAnchor.identity_id}
@@ -939,7 +999,7 @@ ${hookBrief.first_image_prompt_adaptation}
 - Headwear: ${avatarVariation.headwear}
 - Eyewear: ${avatarVariation.eyewear}
 - Shorts: ${avatarVariation.shorts}
-- Running equipment rule: visible kit must read as real running equipment, not casual streetwear. Use technical running clothing, running shorts, realistic sweat, and black running glasses if eyewear appears. Do not add headwear unless explicitly selected. No brand logos.
+- Running equipment rule: visible kit must read as real running equipment, not casual streetwear. Use technical running clothing when a top is selected, or a believable shirtless warm-weather running look when shirtless is selected. Always use proper running shorts, realistic sweat, and black running glasses if eyewear appears. Do not add headwear unless explicitly selected. No brand logos.
 - Camera angle: ${avatarVariation.angle}
 - Weather: ${avatarVariation.weather}
 - Lighting: ${avatarVariation.lighting}
@@ -951,13 +1011,13 @@ ${imagePrompt}
 ## Final Prompt To Use
 Create a photorealistic vertical 9:16 image of the same organic Coachi runner identity: male runner, age 25-35, lean endurance-athlete build, tan complexion, short dark slightly textured hair, calm focused expression, realistic sweat, and believable outdoor running presence.
 
-Use the clean Coachi avatar reference for identity continuity, then use the 2026-04-26 watch-stole-the-run hook image as the standard TikTok viral face/style reference: fitted dark performance kit, visible sweat on face and shirt, sharper cheek and brow detail, cinematic contrast, shallow depth of field, and serious human expression. Borrow the face/style energy only. Do not copy its lake/mountain background, hands-on-hips pose, or visible watch unless the hook is specifically about watch anxiety.
+Use the 2026-04-26 watch-stole-the-run hook image as the primary Coachi runner appearance reference: fitted dark performance kit, visible sweat on face and shirt, sharper cheek and brow detail, cinematic contrast, shallow depth of field, and serious human expression. Preserve that runner's appearance energy while adapting the route, pose, workout phase, and lighting to this pack. Do not fall back to the cleaner park-portrait avatar. The reference image background is not part of the identity. Replace it with a new ${backgroundLock.selected_visual_world} background matching this deck. Do not copy the 2026-04-26 lake/mountain background, hands-on-hips pose, or visible watch unless the hook is specifically about watch anxiety.
 
 Workout phase: ${workoutPhase.label}. Capture this moment: ${workoutPhase.moment}. Body language should show ${workoutPhase.body_language}. ${workoutPhase.prompt_cue}.
 
-Wardrobe and running equipment for this image: ${avatarVariation.top}, ${avatarVariation.shorts}, ${avatarVariation.headwear}, and ${avatarVariation.eyewear}. The visible kit must clearly read as real running equipment: technical running fabric, proper running shorts, natural sweat, and black running glasses if eyewear appears. Avoid casual streetwear. If headwear is "no headwear", do not add a cap, hat, beanie, headband, or other headwear. Default to no visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
+Wardrobe and running equipment for this image: ${avatarVariation.top}, ${avatarVariation.shorts}, ${avatarVariation.headwear}, and ${avatarVariation.eyewear}. The visible kit must clearly read as real running equipment: technical running fabric when a top is selected, or a believable shirtless warm-weather running look when shirtless is selected, plus proper running shorts, natural sweat, and black running glasses if eyewear appears. Avoid casual streetwear and model-like posing. If headwear is "no headwear", do not add a cap, hat, beanie, headband, or other headwear. Default to no visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, watch UI, watch close-up, or watch-checking pose.
 
-Scene: ${vibe.background}. Keep the image inside the selected visual world: ${hookBrief.visual_world}. The image should feel like ${vibe.vibe}. Weather: ${avatarVariation.weather}. Lighting: ${avatarVariation.lighting}. Match the deck lighting family: ${hookBrief.lighting_family}. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
+Scene: ${vibe.background}. Keep the image inside the selected visual world: ${hookBrief.visual_world}. The background must visibly fit ${hookBrief.visual_world}; do not import a lake, mountain, hill, forest, gym, track, or street world unless it is explicitly the selected avatar world. The image should feel like ${vibe.vibe}. Weather: ${avatarVariation.weather}. Lighting: ${avatarVariation.lighting}. Match the deck lighting family: ${hookBrief.lighting_family}. The runner should look like a real person in a real run moment, not a model shoot. Keep body mechanics natural. Use realistic daylight, visible background detail, and a premium fitness brand aesthetic.
 
 Composition: ${avatarVariation.angle}, no face distortion, no watch-checking pose, no hands-on-hips hero pose, no exaggerated emotion. Show the viewer emotion as ${hookBrief.emotion} through body language and scene tension, not facial acting. Leave clean center/lower-middle negative space for the hook overlay.
 

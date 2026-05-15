@@ -578,6 +578,8 @@ async function validatePromptArtifacts({ manifest, packDir }) {
   assert(hookBrief.cta_required === true, "source/hook-brief.json cta_required must be true.");
   assert(hookBrief.first_image_prompt_adaptation, "source/hook-brief.json missing first_image_prompt_adaptation.");
   assert(hookBrief.reddit_background_and_vibe?.background, "source/hook-brief.json missing reddit background/vibe.");
+  assert(hookBrief.background_world_lock?.selected_visual_world === hookBrief.visual_world, "source/hook-brief.json background_world_lock must match visual_world.");
+  assert(hookBrief.background_world_lock?.reference_background_policy, "source/hook-brief.json missing reference background policy.");
   assert(hookBrief.character_anchor?.identity_id, "source/hook-brief.json missing character_anchor.identity_id.");
   assert(hookBrief.character_anchor?.reference_image, "source/hook-brief.json missing character_anchor.reference_image.");
   assert(["pre_workout", "during_workout", "post_workout"].includes(hookBrief.workout_phase?.id), "source/hook-brief.json missing valid workout_phase.");
@@ -595,6 +597,8 @@ async function validatePromptArtifacts({ manifest, packDir }) {
   assert(imagesPrompt.includes("Avatar Variation For This Image"), "Images 2.0 prompt must include avatar variation instructions.");
   assert(imagesPrompt.includes("Required Slideshow Spine"), "Images 2.0 prompt must include the required slideshow spine.");
   assert(imagesPrompt.includes("Selected visual world"), "Images 2.0 prompt must include the selected visual world.");
+  assert(imagesPrompt.includes("Background World Lock"), "Images 2.0 prompt must include the background world lock.");
+  assert(/Reference image background is non-transferable/i.test(imagesPrompt), "Images 2.0 prompt must block reference-background leakage.");
   assert(/no visible watch/i.test(hookBrief.avatar_variation.watch), "source/hook-brief.json avatar variation must disable visible watches.");
   assert(/No visible watch|No watch should be visible/i.test(imagesPrompt), "Images 2.0 prompt must disable visible watches.");
   assert(/Do not include Apple Watch,\s*Garmin watch/i.test(imagesPrompt), "Images 2.0 prompt must block Apple Watch and Garmin watch while watches are disabled.");

@@ -17,8 +17,9 @@ await import("dotenv").then(({ config }) => {
   config({ path: ".env.local" });
 }).catch(() => {});
 
-const DEFAULT_HOOK_REFERENCE_IMAGE = "content/ads/reference/organic-runner-face-v2-reference.png";
-const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const WATCH_STOLE_THE_RUN_HOOK_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const DEFAULT_HOOK_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
+const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
 
 function parseArgs(argv) {
   const args = new Map();

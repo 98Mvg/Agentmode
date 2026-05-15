@@ -184,6 +184,13 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
       visual_keywords: ["track"],
       avoid: ["watch close-up"]
     },
+    background_world_lock: {
+      selected_visual_world: "track edge",
+      required_background: "track edge after intervals",
+      reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
+      generated_background_rule: "Generate a new track edge background that matches the deck visual world and lighting family.",
+      forbidden_background_elements: ["lake", "mountain"]
+    },
     character_anchor: {
       identity_id: "organic_runner_male_v2",
       reference_image: "content/ads/reference/organic-runner-face-v2-reference.png"
@@ -213,6 +220,8 @@ Workout Phase For This Image
 Avatar Variation For This Image
 Required Slideshow Spine
 Selected visual world: track edge
+Background World Lock
+Reference image background is non-transferable.
 Stop racing workouts
 No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
 `);
@@ -338,6 +347,13 @@ test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", a
       visual_keywords: ["easy run", "park path"],
       avoid: ["watch close-up"]
     },
+    background_world_lock: {
+      selected_visual_world: "city park path",
+      required_background: "city park path during an easy run",
+      reference_background_policy: "Reference image controls runner appearance only; its original background is non-transferable.",
+      generated_background_rule: "Generate a new city park path background that matches the deck visual world and lighting family.",
+      forbidden_background_elements: ["lake", "mountain"]
+    },
     character_anchor: {
       identity_id: "organic_runner_male_v2",
       reference_image: "content/ads/reference/organic-runner-face-v2-reference.png"
@@ -367,6 +383,8 @@ Workout Phase For This Image
 Avatar Variation For This Image
 Required Slideshow Spine
 Selected visual world: city park path
+Background World Lock
+Reference image background is non-transferable.
 Easy runs feel too hard
 No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
 `);

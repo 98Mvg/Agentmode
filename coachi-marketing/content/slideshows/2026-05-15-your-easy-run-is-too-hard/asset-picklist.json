@@ -1,0 +1,4247 @@
+{
+  "generated_at": "2026-05-15T08:34:14.208Z",
+  "manifest": "content/slideshows/2026-05-15-your-easy-run-is-too-hard/render-manifest.json",
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "estimated_generation_cost_usd": 0.15,
+  "default_library_source": "local_curated_library",
+  "supabase_library_manifest": "content/slideshows/visual-library/supabase-library-manifest.json",
+  "pinterest_source_manifest": "content/slideshows/visual-library/pinterest-source-manifest.json",
+  "owned_source_manifest": "content/slideshows/visual-library/owned-source-manifest.json",
+  "usage_log": "content/slideshows/visual-library/usage-log.json",
+  "source_policy": {
+    "allowed": [
+      "Coachi-generated images",
+      "user-approved original assets",
+      "licensed stock or owned photography",
+      "Marketing Supabase public bucket assets",
+      "Pinterest-inspired style notes without copying the image"
+    ],
+    "blocked": [
+      "recognizable unlicensed people",
+      "watermarked images",
+      "creator-owned images copied directly from social platforms",
+      "images with baked-in text unless intentionally marked as final"
+    ]
+  },
+  "production_asset_policy": "approved, owned, or licensed assets only",
+  "allow_needs_review": false,
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Your easy run is too hard",
+      "asset_source": "images_2_0",
+      "visual_collection": "details_emotion",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/01-hook.png",
+      "output_file": "01-hook.png",
+      "instruction": {
+        "action": "generate_with_images_2_0",
+        "candidate_assets": [],
+        "prompt_hint": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit by default, shirtless warm-weather running allowed occasionally when it reads like a real run, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic. realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat. photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
+      }
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "1. Running easy too fast.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/02-setup.png",
+      "output_file": "02-setup.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_005-blue-lagoon-romance.jpg",
+            "original_name": "\"Blue Lagoon Romance\".jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 104,
+              "selection_score": -1,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 104,
+              "selection_score": -1,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 104,
+              "selection_score": -1,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_003",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "original_name": " -4.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_004",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "original_name": " .jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_008",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_008-change-your-life_-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_008-change-your-life_-run.jpg",
+            "original_name": "Change your life_ Run.",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_009",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_009-creative-adventure-nature-photography-nature-and-photography-image-ideas.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_009-creative-adventure-nature-photography-nature-and-photography-image-ideas.jpg",
+            "original_name": "Creative adventure, nature photography, nature, and photography image ideas & inspiration on Designspiration.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "2. Trusting one number.",
+      "asset_source": "supabase_library",
+      "visual_collection": "details_emotion",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/03-value.png",
+      "output_file": "03-value.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Details (emotion)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "tense",
+            "human",
+            "focused"
+          ],
+          "subject_tags": [
+            "runner_detail",
+            "fatigue",
+            "breathing",
+            "body_language"
+          ],
+          "color_tags": [
+            "neutral",
+            "earth",
+            "shadow"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "details_emotion_008",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_008-alessio-pieruccii.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_008-alessio-pieruccii.jpg",
+            "original_name": "Alessio Pieruccii.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-13T14:20:00.327Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-stop-racing-intervals",
+                "2026-04-30-stop-racing-intervals",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-13-use-your-watch-better"
+              ],
+              "recent_use_rank": 4
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 68,
+              "selection_score": 20,
+              "recent_use_rank": 4
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_009",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg",
+            "original_name": "brandon king • god of fury • legacy of gods • rina kent.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-13T14:20:00.327Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-13-use-your-watch-better"
+              ],
+              "recent_use_rank": 4
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 68,
+              "selection_score": 20,
+              "recent_use_rank": 4
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_010",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_010-c5c1db8ee806f2a1ad6bb1f944bff49e.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_010-c5c1db8ee806f2a1ad6bb1f944bff49e.jpg",
+            "original_name": "c5c1db8ee806f2a1ad6bb1f944bff49e.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T11:39:05.038Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-14-hard-is-not-always-better"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 71,
+              "selection_score": 17,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_011",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_011-clan-running-running-fashion-aesthetic.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_011-clan-running-running-fashion-aesthetic.jpg",
+            "original_name": "Clan Running - Running Fashion Aesthetic.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T11:39:05.038Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-14-hard-is-not-always-better"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 71,
+              "selection_score": 17,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_012",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_012-instagram.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_012-instagram.jpg",
+            "original_name": "Instagram.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:10.772Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_013",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_013-nike-trail-pim-rinkes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_013-nike-trail-pim-rinkes.jpg",
+            "original_name": "Nike Trail — PIM RINKES.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "trail",
+              "terrain",
+              "outdoor_route",
+              "running_shoes",
+              "kit_detail"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:10.772Z",
+              "slideshow_ids": [
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_016",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_016-vilma-demant-friedla-nder-vilmafriedland-instagram-foto-s-en-video-s.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_016-vilma-demant-friedla-nder-vilmafriedland-instagram-foto-s-en-video-s.jpg",
+            "original_name": "vilma demant friedländer (@vilmafriedland) • Instagram-foto's en -video's.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_017",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_017-why-i-hate-running-gear-patrol.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_017-why-i-hate-running-gear-patrol.jpg",
+            "original_name": "Why I Hate Running | Gear Patrol.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused",
+              "fatigued",
+              "realistic"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-stop-racing-intervals",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for tension before the reframe",
+          "avoid watch close-ups unless the post is explicitly about watch anxiety",
+          "prioritize body language over facial drama"
+        ],
+        "prompt_translation": "realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "3. Ignoring the weather.",
+      "asset_source": "supabase_library",
+      "visual_collection": "details_emotion",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/04-value.png",
+      "output_file": "04-value.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Details (emotion)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "tense",
+            "human",
+            "focused"
+          ],
+          "subject_tags": [
+            "runner_detail",
+            "fatigue",
+            "breathing",
+            "body_language"
+          ],
+          "color_tags": [
+            "neutral",
+            "earth",
+            "shadow"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "details_emotion_009",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_009-brandon-king-god-of-fury-legacy-of-gods-rina-kent.jpg",
+            "original_name": "brandon king • god of fury • legacy of gods • rina kent.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-13T14:20:00.327Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-13-use-your-watch-better"
+              ],
+              "recent_use_rank": 4
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 68,
+              "selection_score": 20,
+              "recent_use_rank": 4
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_010",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_010-c5c1db8ee806f2a1ad6bb1f944bff49e.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_010-c5c1db8ee806f2a1ad6bb1f944bff49e.jpg",
+            "original_name": "c5c1db8ee806f2a1ad6bb1f944bff49e.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T11:39:05.038Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-14-hard-is-not-always-better"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 71,
+              "selection_score": 17,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_011",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_011-clan-running-running-fashion-aesthetic.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_011-clan-running-running-fashion-aesthetic.jpg",
+            "original_name": "Clan Running - Running Fashion Aesthetic.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T11:39:05.038Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-14-hard-is-not-always-better"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 71,
+              "selection_score": 17,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_012",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_012-instagram.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_012-instagram.jpg",
+            "original_name": "Instagram.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:10.772Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_013",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_013-nike-trail-pim-rinkes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_013-nike-trail-pim-rinkes.jpg",
+            "original_name": "Nike Trail — PIM RINKES.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "trail",
+              "terrain",
+              "outdoor_route",
+              "running_shoes",
+              "kit_detail"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:10.772Z",
+              "slideshow_ids": [
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_016",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_016-vilma-demant-friedla-nder-vilmafriedland-instagram-foto-s-en-video-s.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_016-vilma-demant-friedla-nder-vilmafriedland-instagram-foto-s-en-video-s.jpg",
+            "original_name": "vilma demant friedländer (@vilmafriedland) • Instagram-foto's en -video's.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_017",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_017-why-i-hate-running-gear-patrol.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_017-why-i-hate-running-gear-patrol.jpg",
+            "original_name": "Why I Hate Running | Gear Patrol.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused",
+              "fatigued",
+              "realistic"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-stop-racing-intervals",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 74,
+              "selection_score": 14,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "details_emotion_014",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_014-norda-x-fung-wong-shan.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/details_emotion/details_emotion_014-norda-x-fung-wong-shan.jpg",
+            "original_name": "NORDA x Fung Wong Shan.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "tense",
+              "human",
+              "focused"
+            ],
+            "subject_tags": [
+              "runner_detail",
+              "fatigue",
+              "breathing",
+              "body_language",
+              "running_shoes",
+              "kit_detail"
+            ],
+            "color_tags": [
+              "neutral",
+              "earth",
+              "shadow"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "human_effort_detail"
+            ],
+            "best_for_slide_roles": [
+              "problem",
+              "belief",
+              "gap",
+              "observation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 5,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 5,
+              "freshness_penalty": 77,
+              "selection_score": 11,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "details_emotion",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for tension before the reframe",
+          "avoid watch close-ups unless the post is explicitly about watch anxiety",
+          "prioritize body language over facial drama"
+        ],
+        "prompt_translation": "realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "4. Fighting walk breaks.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/05-value.png",
+      "output_file": "05-value.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_006-abisko-canyon-trail-in-swedish-lapland_-a-stunning-evening-hike-in-the-w.jpg",
+            "original_name": "Abisko Canyon Trail in Swedish Lapland_ A Stunning Evening Hike - In the Woods, Dear.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 104,
+              "selection_score": -1,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 104,
+              "selection_score": -1,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_003",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "original_name": " -4.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_004",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "original_name": " .jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_008",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_008-change-your-life_-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_008-change-your-life_-run.jpg",
+            "original_name": "Change your life_ Run.",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_009",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_009-creative-adventure-nature-photography-nature-and-photography-image-ideas.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_009-creative-adventure-nature-photography-nature-and-photography-image-ideas.jpg",
+            "original_name": "Creative adventure, nature photography, nature, and photography image ideas & inspiration on Designspiration.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_010",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_010-example.com.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_010-example.com.jpg",
+            "original_name": "example.com",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi gives simple guidance before one number ruins the run.",
+      "asset_source": "supabase_library",
+      "visual_collection": "nature_context",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/06-coachi-connection.png",
+      "output_file": "06-coachi-connection.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "Nature (context)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "realistic",
+            "environmental",
+            "contextual"
+          ],
+          "subject_tags": [
+            "trail",
+            "weather",
+            "terrain",
+            "forest",
+            "route_context"
+          ],
+          "color_tags": [
+            "green",
+            "blue",
+            "natural"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "nature_context_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_007-aesthetic-travel-views-in-yunnan-china_-dreamy-landscapes.jpg",
+            "original_name": "Aesthetic Travel Views in Yunnan, China_ Dreamy Landscapes.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-14T20:59:18.516Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-14-quality-upgrade-test"
+              ],
+              "recent_use_rank": 2
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 104,
+              "selection_score": -1,
+              "recent_use_rank": 2
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-the-easy-run-mistake",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_003",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_003-4.jpg",
+            "original_name": " -4.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-your-watch-needs-context",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-11-simple-running-tips-that-work",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_004",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_004-image.jpg",
+            "original_name": " .jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T06:20:45.974Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-the-wall-starts-early",
+                "2026-05-04-you-do-not-need-perfect",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-06-top-5-easy-run-mistakes",
+                "2026-05-08-5-things-i-wish-i-knew",
+                "2026-05-12-running-feels-scary-at-first",
+                "2026-05-15-how-to-do-an-easy-run"
+              ],
+              "recent_use_rank": 1
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 107,
+              "selection_score": -4,
+              "recent_use_rank": 1
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_008",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_008-change-your-life_-run.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_008-change-your-life_-run.jpg",
+            "original_name": "Change your life_ Run.",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual",
+              "focused"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_009",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_009-creative-adventure-nature-photography-nature-and-photography-image-ideas.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_009-creative-adventure-nature-photography-nature-and-photography-image-ideas.jpg",
+            "original_name": "Creative adventure, nature photography, nature, and photography image ideas & inspiration on Designspiration.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-13-use-your-watch-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_010",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_010-example.com.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_010-example.com.jpg",
+            "original_name": "example.com",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:10:23.368Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-05-zone-2-keeps-drifting",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "nature_context_011",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_011-forest.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/nature_context/nature_context_011-forest.jpg",
+            "original_name": "Forest.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "realistic",
+              "environmental",
+              "contextual"
+            ],
+            "subject_tags": [
+              "trail",
+              "weather",
+              "terrain",
+              "forest",
+              "route_context",
+              "outdoor_route"
+            ],
+            "color_tags": [
+              "green",
+              "blue",
+              "natural"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "visible_route_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "truth",
+              "explanation"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 8,
+              "last_used_at": "2026-05-15T08:11:15.656Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-04-30-the-wall-starts-early",
+                "2026-04-30-easy-runs-fail-slowly",
+                "2026-05-08-stop-staring-at-your-watch",
+                "2026-05-10-you-do-not-need-perfect",
+                "2026-05-14-hard-is-not-always-better",
+                "2026-05-15-top-5-running-rules"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 20,
+              "freshness_penalty": 110,
+              "selection_score": -7,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "nature_context",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use when the point is that the environment changes the number",
+          "keep backgrounds visible, not blurred out",
+          "make the context obvious at thumbnail size"
+        ],
+        "prompt_translation": "realistic nature running route with visible terrain context, natural light, full background detail, clean overlay area",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before judging one run.",
+      "asset_source": "supabase_template",
+      "visual_collection": "cta_ending",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/07-cta.png",
+      "output_file": "07-cta.png",
+      "instruction": {
+        "action": "select_from_curated_library",
+        "board": "CTA (ending)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 10,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "clear",
+            "actionable"
+          ],
+          "subject_tags": [
+            "open_path",
+            "negative_space",
+            "finish_prompt"
+          ],
+          "color_tags": [
+            "green",
+            "gold",
+            "neutral"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "cta_ending_002",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-05-08T14:29:02.067Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-05-06-zone-2-keeps-drifting",
+                "2026-05-08-stop-staring-at-your-watch"
+              ],
+              "recent_use_rank": 11
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 30,
+              "selection_score": 66,
+              "recent_use_rank": 11
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_005",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_005-6.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_005-6.jpg",
+            "original_name": " -6.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-04-30T18:47:53.268Z",
+              "slideshow_ids": [
+                "2026-04-29-zone-2-should-feel-slow",
+                "2026-04-30-walk-breaks-count",
+                "2026-04-30-easy-runs-fail-slowly"
+              ],
+              "recent_use_rank": 20
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 30,
+              "selection_score": 66,
+              "recent_use_rank": 20
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_006",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_006-image.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_006-image.jpg",
+            "original_name": " .jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-04-30T18:50:46.967Z",
+              "slideshow_ids": [
+                "2026-04-30-walk-breaks-count",
+                "2026-04-30-zone-label-can-lie",
+                "2026-04-30-your-watch-needs-context"
+              ],
+              "recent_use_rank": 20
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 30,
+              "selection_score": 66,
+              "recent_use_rank": 20
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_007",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_007-a.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_007-a.jpg",
+            "original_name": "A.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-05-08T19:41:06.733Z",
+              "slideshow_ids": [
+                "2026-04-30-walk-breaks-count",
+                "2026-04-30-zone-label-can-lie",
+                "2026-05-08-5-things-i-wish-i-knew"
+              ],
+              "recent_use_rank": 12
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 30,
+              "selection_score": 66,
+              "recent_use_rank": 12
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_008",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_008-inst_-wivxidok.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_008-inst_-wivxidok.jpg",
+            "original_name": "inst_ wivxidok.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-04-30T18:51:07.489Z",
+              "slideshow_ids": [
+                "2026-04-30-walk-breaks-count",
+                "2026-04-30-zone-label-can-lie",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 10
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 30,
+              "selection_score": 66,
+              "recent_use_rank": 10
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_004",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_004-5.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_004-5.jpg",
+            "original_name": " -5.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-04-30T18:51:14.795Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes",
+                "2026-04-30-walk-breaks-count",
+                "2026-04-30-the-wall-starts-early"
+              ],
+              "recent_use_rank": 9
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 33,
+              "selection_score": 63,
+              "recent_use_rank": 9
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_009",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_009-thie-n-nhie-n-4.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_009-thie-n-nhie-n-4.jpg",
+            "original_name": "THIÊN NHIÊN 4.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-05-12T16:23:59.884Z",
+              "slideshow_ids": [
+                "2026-05-04-top-5-easy-run-mistakes",
+                "2026-05-07-use-your-watch-better",
+                "2026-05-12-running-feels-scary-at-first"
+              ],
+              "recent_use_rank": 5
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 45,
+              "selection_score": 51,
+              "recent_use_rank": 5
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_010",
+            "source_kind": "local_curated_library",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "local_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_010-ultra-realistic-wide-green-meadow-with-warm-golden-sunlight-casting-long.jpg",
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_010-ultra-realistic-wide-green-meadow-with-warm-golden-sunlight-casting-long.jpg",
+            "original_name": "Ultra-realistic wide green meadow with warm golden sunlight casting long shadows, fluffy white_.jpg",
+            "status": "library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral",
+              "black",
+              "shadow",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 3,
+              "last_used_at": "2026-05-14T11:39:05.038Z",
+              "slideshow_ids": [
+                "2026-04-30-walk-breaks-count",
+                "2026-04-30-zone-label-can-lie",
+                "2026-05-14-hard-is-not-always-better"
+              ],
+              "recent_use_rank": 3
+            },
+            "selection_quality": {
+              "quality_score": 83,
+              "visual_match_score": 13,
+              "freshness_penalty": 51,
+              "selection_score": 45,
+              "recent_use_rank": 3
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "open city park path",
+                "route_tag": null,
+                "lighting_family": "bright natural daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use clean negative space",
+          "avoid cluttered endings",
+          "make the viewer know what to do next"
+        ],
+        "prompt_translation": "minimal running path or calm finish scene with strong negative space for a final question or save prompt",
+        "production_asset_policy": "approved, owned, or licensed assets only",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "local library fallback only; prefer Supabase once uploaded"
+      }
+    }
+  ]
+}

@@ -14,8 +14,9 @@ const DEFAULT_SIZE = process.env.OPENAI_IMAGE_SIZE || "1024x1536";
 const DEFAULT_QUALITY = process.env.OPENAI_IMAGE_QUALITY || "high";
 const DEFAULT_ENDPOINT = process.env.OPENAI_IMAGES_ENDPOINT || "https://api.openai.com/v1/images/generations";
 const DEFAULT_EDIT_ENDPOINT = process.env.OPENAI_IMAGES_EDIT_ENDPOINT || "https://api.openai.com/v1/images/edits";
-const DEFAULT_HOOK_REFERENCE_IMAGE = "content/ads/reference/organic-runner-face-v2-reference.png";
-const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const WATCH_STOLE_THE_RUN_HOOK_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+const DEFAULT_HOOK_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
+const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
 
 function parseArgs(argv) {
   const args = new Map();
@@ -38,8 +39,7 @@ function printHelp() {
   console.log(`Usage:
   node scripts/generate_openai_hook_image.mjs --pack content/slideshows/YYYY-MM-DD-slug
   node scripts/generate_openai_hook_image.mjs --prompt path/to/prompt.md --out path/to/01-hook.png
-  node scripts/generate_openai_hook_image.mjs --pack content/slideshows/YYYY-MM-DD-slug --reference-image content/ads/reference/organic-runner-face-v2-reference.png
-  node scripts/generate_openai_hook_image.mjs --pack content/slideshows/YYYY-MM-DD-slug --reference-image content/ads/reference/organic-runner-face-v2-reference.png --style-reference-image content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png
+  node scripts/generate_openai_hook_image.mjs --pack content/slideshows/YYYY-MM-DD-slug --reference-image content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png
 
 Generates the slideshow hook image with OpenAI's Images API.
 The API key is resolved without printing it:
@@ -299,7 +299,7 @@ async function main() {
   const useDefaultReferences = Boolean(pack) && !flags.has("--no-default-references");
   const referenceImage = args.get("--reference-image") || (useDefaultReferences ? DEFAULT_HOOK_REFERENCE_IMAGE : null);
   const styleReferenceImage = args.get("--style-reference-image") || (useDefaultReferences ? DEFAULT_HOOK_STYLE_REFERENCE_IMAGE : null);
-  const referenceImages = [referenceImage, styleReferenceImage].filter(Boolean);
+  const referenceImages = [...new Set([referenceImage, styleReferenceImage].filter(Boolean))];
   const endpoint = args.get("--endpoint") || (referenceImages.length > 0 ? DEFAULT_EDIT_ENDPOINT : DEFAULT_ENDPOINT);
   const outPath = resolveOutput({ args, pack });
   const provenancePath = args.get("--provenance-out")
@@ -362,7 +362,7 @@ async function main() {
     source_problem_id: hookBrief?.problem_id || null,
     hook: hookBrief?.hook || null,
     note: referenceImages.length > 0
-      ? "Generated exactly one contextual hook image for slide 1 using the locked Coachi avatar as the identity reference. Slides 2+ must use the approved library/Supabase path."
+      ? "Generated exactly one contextual hook image for slide 1 using the 2026-04-26 watch-stole-the-run runner as the primary Coachi appearance reference. Slides 2+ must use the approved library/Supabase path."
       : "Generated exactly one hook image for slide 1. Slides 2+ must use the approved library/Supabase path."
   });
 

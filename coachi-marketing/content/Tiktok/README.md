@@ -68,7 +68,7 @@ Supabase slideshow image rule:
 Slideshow source-of-truth rule:
 - Use `strategy/automation/tiktok-instagram-slideshow-content-engine/README.md` as the canonical slideshow workflow.
 - Every slideshow needs an explicit emotion, exactly one Images 2.0 hook image, the generated Coachi runner avatar inside one selected visual world, and one final CTA slide.
-- Default slide-1 hook images use the clean Coachi avatar as identity reference plus `2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png` as the viral face/style reference.
+- Default slide-1 hook images use `2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png` as the primary Coachi runner appearance reference. The clean park-portrait avatar is legacy fallback only.
 - Slide hooks and slides `1-6` should use `inputs/research/tiktok-proven-slideshow-text-bank.json` first so the wording stays simple and TikTok-native.
 - The CTA should be simple and earned, not a forced app pitch.
 - Standard CTA images should come from the Supabase `cta_ending` library with real rotation and visual variety.
