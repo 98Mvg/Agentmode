@@ -1425,7 +1425,7 @@ async function main() {
     text_bank: candidate.tiktok_text_bank || null,
     selected_hook: candidate.hook,
     selected_hook_quality: candidate.selected_hook_quality || null,
-    minimum_score: candidate.selected_hook_quality?.min_score || 52,
+    minimum_score: candidate.selected_hook_quality?.min_score || 56,
     rule: "Generate 8-10 source-backed or viral-format hook candidates, score each 1-10 across the Coachi quality rubric, and render only if the selected hook passes.",
     candidates: candidate.hook_candidates || []
   });

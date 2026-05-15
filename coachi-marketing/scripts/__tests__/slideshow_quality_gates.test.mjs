@@ -93,6 +93,16 @@ test("shared hook scorer rejects corporate fitness wording", () => {
   assert.equal(textSoundsLikeAd("Transform your fitness journey today"), true);
 });
 
+test("shared hook scorer keeps generic list hooks below production bar", () => {
+  const quality = scoreCoachiHook("Top 5 running rules", {
+    problem_type: "data-without-coaching"
+  }, {
+    source: "tiktok_text_bank"
+  });
+  assert.equal(quality.passes_quality_gate, false);
+  assert.ok(quality.score < MIN_HOOK_QUALITY_SCORE);
+});
+
 test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
   const { default: sharp } = await import("sharp");
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-qa-conflict-"));

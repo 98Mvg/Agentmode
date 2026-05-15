@@ -15,7 +15,7 @@ const BANNED_MARKETING_PHRASES = [
 
 export const BANNED_HOOK_WORDS = /\b(data|metrics?|feedback|cue|unlock|discover|game[- ]?changing|data[- ]?driven|optimi[sz]e|optimization|revolutionary)\b/i;
 export const MAX_HOOK_WORDS = 10;
-export const MIN_HOOK_QUALITY_SCORE = 52;
+export const MIN_HOOK_QUALITY_SCORE = 56;
 export const HOOK_QUALITY_MAX_SCORE = 70;
 export const MAX_SLIDE_WORDS = 14;
 

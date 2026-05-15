@@ -154,6 +154,8 @@ Default TikTok slideshow hook standard:
 
 Production automation and direct `slideshow:openai-hook -- --pack ...` calls use the stronger `watch-stole-the-run` runner as the default appearance anchor: darker kit, visible sweat, sharper face detail, cinematic contrast, and a more human scroll-stopping expression. Do not fall back to the cleaner park-portrait avatar unless explicitly requested.
 
+The current approved visual baseline is the `2026-05-15-stop-checking-the-watch` direction: preserve the Images 2.0 prompt stack, athletic Coachi runner continuity, realistic sweat, optional shirtless warm-weather running look, and a single forest/mountain/lake world that matches the rest of the deck. Iterate on hook and copy quality without weakening this image setup.
+
 The generator uses the OpenClaw key source first (`OPENCLAW_OPENAI_API_KEY_FILE` or `~/.openclaw/secrets/openai-api-key`), then falls back to `OPENAI_API_KEY`, the marketing `.env`, the app repo `.env`, or the local OpenClaw context file. It writes:
 
 - `slides/source/01-hook.png`
@@ -178,11 +180,13 @@ Production QA requires:
 - `source/qa-report.json` written for both pass and fail states
 - an explicit `emotion`, `visual_world`, and generated avatar/world brief in the pack source
 - 8-10 scored hook candidates using the 1-10 Coachi rubric for runner pain, curiosity, simplicity, emotional relatability, Coachi fit, TikTok-native wording, and non-marketing tone
+- generated topic candidates must already have a selected hook that passes the production hook quality gate
 - hook and slide text provenance from `inputs/research/tiktok-proven-slideshow-text-bank.json`, unless the pack is an explicitly marked local test
 - no hard-sell CTA, no corporate fitness wording, and no Coachi mention before slide 6
 - approved, owned, or licensed non-hook assets
 - no already-posted slideshow id
-- list hooks such as `Top 5` must deliver five numbered point slides
+- generic broad hooks such as `Top 5 running rules` should not pass production just because the format is TikTok-native
+- list hooks such as `Top 5` must deliver five numbered point slides with a clear runner pain and specific payoff
 
 Use `--allow-needs-review` only for local testing or drafts. Do not use it for public posting.
 

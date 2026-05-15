@@ -1154,6 +1154,7 @@ async function main() {
       };
     })
     .filter((candidate) => candidate.score >= minScore && !candidate.recent_duplicate_risk)
+    .filter((candidate) => candidate.selected_hook_quality?.passes_quality_gate === true)
     .sort((left, right) => right.score - left.score)
     .filter((candidate) => {
       const key = candidate.hook.toLowerCase();

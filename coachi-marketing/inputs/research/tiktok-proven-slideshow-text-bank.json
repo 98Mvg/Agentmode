@@ -232,8 +232,8 @@
     "watch-checking anxiety": {
       "preferred_hook_family_ids": ["watch_utility", "no_one_teaches", "mistakes_new_runners"],
       "preferred_hooks": [
+        { "text": "Stop letting the watch run for you", "source_family_id": "watch_utility" },
         { "text": "Stop staring at your watch", "source_family_id": "watch_utility" },
-        { "text": "Use your watch better", "source_family_id": "watch_utility" },
         { "text": "The watch is not the run", "source_family_id": "no_one_teaches" }
       ],
       "slide_sets": [
@@ -241,12 +241,12 @@
           "id": "watch_checking_simple",
           "source_family_ids": ["watch_utility"],
           "slides_1_to_6": [
-            "Stop staring at your watch",
+            "Stop letting the watch run for you",
             "One glance becomes ten.",
             "Pace jumps around.",
-            "Effort tells more.",
+            "Effort gets tense.",
             "Keep your eyes up.",
-            "Run the run."
+            "Let the run feel controlled."
           ]
         }
       ]

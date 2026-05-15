@@ -33,3 +33,17 @@ Rule:
 - Slides 2-6 must stay in the same approved world as slide 1.
 - `lake` is still valid when mountains or hills are visible in the background, as long as the lake/water path remains the primary world.
 - World-to-library mapping: `forest` -> `nature_context`, `mountain` -> `hills_effort`, `lake` -> `lake_calm`.
+
+## 2026-05-15 - Image 2.0 Workflow Approved, Copy Bar Raised
+
+Correction:
+- User approved the `2026-05-15-stop-checking-the-watch` Images 2.0 result as a strong direction.
+- The image workflow should be preserved: same `watch-stole-the-run` avatar family, realistic sweat, athletic/shirtless option when context fits, forest/mountain/lake world lock, no copied reference background, local text overlay only.
+- The hook and slide text still need improvement. Do not treat a good image as enough to publish weak generic copy.
+
+Rule:
+- Keep the current Images 2.0 hook-image prompt stack as the production baseline.
+- Raise the production hook bar: generic `Top 5 running rules` / broad list hooks should not win unless the wording has a clear runner pain and the slides deliver specific payoff.
+- Prefer hooks with a direct pain + correction shape, e.g. `Stop letting the watch run for you`, `Your easy run is too hard`, or `Zone 2 should feel slow`.
+- Slide copy should move through a small story: problem, consequence, correction, Coachi connection, soft CTA.
+- Improve hook/text in the bank first; do not weaken the approved image workflow while iterating on copy.
