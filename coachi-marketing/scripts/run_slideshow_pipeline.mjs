@@ -46,10 +46,25 @@ const TARGET_AUDIENCE_BY_PROBLEM_TYPE = {
 const COACHI_APP_CTA_TEXT = "I use Coachi to stay in my zone.";
 const COACHI_APP_CTA_ASSET_IDS = [
   "coachi_cta_003_phone_image2_48min",
+  "coachi_cta_004_watch_image2_52min",
   "coachi_cta_009_phone_forest_morning_44min",
+  "coachi_cta_010_watch_forest_morning_39min",
   "coachi_cta_011_phone_lake_calm_47min",
+  "coachi_cta_012_watch_lake_calm_35min",
   "coachi_cta_013_phone_mountain_morning_51min"
 ];
+const SOFT_NON_COACHI_CTA_BY_PROBLEM_TYPE = {
+  "easy-run pace drift": "Save this for your next easy run.",
+  "zone-2 confusion": "Save this for your next easy run.",
+  "heart-rate panic": "Save this before your next run.",
+  "watch-checking anxiety": "Save this before your next run.",
+  "pace disbelief": "Save this before judging one run.",
+  "workout-racing": "Save this before your next workout.",
+  "metric setup confusion": "Save this if zones feel random.",
+  "beginner uncertainty": "Save this before your next run.",
+  "data-without-coaching": "Save this before your next run.",
+  "comparison spiral": "Save this before your next run."
+};
 const APPROVED_VISUAL_WORLDS = {
   forest: {
     visual_world: "forest",
@@ -190,6 +205,31 @@ function canonicalWorldId(value, fallback = "forest") {
 
 function approvedWorldDetails(value, fallback = "forest") {
   return APPROVED_VISUAL_WORLDS[canonicalWorldId(value, fallback)];
+}
+
+function themeTextMatchesWorld(theme, visualWorld) {
+  return canonicalWorldId([
+    theme.visual_world,
+    theme.route_tag,
+    theme.background,
+    ...(theme.visual_keywords || [])
+  ].filter(Boolean).join(" "), visualWorld) === visualWorld;
+}
+
+function worldAlignedThemeFields(theme, world) {
+  if (themeTextMatchesWorld(theme, world.visual_world)) {
+    return {
+      background: theme.background,
+      first_image_prompt_adaptation: theme.first_image_prompt_adaptation,
+      visual_keywords: theme.visual_keywords
+    };
+  }
+
+  return {
+    background: world.background,
+    first_image_prompt_adaptation: `runner in a believable ${world.visual_world} running moment with clean negative space for overlay text`,
+    visual_keywords: [...world.keywords, "clean overlay space"]
+  };
 }
 
 function visualCollectionForWorld(visualWorld, schemaSlide, slideNumber, finalSlideNumber) {
@@ -458,12 +498,6 @@ function stableHash(value) {
 }
 
 function shouldUseCoachiAppCta({ slug, candidate }) {
-  const finalCta = [
-    candidate.slide_draft?.find((slide) => slide.role === "cta")?.text,
-    candidate.slideshow?.find((slide) => slide.role === "cta")?.text
-  ].filter(Boolean).join(" ");
-  if (/\bcoachi\b/i.test(finalCta)) return true;
-
   const seed = [
     slug,
     candidate.problem_id,
@@ -472,6 +506,11 @@ function shouldUseCoachiAppCta({ slug, candidate }) {
     "coachi_app_cta_v1"
   ].filter(Boolean).join("|");
   return stableHash(seed) % 10 < 7;
+}
+
+function softNonCoachiCtaText(candidate, text) {
+  if (!/\bcoachi\b/i.test(String(text || ""))) return text;
+  return SOFT_NON_COACHI_CTA_BY_PROBLEM_TYPE[candidate?.problem_type] || "Save this before your next run.";
 }
 
 function pickAvatarVariation(candidate) {
@@ -556,7 +595,7 @@ function slideFileName(slideNumber, role) {
   return `${String(slideNumber).padStart(2, "0")}-${slugify(role || "slide")}.png`;
 }
 
-function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, useCoachiAppCta, visualWorld }) {
+function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, useCoachiAppCta, visualWorld, candidate }) {
   const slideNumber = index + 1;
   const assetSource = schemaSlide.asset_source
     || (slideNumber === 1 ? "images_2_0" : slideNumber === finalSlideNumber ? "supabase_template" : "supabase_library");
@@ -575,7 +614,11 @@ function templateForSlide({ schemaSlide, draftSlide, index, finalSlideNumber, us
     role,
     input_image: `slides/source/${slideFileName(slideNumber, role)}`,
     output_file: slideFileName(slideNumber, role),
-    text: appCtaFields.text || draftSlide?.text || schemaSlide.example_text || schemaSlide.text_template,
+    text: appCtaFields.text || (
+      isFinalCta
+        ? softNonCoachiCtaText(candidate, draftSlide?.text || schemaSlide.example_text || schemaSlide.text_template)
+        : draftSlide?.text || schemaSlide.example_text || schemaSlide.text_template
+    ),
     asset_source: assetSource,
     visual_collection: visualCollectionForWorld(visualWorld, schemaSlide, slideNumber, finalSlideNumber),
     text_position: normalizeTextPosition(isFinalCta && useCoachiAppCta ? "top" : schemaSlide.text_position || "lower_middle"),
@@ -635,7 +678,8 @@ function buildRenderManifest({ candidate, schema, hookBrief, slug }) {
       index,
       finalSlideNumber,
       useCoachiAppCta,
-      visualWorld: hookBrief?.visual_world || candidate.visual_world
+      visualWorld: hookBrief?.visual_world || candidate.visual_world,
+      candidate
     }))
   };
 }
@@ -873,12 +917,17 @@ function themeBriefForCandidate(candidate) {
 
   const typeWorldId = canonicalWorldId(byType[candidate.problem_type]?.visual_world || defaults.visual_world);
   const world = approvedWorldDetails(candidate.visual_world, typeWorldId);
-  const merged = {
+  const rawMerged = {
     ...defaults,
     ...(byType[candidate.problem_type] || {}),
     route_tag: world.route_tag,
     visual_world: world.visual_world,
     lighting_family: world.lighting_family
+  };
+  const merged = {
+    ...rawMerged,
+    ...worldAlignedThemeFields(rawMerged, world),
+    avoid: [...new Set([...(rawMerged.avoid || []), ...(world.forbidden || [])])]
   };
   return {
     ...merged,

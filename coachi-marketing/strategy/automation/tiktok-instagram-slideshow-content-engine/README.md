@@ -21,9 +21,9 @@ Every production slideshow must include these four parts:
 
 Slides `1-6` must use `inputs/research/tiktok-proven-slideshow-text-bank.json` before generic generated copy. Treat the bank as proof of structure and simplicity, not as permission to copy creator wording. If the bank has no fit, update the bank from a real TikTok/Instagram scan before publishing a new format.
 
-Do not mix hills, lakes, and mountains in one deck. Pick one world, keep the avatar/route/lighting coherent, and rotate the Supabase/library images inside that world.
+Do not mix worlds in one deck. Production decks rotate the primary world in this order: `lake`, `mountain`, `forest`, then repeat. Pick the next world, keep the avatar/route/lighting coherent, and rotate the Supabase/library images inside that world. A lake deck may include distant mountains or hills only when the lake path remains the clear primary world.
 
-CTA visual rule: use Supabase `cta_ending` images as the standard Coachi marketing CTA source and rotate them for variety. When the CTA is an earned Coachi app-proof ending, use the owned phone CTA variants in `coachi-app-cta-rotation` so the app proof reads as Coachi on iPhone, not a generic ending. Current app-proof variants use a 55:00 workout duration, not the old 00:30/00:23 timer.
+CTA visual rule: rotate final slides between Supabase `cta_ending` images and owned Coachi app-proof assets. Target roughly `70%` Coachi app-proof CTAs and `30%` normal Supabase CTA endings. When the pack selects a Coachi app-proof CTA, rotate the owned phone and watch variants in `coachi-app-cta-rotation`; when it selects the Supabase CTA path, keep the final text generic/soft rather than using Coachi copy on a landscape CTA. Current app-proof variants use a 55:00 workout duration, not the old 00:30/00:23 timer.
 
 Top-level daily command:
 

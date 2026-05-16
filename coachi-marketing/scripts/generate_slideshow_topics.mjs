@@ -469,6 +469,7 @@ const APPROVED_VISUAL_WORLDS = {
     lighting_family: "calm lake daylight"
   }
 };
+const VISUAL_WORLD_ROTATION = ["lake", "mountain", "forest"];
 
 const VISUAL_WORLD_BY_TYPE = {
   "easy-run pace drift": APPROVED_VISUAL_WORLDS.forest,
@@ -486,6 +487,88 @@ const VISUAL_WORLD_BY_TYPE = {
 
 function visualWorldForProblem(problem) {
   return VISUAL_WORLD_BY_TYPE[problem.problem_type] || APPROVED_VISUAL_WORLDS.forest;
+}
+
+function canonicalVisualWorldId(value, fallback = "forest") {
+  const text = String(value || "").toLowerCase();
+  if (/\bmountain\b|\bhill\b|\buphill\b|\bclimb\b|\bridge\b/.test(text)) return "mountain";
+  if (/\blake\b|\briverside\b|\bwater\b|\bcoastal\b/.test(text)) return "lake";
+  if (/\bforest\b|\btrail\b|\bwood\b|\btrees?\b/.test(text)) return "forest";
+  return APPROVED_VISUAL_WORLDS[fallback] ? fallback : "forest";
+}
+
+function nextVisualWorldId(previousWorld) {
+  const previous = canonicalVisualWorldId(previousWorld, VISUAL_WORLD_ROTATION[VISUAL_WORLD_ROTATION.length - 1]);
+  const index = VISUAL_WORLD_ROTATION.indexOf(previous);
+  if (index === -1) return VISUAL_WORLD_ROTATION[0];
+  return VISUAL_WORLD_ROTATION[(index + 1) % VISUAL_WORLD_ROTATION.length];
+}
+
+function visualWorldAtOffset(startWorld, offset) {
+  const start = canonicalVisualWorldId(startWorld, VISUAL_WORLD_ROTATION[0]);
+  const index = VISUAL_WORLD_ROTATION.indexOf(start);
+  return VISUAL_WORLD_ROTATION[(index + offset) % VISUAL_WORLD_ROTATION.length];
+}
+
+async function latestVisualWorldFromPacks(packRoot) {
+  const latest = [];
+  try {
+    const entries = await fs.readdir(packRoot, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const packDir = path.join(packRoot, entry.name);
+      for (const relativePath of ["source/hook-brief.json", "render-manifest.json", "source/slideshow.json"]) {
+        const filePath = path.join(packDir, relativePath);
+        const data = await readOptionalJson(filePath, null);
+        const visualWorld = data?.visual_world || data?.visual_system?.visual_world || null;
+        if (!visualWorld) continue;
+        const stat = await fs.stat(filePath);
+        latest.push({
+          visual_world: canonicalVisualWorldId(visualWorld),
+          file_path: filePath,
+          mtime_ms: stat.mtimeMs
+        });
+        break;
+      }
+    }
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
+
+  latest.sort((left, right) => right.mtime_ms - left.mtime_ms);
+  return latest[0] || null;
+}
+
+function applyVisualWorldRotation(candidate, worldId, rotationMeta = {}) {
+  const world = APPROVED_VISUAL_WORLDS[worldId] || APPROVED_VISUAL_WORLDS.forest;
+  const worldCollection = world.visual_world === "mountain"
+    ? "hills_effort"
+    : world.visual_world === "lake"
+      ? "lake_calm"
+      : "nature_context";
+  return {
+    ...candidate,
+    visual_world: world.visual_world,
+    route_tag: world.route_tag,
+    lighting_family: world.lighting_family,
+    visual_world_rotation: {
+      enabled: true,
+      order: VISUAL_WORLD_ROTATION,
+      selected_world: world.visual_world,
+      previous_world: rotationMeta.previous_world || null,
+      selected_by: rotationMeta.selected_by || "latest-pack-round-robin"
+    },
+    visual_mapping: (candidate.visual_mapping || []).map((slide) => {
+      const isHook = slide.slide_number === 1 || slide.asset_source === "images_2_0";
+      const isCta = slide.slide_number === 7 || slide.visual_collection === "cta_ending";
+      return {
+        ...slide,
+        visual_world: world.visual_world,
+        ...(isHook || isCta ? {} : { visual_collection: worldCollection })
+      };
+    })
+  };
 }
 
 const BEST_VIRAL_HOOK_BY_TYPE = {
@@ -1144,6 +1227,12 @@ async function main() {
   const tiktokTextBank = await readOptionalJson(args.get("--tiktok-text-bank") || DEFAULT_TIKTOK_TEXT_BANK_PATH, null);
   const packsRoot = args.get("--existing-packs-root") || DEFAULT_EXISTING_PACKS_ROOT;
   const postedRegistryPath = args.get("--posted-registry") || DEFAULT_POSTED_SLIDESHOWS_PATH;
+  const latestWorld = flags.has("--disable-world-rotation")
+    ? null
+    : await latestVisualWorldFromPacks(packsRoot);
+  const rotationStartWorld = flags.has("--disable-world-rotation")
+    ? null
+    : nextVisualWorldId(latestWorld?.visual_world);
   const avoidSlideSetIds = flags.has("--disable-slide-text-dedupe")
     ? new Set()
     : await existingSlideSetIdsFromPacks(packsRoot);
@@ -1215,13 +1304,28 @@ async function main() {
       usedHooks.add(key);
       return true;
     })
-    .slice(0, limit);
+    .slice(0, limit)
+    .map((candidate, index) => {
+      if (flags.has("--disable-world-rotation")) return candidate;
+      return applyVisualWorldRotation(candidate, visualWorldAtOffset(rotationStartWorld, index), {
+        previous_world: latestWorld?.visual_world || null
+      });
+    });
 
   const output = {
     generated_at: new Date().toISOString(),
     date,
     source_problem_file: problemsPath,
     format_catalog: DEFAULT_FORMAT_CATALOG_PATH,
+    visual_world_rotation: flags.has("--disable-world-rotation")
+      ? { enabled: false }
+      : {
+          enabled: true,
+          order: VISUAL_WORLD_ROTATION,
+          previous_world: latestWorld?.visual_world || null,
+          previous_world_source: latestWorld?.file_path ? path.relative(process.cwd(), latestWorld.file_path) : null,
+          start_world: rotationStartWorld
+        },
     rule: "Raw problem first. AI may rewrite only after the candidate comes from a sourced problem.",
     candidate_count: candidates.length,
     candidates

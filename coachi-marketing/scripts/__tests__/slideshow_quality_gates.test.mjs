@@ -85,6 +85,66 @@ test("generate_slideshow_topics writes scored hook candidates", async () => {
   assert.equal(/\b(cue|unlock|discover|data-driven)\b/i.test(candidate.hook), false);
 });
 
+test("generate_slideshow_topics rotates visual worlds from latest pack", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-world-rotation-"));
+  const problemsPath = path.join(tmpDir, "problems.json");
+  const packsRoot = path.join(tmpDir, "packs");
+  const latestPackDir = path.join(packsRoot, "latest", "source");
+  await fs.mkdir(latestPackDir, { recursive: true });
+
+  await writeJson(problemsPath, {
+    schema_version: 1,
+    problems: [
+      {
+        id: "rp_rotation_easy_run_1",
+        source_url: "https://example.com/easy-run-1",
+        exact_words: "The run gets hard early.",
+        problem_type: "easy-run pace drift",
+        emotion: "frustrated",
+        content_angle: "Stop making easy runs hard",
+        product_angle: "Catch effort drift early.",
+        total_score: 18,
+        sourced_mistakes: [
+          { text: "Starting too fast.", source_url: "https://example.com/1" },
+          { text: "Waiting too long to slow down.", source_url: "https://example.com/2" },
+          { text: "Letting ego pick pace.", source_url: "https://example.com/3" },
+          { text: "Calling medium-hard easy.", source_url: "https://example.com/4" },
+          { text: "Trying to rescue the run late.", source_url: "https://example.com/5" }
+        ]
+      }
+    ]
+  });
+
+  for (const [previousWorld, expectedWorld] of [["forest", "lake"], ["lake", "mountain"], ["mountain", "forest"]]) {
+    const outPath = path.join(tmpDir, `topics-${previousWorld}.json`);
+    await writeJson(path.join(latestPackDir, "hook-brief.json"), {
+      visual_world: previousWorld
+    });
+
+    await runNode([
+      "scripts/generate_slideshow_topics.mjs",
+      "--date",
+      "2026-05-16",
+      "--limit",
+      "1",
+      "--problems",
+      problemsPath,
+      "--out",
+      outPath,
+      "--existing-packs-root",
+      packsRoot,
+      "--disable-hook-dedupe"
+    ]);
+
+    const output = JSON.parse(await fs.readFile(outPath, "utf8"));
+    assert.equal(output.visual_world_rotation.enabled, true);
+    assert.equal(output.visual_world_rotation.previous_world, previousWorld);
+    assert.equal(output.visual_world_rotation.start_world, expectedWorld);
+    assert.equal(output.candidates[0].visual_world, expectedWorld);
+    assert.equal(output.candidates[0].visual_world_rotation.selected_world, expectedWorld);
+  }
+});
+
 test("shared hook scorer rejects corporate fitness wording", () => {
   const quality = scoreCoachiHook("Unlock your potential with data-driven performance", {
     problem_type: "easy-run pace drift"
