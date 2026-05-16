@@ -90,6 +90,14 @@ function hookKey(hook) {
     .slice(0, 72);
 }
 
+function hashString(value) {
+  let hash = 0;
+  for (const char of String(value || "")) {
+    hash = ((hash << 5) - hash + char.charCodeAt(0)) | 0;
+  }
+  return Math.abs(hash);
+}
+
 function scoreProblem(problem) {
   return Number.isFinite(problem.total_score)
     ? problem.total_score
@@ -138,6 +146,8 @@ function formatIdForProblem(problem, schemaName) {
 }
 
 function hookForProblem(problem) {
+  const overrideHook = (problem.content_angle || problem.exact_words || "").trim();
+  if (overrideHook) return overrideHook;
   const type = problem.problem_type;
   if (type === "zone-2 confusion") return "ZONE 2 IS CONFUSING";
   if (type === "heart-rate panic") return "DON'T PANIC MID RUN";
@@ -617,6 +627,8 @@ function scoredHookCandidatesForProblem(problem, core, textBank = null, avoidHoo
   const fallback = BEST_VIRAL_HOOK_BY_TYPE[problem.problem_type] || "5 things runners get wrong";
   const rawEntries = [
     ...bankHooks,
+    hookSourceEntry(problem.content_angle, { source: "problem_content_angle" }),
+    hookSourceEntry(problem.exact_words, { source: "problem_exact_words" }),
     hookSourceEntry(fallback, { source: "problem_type_default" }),
     ...TIKTOK_NATIVE_HOOK_PATTERNS.map((pattern, index) => hookSourceEntry(fillTikTokPattern(pattern, core, index), {
       source: "viral_format_pattern",
@@ -736,6 +748,29 @@ async function existingHookKeysFromPacks(packRoot) {
   return keys;
 }
 
+async function existingSlideSetIdsFromPacks(packRoot) {
+  const ids = new Set();
+  try {
+    const entries = await fs.readdir(packRoot, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const sourcePath = path.join(packRoot, entry.name, "source", "hook-brief.json");
+      const reportPath = path.join(packRoot, entry.name, "pipeline-run-report.json");
+      for (const filePath of [sourcePath, reportPath]) {
+        const data = await readOptionalJson(filePath, null);
+        const slideSetId = data?.slide_text_source?.slide_set_id
+          || data?.candidate?.slide_text_source?.slide_set_id
+          || null;
+        if (slideSetId) ids.add(slideSetId);
+      }
+    }
+  } catch (error) {
+    if (error.code === "ENOENT") return ids;
+    throw error;
+  }
+  return ids;
+}
+
 async function postedHookKeysFromRegistry(filePath) {
   const keys = new Set();
   const registry = await readOptionalJson(filePath, null);
@@ -806,13 +841,27 @@ function topFivePointsForProblem(problem, core) {
   ];
 }
 
-function provenSlideSetForProblem(problem, textBank) {
+function provenSlideSetForProblem(problem, textBank, copyDedupe = {}) {
   const pack = problemTypeTextPack(problem, textBank);
-  return pack?.slide_sets?.[0] || null;
+  const slideSets = Array.isArray(pack?.slide_sets)
+    ? pack.slide_sets.filter((slideSet) => slideSet?.slides_1_to_6?.length)
+    : [];
+  if (slideSets.length === 0) return null;
+
+  const avoidSlideSetIds = copyDedupe.avoidSlideSetIds || new Set();
+  const freshSlideSets = slideSets.filter((slideSet) => !avoidSlideSetIds.has(slideSet.id));
+  const candidates = freshSlideSets.length > 0 ? freshSlideSets : slideSets;
+  const seed = [
+    problem.id,
+    problem.problem_type,
+    problem.content_angle,
+    problem.exact_words
+  ].filter(Boolean).join("|");
+  return candidates[hashString(seed) % candidates.length] || null;
 }
 
-function slideshowFromProvenBank(problem, core, bestHook, textBank) {
-  const slideSet = provenSlideSetForProblem(problem, textBank);
+function slideshowFromProvenBank(problem, core, bestHook, textBank, selectedSlideSet = null) {
+  const slideSet = selectedSlideSet || provenSlideSetForProblem(problem, textBank);
   if (!slideSet?.slides_1_to_6?.length) return null;
 
   const slidesOneToSix = [...slideSet.slides_1_to_6];
@@ -846,8 +895,8 @@ function slideshowFromProvenBank(problem, core, bestHook, textBank) {
   ];
 }
 
-function slideshowForBestHook(problem, core, bestHook, textBank = null) {
-  const bankSlideshow = slideshowFromProvenBank(problem, core, bestHook, textBank);
+function slideshowForBestHook(problem, core, bestHook, textBank = null, selectedSlideSet = null) {
+  const bankSlideshow = slideshowFromProvenBank(problem, core, bestHook, textBank, selectedSlideSet);
   if (bankSlideshow) return bankSlideshow;
 
   if (/^(top 5|5 mistakes|5 things)/i.test(bestHook)) {
@@ -874,7 +923,7 @@ function slideshowForBestHook(problem, core, bestHook, textBank = null) {
   ];
 }
 
-function viralHookPackForProblem(problem, textBank = null, avoidHookKeys = null) {
+function viralHookPackForProblem(problem, textBank = null, avoidHookKeys = null, copyDedupe = {}) {
   const core = coreIdeaForProblem(problem);
   core.simple_topic = SIMPLE_TOPIC_BY_TYPE[problem.problem_type] || core.topic;
   const world = visualWorldForProblem(problem);
@@ -938,8 +987,8 @@ function viralHookPackForProblem(problem, textBank = null, avoidHookKeys = null)
     .filter((entry) => assertNoBannedHookWords(entry.hook))
     .filter((entry) => !avoidHookKeys?.size || !avoidHookKeys.has(hookKey(entry.hook)));
 
-  const slideshow = slideshowForBestHook(problem, core, bestHook, textBank);
-  const selectedSlideSet = provenSlideSetForProblem(problem, textBank);
+  const selectedSlideSet = provenSlideSetForProblem(problem, textBank, copyDedupe);
+  const slideshow = slideshowForBestHook(problem, core, bestHook, textBank, selectedSlideSet);
   const selectedHook = bankHooks.find((entry) => entry.hook === bestHook) || null;
 
   return {
@@ -1095,6 +1144,9 @@ async function main() {
   const tiktokTextBank = await readOptionalJson(args.get("--tiktok-text-bank") || DEFAULT_TIKTOK_TEXT_BANK_PATH, null);
   const packsRoot = args.get("--existing-packs-root") || DEFAULT_EXISTING_PACKS_ROOT;
   const postedRegistryPath = args.get("--posted-registry") || DEFAULT_POSTED_SLIDESHOWS_PATH;
+  const avoidSlideSetIds = flags.has("--disable-slide-text-dedupe")
+    ? new Set()
+    : await existingSlideSetIdsFromPacks(packsRoot);
   const avoidHookKeys = flags.has("--disable-hook-dedupe")
     ? new Set()
     : new Set([
@@ -1105,13 +1157,14 @@ async function main() {
   assert(Array.isArray(problemsFile.problems), `${problemsPath}: missing problems array.`);
 
   const usedHooks = new Set();
+  const copyDedupe = { avoidSlideSetIds };
   const candidates = problemsFile.problems
     .map((problem) => {
       const schemaName = schemaForProblem(problem.problem_type);
       const schema = schemas.get(schemaName);
       assert(schema, `Missing schema ${schemaName}.`);
       const formatId = formatIdForProblem(problem, schemaName);
-      const viralPack = viralHookPackForProblem(problem, tiktokTextBank, avoidHookKeys);
+      const viralPack = viralHookPackForProblem(problem, tiktokTextBank, avoidHookKeys, copyDedupe);
       const slides = slideDraftForProblem(problem, schemaName, viralPack);
       const hook = slides[0];
       return {

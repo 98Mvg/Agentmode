@@ -23,7 +23,7 @@ Slides `1-6` must use `inputs/research/tiktok-proven-slideshow-text-bank.json` b
 
 Do not mix hills, lakes, and mountains in one deck. Pick one world, keep the avatar/route/lighting coherent, and rotate the Supabase/library images inside that world.
 
-CTA visual rule: use Supabase `cta_ending` images as the standard Coachi marketing CTA source and rotate them for variety. When the CTA is an earned Coachi app-proof ending, rotate between the owned phone and watch variants in `coachi-app-cta-rotation`; do not repeat the same device family every time. Current app-proof variants use a 55:00 workout duration, not the old 00:30/00:23 timer.
+CTA visual rule: use Supabase `cta_ending` images as the standard Coachi marketing CTA source and rotate them for variety. When the CTA is an earned Coachi app-proof ending, use the owned phone CTA variants in `coachi-app-cta-rotation` so the app proof reads as Coachi on iPhone, not a generic ending. Current app-proof variants use a 55:00 workout duration, not the old 00:30/00:23 timer.
 
 Top-level daily command:
 

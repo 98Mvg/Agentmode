@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-04-30",
+  "updated": "2026-05-16",
   "purpose": "Source-backed TikTok hook and slide-text pattern bank for Coachi slideshow generation. Use this to keep slide 1 hooks and slides 1-6 simple, TikTok-native, and less AI-written.",
   "source_policy": {
     "use": "Use structure, pacing, vocabulary shape, and simplicity from proven TikTok search results.",
@@ -181,6 +181,42 @@
             "3. Speeding up without noticing.",
             "4. Calling medium hard easy.",
             "5. Forgetting the point."
+          ]
+        },
+        {
+          "id": "easy_ceiling_not_test",
+          "source_family_ids": ["proper_easy_run", "most_runners_train_wrong"],
+          "slides_1_to_6": [
+            "Easy is a ceiling",
+            "Pace can move.",
+            "Hills can change it.",
+            "Heat can change it.",
+            "Keep the effort repeatable.",
+            "Finish with control."
+          ]
+        },
+        {
+          "id": "effort_changes_by_day",
+          "source_family_ids": ["proper_easy_run", "zone_2_reality"],
+          "slides_1_to_6": [
+            "Your easy pace can move",
+            "Bad sleep changes effort.",
+            "Heat changes effort.",
+            "Hills change effort.",
+            "The ceiling still matters.",
+            "Judge the control."
+          ]
+        },
+        {
+          "id": "easy_run_proof_trap",
+          "source_family_ids": ["proper_easy_run", "mistakes_new_runners"],
+          "slides_1_to_6": [
+            "Easy runs are not proof",
+            "Do not chase yesterday.",
+            "Do not defend a pace.",
+            "Do not race a hill.",
+            "Leave room for tomorrow.",
+            "That is the point."
           ]
         }
       ]

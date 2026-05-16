@@ -46,11 +46,8 @@ const TARGET_AUDIENCE_BY_PROBLEM_TYPE = {
 const COACHI_APP_CTA_TEXT = "I use Coachi to stay in my zone.";
 const COACHI_APP_CTA_ASSET_IDS = [
   "coachi_cta_003_phone_image2_48min",
-  "coachi_cta_004_watch_image2_52min",
   "coachi_cta_009_phone_forest_morning_44min",
-  "coachi_cta_010_watch_forest_morning_39min",
   "coachi_cta_011_phone_lake_calm_47min",
-  "coachi_cta_012_watch_lake_calm_35min",
   "coachi_cta_013_phone_mountain_morning_51min"
 ];
 const APPROVED_VISUAL_WORLDS = {
@@ -461,6 +458,12 @@ function stableHash(value) {
 }
 
 function shouldUseCoachiAppCta({ slug, candidate }) {
+  const finalCta = [
+    candidate.slide_draft?.find((slide) => slide.role === "cta")?.text,
+    candidate.slideshow?.find((slide) => slide.role === "cta")?.text
+  ].filter(Boolean).join(" ");
+  if (/\bcoachi\b/i.test(finalCta)) return true;
+
   const seed = [
     slug,
     candidate.problem_id,
