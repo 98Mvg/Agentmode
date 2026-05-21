@@ -1,30 +1,28 @@
-# TikTok Review Demo Video - Phone Filming Script
+# TikTok Review Demo Video Script
 
-Goal: record a short sandbox demo that shows Everyday Runner Lab using Postiz to connect TikTok and prepare original running slideshow content.
+Goal: record a short review demo that shows Everyday Runner Lab as a creator-facing Direct Post app, not an internal publishing tool.
 
 Target length: `90-120 seconds`.
 
 ## Current Setup
 
 - Public website: `https://everyday-runner-lab.onrender.com`
-- Postiz local admin: `http://localhost:4007/launches?startDate=2026-04-29&endDate=2026-04-29&display=day`
-- TikTok app mode for demo: Sandbox
-- Sandbox client key loaded in Postiz: `sbawircemd3st9h6dc`
-- Connected channel: `Everyday Runner Lab`
-- TikTok integration id: `cmoikbpne0001q96s054598iz`
-- Privacy to show in posting settings: `SELF_ONLY`
+- Login entry: `https://everyday-runner-lab.onrender.com/login/`
+- TikTok authorization entry: `https://everyday-runner-lab.onrender.com/connect-tiktok/`
+- Direct Post flow: `https://everyday-runner-lab.onrender.com/post-to-tiktok/`
+- Redirect URI: `https://everyday-runner-lab.onrender.com/integrations/social/tiktok`
 
-Do not show `.env`, API keys, or client secrets in the recording.
+Do not show `.env`, API keys, client secrets, OAuth tokens, Postiz admin, localhost URLs, internal integration IDs, or owned-account operations in the recording.
 
 ## Prepared Content
 
-Use the rendered slideshow assets in:
+Use the original running slideshow preview already included in the public review site:
 
 ```text
-/Volumes/Riot APFS/Agentmode/coachi-marketing/outputs/live-tests/production-credential-test-packs/2026-04-28-top-5-easy-run-mistakes/slides/rendered
+site/uploads/easy-run-mistakes/
 ```
 
-Use this caption if you need to paste text:
+Use this editable title text in the demo:
 
 ```text
 Top 5 easy run mistakes:
@@ -35,43 +33,44 @@ Top 5 easy run mistakes:
 4. Racing the easy day
 5. Calling medium-hard "easy"
 
-Comment "easy" if this happens to you.
-
-#running #runtok #easyrun #runningtips #marathontraining #beginnerrunner #runcoach #runmotivation
+#running #runtok #easyrun #runningtips
 ```
 
 ## One-Take Recording Steps
 
 1. Start at `https://everyday-runner-lab.onrender.com`.
-2. Show the site name and the line explaining that Everyday Runner Lab uses Postiz to schedule original TikTok content.
-3. Go to `http://localhost:4007/launches?startDate=2026-04-29&endDate=2026-04-29&display=day`.
-4. Show Postiz Calendar and the `Everyday Runner Lab` TikTok channel in the left sidebar.
-5. Click `Add Channel`.
-6. Click `Tiktok`.
-7. If TikTok OAuth appears, show the sandbox authorization screen and scopes, then approve.
-8. If TikTok auto-redirects, show the URL contains `client_key=sbawircemd3st9h6dc` and returns to `Channel Updated`.
-9. Back in Postiz, click `Create Post`.
-10. Show the selected TikTok channel, add the prepared caption, and attach/select the prepared slideshow images.
-11. Show settings: TikTok, `SELF_ONLY`, comments allowed, AI-generated content flag enabled if visible.
-12. Stop before final public posting if unsure. For review, it is enough to show the sandbox integration flow and the prepared scheduling screen.
+2. Show the public site name, Terms link, Privacy link, and Creator Login.
+3. Open `Creator Login`.
+4. Open `Connect TikTok`.
+5. Show that only `user.info.basic` and `video.publish` are requested.
+6. Open `Post to TikTok`.
+7. Show the connected creator identity, returned privacy options, and max duration.
+8. Show the original running slideshow preview.
+9. Edit the title field.
+10. Manually select a privacy value. Do not leave it preselected.
+11. Manually enable comments, Duet, or Stitch only if desired.
+12. Toggle commercial content disclosure, show that a disclosure category is required, then choose the correct setting or turn it off.
+13. Select the explicit TikTok Music Usage Confirmation consent checkbox.
+14. Press `Publish to TikTok`.
+15. Show the post status changing from initialization to upload/processing.
 
 ## Short Spoken Script
 
 ```text
-This is Everyday Runner Lab, a web app for runners and fitness creators.
+This is Everyday Runner Lab, a web app for runners and fitness creators who publish their own original running education content to their connected TikTok account.
 
-Creators use the Everyday Runner Lab creator workspace to connect TikTok and prepare original running education content.
+The creator starts from the public website, signs in with TikTok, and grants only the permissions needed for this Direct Post flow.
 
-I am connecting TikTok through the sandbox app, using TikTok Login and the Content Posting API scopes.
+On the posting page, the creator can see which TikTok account is connected, preview the original slideshow, edit the title, manually choose privacy, choose interaction settings, complete commercial disclosure, and consent to TikTok's music usage terms.
 
-After OAuth, Postiz shows the connected Everyday Runner Lab TikTok channel.
-
-Then I prepare an original running slideshow, add the caption and hashtags, keep privacy set to SELF_ONLY for sandbox testing, and schedule it through Postiz.
+The post is sent to TikTok only after the creator presses Publish, and the app shows processing status after the request is submitted.
 ```
 
 ## Review Notes
 
-- Keep products/scopes limited to what the video shows: Login Kit + Content Posting API.
-- If the reviewer needs public posting, explain that sandbox/unaudited testing uses `SELF_ONLY`.
-- If you show `localhost`, also show the public Everyday Runner Lab domain at the start of the video.
-- Do not mention Coachi; this TikTok app is for Everyday Runner Lab runner content.
+- Do not mention Coachi.
+- Do not mention Postiz.
+- Do not show localhost.
+- Do not say the app posts to owned, managed, or team accounts.
+- Keep the app purpose as creator-controlled Direct Post for runners and fitness creators.
+- If asked about testing mode, explain that the review demo uses safe sample content and shows the exact controls used before a production Direct Post request.

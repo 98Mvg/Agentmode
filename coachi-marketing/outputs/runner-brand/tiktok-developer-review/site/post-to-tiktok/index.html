@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post to TikTok | Everyday Runner Lab</title>
+    <meta name="description" content="Creator-controlled TikTok Direct Post workflow for Everyday Runner Lab.">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #161616;
+        --muted: #60645f;
+        --line: #d7ded4;
+        --paper: #f8faf7;
+        --panel: #ffffff;
+        --accent: #236b4c;
+        --accent-strong: #184c38;
+        --danger: #9b2c2c;
+        --shadow: 0 18px 50px rgba(18, 36, 27, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .topbar {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 18px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 16px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 14px;
+      }
+
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 34px 22px 56px;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: end;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(36px, 5vw, 64px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .subcopy {
+        max-width: 760px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        color: var(--accent-strong);
+        font-weight: 700;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #1f9d63;
+      }
+
+      .workspace {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .panel-header {
+        padding: 18px 18px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .panel-header h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .panel-body {
+        padding: 18px;
+      }
+
+      .creator {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #236b4c, #111111);
+        display: grid;
+        place-items: center;
+        color: #ffffff;
+        font-weight: 800;
+      }
+
+      .creator strong {
+        display: block;
+      }
+
+      .creator span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .facts {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .fact {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #fbfdfb;
+      }
+
+      .fact span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-bottom: 4px;
+      }
+
+      .fact strong {
+        font-size: 14px;
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .preview-grid img {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #111111;
+      }
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      textarea,
+      select {
+        width: 100%;
+        border: 1px solid #b9c5b8;
+        border-radius: 8px;
+        background: #ffffff;
+        color: var(--ink);
+        font: inherit;
+        padding: 11px 12px;
+      }
+
+      textarea {
+        min-height: 132px;
+        resize: vertical;
+      }
+
+      .field {
+        margin-bottom: 18px;
+      }
+
+      .help {
+        margin: 7px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .checks {
+        display: grid;
+        gap: 10px;
+      }
+
+      .check {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfdfb;
+      }
+
+      .check input {
+        margin-top: 3px;
+      }
+
+      .check label {
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .commercial-options {
+        display: none;
+        margin-top: 10px;
+      }
+
+      .commercial-options.visible {
+        display: grid;
+      }
+
+      .message {
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: #f1f6ef;
+        color: var(--accent-strong);
+        font-size: 14px;
+      }
+
+      .error {
+        display: none;
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: #fff5f5;
+        color: var(--danger);
+        font-size: 14px;
+      }
+
+      .error.visible {
+        display: block;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 16px;
+        background: var(--accent);
+        color: #ffffff;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        background: #9aa69d;
+        cursor: not-allowed;
+      }
+
+      .status-list {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .audit-map {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .audit-map div {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 12px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .audit-map strong {
+        display: block;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+
+      @media (max-width: 900px) {
+        .intro,
+        .workspace,
+        .audit-map {
+          grid-template-columns: 1fr;
+        }
+
+        .facts,
+        .preview-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .facts,
+        .preview-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <div class="brand">Everyday Runner Lab</div>
+        <nav aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/login/">Login</a>
+          <a href="/connect-tiktok/">Connect TikTok</a>
+          <a href="/terms/">Terms</a>
+          <a href="/privacy/">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <h1>Post to TikTok</h1>
+          <p class="subcopy">A creator reviews original running content, chooses TikTok posting settings, gives consent, and then sends the post to the connected TikTok account.</p>
+        </div>
+        <div class="status-pill"><span class="dot"></span> creator_info loaded</div>
+      </section>
+
+      <section class="workspace" aria-label="TikTok posting workspace">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Connected creator</h2>
+          </div>
+          <div class="panel-body">
+            <div class="creator">
+              <div class="avatar" aria-hidden="true">ER</div>
+              <div>
+                <strong>Everyday Runner Lab Demo</strong>
+                <span>@everydayrunnerlab0</span>
+              </div>
+            </div>
+            <div class="facts" aria-label="Creator posting state">
+              <div class="fact"><span>Post availability</span><strong>Can post now</strong></div>
+              <div class="fact"><span>Max video duration</span><strong>300 sec</strong></div>
+              <div class="fact"><span>Privacy options</span><strong>3 returned</strong></div>
+            </div>
+          </div>
+
+          <div class="panel-header">
+            <h2>Content preview</h2>
+          </div>
+          <div class="panel-body">
+            <div class="preview-grid" aria-label="Preview of original TikTok slideshow">
+              <img src="/uploads/easy-run-mistakes/01-hook.png" alt="Slide 1 preview: Top 5 easy run mistakes">
+              <img src="/uploads/easy-run-mistakes/02-point-1.png" alt="Slide 2 preview: Starting too fast">
+              <img src="/uploads/easy-run-mistakes/03-point-2.png" alt="Slide 3 preview: Letting small surges add up">
+              <img src="/uploads/easy-run-mistakes/04-point-3.png" alt="Slide 4 preview: Forcing yesterday's pace">
+              <img src="/uploads/easy-run-mistakes/05-point-4.png" alt="Slide 5 preview: Racing the easy day">
+              <img src="/uploads/easy-run-mistakes/06-point-5.png" alt="Slide 6 preview: Calling medium hard easy">
+            </div>
+          </div>
+        </div>
+
+        <form class="panel" id="post-form">
+          <div class="panel-header">
+            <h2>TikTok post settings</h2>
+          </div>
+          <div class="panel-body">
+            <div class="field">
+              <label for="title">Title</label>
+              <textarea id="title" maxlength="2200">Top 5 easy run mistakes:
+
+1. Starting too fast
+2. Letting small surges add up
+3. Forcing yesterday's pace
+4. Racing the easy day
+5. Calling medium-hard "easy"
+
+#running #runtok #easyrun #runningtips</textarea>
+              <p class="help"><span id="title-count">0</span>/2200 characters. Preset text and hashtags are editable before posting.</p>
+            </div>
+
+            <div class="field">
+              <label for="privacy">Privacy status</label>
+              <select id="privacy" required>
+                <option value="">Select privacy</option>
+                <option value="PUBLIC_TO_EVERYONE">Public to everyone</option>
+                <option value="MUTUAL_FOLLOW_FRIENDS">Mutual follow friends</option>
+                <option value="SELF_ONLY">Only me</option>
+              </select>
+              <p class="help">Options match the latest privacy_level_options returned for this creator.</p>
+            </div>
+
+            <div class="field">
+              <label>Interaction ability</label>
+              <div class="checks">
+                <div class="check">
+                  <input id="allow-comments" type="checkbox">
+                  <label for="allow-comments">Allow comments</label>
+                </div>
+                <div class="check">
+                  <input id="allow-duet" type="checkbox">
+                  <label for="allow-duet">Allow Duet</label>
+                </div>
+                <div class="check">
+                  <input id="allow-stitch" type="checkbox">
+                  <label for="allow-stitch">Allow Stitch</label>
+                </div>
+              </div>
+              <p class="help">Interaction settings start off and are manually enabled by the creator.</p>
+            </div>
+
+            <div class="field">
+              <label>Commercial content disclosure</label>
+              <div class="checks">
+                <div class="check">
+                  <input id="commercial-toggle" type="checkbox">
+                  <label for="commercial-toggle">This content promotes myself, a brand, product, or service</label>
+                </div>
+              </div>
+              <div class="commercial-options checks" id="commercial-options">
+                <div class="check">
+                  <input id="your-brand" type="checkbox">
+                  <label for="your-brand">Your brand</label>
+                </div>
+                <div class="check">
+                  <input id="branded-content" type="checkbox">
+                  <label for="branded-content">Branded content</label>
+                </div>
+              </div>
+              <div class="message" id="commercial-message">Commercial disclosure is off.</div>
+              <div class="error" id="commercial-error">Select Your brand, Branded content, or both before publishing commercial content.</div>
+            </div>
+
+            <div class="field">
+              <div class="check">
+                <input id="consent" type="checkbox" required>
+                <label for="consent">By posting, you agree to TikTok's Music Usage Confirmation.</label>
+              </div>
+              <p class="help">Content is sent to TikTok only after this consent is selected and the creator presses Publish.</p>
+            </div>
+
+            <div class="actions">
+              <button id="publish" type="button" disabled>Publish to TikTok</button>
+              <span class="help" id="ready-text">Select privacy and consent to continue.</span>
+            </div>
+            <ol class="status-list" id="status-list" aria-live="polite">
+              <li>Waiting for creator review.</li>
+            </ol>
+          </div>
+        </form>
+      </section>
+
+      <section class="audit-map" aria-label="Direct Post guideline coverage">
+        <div><strong>Creator info</strong>Nickname, account, privacy options, and max duration are visible before posting.</div>
+        <div><strong>Manual settings</strong>Privacy and interaction controls require creator selection.</div>
+        <div><strong>Disclosure</strong>Commercial content choices control labels and publish readiness.</div>
+        <div><strong>Consent</strong>Upload starts only after the creator gives explicit consent.</div>
+        <div><strong>Status</strong>Processing status is shown after publish and can be backed by status polling.</div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var title = document.getElementById("title");
+        var count = document.getElementById("title-count");
+        var privacy = document.getElementById("privacy");
+        var consent = document.getElementById("consent");
+        var publish = document.getElementById("publish");
+        var readyText = document.getElementById("ready-text");
+        var commercialToggle = document.getElementById("commercial-toggle");
+        var commercialOptions = document.getElementById("commercial-options");
+        var yourBrand = document.getElementById("your-brand");
+        var brandedContent = document.getElementById("branded-content");
+        var commercialMessage = document.getElementById("commercial-message");
+        var commercialError = document.getElementById("commercial-error");
+        var statusList = document.getElementById("status-list");
+
+        function updateCommercial() {
+          var enabled = commercialToggle.checked;
+          commercialOptions.classList.toggle("visible", enabled);
+          commercialError.classList.toggle("visible", enabled && !yourBrand.checked && !brandedContent.checked);
+
+          if (!enabled) {
+            commercialMessage.textContent = "Commercial disclosure is off.";
+          } else if (brandedContent.checked) {
+            commercialMessage.textContent = "Your video will be labeled as 'Paid partnership'.";
+          } else if (yourBrand.checked) {
+            commercialMessage.textContent = "Your video will be labeled as 'Promotional content'.";
+          } else {
+            commercialMessage.textContent = "Choose the correct commercial disclosure before publishing.";
+          }
+        }
+
+        function isCommercialValid() {
+          return !commercialToggle.checked || yourBrand.checked || brandedContent.checked;
+        }
+
+        function updateReady() {
+          count.textContent = String(title.value.length);
+          updateCommercial();
+
+          var ready = Boolean(privacy.value) && consent.checked && isCommercialValid();
+          publish.disabled = !ready;
+          readyText.textContent = ready
+            ? "Ready to send after the creator presses Publish."
+            : "Select privacy, resolve disclosure, and consent to continue.";
+        }
+
+        publish.addEventListener("click", function () {
+          if (publish.disabled) return;
+          publish.disabled = true;
+          readyText.textContent = "Publishing request initialized.";
+          statusList.innerHTML = "";
+          ["Initializing post request.", "Uploading original media.", "Processing on TikTok.", "Post status: processing. It may take a few minutes to appear on the profile."].forEach(function (item, index) {
+            window.setTimeout(function () {
+              var li = document.createElement("li");
+              li.textContent = item;
+              statusList.appendChild(li);
+            }, index * 450);
+          });
+        });
+
+        [title, privacy, consent, commercialToggle, yourBrand, brandedContent].forEach(function (input) {
+          input.addEventListener("input", updateReady);
+          input.addEventListener("change", updateReady);
+        });
+
+        updateReady();
+      })();
+    </script>
+  </body>
+</html>

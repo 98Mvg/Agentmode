@@ -16,12 +16,13 @@
   <body>
     <h1>Connect TikTok to Everyday Runner Lab</h1>
     <p>This page starts the Everyday Runner Lab TikTok Login flow for the creator workspace.</p>
-    <p>The requested scopes are used to identify the connected creator account, show content status, upload original media, and publish or schedule original TikTok running content.</p>
+    <p>The requested scopes are limited to identifying the connected creator account and publishing creator-approved original running content.</p>
     <p>
-      <a class="button" href="https://www.tiktok.com/v2/auth/authorize/?client_key=awwtjmvlgq4iv8ke&amp;redirect_uri=https%3A%2F%2Feveryday-runner-lab.onrender.com%2Fintegrations%2Fsocial%2Ftiktok&amp;response_type=code&amp;scope=user.info.basic%2Cuser.info.profile%2Cuser.info.stats%2Cvideo.list%2Cvideo.upload%2Cvideo.publish&amp;state=everyday-runner-lab-review">
+      <a class="button" href="https://www.tiktok.com/v2/auth/authorize/?client_key=awwtjmvlgq4iv8ke&amp;redirect_uri=https%3A%2F%2Feveryday-runner-lab.onrender.com%2Fintegrations%2Fsocial%2Ftiktok&amp;response_type=code&amp;scope=user.info.basic%2Cvideo.publish&amp;state=everyday-runner-lab-review">
         Authorize TikTok
       </a>
     </p>
+    <p><a class="button" href="/post-to-tiktok">Review Post to TikTok flow</a></p>
     <p>Redirect URI: <code>https://everyday-runner-lab.onrender.com/integrations/social/tiktok</code></p>
     <p><a href="/">Back to Everyday Runner Lab</a></p>
   </body>

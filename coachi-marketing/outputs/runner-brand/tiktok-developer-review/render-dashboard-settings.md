@@ -46,6 +46,7 @@ https://<render-url>/terms
 https://<render-url>/privacy
 https://<render-url>/login
 https://<render-url>/connect-tiktok
+https://<render-url>/post-to-tiktok
 https://<render-url>/integrations/social/tiktok
 ```
 
@@ -58,6 +59,7 @@ https://everyday-runner-lab.onrender.com/
 https://everyday-runner-lab.onrender.com/terms/
 https://everyday-runner-lab.onrender.com/privacy/
 https://everyday-runner-lab.onrender.com/login/
+https://everyday-runner-lab.onrender.com/post-to-tiktok/
 https://everyday-runner-lab.onrender.com/integrations/social/tiktok
 ```
 

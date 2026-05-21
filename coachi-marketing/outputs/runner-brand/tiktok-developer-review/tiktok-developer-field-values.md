@@ -19,7 +19,7 @@ Productivity
 Description:
 
 ```text
-A web app that helps runners and fitness creators create, preview, and schedule original TikTok training content.
+A web app that helps runners and fitness creators create, preview, configure, and publish their own original TikTok training content.
 ```
 
 Platform:
@@ -71,27 +71,23 @@ Do not add products that are not used in the demo video.
 
 ## Scopes
 
-Request only what Postiz needs:
+Request only what the creator posting flow needs:
 
 ```text
 user.info.basic
-user.info.profile
-user.info.stats
-video.list
-video.upload
 video.publish
 ```
 
 ## App Review Explanation
 
 ```text
-Everyday Runner Lab is a web app for runners and fitness creators who create original TikTok training content. Creators open https://everyday-runner-lab.onrender.com, use the visible Creator Login entry point, connect TikTok with OAuth, grant the requested profile and content-posting scopes, upload or prepare original running slideshow/video content, and publish or schedule it to the connected TikTok account. We request user.info.basic/profile/stats to identify the connected creator account, video.list to show/manage TikTok content status, and video.upload/video.publish to upload and publish scheduled content.
+Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. Creators open https://everyday-runner-lab.onrender.com, use Creator Login, authorize TikTok, review the connected TikTok creator account, preview original media, edit the post title, manually choose privacy, manually enable comments/Duet/Stitch if desired, complete commercial disclosure when applicable, consent to TikTok music usage terms, and then publish through Direct Post. We request user.info.basic to display the connected creator identity and video.publish to create the creator-approved TikTok post.
 ```
 
 ## Resubmission Reason
 
 ```text
-Updated app name, website URL, login entry, Terms, Privacy, and redirect URI so all surfaces use Everyday Runner Lab consistently.
+Reworked the website, demo flow, and submission copy to show a creator-controlled Direct Post UX with account identity, preview, editable title, manual privacy, interaction controls, commercial disclosure, consent, and post status.
 ```
 
 ## Demo Video Checklist
@@ -100,11 +96,12 @@ Show the full flow:
 
 1. Open the published runner-brand website.
 2. Click the visible `Creator Login` or `Connect TikTok` entry point.
-3. Open the creator workspace / TikTok integration.
+3. Open the creator workspace / Post to TikTok page.
 4. OAuth into TikTok.
-5. Grant only the requested scopes.
-6. Upload or select a slideshow/video.
-7. Schedule or publish through Postiz.
-8. Show the connected TikTok account/content result.
+5. Grant only the requested scopes: `user.info.basic` and `video.publish`.
+6. Show the connected creator identity and returned posting options.
+7. Preview original slideshow/video media.
+8. Edit the title, manually choose privacy, set comments/Duet/Stitch, complete disclosure, and consent.
+9. Publish or simulate the Direct Post status flow and show processing status.
 
 The demo should match the domain used in the TikTok Developer form.
