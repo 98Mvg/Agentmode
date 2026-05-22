@@ -263,6 +263,11 @@
         font-weight: 600;
       }
 
+      .check.disabled {
+        color: var(--muted);
+        background: #f2f5f1;
+      }
+
       .commercial-options {
         display: none;
         margin-top: 10px;
@@ -501,12 +506,13 @@
               </div>
               <div class="message" id="commercial-message">Commercial disclosure is off.</div>
               <div class="error" id="commercial-error">Select Your brand, Branded content, or both before publishing commercial content.</div>
+              <div class="error" id="branded-content-warning">Branded content visibility cannot be set to private.</div>
             </div>
 
             <div class="field">
               <div class="check">
                 <input id="consent" type="checkbox" required>
-                <label for="consent">By posting, you agree to TikTok's Music Usage Confirmation.</label>
+                <label for="consent" id="consent-label">By posting, you agree to TikTok's Music Usage Confirmation.</label>
               </div>
               <p class="help">Content is sent to TikTok only after this consent is selected and the creator presses Publish.</p>
             </div>
@@ -545,12 +551,38 @@
         var brandedContent = document.getElementById("branded-content");
         var commercialMessage = document.getElementById("commercial-message");
         var commercialError = document.getElementById("commercial-error");
+        var brandedContentWarning = document.getElementById("branded-content-warning");
+        var consentLabel = document.getElementById("consent-label");
+        var privateOption = privacy.querySelector('option[value="SELF_ONLY"]');
         var statusList = document.getElementById("status-list");
 
         function updateCommercial() {
           var enabled = commercialToggle.checked;
+          var privateSelected = privacy.value === "SELF_ONLY";
+
+          if (!enabled) {
+            yourBrand.checked = false;
+            brandedContent.checked = false;
+          }
+
+          brandedContent.disabled = enabled && privateSelected;
+          brandedContent.parentElement.classList.toggle("disabled", brandedContent.disabled);
+          brandedContent.parentElement.title = brandedContent.disabled
+            ? "Branded content visibility cannot be set to private."
+            : "";
+          if (brandedContent.disabled) {
+            brandedContent.checked = false;
+          }
+          if (privateOption) {
+            privateOption.disabled = enabled && brandedContent.checked;
+          }
+
           commercialOptions.classList.toggle("visible", enabled);
           commercialError.classList.toggle("visible", enabled && !yourBrand.checked && !brandedContent.checked);
+          brandedContentWarning.classList.toggle("visible", enabled && privateSelected);
+          consentLabel.textContent = brandedContent.checked
+            ? "By posting, you agree to TikTok's Branded Content Policy and Music Usage Confirmation."
+            : "By posting, you agree to TikTok's Music Usage Confirmation.";
 
           if (!enabled) {
             commercialMessage.textContent = "Commercial disclosure is off.";
