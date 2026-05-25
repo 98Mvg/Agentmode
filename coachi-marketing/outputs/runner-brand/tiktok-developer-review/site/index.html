@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Everyday Runner Lab | TikTok Creator Workspace</title>
     <meta name="description" content="Everyday Runner Lab is a web app where runners and fitness creators sign in with TikTok, preview original running content, choose post settings, and publish through the Content Posting API.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/app-icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/app-icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/app-icon-192.png">
     <style>
       :root {
         color-scheme: light;
@@ -46,11 +49,20 @@
       }
 
       .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         color: var(--accent);
         font: 700 13px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         margin-bottom: 20px;
+      }
+
+      .eyebrow img {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
       }
 
       nav {
@@ -78,7 +90,10 @@
   <body>
     <main>
       <section>
-        <div class="eyebrow">Everyday Runner Lab</div>
+        <div class="eyebrow">
+          <img src="/assets/everyday-runner-lab-app-icon-1024.png" alt="Everyday Runner Lab app icon">
+          <span>Everyday Runner Lab</span>
+        </div>
         <h1>TikTok creator workspace for running content.</h1>
         <p>
           Everyday Runner Lab is a web app for runners and fitness creators who create, preview, and publish their own original TikTok training content.
@@ -89,6 +104,7 @@
         <nav>
           <a class="button" href="/login">Creator Login</a>
           <a class="button" href="/post-to-tiktok">Post to TikTok</a>
+          <a href="/sandbox-demo">Sandbox demo</a>
           <a href="/connect-tiktok">Connect TikTok</a>
           <a href="/terms">Terms</a>
           <a href="/privacy">Privacy</a>

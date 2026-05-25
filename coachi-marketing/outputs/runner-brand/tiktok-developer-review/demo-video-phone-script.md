@@ -1,6 +1,6 @@
 # TikTok Review Demo Video Script
 
-Goal: record a short review demo that shows Everyday Runner Lab as a creator-facing Direct Post app, not an internal publishing tool.
+Goal: record a short review demo that shows Everyday Runner Lab as a creator-facing TikTok app with sandbox/mock Login Kit, Upload to TikTok, and Direct Post coverage.
 
 Target length: `90-120 seconds`.
 
@@ -9,6 +9,7 @@ Target length: `90-120 seconds`.
 - Public website: `https://everyday-runner-lab.onrender.com`
 - Login entry: `https://everyday-runner-lab.onrender.com/login/`
 - TikTok authorization entry: `https://everyday-runner-lab.onrender.com/connect-tiktok/`
+- Sandbox/mock review flow: `https://everyday-runner-lab.onrender.com/sandbox-demo/`
 - Direct Post flow: `https://everyday-runner-lab.onrender.com/post-to-tiktok/`
 - Redirect URI: `https://everyday-runner-lab.onrender.com/integrations/social/tiktok`
 
@@ -42,28 +43,29 @@ Top 5 easy run mistakes:
 2. Show the public site name, Terms link, Privacy link, and Creator Login.
 3. Open `Creator Login`.
 4. Open `Connect TikTok`.
-5. Show that only `user.info.basic` and `video.publish` are requested.
-6. Open `Post to TikTok`.
-7. Show the connected creator identity, returned privacy options, and max duration.
-8. Show the original running slideshow preview.
-9. Edit the title field.
-10. Manually select a privacy value. Do not leave it preselected.
-11. Manually enable comments, Duet, or Stitch only if desired.
-12. Toggle commercial content disclosure, show that a disclosure category is required, then choose the correct setting or turn it off.
-13. Select the explicit TikTok Music Usage Confirmation consent checkbox.
-14. Press `Publish to TikTok`.
-15. Show the post status changing from initialization to upload/processing.
+5. Show that `user.info.basic`, `video.upload`, and `video.publish` are requested and demonstrated.
+6. Open the `Sandbox demo` page and show the mock OAuth/API responses.
+7. Open `Post to TikTok`.
+8. Show the connected creator identity, returned privacy options, and max duration.
+9. Show the original running slideshow preview.
+10. Edit the title field.
+11. Manually select a privacy value. Do not leave it preselected.
+12. Manually enable comments, Duet, or Stitch only if desired.
+13. Toggle commercial content disclosure, show that a disclosure category is required, then choose the correct setting or turn it off.
+14. Select the explicit TikTok Music Usage Confirmation consent checkbox.
+15. Press `Upload as TikTok draft` and show `video.upload` status.
+16. Reset the demo, press `Publish to TikTok`, and show `video.publish` processing status.
 
 ## Short Spoken Script
 
 ```text
 This is Everyday Runner Lab, a web app for runners and fitness creators who publish their own original running education content to their connected TikTok account.
 
-The creator starts from the public website, signs in with TikTok, and grants only the permissions needed for this Direct Post flow.
+The creator starts from the public website, signs in with TikTok, and grants only the permissions needed for the demonstrated TikTok flow: user.info.basic, video.upload, and video.publish.
 
 On the posting page, the creator can see which TikTok account is connected, preview the original slideshow, edit the title, manually choose privacy, choose interaction settings, complete commercial disclosure, and consent to TikTok's music usage terms.
 
-The post is sent to TikTok only after the creator presses Publish, and the app shows processing status after the request is submitted.
+The creator can either upload original media as a TikTok draft or use Direct Post. In both paths, content is sent to TikTok only after the creator reviews settings and confirms the action, and the app shows processing status after the request is submitted.
 ```
 
 ## Review Notes

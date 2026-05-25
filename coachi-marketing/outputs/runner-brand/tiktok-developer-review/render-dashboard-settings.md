@@ -59,6 +59,8 @@ https://everyday-runner-lab.onrender.com/
 https://everyday-runner-lab.onrender.com/terms/
 https://everyday-runner-lab.onrender.com/privacy/
 https://everyday-runner-lab.onrender.com/login/
+https://everyday-runner-lab.onrender.com/connect-tiktok/
+https://everyday-runner-lab.onrender.com/sandbox-demo/
 https://everyday-runner-lab.onrender.com/post-to-tiktok/
 https://everyday-runner-lab.onrender.com/integrations/social/tiktok
 ```

@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TikTok Connection | Everyday Runner Lab</title>
     <meta name="description" content="TikTok OAuth redirect page for Everyday Runner Lab.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/app-icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/app-icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/app-icon-192.png">
     <style>
       body { max-width: 760px; margin: 48px auto; padding: 0 22px; font: 18px/1.6 Georgia, "Times New Roman", serif; color: #161616; background: #f7f1e7; }
-      h1 { font-size: 44px; line-height: 1; letter-spacing: -0.04em; }
+      .brand-mark { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; font: 700 16px/1.2 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .brand-mark img { width: 56px; height: 56px; border-radius: 14px; }
+      h1 { font-size: clamp(36px, 7vw, 44px); line-height: 1; letter-spacing: 0; }
       a { color: #2f6b4f; }
       code { background: #efe4d4; padding: 2px 5px; border-radius: 4px; }
       .button { display: inline-block; margin-top: 18px; padding: 12px 16px; border: 1px solid #2f6b4f; border-radius: 999px; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; }
@@ -15,6 +20,10 @@
     </style>
   </head>
   <body>
+    <div class="brand-mark">
+      <img src="/assets/everyday-runner-lab-app-icon-1024.png" alt="Everyday Runner Lab app icon">
+      <span>Everyday Runner Lab</span>
+    </div>
     <h1>Everyday Runner Lab TikTok Connection</h1>
     <p id="status">Checking the TikTok authorization result...</p>
     <p id="fallback" class="muted">After authorization, the creator workspace opens the Post to TikTok page where the creator previews content, edits settings, consents, and publishes.</p>
