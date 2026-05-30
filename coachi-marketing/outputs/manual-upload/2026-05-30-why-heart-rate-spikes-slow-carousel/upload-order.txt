@@ -1,0 +1,7 @@
+1. slides/01-hook.png - Why heart rate spikes slow
+2. slides/02-setup.png - Hills can raise it.
+3. slides/03-value.png - Stress can raise it.
+4. slides/04-value.png - Sleep can raise it.
+5. slides/05-value.png - Watches can lag.
+6. slides/06-coachi-connection.png - Coachi gives simple guidance before one number ruins the run.
+7. slides/07-cta.png - Save this before judging one run.

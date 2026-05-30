@@ -1,0 +1,2889 @@
+{
+  "generated_at": "2026-05-30T10:11:17.441Z",
+  "manifest": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/render-manifest.json",
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "estimated_generation_cost_usd": 0.15,
+  "default_library_source": "supabase_visual_library",
+  "supabase_library_manifest": "content/slideshows/visual-library/supabase-library-manifest.json",
+  "pinterest_source_manifest": "content/slideshows/visual-library/pinterest-source-manifest.json",
+  "owned_source_manifest": "content/slideshows/visual-library/owned-source-manifest.json",
+  "usage_log": "content/slideshows/visual-library/usage-log.json",
+  "usage_rotation_scope": "posted, published, and legacy usage entries only; selected/rendered draft events do not exhaust assets",
+  "source_policy": {
+    "allowed": [
+      "Coachi-generated images",
+      "user-approved original assets",
+      "licensed stock or owned photography",
+      "Marketing Supabase public bucket assets",
+      "Pinterest-inspired style notes without copying the image"
+    ],
+    "blocked": [
+      "recognizable unlicensed people",
+      "watermarked images",
+      "creator-owned images copied directly from social platforms",
+      "images with baked-in text unless intentionally marked as final"
+    ]
+  },
+  "production_asset_policy": "approved, owned, or licensed assets only, with middle-slide usage freshness enforced",
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why heart rate spikes slow",
+      "asset_source": "images_2_0",
+      "visual_collection": "details_emotion",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/01-hook.png",
+      "output_file": "01-hook.png",
+      "instruction": {
+        "action": "generate_with_images_2_0",
+        "candidate_assets": [],
+        "prompt_hint": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat on face and shirt, serious calm focused expression, stronger 2026-04-26 watch-stole-the-run viral face style, fitted black or dark performance kit by default, shirtless warm-weather running allowed occasionally when it reads like a real run, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic. realistic close detail from a run, controlled breathing, hands relaxed, natural emotion, no distorted limbs or fake sweat. photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
+      }
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "Hills can raise it.",
+      "asset_source": "supabase_library",
+      "visual_collection": "hills_effort",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/02-setup.png",
+      "output_file": "02-setup.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Hills (effort)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "effort",
+            "honest",
+            "useful"
+          ],
+          "subject_tags": [
+            "hill",
+            "gradient",
+            "trail",
+            "climb",
+            "pace_context"
+          ],
+          "color_tags": [
+            "green",
+            "mountain",
+            "earth"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "hills_effort_005",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_005-david-laney-on-instagram_-good-stuff_-trailing-wilderness-getoutside-run.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_005-david-laney-on-instagram_-good-stuff_-trailing-wilderness-getoutside-run.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_005-david-laney-on-instagram_-good-stuff_-trailing-wilderness-getoutside-run.jpg",
+            "original_name": "David Laney on Instagram_ \"Good stuff_ #trailing #wilderness #getoutside #runfree #craftsportswear #runsteepgethigh #mountains\".jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context",
+              "terrain",
+              "outdoor_route",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_006",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_006-example.com.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_006-example.com.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_006-example.com.jpg",
+            "original_name": "example.com",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_009",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "original_name": "Mathieu Blanchard in Kilimanjaro.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_011",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "original_name": "The North Face race in the Marin Headlands, CA_.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_010",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "original_name": "Roark Run Amok | Colorado — RYAN VALASEK.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 16,
+              "selection_score": 91,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_001",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_001-2.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_001-2.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_001-2.jpg",
+            "original_name": " -2.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_002",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_002-3.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_002-3.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for pace-is-lying and effort-over-split ideas",
+          "show a real gradient, not a dramatic mountain",
+          "runner stride must stay natural"
+        ],
+        "prompt_translation": "same runner on a gentle uphill route, natural stride, realistic gradient, controlled effort, clean sky or path area for overlay text",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Stress can raise it.",
+      "asset_source": "supabase_library",
+      "visual_collection": "hills_effort",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/03-value.png",
+      "output_file": "03-value.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Hills (effort)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "effort",
+            "honest",
+            "useful"
+          ],
+          "subject_tags": [
+            "hill",
+            "gradient",
+            "trail",
+            "climb",
+            "pace_context"
+          ],
+          "color_tags": [
+            "green",
+            "mountain",
+            "earth"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "hills_effort_006",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_006-example.com.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_006-example.com.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_006-example.com.jpg",
+            "original_name": "example.com",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_009",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "original_name": "Mathieu Blanchard in Kilimanjaro.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_011",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "original_name": "The North Face race in the Marin Headlands, CA_.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_010",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "original_name": "Roark Run Amok | Colorado — RYAN VALASEK.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 16,
+              "selection_score": 91,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_001",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_001-2.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_001-2.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_001-2.jpg",
+            "original_name": " -2.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_002",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_002-3.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_002-3.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for pace-is-lying and effort-over-split ideas",
+          "show a real gradient, not a dramatic mountain",
+          "runner stride must stay natural"
+        ],
+        "prompt_translation": "same runner on a gentle uphill route, natural stride, realistic gradient, controlled effort, clean sky or path area for overlay text",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Sleep can raise it.",
+      "asset_source": "supabase_library",
+      "visual_collection": "hills_effort",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/04-value.png",
+      "output_file": "04-value.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Hills (effort)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "effort",
+            "honest",
+            "useful"
+          ],
+          "subject_tags": [
+            "hill",
+            "gradient",
+            "trail",
+            "climb",
+            "pace_context"
+          ],
+          "color_tags": [
+            "green",
+            "mountain",
+            "earth"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "hills_effort_009",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_009-mathieu-blanchard-in-kilimanjaro.jpg",
+            "original_name": "Mathieu Blanchard in Kilimanjaro.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_011",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "original_name": "The North Face race in the Marin Headlands, CA_.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_010",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "original_name": "Roark Run Amok | Colorado — RYAN VALASEK.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 16,
+              "selection_score": 91,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_001",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_001-2.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_001-2.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_001-2.jpg",
+            "original_name": " -2.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_002",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_002-3.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_002-3.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for pace-is-lying and effort-over-split ideas",
+          "show a real gradient, not a dramatic mountain",
+          "runner stride must stay natural"
+        ],
+        "prompt_translation": "same runner on a gentle uphill route, natural stride, realistic gradient, controlled effort, clean sky or path area for overlay text",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Watches can lag.",
+      "asset_source": "supabase_library",
+      "visual_collection": "hills_effort",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/05-value.png",
+      "output_file": "05-value.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Hills (effort)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "effort",
+            "honest",
+            "useful"
+          ],
+          "subject_tags": [
+            "hill",
+            "gradient",
+            "trail",
+            "climb",
+            "pace_context"
+          ],
+          "color_tags": [
+            "green",
+            "mountain",
+            "earth"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "hills_effort_011",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_011-the-north-face-race-in-the-marin-headlands-ca_.jpg",
+            "original_name": "The North Face race in the Marin Headlands, CA_.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 0,
+              "selection_score": 107,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_010",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "original_name": "Roark Run Amok | Colorado — RYAN VALASEK.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 16,
+              "selection_score": 91,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_001",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_001-2.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_001-2.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_001-2.jpg",
+            "original_name": " -2.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_002",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_002-3.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_002-3.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for pace-is-lying and effort-over-split ideas",
+          "show a real gradient, not a dramatic mountain",
+          "runner stride must stay natural"
+        ],
+        "prompt_translation": "same runner on a gentle uphill route, natural stride, realistic gradient, controlled effort, clean sky or path area for overlay text",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi gives simple guidance before one number ruins the run.",
+      "asset_source": "supabase_library",
+      "visual_collection": "hills_effort",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/06-coachi-connection.png",
+      "output_file": "06-coachi-connection.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Hills (effort)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "effort",
+            "honest",
+            "useful"
+          ],
+          "subject_tags": [
+            "hill",
+            "gradient",
+            "trail",
+            "climb",
+            "pace_context"
+          ],
+          "color_tags": [
+            "green",
+            "mountain",
+            "earth"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "hills_effort_010",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_010-roark-run-amok-colorado-ryan-valasek.jpg",
+            "original_name": "Roark Run Amok | Colorado — RYAN VALASEK.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful",
+              "focused",
+              "realistic"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context",
+              "runner",
+              "running_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 16,
+              "selection_score": 91,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_001",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_001-2.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_001-2.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_001-2.jpg",
+            "original_name": " -2.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "hills_effort_002",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/hills_effort/hills_effort_002-3.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/hills_effort/hills_effort_002-3.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/hills_effort/hills_effort_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "effort",
+              "honest",
+              "useful"
+            ],
+            "subject_tags": [
+              "hill",
+              "gradient",
+              "trail",
+              "climb",
+              "pace_context"
+            ],
+            "color_tags": [
+              "green",
+              "mountain",
+              "earth"
+            ],
+            "aesthetic_tags": [
+              "realistic_smartphone_fitness",
+              "terrain_effort_context"
+            ],
+            "best_for_slide_roles": [
+              "context",
+              "effort",
+              "rule"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 2,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs",
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 20,
+              "freshness_penalty": 26,
+              "selection_score": 81,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "hills_effort",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for pace-is-lying and effort-over-split ideas",
+          "show a real gradient, not a dramatic mountain",
+          "runner stride must stay natural"
+        ],
+        "prompt_translation": "same runner on a gentle uphill route, natural stride, realistic gradient, controlled effort, clean sky or path area for overlay text",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before judging one run.",
+      "asset_source": "supabase_template",
+      "visual_collection": "cta_ending",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/07-cta.png",
+      "output_file": "07-cta.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "CTA (ending)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "clear",
+            "actionable"
+          ],
+          "subject_tags": [
+            "open_path",
+            "negative_space",
+            "finish_prompt"
+          ],
+          "color_tags": [
+            "green",
+            "gold",
+            "neutral"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "cta_ending_005",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_005-6.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_005-6.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_005-6.jpg",
+            "original_name": " -6.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 0,
+              "selection_score": 100,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_006",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_006-image.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_006-image.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_006-image.jpg",
+            "original_name": " .jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 0,
+              "selection_score": 100,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_001",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_001-2.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_001-2.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_001-2.jpg",
+            "original_name": " -2.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-04-27T09:33:38.504Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs"
+              ],
+              "recent_use_rank": 13
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 10,
+              "selection_score": 90,
+              "recent_use_rank": 13
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_002",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_002-3.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_002-3.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_002-3.jpg",
+            "original_name": " -3.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-04-27T09:46:30.168Z",
+              "slideshow_ids": [
+                "2026-04-27-stop-racing-easy-runs"
+              ],
+              "recent_use_rank": 13
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 10,
+              "selection_score": 90,
+              "recent_use_rank": 13
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_004",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_004-5.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_004-5.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_004-5.jpg",
+            "original_name": " -5.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-04-27T09:55:00.414Z",
+              "slideshow_ids": [
+                "2026-04-27-top-5-easy-run-mistakes"
+              ],
+              "recent_use_rank": 12
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 10,
+              "selection_score": 90,
+              "recent_use_rank": 12
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_008",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_008-inst_-wivxidok.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_008-inst_-wivxidok.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_008-inst_-wivxidok.jpg",
+            "original_name": "inst_ wivxidok.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-09T08:35:19.636Z",
+              "slideshow_ids": [
+                "2026-04-30-stop-racing-intervals"
+              ],
+              "recent_use_rank": 8
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 16,
+              "selection_score": 84,
+              "recent_use_rank": 8
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_009",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_009-thie-n-nhie-n-4.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_009-thie-n-nhie-n-4.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_009-thie-n-nhie-n-4.jpg",
+            "original_name": "THIÊN NHIÊN 4.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-12T16:35:35.083Z",
+              "slideshow_ids": [
+                "2026-05-12-running-feels-scary-at-first"
+              ],
+              "recent_use_rank": 6
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 22,
+              "selection_score": 78,
+              "recent_use_rank": 6
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "cta_ending_010",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "local_curated_library",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/cta_ending_010-ultra-realistic-wide-green-meadow-with-warm-golden-sunlight-casting-long.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/cta_ending_010-ultra-realistic-wide-green-meadow-with-warm-golden-sunlight-casting-long.jpg",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/cta_ending/cta_ending_010-ultra-realistic-wide-green-meadow-with-warm-golden-sunlight-casting-long.jpg",
+            "original_name": "Ultra-realistic wide green meadow with warm golden sunlight casting long shadows, fluffy white_.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "clear",
+              "actionable"
+            ],
+            "subject_tags": [
+              "open_path",
+              "negative_space",
+              "finish_prompt"
+            ],
+            "color_tags": [
+              "green",
+              "gold",
+              "neutral",
+              "black",
+              "shadow",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "minimal_cta_background"
+            ],
+            "best_for_slide_roles": [
+              "comment",
+              "save",
+              "cta"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-05-14T11:40:29.648Z",
+              "slideshow_ids": [
+                "2026-05-14-hard-is-not-always-better"
+              ],
+              "recent_use_rank": 5
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 13,
+              "freshness_penalty": 25,
+              "selection_score": 75,
+              "recent_use_rank": 5
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "mountain",
+                "route_tag": null,
+                "lighting_family": "clear mountain morning light",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use clean negative space",
+          "avoid cluttered endings",
+          "make the viewer know what to do next"
+        ],
+        "prompt_translation": "minimal running path or calm finish scene with strong negative space for a final question or save prompt",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    }
+  ]
+}

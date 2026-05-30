@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-30T10:14:26.550Z",
+  "source_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow",
+  "output_mode": "photo_carousel",
+  "platforms": {
+    "tiktok": {
+      "media_type": "PHOTO",
+      "upload_method": "manual_photo_mode",
+      "music_playlist": {
+        "label": "Light Music",
+        "source": "TikTok Studio Sound Library",
+        "playlist_url": "https://www.tiktok.com/tiktokstudio/sound-library/playlist/7413314027545168656",
+        "usage": "Add inside TikTok after selecting the photo carousel slides. Do not bake music into the image files."
+      },
+      "caption_file": "tiktok-postiz-caption.txt"
+    },
+    "instagram": {
+      "media_type": "CAROUSEL_ALBUM",
+      "upload_method": "manual_select_multiple",
+      "caption_file": "instagram-postiz-caption.txt"
+    }
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why heart rate spikes slow",
+      "file": "slides/01-hook.png"
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "Hills can raise it.",
+      "file": "slides/02-setup.png"
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Stress can raise it.",
+      "file": "slides/03-value.png"
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Sleep can raise it.",
+      "file": "slides/04-value.png"
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Watches can lag.",
+      "file": "slides/05-value.png"
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi gives simple guidance before one number ruins the run.",
+      "file": "slides/06-coachi-connection.png"
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before judging one run.",
+      "file": "slides/07-cta.png"
+    }
+  ],
+  "copy_files": [
+    "tiktok-caption.txt",
+    "tiktok-postiz-caption.txt",
+    "instagram-caption.txt",
+    "instagram-postiz-caption.txt",
+    "hashtags.txt"
+  ]
+}

@@ -1,0 +1,15 @@
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/01-hook.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/02-setup.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/03-value.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/04-value.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/05-value.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/06-coachi-connection.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/07-cta.png'
+duration 2.2
+file '/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/07-cta.png'

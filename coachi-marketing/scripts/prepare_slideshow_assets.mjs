@@ -92,10 +92,16 @@ function hasSupabaseUrl(candidate) {
   return Boolean(candidate?.public_url || candidate?.supabase_public_url);
 }
 
+function usageContributesToRotation(use) {
+  const stage = use?.stage || use?.event_type || "legacy";
+  return stage === "posted" || stage === "published" || stage === "legacy";
+}
+
 function buildUsageIndex(usageLog) {
   const index = new Map();
   const seen = new Set();
-  const sortedUses = [...(usageLog?.uses || [])].sort((left, right) => String(right.used_at || "").localeCompare(String(left.used_at || "")));
+  const rotationUses = (usageLog?.uses || []).filter((use) => usageContributesToRotation(use));
+  const sortedUses = [...rotationUses].sort((left, right) => String(right.used_at || "").localeCompare(String(left.used_at || "")));
   const recentSlideshows = [];
   for (const use of sortedUses) {
     if (use.slideshow_id && !recentSlideshows.includes(use.slideshow_id)) {
@@ -103,7 +109,7 @@ function buildUsageIndex(usageLog) {
     }
   }
 
-  for (const use of usageLog?.uses || []) {
+  for (const use of rotationUses) {
     if (!use.asset_id) continue;
     const key = [
       use.slideshow_id || use.used_at || "unknown",
@@ -164,6 +170,29 @@ function candidateFreshnessPenalty(candidate, usageIndex) {
   return totalPenalty + recentPenalty;
 }
 
+function rotationLimit(value, fallback) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
+}
+
+function assetWithinRotationPolicy(candidate, usageIndex, rotationPolicy = {}) {
+  const usage = usageIndex.get(candidate.id);
+  if (!usage) return true;
+  const maxUses = rotationLimit(rotationPolicy.max_uses_per_asset_per_30_days, 2);
+  const maxRecentWindow = rotationLimit(rotationPolicy.max_reuse_in_last_posts, 10);
+  const totalUses = usage.total_uses || 0;
+  const recentUseRank = usage.recent_use_rank;
+
+  if (totalUses > maxUses) return false;
+  if (recentUseRank != null && recentUseRank < maxRecentWindow) return false;
+  return true;
+}
+
+function filterFreshProductionCandidates(candidates, usageIndex, rotationPolicy, { production, enforceFreshness }) {
+  if (!production || !enforceFreshness) return candidates || [];
+  return (candidates || []).filter((candidate) => assetWithinRotationPolicy(candidate, usageIndex, rotationPolicy));
+}
+
 function listify(value) {
   return Array.isArray(value) ? value : [];
 }
@@ -179,6 +208,49 @@ function tagsContain(tags, wanted) {
     const haystack = normalized(tag);
     return haystack === needle || haystack.includes(needle) || needle.includes(haystack);
   });
+}
+
+function canonicalWorld(value) {
+  const text = normalized(value);
+  if (!text) return null;
+  if (/\blake\b|\bwater\b|\briverside\b|\bcoastal\b/.test(text)) return "lake";
+  if (/\bmountain\b|\bhill\b|\bhills\b|\buphill\b|\bclimb\b|\bridge\b/.test(text)) return "mountain";
+  if (/\bforest\b|\btrail\b|\bwoods?\b|\btrees?\b/.test(text)) return "forest";
+  return null;
+}
+
+function candidateWorldHints(candidate) {
+  const hints = new Set();
+  const values = [
+    candidate?.id,
+    candidate?.source_kind,
+    candidate?.visual_world,
+    ...(candidate?.visual_world_tags || []),
+    ...(candidate?.route_tags || []),
+    ...(candidate?.subject_tags || []),
+    ...(candidate?.aesthetic_tags || []),
+    ...(candidate?.lighting_tags || [])
+  ];
+  for (const value of values) {
+    const world = canonicalWorld(value);
+    if (world) hints.add(world);
+  }
+  return hints;
+}
+
+function filterCandidatesForRequestedWorld(candidates, requestedWorld, { preferSpecific = false } = {}) {
+  const world = canonicalWorld(requestedWorld);
+  if (!world) return candidates || [];
+
+  const compatible = (candidates || []).filter((candidate) => {
+    const hints = candidateWorldHints(candidate);
+    return hints.size === 0 || hints.has(world);
+  });
+  if (preferSpecific) {
+    const specific = compatible.filter((candidate) => candidateWorldHints(candidate).has(world));
+    if (specific.length > 0) return specific;
+  }
+  return compatible;
 }
 
 function candidateVisualMatchScore(candidate, requestedContext = {}) {
@@ -206,6 +278,13 @@ function candidateVisualMatchScore(candidate, requestedContext = {}) {
   if (tagsContain(lightingTags, requestedContext.lighting_family)) score += 15;
   if (tagsContain(workoutPhaseTags, requestedContext.workout_phase)) score += 10;
   if (tagsContain(roleTags, requestedContext.role)) score += 8;
+  if (
+    requestedContext.visual_collection === "details_emotion"
+    && ["setup", "value", "insight", "insight_1", "insight_2", "insight_3", "coachi_connection"].includes(requestedContext.role)
+    && (tagsContain(roleTags, "runner_detail") || tagsContain(roleTags, "body_language") || tagsContain(roleTags, "breathing"))
+  ) {
+    score += 20;
+  }
   if (candidate.negative_space_zone || candidate.safe_text_zone) score += 7;
   if ((candidate.mood_tags || []).length > 0) score += 5;
 
@@ -238,6 +317,37 @@ function sourceRightsAllowed(candidate, { production, allowNeedsReview }) {
 
 function filterCandidatesByRights(candidates, options) {
   return (candidates || []).filter((candidate) => sourceRightsAllowed(candidate, options));
+}
+
+function sourceKindValues(candidate) {
+  return [
+    candidate?.source_kind,
+    candidate?.original_source_kind,
+    candidate?.selected_asset_source_kind,
+    candidate?.selected_asset_original_source_kind
+  ].filter(Boolean).map((value) => String(value));
+}
+
+function isOwnedGeneratedVisualCandidate(candidate) {
+  return sourceKindValues(candidate).some((value) => value === "owned_generated_visual_library");
+}
+
+function isProductionMiddleSlide(slide, finalSlideNumber) {
+  return slide.asset_source !== "images_2_0"
+    && slide.slide_number >= 2
+    && slide.slide_number <= 6
+    && !(slide.slide_number === finalSlideNumber && slide.role === "cta");
+}
+
+function filterOwnedGeneratedMiddleSlideCandidates(candidates, {
+  production,
+  allowOwnedGeneratedMiddleSlides,
+  slide,
+  finalSlideNumber
+}) {
+  if (!production || allowOwnedGeneratedMiddleSlides) return candidates || [];
+  if (!isProductionMiddleSlide(slide, finalSlideNumber)) return candidates || [];
+  return (candidates || []).filter((candidate) => !isOwnedGeneratedVisualCandidate(candidate));
 }
 
 function isOwnedLocalCandidate(candidate) {
@@ -361,6 +471,7 @@ function candidatePayload(candidate, usageIndex, requestedContext = {}) {
   return {
     id: candidate.id,
     source_kind: candidate.source_kind || "local_curated_library",
+    original_source_kind: candidate.original_source_kind || candidate.source_kind || "local_curated_library",
     supabase_public_url: candidate.public_url || candidate.supabase_public_url || null,
     bucket_id: candidate.bucket_id || null,
     object_path: candidate.object_path || null,
@@ -419,7 +530,7 @@ function libraryInstruction({ slide, collection, library, candidates, usageIndex
     selection_notes: collection?.selection_notes || [],
     prompt_translation: collection?.prompt_translation || null,
     production_asset_policy: production
-      ? "approved, owned, or licensed assets only"
+      ? "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation"
       : "draft mode can include needs_review assets",
     allow_needs_review: allowNeedsReview,
     legal_check: [
@@ -496,6 +607,7 @@ async function main() {
   const usageLog = await readOptionalJson(path.resolve(args.get("--usage-log") || DEFAULT_USAGE_LOG_PATH));
   const production = flags.has("--production");
   const allowNeedsReview = flags.has("--allow-needs-review");
+  const allowOwnedGeneratedMiddleSlides = flags.has("--allow-owned-generated-middle-slides");
   const collections = buildCollectionIndex(library);
   const localCandidatesByCollection = mergeCandidateIndexes(
     buildCandidateIndex(sourceManifest),
@@ -515,31 +627,73 @@ async function main() {
     if (slide.visual_collection) {
       assert(collection, `Unknown visual_collection: ${slide.visual_collection}`);
     }
-    const localFallbackCandidates = filterCandidatesByRights(
-      localCandidatesByCollection.get(slide.visual_collection) || [],
-      { production, allowNeedsReview }
+    const localFallbackCandidates = filterOwnedGeneratedMiddleSlideCandidates(
+      filterCandidatesByRights(
+        localCandidatesByCollection.get(slide.visual_collection) || [],
+        { production, allowNeedsReview }
+      ),
+      { production, allowOwnedGeneratedMiddleSlides, slide, finalSlideNumber }
     );
-    const supabaseCandidates = filterCandidatesByRights(
-      supabaseCandidatesByCollection.get(slide.visual_collection) || [],
-      { production, allowNeedsReview }
+    const supabaseCandidates = filterOwnedGeneratedMiddleSlideCandidates(
+      filterCandidatesByRights(
+        supabaseCandidatesByCollection.get(slide.visual_collection) || [],
+        { production, allowNeedsReview }
+      ),
+      { production, allowOwnedGeneratedMiddleSlides, slide, finalSlideNumber }
     );
     const shouldUseSupabase = preferSupabase && slide.asset_source !== "images_2_0";
-    const explicitOwnedCandidates = preferredOwnedCandidates(localFallbackCandidates, slide.preferred_asset_ids);
+    const preferWorldSpecificCta = slideAllowsCoachiAppCta(slide, finalSlideNumber);
+    const worldCompatibleLocalCandidates = filterCandidatesForRequestedWorld(
+      localFallbackCandidates,
+      requestedContext.visual_world
+    );
+    const worldCompatibleSupabaseCandidates = filterCandidatesForRequestedWorld(
+      supabaseCandidates,
+      requestedContext.visual_world
+    );
+    const explicitOwnedCandidates = preferredOwnedCandidates(
+      filterCandidatesForRequestedWorld(localFallbackCandidates, requestedContext.visual_world, {
+        preferSpecific: preferWorldSpecificCta
+      }),
+      slide.preferred_asset_ids
+    );
     const rawCandidates = shouldUseSupabase
-      ? [...explicitOwnedCandidates, ...supabaseCandidates]
-      : localFallbackCandidates;
+      ? [...explicitOwnedCandidates, ...worldCompatibleSupabaseCandidates]
+      : worldCompatibleLocalCandidates;
+    const worldCompatibleRawCandidates = filterCandidatesForRequestedWorld(rawCandidates, requestedContext.visual_world, {
+      preferSpecific: preferWorldSpecificCta
+    });
+    const isFinalCtaSlide = slide.slide_number === finalSlideNumber && slide.role === "cta";
+    const rotationPolicy = collection?.rotation_policy || library.rotation_policy || {};
+    const enforceFreshness = production
+      && slide.asset_source !== "images_2_0"
+      && !isFinalCtaSlide;
+    const freshRawCandidates = filterFreshProductionCandidates(
+      worldCompatibleRawCandidates,
+      usageIndex,
+      rotationPolicy,
+      { production, enforceFreshness }
+    );
+    const freshLocalFallbackCandidates = filterFreshProductionCandidates(
+      worldCompatibleLocalCandidates,
+      usageIndex,
+      rotationPolicy,
+      { production, enforceFreshness }
+    );
     const candidates = avoidAlreadySelectedWhenPossible(
-      filterCtaCandidatesForSlide(slide, rawCandidates, finalSlideNumber),
+      filterCtaCandidatesForSlide(slide, freshRawCandidates, finalSlideNumber),
       selectedAssetIds
     );
     const fallbackCandidates = avoidAlreadySelectedWhenPossible(
-      filterCtaCandidatesForSlide(slide, localFallbackCandidates, finalSlideNumber),
+      filterCtaCandidatesForSlide(slide, freshLocalFallbackCandidates, finalSlideNumber),
       selectedAssetIds
     );
     if (production && slide.asset_source !== "images_2_0") {
       assert(
         candidates.length > 0 || fallbackCandidates.length > 0,
-        `No production-approved assets for slide ${slide.slide_number} (${slide.visual_collection}). Review or approve assets first.`
+        enforceFreshness
+          ? `No production-fresh assets for slide ${slide.slide_number} (${slide.visual_collection}). Add or approve fresh ${requestedContext.visual_world} visuals before rendering.`
+          : `No production-approved assets for slide ${slide.slide_number} (${slide.visual_collection}). Review or approve assets first.`
       );
     }
 
@@ -593,11 +747,13 @@ async function main() {
     pinterest_source_manifest: sourceManifest ? PINTEREST_SOURCE_MANIFEST_PATH : null,
     owned_source_manifest: ownedSourceManifest ? OWNED_SOURCE_MANIFEST_PATH : null,
     usage_log: usageLog ? (args.get("--usage-log") || DEFAULT_USAGE_LOG_PATH) : null,
+    usage_rotation_scope: "posted, published, and legacy usage entries only; selected/rendered draft events do not exhaust assets",
     source_policy: library.source_rules,
     production_asset_policy: production
-      ? "approved, owned, or licensed assets only"
+      ? "approved, owned, or licensed assets only, with middle-slide usage freshness enforced"
       : "draft mode can include needs_review assets",
     allow_needs_review: allowNeedsReview,
+    allow_owned_generated_middle_slides: allowOwnedGeneratedMiddleSlides,
     slides
   };
 

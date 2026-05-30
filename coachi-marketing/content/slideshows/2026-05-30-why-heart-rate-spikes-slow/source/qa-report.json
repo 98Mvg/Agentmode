@@ -1,0 +1,261 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-05-30T10:13:37.288Z",
+  "pack": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Why heart rate spikes slow",
+    "candidate_file": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/hook-candidates.json",
+    "selected_score": 64,
+    "candidates": 10
+  },
+  "prompt_artifacts": {
+    "hook": "Why heart rate spikes slow",
+    "theme": "heart-rate panic",
+    "prompt_coherence": {
+      "phase": "during_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "hills_effort_005",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 107,
+        "quality_score": 87,
+        "visual_match_score": 20,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "hills_effort_006",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 107,
+        "quality_score": 87,
+        "visual_match_score": 20,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "hills_effort_009",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 107,
+        "quality_score": 87,
+        "visual_match_score": 20,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "hills_effort_011",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 107,
+        "quality_score": 87,
+        "visual_match_score": 20,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "hills_effort_010",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 91,
+        "quality_score": 87,
+        "visual_match_score": 20,
+        "freshness_penalty": 16,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-05-09T08:35:19.636Z",
+          "slideshow_ids": [
+            "2026-04-30-stop-racing-intervals"
+          ],
+          "recent_use_rank": 8
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "cta_ending_005",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 100,
+        "quality_score": 87,
+        "visual_match_score": 13,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/hook-provenance.json",
+      "generator": "chatgpt_images_2_0"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "hills_effort_005",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "hills_effort_006",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "hills_effort_009",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "hills_effort_011",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "hills_effort_010",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "cta_ending_005",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-05-30-why-heart-rate-spikes-slow",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 8,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "creative_rules": {
+    "coachi_mentions": 1,
+    "first_coachi_mention_slide": 6,
+    "canonical_slideshow": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/02-setup.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/03-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/04-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/05-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/06-coachi-connection.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": null
+}

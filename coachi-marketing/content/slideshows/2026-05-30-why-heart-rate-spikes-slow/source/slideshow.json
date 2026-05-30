@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-05-30-why-heart-rate-spikes-slow",
+  "format_id": "heart_rate_training_myths",
+  "schema": "top_5_mistakes_v1",
+  "topic": "Why your heart rate drifts up on easy runs",
+  "selected_hook": "Why heart rate spikes slow",
+  "hook_score": 64,
+  "hook_quality": {
+    "hook": "Why heart rate spikes slow",
+    "score": 64,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 5,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 8,
+      "simplicity": 10,
+      "emotional_relatability": 7,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 64,
+      "max_score": 70,
+      "word_count": 5,
+      "banned_matches": []
+    },
+    "rationale": "64/70; 5 words; bank family slow_heart_rate_context; pain 9/10; curiosity 8/10; simplicity 10/10; passes quality gate"
+  },
+  "target_audience": "heart-rate runners / Apple Watch runners / Garmin runners",
+  "source_problem": {
+    "id": "rp_2026_05_25_heart_rate_drifts_up_easy_runs",
+    "problem_type": "heart-rate panic",
+    "exact_words": "My heart rate creeps up every mile even when I slow down.",
+    "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md"
+  },
+  "visual_system": {
+    "emotion": "anxious",
+    "visual_world": "mountain",
+    "lighting": "clear mountain morning light",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why heart rate spikes slow",
+      "visual_direction": "anxious; natural running moment; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "heart-rate panic hook mountain clear mountain morning light anxious",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "Hills can raise it.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "heart-rate panic setup mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Stress can raise it.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "heart-rate panic value mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Sleep can raise it.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "heart-rate panic value mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Watches can lag.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "heart-rate panic value mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Coachi gives simple guidance before one number ruins the run.",
+      "visual_direction": "controlled and useful; controlled movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "runner controlled effort voice coaching moment mountain clear mountain morning light controlled and useful",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before judging one run.",
+      "visual_direction": "calm confidence; static; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background mountain clear mountain morning light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "Why heart rate spikes slow\n\nHills can raise it.\n\nSave this before your next easy run.",
+  "hashtags": [
+    "#running",
+    "#runtok",
+    "#beginnerrunner",
+    "#runningtips",
+    "#easyrun",
+    "#runcoach",
+    "#marathontraining",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-05-30-why-heart-rate-spikes-slow/source/qa-report.json",
+  "qa_checked_at": "2026-05-30T10:13:37.278Z"
+}

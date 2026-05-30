@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "hook": "Why heart rate spikes slow",
+  "problem_id": "rp_2026_05_25_heart_rate_drifts_up_easy_runs",
+  "problem_type": "heart-rate panic",
+  "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md",
+  "source_problem": "Why your heart rate drifts up on easy runs",
+  "exact_reddit_language": "My heart rate creeps up every mile even when I slow down.",
+  "emotion": "anxious",
+  "pattern": "number anxiety",
+  "format_id": "heart_rate_training_myths",
+  "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "hook_source": {
+    "hook": "Why heart rate spikes slow",
+    "source_family_id": "slow_heart_rate_context",
+    "source_signal": "964",
+    "source_url": "https://www.tiktok.com/search?q=running%20heart%20rate%20too%20high",
+    "why_it_works": "anxious metric question shape from source-backed TikTok hook (964)."
+  },
+  "slide_text_source": {
+    "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "slide_set_id": "high_hr_slow_context_v1",
+    "source_family_ids": [
+      "slow_heart_rate_context",
+      "easy_is_effort_not_pace"
+    ]
+  },
+  "hook_quality": {
+    "hook": "Why heart rate spikes slow",
+    "score": 64,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 5,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 8,
+      "simplicity": 10,
+      "emotional_relatability": 7,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 64,
+      "max_score": 70,
+      "word_count": 5,
+      "banned_matches": []
+    },
+    "rationale": "64/70; 5 words; bank family slow_heart_rate_context; pain 9/10; curiosity 8/10; simplicity 10/10; passes quality gate"
+  },
+  "theme": "heart-rate panic",
+  "route_tag": "mountain",
+  "visual_world": "mountain",
+  "lighting_family": "clear mountain morning light",
+  "cta": "Save this before judging one run.",
+  "avatar_world_required": true,
+  "avatar_source": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "viral_face_style_reference": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "cta_required": true,
+  "reddit_background_and_vibe": {
+    "background": "mountain running route with visible climb or ridge context",
+    "vibe": "tense but grounded, useful correction, not alarmist",
+    "reddit_background": "My heart rate creeps up every mile even when I slow down.",
+    "visual_keywords": [
+      "mountain route",
+      "gradient",
+      "open sky",
+      "clear morning light",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "medical emergency",
+      "fear expression",
+      "watch close-up",
+      "fake exhaustion",
+      "lake",
+      "lakeside",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "background_world_lock": {
+    "selected_visual_world": "mountain",
+    "required_background": "mountain running route with visible climb or ridge context",
+    "reference_background_policy": "Reference image controls runner appearance only; its original background is non-transferable.",
+    "generated_background_rule": "Generate a new mountain background that matches the deck visual world and lighting family.",
+    "allowed_background_context": [],
+    "forbidden_background_elements": [
+      "lake",
+      "lakeside",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "first_image_prompt_adaptation": "runner in a believable mountain running moment with clean negative space for overlay text",
+  "character_anchor": {
+    "identity_id": "watch_stole_the_run_runner_v1",
+    "reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+    "style_reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+    "stable_traits": [
+      "use the 2026-04-26 watch-stole-the-run runner as the primary appearance anchor",
+      "male runner, age 25-35",
+      "lean muscular endurance-athlete build",
+      "tan complexion",
+      "short dark slightly textured hair",
+      "serious calm focused expression",
+      "realistic sweat on face and shirt",
+      "sharp cheek and brow detail from the 2026-04-26 watch-stole-the-run look",
+      "fitted black or dark performance kit as the default visual language",
+      "shirtless warm-weather running is allowed as an occasional real-run variation",
+      "natural outdoor running context"
+    ],
+    "variation_policy": "Use the 2026-04-26 watch-stole-the-run runner as the primary appearance reference, not the cleaner park-portrait avatar. Keep the sharper face, sweat, and serious human expression. Dark technical running kit is the default, but shirtless warm-weather running is allowed as an occasional real-run variation with black shorts and believable sweat. Rotate workout phase, route, weather, light, and camera angle per pack. Avoid model-like posing. Default to no headwear; use caps/headbands only occasionally so every video does not look the same. If eyewear is selected, it must be black running glasses.",
+    "watch_rule": "Default: no visible watch. If the hook is explicitly about watch anxiety, a small unbranded sports watch may appear, but never use readable UI, close-ups, or watch-checking poses.",
+    "selected_variation_id": "black_long_sleeve_black_shorts_close"
+  },
+  "workout_phase": {
+    "id": "during_workout",
+    "label": "during-workout",
+    "moment": "runner in the middle of the session with steady controlled effort",
+    "body_language": "natural stride, consistent cadence, focused breathing, no stutter step or unnatural turn",
+    "prompt_cue": "show the runner moving naturally during the run with visible route context and believable motion"
+  },
+  "avatar_variation": {
+    "id": "black_long_sleeve_black_shorts_close",
+    "watch": "no visible watch",
+    "top": "black lightweight long-sleeve running shirt",
+    "headwear": "no hat",
+    "eyewear": "black running glasses",
+    "shorts": "black split shorts",
+    "angle": "tight medium-close cooldown frame, chest to waist",
+    "weather": "fresh mild morning conditions",
+    "lighting": "clear mountain morning light"
+  },
+  "prompt_compiler": {
+    "version": 1,
+    "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    "selected_by": "problem_type_mapping",
+    "coherence_status": "passed",
+    "conflict_patterns": [],
+    "checks": [
+      "single workout phase selected before prompt generation",
+      "avatar lighting normalized to deck lighting family",
+      "weather normalized to selected lighting family",
+      "reference image background locked out of generated avatar world",
+      "hook image remains slide-1-only",
+      "base image remains text-free for local Sharp/Canvas overlay"
+    ]
+  },
+  "schema_prompt_template": "photorealistic athletic runner in {scene}, natural route, premium but believable, clean center space for headline",
+  "production_rules": [
+    "Every slideshow has an explicit emotion, one Images 2.0 hook, one generated avatar world, and one final CTA.",
+    "Slide hook and slides 1-6 should use the source-backed TikTok slideshow text bank before any generic AI wording.",
+    "Images 2.0 generates slide 1 only.",
+    "Do not generate all slideshow images in one Images 2.0 request.",
+    "Do not bake overlay text into the image.",
+    "Keep the full deck in one visual world and one lighting family.",
+    "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
+    "Keep one primary visual world per slideshow; lake worlds may include mountains or hills as background context.",
+    "Use Supabase/curated library assets for slides 2 through the CTA slide.",
+    "Composite all text locally with Sharp/Canvas."
+  ]
+}

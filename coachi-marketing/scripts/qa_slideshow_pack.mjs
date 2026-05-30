@@ -26,10 +26,17 @@ const DEFAULT_POSTED_REGISTRY_PATH = "inputs/performance/posted-slideshows.json"
 const RAW_PROBLEM_BANK_PATH = "inputs/research/raw-runner-problems.json";
 const PRODUCTION_RIGHTS = new Set(["approved", "owned", "licensed"]);
 const APPROVED_VISUAL_WORLDS = new Set(["forest", "mountain", "lake"]);
+const DEFAULT_MAX_USES_PER_ASSET = 2;
+const DEFAULT_MAX_REUSE_IN_LAST_POSTS = 10;
 const WORLD_COLLECTIONS = {
   forest: "nature_context",
   mountain: "hills_effort",
   lake: "lake_calm"
+};
+const WORLD_SUPPORT_COLLECTIONS = {
+  forest: ["nature_context", "details_emotion"],
+  mountain: ["hills_effort", "details_emotion"],
+  lake: ["lake_calm", "details_emotion"]
 };
 const REJECTED_ABSTRACT_COPY = [
   /\bjudging one spike\b/i,
@@ -71,7 +78,9 @@ Validates one rendered slideshow pack:
 - source and rendered images exist
 - rendered dimensions are 1080x1920 when sharp is available
 - captions and hashtags exist
-- Postiz schedule remains dry-run unless explicitly configured elsewhere`);
+- Postiz schedule remains dry-run unless explicitly configured elsewhere
+
+Use --allow-owned-generated-middle-slides only when a production pack intentionally uses owned generated visuals on slides 2-6.`);
 }
 
 async function readJson(filePath) {
@@ -111,11 +120,40 @@ function assert(condition, message) {
 }
 
 function normalizedWorld(value) {
-  return String(value || "").toLowerCase().trim();
+  const text = String(value || "").toLowerCase().replace(/[_-]+/g, " ").trim();
+  if (/\blake\b|\bwater\b|\briverside\b|\bcoastal\b/.test(text)) return "lake";
+  if (/\bmountain\b|\bhill\b|\bhills\b|\buphill\b|\bclimb\b|\bridge\b/.test(text)) return "mountain";
+  if (/\bforest\b|\btrail\b|\bwoods?\b|\btrees?\b/.test(text)) return "forest";
+  return text;
 }
 
 function isApprovedVisualWorld(value) {
   return APPROVED_VISUAL_WORLDS.has(normalizedWorld(value));
+}
+
+function rotationLimit(value, fallback) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
+}
+
+function assetWorldHints(asset) {
+  const hints = new Set();
+  const values = [
+    asset?.id,
+    asset?.source_kind,
+    asset?.visual_world,
+    ...(asset?.visual_fit_metadata?.visual_world_tags || []),
+    ...(asset?.visual_world_tags || []),
+    ...(asset?.route_tags || []),
+    ...(asset?.subject_tags || []),
+    ...(asset?.aesthetic_tags || []),
+    ...(asset?.lighting_tags || [])
+  ];
+  for (const value of values) {
+    const world = normalizedWorld(value);
+    if (APPROVED_VISUAL_WORLDS.has(world)) hints.add(world);
+  }
+  return hints;
 }
 
 function resolveFrom(baseDir, value) {
@@ -158,10 +196,12 @@ function validateHybridSplit(manifest, label) {
       `${label}: slide ${slide.slide_number} has invalid asset_source ${slide.asset_source}.`
     );
     if (slide.slide_number !== finalSlideNumber) {
-      const expectedCollection = WORLD_COLLECTIONS[normalizedWorld(manifest.visual_world)];
+      const visualWorld = normalizedWorld(manifest.visual_world);
+      const expectedCollection = WORLD_COLLECTIONS[visualWorld];
+      const allowedCollections = WORLD_SUPPORT_COLLECTIONS[visualWorld] || [expectedCollection];
       assert(
-        slide.visual_collection === expectedCollection,
-        `${label}: slide ${slide.slide_number} visual_collection must stay in ${manifest.visual_world} world via ${expectedCollection}, got ${slide.visual_collection}.`
+        allowedCollections.includes(slide.visual_collection),
+        `${label}: slide ${slide.slide_number} visual_collection must stay in ${manifest.visual_world} world via ${allowedCollections.join(" or ")}, got ${slide.visual_collection}.`
       );
     }
   }
@@ -255,6 +295,85 @@ async function validateCopy({ manifest, packDir, production }) {
   return {
     hashtag_count: hashtagCount,
     source_backing: sourceBacking
+  };
+}
+
+function normalizeSlideCopy(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[“”"']/g, "")
+    .replace(/[.!?]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function coreSlideCopy(manifest) {
+  return (manifest.slides || [])
+    .filter((slide) => slide.slide_number >= 2 && slide.slide_number <= 6)
+    .map((slide) => normalizeSlideCopy(slide.text))
+    .filter(Boolean);
+}
+
+async function loadManifestForCopyFreshness(packDir) {
+  const renderManifest = await readOptionalJson(path.join(packDir, "render-manifest.json"), null);
+  if (renderManifest?.slides?.length) return renderManifest;
+
+  const canonical = await readOptionalJson(path.join(packDir, "source/slideshow.json"), null);
+  if (canonical?.slides?.length) {
+    return {
+      slides: canonical.slides
+    };
+  }
+
+  return null;
+}
+
+async function validateFreshSlideCopy({ manifest, packDir, production }) {
+  if (!production) return null;
+
+  const currentCopy = coreSlideCopy(manifest);
+  if (currentCopy.length < 4) {
+    return {
+      checked: false,
+      reason: "not_enough_core_slide_copy"
+    };
+  }
+
+  const packRoot = path.dirname(packDir);
+  const entries = await fs.readdir(packRoot, { withFileTypes: true });
+  const duplicates = [];
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const otherPackDir = path.join(packRoot, entry.name);
+    if (path.resolve(otherPackDir) === path.resolve(packDir)) continue;
+
+    const otherManifest = await loadManifestForCopyFreshness(otherPackDir);
+    if (!otherManifest?.slides?.length) continue;
+
+    const otherCopy = coreSlideCopy(otherManifest);
+    if (otherCopy.length < 4) continue;
+    const otherSet = new Set(otherCopy);
+    const shared = currentCopy.filter((line) => otherSet.has(line));
+    const sameSignature = currentCopy.join(" | ") === otherCopy.join(" | ");
+
+    if (sameSignature || shared.length >= 4) {
+      duplicates.push({
+        slideshow_id: entry.name,
+        shared_lines: shared
+      });
+    }
+  }
+
+  assert(
+    duplicates.length === 0,
+    `Production copy freshness failed: core slide text repeats prior deck(s): ${duplicates.map((duplicate) => duplicate.slideshow_id).join(", ")}.`
+  );
+
+  return {
+    checked: true,
+    core_slide_lines: currentCopy.length,
+    duplicate_matches: 0
   };
 }
 
@@ -522,6 +641,15 @@ function suggestedFixesForFailure(message) {
   if (/runner language|pain/i.test(message)) {
     fixes.push("Make the hook name a concrete runner pain like easy runs too hard, zone 2 too slow, or watch checking.");
   }
+  if (/copy freshness|repeats prior deck/i.test(message)) {
+    fixes.push("Rewrite slides 2-6 with fresh runner-specific wording before rendering or uploading.");
+  }
+  if (/reuse policy|production-fresh|within the last \d+ slideshows|immediately previous slideshow/i.test(message)) {
+    fixes.push("Do not upload this deck; add or approve fresh visual-library assets for the selected world, then rerun asset prep and QA.");
+  }
+  if (/owned_generated_visual_library|Refresh\/upload Pinterest\/Supabase library/i.test(message)) {
+    fixes.push("Refresh and upload Pinterest/Supabase library assets so middle slides use public-url library assets, or explicitly allow owned generated middle slides.");
+  }
   if (/Images 2\.0|full-deck/i.test(message)) {
     fixes.push("Use Images 2.0 only for slide 1 and library/branded assets for the rest.");
   }
@@ -678,12 +806,32 @@ async function validateProductionAssets({ packDir, allowNeedsReview }) {
       slide_number: result.slide_number,
       asset_id: result.selected_asset_id,
       source_rights: rights,
-      source_kind: result.selected_source_kind
+      source_kind: result.selected_asset_source_kind || result.selected_source_kind,
+      original_source_kind: result.selected_asset_original_source_kind || null
     });
   }
 
   assert(checked.length > 0, "Production QA found no non-hook materialized assets.");
   return checked;
+}
+
+function sourceKindValues(asset) {
+  return [
+    asset?.source_kind,
+    asset?.original_source_kind,
+    asset?.selected_asset_source_kind,
+    asset?.selected_asset_original_source_kind
+  ].filter(Boolean).map((value) => String(value));
+}
+
+function isOwnedGeneratedVisualAsset(asset) {
+  return sourceKindValues(asset).some((value) => value === "owned_generated_visual_library");
+}
+
+function middleSlideAllowsOwnedGenerated(slide, allowOwnedGeneratedMiddleSlides) {
+  return allowOwnedGeneratedMiddleSlides
+    || slide.allow_owned_generated_visual_library === true
+    || slide.instruction?.allow_owned_generated_visual_library === true;
 }
 
 function isCoachiAppCtaAsset(asset) {
@@ -719,7 +867,27 @@ function slideAllowsCoachiAppCtaAsset(slide, finalSlideNumber) {
     && /\bcoachi\b/i.test(String(slide.text || ""));
 }
 
-async function validateAssetPicklistQuality({ packDir, production }) {
+function assertProductionAssetFreshness({ slide, asset, finalSlideNumber }) {
+  if (slide.slide_number === finalSlideNumber && slide.role === "cta") return;
+
+  const rotationPolicy = slide.instruction?.rotation_policy || {};
+  const maxUses = rotationLimit(rotationPolicy.max_uses_per_asset_per_30_days, DEFAULT_MAX_USES_PER_ASSET);
+  const maxRecentWindow = rotationLimit(rotationPolicy.max_reuse_in_last_posts, DEFAULT_MAX_REUSE_IN_LAST_POSTS);
+  const usage = asset.usage || {};
+  const totalUses = usage.total_uses || 0;
+  const recentUseRank = asset.selection_quality?.recent_use_rank ?? usage.recent_use_rank ?? null;
+
+  assert(
+    totalUses <= maxUses,
+    `Slide ${slide.slide_number} top asset exceeds reuse policy: ${asset.id} has ${totalUses} logged uses; max is ${maxUses}.`
+  );
+  assert(
+    recentUseRank == null || recentUseRank >= maxRecentWindow,
+    `Slide ${slide.slide_number} top asset was used within the last ${maxRecentWindow} slideshows: ${asset.id} recent_use_rank=${recentUseRank}.`
+  );
+}
+
+async function validateAssetPicklistQuality({ packDir, production, allowOwnedGeneratedMiddleSlides }) {
   const picklistPath = path.join(packDir, "asset-picklist.json");
   if (!(await exists(picklistPath))) {
     assert(!production, "Production QA requires asset-picklist.json.");
@@ -757,6 +925,12 @@ async function validateAssetPicklistQuality({ packDir, production }) {
       continue;
     }
     assert(first.selection_quality, `Slide ${slide.slide_number} top asset missing selection_quality metadata.`);
+    if (production && slide.slide_number >= 2 && slide.slide_number <= 6) {
+      assert(
+        !isOwnedGeneratedVisualAsset(first) || middleSlideAllowsOwnedGenerated(slide, allowOwnedGeneratedMiddleSlides),
+        `Slide ${slide.slide_number} uses owned_generated_visual_library asset ${first.id}. Refresh/upload Pinterest/Supabase library public URLs, or explicitly allow owned generated middle slides.`
+      );
+    }
     assert(
       !topAssetSlides.has(first.id),
       `Slide ${slide.slide_number} repeats top visual asset ${first.id} already selected for slide ${topAssetSlides.get(first.id)}.`
@@ -765,11 +939,20 @@ async function validateAssetPicklistQuality({ packDir, production }) {
     assert(first.selection_quality.quality_score >= 70, `Slide ${slide.slide_number} top asset quality is too low: ${first.selection_quality.quality_score}.`);
     assert(first.selection_quality.visual_match_score != null, `Slide ${slide.slide_number} top asset missing visual_match_score.`);
     assert(first.visual_fit_metadata?.requested_context, `Slide ${slide.slide_number} top asset missing requested visual context.`);
+    const requestedWorld = normalizedWorld(first.visual_fit_metadata.requested_context.visual_world);
+    const hints = assetWorldHints(first);
+    if (isApprovedVisualWorld(requestedWorld)) {
+      assert(
+        hints.size === 0 || hints.has(requestedWorld),
+        `Slide ${slide.slide_number} selected asset ${first.id} conflicts with ${requestedWorld} world. Asset hints: ${[...hints].join(", ")}.`
+      );
+    }
     if (production) {
       assert(
         first.selection_quality.recent_use_rank !== 0,
         `Slide ${slide.slide_number} top asset was used in the immediately previous slideshow: ${first.id}.`
       );
+      assertProductionAssetFreshness({ slide, asset: first, finalSlideNumber });
       assert(
         first.visual_fit_metadata.requested_context.visual_world,
         `Slide ${slide.slide_number} production asset missing requested visual_world context.`
@@ -788,10 +971,13 @@ async function validateAssetPicklistQuality({ packDir, production }) {
     checked.push({
       slide_number: slide.slide_number,
       asset_id: first.id,
+      source_kind: first.source_kind || null,
+      original_source_kind: first.original_source_kind || null,
       selection_score: first.selection_quality.selection_score,
       quality_score: first.selection_quality.quality_score,
       visual_match_score: first.selection_quality.visual_match_score,
-      freshness_penalty: first.selection_quality.freshness_penalty
+      freshness_penalty: first.selection_quality.freshness_penalty,
+      usage: first.usage || null
     });
   }
 
@@ -835,6 +1021,9 @@ async function main() {
   const postedRegistryPath = args.get("--posted-registry") || DEFAULT_POSTED_REGISTRY_PATH;
   const manifestPath = path.join(packDir, "render-manifest.json");
   const manifest = await readJson(manifestPath);
+  const allowOwnedGeneratedMiddleSlides = flags.has("--allow-owned-generated-middle-slides")
+    || manifest.allow_owned_generated_middle_slides === true
+    || manifest.production_asset_policy?.allow_owned_generated_middle_slides === true;
   const qaReportPath = path.join(packDir, "source/qa-report.json");
 
   try {
@@ -844,9 +1033,10 @@ async function main() {
     validateHybridSplit(manifest, "render-manifest.json");
     const hook_quality = await validateHookQuality({ manifest, packDir, production });
     const copy = await validateCopy({ manifest, packDir, production });
+    const copy_freshness = await validateFreshSlideCopy({ manifest, packDir, production });
     const creative_rules = await validateCreativeRules({ manifest, packDir, production });
     const prompt_artifacts = await validatePromptArtifacts({ manifest, packDir });
-    const asset_quality = await validateAssetPicklistQuality({ packDir, production });
+    const asset_quality = await validateAssetPicklistQuality({ packDir, production, allowOwnedGeneratedMiddleSlides });
     const production_checks = production
       ? {
           hook_provenance: await validateProductionHookProvenance(packDir),
@@ -871,6 +1061,7 @@ async function main() {
       hybrid_cost_model: manifest.hybrid_cost_model,
       production,
       allow_needs_review: allowNeedsReview,
+      allow_owned_generated_middle_slides: allowOwnedGeneratedMiddleSlides,
       reasons: [],
       suggested_fixes: [],
       improved_version: null,
@@ -880,6 +1071,7 @@ async function main() {
       asset_quality,
       production_checks,
       copy,
+      copy_freshness,
       creative_rules,
       images,
       schedule

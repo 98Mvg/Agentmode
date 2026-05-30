@@ -99,7 +99,7 @@
   },
   "rotation_policy": {
     "max_uses_per_asset_per_30_days": 2,
-    "max_reuse_in_last_posts": 10,
+    "max_reuse_in_last_posts": 8,
     "prefer_zero_use_assets": true,
     "usage_log_path": "content/slideshows/visual-library/usage-log.json"
   },
