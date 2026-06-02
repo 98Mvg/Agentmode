@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TikTok Sandbox Demo | Everyday Runner Lab</title>
-    <meta name="description" content="Sandbox/mock TikTok integration review flow for Everyday Runner Lab.">
+    <meta name="description" content="Backend sandbox TikTok integration review flow for Everyday Runner Lab.">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/app-icon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/app-icon-192.png">
     <link rel="apple-touch-icon" href="/assets/app-icon-192.png">
@@ -65,8 +65,8 @@
 
     <main>
       <section class="intro">
-        <h1>TikTok sandbox/mock review flow</h1>
-        <p>This review page demonstrates the complete end-to-end TikTok integration without exposing live tokens, secrets, or posting real content. The public creator workflow uses the same screens and controls shown here.</p>
+        <h1>TikTok backend sandbox review flow</h1>
+        <p>This review page demonstrates the complete end-to-end TikTok integration without exposing live tokens, secrets, or posting real content. The creator workspace calls backend sandbox endpoints that mirror TikTok creator_info, video.upload, video.publish, and status polling.</p>
       </section>
 
       <section class="grid" aria-label="Selected products and scopes">
@@ -92,19 +92,21 @@
           <div class="step"><strong>Creator opens website</strong><br>App icon is visible in the tab and header.</div>
           <div class="step"><strong>Creator signs in with TikTok</strong><br>OAuth requests <code>user.info.basic</code>, <code>video.upload</code>, and <code>video.publish</code>.</div>
           <div class="step"><strong>TikTok redirects back</strong><br>The app receives safe sandbox <code>code</code> and <code>state</code> values.</div>
+          <div class="step"><strong>Backend loads creator info</strong><br><code>/api/tiktok/sandbox/creator-info</code> mirrors <code>/v2/post/publish/creator_info/query/</code> before the post page renders.</div>
           <div class="step"><strong>Creator reviews post</strong><br>The app shows creator info, privacy options, media preview, title, interactions, disclosure, and consent.</div>
-          <div class="step"><strong>Creator chooses an action</strong><br>The creator can upload a draft with <code>video.upload</code> or Direct Post with <code>video.publish</code>.</div>
+          <div class="step"><strong>Creator chooses an action</strong><br>The creator can upload a draft with <code>video.upload</code> or Direct Post with <code>video.publish</code>, then the app polls status.</div>
           <a class="button" href="/post-to-tiktok/">Open creator posting workspace</a>
         </div>
 
         <div class="card">
-          <h2>Sandbox/mock API responses shown in demo</h2>
+          <h2>Backend sandbox API responses shown in demo</h2>
           <pre>{
   "oauth_redirect": {
     "code": "sandbox_code_for_review_demo",
     "state": "everyday-runner-lab-review"
   },
   "creator_info": {
+    "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/creator_info/query/",
     "open_id": "sandbox_creator_open_id",
     "display_name": "Everyday Runner Lab Demo",
     "privacy_level_options": [
@@ -115,12 +117,18 @@
     "max_video_post_duration_sec": 300
   },
   "draft_upload": {
+    "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/video/init/",
     "scope": "video.upload",
     "status": "draft_uploaded"
   },
   "direct_post": {
+    "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/video/init/",
     "scope": "video.publish",
     "publish_id": "sandbox_publish_id",
+    "status": "processing"
+  },
+  "status_polling": {
+    "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/status/fetch/",
     "status": "processing"
   }
 }</pre>

@@ -336,12 +336,37 @@
         cursor: not-allowed;
       }
 
-      .status-list {
-        margin: 12px 0 0;
-        padding-left: 18px;
-        color: var(--muted);
-        line-height: 1.6;
-      }
+	      .status-list {
+	        margin: 12px 0 0;
+	        padding-left: 18px;
+	        color: var(--muted);
+	        line-height: 1.6;
+	      }
+
+	      .api-evidence {
+	        margin-top: 18px;
+	        border: 1px solid var(--line);
+	        border-radius: 8px;
+	        background: #f8fbf7;
+	        padding: 14px;
+	      }
+
+	      .api-evidence h3 {
+	        margin: 0 0 6px;
+	        font-size: 15px;
+	      }
+
+	      .api-log {
+	        overflow: auto;
+	        max-height: 380px;
+	        margin: 12px 0 0;
+	        padding: 12px;
+	        border-radius: 8px;
+	        background: #13251b;
+	        color: #e8f5e9;
+	        font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+	        white-space: pre-wrap;
+	      }
 
       .scope-map {
         margin: 0 0 18px;
@@ -439,7 +464,7 @@
           <h1>Post to TikTok</h1>
           <p class="subcopy">A creator reviews original running content, chooses TikTok posting settings, gives consent, and then sends the post to the connected TikTok account.</p>
         </div>
-        <div class="status-pill"><span class="dot"></span> creator_info loaded</div>
+	        <div class="status-pill" id="api-status-pill"><span class="dot"></span> loading creator_info API</div>
       </section>
 
       <section class="workspace" aria-label="TikTok posting workspace">
@@ -451,15 +476,15 @@
             <div class="creator">
               <div class="avatar" aria-hidden="true">ER</div>
               <div>
-                <strong>Everyday Runner Lab Demo</strong>
-                <span>@everydayrunnerlab0</span>
-              </div>
-            </div>
-            <div class="facts" aria-label="Creator posting state">
-              <div class="fact"><span>Post availability</span><strong>Can post now</strong></div>
-              <div class="fact"><span>Max video duration</span><strong>300 sec</strong></div>
-              <div class="fact"><span>Privacy options</span><strong>3 returned</strong></div>
-            </div>
+	                <strong id="creator-name">Everyday Runner Lab Demo</strong>
+	                <span id="creator-username">@everydayrunnerlab0</span>
+	              </div>
+	            </div>
+	            <div class="facts" aria-label="Creator posting state">
+	              <div class="fact"><span>Post availability</span><strong id="post-availability">Can post now</strong></div>
+	              <div class="fact"><span>Max video duration</span><strong id="max-duration">300 sec</strong></div>
+	              <div class="fact"><span>Privacy options</span><strong id="privacy-count">3 returned</strong></div>
+	            </div>
           </div>
 
           <div class="panel-header">
@@ -567,11 +592,16 @@
               <button id="publish" type="button" disabled>Publish to TikTok</button>
               <span class="help" id="ready-text">Select privacy and consent to continue.</span>
             </div>
-            <ol class="status-list" id="status-list" aria-live="polite">
-              <li>Waiting for creator review.</li>
-            </ol>
-          </div>
-        </form>
+	            <ol class="status-list" id="status-list" aria-live="polite">
+	              <li>Waiting for creator review.</li>
+	            </ol>
+	            <div class="api-evidence" aria-label="Backend sandbox API evidence">
+	              <h3>Backend sandbox API evidence</h3>
+	              <p class="help">These entries are returned by the Everyday Runner Lab backend and mirror the TikTok Content Posting API calls used for review: creator_info, video.upload, video.publish, and status polling.</p>
+	              <pre class="api-log" id="api-log">Waiting for backend creator_info response...</pre>
+	            </div>
+	          </div>
+	        </form>
       </section>
 
       <section class="audit-map" aria-label="Direct Post guideline coverage">
@@ -583,25 +613,97 @@
       </section>
     </main>
 
-    <script>
-      (function () {
-        var title = document.getElementById("title");
-        var count = document.getElementById("title-count");
-        var privacy = document.getElementById("privacy");
-        var consent = document.getElementById("consent");
-        var draftUpload = document.getElementById("draft-upload");
-        var publish = document.getElementById("publish");
-        var readyText = document.getElementById("ready-text");
-        var commercialToggle = document.getElementById("commercial-toggle");
-        var commercialOptions = document.getElementById("commercial-options");
-        var yourBrand = document.getElementById("your-brand");
-        var brandedContent = document.getElementById("branded-content");
-        var commercialMessage = document.getElementById("commercial-message");
-        var commercialError = document.getElementById("commercial-error");
-        var brandedContentWarning = document.getElementById("branded-content-warning");
-        var consentLabel = document.getElementById("consent-label");
-        var privateOption = privacy.querySelector('option[value="SELF_ONLY"]');
-        var statusList = document.getElementById("status-list");
+	    <script>
+	      (function () {
+	        var title = document.getElementById("title");
+	        var count = document.getElementById("title-count");
+	        var privacy = document.getElementById("privacy");
+	        var consent = document.getElementById("consent");
+	        var draftUpload = document.getElementById("draft-upload");
+	        var publish = document.getElementById("publish");
+	        var readyText = document.getElementById("ready-text");
+	        var commercialToggle = document.getElementById("commercial-toggle");
+	        var commercialOptions = document.getElementById("commercial-options");
+	        var yourBrand = document.getElementById("your-brand");
+	        var brandedContent = document.getElementById("branded-content");
+	        var commercialMessage = document.getElementById("commercial-message");
+	        var commercialError = document.getElementById("commercial-error");
+	        var brandedContentWarning = document.getElementById("branded-content-warning");
+	        var consentLabel = document.getElementById("consent-label");
+	        var privateOption = privacy.querySelector('option[value="SELF_ONLY"]');
+	        var statusList = document.getElementById("status-list");
+	        var apiLog = document.getElementById("api-log");
+	        var apiStatusPill = document.getElementById("api-status-pill");
+	        var sessionId = new URLSearchParams(window.location.search).get("session_id") || window.localStorage.getItem("erl_tiktok_session_id") || "sandbox_review_session";
+	        window.localStorage.setItem("erl_tiktok_session_id", sessionId);
+
+	        function appendStatus(text) {
+	          var li = document.createElement("li");
+	          li.textContent = text;
+	          statusList.appendChild(li);
+	        }
+
+	        function showApi(label, payload) {
+	          apiLog.textContent = label + "\n" + JSON.stringify(payload, null, 2);
+	        }
+
+	        function setApiStatus(text) {
+	          apiStatusPill.innerHTML = '<span class="dot"></span> ' + text;
+	        }
+
+	        function apiUrl(path) {
+	          var separator = path.indexOf("?") === -1 ? "?" : "&";
+	          return path + separator + "session_id=" + encodeURIComponent(sessionId);
+	        }
+
+	        async function requestJson(path, options) {
+	          var response = await fetch(apiUrl(path), Object.assign({
+	            headers: { "Content-Type": "application/json" }
+	          }, options || {}));
+	          var json = await response.json();
+	          if (!response.ok) {
+	            var message = json.errors ? json.errors.join(" ") : (json.error || "Request failed");
+	            throw new Error(message);
+	          }
+	          return json;
+	        }
+
+	        function postPayload() {
+	          return {
+	            title: title.value,
+	            privacy_level: privacy.value,
+	            allow_comments: document.getElementById("allow-comments").checked,
+	            allow_duet: document.getElementById("allow-duet").checked,
+	            allow_stitch: document.getElementById("allow-stitch").checked,
+	            commercial_content: commercialToggle.checked,
+	            brand_organic_toggle: yourBrand.checked,
+	            brand_content_toggle: brandedContent.checked,
+	            consent: consent.checked
+	          };
+	        }
+
+	        async function loadCreatorInfo() {
+	          try {
+	            var json = await requestJson("/api/tiktok/sandbox/creator-info");
+	            var info = json.creator_info;
+	            document.getElementById("creator-name").textContent = info.creator_nickname;
+	            document.getElementById("creator-username").textContent = "@" + info.creator_username;
+	            document.getElementById("post-availability").textContent = "Can post now";
+	            document.getElementById("max-duration").textContent = info.max_video_post_duration_sec + " sec";
+	            document.getElementById("privacy-count").textContent = info.privacy_level_options.length + " returned";
+	            privacy.innerHTML = '<option value="">Select privacy</option>' + info.privacy_level_options.map(function (option) {
+	              var label = option === "PUBLIC_TO_EVERYONE" ? "Public to everyone" : option === "MUTUAL_FOLLOW_FRIENDS" ? "Mutual follow friends" : "Only me";
+	              return '<option value="' + option + '">' + label + '</option>';
+	            }).join("");
+	            privateOption = privacy.querySelector('option[value="SELF_ONLY"]');
+	            setApiStatus("creator_info API loaded");
+	            showApi("GET /api/tiktok/sandbox/creator-info -> official creator_info/query shape", json);
+	          } catch (error) {
+	            setApiStatus("backend API unavailable");
+	            showApi("Backend API unavailable. Deploy the review package as a Render Web Service.", { error: error.message });
+	          }
+	          updateReady();
+	        }
 
         function updateCommercial() {
           var enabled = commercialToggle.checked;
@@ -658,43 +760,68 @@
             : "Select privacy, resolve disclosure, and consent to continue.";
         }
 
-        draftUpload.addEventListener("click", function () {
-          if (draftUpload.disabled) return;
-          draftUpload.disabled = true;
-          publish.disabled = true;
-          readyText.textContent = "Draft upload request initialized.";
-          statusList.innerHTML = "";
-          ["Initializing video.upload draft request.", "Uploading original media as a TikTok draft.", "Draft created for final editing inside TikTok.", "Post status: draft uploaded."].forEach(function (item, index) {
-            window.setTimeout(function () {
-              var li = document.createElement("li");
-              li.textContent = item;
-              statusList.appendChild(li);
-            }, index * 450);
-          });
-        });
+	        async function fetchStatus(publishId) {
+	          var json = await requestJson("/api/tiktok/sandbox/status", {
+	            method: "POST",
+	            body: JSON.stringify({ publish_id: publishId })
+	          });
+	          appendStatus("Status polling returned: " + json.status + ".");
+	          showApi("POST /api/tiktok/sandbox/status -> official status/fetch shape", json);
+	        }
 
-        publish.addEventListener("click", function () {
-          if (publish.disabled) return;
-          draftUpload.disabled = true;
-          publish.disabled = true;
-          readyText.textContent = "Publishing request initialized.";
-          statusList.innerHTML = "";
-          ["Initializing post request.", "Uploading original media.", "Processing on TikTok.", "Post status: processing. It may take a few minutes to appear on the profile."].forEach(function (item, index) {
-            window.setTimeout(function () {
-              var li = document.createElement("li");
-              li.textContent = item;
-              statusList.appendChild(li);
-            }, index * 450);
-          });
-        });
+	        draftUpload.addEventListener("click", async function () {
+	          if (draftUpload.disabled) return;
+	          draftUpload.disabled = true;
+	          publish.disabled = true;
+	          readyText.textContent = "Draft upload request initialized.";
+	          statusList.innerHTML = "";
+	          appendStatus("Calling backend sandbox endpoint for video.upload.");
+	          try {
+	            var json = await requestJson("/api/tiktok/sandbox/video-upload", {
+	              method: "POST",
+	              body: JSON.stringify(postPayload())
+	            });
+	            appendStatus("Backend initialized video.upload with publish_id " + json.publish_id + ".");
+	            appendStatus("Draft uploaded for final editing inside TikTok.");
+	            showApi("POST /api/tiktok/sandbox/video-upload -> official video/init shape", json);
+	            await fetchStatus(json.publish_id);
+	          } catch (error) {
+	            appendStatus("video.upload failed: " + error.message);
+	            showApi("video.upload validation failed", { error: error.message, request: postPayload() });
+	          }
+	          updateReady();
+	        });
+
+	        publish.addEventListener("click", async function () {
+	          if (publish.disabled) return;
+	          draftUpload.disabled = true;
+	          publish.disabled = true;
+	          readyText.textContent = "Publishing request initialized.";
+	          statusList.innerHTML = "";
+	          appendStatus("Calling backend sandbox endpoint for video.publish Direct Post.");
+	          try {
+	            var json = await requestJson("/api/tiktok/sandbox/direct-post", {
+	              method: "POST",
+	              body: JSON.stringify(postPayload())
+	            });
+	            appendStatus("Backend initialized Direct Post with publish_id " + json.publish_id + ".");
+	            appendStatus("TikTok processing status is now available for polling.");
+	            showApi("POST /api/tiktok/sandbox/direct-post -> official video/init shape", json);
+	            await fetchStatus(json.publish_id);
+	          } catch (error) {
+	            appendStatus("video.publish failed: " + error.message);
+	            showApi("video.publish validation failed", { error: error.message, request: postPayload() });
+	          }
+	          updateReady();
+	        });
 
         [title, privacy, consent, commercialToggle, yourBrand, brandedContent].forEach(function (input) {
           input.addEventListener("input", updateReady);
           input.addEventListener("change", updateReady);
         });
 
-        updateReady();
-      })();
-    </script>
+	        loadCreatorInfo();
+	      })();
+	    </script>
   </body>
 </html>

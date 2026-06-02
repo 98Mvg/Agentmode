@@ -1,0 +1,99 @@
+import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { once } from "node:events";
+import test from "node:test";
+
+const port = 4317;
+const baseUrl = `http://127.0.0.1:${port}`;
+
+function startServer() {
+  const child = spawn(process.execPath, ["server.mjs"], {
+    cwd: new URL("..", import.meta.url),
+    env: { ...process.env, PORT: String(port), TIKTOK_API_MODE: "sandbox" },
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+  return child;
+}
+
+async function waitForHealth() {
+  const deadline = Date.now() + 8000;
+  while (Date.now() < deadline) {
+    try {
+      const response = await fetch(`${baseUrl}/health`);
+      if (response.ok) return;
+    } catch {
+      // keep polling
+    }
+    await new Promise((resolve) => setTimeout(resolve, 120));
+  }
+  throw new Error("Timed out waiting for sandbox server health.");
+}
+
+async function postJson(path, body) {
+  const response = await fetch(`${baseUrl}${path}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  return { response, json: await response.json() };
+}
+
+test("sandbox Direct Post flow exposes creator info, draft upload, direct post, and status", async () => {
+  const server = startServer();
+  server.stderr.on("data", (chunk) => process.stderr.write(chunk));
+  try {
+    await waitForHealth();
+
+    const callback = await fetch(`${baseUrl}/integrations/social/tiktok?code=sandbox_code_for_review_demo&state=everyday-runner-lab-review`);
+    const callbackHtml = await callback.text();
+    assert.equal(callback.status, 200);
+    assert.match(callbackHtml, /Continue to Post to TikTok/);
+
+    const creator = await fetch(`${baseUrl}/api/tiktok/sandbox/creator-info`);
+    const creatorJson = await creator.json();
+    assert.equal(creator.status, 200);
+    assert.equal(creatorJson.scope, "user.info.basic");
+    assert.deepEqual(creatorJson.creator_info.privacy_level_options, [
+      "PUBLIC_TO_EVERYONE",
+      "MUTUAL_FOLLOW_FRIENDS",
+      "SELF_ONLY",
+    ]);
+
+    const validPayload = {
+      title: "Top 5 easy run mistakes #running",
+      privacy_level: "PUBLIC_TO_EVERYONE",
+      allow_comments: true,
+      allow_duet: false,
+      allow_stitch: false,
+      commercial_content: true,
+      brand_organic_toggle: true,
+      brand_content_toggle: false,
+      consent: true,
+    };
+
+    const draft = await postJson("/api/tiktok/sandbox/video-upload", validPayload);
+    assert.equal(draft.response.status, 200);
+    assert.equal(draft.json.scope, "video.upload");
+    assert.equal(draft.json.status, "DRAFT_UPLOADED");
+
+    const direct = await postJson("/api/tiktok/sandbox/direct-post", validPayload);
+    assert.equal(direct.response.status, 200);
+    assert.equal(direct.json.scope, "video.publish");
+    assert.match(direct.json.publish_id, /^sandbox_publish_/);
+
+    const status = await postJson("/api/tiktok/sandbox/status", { publish_id: direct.json.publish_id });
+    assert.equal(status.response.status, 200);
+    assert.equal(status.json.endpoint, "POST https://open.tiktokapis.com/v2/post/publish/status/fetch/");
+    assert.equal(status.json.status, "PROCESSING");
+
+    const invalid = await postJson("/api/tiktok/sandbox/direct-post", {
+      ...validPayload,
+      privacy_level: "",
+    });
+    assert.equal(invalid.response.status, 400);
+    assert.match(invalid.json.errors.join(" "), /Privacy must be selected/);
+  } finally {
+    server.kill("SIGTERM");
+    await once(server, "close");
+  }
+});

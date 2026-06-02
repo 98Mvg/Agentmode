@@ -19,14 +19,16 @@ Do not submit review with `localhost` URLs or Postiz/admin-only screens. If no r
 - `landing.html`: simple public landing page.
 - `terms.html`: lightweight terms page for the runner content brand.
 - `privacy.html`: lightweight privacy page.
-- `site/`: deploy-ready static site with clean `/`, `/terms`, and `/privacy` paths.
+- `site/`: public pages served by the review web service with clean `/`, `/terms`, and `/privacy` paths.
 - `site/login/`: visible creator login entry point for TikTok review.
 - `site/connect-tiktok/`: visible TikTok authorization entry point.
-- `site/sandbox-demo/`: explicit sandbox/mock review flow that names all selected TikTok products and scopes.
-- `site/post-to-tiktok/`: reviewer-visible creator posting flow with Direct Post controls.
-- `site/integrations/social/tiktok/`: redirect URI path to register in TikTok Developer.
+- `site/sandbox-demo/`: explicit backend sandbox review flow that names all selected TikTok products and scopes.
+- `site/post-to-tiktok/`: reviewer-visible creator posting flow with Direct Post controls and backend API evidence.
+- `server.mjs`: Node web service serving public pages plus `/api/tiktok/sandbox/*` review endpoints.
+- `site/integrations/social/tiktok/`: redirect URI path to register in TikTok Developer, handled dynamically by `server.mjs`.
 - `site/assets/everyday-runner-lab-app-icon-1024.png`: canonical app icon to upload in TikTok Basic Info and reuse on the website.
-- `demo-video-2026-05-25/everyday-runner-lab-tiktok-sandbox-review-demo-2026-05-25.mp4`: replacement review video.
+- `tests/sandbox-flow.test.mjs`: local backend verification for creator_info, video.upload, video.publish, and status polling.
+- `demo-video-2026-05-25/everyday-runner-lab-tiktok-sandbox-review-demo-2026-05-25.mp4`: old review video; rebuild after deploying the backend sandbox flow.
 - `build_review_demo_video.mjs`: reproducible local builder for the review video.
 - `render-dashboard-settings.md`: exact Render setup values.
 - `tiktok-developer-field-values.md`: exact TikTok Developer form values.
@@ -59,7 +61,8 @@ Reviewer consistency rule:
 - Upload the exact app icon at `site/assets/everyday-runner-lab-app-icon-1024.png`.
 - Add `Login Kit` and `Content Posting API`.
 - Add only the scopes demonstrated by the creator flow: `user.info.basic`, `video.upload`, and `video.publish`.
-- Upload the replacement demo video at `demo-video-2026-05-25/everyday-runner-lab-tiktok-sandbox-review-demo-2026-05-25.mp4`.
+- Deploy the package as a Render Web Service, not a Static Site.
+- Upload a replacement demo video that shows the backend API evidence panel after creator_info, video.upload, video.publish, and status polling.
 - Save only after the fields match the published domain.
 
 ## Rejection Avoidance
@@ -71,7 +74,7 @@ Reviewer consistency rule:
 - Show comments, Duet, and Stitch starting off and being manually enabled only if the creator chooses.
 - Show commercial disclosure controls and the resulting TikTok label state.
 - Show explicit consent before publishing.
-- Show `video.upload` as the creator-approved Upload as TikTok draft path.
-- Show `video.publish` as the creator-approved Direct Post path.
-- Show post-processing status after the publish action.
+- Show `video.upload` as the creator-approved Upload as TikTok draft path, including the backend request/response evidence.
+- Show `video.publish` as the creator-approved Direct Post path, including the backend request/response evidence.
+- Show post-processing status after the publish action through `/api/tiktok/sandbox/status`.
 - Keep the same app icon visible in TikTok Basic Info, website favicon links, and the top/header of the public site, Terms page, and Privacy page.

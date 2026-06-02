@@ -88,13 +88,13 @@ video.publish
 ## App Review Explanation
 
 ```text
-Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. This revision fixes icon consistency by using the same app icon in TikTok Basic Info, the website favicon, and the visible header/top of the public website, Terms page, and Privacy page. Creators open https://everyday-runner-lab.onrender.com, use Creator Login, authorize TikTok in the sandbox/mock review flow, review the connected TikTok creator account, preview original media, edit the post title, manually choose privacy, manually enable comments/Duet/Stitch if desired, complete commercial disclosure when applicable, consent to TikTok music usage terms, and choose either Upload as TikTok draft or Direct Post. We use user.info.basic to display the connected creator identity, video.upload for creator-approved draft upload, and video.publish for creator-approved Direct Post.
+Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. This revision uses the same app icon in TikTok Basic Info, the website favicon, and the visible header/top of the public website, Terms page, and Privacy page. It also adds a backend sandbox flow so reviewers can see API-shaped creator_info, video.upload, video.publish, and status polling requests without exposing live tokens or posting real content. Creators open https://everyday-runner-lab.onrender.com, use Creator Login, authorize TikTok, review the connected TikTok creator account, preview original media, edit the post title, manually choose privacy, manually enable comments/Duet/Stitch if desired, complete commercial disclosure when applicable, consent to TikTok music usage terms, and choose either Upload as TikTok draft or Direct Post. We use user.info.basic to display the connected creator identity, video.upload for creator-approved draft upload, and video.publish for creator-approved Direct Post.
 ```
 
 ## Resubmission Reason
 
 ```text
-Fixed the app icon mismatch by using one 1024px Everyday Runner Lab icon for the TikTok Basic Info upload, favicon, and visible website/Terms/Privacy headers. Added a sandbox/mock review page and replacement 72-second demo video that clearly demonstrates Login Kit, Content Posting API, user.info.basic, video.upload, video.publish, creator settings, disclosure, consent, and post status.
+Fixed the app icon mismatch by using one 1024px Everyday Runner Lab icon for the TikTok Basic Info upload, favicon, and visible website/Terms/Privacy headers. Added a backend sandbox review flow that clearly demonstrates Login Kit, Content Posting API, user.info.basic, video.upload, video.publish, creator settings, disclosure, consent, backend request/response evidence, and post status polling.
 ```
 
 ## Demo Video Checklist
@@ -104,12 +104,13 @@ Show the full flow:
 1. Open the published runner-brand website.
 2. Click the visible `Creator Login` or `Connect TikTok` entry point.
 3. Open the creator workspace / Post to TikTok page.
-4. OAuth into TikTok or show the sandbox/mock OAuth response.
+4. OAuth into TikTok or show the backend sandbox OAuth response.
 5. Grant only the requested scopes: `user.info.basic`, `video.upload`, and `video.publish`.
 6. Show the connected creator identity and returned posting options.
 7. Preview original slideshow/video media.
 8. Edit the title, manually choose privacy, set comments/Duet/Stitch, complete disclosure, and consent.
 9. Demonstrate `video.upload` with Upload as TikTok draft.
 10. Demonstrate `video.publish` with Direct Post status flow.
+11. Show the backend API evidence panel after creator_info, video.upload, video.publish, and status polling.
 
 The demo should match the domain used in the TikTok Developer form.

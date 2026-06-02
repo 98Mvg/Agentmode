@@ -1,62 +1,53 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
-import http from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
 const reviewRoot = path.dirname(fileURLToPath(import.meta.url));
-const siteDir = path.join(reviewRoot, "site");
-const outputDir = path.join(reviewRoot, "demo-video-2026-05-25");
-const videoName = "everyday-runner-lab-tiktok-sandbox-review-demo-2026-05-25.mp4";
+const outputDir = path.join(reviewRoot, "demo-video-2026-06-02");
+const videoName = "everyday-runner-lab-backend-sandbox-review-demo-2026-06-02.mp4";
 const framesDir = path.join(outputDir, "frames");
 const port = 4187;
 const baseUrl = `http://127.0.0.1:${port}`;
 let frameIndex = 1;
 
-const mime = new Map([
-  [".html", "text/html; charset=utf-8"],
-  [".css", "text/css; charset=utf-8"],
-  [".js", "text/javascript; charset=utf-8"],
-  [".json", "application/json; charset=utf-8"],
-  [".png", "image/png"],
-  [".jpg", "image/jpeg"],
-  [".jpeg", "image/jpeg"],
-]);
-
-function resolvePath(requestUrl) {
-  const parsed = new URL(requestUrl, baseUrl);
-  const normalized = decodeURIComponent(parsed.pathname);
-  const candidate = path.normalize(path.join(siteDir, normalized));
-  if (!candidate.startsWith(siteDir)) return null;
-  if (fsSync.existsSync(candidate) && fsSync.statSync(candidate).isDirectory()) {
-    return path.join(candidate, "index.html");
-  }
-  if (fsSync.existsSync(candidate)) return candidate;
-  return path.join(candidate, "index.html");
-}
-
 function startServer() {
-  const server = http.createServer(async (req, res) => {
-    try {
-      const filePath = resolvePath(req.url || "/");
-      if (!filePath || !fsSync.existsSync(filePath)) {
-        res.writeHead(404);
-        res.end("Not found");
-        return;
-      }
-      res.setHeader("Content-Type", mime.get(path.extname(filePath)) || "application/octet-stream");
-      res.end(await fs.readFile(filePath));
-    } catch (error) {
-      res.writeHead(500);
-      res.end(String(error));
-    }
+  const child = spawn(process.execPath, [path.join(reviewRoot, "server.mjs")], {
+    cwd: reviewRoot,
+    env: {
+      ...process.env,
+      PORT: String(port),
+      PUBLIC_BASE_URL: baseUrl,
+      TIKTOK_API_MODE: "sandbox",
+    },
+    stdio: ["ignore", "pipe", "pipe"],
   });
 
+  child.stdout.on("data", (chunk) => process.stdout.write(chunk));
+  child.stderr.on("data", (chunk) => process.stderr.write(chunk));
+
   return new Promise((resolve, reject) => {
-    server.once("error", reject);
-    server.listen(port, "127.0.0.1", () => resolve(server));
+    child.once("error", reject);
+    const deadline = Date.now() + 8000;
+    async function poll() {
+      try {
+        const response = await fetch(`${baseUrl}/health`);
+        if (response.ok) {
+          resolve(child);
+          return;
+        }
+      } catch {
+        // keep polling until the server is ready
+      }
+      if (Date.now() > deadline) {
+        reject(new Error("Timed out waiting for review sandbox server."));
+        return;
+      }
+      setTimeout(poll, 120);
+    }
+    poll();
   });
 }
 
@@ -159,11 +150,11 @@ try {
   await show(page, "/", "1/12 Public website: app icon is visible in the page header and the same icon is linked as the favicon.");
   await show(page, "/terms/", "2/12 Terms of Service: the same Everyday Runner Lab app icon appears at the top of the page.");
   await show(page, "/privacy/", "3/12 Privacy Policy: the same app icon appears at the top of the page and favicon links are present.");
-  await show(page, "/sandbox-demo/", "4/12 Sandbox/mock review page: all selected TikTok products and scopes are named before the flow begins.");
+  await show(page, "/sandbox-demo/", "4/12 Backend sandbox review page: all selected TikTok products, scopes, and API-shaped endpoints are named before the flow begins.");
   await show(page, "/login/", "5/12 Login Kit entry: the creator starts from the Everyday Runner Lab login page.");
   await show(page, "/connect-tiktok/", "6/12 TikTok authorization: OAuth requests user.info.basic, video.upload, and video.publish.");
   await show(page, "/integrations/social/tiktok/?code=sandbox_code_for_review_demo&state=everyday-runner-lab-review", "7/12 Sandbox redirect: TikTok returns code and state, then the creator continues to the posting workspace.");
-  await show(page, "/post-to-tiktok/", "8/12 Posting workspace: user.info.basic displays the connected creator, privacy options, and max duration.");
+  await show(page, "/post-to-tiktok/", "8/12 Posting workspace: the backend creator_info call displays the connected creator, privacy options, and max duration.");
 
   await page.selectOption("#privacy", "PUBLIC_TO_EVERYONE");
   await page.check("#allow-comments");
@@ -180,7 +171,8 @@ try {
   await capture(page);
 
   await page.click("#draft-upload");
-  await caption(page, "11/12 video.upload: the creator can upload original media as a TikTok draft for final editing.");
+  await page.locator("#api-log").scrollIntoViewIfNeeded();
+  await caption(page, "11/12 video.upload: the backend returns an API-shaped video/init response and status fetch for the draft path.");
   await page.waitForTimeout(2400);
   await capture(page);
 
@@ -188,7 +180,8 @@ try {
   await page.selectOption("#privacy", "PUBLIC_TO_EVERYONE");
   await page.check("#consent");
   await page.click("#publish");
-  await caption(page, "12/12 video.publish: Direct Post starts only after the creator reviews settings and presses Publish to TikTok.");
+  await page.locator("#api-log").scrollIntoViewIfNeeded();
+  await caption(page, "12/12 video.publish: Direct Post starts only after review and shows backend video/init plus status polling evidence.");
   await page.waitForTimeout(2400);
   await capture(page);
 
@@ -198,5 +191,5 @@ try {
   console.log(mp4Path);
 } finally {
   if (browser) await browser.close().catch(() => {});
-  await new Promise((resolve) => server.close(resolve));
+  if (server) server.kill("SIGTERM");
 }

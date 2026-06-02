@@ -1,8 +1,8 @@
-# Render Static Site Settings
+# Render Web Service Settings
 
-Use a Render Static Site, not a web service.
+Use a Render Web Service, not a Static Site.
 
-Render docs: static sites link a Git repo, deploy over CDN, receive an `onrender.com` URL, and can use custom domains.
+The TikTok review flow now includes backend sandbox endpoints for creator_info, video.upload, video.publish, and status polling. A Static Site cannot serve these API routes.
 
 ## Dashboard Values
 
@@ -21,13 +21,21 @@ coachi-marketing/outputs/runner-brand/tiktok-developer-review
 Build Command:
 
 ```text
-true
+npm install --omit=dev
 ```
 
-Publish Directory:
+Start Command:
 
 ```text
-site
+npm start
+```
+
+Environment:
+
+```text
+NODE_VERSION=20
+TIKTOK_API_MODE=sandbox
+PUBLIC_BASE_URL=https://everyday-runner-lab.onrender.com
 ```
 
 Auto Deploy:
@@ -50,7 +58,7 @@ https://<render-url>/post-to-tiktok
 https://<render-url>/integrations/social/tiktok
 ```
 
-Use those three in TikTok Developer until you have a custom runner-brand domain.
+Use these in TikTok Developer until you have a custom runner-brand domain.
 
 For the current review package, use:
 
