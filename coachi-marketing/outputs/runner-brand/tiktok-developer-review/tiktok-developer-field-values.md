@@ -69,7 +69,6 @@ https://everyday-runner-lab.onrender.com/integrations/social/tiktok
 Add:
 
 ```text
-Login Kit
 Content Posting API
 ```
 
@@ -80,21 +79,19 @@ Do not add products that are not used in the demo video.
 Request only what the creator posting flow needs:
 
 ```text
-user.info.basic
-video.upload
 video.publish
 ```
 
 ## App Review Explanation
 
 ```text
-Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. This revision uses the same app icon in TikTok Basic Info, the website favicon, and the visible header/top of the public website, Terms page, and Privacy page. It also adds a backend sandbox flow so reviewers can see API-shaped creator_info, video.upload, video.publish, and status polling requests without exposing live tokens or posting real content. Creators open https://everyday-runner-lab.onrender.com, use Creator Login, authorize TikTok, review the connected TikTok creator account, preview original media, edit the post title, manually choose privacy, manually enable comments/Duet/Stitch if desired, complete commercial disclosure when applicable, consent to TikTok music usage terms, and choose either Upload as TikTok draft or Direct Post. We use user.info.basic to display the connected creator identity, video.upload for creator-approved draft upload, and video.publish for creator-approved Direct Post.
+Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. This revision fixes the scope mismatch by requesting only Content Posting API Direct Post with the video.publish scope. The public review site and demo video now demonstrate the complete Direct Post sandbox flow end to end: creator opens https://everyday-runner-lab.onrender.com, chooses Creator Login, authorizes TikTok with only video.publish, returns to the app through the registered redirect URI, reviews the connected TikTok creator account through creator_info/query, previews original media, edits the post title, manually chooses privacy, manually enables comments/Duet/Stitch if desired, completes commercial disclosure when applicable, confirms TikTok music usage terms, and presses Publish to TikTok. The backend sandbox evidence panel shows API-shaped creator_info/query, video/init Direct Post, and status/fetch responses without exposing live tokens or posting real content.
 ```
 
 ## Resubmission Reason
 
 ```text
-Fixed the app icon mismatch by using one 1024px Everyday Runner Lab icon for the TikTok Basic Info upload, favicon, and visible website/Terms/Privacy headers. Added a backend sandbox review flow that clearly demonstrates Login Kit, Content Posting API, user.info.basic, video.upload, video.publish, creator settings, disclosure, consent, backend request/response evidence, and post status polling.
+Fixed the scopes mismatch by reducing the review flow to one selected product and one demonstrated scope: Content Posting API Direct Post with video.publish. The updated website and demo video show the complete sandbox flow from TikTok authorization through creator_info/query, creator-selected settings, explicit consent, Direct Post video/init, and status/fetch polling.
 ```
 
 ## Demo Video Checklist
@@ -105,12 +102,11 @@ Show the full flow:
 2. Click the visible `Creator Login` or `Connect TikTok` entry point.
 3. Open the creator workspace / Post to TikTok page.
 4. OAuth into TikTok or show the backend sandbox OAuth response.
-5. Grant only the requested scopes: `user.info.basic`, `video.upload`, and `video.publish`.
-6. Show the connected creator identity and returned posting options.
+5. Grant only the requested scope: `video.publish`.
+6. Show the connected creator identity and returned posting options from `creator_info/query`.
 7. Preview original slideshow/video media.
 8. Edit the title, manually choose privacy, set comments/Duet/Stitch, complete disclosure, and consent.
-9. Demonstrate `video.upload` with Upload as TikTok draft.
-10. Demonstrate `video.publish` with Direct Post status flow.
-11. Show the backend API evidence panel after creator_info, video.upload, video.publish, and status polling.
+9. Demonstrate `video.publish` with Direct Post status flow.
+10. Show the backend API evidence panel after creator_info, video.publish, and status polling.
 
 The demo should match the domain used in the TikTok Developer form.

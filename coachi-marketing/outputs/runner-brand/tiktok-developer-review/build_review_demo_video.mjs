@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
 const reviewRoot = path.dirname(fileURLToPath(import.meta.url));
-const outputDir = path.join(reviewRoot, "demo-video-2026-06-02");
-const videoName = "everyday-runner-lab-backend-sandbox-review-demo-2026-06-02.mp4";
+const outputDir = path.join(reviewRoot, "demo-video-2026-06-03");
+const videoName = "everyday-runner-lab-direct-post-scope-fix-demo-2026-06-03.mp4";
 const framesDir = path.join(outputDir, "frames");
 const port = 4187;
 const baseUrl = `http://127.0.0.1:${port}`;
@@ -147,41 +147,32 @@ try {
   });
   const page = await context.newPage();
 
-  await show(page, "/", "1/12 Public website: app icon is visible in the page header and the same icon is linked as the favicon.");
-  await show(page, "/terms/", "2/12 Terms of Service: the same Everyday Runner Lab app icon appears at the top of the page.");
-  await show(page, "/privacy/", "3/12 Privacy Policy: the same app icon appears at the top of the page and favicon links are present.");
-  await show(page, "/sandbox-demo/", "4/12 Backend sandbox review page: all selected TikTok products, scopes, and API-shaped endpoints are named before the flow begins.");
-  await show(page, "/login/", "5/12 Login Kit entry: the creator starts from the Everyday Runner Lab login page.");
-  await show(page, "/connect-tiktok/", "6/12 TikTok authorization: OAuth requests user.info.basic, video.upload, and video.publish.");
-  await show(page, "/integrations/social/tiktok/?code=sandbox_code_for_review_demo&state=everyday-runner-lab-review", "7/12 Sandbox redirect: TikTok returns code and state, then the creator continues to the posting workspace.");
-  await show(page, "/post-to-tiktok/", "8/12 Posting workspace: the backend creator_info call displays the connected creator, privacy options, and max duration.");
+  await show(page, "/", "1/11 Public website: app icon is visible in the page header and the same icon is linked as the favicon.");
+  await show(page, "/terms/", "2/11 Terms of Service: the same Everyday Runner Lab app icon appears at the top of the page.");
+  await show(page, "/privacy/", "3/11 Privacy Policy: the same app icon appears at the top of the page and favicon links are present.");
+  await show(page, "/sandbox-demo/", "4/11 Backend sandbox review page: the selected TikTok product is Content Posting API Direct Post and the only requested scope is video.publish.");
+  await show(page, "/login/", "5/11 Creator entry: the creator starts from the Everyday Runner Lab login page.");
+  await show(page, "/connect-tiktok/", "6/11 TikTok authorization: OAuth requests only video.publish for Direct Post.");
+  await show(page, "/integrations/social/tiktok/?code=sandbox_code_for_review_demo&state=everyday-runner-lab-review", "7/11 Sandbox redirect: TikTok returns code and state, then the creator continues to the posting workspace.");
+  await show(page, "/post-to-tiktok/", "8/11 Posting workspace: the backend creator_info call uses video.publish and displays the connected creator, privacy options, and max duration.");
 
   await page.selectOption("#privacy", "PUBLIC_TO_EVERYONE");
   await page.check("#allow-comments");
   await page.check("#allow-duet");
   await page.check("#commercial-toggle");
-  await caption(page, "9/12 Creator settings: privacy and interaction controls are manual; commercial content requires a disclosure choice.");
+  await caption(page, "9/11 Creator settings: privacy and interaction controls are manual; commercial content requires a disclosure choice.");
   await page.waitForTimeout(600);
   await capture(page);
 
   await page.check("#your-brand");
   await page.check("#consent");
-  await caption(page, "10/12 Consent: publish actions stay disabled until privacy, disclosure, and TikTok music usage confirmation are complete.");
+  await caption(page, "10/11 Consent: publish stays disabled until privacy, disclosure, and TikTok music usage confirmation are complete.");
   await page.waitForTimeout(600);
   await capture(page);
 
-  await page.click("#draft-upload");
-  await page.locator("#api-log").scrollIntoViewIfNeeded();
-  await caption(page, "11/12 video.upload: the backend returns an API-shaped video/init response and status fetch for the draft path.");
-  await page.waitForTimeout(2400);
-  await capture(page);
-
-  await page.goto(`${baseUrl}/post-to-tiktok/`, { waitUntil: "networkidle" });
-  await page.selectOption("#privacy", "PUBLIC_TO_EVERYONE");
-  await page.check("#consent");
   await page.click("#publish");
   await page.locator("#api-log").scrollIntoViewIfNeeded();
-  await caption(page, "12/12 video.publish: Direct Post starts only after review and shows backend video/init plus status polling evidence.");
+  await caption(page, "11/11 video.publish: Direct Post starts only after review and shows backend video/init plus status polling evidence.");
   await page.waitForTimeout(2400);
   await capture(page);
 

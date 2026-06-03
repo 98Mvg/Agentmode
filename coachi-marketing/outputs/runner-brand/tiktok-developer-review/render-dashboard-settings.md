@@ -2,7 +2,7 @@
 
 Use a Render Web Service, not a Static Site.
 
-The TikTok review flow now includes backend sandbox endpoints for creator_info, video.upload, video.publish, and status polling. A Static Site cannot serve these API routes.
+The TikTok review flow now includes backend sandbox endpoints for creator_info, video.publish Direct Post, and status polling. A Static Site cannot serve these API routes.
 
 ## Dashboard Values
 

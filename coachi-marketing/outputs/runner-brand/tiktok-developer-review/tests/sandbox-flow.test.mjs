@@ -38,7 +38,7 @@ async function postJson(path, body) {
   return { response, json: await response.json() };
 }
 
-test("sandbox Direct Post flow exposes creator info, draft upload, direct post, and status", async () => {
+test("sandbox Direct Post flow exposes creator info, direct post, and status with video.publish only", async () => {
   const server = startServer();
   server.stderr.on("data", (chunk) => process.stderr.write(chunk));
   try {
@@ -52,7 +52,7 @@ test("sandbox Direct Post flow exposes creator info, draft upload, direct post, 
     const creator = await fetch(`${baseUrl}/api/tiktok/sandbox/creator-info`);
     const creatorJson = await creator.json();
     assert.equal(creator.status, 200);
-    assert.equal(creatorJson.scope, "user.info.basic");
+    assert.equal(creatorJson.scope, "video.publish");
     assert.deepEqual(creatorJson.creator_info.privacy_level_options, [
       "PUBLIC_TO_EVERYONE",
       "MUTUAL_FOLLOW_FRIENDS",
@@ -70,11 +70,6 @@ test("sandbox Direct Post flow exposes creator info, draft upload, direct post, 
       brand_content_toggle: false,
       consent: true,
     };
-
-    const draft = await postJson("/api/tiktok/sandbox/video-upload", validPayload);
-    assert.equal(draft.response.status, 200);
-    assert.equal(draft.json.scope, "video.upload");
-    assert.equal(draft.json.status, "DRAFT_UPLOADED");
 
     const direct = await postJson("/api/tiktok/sandbox/direct-post", validPayload);
     assert.equal(direct.response.status, 200);

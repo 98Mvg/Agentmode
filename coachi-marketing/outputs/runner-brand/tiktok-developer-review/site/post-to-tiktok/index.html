@@ -508,9 +508,8 @@
           </div>
           <div class="panel-body">
             <div class="scope-map" aria-label="TikTok scope coverage">
-              <div><code>user.info.basic</code>shows connected creator identity before posting</div>
-              <div><code>video.upload</code>uploads creator-approved media as a TikTok draft</div>
-              <div><code>video.publish</code>direct posts after final creator consent</div>
+              <div><code>video.publish</code>authorizes Direct Post for the connected creator</div>
+              <div><code>creator_info/query</code>uses <code>video.publish</code> to load privacy options before posting</div>
             </div>
             <div class="field">
               <label for="title">Title</label>
@@ -588,7 +587,6 @@
             </div>
 
             <div class="actions">
-              <button id="draft-upload" type="button" disabled>Upload as TikTok draft</button>
               <button id="publish" type="button" disabled>Publish to TikTok</button>
               <span class="help" id="ready-text">Select privacy and consent to continue.</span>
             </div>
@@ -597,7 +595,7 @@
 	            </ol>
 	            <div class="api-evidence" aria-label="Backend sandbox API evidence">
 	              <h3>Backend sandbox API evidence</h3>
-	              <p class="help">These entries are returned by the Everyday Runner Lab backend and mirror the TikTok Content Posting API calls used for review: creator_info, video.upload, video.publish, and status polling.</p>
+	              <p class="help">These entries are returned by the Everyday Runner Lab backend and mirror the TikTok Direct Post API calls used for review: creator_info, video.publish, and status polling.</p>
 	              <pre class="api-log" id="api-log">Waiting for backend creator_info response...</pre>
 	            </div>
 	          </div>
@@ -619,7 +617,6 @@
 	        var count = document.getElementById("title-count");
 	        var privacy = document.getElementById("privacy");
 	        var consent = document.getElementById("consent");
-	        var draftUpload = document.getElementById("draft-upload");
 	        var publish = document.getElementById("publish");
 	        var readyText = document.getElementById("ready-text");
 	        var commercialToggle = document.getElementById("commercial-toggle");
@@ -753,10 +750,9 @@
           updateCommercial();
 
           var ready = Boolean(privacy.value) && consent.checked && isCommercialValid();
-          draftUpload.disabled = !ready;
           publish.disabled = !ready;
           readyText.textContent = ready
-            ? "Ready for draft upload or Direct Post after the creator chooses an action."
+            ? "Ready for Direct Post after the creator chooses Publish."
             : "Select privacy, resolve disclosure, and consent to continue.";
         }
 
@@ -769,32 +765,8 @@
 	          showApi("POST /api/tiktok/sandbox/status -> official status/fetch shape", json);
 	        }
 
-	        draftUpload.addEventListener("click", async function () {
-	          if (draftUpload.disabled) return;
-	          draftUpload.disabled = true;
-	          publish.disabled = true;
-	          readyText.textContent = "Draft upload request initialized.";
-	          statusList.innerHTML = "";
-	          appendStatus("Calling backend sandbox endpoint for video.upload.");
-	          try {
-	            var json = await requestJson("/api/tiktok/sandbox/video-upload", {
-	              method: "POST",
-	              body: JSON.stringify(postPayload())
-	            });
-	            appendStatus("Backend initialized video.upload with publish_id " + json.publish_id + ".");
-	            appendStatus("Draft uploaded for final editing inside TikTok.");
-	            showApi("POST /api/tiktok/sandbox/video-upload -> official video/init shape", json);
-	            await fetchStatus(json.publish_id);
-	          } catch (error) {
-	            appendStatus("video.upload failed: " + error.message);
-	            showApi("video.upload validation failed", { error: error.message, request: postPayload() });
-	          }
-	          updateReady();
-	        });
-
 	        publish.addEventListener("click", async function () {
 	          if (publish.disabled) return;
-	          draftUpload.disabled = true;
 	          publish.disabled = true;
 	          readyText.textContent = "Publishing request initialized.";
 	          statusList.innerHTML = "";

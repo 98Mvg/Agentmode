@@ -107,7 +107,7 @@ function creatorInfoResponse(session) {
   const response = {
     request_id: `erl_creator_${randomUUID()}`,
     session_id: session.id,
-    scope: "user.info.basic",
+    scope: "video.publish",
     endpoint: "POST https://open.tiktokapis.com/v2/post/publish/creator_info/query/",
     mode: apiMode,
     sandbox: apiMode !== "live",
@@ -167,40 +167,40 @@ function sourceInfo() {
   };
 }
 
-function createSandboxPost(kind, session, body) {
+function createSandboxDirectPost(session, body) {
   const errors = validatePostPayload(body);
   if (errors.length) {
     return { error: true, statusCode: 400, body: { errors } };
   }
 
-  const publishId = `${kind === "direct" ? "sandbox_publish" : "sandbox_draft"}_${randomUUID()}`;
+  const publishId = `sandbox_publish_${randomUUID()}`;
   const endpoint = "POST https://open.tiktokapis.com/v2/post/publish/video/init/";
   const requestPreview = {
     media_type: "VIDEO",
-    post_mode: kind === "direct" ? "DIRECT_POST" : "MEDIA_UPLOAD",
+    post_mode: "DIRECT_POST",
     post_info: postInfoFromPayload(body),
     source_info: sourceInfo(),
   };
   const responsePreview = {
-    request_id: `erl_${kind}_${randomUUID()}`,
+    request_id: `erl_direct_${randomUUID()}`,
     session_id: session.id,
-    scope: kind === "direct" ? "video.publish" : "video.upload",
+    scope: "video.publish",
     endpoint,
     mode: apiMode,
     sandbox: apiMode !== "live",
     publish_id: publishId,
-    status: kind === "direct" ? "PROCESSING" : "DRAFT_UPLOADED",
+    status: "PROCESSING",
     upload_url: `${publicBaseUrl}/api/tiktok/sandbox/upload/${publishId}`,
     next_status_endpoint: "POST https://open.tiktokapis.com/v2/post/publish/status/fetch/",
   };
 
   posts.set(publishId, {
-    kind,
+    kind: "direct",
     createdAt: Date.now(),
     statusChecks: 0,
     requestPreview,
   });
-  addAudit(kind === "direct" ? "video.publish" : "video.upload", endpoint, requestPreview, responsePreview);
+  addAudit("video.publish", endpoint, requestPreview, responsePreview);
   return { error: false, statusCode: 200, body: responsePreview };
 }
 
@@ -302,7 +302,7 @@ function callbackHtml({ heading, status, sessionId, showContinue }) {
     </div>
     <h1>${escapeHtml(heading)}</h1>
     <p id="status">${escapeHtml(status)}</p>
-    <p class="muted">After authorization, the creator workspace uses backend sandbox endpoints for creator_info, video.upload, video.publish, and status polling.</p>
+    <p class="muted">After authorization, the creator workspace uses backend sandbox endpoints for creator_info, video.publish Direct Post, and status polling.</p>
     ${link}
     <p><a href="/">Back to Everyday Runner Lab</a></p>
   </body>
@@ -323,14 +323,8 @@ async function routeApi(req, res) {
     return true;
   }
 
-  if (req.method === "POST" && url.pathname === "/api/tiktok/sandbox/video-upload") {
-    const result = createSandboxPost("draft", session, await readJson(req));
-    jsonResponse(res, result.statusCode, result.body);
-    return true;
-  }
-
   if (req.method === "POST" && url.pathname === "/api/tiktok/sandbox/direct-post") {
-    const result = createSandboxPost("direct", session, await readJson(req));
+    const result = createSandboxDirectPost(session, await readJson(req));
     jsonResponse(res, result.statusCode, result.body);
     return true;
   }

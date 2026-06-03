@@ -1,6 +1,6 @@
 # TikTok Review Demo Video Script
 
-Goal: record a short review demo that shows Everyday Runner Lab as a creator-facing TikTok app with backend sandbox Login Kit, Upload to TikTok, and Direct Post coverage.
+Goal: record a short review demo that shows Everyday Runner Lab as a creator-facing TikTok app with backend sandbox Content Posting API Direct Post coverage.
 
 Target length: `90-120 seconds`.
 
@@ -43,7 +43,7 @@ Top 5 easy run mistakes:
 2. Show the public site name, Terms link, Privacy link, and Creator Login.
 3. Open `Creator Login`.
 4. Open `Connect TikTok`.
-5. Show that `user.info.basic`, `video.upload`, and `video.publish` are requested and demonstrated.
+5. Show that only `video.publish` is requested and demonstrated.
 6. Open the `Sandbox demo` page and show the backend sandbox OAuth/API responses.
 7. Open `Post to TikTok`.
 8. Show the connected creator identity, returned privacy options, and max duration.
@@ -53,19 +53,18 @@ Top 5 easy run mistakes:
 12. Manually enable comments, Duet, or Stitch only if desired.
 13. Toggle commercial content disclosure, show that a disclosure category is required, then choose the correct setting or turn it off.
 14. Select the explicit TikTok Music Usage Confirmation consent checkbox.
-15. Press `Upload as TikTok draft` and show the backend `video.upload` request/response evidence plus status polling.
-16. Reset the demo, press `Publish to TikTok`, and show the backend `video.publish` request/response evidence plus status polling.
+15. Press `Publish to TikTok` and show the backend `video.publish` request/response evidence plus status polling.
 
 ## Short Spoken Script
 
 ```text
 This is Everyday Runner Lab, a web app for runners and fitness creators who publish their own original running education content to their connected TikTok account.
 
-The creator starts from the public website, signs in with TikTok, and grants only the permissions needed for the demonstrated TikTok flow: user.info.basic, video.upload, and video.publish.
+The creator starts from the public website, authorizes TikTok, and grants only the permission needed for the demonstrated TikTok Direct Post flow: video.publish.
 
-On the posting page, the backend loads creator info first, then the creator can see which TikTok account is connected, preview the original slideshow, edit the title, manually choose privacy, choose interaction settings, complete commercial disclosure, and consent to TikTok's music usage terms.
+On the posting page, the backend loads creator info through TikTok's Direct Post creator_info/query endpoint, then the creator can see which TikTok account is connected, preview the original slideshow, edit the title, manually choose privacy, choose interaction settings, complete commercial disclosure, and consent to TikTok's music usage terms.
 
-The creator can either upload original media as a TikTok draft or use Direct Post. In both paths, content is sent only after the creator reviews settings and confirms the action, and the app shows backend request and status polling evidence after the request is submitted.
+The creator uses Direct Post only after reviewing settings and confirming the action, and the app shows backend request and status polling evidence after the request is submitted.
 ```
 
 ## Review Notes

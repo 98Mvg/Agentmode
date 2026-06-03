@@ -66,35 +66,35 @@
     <main>
       <section class="intro">
         <h1>TikTok backend sandbox review flow</h1>
-        <p>This review page demonstrates the complete end-to-end TikTok integration without exposing live tokens, secrets, or posting real content. The creator workspace calls backend sandbox endpoints that mirror TikTok creator_info, video.upload, video.publish, and status polling.</p>
+        <p>This review page demonstrates the complete end-to-end TikTok Direct Post integration without exposing live tokens, secrets, or posting real content. The creator workspace calls backend sandbox endpoints that mirror TikTok creator_info, video.publish, and status polling.</p>
       </section>
 
       <section class="grid" aria-label="Selected products and scopes">
         <div class="card">
-          <strong>Login Kit</strong>
-          <code>user.info.basic</code>
-          <p>Used to display the connected creator nickname and account before any post action.</p>
-        </div>
-        <div class="card">
-          <strong>Content Posting API</strong>
-          <code>video.upload</code>
-          <p>Used when a creator chooses to upload original media as a TikTok draft for final editing.</p>
-        </div>
-        <div class="card">
-          <strong>Content Posting API</strong>
+          <strong>Content Posting API - Direct Post</strong>
           <code>video.publish</code>
-          <p>Used only after the creator reviews settings, gives consent, and chooses Direct Post.</p>
+          <p>Used to authorize Direct Post for the connected creator.</p>
+        </div>
+        <div class="card">
+          <strong>Creator info</strong>
+          <code>creator_info/query</code>
+          <p>Uses <code>video.publish</code> to load creator nickname, privacy options, interaction settings, and max video duration before posting.</p>
+        </div>
+        <div class="card">
+          <strong>Status polling</strong>
+          <code>status/fetch</code>
+          <p>Uses the returned <code>publish_id</code> after Direct Post initialization to show processing status.</p>
         </div>
       </section>
 
       <section class="flow" aria-label="End-to-end sandbox flow">
         <div class="steps">
           <div class="step"><strong>Creator opens website</strong><br>App icon is visible in the tab and header.</div>
-          <div class="step"><strong>Creator signs in with TikTok</strong><br>OAuth requests <code>user.info.basic</code>, <code>video.upload</code>, and <code>video.publish</code>.</div>
+          <div class="step"><strong>Creator authorizes TikTok</strong><br>OAuth requests only <code>video.publish</code> for the Direct Post flow.</div>
           <div class="step"><strong>TikTok redirects back</strong><br>The app receives safe sandbox <code>code</code> and <code>state</code> values.</div>
           <div class="step"><strong>Backend loads creator info</strong><br><code>/api/tiktok/sandbox/creator-info</code> mirrors <code>/v2/post/publish/creator_info/query/</code> before the post page renders.</div>
           <div class="step"><strong>Creator reviews post</strong><br>The app shows creator info, privacy options, media preview, title, interactions, disclosure, and consent.</div>
-          <div class="step"><strong>Creator chooses an action</strong><br>The creator can upload a draft with <code>video.upload</code> or Direct Post with <code>video.publish</code>, then the app polls status.</div>
+          <div class="step"><strong>Creator publishes</strong><br>The creator uses Direct Post with <code>video.publish</code>, then the app polls status.</div>
           <a class="button" href="/post-to-tiktok/">Open creator posting workspace</a>
         </div>
 
@@ -115,11 +115,6 @@
       "SELF_ONLY"
     ],
     "max_video_post_duration_sec": 300
-  },
-  "draft_upload": {
-    "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/video/init/",
-    "scope": "video.upload",
-    "status": "draft_uploaded"
   },
   "direct_post": {
     "endpoint": "POST https://open.tiktokapis.com/v2/post/publish/video/init/",

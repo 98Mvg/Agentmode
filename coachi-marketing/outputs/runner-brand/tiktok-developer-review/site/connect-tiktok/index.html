@@ -24,10 +24,10 @@
       <span>Everyday Runner Lab</span>
     </div>
     <h1>Connect TikTok to Everyday Runner Lab</h1>
-    <p>This page starts the Everyday Runner Lab TikTok Login flow for the creator workspace.</p>
-    <p>The requested TikTok scopes are limited to <code>user.info.basic</code> for connected-account display and Content Posting API scopes <code>video.publish</code> and <code>video.upload</code> for creator-approved publishing or draft upload.</p>
+    <p>This page starts the Everyday Runner Lab TikTok authorization flow for the creator workspace.</p>
+    <p>The requested TikTok scope is limited to <code>video.publish</code> for the creator-approved Direct Post flow. Creator info is loaded through TikTok's Direct Post <code>creator_info/query</code> endpoint, which also uses <code>video.publish</code>.</p>
     <p>
-      <a class="button" href="https://www.tiktok.com/v2/auth/authorize/?client_key=awwtjmvlgq4iv8ke&amp;redirect_uri=https%3A%2F%2Feveryday-runner-lab.onrender.com%2Fintegrations%2Fsocial%2Ftiktok&amp;response_type=code&amp;scope=user.info.basic%2Cvideo.publish%2Cvideo.upload&amp;state=everyday-runner-lab-review">
+      <a class="button" href="https://www.tiktok.com/v2/auth/authorize/?client_key=awwtjmvlgq4iv8ke&amp;redirect_uri=https%3A%2F%2Feveryday-runner-lab.onrender.com%2Fintegrations%2Fsocial%2Ftiktok&amp;response_type=code&amp;scope=video.publish&amp;state=everyday-runner-lab-review">
         Authorize TikTok
       </a>
     </p>
