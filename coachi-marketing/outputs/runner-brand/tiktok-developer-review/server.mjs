@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 const reviewRoot = path.dirname(fileURLToPath(import.meta.url));
 const siteDir = path.join(reviewRoot, "site");
 const port = Number(process.env.PORT || 4187);
-const publicBaseUrl = process.env.PUBLIC_BASE_URL || "https://everyday-runner-lab.onrender.com";
+const fallbackPublicBaseUrl = process.env.PUBLIC_BASE_URL || "https://everyday-runner-lab.onrender.com";
 const apiMode = process.env.TIKTOK_API_MODE || "sandbox";
 
 const sessions = new Map();
@@ -48,6 +48,14 @@ function escapeHtml(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function requestPublicBaseUrl(req) {
+  const host = req.headers["x-forwarded-host"] || req.headers.host;
+  if (!host) return fallbackPublicBaseUrl;
+  const forwardedProto = req.headers["x-forwarded-proto"];
+  const proto = forwardedProto || (String(host).startsWith("127.0.0.1") || String(host).startsWith("localhost") ? "http" : "https");
+  return `${proto}://${host}`;
 }
 
 function resolveStaticPath(requestUrl) {
@@ -103,7 +111,7 @@ function addAudit(action, endpoint, requestPreview, responsePreview) {
   return entry;
 }
 
-function creatorInfoResponse(session) {
+function creatorInfoResponse(session, baseUrl) {
   const response = {
     request_id: `erl_creator_${randomUUID()}`,
     session_id: session.id,
@@ -115,7 +123,7 @@ function creatorInfoResponse(session) {
       open_id: "sandbox_creator_open_id",
       creator_username: "everydayrunnerlab0",
       creator_nickname: "Everyday Runner Lab Demo",
-      creator_avatar_url: `${publicBaseUrl}/assets/app-icon-192.png`,
+      creator_avatar_url: `${baseUrl}/assets/app-icon-192.png`,
       privacy_level_options: [
         "PUBLIC_TO_EVERYONE",
         "MUTUAL_FOLLOW_FRIENDS",
@@ -167,7 +175,7 @@ function sourceInfo() {
   };
 }
 
-function createSandboxDirectPost(session, body) {
+function createSandboxDirectPost(session, body, baseUrl) {
   const errors = validatePostPayload(body);
   if (errors.length) {
     return { error: true, statusCode: 400, body: { errors } };
@@ -190,7 +198,7 @@ function createSandboxDirectPost(session, body) {
     sandbox: apiMode !== "live",
     publish_id: publishId,
     status: "PROCESSING",
-    upload_url: `${publicBaseUrl}/api/tiktok/sandbox/upload/${publishId}`,
+    upload_url: `${baseUrl}/api/tiktok/sandbox/upload/${publishId}`,
     next_status_endpoint: "POST https://open.tiktokapis.com/v2/post/publish/status/fetch/",
   };
 
@@ -226,6 +234,56 @@ function fetchStatus(body) {
   };
   addAudit("status.fetch", endpoint, { publish_id: publishId }, responsePreview);
   return { statusCode: 200, body: responsePreview };
+}
+
+function connectTikTokHtml(baseUrl) {
+  const redirectUri = `${baseUrl}/integrations/social/tiktok`;
+  const authUrl = new URL("https://www.tiktok.com/v2/auth/authorize/");
+  authUrl.searchParams.set("client_key", "awwtjmvlgq4iv8ke");
+  authUrl.searchParams.set("redirect_uri", redirectUri);
+  authUrl.searchParams.set("response_type", "code");
+  authUrl.searchParams.set("scope", "video.publish");
+  authUrl.searchParams.set("state", "everyday-runner-lab-review");
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connect TikTok | Everyday Runner Lab</title>
+    <meta name="description" content="TikTok authorization entry for Everyday Runner Lab.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/app-icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/app-icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/app-icon-192.png">
+    <style>
+      body { max-width: 760px; margin: 48px auto; padding: 0 22px; font: 18px/1.6 Georgia, "Times New Roman", serif; color: #161616; background: #f7f1e7; }
+      .brand-mark { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; font: 700 16px/1.2 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .brand-mark img { width: 56px; height: 56px; border-radius: 14px; }
+      h1 { font-size: clamp(36px, 7vw, 44px); line-height: 1; letter-spacing: 0; }
+      a { color: #2f6b4f; }
+      .button { display: inline-block; margin-top: 18px; padding: 12px 16px; border: 1px solid #2f6b4f; border-radius: 999px; text-decoration: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; }
+      code { background: #efe4d4; padding: 2px 5px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <div class="brand-mark">
+      <img src="/assets/everyday-runner-lab-app-icon-1024.png" alt="Everyday Runner Lab app icon">
+      <span>Everyday Runner Lab</span>
+    </div>
+    <h1>Connect TikTok to Everyday Runner Lab</h1>
+    <p>This page starts the Everyday Runner Lab TikTok authorization flow for the creator workspace.</p>
+    <p>The requested TikTok scope is limited to <code>video.publish</code> for the creator-approved Direct Post flow. Creator info is loaded through TikTok's Direct Post <code>creator_info/query</code> endpoint, which also uses <code>video.publish</code>.</p>
+    <p>
+      <a class="button" href="${escapeHtml(authUrl.toString())}">
+        Authorize TikTok
+      </a>
+    </p>
+    <p><a class="button" href="/sandbox-demo">Review sandbox/mock flow</a></p>
+    <p><a class="button" href="/post-to-tiktok">Review Post to TikTok flow</a></p>
+    <p>Redirect URI: <code>${escapeHtml(redirectUri)}</code></p>
+    <p><a href="/">Back to Everyday Runner Lab</a></p>
+  </body>
+</html>`;
 }
 
 function oauthCallback(req, res) {
@@ -312,9 +370,10 @@ function callbackHtml({ heading, status, sessionId, showContinue }) {
 async function routeApi(req, res) {
   const url = new URL(req.url || "/", `http://127.0.0.1:${port}`);
   const session = sessionFromRequest(req);
+  const baseUrl = requestPublicBaseUrl(req);
 
   if (req.method === "GET" && url.pathname === "/api/tiktok/sandbox/creator-info") {
-    jsonResponse(res, 200, creatorInfoResponse(session));
+    jsonResponse(res, 200, creatorInfoResponse(session, baseUrl));
     return true;
   }
 
@@ -324,7 +383,7 @@ async function routeApi(req, res) {
   }
 
   if (req.method === "POST" && url.pathname === "/api/tiktok/sandbox/direct-post") {
-    const result = createSandboxDirectPost(session, await readJson(req));
+    const result = createSandboxDirectPost(session, await readJson(req), baseUrl);
     jsonResponse(res, result.statusCode, result.body);
     return true;
   }
@@ -355,6 +414,10 @@ const server = http.createServer(async (req, res) => {
     const url = new URL(req.url || "/", `http://127.0.0.1:${port}`);
     if (req.method === "GET" && url.pathname === "/health") {
       jsonResponse(res, 200, { ok: true, mode: apiMode, service: "everyday-runner-lab-tiktok-review" });
+      return;
+    }
+    if (req.method === "GET" && (url.pathname === "/connect-tiktok" || url.pathname === "/connect-tiktok/")) {
+      htmlResponse(res, 200, connectTikTokHtml(requestPublicBaseUrl(req)));
       return;
     }
     if (url.pathname === "/integrations/social/tiktok") {

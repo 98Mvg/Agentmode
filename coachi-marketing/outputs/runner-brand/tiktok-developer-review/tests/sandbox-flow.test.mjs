@@ -49,10 +49,28 @@ test("sandbox Direct Post flow exposes creator info, direct post, and status wit
     assert.equal(callback.status, 200);
     assert.match(callbackHtml, /Continue to Post to TikTok/);
 
-    const creator = await fetch(`${baseUrl}/api/tiktok/sandbox/creator-info`);
+    const connect = await fetch(`${baseUrl}/connect-tiktok/`, {
+      headers: {
+        "x-forwarded-host": "agentmode.onrender.com",
+        "x-forwarded-proto": "https",
+      },
+    });
+    const connectHtml = await connect.text();
+    assert.equal(connect.status, 200);
+    assert.match(connectHtml, /scope=video\.publish/);
+    assert.match(connectHtml, /redirect_uri=https%3A%2F%2Fagentmode\.onrender\.com%2Fintegrations%2Fsocial%2Ftiktok/);
+    assert.doesNotMatch(connectHtml, /video\.upload|user\.info\.basic|everyday-runner-lab\.onrender\.com/);
+
+    const creator = await fetch(`${baseUrl}/api/tiktok/sandbox/creator-info`, {
+      headers: {
+        "x-forwarded-host": "agentmode.onrender.com",
+        "x-forwarded-proto": "https",
+      },
+    });
     const creatorJson = await creator.json();
     assert.equal(creator.status, 200);
     assert.equal(creatorJson.scope, "video.publish");
+    assert.equal(creatorJson.creator_info.creator_avatar_url, "https://agentmode.onrender.com/assets/app-icon-192.png");
     assert.deepEqual(creatorJson.creator_info.privacy_level_options, [
       "PUBLIC_TO_EVERYONE",
       "MUTUAL_FOLLOW_FRIENDS",
