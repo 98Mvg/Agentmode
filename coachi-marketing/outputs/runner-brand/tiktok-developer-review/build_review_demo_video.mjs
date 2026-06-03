@@ -20,6 +20,7 @@ function startServer() {
       ...process.env,
       PORT: String(port),
       PUBLIC_BASE_URL: baseUrl,
+      REVIEW_PUBLIC_BASE_URL: "https://agentmode.onrender.com",
       TIKTOK_API_MODE: "sandbox",
     },
     stdio: ["ignore", "pipe", "pipe"],

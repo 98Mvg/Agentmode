@@ -45,13 +45,13 @@ Reviewer consistency rule:
 
 - App name: `Everyday Runner Lab`
 - Website title: `Everyday Runner Lab | TikTok Creator Workspace`
-- Website URL: `https://everyday-runner-lab.onrender.com/`
-- Login entry: `https://everyday-runner-lab.onrender.com/login/`
-- Sandbox demo: `https://everyday-runner-lab.onrender.com/sandbox-demo/`
-- Post flow: `https://everyday-runner-lab.onrender.com/post-to-tiktok/`
-- Terms: `https://everyday-runner-lab.onrender.com/terms/`
-- Privacy: `https://everyday-runner-lab.onrender.com/privacy/`
-- Redirect URI: `https://everyday-runner-lab.onrender.com/integrations/social/tiktok`
+- Website URL: `https://agentmode.onrender.com/`
+- Login entry: `https://agentmode.onrender.com/login/`
+- Sandbox demo: `https://agentmode.onrender.com/sandbox-demo/`
+- Post flow: `https://agentmode.onrender.com/post-to-tiktok/`
+- Terms: `https://agentmode.onrender.com/terms/`
+- Privacy: `https://agentmode.onrender.com/privacy/`
+- Redirect URI: `https://agentmode.onrender.com/integrations/social/tiktok`
 - App icon: `site/assets/everyday-runner-lab-app-icon-1024.png`
 
 ## Remaining Before Review

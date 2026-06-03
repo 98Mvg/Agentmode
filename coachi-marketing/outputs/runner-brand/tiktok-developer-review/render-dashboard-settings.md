@@ -35,7 +35,8 @@ Environment:
 ```text
 NODE_VERSION=20
 TIKTOK_API_MODE=sandbox
-PUBLIC_BASE_URL=https://everyday-runner-lab.onrender.com
+PUBLIC_BASE_URL=https://agentmode.onrender.com
+TIKTOK_CLIENT_KEY=<sandbox client key from TikTok Developer>
 ```
 
 Auto Deploy:
@@ -63,14 +64,14 @@ Use these in TikTok Developer until you have a custom runner-brand domain.
 For the current review package, use:
 
 ```text
-https://everyday-runner-lab.onrender.com/
-https://everyday-runner-lab.onrender.com/terms/
-https://everyday-runner-lab.onrender.com/privacy/
-https://everyday-runner-lab.onrender.com/login/
-https://everyday-runner-lab.onrender.com/connect-tiktok/
-https://everyday-runner-lab.onrender.com/sandbox-demo/
-https://everyday-runner-lab.onrender.com/post-to-tiktok/
-https://everyday-runner-lab.onrender.com/integrations/social/tiktok
+https://agentmode.onrender.com/
+https://agentmode.onrender.com/terms/
+https://agentmode.onrender.com/privacy/
+https://agentmode.onrender.com/login/
+https://agentmode.onrender.com/connect-tiktok/
+https://agentmode.onrender.com/sandbox-demo/
+https://agentmode.onrender.com/post-to-tiktok/
+https://agentmode.onrender.com/integrations/social/tiktok
 ```
 
 ## Why Not Use Coachi.no

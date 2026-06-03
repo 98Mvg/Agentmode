@@ -31,19 +31,19 @@ Web
 Web/Desktop URL:
 
 ```text
-https://everyday-runner-lab.onrender.com/
+https://agentmode.onrender.com/
 ```
 
 Terms of Service URL:
 
 ```text
-https://everyday-runner-lab.onrender.com/terms/
+https://agentmode.onrender.com/terms/
 ```
 
 Privacy Policy URL:
 
 ```text
-https://everyday-runner-lab.onrender.com/privacy/
+https://agentmode.onrender.com/privacy/
 ```
 
 App icon upload:
@@ -55,13 +55,13 @@ outputs/runner-brand/tiktok-developer-review/site/assets/everyday-runner-lab-app
 Login page / creator entry point:
 
 ```text
-https://everyday-runner-lab.onrender.com/login/
+https://agentmode.onrender.com/login/
 ```
 
 TikTok redirect URI:
 
 ```text
-https://everyday-runner-lab.onrender.com/integrations/social/tiktok
+https://agentmode.onrender.com/integrations/social/tiktok
 ```
 
 ## Products
@@ -85,7 +85,7 @@ video.publish
 ## App Review Explanation
 
 ```text
-Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. This revision fixes the scope mismatch by requesting only Content Posting API Direct Post with the video.publish scope. The public review site and demo video now demonstrate the complete Direct Post sandbox flow end to end: creator opens https://everyday-runner-lab.onrender.com, chooses Creator Login, authorizes TikTok with only video.publish, returns to the app through the registered redirect URI, reviews the connected TikTok creator account through creator_info/query, previews original media, edits the post title, manually chooses privacy, manually enables comments/Duet/Stitch if desired, completes commercial disclosure when applicable, confirms TikTok music usage terms, and presses Publish to TikTok. The backend sandbox evidence panel shows API-shaped creator_info/query, video/init Direct Post, and status/fetch responses without exposing live tokens or posting real content.
+Everyday Runner Lab is a creator-facing web app for runners and fitness creators who publish their own original running education content to their connected TikTok account. This revision fixes the scope mismatch by requesting only Content Posting API Direct Post with the video.publish scope. The public review site and demo video now demonstrate the complete Direct Post sandbox flow end to end: creator opens https://agentmode.onrender.com, chooses Creator Login, authorizes TikTok with only video.publish, returns to the app through the registered redirect URI, reviews the connected TikTok creator account through creator_info/query, previews original media, edits the post title, manually chooses privacy, manually enables comments/Duet/Stitch if desired, completes commercial disclosure when applicable, confirms TikTok music usage terms, and presses Publish to TikTok. The backend sandbox evidence panel shows API-shaped creator_info/query, video/init Direct Post, and status/fetch responses without exposing live tokens or posting real content.
 ```
 
 ## Resubmission Reason

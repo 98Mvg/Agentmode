@@ -6,12 +6,12 @@ Target length: `90-120 seconds`.
 
 ## Current Setup
 
-- Public website: `https://everyday-runner-lab.onrender.com`
-- Login entry: `https://everyday-runner-lab.onrender.com/login/`
-- TikTok authorization entry: `https://everyday-runner-lab.onrender.com/connect-tiktok/`
-- Backend sandbox review flow: `https://everyday-runner-lab.onrender.com/sandbox-demo/`
-- Direct Post flow: `https://everyday-runner-lab.onrender.com/post-to-tiktok/`
-- Redirect URI: `https://everyday-runner-lab.onrender.com/integrations/social/tiktok`
+- Public website: `https://agentmode.onrender.com`
+- Login entry: `https://agentmode.onrender.com/login/`
+- TikTok authorization entry: `https://agentmode.onrender.com/connect-tiktok/`
+- Backend sandbox review flow: `https://agentmode.onrender.com/sandbox-demo/`
+- Direct Post flow: `https://agentmode.onrender.com/post-to-tiktok/`
+- Redirect URI: `https://agentmode.onrender.com/integrations/social/tiktok`
 
 Do not show `.env`, API keys, client secrets, OAuth tokens, Postiz admin, localhost URLs, internal integration IDs, or owned-account operations in the recording.
 
@@ -39,7 +39,7 @@ Top 5 easy run mistakes:
 
 ## One-Take Recording Steps
 
-1. Start at `https://everyday-runner-lab.onrender.com`.
+1. Start at `https://agentmode.onrender.com`.
 2. Show the public site name, Terms link, Privacy link, and Creator Login.
 3. Open `Creator Login`.
 4. Open `Connect TikTok`.

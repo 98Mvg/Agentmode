@@ -8,8 +8,10 @@ import { fileURLToPath } from "node:url";
 const reviewRoot = path.dirname(fileURLToPath(import.meta.url));
 const siteDir = path.join(reviewRoot, "site");
 const port = Number(process.env.PORT || 4187);
-const fallbackPublicBaseUrl = process.env.PUBLIC_BASE_URL || "https://everyday-runner-lab.onrender.com";
+const fallbackPublicBaseUrl = process.env.PUBLIC_BASE_URL || "https://agentmode.onrender.com";
+const reviewPublicBaseUrl = process.env.REVIEW_PUBLIC_BASE_URL || "";
 const apiMode = process.env.TIKTOK_API_MODE || "sandbox";
+const tikTokClientKey = process.env.TIKTOK_CLIENT_KEY || "sbawivhg5qe4gadccy";
 
 const sessions = new Map();
 const posts = new Map();
@@ -51,6 +53,7 @@ function escapeHtml(value) {
 }
 
 function requestPublicBaseUrl(req) {
+  if (reviewPublicBaseUrl) return reviewPublicBaseUrl;
   const host = req.headers["x-forwarded-host"] || req.headers.host;
   if (!host) return fallbackPublicBaseUrl;
   const forwardedProto = req.headers["x-forwarded-proto"];
@@ -239,7 +242,7 @@ function fetchStatus(body) {
 function connectTikTokHtml(baseUrl) {
   const redirectUri = `${baseUrl}/integrations/social/tiktok`;
   const authUrl = new URL("https://www.tiktok.com/v2/auth/authorize/");
-  authUrl.searchParams.set("client_key", "awwtjmvlgq4iv8ke");
+  authUrl.searchParams.set("client_key", tikTokClientKey);
   authUrl.searchParams.set("redirect_uri", redirectUri);
   authUrl.searchParams.set("response_type", "code");
   authUrl.searchParams.set("scope", "video.publish");

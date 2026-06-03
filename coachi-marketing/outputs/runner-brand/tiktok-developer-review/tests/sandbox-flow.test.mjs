@@ -9,7 +9,7 @@ const baseUrl = `http://127.0.0.1:${port}`;
 function startServer() {
   const child = spawn(process.execPath, ["server.mjs"], {
     cwd: new URL("..", import.meta.url),
-    env: { ...process.env, PORT: String(port), TIKTOK_API_MODE: "sandbox" },
+    env: { ...process.env, PORT: String(port), TIKTOK_API_MODE: "sandbox", TIKTOK_CLIENT_KEY: "sandbox_client_key_for_test" },
     stdio: ["ignore", "pipe", "pipe"],
   });
   return child;
@@ -57,6 +57,7 @@ test("sandbox Direct Post flow exposes creator info, direct post, and status wit
     });
     const connectHtml = await connect.text();
     assert.equal(connect.status, 200);
+    assert.match(connectHtml, /client_key=sandbox_client_key_for_test/);
     assert.match(connectHtml, /scope=video\.publish/);
     assert.match(connectHtml, /redirect_uri=https%3A%2F%2Fagentmode\.onrender\.com%2Fintegrations%2Fsocial%2Ftiktok/);
     assert.doesNotMatch(connectHtml, /video\.upload|user\.info\.basic|everyday-runner-lab\.onrender\.com/);
