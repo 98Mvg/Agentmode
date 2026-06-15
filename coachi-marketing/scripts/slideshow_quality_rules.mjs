@@ -10,10 +10,12 @@ const BANNED_MARKETING_PHRASES = [
   "data driven",
   "discover",
   "unlock",
-  "cue"
+  "cue",
+  "shuffle",
+  "shuffling"
 ];
 
-export const BANNED_HOOK_WORDS = /\b(data|metrics?|feedback|cue|unlock|discover|game[- ]?changing|data[- ]?driven|optimi[sz]e|optimization|revolutionary)\b/i;
+export const BANNED_HOOK_WORDS = /\b(data|metrics?|feedback|cue|unlock|discover|game[- ]?changing|data[- ]?driven|optimi[sz]e|optimization|revolutionary|shuffling?|shuffle)\b/i;
 export const MAX_HOOK_WORDS = 10;
 export const MIN_HOOK_QUALITY_SCORE = 56;
 export const HOOK_QUALITY_MAX_SCORE = 70;
@@ -21,7 +23,7 @@ export const MAX_SLIDE_WORDS = 14;
 
 const PROBLEM_KEYWORDS_BY_TYPE = {
   "zone-2 confusion": ["zone", "slow", "easy", "run", "walking"],
-  "heart-rate panic": ["heart", "rate", "easy", "run", "panic"],
+  "heart-rate panic": ["heart", "rate", "hr", "bpm", "spike", "easy", "run", "panic"],
   "watch-checking anxiety": ["watch", "checking", "run", "easy"],
   "pace disbelief": ["pace", "easy", "run", "lying"],
   "easy-run pace drift": ["easy", "run", "slow", "drift", "races", "hard"],
@@ -30,14 +32,17 @@ const PROBLEM_KEYWORDS_BY_TYPE = {
   "metric setup confusion": ["zone", "training", "rules"],
   "exercise-ring frustration": ["workout", "counts", "ring"],
   "comparison spiral": ["running", "bad", "progress"],
-  "beginner uncertainty": ["beginner", "running", "scary", "start"]
+  "watch-buying confusion": ["watch", "garmin", "apple", "fitbit", "buy", "choose", "compare"],
+  "beginner uncertainty": ["beginner", "running", "scary", "start"],
+  "easy-run form breakdown": ["easy", "slow", "run", "form", "awkward", "rhythm"],
+  "easy-run expectation mismatch": ["easy", "run", "feel", "hard", "slow", "breathing"]
 };
 
 const RUNNER_WORDS = /\b(run|runner|running|easy|pace|zone|watch|workouts?|heart|beginner|slow|walk|effort|reps?|interval|long run)\b/i;
-const EMOTION_WORDS = /\b(too hard|impossible|bad|lazy|overpacing|test|racing|panic|scary|feel|feels|slow|not|hard|confusing|wrong|stuck|tired)\b/i;
-const CURIOSITY_WORDS = /\b(why|how|what|nobody|most|probably|this is why|wish i knew|mistake|stop|wrong|lying|rules?|things?)\b/i;
-const TIKTOK_NATIVE_SHAPES = /^(top\s*\d+|\d+\s+(things|rules|mistakes|tips|weeks)|my top\s*\d+|stop\b|why\b|how\b|what nobody|most runners|this is why|you are not)/i;
-const COACHI_FIT_WORDS = /\b(zone|easy|pace|watch|heart|workout|coach|run|running|effort|voice|control)\b/i;
+const EMOTION_WORDS = /\b(too hard|impossible|bad|lazy|overpacing|test|racing|panic|scary|feel|feels|slow|not|hard|confusing|wrong|lying|lie|lies|stuck|tired)\b/i;
+const CURIOSITY_WORDS = /\b(why|how|what|which|can|should|before|after|nobody|most|probably|this is why|wish i knew|mistake|stop|wrong|lying|rules?|things?|without|not)\b/i;
+const TIKTOK_NATIVE_SHAPES = /^(top\s*\d+|\d+\s+(things|rules|mistakes|tips|weeks)|my top\s*\d+|stop\b|why\b|how\b|what\b|which\b|can\b|should\b|before\b|after\b|use\b|most runners|this is why|you are not|numbers? are not)/i;
+const COACHI_FIT_WORDS = /\b(zone|easy|pace|watch|heart|hr|bpm|workout|coach|run|running|effort|voice|control)\b/i;
 
 export function countWords(value) {
   return String(value || "")
@@ -80,13 +85,23 @@ export function scoreHookBreakdown(hook, problem = {}, sourceMeta = {}) {
   const listHook = isListHook(text);
   const sourceBoost = sourceMeta.source_family_id || sourceMeta.source === "tiktok_text_bank" ? 1 : 0;
   const bannedMatches = bannedHookMatches(text);
+  const curiositySignals = {
+    concrete_number: /\b(minute\s+\d+|first\s+\d+|zone\s+\d+|\d+\s*(?:bpm|days?|minutes?|mins?|weeks?))\b/i.test(text),
+    first_person_confession: /\b(i still|i keep|i was|my watch|my easy|my run)\b/i.test(text),
+    direct_address_contradiction: /\b(you are not|you're not|your\b[^.!?]{0,36}\b(is not|isn't|does not|doesn't|not)\b)\b/i.test(text),
+    question_or_choice: /\?/.test(text) || /\b(which|can|should|versus| or )\b/i.test(text),
+    plain_contradiction: /\b(not|without|never|wrong|lies?|versus)\b/i.test(text)
+  };
+  const curiositySignalBoost = Object.values(curiositySignals).filter(Boolean).length;
+  const preservedSourceMechanic = words <= 12
+    && (listHook || CURIOSITY_WORDS.test(text) || curiositySignalBoost > 0 || /\?/.test(text));
 
   const runner_pain_specificity = clampScore(2 + keywordHits * 3 + sourceBoost + (/\btoo hard|too fast|overpacing|zone 2|easy runs?\b/i.test(text) ? 2 : 0));
-  const curiosity = clampScore((CURIOSITY_WORDS.test(text) ? 7 : 3) + (listHook ? 2 : 0) + (/\bprobably|nobody|why\b/i.test(text) ? 1 : 0));
-  const simplicity = clampScore(words <= 7 ? 10 : words <= MAX_HOOK_WORDS ? 8 : words <= 12 && listHook ? 6 : 2);
+  const curiosity = clampScore((CURIOSITY_WORDS.test(text) ? 7 : 3) + (listHook ? 2 : 0) + (/\bprobably|nobody|why\b/i.test(text) ? 1 : 0) + curiositySignalBoost * 2);
+  const simplicity = clampScore(words <= 7 ? 10 : words <= MAX_HOOK_WORDS ? 8 : preservedSourceMechanic ? 7 : 2);
   const emotional_relatability = clampScore((EMOTION_WORDS.test(text) ? 7 : 3) + (/\byou|your|runners?\b/i.test(text) ? 2 : 0));
   const coachi_fit = clampScore((COACHI_FIT_WORDS.test(text) ? 6 : 2) + keywordHits + (/\bzone|pace|watch|heart|easy\b/i.test(text) ? 2 : 0));
-  const tiktok_native_wording = clampScore((TIKTOK_NATIVE_SHAPES.test(text) ? 8 : 4) + (words <= MAX_HOOK_WORDS ? 2 : 0));
+  const tiktok_native_wording = clampScore((TIKTOK_NATIVE_SHAPES.test(text) || curiositySignals.question_or_choice ? 8 : 4) + (words <= MAX_HOOK_WORDS || preservedSourceMechanic ? 2 : 0));
   const non_marketing_tone = bannedMatches.length > 0
     ? 1
     : clampScore(10 - (/\bperformance|journey|potential|solution|platform|powered\b/i.test(lower) ? 3 : 0));
@@ -112,6 +127,7 @@ export function scoreHookBreakdown(hook, problem = {}, sourceMeta = {}) {
     score,
     max_score: HOOK_QUALITY_MAX_SCORE,
     word_count: words,
+    curiosity_signals: curiositySignals,
     banned_matches: bannedMatches
   };
 }
@@ -158,6 +174,8 @@ export function suggestHookFix(hook, problem = {}) {
   if (type === "watch-checking anxiety") return "Stop checking every split";
   if (type === "workout-racing") return "Stop racing every workout";
   if (type === "beginner uncertainty") return "Running slow is not laziness";
+  if (type === "easy-run form breakdown") return "Why easy runs feel awkward";
+  if (type === "watch-buying confusion") return "Stop overbuying running watches";
   return "You are not bad at running";
 }
 

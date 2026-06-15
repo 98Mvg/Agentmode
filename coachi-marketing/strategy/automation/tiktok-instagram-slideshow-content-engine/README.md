@@ -121,6 +121,7 @@ Use `templates/viral-hook-structure-generator.md` when you want a manual or Code
 Hook source rule:
 - prioritize `inputs/research/tiktok-proven-slideshow-text-bank.json`
 - prioritize `inputs/research/tiktok-running-hook-pattern-bank.md`
+- Reddit hook capture is paused by default; topic generation filters Reddit-sourced problem records unless `--include-reddit-hook-sources` or `COACHI_INCLUDE_REDDIT_HOOK_SOURCES=1` is set.
 - do not mention `data` in hooks
 - adapt TikTok-observed structures, never exact creator wording
 
@@ -148,13 +149,24 @@ npm run slideshow:openai-hook -- \
   --pack content/slideshows/YYYY-MM-DD-slug
 ```
 
+Hook generation reliability:
+- default timeout is `180000ms`, with `3` retry attempts and a `2000ms` base retry delay
+- retry controls: `OPENAI_FETCH_TIMEOUT_MS`, `OPENAI_IMAGE_MAX_RETRIES`, `OPENAI_IMAGE_RETRY_BASE_DELAY_MS`, or CLI flags `--timeout-ms`, `--retries`, `--retry-base-delay-ms`
+- retryable failures include request timeout/fetch/network errors plus HTTP `408`, `409`, `425`, `429`, `500`, `502`, `503`, and `504`
+- after retries are exhausted, the generator may reuse the latest approved Images 2.0 hook image from `content/slideshows` so the pack can still render for review
+- fallback reuse is auditable in `source/hook-provenance.json` with `fallback_used: true`, attempts, retry policy, and the source image/provenance path
+- use `--disable-fallback` when the run must hard-fail instead of reusing an approved hook image
+
 Default TikTok slideshow hook standard:
+- hook text must be Coachi-original and use TikTok structure only, never verbatim creator wording
+- prefer 6-12 words when needed to preserve the source question, contradiction, number, or felt runner problem
+- do not shorten a proven mechanic into a generic label just to fit an old word-count target
 - primary appearance reference: `content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png`
 - legacy clean avatar reference: `content/ads/reference/organic-runner-face-v2-reference.png` only for manual fallback, not default hook generation
 
 Production automation and direct `slideshow:openai-hook -- --pack ...` calls use the stronger `watch-stole-the-run` runner as the default appearance anchor: darker kit, visible sweat, sharper face detail, cinematic contrast, and a more human scroll-stopping expression. Do not fall back to the cleaner park-portrait avatar unless explicitly requested.
 
-The current approved visual baseline is the `2026-05-15-stop-checking-the-watch` direction: preserve the Images 2.0 prompt stack, athletic Coachi runner continuity, realistic sweat, optional shirtless warm-weather running look, and a single forest/mountain/lake world that matches the rest of the deck. Iterate on hook and copy quality without weakening this image setup.
+The current approved visual baseline is the `2026-05-15-stop-checking-the-watch` direction: preserve the Images 2.0 prompt stack, athletic Coachi runner continuity, realistic sweat, a 50/50 rotation between shirtless warm-weather looks and clothed technical running tops, and a single forest/mountain/lake world that matches the rest of the deck. Iterate on hook and copy quality without weakening this image setup.
 
 The generator uses the OpenClaw key source first (`OPENCLAW_OPENAI_API_KEY_FILE` or `~/.openclaw/secrets/openai-api-key`), then falls back to `OPENAI_API_KEY`, the marketing `.env`, the app repo `.env`, or the local OpenClaw context file. It writes:
 
@@ -182,8 +194,10 @@ Production QA requires:
 - 8-10 scored hook candidates using the 1-10 Coachi rubric for runner pain, curiosity, simplicity, emotional relatability, Coachi fit, TikTok-native wording, and non-marketing tone
 - generated topic candidates must already have a selected hook that passes the production hook quality gate
 - hook and slide text provenance from `inputs/research/tiktok-proven-slideshow-text-bank.json`, unless the pack is an explicitly marked local test
+- no Reddit-sourced hook/problem record unless the run is explicitly opted in and labeled
 - no hard-sell CTA, no corporate fitness wording, and no Coachi mention before slide 6
 - approved, owned, or licensed non-hook assets
+- middle-slide library assets must pass the visual-library rotation policy (`max_uses_per_asset_per_30_days` and `max_reuse_in_last_posts`); if a world is exhausted, stop and add/approve fresh assets instead of reusing old pictures
 - no already-posted slideshow id
 - generic broad hooks such as `Top 5 running rules` should not pass production just because the format is TikTok-native
 - list hooks such as `Top 5` must deliver five numbered point slides with a clear runner pain and specific payoff
@@ -211,7 +225,7 @@ npm run slideshow:full-loop -- \
 
 Production mode generates exactly one OpenAI/Images 2.0 hook image, uses stricter QA, prefers Supabase assets, and still keeps Postiz scheduling dry-run unless the live Postiz env gates are explicitly enabled.
 
-Live TikTok scheduling through Postiz:
+Live TikTok scheduling through Postiz for the main Everyday Runner Lab account:
 
 ```bash
 npm run slideshow:full-loop -- \
@@ -227,9 +241,20 @@ Required environment:
 - `POSTIZ_ENABLE_LIVE_POSTING=1`
 - `POSTIZ_URL` or `POSTIZ_PUBLIC_API_BASE`
 - `POSTIZ_API_KEY`
-- `POSTIZ_TIKTOK_ACCOUNT_ID`
+- `POSTIZ_TIKTOK_ACCOUNT_ID_MAIN` or legacy `POSTIZ_TIKTOK_ACCOUNT_ID`
 
 The schedule caption uses `copy/tiktok-postiz-caption.txt`, which combines the platform caption and hashtags before uploading to Postiz.
+Use `--tiktok-account main` for direct-public scheduling. The `watch` profile is reserved for Garmin/Apple Watch problems, watch setup tips, watch comparisons, HR/GPS confusion, and Coachi as the live coaching layer when a watch is not enough.
+Runner Watch Lab uses the same inbox handoff pattern as the current Everyday Runner upload flow:
+
+```bash
+npm run slideshow:upload-both -- \
+  --pack content/slideshows/YYYY-MM-DD-slug \
+  --skip-instagram \
+  --tiktok-account watch
+```
+
+That path sends TikTok `PHOTO` + `MEDIA_UPLOAD` to the TikTok app inbox, and the user presses the final Post button. Do not use Postiz `DIRECT_POST` for the watch account unless the workflow is explicitly changed and re-tested.
 Run production preflight before any live schedule:
 
 ```bash

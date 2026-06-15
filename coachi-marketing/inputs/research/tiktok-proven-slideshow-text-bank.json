@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated": "2026-05-16",
+  "updated": "2026-06-15T22:24:00.000+02:00",
   "purpose": "Source-backed TikTok hook and slide-text pattern bank for Coachi slideshow generation. Use this to keep slide 1 hooks and slides 1-6 simple, TikTok-native, and less AI-written.",
   "source_policy": {
     "use": "Use structure, pacing, vocabulary shape, and simplicity from proven TikTok search results.",
     "do_not_use": "Do not copy creator-specific wording, exact full captions, faces, branding, watermarks, or slide designs.",
     "public_copy_rule": "Generated Coachi copy must be adapted and Coachi-native, not pasted from a creator.",
-    "preferred_text_length": "2 to 7 words for hook slides, 3 to 9 words for payoff slides.",
+    "preferred_text_length": "Prefer 6-12 words for hook slides when that preserves the question, contradiction, number, or felt runner problem; payoff slides should usually stay 3-10 words. Never shorten a proven TikTok mechanic into a generic label.",
     "complexity_rule": "No abstract coaching language on slides 1-6. Prefer concrete runner words: run, easy, slow, watch, pace, breath, walk, week, effort."
   },
   "source_files": [
@@ -28,6 +28,20 @@
       "path": "inputs/research/tiktok-running-hook-pattern-bank.md",
       "collection_method": "manual pattern extraction from source-backed TikTok hooks",
       "selected_source_hooks": 14
+    },
+    {
+      "path": "inputs/research/tiktok-running-hook-scan-2026-05-26.md",
+      "collection_method": "Codex in-app browser scan of TikTok search results",
+      "visible_entries_collected": 1143,
+      "unique_entries": 110,
+      "selected_source_hooks": 12
+    },
+    {
+      "path": "inputs/research/tiktok-viral-hook-variation-bank.json",
+      "collection_method": "Codex in-app browser TikTok scan converted into reusable Coachi-safe hook variations",
+      "visible_entries_collected": 244,
+      "selected_source_hooks": 50,
+      "generated_variations": 250
     }
   ],
   "hook_families": [
@@ -37,7 +51,12 @@
       "source_signal": "1.3M",
       "source_url": "https://www.tiktok.com/@maraika.rose/video/7423156572714519816",
       "mechanism": "missing lesson",
-      "problem_types": ["beginner uncertainty", "heart-rate panic", "watch-checking anxiety", "easy-run pace drift"],
+      "problem_types": [
+        "beginner uncertainty",
+        "heart-rate panic",
+        "watch-checking anxiety",
+        "easy-run pace drift"
+      ],
       "safe_hook_shapes": [
         "No one teaches easy runs",
         "No one teaches running effort",
@@ -50,11 +69,31 @@
       "source_signal": "391K",
       "source_url": "https://www.tiktok.com/@runclubgirl/photo/7521862040948870405",
       "mechanism": "reassurance",
-      "problem_types": ["beginner uncertainty", "comparison spiral", "data-without-coaching"],
+      "problem_types": [
+        "beginner uncertainty",
+        "comparison spiral",
+        "data-without-coaching"
+      ],
       "safe_hook_shapes": [
         "Running feels scary at first",
         "You do not need perfect",
         "Start simpler than this"
+      ]
+    },
+    {
+      "id": "easy_pace_ego",
+      "source_excerpt": "What your easy run pace says about you (anti-flex framing).",
+      "source_signal": "5,453 likes; 170 comments",
+      "source_url": "https://www.tiktok.com/@honestmiles1/photo/7634852439799221526?q=easy%20run",
+      "mechanism": "pace shame reframe",
+      "problem_types": [
+        "comparison spiral",
+        "easy-run pace drift"
+      ],
+      "safe_hook_shapes": [
+        "Why your easy pace feels embarrassing",
+        "Why your easy pace looks slow",
+        "Why easy runs should feel boring"
       ]
     },
     {
@@ -63,7 +102,11 @@
       "source_signal": "338.9K",
       "source_url": "https://www.tiktok.com/@marthaawalsh/video/7219212809664548102",
       "mechanism": "earned beginner lessons",
-      "problem_types": ["beginner uncertainty", "easy-run pace drift", "zone-2 confusion"],
+      "problem_types": [
+        "beginner uncertainty",
+        "easy-run pace drift",
+        "zone-2 confusion"
+      ],
       "safe_hook_shapes": [
         "My top running tips",
         "5 things runners miss",
@@ -76,7 +119,13 @@
       "source_signal": "295.8K",
       "source_url": "https://www.tiktok.com/@its.anushkatyagi/video/7365659042502511914",
       "mechanism": "mistake list",
-      "problem_types": ["easy-run pace drift", "heart-rate panic", "watch-checking anxiety", "workout-racing", "pace disbelief"],
+      "problem_types": [
+        "easy-run pace drift",
+        "heart-rate panic",
+        "watch-checking anxiety",
+        "workout-racing",
+        "pace disbelief"
+      ],
       "safe_hook_shapes": [
         "Top 5 easy run mistakes",
         "5 mistakes runners make",
@@ -89,11 +138,32 @@
       "source_signal": "152.9K",
       "source_url": "https://www.tiktok.com/@nicofelich/video/7225731663890894123",
       "mechanism": "direct how-to",
-      "problem_types": ["beginner uncertainty", "zone-2 confusion", "easy-run pace drift"],
+      "problem_types": [
+        "beginner uncertainty",
+        "zone-2 confusion",
+        "easy-run pace drift"
+      ],
       "safe_hook_shapes": [
         "How to run longer",
         "Make running feel easier",
         "Slow down to run better"
+      ]
+    },
+    {
+      "id": "how_to_start_running",
+      "source_excerpt": "How to start running as a beginner",
+      "source_signal": "98.6K",
+      "source_url": "inputs/research/coachi-viral-proof-hooks-and-text-bank-2026-05-05.md",
+      "mechanism": "direct how-to (beginner)",
+      "problem_types": [
+        "beginner uncertainty"
+      ],
+      "safe_hook_shapes": [
+        "How to start running without quitting",
+        "How to start running without feeling awful",
+        "How to start running without gasping",
+        "How to start running when easy feels hard",
+        "How to start running when you feel unfit"
       ]
     },
     {
@@ -102,7 +172,11 @@
       "source_signal": "relevant easy-run format",
       "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
       "mechanism": "simple instruction",
-      "problem_types": ["easy-run pace drift", "heart-rate panic", "zone-2 confusion"],
+      "problem_types": [
+        "easy-run pace drift",
+        "heart-rate panic",
+        "zone-2 confusion"
+      ],
       "safe_hook_shapes": [
         "How to do an easy run",
         "Easy runs are not races",
@@ -115,7 +189,11 @@
       "source_signal": "141.6K",
       "source_url": "https://www.tiktok.com/@beyond.pavements/video/7470157103458422038",
       "mechanism": "surprising reality",
-      "problem_types": ["zone-2 confusion", "heart-rate panic", "easy-run pace drift"],
+      "problem_types": [
+        "zone-2 confusion",
+        "heart-rate panic",
+        "easy-run pace drift"
+      ],
       "safe_hook_shapes": [
         "Zone 2 should feel slow",
         "Zone 2 feels like walking",
@@ -128,7 +206,12 @@
       "source_signal": "1.5K",
       "source_url": "https://www.tiktok.com/@djc_fitness/video/7528104839318867222",
       "mechanism": "watch-specific utility",
-      "problem_types": ["watch-checking anxiety", "data-without-coaching", "metric setup confusion", "exercise-ring frustration"],
+      "problem_types": [
+        "watch-checking anxiety",
+        "data-without-coaching",
+        "metric setup confusion",
+        "exercise-ring frustration"
+      ],
       "safe_hook_shapes": [
         "Use your watch better",
         "Stop staring at your watch",
@@ -141,27 +224,217 @@
       "source_signal": "34.3K",
       "source_url": "https://www.tiktok.com/@ollie.coburn/video/7519226535333825814",
       "mechanism": "contrarian correction",
-      "problem_types": ["workout-racing", "easy-run pace drift", "heart-rate panic"],
+      "problem_types": [
+        "workout-racing",
+        "easy-run pace drift",
+        "heart-rate panic"
+      ],
       "safe_hook_shapes": [
         "Most runners train wrong",
         "Stop racing workouts",
         "Hard is not always better"
       ]
+    },
+    {
+      "id": "easy_is_effort_not_pace",
+      "source_excerpt": "easy running is a feeling, not a pace",
+      "source_signal": "450",
+      "source_url": "https://www.tiktok.com/search?q=easy%20run%20too%20fast",
+      "mechanism": "effort-vs-pace reframe",
+      "problem_types": [
+        "easy-run pace drift",
+        "pace disbelief",
+        "heart-rate panic"
+      ],
+      "safe_hook_shapes": [
+        "Easy is effort, not pace",
+        "Stop forcing easy pace",
+        "Easy runs need a ceiling"
+      ]
+    },
+    {
+      "id": "start_of_run_lies",
+      "source_excerpt": "the start of your runs are a lie",
+      "source_signal": "445",
+      "source_url": "https://www.tiktok.com/search?q=why%20are%20easy%20runs%20so%20hard",
+      "mechanism": "warm-up deception",
+      "problem_types": [
+        "beginner uncertainty",
+        "pace disbelief",
+        "easy-run pace drift"
+      ],
+      "safe_hook_shapes": [
+        "The start of your run lies",
+        "Do not trust minute one",
+        "The first kilometer lies"
+      ]
+    },
+    {
+      "id": "slow_heart_rate_context",
+      "source_excerpt": "Why is my heart rate so high when I’m running slow?",
+      "source_signal": "964",
+      "source_url": "https://www.tiktok.com/search?q=running%20heart%20rate%20too%20high",
+      "mechanism": "anxious metric question",
+      "problem_types": [
+        "heart-rate panic",
+        "zone-2 confusion",
+        "easy-run pace drift"
+      ],
+      "safe_hook_shapes": [
+        "Why heart rate spikes slow",
+        "Slow pace can still spike",
+        "High heart rate needs context"
+      ]
+    },
+    {
+      "id": "run_walk_approach_fix",
+      "source_excerpt": "not your fitness, your approach",
+      "source_signal": "24.1K",
+      "source_url": "https://www.tiktok.com/search?q=run%20longer%20without%20stopping",
+      "mechanism": "de-shame and reframe",
+      "problem_types": [
+        "beginner uncertainty",
+        "heart-rate panic",
+        "easy-run pace drift"
+      ],
+      "safe_hook_shapes": [
+        "It is not your fitness",
+        "Run-walk is pacing",
+        "You are starting too hard"
+      ]
+    },
+    {
+      "id": "watch_zone_context",
+      "source_excerpt": "heart rate zones and why they matter",
+      "source_signal": "54.5K",
+      "source_url": "https://www.tiktok.com/search?q=garmin%20heart%20rate%20zones%20running",
+      "mechanism": "watch-zone utility",
+      "problem_types": [
+        "metric setup confusion",
+        "watch-checking anxiety",
+        "data-without-coaching"
+      ],
+      "safe_hook_shapes": [
+        "Your watch needs context",
+        "Use alerts, not staring",
+        "Zones are not coaching"
+      ]
+    },
+    {
+      "id": "heavy_legs_minute_1",
+      "source_excerpt": "Heavy legs in minute 1",
+      "source_signal": "variation bank",
+      "source_url": "inputs/research/tiktok-viral-hook-variation-bank.json",
+      "mechanism": "start-of-run doubt",
+      "problem_types": [
+        "beginner uncertainty"
+      ],
+      "safe_hook_shapes": [
+        "Why running feels heavy in minute 1",
+        "Why running feels heavy at the start",
+        "Why minute 1 feels heavy when running"
+      ]
+    },
+    {
+      "id": "easy_too_slow_is_correct",
+      "source_excerpt": "If Zone 2 feels way too slow...",
+      "source_signal": "30K likes on search surface",
+      "source_url": "https://www.tiktok.com/@cnozrun/video/7568236611922709782",
+      "mechanism": "normalize ‘too slow’ objection",
+      "problem_types": [
+        "easy-run pace drift",
+        "zone-2 confusion",
+        "pace disbelief"
+      ],
+      "safe_hook_shapes": [
+        "Your easy run should feel too slow",
+        "If Zone 2 feels too slow, good",
+        "Why easy feels too slow"
+      ]
     }
   ],
   "problem_type_packs": {
     "easy-run pace drift": {
-      "preferred_hook_family_ids": ["zone_2_reality", "proper_easy_run", "mistakes_new_runners"],
+      "preferred_hook_family_ids": [
+        "easy_is_effort_not_pace",
+        "start_of_run_lies",
+        "zone_2_reality",
+        "proper_easy_run",
+        "mistakes_new_runners"
+      ],
       "preferred_hooks": [
-        { "text": "Zone 2 keeps drifting", "source_family_id": "zone_2_reality" },
-        { "text": "Zone 2 should feel slow", "source_family_id": "zone_2_reality" },
-        { "text": "Easy runs are not races", "source_family_id": "proper_easy_run" },
-        { "text": "Top 5 easy run mistakes", "source_family_id": "mistakes_new_runners" }
+        {
+          "text": "Why your easy run gets hard late",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Why your easy run became a workout",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Easy is effort, not pace",
+          "source_family_id": "easy_is_effort_not_pace"
+        },
+        {
+          "text": "Not every run needs proof",
+          "source_family_id": "easy_is_effort_not_pace"
+        },
+        {
+          "text": "Start slower than your ego",
+          "source_family_id": "easy_is_effort_not_pace"
+        },
+        {
+          "text": "Zone 2 keeps drifting",
+          "source_family_id": "zone_2_reality"
+        },
+        {
+          "text": "Zone 2 should feel slow",
+          "source_family_id": "zone_2_reality"
+        },
+        {
+          "text": "Easy runs are not races",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Top 5 easy run mistakes",
+          "source_family_id": "mistakes_new_runners"
+        },
+        {
+          "text": "Easy is a ceiling",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Your easy pace can move",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Easy runs are not proof",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Why your easy run feels weird",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Why you can't talk on easy runs",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Why easy runs feel pointless",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Your easy run should feel boring",
+          "source_family_id": "proper_easy_run"
+        }
       ],
       "slide_sets": [
         {
           "id": "zone2_drift_simple",
-          "source_family_ids": ["zone_2_reality", "proper_easy_run"],
+          "source_family_ids": [
+            "zone_2_reality",
+            "proper_easy_run"
+          ],
           "slides_1_to_6": [
             "Zone 2 keeps drifting",
             "You speed up once.",
@@ -173,7 +446,10 @@
         },
         {
           "id": "top5_easy_run_mistakes_simple",
-          "source_family_ids": ["mistakes_new_runners", "proper_easy_run"],
+          "source_family_ids": [
+            "mistakes_new_runners",
+            "proper_easy_run"
+          ],
           "slides_1_to_6": [
             "Top 5 easy run mistakes",
             "1. Starting too fast.",
@@ -184,8 +460,25 @@
           ]
         },
         {
+          "id": "easy_boring_is_good_v1",
+          "source_family_ids": [
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "Your easy run should feel boring",
+            "If it feels spicy, it's not easy.",
+            "Boring pace = repeatable training.",
+            "Stay under your breath ceiling.",
+            "Let pace be an output.",
+            "Do this 2–4x a week."
+          ]
+        },
+        {
           "id": "easy_ceiling_not_test",
-          "source_family_ids": ["proper_easy_run", "most_runners_train_wrong"],
+          "source_family_ids": [
+            "proper_easy_run",
+            "most_runners_train_wrong"
+          ],
           "slides_1_to_6": [
             "Easy is a ceiling",
             "Pace can move.",
@@ -196,8 +489,41 @@
           ]
         },
         {
+          "id": "easy_runs_feel_pointless_v1",
+          "source_family_ids": [
+            "proper_easy_run",
+            "mistakes_new_runners"
+          ],
+          "slides_1_to_6": [
+            "Why easy runs feel pointless",
+            "You expect it to feel hard.",
+            "So you speed up.",
+            "Now it’s medium-hard.",
+            "Then recovery gets worse.",
+            "Easy should feel boring."
+          ]
+        },
+        {
+          "id": "easy_run_became_workout_v1",
+          "source_family_ids": [
+            "proper_easy_run",
+            "easy_is_effort_not_pace"
+          ],
+          "slides_1_to_6": [
+            "Why your easy run became a workout",
+            "It started just above easy.",
+            "The first hill added pressure.",
+            "Smooth pace made you speed up.",
+            "Breathing changed before pace did.",
+            "Finish controlled, not cooked."
+          ]
+        },
+        {
           "id": "effort_changes_by_day",
-          "source_family_ids": ["proper_easy_run", "zone_2_reality"],
+          "source_family_ids": [
+            "proper_easy_run",
+            "zone_2_reality"
+          ],
           "slides_1_to_6": [
             "Your easy pace can move",
             "Bad sleep changes effort.",
@@ -209,7 +535,10 @@
         },
         {
           "id": "easy_run_proof_trap",
-          "source_family_ids": ["proper_easy_run", "mistakes_new_runners"],
+          "source_family_ids": [
+            "proper_easy_run",
+            "mistakes_new_runners"
+          ],
           "slides_1_to_6": [
             "Easy runs are not proof",
             "Do not chase yesterday.",
@@ -218,20 +547,154 @@
             "Leave room for tomorrow.",
             "That is the point."
           ]
+        },
+        {
+          "id": "easy_run_weird_start_settles",
+          "source_family_ids": [
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "Why your easy run feels weird",
+            "The first 10 minutes can feel off.",
+            "You’re warming up, not failing.",
+            "Don’t fix pace yet.",
+            "Hold an easy ceiling first.",
+            "Then it settles."
+          ]
+        },
+        {
+          "id": "top5_new_runner_mistakes_easy_runs_v1",
+          "source_family_ids": [
+            "mistakes_new_runners",
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "3 mistakes new runners make",
+            "1. Starting at goal pace.",
+            "2. Checking the watch too soon.",
+            "3. Turning easy into a test.",
+            "Fix: cap the first 10 min.",
+            "Then let pace happen."
+          ]
+        },
+        {
+          "id": "talk_test_easy_run_v1",
+          "source_family_ids": [
+            "proper_easy_run",
+            "mistakes_new_runners"
+          ],
+          "slides_1_to_6": [
+            "Why you can't talk on easy runs",
+            "Easy should feel repeatable.",
+            "Short phrases = too hard.",
+            "Full sentences = right.",
+            "Walk breaks can count.",
+            "Finish with control."
+          ]
+        },
+        {
+          "id": "easy_run_hard_late_ceiling_v1",
+          "source_family_ids": [
+            "proper_easy_run",
+            "zone_2_reality"
+          ],
+          "slides_1_to_6": [
+            "Why your easy run gets hard late",
+            "It starts only slightly too fast.",
+            "Then hills add pressure.",
+            "Heat adds more.",
+            "By halfway, easy is gone.",
+            "Set the ceiling early."
+          ]
+        },
+        {
+          "id": "easy_effort_not_pace_v1",
+          "source_family_ids": [
+            "easy_is_effort_not_pace",
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "Easy is effort, not pace",
+            "Pace changes every route.",
+            "Hills make it rise.",
+            "Heat makes it rise.",
+            "Hold the ceiling.",
+            "Finish repeatable."
+          ]
+        },
+        {
+          "id": "not_every_run_needs_proof_v1",
+          "source_family_ids": [
+            "easy_is_effort_not_pace",
+            "most_runners_train_wrong"
+          ],
+          "slides_1_to_6": [
+            "Not every run needs proof",
+            "You already know you can push.",
+            "Today is for control.",
+            "Start under the ceiling.",
+            "Let it stay boring.",
+            "Tomorrow gets easier."
+          ]
+        },
+        {
+          "id": "zone2_watch_176_meme_v1",
+          "source_family_ids": [
+            "zone_2_reality",
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "Trying to stay in Zone 2…",
+            "My watch: 176",
+            "Not a fail. Just noise.",
+            "Start slower for 10 min",
+            "Then cap the drift",
+            "Easy goal: bored, not cooked"
+          ]
+        },
+        {
+          "id": "easy_too_slow_is_correct_v1",
+          "source_family_ids": [
+            "easy_too_slow_is_correct",
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "Your easy run should feel too slow",
+            "If it feels normal, it’s too fast.",
+            "Slow = low stress.",
+            "Hold a breath ceiling.",
+            "Let pace be output.",
+            "Repeat it 2–4x/week."
+          ]
         }
       ]
     },
     "zone-2 confusion": {
-      "preferred_hook_family_ids": ["zone_2_reality", "proper_easy_run", "how_to_run_longer"],
+      "preferred_hook_family_ids": [
+        "zone_2_reality",
+        "proper_easy_run",
+        "how_to_run_longer"
+      ],
       "preferred_hooks": [
-        { "text": "Zone 2 should feel slow", "source_family_id": "zone_2_reality" },
-        { "text": "Zone 2 feels like walking", "source_family_id": "zone_2_reality" },
-        { "text": "Slow down to run better", "source_family_id": "how_to_run_longer" }
+        {
+          "text": "Zone 2 should feel slow",
+          "source_family_id": "zone_2_reality"
+        },
+        {
+          "text": "Zone 2 feels like walking",
+          "source_family_id": "zone_2_reality"
+        },
+        {
+          "text": "Slow down to run better",
+          "source_family_id": "how_to_run_longer"
+        }
       ],
       "slide_sets": [
         {
           "id": "zone2_simple_reality",
-          "source_family_ids": ["zone_2_reality"],
+          "source_family_ids": [
+            "zone_2_reality"
+          ],
           "slides_1_to_6": [
             "Zone 2 should feel slow",
             "Walking can count.",
@@ -244,16 +707,64 @@
       ]
     },
     "heart-rate panic": {
-      "preferred_hook_family_ids": ["proper_easy_run", "zone_2_reality", "mistakes_new_runners"],
+      "preferred_hook_family_ids": [
+        "slow_heart_rate_context",
+        "proper_easy_run",
+        "zone_2_reality",
+        "mistakes_new_runners"
+      ],
       "preferred_hooks": [
-        { "text": "Top 5 easy run mistakes", "source_family_id": "mistakes_new_runners" },
-        { "text": "Your easy run is too hard", "source_family_id": "proper_easy_run" },
-        { "text": "Do not panic mid run", "source_family_id": "zone_2_reality" }
+        {
+          "text": "Why heart rate spikes slow",
+          "source_family_id": "slow_heart_rate_context"
+        },
+        {
+          "text": "Slow pace can still spike",
+          "source_family_id": "slow_heart_rate_context"
+        },
+        {
+          "text": "High heart rate needs context",
+          "source_family_id": "slow_heart_rate_context"
+        },
+        {
+          "text": "Stop choosing pace or heart rate",
+          "source_family_id": "watch_utility"
+        },
+        {
+          "text": "Top 5 easy run mistakes",
+          "source_family_id": "mistakes_new_runners"
+        },
+        {
+          "text": "Your easy run is too hard",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Do not panic mid run",
+          "source_family_id": "zone_2_reality"
+        }
       ],
       "slide_sets": [
         {
+          "id": "pace_or_heart_rate_ceiling_v1",
+          "source_family_ids": [
+            "watch_utility",
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "Stop choosing pace or heart rate",
+            "Easy runs need a ceiling.",
+            "Pace changes with hills.",
+            "Heart rate changes with heat.",
+            "Effort tells the truth.",
+            "Stop checking both."
+          ]
+        },
+        {
           "id": "heart_rate_easy_run_simple",
-          "source_family_ids": ["proper_easy_run", "zone_2_reality"],
+          "source_family_ids": [
+            "proper_easy_run",
+            "zone_2_reality"
+          ],
           "slides_1_to_6": [
             "Top 5 easy run mistakes",
             "1. Running easy too fast.",
@@ -262,20 +773,70 @@
             "4. Fighting walk breaks.",
             "5. Forgetting easy effort."
           ]
+        },
+        {
+          "id": "high_hr_slow_context_v1",
+          "source_family_ids": [
+            "slow_heart_rate_context",
+            "easy_is_effort_not_pace"
+          ],
+          "slides_1_to_6": [
+            "Why heart rate spikes slow",
+            "Heat can raise it.",
+            "Stress can raise it.",
+            "Sleep can raise it.",
+            "Watches can lag.",
+            "Use a ceiling, not panic."
+          ]
+        },
+        {
+          "id": "high_hr_context_not_verdict_v1",
+          "source_family_ids": [
+            "slow_heart_rate_context",
+            "watch_utility"
+          ],
+          "slides_1_to_6": [
+            "High heart rate needs context",
+            "One spike is not the whole run.",
+            "Heat can change the number.",
+            "Sleep can change the number.",
+            "Wrist lag can change the number.",
+            "Judge trends after, not panic now."
+          ]
         }
       ]
     },
     "watch-checking anxiety": {
-      "preferred_hook_family_ids": ["watch_utility", "no_one_teaches", "mistakes_new_runners"],
+      "preferred_hook_family_ids": [
+        "watch_zone_context",
+        "watch_utility",
+        "no_one_teaches",
+        "mistakes_new_runners"
+      ],
       "preferred_hooks": [
-        { "text": "Stop letting the watch run for you", "source_family_id": "watch_utility" },
-        { "text": "Stop staring at your watch", "source_family_id": "watch_utility" },
-        { "text": "The watch is not the run", "source_family_id": "no_one_teaches" }
+        {
+          "text": "Use alerts, not staring",
+          "source_family_id": "watch_zone_context"
+        },
+        {
+          "text": "Stop letting the watch run for you",
+          "source_family_id": "watch_utility"
+        },
+        {
+          "text": "Stop staring at your watch",
+          "source_family_id": "watch_utility"
+        },
+        {
+          "text": "The watch is not the run",
+          "source_family_id": "no_one_teaches"
+        }
       ],
       "slide_sets": [
         {
           "id": "watch_checking_simple",
-          "source_family_ids": ["watch_utility"],
+          "source_family_ids": [
+            "watch_utility"
+          ],
           "slides_1_to_6": [
             "Stop letting the watch run for you",
             "One glance becomes ten.",
@@ -284,20 +845,81 @@
             "Keep your eyes up.",
             "Let the run feel controlled."
           ]
+        },
+        {
+          "id": "watch_checking_breath_reset",
+          "source_family_ids": [
+            "watch_utility"
+          ],
+          "slides_1_to_6": [
+            "If your easy run feels hard, this is why",
+            "You start too eager.",
+            "Then you chase pace.",
+            "Then you check the watch.",
+            "Reset: breathe and slow down.",
+            "Finish feeling in control."
+          ]
+        },
+        {
+          "id": "watch_alerts_not_staring_v1",
+          "source_family_ids": [
+            "watch_zone_context",
+            "watch_utility"
+          ],
+          "slides_1_to_6": [
+            "Use alerts, not staring",
+            "Pick one easy ceiling.",
+            "Let the watch warn you.",
+            "Keep your eyes up.",
+            "Adjust after the run.",
+            "Control beats checking."
+          ]
         }
       ]
     },
     "pace disbelief": {
-      "preferred_hook_family_ids": ["mistakes_new_runners", "proper_easy_run"],
+      "preferred_hook_family_ids": [
+        "start_of_run_lies",
+        "easy_is_effort_not_pace",
+        "mistakes_new_runners",
+        "proper_easy_run"
+      ],
       "preferred_hooks": [
-        { "text": "The easy run mistake", "source_family_id": "mistakes_new_runners" },
-        { "text": "Pace is not everything", "source_family_id": "proper_easy_run" },
-        { "text": "Most runners miss effort", "source_family_id": "mistakes_new_runners" }
+        {
+          "text": "The start of your run lies",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Do not trust minute one",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why your easy pace feels wrong",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "The easy run mistake",
+          "source_family_id": "mistakes_new_runners"
+        },
+        {
+          "text": "Pace is not everything",
+          "source_family_id": "proper_easy_run"
+        },
+        {
+          "text": "Most runners miss effort",
+          "source_family_id": "mistakes_new_runners"
+        },
+        {
+          "text": "The first kilometer lies",
+          "source_family_id": "proper_easy_run"
+        }
       ],
       "slide_sets": [
         {
           "id": "pace_context_simple",
-          "source_family_ids": ["mistakes_new_runners"],
+          "source_family_ids": [
+            "mistakes_new_runners"
+          ],
           "slides_1_to_6": [
             "The easy run mistake",
             "Pace feels objective.",
@@ -306,20 +928,66 @@
             "Fatigue changes it.",
             "Effort matters more."
           ]
+        },
+        {
+          "id": "pace_first_km_lies",
+          "source_family_ids": [
+            "proper_easy_run"
+          ],
+          "slides_1_to_6": [
+            "The first kilometer lies",
+            "It’s warm-up, not a verdict.",
+            "Ignore early pace spikes.",
+            "Settle breathing first.",
+            "Check pace after 10 minutes.",
+            "Easy starts feel boring. Good."
+          ]
+        },
+        {
+          "id": "start_of_run_lies_v1",
+          "source_family_ids": [
+            "start_of_run_lies"
+          ],
+          "slides_1_to_6": [
+            "The start of your run lies",
+            "You are not settled yet.",
+            "Pace jumps around.",
+            "Breath feels dramatic.",
+            "Wait 8 minutes.",
+            "Then judge the run."
+          ]
         }
       ]
     },
     "workout-racing": {
-      "preferred_hook_family_ids": ["most_runners_train_wrong", "mistakes_new_runners"],
+      "preferred_hook_family_ids": [
+        "most_runners_train_wrong",
+        "mistakes_new_runners"
+      ],
       "preferred_hooks": [
-        { "text": "Most runners train wrong", "source_family_id": "most_runners_train_wrong" },
-        { "text": "Stop racing workouts", "source_family_id": "most_runners_train_wrong" },
-        { "text": "Hard is not always better", "source_family_id": "most_runners_train_wrong" }
+        {
+          "text": "Most runners train wrong",
+          "source_family_id": "most_runners_train_wrong"
+        },
+        {
+          "text": "Stop racing workouts",
+          "source_family_id": "most_runners_train_wrong"
+        },
+        {
+          "text": "Hard is not always better",
+          "source_family_id": "most_runners_train_wrong"
+        },
+        {
+          "text": "Stop racing practice reps",
+          "source_family_id": "most_runners_train_wrong"
+        }
       ],
       "slide_sets": [
         {
           "id": "workout_racing_simple",
-          "source_family_ids": ["most_runners_train_wrong"],
+          "source_family_ids": [
+            "most_runners_train_wrong"
+          ],
           "slides_1_to_6": [
             "Most runners train wrong",
             "Hard is not always better.",
@@ -328,20 +996,64 @@
             "Recover on purpose.",
             "Finish with control."
           ]
+        },
+        {
+          "id": "workout_racing_do_not_race_practice",
+          "source_family_ids": [
+            "most_runners_train_wrong"
+          ],
+          "slides_1_to_6": [
+            "Stop racing practice reps",
+            "Start a little easier.",
+            "Keep your breathing calm.",
+            "Hold good form.",
+            "Save the last rep.",
+            "Finish feeling controlled."
+          ]
+        },
+        {
+          "id": "workout_control_repeatable_reps",
+          "source_family_ids": [
+            "most_runners_train_wrong"
+          ],
+          "slides_1_to_6": [
+            "Stop racing your workouts",
+            "Make reps repeatable.",
+            "If rep 1 hurts: too fast.",
+            "Keep recoveries honest.",
+            "Leave 5% in the tank.",
+            "Consistency beats hero days."
+          ]
         }
       ]
     },
     "data-without-coaching": {
-      "preferred_hook_family_ids": ["scary_but_simple", "watch_utility", "no_one_teaches"],
+      "preferred_hook_family_ids": [
+        "scary_but_simple",
+        "watch_utility",
+        "no_one_teaches"
+      ],
       "preferred_hooks": [
-        { "text": "You do not need perfect", "source_family_id": "scary_but_simple" },
-        { "text": "Your watch needs context", "source_family_id": "watch_utility" },
-        { "text": "Start simpler than this", "source_family_id": "scary_but_simple" }
+        {
+          "text": "You do not need perfect",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Your watch needs context",
+          "source_family_id": "watch_utility"
+        },
+        {
+          "text": "Start simpler than this",
+          "source_family_id": "scary_but_simple"
+        }
       ],
       "slide_sets": [
         {
           "id": "watch_context_simple",
-          "source_family_ids": ["scary_but_simple", "watch_utility"],
+          "source_family_ids": [
+            "scary_but_simple",
+            "watch_utility"
+          ],
           "slides_1_to_6": [
             "You do not need perfect",
             "Start with one run.",
@@ -354,16 +1066,44 @@
       ]
     },
     "metric setup confusion": {
-      "preferred_hook_family_ids": ["watch_utility", "zone_2_reality"],
+      "preferred_hook_family_ids": [
+        "watch_zone_context",
+        "watch_utility",
+        "zone_2_reality"
+      ],
       "preferred_hooks": [
-        { "text": "Use your watch better", "source_family_id": "watch_utility" },
-        { "text": "Zone 2 feels confusing", "source_family_id": "zone_2_reality" },
-        { "text": "Apple Watch runners miss this", "source_family_id": "watch_utility" }
+        {
+          "text": "Your watch needs context",
+          "source_family_id": "watch_zone_context"
+        },
+        {
+          "text": "Zones are not coaching",
+          "source_family_id": "watch_zone_context"
+        },
+        {
+          "text": "Use your watch better",
+          "source_family_id": "watch_utility"
+        },
+        {
+          "text": "Zone 2 feels confusing",
+          "source_family_id": "zone_2_reality"
+        },
+        {
+          "text": "Apple Watch runners miss this",
+          "source_family_id": "watch_utility"
+        },
+        {
+          "text": "Your watch is not your coach",
+          "source_family_id": "watch_utility"
+        }
       ],
       "slide_sets": [
         {
           "id": "zones_simple",
-          "source_family_ids": ["watch_utility", "zone_2_reality"],
+          "source_family_ids": [
+            "watch_utility",
+            "zone_2_reality"
+          ],
           "slides_1_to_6": [
             "Use your watch better",
             "Zones can disagree.",
@@ -372,20 +1112,90 @@
             "Do not chase formulas.",
             "Train the run."
           ]
+        },
+        {
+          "id": "watch_is_not_your_coach",
+          "source_family_ids": [
+            "watch_utility"
+          ],
+          "slides_1_to_6": [
+            "Your watch is not your coach",
+            "Zones are estimates.",
+            "Pick one target (HR or effort).",
+            "Use alerts, not staring.",
+            "Adjust after the run.",
+            "Control beats guessing."
+          ]
+        },
+        {
+          "id": "watch_zone_context_v1",
+          "source_family_ids": [
+            "watch_zone_context",
+            "watch_utility"
+          ],
+          "slides_1_to_6": [
+            "Your watch needs context",
+            "Zones are estimates.",
+            "Routes change effort.",
+            "Heat changes effort.",
+            "Use alerts, not staring.",
+            "Let the run stay simple."
+          ]
         }
       ]
     },
     "comparison spiral": {
-      "preferred_hook_family_ids": ["scary_but_simple", "top_tips"],
+      "preferred_hook_family_ids": [
+        "scary_but_simple",
+        "top_tips",
+        "easy_pace_ego"
+      ],
       "preferred_hooks": [
-        { "text": "You are not bad at running", "source_family_id": "scary_but_simple" },
-        { "text": "Running feels scary at first", "source_family_id": "scary_but_simple" },
-        { "text": "5 things runners forget", "source_family_id": "top_tips" }
+        {
+          "text": "You are not bad at running",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Running feels scary at first",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "5 things runners forget",
+          "source_family_id": "top_tips"
+        },
+        {
+          "text": "Why slow running feels embarrassing",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Why your easy pace feels embarrassing",
+          "source_family_id": "easy_pace_ego"
+        },
+        {
+          "text": "Why slow running still counts as progress",
+          "source_family_id": "easy_pace_ego"
+        }
       ],
       "slide_sets": [
         {
+          "id": "comparison_slow_pace_shame_v1",
+          "source_family_ids": [
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Why slow running feels embarrassing",
+            "Everyone sees the pace.",
+            "So you speed up.",
+            "Now easy becomes medium.",
+            "Let slow be useful.",
+            "Repeatability wins first."
+          ]
+        },
+        {
           "id": "comparison_simple",
-          "source_family_ids": ["scary_but_simple"],
+          "source_family_ids": [
+            "scary_but_simple"
+          ],
           "slides_1_to_6": [
             "You are not bad at running",
             "Your route is different.",
@@ -394,20 +1204,317 @@
             "Borrow ideas.",
             "Skip the pressure."
           ]
+        },
+        {
+          "id": "comparison_easy_pace_is_allowed_v1",
+          "source_family_ids": [
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Your easy pace is allowed to look slow",
+            "The watch pace isn't a grade.",
+            "If you chase a pretty number…",
+            "…easy turns medium without you noticing.",
+            "Hold the effort ceiling instead.",
+            "The pace follows later."
+          ]
+        },
+        {
+          "id": "comparison_easy_pace_embarrassing_v1",
+          "source_family_ids": [
+            "easy_pace_ego"
+          ],
+          "slides_1_to_6": [
+            "Why your easy pace feels embarrassing",
+            "Slow pace can feel public.",
+            "So you speed up to hide it.",
+            "Then easy turns medium.",
+            "Keep the effort easy anyway.",
+            "The pace follows later."
+          ]
+        },
+        {
+          "id": "comparison_easy_pace_permission_v1",
+          "source_family_ids": [
+            "easy_pace_ego"
+          ],
+          "slides_1_to_6": [
+            "Why slow running still counts as progress",
+            "Slow does not mean fake progress.",
+            "Easy pace is there to protect tomorrow.",
+            "Comparison turns recovery into racing.",
+            "If you can talk, the run is doing its job.",
+            "Repeatable beats impressive every time."
+          ]
         }
       ]
     },
     "beginner uncertainty": {
-      "preferred_hook_family_ids": ["top_tips", "scary_but_simple", "how_to_run_longer"],
+      "preferred_hook_family_ids": [
+        "run_walk_approach_fix",
+        "start_of_run_lies",
+        "top_tips",
+        "scary_but_simple",
+        "how_to_run_longer",
+        "how_to_start_running",
+        "heavy_legs_minute_1"
+      ],
       "preferred_hooks": [
-        { "text": "5 things I wish I knew", "source_family_id": "top_tips" },
-        { "text": "Running feels scary at first", "source_family_id": "scary_but_simple" },
-        { "text": "How to start running", "source_family_id": "how_to_run_longer" }
+        {
+          "text": "Why easy runs feel awful at the start",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why your first running minutes feel wrong",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why running feels hard at the start",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "The warm-up isn’t a test",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "It is not your fitness",
+          "source_family_id": "run_walk_approach_fix"
+        },
+        {
+          "text": "Run-walk is pacing",
+          "source_family_id": "run_walk_approach_fix"
+        },
+        {
+          "text": "You are starting too hard",
+          "source_family_id": "run_walk_approach_fix"
+        },
+        {
+          "text": "How to start running longer",
+          "source_family_id": "how_to_run_longer"
+        },
+        {
+          "text": "How to run longer",
+          "source_family_id": "how_to_run_longer"
+        },
+        {
+          "text": "5 things I wish I knew",
+          "source_family_id": "top_tips"
+        },
+        {
+          "text": "Running feels scary at first",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "How to start running",
+          "source_family_id": "how_to_run_longer"
+        },
+        {
+          "text": "How to start running without quitting",
+          "source_family_id": "how_to_start_running"
+        },
+        {
+          "text": "How to start running without feeling awful",
+          "source_family_id": "how_to_start_running"
+        },
+        {
+          "text": "How to start running without gasping",
+          "source_family_id": "how_to_start_running"
+        },
+        {
+          "text": "How to start running when easy feels hard",
+          "source_family_id": "how_to_start_running"
+        },
+        {
+          "text": "How to start running when you feel unfit",
+          "source_family_id": "how_to_start_running"
+        },
+        {
+          "text": "Start slower than you think",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Why running feels impossible in minute 1",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Why your beginner running pace feels wrong",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Why running feels impossible at the start",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Why running feels so hard at first",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "Minute 1 is not your fitness",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why minute 1 feels like failure",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why running feels hard in the first 3 minutes",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Your first 3 minutes don’t count",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why running fast makes beginners quit",
+          "source_family_id": "scary_but_simple"
+        },
+        {
+          "text": "The first 2 minutes are lying to you",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Your first mile is a liar",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why running feels heavy in minute 1",
+          "source_family_id": "heavy_legs_minute_1"
+        },
+        {
+          "text": "Why running feels heavy at the start",
+          "source_family_id": "heavy_legs_minute_1"
+        },
+        {
+          "text": "Why minute 1 feels heavy when running",
+          "source_family_id": "heavy_legs_minute_1"
+        },
+        {
+          "text": "Gasping early is not failure",
+          "source_family_id": "run_walk_approach_fix"
+        },
+        {
+          "text": "Win minute 1 to 10",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Stop making run one a test",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why your running start feels too hard",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why minute 1 feels wrong when running",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why easy runs become a test",
+          "source_family_id": "run_walk_approach_fix"
+        },
+        {
+          "text": "The first 5 minutes are lying",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "The warm-up is not the run",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why easy runs should start too easy",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why your easy run should feel boring first",
+          "source_family_id": "start_of_run_lies"
+        },
+        {
+          "text": "Why your easy-run start needs a ceiling",
+          "source_family_id": "start_of_run_lies"
+        }
       ],
       "slide_sets": [
         {
+          "id": "beginner_fast_start_quit_v1",
+          "source_family_ids": [
+            "scary_but_simple",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why running fast makes beginners quit",
+            "Fast feels like proof.",
+            "Then breathing panics.",
+            "Walk before the spike.",
+            "Jog again slower.",
+            "Repeatable beats heroic."
+          ]
+        },
+        {
+          "id": "beginner_first_3_minutes_dont_count_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Your first 3 minutes don’t count",
+            "You are just settling in.",
+            "Start slower than you want.",
+            "Keep breathing boring.",
+            "Then build up gently.",
+            "That’s the real run."
+          ]
+        },
+        {
+          "id": "beginner_first_3_minutes_cold_start_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Why running feels hard in the first 3 minutes",
+            "It’s a cold start, not a fitness test.",
+            "Start at “normal pace” and it becomes a sprint.",
+            "Rule: minute 1–3 should feel almost too easy.",
+            "Relax shoulders + jaw. Long exhale.",
+            "Judge the run after the warmup."
+          ]
+        },
+        {
+          "id": "beginner_first_mile_is_a_liar_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Your first mile is a liar",
+            "It always feels harder than it is.",
+            "If you speed up to “fix it”…",
+            "…you blow up before you warm up.",
+            "Rule: start embarrassingly easy.",
+            "Judge the run after 10 minutes."
+          ]
+        },
+        {
+          "id": "how_to_run_longer_control",
+          "source_family_ids": [
+            "how_to_run_longer",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "How to start running longer",
+            "Start easier.",
+            "Walk before panic.",
+            "Keep breathing boring.",
+            "Repeat the week.",
+            "Control comes first."
+          ]
+        },
+        {
           "id": "beginner_simple",
-          "source_family_ids": ["top_tips", "scary_but_simple"],
+          "source_family_ids": [
+            "top_tips",
+            "scary_but_simple"
+          ],
           "slides_1_to_6": [
             "5 things I wish I knew",
             "1. Start slower.",
@@ -416,20 +1523,541 @@
             "4. Easy matters.",
             "5. Keep showing up."
           ]
+        },
+        {
+          "id": "beginner_stop_testing_runs",
+          "source_family_ids": [
+            "top_tips",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "Beginner rule: stop testing runs",
+            "Easy days build you.",
+            "Hard days cost you.",
+            "Set a ceiling early.",
+            "Win minute 1–10.",
+            "Repeat tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_start_slow_minute_1",
+          "source_family_ids": [
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Start slower than you think",
+            "Minute 1–2 should feel too easy.",
+            "If you gasp early, you started too hard.",
+            "Stay in \"can talk\" effort first.",
+            "Speed up after 8–10 minutes.",
+            "Easy start = longer runs."
+          ]
+        },
+        {
+          "id": "beginner_protect_first_10_v1",
+          "source_family_ids": [
+            "top_tips",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "If you're new to running",
+            "Protect the first 10 minutes.",
+            "Start embarrassingly easy.",
+            "Walk before you gasp.",
+            "Speed comes later.",
+            "Consistency beats one run."
+          ]
+        },
+        {
+          "id": "beginner_week1_pace_does_not_matter",
+          "source_family_ids": [
+            "scary_but_simple",
+            "top_tips"
+          ],
+          "slides_1_to_6": [
+            "Why your beginner running pace feels wrong",
+            "Minute 1 is warm-up, not a test.",
+            "If you can’t talk: slow down now.",
+            "Walk early on purpose (it saves the run).",
+            "Run for 20–30 min, not a distance.",
+            "Progress = repeating it next run."
+          ]
+        },
+        {
+          "id": "beginner_control_minute_zero_v1",
+          "source_family_ids": [
+            "how_to_start_running",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "How to start running",
+            "Minute 1–3: no proving.",
+            "Aim for \"could go forever\" effort.",
+            "If breathing climbs: slow down.",
+            "Walk 30 sec before you blow up.",
+            "Repeat 3x/week."
+          ]
+        },
+        {
+          "id": "beginner_start_impossible_v1",
+          "source_family_ids": [
+            "scary_but_simple",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "Why running feels impossible at the start",
+            "Your body is still warming up.",
+            "You started at “real run” effort.",
+            "Slow down for 3–5 minutes.",
+            "Walk before you gasp.",
+            "Then run steady."
+          ]
+        },
+        {
+          "id": "beginner_why_so_hard_at_first_v1",
+          "source_family_ids": [
+            "scary_but_simple",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "Why running feels so hard at first",
+            "Your body needs 5 minutes to wake up.",
+            "If you spike fast, you started too hard.",
+            "Lower effort until breathing is boring.",
+            "Add pace only if it still feels easy.",
+            "The win is finishing calm."
+          ]
+        },
+        {
+          "id": "beginner_10_minutes_impossible_v1",
+          "source_family_ids": [
+            "scary_but_simple",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "Why 10 minutes of running feels impossible",
+            "You started too hard.",
+            "Minute 1 is warm-up.",
+            "Walk before you panic.",
+            "Keep effort boring.",
+            "Repeat until it settles."
+          ]
+        },
+        {
+          "id": "beginner_first_3_minutes_walk_v1",
+          "source_family_ids": [
+            "scary_but_simple",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "Why running feels impossible in minute 1",
+            "You’re not “warming up” at a run.",
+            "Walk until breathing calms.",
+            "Then jog at talking effort.",
+            "If you spike, walk again.",
+            "That’s pacing, not quitting."
+          ]
+        },
+        {
+          "id": "beginner_start_too_hard_v1",
+          "source_family_ids": [
+            "scary_but_simple",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "Stop starting your runs too hard",
+            "If you start hard, it never settles.",
+            "Start at a pace you can talk.",
+            "Give it 8–10 minutes.",
+            "Then nudge up, not jump.",
+            "Finishing calm is the win."
+          ]
+        },
+        {
+          "id": "not_fitness_approach_v1",
+          "source_family_ids": [
+            "run_walk_approach_fix",
+            "how_to_run_longer"
+          ],
+          "slides_1_to_6": [
+            "It is not your fitness",
+            "You start too hard.",
+            "Your breath panics.",
+            "Walk before it spikes.",
+            "Jog again calmer.",
+            "That is pacing."
+          ]
+        },
+        {
+          "id": "beginner_start_of_run_lies_v1",
+          "source_family_ids": [
+            "start_of_run_lies"
+          ],
+          "slides_1_to_6": [
+            "Why easy runs feel awful at the start",
+            "Minute 1 feels hard. You're not warm yet.",
+            "Start at \"normal pace\" and it is a sprint.",
+            "Make the first 3 minutes almost too easy.",
+            "Let breathing settle before judging the run.",
+            "Control the start. The run gets easier."
+          ]
+        },
+        {
+          "id": "beginner_tension_reset_v1",
+          "source_family_ids": [
+            "no_one_teaches",
+            "scary_but_simple"
+          ],
+          "slides_1_to_6": [
+            "Your run didn’t get hard. You got tense.",
+            "Tight shoulders = messy breathing.",
+            "Reset: long exhale for 60 seconds.",
+            "Back off 10–20%. Keep it boring.",
+            "Then settle into your zone.",
+            "Save this for minute 1."
+          ]
+        },
+        {
+          "id": "beginner_minute_one_isnt_fitness_v1",
+          "source_family_ids": [
+            "start_of_run_lies"
+          ],
+          "slides_1_to_6": [
+            "Minute 1 is not your fitness",
+            "Minute 1 is settling in.",
+            "Sharp breathing? Back off now.",
+            "3 long exhales. Relax your jaw.",
+            "Keep it easy for 5 minutes.",
+            "Then decide how you feel."
+          ]
+        },
+        {
+          "id": "beginner_first_two_minutes_lie_v1",
+          "source_family_ids": [
+            "start_of_run_lies"
+          ],
+          "slides_1_to_6": [
+            "The first 2 minutes are lying to you",
+            "You’re not suddenly unfit.",
+            "You’re just warming up.",
+            "Start slower than you think.",
+            "3 long exhales. Relax your shoulders.",
+            "After 2 minutes: then adjust."
+          ]
+        },
+        {
+          "id": "beginner_warmup_isnt_a_test_v1",
+          "source_family_ids": [
+            "start_of_run_lies"
+          ],
+          "slides_1_to_6": [
+            "The warm-up isn’t a test",
+            "Minute 1 is settling in.",
+            "If breathing spikes: slow down.",
+            "3 long exhales. Relax your jaw.",
+            "Keep it easy for 3 minutes.",
+            "Then judge the run."
+          ]
+        },
+        {
+          "id": "beginner_heavy_legs_not_unfit_v1",
+          "source_family_ids": [
+            "beginner_uncertainty",
+            "start_of_run",
+            "heavy_legs"
+          ],
+          "slides_1_to_6": [
+            "Heavy legs are normal",
+            "Start with tiny steps.",
+            "Breathe low + slow.",
+            "Let HR rise slowly.",
+            "Give it 4 minutes.",
+            "Then decide pace."
+          ]
+        },
+        {
+          "id": "beginner_gasping_first_10_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Gasping early is not failure",
+            "Minute 1 can feel fake.",
+            "Do not speed up to fix it.",
+            "Relax jaw. Longer exhale.",
+            "Keep it easy for 10 minutes.",
+            "Then judge the run."
+          ]
+        },
+        {
+          "id": "beginner_gasping_early_not_failure_v2",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Gasping early is not failure",
+            "Minute 2 can still be setup.",
+            "Do not chase smoother numbers.",
+            "Relax shoulders. Longer exhale.",
+            "Back off before urgency grows.",
+            "Judge the run after 10."
+          ]
+        },
+        {
+          "id": "beginner_win_minute_1_to_10_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Win minute 1 to 10",
+            "Protect minute two.",
+            "Protect your breath.",
+            "Walk before panic.",
+            "Do not sprint early.",
+            "Judge after 10 minutes."
+          ]
+        },
+        {
+          "id": "beginner_run_one_not_a_test_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why your beginner running start feels wrong",
+            "The first 5 minutes are warm-up noise.",
+            "Chasing proof early makes breathing panic.",
+            "Back off before the watch starts arguing.",
+            "Walk before panic, not after.",
+            "Good runs end with more left."
+          ]
+        },
+        {
+          "id": "beginner_first_6_minutes_feel_like_failure_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why your running start feels too hard",
+            "The run has not settled yet.",
+            "Fast easy pace makes minute two loud.",
+            "Drop effort before breathing panics.",
+            "Use the watch as context, not a verdict.",
+            "Judge the run after 10 minutes."
+          ]
+        },
+        {
+          "id": "beginner_do_not_trust_minute_one_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Do not trust minute one",
+            "Your body is still switching on.",
+            "Normal easy pace is too hot that early.",
+            "Make minute 1 to 4 quieter.",
+            "Let your breath settle before you judge the run.",
+            "If it still feels bad later, then adjust."
+          ]
+        },
+        {
+          "id": "beginner_more_left_repeat_tomorrow_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why easy runs become a test",
+            "Easy runs are not proof today.",
+            "If minute 3 feels like a test...",
+            "...you started with ego, not control.",
+            "Back off before breathing climbs.",
+            "Finish calm enough to repeat tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_good_runs_start_boring_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Good runs start boring",
+            "Minute 1 should feel too easy.",
+            "Breathing chaos is not a verdict.",
+            "Delay pace goals until you settle.",
+            "Short walk resets beat panic pushes.",
+            "Leave enough to go again tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_minute_one_not_fitness_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Minute 1 is not your fitness",
+            "A rough first minute is not a verdict.",
+            "Tension can feel like bad endurance.",
+            "Slow down before the watch gets loud.",
+            "Let breathing settle before you judge.",
+            "Good runs stay repeatable tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_minute_one_feels_like_failure_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why minute 1 feels like failure",
+            "That first minute is not the whole run.",
+            "Tension can fake bad fitness fast.",
+            "Back off before the pace turns urgent.",
+            "Give breathing a minute to settle.",
+            "Finish with enough left for tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_first_5_minutes_are_lying_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "The first 5 minutes are lying",
+            "Your body is still waking up.",
+            "Fast breathing this early can be tension.",
+            "Lower effort before you fight it.",
+            "Loosen jaw. Drop shoulders. Longer exhale.",
+            "Judge the run once it settles."
+          ]
+        },
+        {
+          "id": "beginner_warmup_not_run_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "The warm-up is not the run",
+            "Bad opening minutes are not the whole story.",
+            "Tension can make easy feel hard fast.",
+            "Back off before the watch starts arguing.",
+            "Let breathing settle before you judge.",
+            "The real run starts after you relax."
+          ]
+        },
+        {
+          "id": "beginner_protect_minute_2_easy_runs_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Protect minute 2 on easy runs",
+            "Minute two is still setup.",
+            "Urgent breathing is not the verdict.",
+            "Back off before the pace gets loud.",
+            "Use a short reset before panic.",
+            "Judge the run after it settles."
+          ]
+        },
+        {
+          "id": "beginner_easy_runs_should_start_too_easy_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why easy runs should start too easy",
+            "Calm does not mean wasted.",
+            "Minute 1 should feel almost boring.",
+            "Speeding up early ruins the point.",
+            "Let breathing settle before you judge.",
+            "Finish repeatable enough for tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_easy_run_should_feel_boring_first_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why your easy run should feel boring first",
+            "Calm is the setup, not a problem.",
+            "If minute 1 feels urgent, back off more.",
+            "Let pace stay boring until breathing settles.",
+            "A short reset beats forcing smooth numbers.",
+            "Finish fresh enough to repeat tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_first_10_need_a_ceiling_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why your first 10 minutes need a ceiling",
+            "Early calm is the whole setup.",
+            "Let breathing settle before you trust pace.",
+            "If minute 2 feels urgent, slow sooner.",
+            "One short walk reset beats forced numbers.",
+            "Finish like you could repeat tomorrow."
+          ]
+        },
+        {
+          "id": "beginner_easy_run_start_needs_ceiling_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Why your easy-run start needs a ceiling",
+            "Early calm is still part of the workout.",
+            "Let breathing settle before pace gets a vote.",
+            "If minute 2 feels urgent, back off sooner.",
+            "One short reset beats forcing the numbers.",
+            "Finish fresh enough to repeat tomorrow."
+          ]
         }
       ]
     },
     "default": {
-      "preferred_hook_family_ids": ["top_tips", "mistakes_new_runners", "how_to_run_longer"],
+      "preferred_hook_family_ids": [
+        "top_tips",
+        "mistakes_new_runners",
+        "how_to_run_longer"
+      ],
       "preferred_hooks": [
-        { "text": "Simple running tips that work", "source_family_id": "how_to_run_longer" },
-        { "text": "5 things runners get wrong", "source_family_id": "mistakes_new_runners" },
-        { "text": "Try this on your next run", "source_family_id": "top_tips" }
+        {
+          "text": "Simple running tips that work",
+          "source_family_id": "how_to_run_longer"
+        },
+        {
+          "text": "5 things runners get wrong",
+          "source_family_id": "mistakes_new_runners"
+        },
+        {
+          "text": "Try this on your next run",
+          "source_family_id": "top_tips"
+        }
       ],
       "slide_sets": [
         {
           "id": "default_simple",
-          "source_family_ids": ["top_tips"],
+          "source_family_ids": [
+            "top_tips"
+          ],
           "slides_1_to_6": [
             "Simple running tips that work",
             "Start slower.",

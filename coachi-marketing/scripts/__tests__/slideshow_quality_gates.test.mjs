@@ -38,6 +38,33 @@ async function writeJson(filePath, value) {
   await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+function productionAssetCandidate(id, visualWorld = "lake") {
+  return {
+    id,
+    source_kind: "supabase_visual_library",
+    original_source_kind: "pinterest_visual_library",
+    source_rights: "approved",
+    subject_tags: [visualWorld, "easy_run"],
+    selection_quality: {
+      quality_score: 92,
+      visual_match_score: 32,
+      freshness_penalty: 0,
+      selection_score: 124,
+      recent_use_rank: null
+    },
+    usage: {
+      total_uses: 0,
+      slideshow_ids: []
+    },
+    visual_fit_metadata: {
+      visual_world_tags: [visualWorld],
+      requested_context: {
+        visual_world: visualWorld
+      }
+    }
+  };
+}
+
 async function writeMinimalProductionQaPack({ packDir, slides, hook = "Easy runs feel too hard" }) {
   await fs.mkdir(path.join(packDir, "source"), { recursive: true });
   await fs.mkdir(path.join(packDir, "copy"), { recursive: true });
@@ -136,7 +163,9 @@ async function writeMinimalProductionQaPack({ packDir, slides, hook = "Easy runs
       moment: "mid-run on a quiet path"
     },
     avatar_variation: {
-      watch: "no visible watch",
+      watch: "visible Apple Watch-style smartwatch on one wrist",
+      watch_brand_family: "Apple Watch",
+      watch_detail_rule: "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up",
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "three-quarter angle",
@@ -153,18 +182,57 @@ Do not create an 8-slide deck.
 Reddit Source Context
 Workout Phase For This Image
 Avatar Variation For This Image
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, wrist wearable, or visible screen-on-wrist.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 Required Slideshow Spine
 Selected visual world: lake
 Background World Lock
 Reference image background is non-transferable.
 ${hook}
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 `);
+  await writeJson(path.join(packDir, "source/hook-provenance.json"), {
+    schema_version: 1,
+    generator: "chatgpt_images_2_0",
+    mode: "edit_with_reference_image",
+    reference_image: "content/ads/reference/organic-runner-face-v2-reference.png",
+    reference_images: ["content/ads/reference/organic-runner-face-v2-reference.png"],
+    fallback_used: false,
+    created_at: "2026-06-14T00:00:00.000Z"
+  });
   await fs.writeFile(path.join(packDir, "copy/tiktok-caption.txt"), "Easy runs should feel controlled.\n");
   await fs.writeFile(path.join(packDir, "copy/instagram-caption.txt"), "Easy runs should feel controlled.\n");
   await fs.writeFile(path.join(packDir, "copy/hashtags.txt"), "#running #runtok #easyrun #runningtips\n");
 }
+
+test("hook scorer preserves specific TikTok mechanics up to twelve words", () => {
+  const problem = {
+    problem_type: "easy-run pace drift",
+    exact_words: "My easy runs feel fine at first, then turn hard after ten minutes."
+  };
+  const generic = scoreCoachiHook("Easy run control advice", problem);
+  const specific = scoreCoachiHook("Why your easy run feels too hard after the first ten minutes", problem);
+
+  assert.equal(specific.word_count, 12);
+  assert.ok(specific.breakdown.simplicity >= 7);
+  assert.ok(specific.breakdown.tiktok_native_wording >= 6);
+  assert.ok(specific.score > generic.score);
+});
+
+test("hook scorer credits watch questions and plain contradictions", () => {
+  const watchChoice = scoreCoachiHook("Garmin or Apple Watch for running?", {
+    problem_type: "watch-buying confusion",
+    exact_words: "I do not know whether Garmin or Apple Watch is better for running."
+  });
+  const numbersContradiction = scoreCoachiHook("Numbers are not coaching during runs", {
+    problem_type: "data-without-coaching",
+    exact_words: "My watch gives numbers but I do not know what to do mid-run."
+  });
+
+  assert.equal(watchChoice.passes_quality_gate, true);
+  assert.equal(numbersContradiction.passes_quality_gate, true);
+  assert.equal(watchChoice.breakdown.curiosity_signals.question_or_choice, true);
+  assert.equal(numbersContradiction.breakdown.curiosity_signals.plain_contradiction, true);
+});
 
 test("generate_slideshow_topics writes scored hook candidates", async () => {
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-hook-quality-"));
@@ -416,7 +484,9 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
       moment: "runner preparing before the session starts"
     },
     avatar_variation: {
-      watch: "no visible watch",
+      watch: "visible Apple Watch-style smartwatch on one wrist",
+      watch_brand_family: "Apple Watch",
+      watch_detail_rule: "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up",
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "side angle",
@@ -438,7 +508,7 @@ Selected visual world: mountain
 Background World Lock
 Reference image background is non-transferable.
 Stop racing workouts
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 `);
   await fs.mkdir(path.join(packDir, "copy"), { recursive: true });
   await fs.writeFile(path.join(packDir, "copy/tiktok-caption.txt"), "Stop racing workouts.\n");
@@ -491,6 +561,247 @@ test("qa_slideshow_pack rejects full-deck AI image generation", async () => {
 
   assert.notEqual(result.code, 0);
   assert.match(result.stderr, /exactly one Images 2\.0 hook slide/i);
+  const qaReport = JSON.parse(await fs.readFile(path.join(packDir, "source/qa-report.json"), "utf8"));
+  assert.equal(qaReport.pass, false);
+});
+
+test("qa_slideshow_pack rejects fallback hook images in production", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-qa-fallback-hook-"));
+  const packDir = path.join(tmpDir, "2026-06-14-fallback-hook-pack");
+  const slides = [
+    { slide_number: 1, role: "hook", input_image: "slides/source/01-hook.png", output_file: "01-hook.png", text: "Easy runs feel too hard", asset_source: "images_2_0", text_position: "center" },
+    { slide_number: 2, role: "problem", input_image: "slides/source/02-problem.png", output_file: "02-problem.png", text: "Easy days become workouts.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 3, role: "insight_1", input_image: "slides/source/03-insight.png", output_file: "03-insight.png", text: "Your pace creeps up early.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 4, role: "insight_2", input_image: "slides/source/04-insight.png", output_file: "04-insight.png", text: "Slow should feel controlled.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "center" },
+    { slide_number: 5, role: "insight_3", input_image: "slides/source/05-insight.png", output_file: "05-insight.png", text: "Save speed for hard days.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 6, role: "coachi_connection", input_image: "slides/source/06-coachi.png", output_file: "06-coachi.png", text: "Coachi helps catch effort drift.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 7, role: "cta", input_image: "slides/source/07-cta.png", output_file: "07-cta.png", text: "Save this for your next easy run.", asset_source: "supabase_template", visual_collection: "cta_ending", text_position: "center" }
+  ];
+  await writeMinimalProductionQaPack({ packDir, slides });
+  await writeJson(path.join(packDir, "source/hook-provenance.json"), {
+    schema_version: 1,
+    generator: "chatgpt_images_2_0",
+    fallback_used: true,
+    created_at: "2026-06-14T00:00:00.000Z",
+    source_image: "content/slideshows/previous/slides/source/01-hook.png"
+  });
+
+  const picklistSlides = slides.map((slide) => {
+    if (slide.slide_number === 1) {
+      return {
+        slide_number: slide.slide_number,
+        role: slide.role,
+        text: slide.text,
+        asset_source: slide.asset_source,
+        instruction: { candidate_assets: [] }
+      };
+    }
+    const assetId = slide.role === "cta"
+      ? "cta_ending_lake_test"
+      : `lake_calm_test_${String(slide.slide_number).padStart(2, "0")}`;
+    return {
+      slide_number: slide.slide_number,
+      role: slide.role,
+      text: slide.text,
+      asset_source: slide.asset_source,
+      instruction: {
+        candidate_assets: [
+          {
+            id: assetId,
+            source_kind: "supabase_visual_library",
+            original_source_kind: "pinterest_visual_library",
+            source_rights: "approved",
+            subject_tags: slide.role === "cta" ? ["cta", "lake"] : ["lake", "easy_run"],
+            selection_quality: {
+              quality_score: 92,
+              visual_match_score: 32,
+              freshness_penalty: 0,
+              selection_score: 124,
+              recent_use_rank: null
+            },
+            usage: {
+              total_uses: 0,
+              slideshow_ids: []
+            },
+            visual_fit_metadata: {
+              visual_world_tags: ["lake"],
+              requested_context: {
+                visual_world: "lake"
+              }
+            }
+          }
+        ]
+      }
+    };
+  });
+  await writeJson(path.join(packDir, "asset-picklist.json"), { slides: picklistSlides });
+  await writeJson(path.join(packDir, "materialize-report.json"), {
+    results: picklistSlides
+      .filter((slide) => slide.slide_number !== 1)
+      .map((slide) => ({
+        slide_number: slide.slide_number,
+        selected_asset_id: slide.instruction.candidate_assets[0].id,
+        selected_source_rights: "approved",
+        selected_asset_source_kind: "supabase_visual_library",
+        selected_asset_original_source_kind: "pinterest_visual_library"
+      }))
+  });
+
+  const result = await runNode([
+    "scripts/qa_slideshow_pack.mjs",
+    "--production",
+    "--pack",
+    packDir
+  ], { expectFailure: true });
+
+  assert.notEqual(result.code, 0);
+  assert.match(result.stderr, /fallback hook image/i);
+  const qaReport = JSON.parse(await fs.readFile(path.join(packDir, "source/qa-report.json"), "utf8"));
+  assert.equal(qaReport.pass, false);
+  assert.match(qaReport.reasons.join(" "), /fallback hook image/i);
+});
+
+test("qa_slideshow_pack rejects hook images generated with the wrong account avatar reference", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-qa-wrong-avatar-"));
+  const packDir = path.join(tmpDir, "2026-06-14-watch-wrong-avatar-pack");
+  const slides = [
+    { slide_number: 1, role: "hook", input_image: "slides/source/01-hook.png", output_file: "01-hook.png", text: "Cadence lock breaks HR", asset_source: "images_2_0", text_position: "center" },
+    { slide_number: 2, role: "problem", input_image: "slides/source/02-problem.png", output_file: "02-problem.png", text: "Your watch locks cadence.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 3, role: "insight_1", input_image: "slides/source/03-insight.png", output_file: "03-insight.png", text: "Heart rate follows panic.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 4, role: "insight_2", input_image: "slides/source/04-insight.png", output_file: "04-insight.png", text: "Slow the lock first.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "center" },
+    { slide_number: 5, role: "insight_3", input_image: "slides/source/05-insight.png", output_file: "05-insight.png", text: "Then read HR again.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 6, role: "coachi_connection", input_image: "slides/source/06-coachi.png", output_file: "06-coachi.png", text: "Coachi catches watch drift mid-run.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 7, role: "cta", input_image: "slides/source/07-cta.png", output_file: "07-cta.png", text: "Save this before your next run.", asset_source: "supabase_template", visual_collection: "cta_ending", text_position: "center" }
+  ];
+  await writeMinimalProductionQaPack({ packDir, slides, hook: "Cadence lock breaks HR" });
+  const expectedReference = "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png";
+  const wrongReference = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+  const hookBriefPath = path.join(packDir, "source/hook-brief.json");
+  const hookBrief = JSON.parse(await fs.readFile(hookBriefPath, "utf8"));
+  hookBrief.character_anchor = {
+    identity_id: "runner_watch_lab_lifelong_runner_v1",
+    account_profile: "watch",
+    reference_image: expectedReference,
+    style_reference_image: wrongReference
+  };
+  hookBrief.avatar_variation.identity_profile = {
+    profile: "watch",
+    identity_id: "runner_watch_lab_lifelong_runner_v1",
+    reference_image: expectedReference,
+    style_reference_image: wrongReference
+  };
+  await writeJson(hookBriefPath, hookBrief);
+  await writeJson(path.join(packDir, "source/hook-provenance.json"), {
+    schema_version: 1,
+    generator: "chatgpt_images_2_0",
+    mode: "edit_with_reference_image",
+    reference_image: wrongReference,
+    reference_images: [wrongReference],
+    fallback_used: false,
+    created_at: "2026-06-14T00:00:00.000Z"
+  });
+  await writeJson(path.join(packDir, "asset-picklist.json"), {
+    slides: slides.map((slide) => slide.slide_number === 1
+      ? {
+          slide_number: slide.slide_number,
+          role: slide.role,
+          text: slide.text,
+          asset_source: slide.asset_source,
+          instruction: { candidate_assets: [] }
+        }
+      : {
+          slide_number: slide.slide_number,
+          role: slide.role,
+          text: slide.text,
+          asset_source: slide.asset_source,
+          instruction: {
+            candidate_assets: [productionAssetCandidate(`lake_calm_wrong_avatar_${slide.slide_number}`)]
+          }
+        })
+  });
+
+  const result = await runNode([
+    "scripts/qa_slideshow_pack.mjs",
+    "--production",
+    "--pack",
+    packDir
+  ], { expectFailure: true });
+
+  assert.notEqual(result.code, 0);
+  assert.match(result.stderr, /reference_image must match source\/hook-brief\.json identity reference/i);
+  const qaReport = JSON.parse(await fs.readFile(path.join(packDir, "source/qa-report.json"), "utf8"));
+  assert.equal(qaReport.pass, false);
+});
+
+test("qa_slideshow_pack rejects watch hook provenance with extra non-watch style references", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-qa-watch-extra-style-"));
+  const packDir = path.join(tmpDir, "2026-06-14-watch-extra-style-pack");
+  const slides = [
+    { slide_number: 1, role: "hook", input_image: "slides/source/01-hook.png", output_file: "01-hook.png", text: "Your watch is not a coach", asset_source: "images_2_0", text_position: "center" },
+    { slide_number: 2, role: "problem", input_image: "slides/source/02-problem.png", output_file: "02-problem.png", text: "It gives numbers without context.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 3, role: "insight_1", input_image: "slides/source/03-insight.png", output_file: "03-insight.png", text: "The answer is not more glances.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 4, role: "insight_2", input_image: "slides/source/04-insight.png", output_file: "04-insight.png", text: "Use effort before the number.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "center" },
+    { slide_number: 5, role: "insight_3", input_image: "slides/source/05-insight.png", output_file: "05-insight.png", text: "Let the run settle first.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 6, role: "coachi_connection", input_image: "slides/source/06-coachi.png", output_file: "06-coachi.png", text: "Coachi adds the coaching layer.", asset_source: "supabase_library", visual_collection: "lake_calm", text_position: "lower_middle" },
+    { slide_number: 7, role: "cta", input_image: "slides/source/07-cta.png", output_file: "07-cta.png", text: "Save this before your next run.", asset_source: "supabase_template", visual_collection: "cta_ending", text_position: "center" }
+  ];
+  await writeMinimalProductionQaPack({ packDir, slides, hook: "Your watch is not a coach" });
+  const expectedReference = "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png";
+  const legacyStyleReference = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
+  const hookBriefPath = path.join(packDir, "source/hook-brief.json");
+  const hookBrief = JSON.parse(await fs.readFile(hookBriefPath, "utf8"));
+  hookBrief.character_anchor = {
+    identity_id: "runner_watch_lab_lifelong_runner_v1",
+    account_profile: "watch",
+    reference_image: expectedReference,
+    style_reference_image: legacyStyleReference
+  };
+  hookBrief.avatar_variation.identity_profile = {
+    profile: "watch",
+    identity_id: "runner_watch_lab_lifelong_runner_v1",
+    reference_image: expectedReference,
+    style_reference_image: legacyStyleReference
+  };
+  await writeJson(hookBriefPath, hookBrief);
+  await writeJson(path.join(packDir, "source/hook-provenance.json"), {
+    schema_version: 1,
+    generator: "chatgpt_images_2_0",
+    mode: "edit_with_reference_image",
+    reference_image: expectedReference,
+    style_reference_image: legacyStyleReference,
+    reference_images: [expectedReference, legacyStyleReference],
+    fallback_used: false,
+    created_at: "2026-06-14T00:00:00.000Z"
+  });
+  await writeJson(path.join(packDir, "asset-picklist.json"), {
+    slides: slides.map((slide) => slide.slide_number === 1
+      ? {
+          slide_number: slide.slide_number,
+          role: slide.role,
+          text: slide.text,
+          asset_source: slide.asset_source,
+          instruction: { candidate_assets: [] }
+        }
+      : {
+          slide_number: slide.slide_number,
+          role: slide.role,
+          text: slide.text,
+          asset_source: slide.asset_source,
+          instruction: {
+            candidate_assets: [productionAssetCandidate(`lake_calm_extra_style_${slide.slide_number}`)]
+          }
+        })
+  });
+
+  const result = await runNode([
+    "scripts/qa_slideshow_pack.mjs",
+    "--production",
+    "--pack",
+    packDir
+  ], { expectFailure: true });
+
+  assert.notEqual(result.code, 0);
+  assert.match(result.stderr, /must use only the Watch identity reference/i);
   const qaReport = JSON.parse(await fs.readFile(path.join(packDir, "source/qa-report.json"), "utf8"));
   assert.equal(qaReport.pass, false);
 });
@@ -606,7 +917,9 @@ test("qa_slideshow_pack rejects reused production library visuals", async () => 
       moment: "mid-run on a quiet path"
     },
     avatar_variation: {
-      watch: "no visible watch",
+      watch: "visible Apple Watch-style smartwatch on one wrist",
+      watch_brand_family: "Apple Watch",
+      watch_detail_rule: "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up",
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "three-quarter angle",
@@ -623,13 +936,13 @@ Do not create an 8-slide deck.
 Reddit Source Context
 Workout Phase For This Image
 Avatar Variation For This Image
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, wrist wearable, or visible screen-on-wrist.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 Required Slideshow Spine
 Selected visual world: lake
 Background World Lock
 Reference image background is non-transferable.
 Easy runs keep drifting
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 `);
   await fs.writeFile(path.join(packDir, "copy/tiktok-caption.txt"), "Easy runs usually drift slowly.\n");
   await fs.writeFile(path.join(packDir, "copy/instagram-caption.txt"), "Easy runs usually drift slowly.\n");
@@ -845,7 +1158,9 @@ test("qa_slideshow_pack rejects CTA app-proof visuals before the final slide", a
       moment: "mid-run on a quiet path"
     },
     avatar_variation: {
-      watch: "no visible watch",
+      watch: "visible Apple Watch-style smartwatch on one wrist",
+      watch_brand_family: "Apple Watch",
+      watch_detail_rule: "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up",
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "three-quarter angle",
@@ -862,13 +1177,13 @@ Do not create an 8-slide deck.
 Reddit Source Context
 Workout Phase For This Image
 Avatar Variation For This Image
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, wrist wearable, or visible screen-on-wrist.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 Required Slideshow Spine
 Selected visual world: lake
 Background World Lock
 Reference image background is non-transferable.
 Easy runs feel too hard
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 `);
   await fs.writeFile(path.join(packDir, "copy/tiktok-caption.txt"), "Easy runs should feel controlled.\n");
   await fs.writeFile(path.join(packDir, "copy/instagram-caption.txt"), "Easy runs should feel controlled.\n");
@@ -1042,7 +1357,9 @@ test("qa_slideshow_pack rejects cross-world CTA assets", async () => {
       moment: "mid-run on a quiet path"
     },
     avatar_variation: {
-      watch: "no visible watch",
+      watch: "visible Apple Watch-style smartwatch on one wrist",
+      watch_brand_family: "Apple Watch",
+      watch_detail_rule: "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up",
       top: "black running shirt",
       shorts: "black split shorts",
       angle: "three-quarter angle",
@@ -1059,7 +1376,7 @@ Do not create an 8-slide deck.
 Reddit Source Context
 Workout Phase For This Image
 Avatar Variation For This Image
-No visible watch. Do not include Apple Watch, Garmin watch, smartwatch, GPS watch, wrist wearable, or visible screen-on-wrist.
+Visible Apple Watch-style or Garmin-style running watch. No readable screen UI, no visible logos, no wrist close-up, no watch-checking pose.
 Required Slideshow Spine
 Selected visual world: lake
 Background World Lock
@@ -1180,6 +1497,95 @@ test("prepare_slideshow_assets ranks fresh assets and emits selection quality", 
   assert.equal(typeof topAsset.selection_quality.selection_score, "number");
   assert.equal(typeof topAsset.selection_quality.visual_match_score, "number");
   assert.ok(topAsset.visual_fit_metadata.requested_context);
+});
+
+test("prepare_slideshow_assets prefers no-face environment assets on middle slides", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-asset-no-face-"));
+  const manifestPath = path.join(tmpDir, "render-manifest.json");
+  const supabaseManifestPath = path.join(tmpDir, "supabase-library-manifest.json");
+  const outPath = path.join(tmpDir, "asset-picklist.json");
+
+  await writeJson(manifestPath, {
+    base_dir: ".",
+    output_dir: "slides/rendered",
+    hybrid_cost_model: "one_ai_hook_six_library_assets",
+    visual_world: "forest",
+    slides: [
+      {
+        slide_number: 1,
+        role: "hook",
+        asset_source: "images_2_0",
+        visual_collection: "details_emotion",
+        input_image: "slides/source/01-hook.png",
+        output_file: "01-hook.png",
+        text: "Hook"
+      },
+      {
+        slide_number: 2,
+        role: "problem",
+        asset_source: "supabase_library",
+        visual_collection: "nature_context",
+        input_image: "slides/source/02-problem.png",
+        output_file: "02-problem.png",
+        text: "Easy runs start too hard."
+      }
+    ]
+  });
+  await writeJson(supabaseManifestPath, {
+    schema_version: 1,
+    collections: [
+      {
+        collection_id: "nature_context",
+        selection_notes: ["prefer environment and no clear face"],
+        items: [
+          {
+            id: "clear_face_should_not_win",
+            source_kind: "supabase_visual_library",
+            original_source_kind: "local_curated_library",
+            source_rights: "approved",
+            quality_score: 92,
+            public_url: "https://example.com/clear-face.png",
+            visual_world_tags: ["forest"],
+            subject_tags: ["forest", "runner_detail", "portrait", "visible_face"],
+            original_name: "runner face portrait closeup.jpg",
+            status: "uploaded"
+          },
+          {
+            id: "environment_no_face_should_win",
+            source_kind: "supabase_visual_library",
+            original_source_kind: "local_curated_library",
+            source_rights: "approved",
+            quality_score: 82,
+            public_url: "https://example.com/environment.png",
+            visual_world_tags: ["forest"],
+            subject_tags: ["forest", "route_context", "open_path", "environment_first", "no_clear_face"],
+            original_name: "wide forest path distant runner back view.jpg",
+            status: "uploaded"
+          }
+        ]
+      }
+    ]
+  });
+
+  await runNode([
+    "scripts/prepare_slideshow_assets.mjs",
+    "--manifest",
+    manifestPath,
+    "--out",
+    outPath,
+    "--supabase-library",
+    supabaseManifestPath,
+    "--production"
+  ]);
+
+  const picklist = JSON.parse(await fs.readFile(outPath, "utf8"));
+  const slide = picklist.slides.find((item) => item.slide_number === 2);
+  assert.equal(slide.instruction.candidate_assets[0].id, "environment_no_face_should_win");
+  assert.match(slide.instruction.face_visibility_rule, /Avoid clear face/i);
+  assert.match(
+    slide.instruction.candidate_assets[0].visual_fit_metadata.face_visibility_preference,
+    /distant runner/
+  );
 });
 
 test("prepare_slideshow_assets excludes owned generated fallback assets from production middle slides", async () => {

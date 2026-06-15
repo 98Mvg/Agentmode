@@ -35,7 +35,7 @@ If the text bank does not have a fit, scrape or scan more proven TikTok/Instagra
 - Output a schema under `schemas/`.
 - The schema must include slide roles, objective, text template, visual notes, image prompt template, and text position.
 - The schema must preserve the required slideshow spine: emotion, one Images 2.0 avatar/world hook, and final CTA.
-- The schema must keep slide text short enough to match proven TikTok slideshow patterns.
+- The schema must keep slide text legible and TikTok-native while preserving the source hook's question, contradiction, number, or felt runner problem.
 - Run `npm run slideshow:validate`.
 
 ## 3. Visual Sourcing

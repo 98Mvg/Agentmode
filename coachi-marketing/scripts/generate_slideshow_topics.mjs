@@ -13,12 +13,14 @@ const DEFAULT_PROBLEMS_PATH = "inputs/research/raw-runner-problems.json";
 const DEFAULT_SCHEMAS_DIR = "strategy/automation/tiktok-instagram-slideshow-content-engine/schemas";
 const DEFAULT_OUTPUT_DIR = "outputs/daily";
 const DEFAULT_TIKTOK_TEXT_BANK_PATH = "inputs/research/tiktok-proven-slideshow-text-bank.json";
+const DEFAULT_TIKTOK_HOOK_VARIATION_BANK_PATH = "inputs/research/tiktok-viral-hook-variation-bank.json";
 const DEFAULT_FORMAT_CATALOG_PATH = "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json";
 const DEFAULT_LIMIT = 5;
 const DEFAULT_POSTED_SLIDESHOWS_PATH = "inputs/performance/posted-slideshows.json";
 const DEFAULT_EXISTING_PACKS_ROOT = "content/slideshows";
 const VIRAL_TIKTOK_HOOK_SOURCES = [
   DEFAULT_TIKTOK_TEXT_BANK_PATH,
+  DEFAULT_TIKTOK_HOOK_VARIATION_BANK_PATH,
   "inputs/research/tiktok-running-hook-pattern-bank.md",
   "outputs/daily/2026-04-26-tiktok-viral-hook-format-analysis.md"
 ];
@@ -47,7 +49,12 @@ function printHelp() {
   node scripts/generate_slideshow_topics.mjs
   node scripts/generate_slideshow_topics.mjs --date 2026-04-27 --limit 5 --out outputs/daily/2026-04-27-slideshow-topic-candidates.json
 
-Generates slideshow topic candidates from real runner problems. This does not call AI and does not create public posts.`);
+Generates slideshow topic candidates from real runner problems. This does not call AI and does not create public posts.
+
+Hook options:
+  --hook-variation-bank inputs/research/tiktok-viral-hook-variation-bank.json
+  --disable-hook-variation-bank
+  --include-reddit-hook-sources`);
 }
 
 async function readJson(filePath) {
@@ -90,6 +97,23 @@ function hookKey(hook) {
     .slice(0, 72);
 }
 
+function includesRedditSource(value) {
+  const text = String(value || "").toLowerCase();
+  return text.includes("reddit.com")
+    || text.includes("reddit-winning-language-bank")
+    || /outputs\/daily\/.*reddit/.test(text);
+}
+
+function isRedditHookSourceProblem(problem) {
+  if (!problem || typeof problem !== "object") return false;
+  if (String(problem.platform || "").toLowerCase() === "reddit") return true;
+  if (String(problem.source_type || "").toLowerCase().includes("reddit")) return true;
+  if (includesRedditSource(problem.source_url)) return true;
+
+  if (problem.platform || problem.source_type || problem.source_url) return false;
+  return (problem.sourced_mistakes || []).some((mistake) => includesRedditSource(mistake?.source_url));
+}
+
 function hashString(value) {
   let hash = 0;
   for (const char of String(value || "")) {
@@ -109,19 +133,34 @@ function scoreProblem(problem) {
       ].reduce((total, value) => total + (Number(value) || 0), 0);
 }
 
-function schemaForProblem(problemType) {
-  if (problemType === "easy-run pace drift") return "top_5_mistakes_v1";
-  if (problemType === "zone-2 confusion") return "top_5_mistakes_v1";
-  if (problemType === "heart-rate panic") return "top_5_mistakes_v1";
-  if (problemType === "watch-checking anxiety") return "top_5_mistakes_v1";
-  if (problemType === "pace disbelief") return "top_5_mistakes_v1";
-  if (problemType === "workout-racing") return "top_5_mistakes_v1";
-  if (problemType === "metric setup confusion") return "top_5_rules_v1";
-  if (problemType === "beginner uncertainty") return "things_i_wish_i_knew_v1";
-  if (problemType === "data-without-coaching") return "myth_breaker_v1";
-  if (problemType === "exercise-ring frustration") return "myth_breaker_v1";
-  if (problemType === "comparison spiral") return "myth_breaker_v1";
-  return "how_to_fix_v1";
+const SCHEMA_OPTIONS_BY_PROBLEM_TYPE = {
+  "easy-run pace drift": ["before_after_coaching_v1", "app_demo_proof_v1", "easy_run_simple_tips_v1", "runner_mistake_reframe_v1", "top_5_mistakes_v1", "how_to_fix_v1"],
+  "zone-2 confusion": ["myth_vs_truth_v1", "runner_mistake_reframe_v1", "myth_breaker_v1", "top_5_mistakes_v1", "top_5_rules_v1"],
+  "heart-rate panic": ["reddit_question_v1", "before_after_coaching_v1", "app_demo_proof_v1", "runner_mistake_reframe_v1", "top_5_mistakes_v1", "top_5_rules_v1"],
+  "watch-checking anxiety": ["app_demo_proof_v1", "before_after_coaching_v1", "runner_mistake_reframe_v1", "myth_breaker_v1", "top_5_mistakes_v1"],
+  "pace disbelief": ["myth_vs_truth_v1", "runner_mistake_reframe_v1", "myth_breaker_v1", "top_5_mistakes_v1"],
+  "workout-racing": ["how_to_fix_v1", "runner_mistake_reframe_v1", "top_5_mistakes_v1"],
+  "metric setup confusion": ["top_5_rules_v1", "runner_mistake_reframe_v1"],
+  "beginner uncertainty": ["reddit_question_v1", "things_i_wish_i_knew_v1", "easy_run_simple_tips_v1", "how_to_fix_v1"],
+  "data-without-coaching": ["founder_built_this_v1", "app_demo_proof_v1", "data_is_not_coaching_v1", "myth_breaker_v1"],
+  "exercise-ring frustration": ["myth_breaker_v1", "top_5_rules_v1"],
+  "comparison spiral": ["myth_breaker_v1", "runner_mistake_reframe_v1", "things_i_wish_i_knew_v1"],
+  "watch-buying confusion": ["top_5_rules_v1", "myth_breaker_v1"],
+  "easy-run form breakdown": ["how_to_fix_v1", "easy_run_simple_tips_v1"],
+  "easy-run expectation mismatch": ["how_to_fix_v1", "easy_run_simple_tips_v1", "runner_mistake_reframe_v1"]
+};
+
+function schemaForProblem(problemOrType, recentSchemaCounts = new Map()) {
+  const problem = typeof problemOrType === "object" && problemOrType ? problemOrType : null;
+  const problemType = problem?.problem_type || problemOrType;
+  const options = SCHEMA_OPTIONS_BY_PROBLEM_TYPE[problemType] || ["how_to_fix_v1"];
+  if (options.length === 1) return options[0];
+  const seed = problem
+    ? [problem.id, problem.source_url, problem.exact_words, problem.content_angle, problem.problem_type].filter(Boolean).join("|")
+    : String(problemType || "");
+  const offset = hashString(seed) % options.length;
+  const ordered = options.map((_, index) => options[(index + offset) % options.length]);
+  return ordered.sort((left, right) => (recentSchemaCounts.get(left) || 0) - (recentSchemaCounts.get(right) || 0))[0];
 }
 
 const FORMAT_ID_BY_PROBLEM_TYPE = {
@@ -135,7 +174,10 @@ const FORMAT_ID_BY_PROBLEM_TYPE = {
   "beginner uncertainty": "beginner_runner_rules",
   "data-without-coaching": "why_you_plateau",
   "exercise-ring frustration": "beginner_runner_rules",
-  "comparison spiral": "things_i_wish_i_knew_running"
+  "comparison spiral": "things_i_wish_i_knew_running",
+  "watch-buying confusion": "beginner_runner_rules",
+  "easy-run form breakdown": "easy_run_too_fast",
+  "easy-run expectation mismatch": "easy_run_too_fast"
 };
 
 function formatIdForProblem(problem, schemaName) {
@@ -210,7 +252,7 @@ function coreIdeaForProblem(problem) {
         "Effort tells you if the run is controlled."
       ],
       reframe: "The spike needs context before judgment.",
-      coachi_connection: "Coachi gives simple guidance before one number ruins the run.",
+      coachi_connection: "Coachi keeps the run focused before one number ruins it.",
       cta: "Save this before judging one run."
     },
     "watch-checking anxiety": {
@@ -339,8 +381,56 @@ function coreIdeaForProblem(problem) {
         "Your repeatable week matters more."
       ],
       reframe: "Borrow lessons, not pressure.",
-      coachi_connection: "Coachi keeps the feedback about your run, not someone else's.",
+      coachi_connection: "Coachi keeps the run focused on your effort.",
       cta: "Follow for smarter running."
+    },
+    "watch-buying confusion": {
+      pattern: "watch choice",
+      topic: "running watch choice",
+      issue: "watch specs all sound important",
+      behavior: "buying the flashiest feature list",
+      not_problem: "needing the perfect watch",
+      setup: "A running watch should fit the runs you actually do.",
+      value_points: [
+        "Buttons matter when hands are sweaty.",
+        "Battery matters more than extra charts.",
+        "Comfort beats a giant spec sheet."
+      ],
+      reframe: "Choose the watch that makes training simpler.",
+      coachi_connection: "Coachi says what to do mid-run.",
+      cta: "Save before buying a watch."
+    },
+    "easy-run form breakdown": {
+      pattern: "form control",
+      topic: "easy-run form",
+      issue: "easy runs feel awkward",
+      behavior: "slowing down until the stride falls apart",
+      not_problem: "running slowly",
+      setup: "Easy pace is not a crawl.",
+      value_points: [
+        "Keep the steps short.",
+        "Keep the rhythm calm.",
+        "If form falls apart, reset first."
+      ],
+      reframe: "The goal is relaxed, not collapsed.",
+      coachi_connection: "Coachi helps keep the run easy without making you crawl.",
+      cta: "Save this for your next easy run."
+    },
+    "easy-run expectation mismatch": {
+      pattern: "expectation mismatch",
+      topic: "easy runs",
+      issue: "easy runs never feel easy",
+      behavior: "starting too close to the ceiling",
+      not_problem: "being bad at running",
+      setup: "Easy is not a pace promise.",
+      value_points: [
+        "The first minutes feel fine.",
+        "Then breathing creeps up.",
+        "Set the ceiling early."
+      ],
+      reframe: "Easy means repeatable, not impressive.",
+      coachi_connection: "Coachi speaks up before easy turns into hard.",
+      cta: "Save this before your next easy run."
     }
   };
 
@@ -385,7 +475,10 @@ const SIMPLE_TOPIC_BY_TYPE = {
   "metric setup confusion": "training zone",
   "exercise-ring frustration": "workout",
   "comparison spiral": "running",
-  "beginner uncertainty": "beginner running"
+  "watch-buying confusion": "running watch",
+  "beginner uncertainty": "beginner running",
+  "easy-run form breakdown": "easy-run form",
+  "easy-run expectation mismatch": "easy run"
 };
 
 const PROBLEM_KEYWORDS_BY_TYPE = {
@@ -399,7 +492,10 @@ const PROBLEM_KEYWORDS_BY_TYPE = {
   "metric setup confusion": ["zone", "training", "rules"],
   "exercise-ring frustration": ["workout", "counts", "ring"],
   "comparison spiral": ["running", "bad", "progress"],
-  "beginner uncertainty": ["beginner", "running", "scary", "start"]
+  "watch-buying confusion": ["watch", "garmin", "apple", "fitbit", "buy", "choose", "compare"],
+  "beginner uncertainty": ["beginner", "running", "scary", "start"],
+  "easy-run form breakdown": ["easy", "slow", "run", "form", "awkward", "rhythm"],
+  "easy-run expectation mismatch": ["easy", "run", "feel", "hard", "slow", "breathing"]
 };
 
 const TENSION_WORDS = [
@@ -481,8 +577,11 @@ const VISUAL_WORLD_BY_TYPE = {
   "metric setup confusion": APPROVED_VISUAL_WORLDS.lake,
   "exercise-ring frustration": APPROVED_VISUAL_WORLDS.forest,
   "comparison spiral": APPROVED_VISUAL_WORLDS.lake,
+  "watch-buying confusion": APPROVED_VISUAL_WORLDS.lake,
   "beginner uncertainty": APPROVED_VISUAL_WORLDS.lake,
-  "data-without-coaching": APPROVED_VISUAL_WORLDS.forest
+  "data-without-coaching": APPROVED_VISUAL_WORLDS.forest,
+  "easy-run form breakdown": APPROVED_VISUAL_WORLDS.forest,
+  "easy-run expectation mismatch": APPROVED_VISUAL_WORLDS.forest
 };
 
 function visualWorldForProblem(problem) {
@@ -511,23 +610,31 @@ function visualWorldAtOffset(startWorld, offset) {
 }
 
 async function latestVisualWorldFromPacks(packRoot) {
-  const latest = [];
+  const latestReady = [];
+  const latestFallback = [];
   try {
     const entries = await fs.readdir(packRoot, { withFileTypes: true });
     for (const entry of entries) {
       if (!entry.isDirectory()) continue;
       const packDir = path.join(packRoot, entry.name);
+      const qaPath = path.join(packDir, "source/qa-report.json");
+      const qaReport = await readOptionalJson(qaPath, null);
+      const qaPasses = qaReport?.ok === true && qaReport?.pass === true && qaReport?.production === true;
       for (const relativePath of ["source/hook-brief.json", "render-manifest.json", "source/slideshow.json"]) {
         const filePath = path.join(packDir, relativePath);
         const data = await readOptionalJson(filePath, null);
         const visualWorld = data?.visual_world || data?.visual_system?.visual_world || null;
         if (!visualWorld) continue;
-        const stat = await fs.stat(filePath);
-        latest.push({
+        const stat = await fs.stat(qaPasses ? qaPath : filePath);
+        const entry = {
           visual_world: canonicalVisualWorldId(visualWorld),
           file_path: filePath,
-          mtime_ms: stat.mtimeMs
-        });
+          qa_report_path: qaPasses ? qaPath : null,
+          mtime_ms: stat.mtimeMs,
+          source_status: qaPasses ? "production_qa_passed" : "metadata_fallback"
+        };
+        if (qaPasses) latestReady.push(entry);
+        else latestFallback.push(entry);
         break;
       }
     }
@@ -536,8 +643,10 @@ async function latestVisualWorldFromPacks(packRoot) {
     throw error;
   }
 
-  latest.sort((left, right) => right.mtime_ms - left.mtime_ms);
-  return latest[0] || null;
+  latestReady.sort((left, right) => right.mtime_ms - left.mtime_ms);
+  if (latestReady[0]) return latestReady[0];
+  latestFallback.sort((left, right) => right.mtime_ms - left.mtime_ms);
+  return latestFallback[0] || null;
 }
 
 function applyVisualWorldRotation(candidate, worldId, rotationMeta = {}) {
@@ -582,16 +691,95 @@ const BEST_VIRAL_HOOK_BY_TYPE = {
   "metric setup confusion": "Top 5 training zone rules",
   "exercise-ring frustration": "You do not need a perfect plan",
   "comparison spiral": "You are not bad at running",
-  "beginner uncertainty": "5 things I wish I knew"
+  "beginner uncertainty": "5 things I wish I knew",
+  "easy-run form breakdown": "Why easy runs feel awkward",
+  "easy-run expectation mismatch": "Why easy runs never feel easy",
+  "watch-buying confusion": "Garmin vs Apple Watch"
 };
 
 function problemTypeTextPack(problem, textBank) {
   if (!textBank?.problem_type_packs) return null;
-  return textBank.problem_type_packs[problem.problem_type] || textBank.problem_type_packs.default || null;
+  if (textBank.problem_type_packs[problem.problem_type]) return textBank.problem_type_packs[problem.problem_type];
+  if (problem.problem_type === "easy-run form breakdown") return null;
+  if (problem.problem_type === "easy-run expectation mismatch") return null;
+  return textBank.problem_type_packs.default || null;
 }
 
 function bankHookFamiliesById(textBank) {
   return new Map((textBank?.hook_families || []).map((family) => [family.id, family]));
+}
+
+function mergeHookVariationBank(textBank, variationBank, variationBankPath = DEFAULT_TIKTOK_HOOK_VARIATION_BANK_PATH) {
+  if (!textBank || !Array.isArray(variationBank?.patterns)) return textBank;
+
+  const merged = JSON.parse(JSON.stringify(textBank));
+  merged.hook_families ||= [];
+  merged.problem_type_packs ||= {};
+  merged._hook_variation_bank_path = variationBankPath;
+  merged._hook_variation_bank_summary = {
+    selected_patterns: variationBank.collection_summary?.selected_patterns || variationBank.patterns.length,
+    total_variations: variationBank.collection_summary?.total_variations
+      || variationBank.patterns.reduce((total, pattern) => total + (pattern.variations?.length || 0), 0)
+  };
+
+  const familyIds = new Set(merged.hook_families.map((family) => family.id));
+  const hooksByProblemType = new Map();
+
+  for (const pattern of variationBank.patterns) {
+    if (!pattern?.pattern_id || !Array.isArray(pattern.variations)) continue;
+    const familyId = `variation_${pattern.pattern_id}`;
+    const safeHooks = pattern.variations
+      .map((variation) => String(variation?.hook || "").trim())
+      .filter(Boolean)
+      .filter(isAllowedHook);
+
+    if (safeHooks.length === 0) continue;
+    if (!familyIds.has(familyId)) {
+      merged.hook_families.push({
+        id: familyId,
+        source_excerpt: pattern.source?.source_excerpt || pattern.pattern_id,
+        source_signal: pattern.source?.visible_signal || "variation bank",
+        source_url: pattern.source?.source_url || variationBankPath,
+        mechanism: pattern.mechanism || "source-backed variation",
+        problem_types: pattern.problem_types || [],
+        safe_hook_shapes: safeHooks.slice(0, 5)
+      });
+      familyIds.add(familyId);
+    }
+
+    for (const problemType of pattern.problem_types || []) {
+      if (!merged.problem_type_packs[problemType]) {
+        merged.problem_type_packs[problemType] = {
+          preferred_hooks: [],
+          preferred_hook_family_ids: []
+        };
+      }
+      if (!hooksByProblemType.has(problemType)) hooksByProblemType.set(problemType, []);
+      for (const hook of safeHooks) {
+        hooksByProblemType.get(problemType).push({ text: hook, source_family_id: familyId });
+      }
+    }
+  }
+
+  for (const [problemType, hooks] of hooksByProblemType.entries()) {
+    const pack = merged.problem_type_packs[problemType];
+    pack.preferred_hooks ||= [];
+    pack.preferred_hook_family_ids ||= [];
+    const existingHooks = new Set(pack.preferred_hooks.map((entry) => hookKey(entry.text)));
+    const existingFamilies = new Set(pack.preferred_hook_family_ids);
+
+    for (const hook of hooks) {
+      if (existingHooks.has(hookKey(hook.text))) continue;
+      pack.preferred_hooks.push(hook);
+      existingHooks.add(hookKey(hook.text));
+      if (!existingFamilies.has(hook.source_family_id)) {
+        pack.preferred_hook_family_ids.push(hook.source_family_id);
+        existingFamilies.add(hook.source_family_id);
+      }
+    }
+  }
+
+  return merged;
 }
 
 function bankHooksForProblem(problem, textBank, avoidHookKeys = null) {
@@ -699,6 +887,66 @@ function bestTikTokHookForProblem(problem, core, textBank = null, avoidHookKeys 
   return candidates[0] || fallback;
 }
 
+function problemSpecificHookVariants(problem, core) {
+  const type = problem.problem_type;
+  const topic = core.simple_topic || core.topic || "running";
+  const byType = {
+    "easy-run pace drift": [
+      "Why minute 3 changes easy runs",
+      "Your easy pace is not embarrassing",
+      "I still start easy runs too fast",
+      "The 10-minute easy run trap"
+    ],
+    "zone-2 confusion": [
+      "5 zone 2 lies runners believe",
+      "Zone 2 should feel boring",
+      "Your easy pace is not embarrassing",
+      "I still run zone 2 too fast"
+    ],
+    "heart-rate panic": [
+      "Why 176 bpm can lie",
+      "Your heart rate is not failure",
+      "I still panic at high heart rate",
+      "The first 10 minutes can lie"
+    ],
+    "beginner uncertainty": [
+      "Why minute 1 feels like failure",
+      "The 10-minute rule beginners need",
+      "Your first run is not a test",
+      "I still take walk breaks"
+    ],
+    "watch-checking anxiety": [
+      "Your watch is not the coach",
+      "Stop judging minute 1",
+      "I still check my watch too much",
+      "One split does not know the run"
+    ],
+    "pace disbelief": [
+      "Your pace is not embarrassing",
+      "I still run slower than planned",
+      "Why slow pace can be right",
+      "The first split can lie"
+    ]
+  };
+
+  return (byType[type] || [
+    `One number is not ${topic}`,
+    `Your ${topic} is not a test`
+  ])
+    .map((hook) => hook.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .slice(0, 4);
+}
+
+function hookSourceRankingBoost(source) {
+  if (source === "problem_content_angle" || source === "problem_exact_words") return 5;
+  if (source === "problem_specific_hook_variant") return 4;
+  if (source === "tiktok_text_bank") return 3;
+  if (source === "problem_type_default") return 2;
+  if (source === "viral_format_pattern") return 1;
+  return 0;
+}
+
 function scoredHookCandidatesForProblem(problem, core, textBank = null, avoidHookKeys = null) {
   const bankHooks = bankHooksForProblem(problem, textBank, avoidHookKeys).map((entry) => hookSourceEntry(entry.hook, {
     source: "tiktok_text_bank",
@@ -712,6 +960,10 @@ function scoredHookCandidatesForProblem(problem, core, textBank = null, avoidHoo
     ...bankHooks,
     hookSourceEntry(problem.content_angle, { source: "problem_content_angle" }),
     hookSourceEntry(problem.exact_words, { source: "problem_exact_words" }),
+    ...problemSpecificHookVariants(problem, core).map((hook) => hookSourceEntry(hook, {
+      source: "problem_specific_hook_variant",
+      why_it_works: "adds a concrete number, first-person confession, or direct-address contradiction for stronger curiosity without leaving the runner problem"
+    })),
     hookSourceEntry(fallback, { source: "problem_type_default" }),
     ...TIKTOK_NATIVE_HOOK_PATTERNS.map((pattern, index) => hookSourceEntry(fillTikTokPattern(pattern, core, index), {
       source: "viral_format_pattern",
@@ -749,7 +1001,9 @@ function scoredHookCandidatesForProblem(problem, core, textBank = null, avoidHoo
       };
     })
     .sort((left, right) => {
-      if (right.score !== left.score) return right.score - left.score;
+      const leftRank = left.score + hookSourceRankingBoost(left.source);
+      const rightRank = right.score + hookSourceRankingBoost(right.source);
+      if (rightRank !== leftRank) return rightRank - leftRank;
       const leftBank = left.source === "tiktok_text_bank" ? 1 : 0;
       const rightBank = right.source === "tiktok_text_bank" ? 1 : 0;
       if (rightBank !== leftBank) return rightBank - leftBank;
@@ -815,18 +1069,26 @@ async function existingHookKeysFromPacks(packRoot) {
       const manifestPath = path.join(packRoot, entry.name, "render-manifest.json");
       const manifest = await readOptionalJson(manifestPath, null);
       if (!manifest) continue;
-      const hook = manifest.hook
-        || manifest.hook_text
-        || manifest.slideshow?.hook
-        || manifest.slides?.find((slide) => slide.role === "hook")?.text
-        || manifest.slides?.[0]?.text
-        || null;
-      const key = hookKey(hook);
-      if (key) keys.add(key);
-    }
-  } catch (error) {
-    if (error.code === "ENOENT") return keys;
-    throw error;
+	      const hook = manifest.hook
+	        || manifest.hook_text
+	        || manifest.slideshow?.hook
+	        || manifest.slides?.find((slide) => slide.role === "hook")?.text
+	        || manifest.slides?.[0]?.text
+	        || null;
+	      const hookAliases = []
+	        .concat(manifest.hook_aliases || [])
+	        .concat(manifest.dedupe_hooks || [])
+	        .filter(Boolean);
+	      const key = hookKey(hook);
+	      if (key) keys.add(key);
+	      for (const alias of hookAliases) {
+	        const aliasKey = hookKey(alias);
+	        if (aliasKey) keys.add(aliasKey);
+	      }
+	    }
+	  } catch (error) {
+	    if (error.code === "ENOENT") return keys;
+	    throw error;
   }
   return keys;
 }
@@ -854,6 +1116,527 @@ async function existingSlideSetIdsFromPacks(packRoot) {
   return ids;
 }
 
+function normalizeCoreSlideCopy(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[“”"']/g, "")
+    .replace(/[.!?]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function coreSlideCopyFromSlides(slides) {
+  return (slides || [])
+    .filter((slide) => slide.slide_number >= 2 && slide.slide_number <= 6)
+    .map((slide) => normalizeCoreSlideCopy(slide.text))
+    .filter(Boolean);
+}
+
+async function existingCoreSlideCopySetsFromPacks(packRoot) {
+  const sets = [];
+  try {
+    const entries = await fs.readdir(packRoot, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const packDir = path.join(packRoot, entry.name);
+      const manifest = await readOptionalJson(path.join(packDir, "render-manifest.json"), null)
+        || await readOptionalJson(path.join(packDir, "source", "slideshow.json"), null);
+      if (!manifest?.slides?.length) continue;
+      const lines = coreSlideCopyFromSlides(manifest.slides);
+      if (lines.length < 4) continue;
+      sets.push({
+        slideshow_id: entry.name,
+        lines,
+        line_set: new Set(lines),
+        signature: lines.join(" | ")
+      });
+    }
+  } catch (error) {
+    if (error.code === "ENOENT") return sets;
+    throw error;
+  }
+  return sets;
+}
+
+function dateFromPackName(name) {
+  const match = String(name || "").match(/^(\d{4}-\d{2}-\d{2})/);
+  if (!match) return null;
+  const date = new Date(`${match[1]}T00:00:00.000Z`);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function normalizeAccountProfile(value) {
+  const text = String(value || "").toLowerCase().trim();
+  if (!text) return "main";
+  if (text.includes("watch") || text.includes("runwatch")) return "watch";
+  if (text.includes("main") || text.includes("everyday")) return "main";
+  return text;
+}
+
+function accountProfilesFromMetadata(manifest, schedule) {
+  const profiles = new Set();
+  const pushProfile = (value) => {
+    if (value === null || value === undefined) return;
+    profiles.add(normalizeAccountProfile(value));
+  };
+
+  pushProfile(manifest?.tiktok_account_profile?.profile);
+  pushProfile(manifest?.tiktok_account_profile);
+  pushProfile(manifest?.account_profile);
+  pushProfile(manifest?.account);
+  for (const account of schedule?.schedule_policy?.accounts || []) {
+    pushProfile(account?.account_profile);
+    pushProfile(account?.profile);
+  }
+  for (const account of schedule?.accounts || []) {
+    pushProfile(account?.account_profile);
+    pushProfile(account?.profile);
+  }
+
+  return profiles;
+}
+
+async function recentFormatUsageFromPacks(packRoot, { date, accountProfile = "main", windowDays = 5 } = {}) {
+  const usage = {
+    account_profile: normalizeAccountProfile(accountProfile),
+    window_days: windowDays,
+    schemaCounts: new Map(),
+    formatCounts: new Map(),
+    entries: []
+  };
+  const referenceDate = dateFromPackName(date) || new Date();
+  const windowMs = windowDays * 24 * 60 * 60 * 1000;
+
+  try {
+    const entries = await fs.readdir(packRoot, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const packDate = dateFromPackName(entry.name);
+      if (packDate) {
+        const ageMs = referenceDate.getTime() - packDate.getTime();
+        if (ageMs < 0 || ageMs >= windowMs) continue;
+      }
+
+      const packDir = path.join(packRoot, entry.name);
+      const manifest = await readOptionalJson(path.join(packDir, "render-manifest.json"), null);
+      if (!manifest) continue;
+      if (!packDate) {
+        const stat = await fs.stat(path.join(packDir, "render-manifest.json"));
+        const ageMs = referenceDate.getTime() - stat.mtimeMs;
+        if (ageMs < 0 || ageMs >= windowMs) continue;
+      }
+
+      const schedule = await readOptionalJson(path.join(packDir, "postiz-schedule.json"), null);
+      const profiles = accountProfilesFromMetadata(manifest, schedule);
+      if (profiles.size > 0 && !profiles.has(usage.account_profile)) continue;
+
+      const schema = manifest.schema || manifest.schema_id || null;
+      const formatId = manifest.format_id || manifest.formatId || schema || null;
+      if (!schema && !formatId) continue;
+      if (schema) usage.schemaCounts.set(schema, (usage.schemaCounts.get(schema) || 0) + 1);
+      if (formatId) usage.formatCounts.set(formatId, (usage.formatCounts.get(formatId) || 0) + 1);
+      usage.entries.push({
+        pack: entry.name,
+        schema,
+        format_id: formatId,
+        account_profiles: [...profiles]
+      });
+    }
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+
+  return usage;
+}
+
+function candidateSelectionKey(candidate) {
+  return [candidate.problem_id, candidate.hook, candidate.schema, candidate.format_id].filter(Boolean).join("|");
+}
+
+function selectWithFormatCooldown(candidates, { limit, disabled = false } = {}) {
+  if (disabled) return candidates.slice(0, limit);
+  const selected = [];
+  const selectedKeys = new Set();
+  const selectedFormats = new Set();
+  const pushCandidate = (candidate, fallbackMeta = null) => {
+    const key = candidateSelectionKey(candidate);
+    if (selectedKeys.has(key)) return false;
+    selectedKeys.add(key);
+    const formatId = candidate.format_id || candidate.schema || "unknown";
+    selectedFormats.add(formatId);
+    selected.push(fallbackMeta
+      ? {
+          ...candidate,
+          format_cooldown: {
+            ...(candidate.format_cooldown || {}),
+            fallback_used: true,
+            fallback_reason: fallbackMeta
+          }
+        }
+      : candidate);
+    return selected.length >= limit;
+  };
+
+  for (const candidate of candidates) {
+    const formatId = candidate.format_id || candidate.schema || "unknown";
+    if ((candidate.format_cooldown?.recent_count || 0) > 0) continue;
+    if (selectedFormats.has(formatId)) continue;
+    if (pushCandidate(candidate)) return selected;
+  }
+
+  for (const candidate of candidates) {
+    if (pushCandidate(candidate, "insufficient fresh format families after cooldown")) return selected;
+  }
+
+  return selected;
+}
+
+function duplicateSlideCopyMatch(slides, existingCoreSlideCopySets) {
+  const lines = coreSlideCopyFromSlides(slides);
+  if (lines.length < 4) return null;
+  const signature = lines.join(" | ");
+  for (const existing of existingCoreSlideCopySets || []) {
+    const shared = lines.filter((line) => existing.line_set.has(line));
+    if (signature === existing.signature || shared.length >= 4) {
+      return {
+        slideshow_id: existing.slideshow_id,
+        shared_lines: shared
+      };
+    }
+  }
+  return null;
+}
+
+function freshCopyVariantsForProblem(problem, core) {
+  const fallback = [
+    [
+      "Start with the purpose of the run.",
+      "Let the first ten minutes settle.",
+      "Adjust for hills, heat, and fatigue.",
+      "Controlled beats impressive.",
+      core.coachi_connection
+    ],
+    [
+      "One run does not need to prove fitness.",
+      "Your body changes day to day.",
+      "Use the number as context.",
+      "Keep the session repeatable.",
+      core.coachi_connection
+    ]
+  ];
+
+  const byType = {
+    "comparison spiral": [
+      [
+        "Someone else's easy pace is not yours.",
+        "Different body. Different route. Different week.",
+        "Copy the patience, not the split.",
+        "The win is finishing controlled.",
+        "Coachi keeps the run focused on your effort."
+      ],
+      [
+        "Fast runners make slow look fake.",
+        "That does not mean your pace is wrong.",
+        "Your easy day should fit your body.",
+        "Progress starts with repeatable runs.",
+        "Coachi helps you run your session, not theirs."
+      ]
+    ],
+    "easy-run form breakdown": [
+      [
+        "Form falls apart when easy gets rushed.",
+        "Shorter steps usually fix more than force.",
+        "Relax the shoulders before chasing cadence.",
+        "Smooth beats fast on easy days.",
+        "Coachi nudges the run back before it turns messy."
+      ],
+      [
+        "Your stride changes when you panic.",
+        "Back off before fixing everything.",
+        "Let breathing and rhythm settle first.",
+        "Easy form should feel boring.",
+        "Coachi helps keep the effort calm while you run."
+      ]
+    ],
+    "easy-run expectation mismatch": [
+      [
+        "Easy often fails before it feels hard.",
+        "The first few minutes can feel fine.",
+        "Then breathing slowly creeps up.",
+        "Set the ceiling before the run drifts.",
+        "Coachi speaks up while there is still time to adjust."
+      ],
+      [
+        "Easy is not one fixed pace.",
+        "Heat, hills, sleep, and fatigue move the line.",
+        "The goal is a repeatable effort.",
+        "Back off before it becomes work.",
+        "Coachi helps keep easy days honest in real time."
+      ],
+      [
+        "A controlled run can still feel too slow.",
+        "That does not make it wasted.",
+        "The point is finishing with room left.",
+        "Save the proof for hard days.",
+        "Coachi helps protect the purpose of the session."
+      ]
+    ],
+    "heart-rate panic": [
+      [
+        "A high number is not always a bad run.",
+        "Heat, hills, sleep, and stress all push it up.",
+        "Look for the trend, not one spike.",
+        "Slow down before you judge the session.",
+        "Coachi keeps the run focused before the number takes over."
+      ],
+      [
+        "Heart rate can lag behind how you feel.",
+        "The first minutes are noisy.",
+        "Do not let one spike rewrite the whole run.",
+        "Control the effort first.",
+        "Coachi helps turn the signal into a next step."
+      ]
+    ],
+    "watch-checking anxiety": [
+      [
+        "Checking more does not make the run easier.",
+        "It usually makes every number feel urgent.",
+        "Pick a ceiling before you start.",
+        "Then let the run breathe.",
+        "Coachi speaks up so you can stop staring down."
+      ],
+      [
+        "Your watch should not become the coach.",
+        "Numbers help when they are timed well.",
+        "Too many checks turn easy into stress.",
+        "Use reminders, not constant panic.",
+        "Coachi keeps the watch from taking over."
+      ]
+    ],
+    "data-without-coaching": [
+      [
+        "More screens can make the run less clear.",
+        "The hard part is knowing what to change.",
+        "Pick one signal for today's run.",
+        "The next decision matters most.",
+        "Coachi turns live numbers into simple voice guidance."
+      ],
+      [
+        "A watch can show the problem late.",
+        "Coaching should catch it while you run.",
+        "Pace and heart rate need context.",
+        "The screen should not make every choice.",
+        "Coachi gives the next step without another watch check."
+      ],
+      [
+        "Numbers are useful when they lead somewhere.",
+        "They are stressful when they just pile up.",
+        "Pick the signal for today's run.",
+        "Ignore the rest until the session is done.",
+        "Coachi keeps the focus on the cue that matters now."
+      ]
+    ],
+    "metric setup confusion": [
+      [
+        "Zone charts are not magic.",
+        "Different watches use different assumptions.",
+        "Your effort still matters.",
+        "Use zones as guardrails, not judgment.",
+        "Coachi keeps the zone simple while you move."
+      ],
+      [
+        "The setting matters before the workout starts.",
+        "Bad setup creates noisy decisions.",
+        "Check the sensor, zone, or alert first.",
+        "Then let the run stay simple.",
+        "Coachi works best when live heart rate is clean."
+      ],
+      [
+        "A beep is not the same as coaching.",
+        "It tells you something changed.",
+        "It does not always tell you what to do.",
+        "Make the action clear before you run.",
+        "Coachi adds the missing next step."
+      ]
+    ],
+    "watch-buying confusion": [
+      [
+        "The best watch is not always the biggest spec sheet.",
+        "Buttons matter when hands are sweaty.",
+        "Comfort matters after the first mile.",
+        "Battery only matters for the runs you do.",
+        "Coachi can guide the run on top of the watch you actually use."
+      ],
+      [
+        "Start with your real training week.",
+        "Short easy runs need different features than ultras.",
+        "A watch should reduce friction.",
+        "If it adds stress, it is not helping.",
+        "Coachi keeps the coaching layer simple across live heart-rate devices."
+      ],
+      [
+        "Garmin, Apple Watch, and Fitbit all have tradeoffs.",
+        "No watch removes the need for judgment.",
+        "Pick the one you will wear consistently.",
+        "Then make the training decisions simpler.",
+        "Coachi turns the live signal into a cue while you run."
+      ]
+    ],
+    "zone-2 confusion": [
+      [
+        "Zone 2 often feels too slow at first.",
+        "That does not mean you are doing it wrong.",
+        "The goal is repeatable effort.",
+        "Save the fight for hard days.",
+        "Coachi helps you stay honest without staring at zones."
+      ],
+      [
+        "The awkward pace is usually the point.",
+        "You are teaching control, not proving speed.",
+        "If it feels too easy, hold it there.",
+        "That is where consistency gets built.",
+        "Coachi keeps the easy day from drifting."
+      ]
+    ],
+    "easy-run pace drift": [
+      [
+        "Easy runs usually break one small push at a time.",
+        "The first surge feels harmless.",
+        "Then the whole run gets louder.",
+        "Keep the ceiling early.",
+        "Coachi speaks up before easy becomes work."
+      ],
+      [
+        "You do not notice the drift until it is too late.",
+        "A little faster becomes a different session.",
+        "Hold back while it still feels easy.",
+        "That is how the next run stays possible.",
+        "Coachi helps catch the drift in real time."
+      ],
+      [
+        "Recovery runs can still tempt you.",
+        "Fresh legs are not the goal.",
+        "The ceiling matters before the pace does.",
+        "Finish like tomorrow still exists.",
+        "Coachi helps protect the easy effort."
+      ],
+      [
+        "The drift starts before it feels hard.",
+        "A small push changes the whole session.",
+        "Hold the line while breathing is calm.",
+        "That is the easy-day skill.",
+        "That is why I built Coachi for live easy-run nudges."
+      ]
+    ],
+    "pace disbelief": [
+      [
+        "Pace is not the same signal every day.",
+        "Wind, hills, surface, and fatigue change it.",
+        "A slower split can still be the right run.",
+        "Judge the session by control.",
+        "Coachi adds context before one pace number wins."
+      ],
+      [
+        "The watch shows pace. It misses context.",
+        "A climb can make easy look slow.",
+        "A tired day can do the same.",
+        "Stay with the effort you planned.",
+        "Coachi helps you trust the right signal."
+      ],
+      [
+        "Minute one is messy data.",
+        "Your body is not fully online yet.",
+        "Let breathing settle before judging pace.",
+        "The first split should not run the day.",
+        "Coachi keeps the start from becoming a test."
+      ],
+      [
+        "Hills make pace look worse than effort.",
+        "That does not mean the run failed.",
+        "Use the climb as context.",
+        "Keep the session controlled.",
+        "Coachi helps you avoid chasing distorted splits."
+      ]
+    ],
+    "workout-racing": [
+      [
+        "A workout is not a race in disguise.",
+        "The target exists for a reason.",
+        "Too hard early steals the last reps.",
+        "Finish with control.",
+        "Coachi keeps the session inside the plan."
+      ],
+      [
+        "Hard days still need restraint.",
+        "The first rep should not decide the workout.",
+        "Keep enough room to finish well.",
+        "That is better training than surviving.",
+        "Coachi helps pace the work while it is happening."
+      ]
+    ],
+    "beginner uncertainty": [
+      [
+        "Beginner progress is not always faster pace.",
+        "Sometimes it is less panic.",
+        "Sometimes it is finishing calmer.",
+        "That still counts.",
+        "Coachi makes the next run easier to understand."
+      ],
+      [
+        "You are not behind because running feels hard.",
+        "Most people start too fast.",
+        "Slow enough to repeat it.",
+        "That is the beginner win.",
+        "Coachi helps keep the run simple while you build."
+      ]
+    ]
+  };
+
+  return byType[problem.problem_type] || fallback;
+}
+
+function deckFromFreshLines(bestHook, lines, core) {
+  const safeLines = [...lines];
+  while (safeLines.length < 5) safeLines.push(core.coachi_connection);
+  return [
+    { slide_number: 1, role: "hook", text: bestHook },
+    { slide_number: 2, role: "setup", text: safeLines[0] },
+    { slide_number: 3, role: "value", text: safeLines[1] },
+    { slide_number: 4, role: "value", text: safeLines[2] },
+    { slide_number: 5, role: "value", text: safeLines[3] },
+    { slide_number: 6, role: "coachi_connection", text: safeLines[4] },
+    { slide_number: 7, role: "cta", text: core.cta }
+  ];
+}
+
+function freshenDuplicateSlideCopy({ problem, bestHook, existingCoreSlideCopySets }) {
+  if (!existingCoreSlideCopySets?.length) return null;
+  const core = coreIdeaForProblem(problem);
+  core.simple_topic = SIMPLE_TOPIC_BY_TYPE[problem.problem_type] || core.topic;
+  const variants = freshCopyVariantsForProblem(problem, core);
+  const seed = hashString([problem.id, bestHook, problem.exact_words].filter(Boolean).join("|"));
+  const ordered = variants
+    .map((variant, index) => ({ variant, index }))
+    .sort((left, right) => ((left.index + seed) % variants.length) - ((right.index + seed) % variants.length));
+
+  for (const entry of ordered) {
+    const deck = deckFromFreshLines(bestHook, entry.variant, core);
+    const duplicateMatch = duplicateSlideCopyMatch(deck, existingCoreSlideCopySets);
+    if (!duplicateMatch) {
+      return {
+        slideshow: deck,
+        copy_freshness: {
+          repaired_duplicate_core_copy: true,
+          rewrite_source: "coachi_deterministic_runner_copy_v1",
+          variant_index: entry.index
+        }
+      };
+    }
+  }
+
+  return null;
+}
+
 async function postedHookKeysFromRegistry(filePath) {
   const keys = new Set();
   const registry = await readOptionalJson(filePath, null);
@@ -867,30 +1650,27 @@ async function postedHookKeysFromRegistry(filePath) {
 }
 
 function topFivePointsForProblem(problem, core) {
-  const sourcedPoints = sourcedTopFivePoints(problem);
-  if (sourcedPoints) return sourcedPoints;
-
   const byType = {
     "heart-rate panic": [
-      "1. Running easy days too fast.",
-      "2. Trusting default zones.",
-      "3. Refusing walk breaks.",
-      "4. Chasing a pace that feels better.",
-      "5. Calling medium-hard easy."
+      "1. Trusting the first spike.",
+      "2. Calling 176 bpm failure.",
+      "3. Ignoring heat and sleep.",
+      "4. Chasing pace to calm down.",
+      "5. Forgetting effort is the signal."
     ],
     "easy-run pace drift": [
-      "1. Starting slightly too fast.",
-      "2. Surging on small hills.",
-      "3. Chasing yesterday's pace.",
-      "4. Letting ego choose effort.",
-      "5. Calling medium-hard easy."
+      "1. Trusting minute one. It always lies.",
+      "2. Racing the first split. The run pays later.",
+      "3. Calling 150 bpm easy because pace looked slow.",
+      "4. Speeding up when breathing still feels fine.",
+      "5. Finishing empty. Easy means repeatable tomorrow."
     ],
     "zone-2 confusion": [
-      "1. Treating the zone as a verdict.",
-      "2. Refusing to slow down.",
-      "3. Fighting walk breaks.",
-      "4. Ignoring heat and hills.",
-      "5. Forgetting the goal is easy."
+      "1. Treating zone 2 as a verdict.",
+      "2. Refusing the pace that feels embarrassing.",
+      "3. Fighting walk breaks too early.",
+      "4. Ignoring hills, heat, and fatigue.",
+      "5. Forgetting boring is the goal."
     ],
     "workout-racing": [
       "1. Winning the first rep.",
@@ -915,7 +1695,12 @@ function topFivePointsForProblem(problem, core) {
     ]
   };
 
-  return byType[problem.problem_type] || [
+  if (byType[problem.problem_type]) return byType[problem.problem_type];
+
+  const sourcedPoints = sourcedTopFivePoints(problem);
+  if (sourcedPoints) return sourcedPoints;
+
+  return [
     `1. Overthinking ${core.topic}.`,
     "2. Chasing the wrong signal.",
     "3. Ignoring context.",
@@ -933,6 +1718,7 @@ function provenSlideSetForProblem(problem, textBank, copyDedupe = {}) {
 
   const avoidSlideSetIds = copyDedupe.avoidSlideSetIds || new Set();
   const freshSlideSets = slideSets.filter((slideSet) => !avoidSlideSetIds.has(slideSet.id));
+  if (freshSlideSets.length === 0 && avoidSlideSetIds.size > 0) return null;
   const candidates = freshSlideSets.length > 0 ? freshSlideSets : slideSets;
   const seed = [
     problem.id,
@@ -1078,6 +1864,8 @@ function viralHookPackForProblem(problem, textBank = null, avoidHookKeys = null,
     hook_source_rule: "Use the source-backed TikTok slideshow text bank first; fall back to observed hook pattern docs only when no bank fit exists.",
     hook_sources: VIRAL_TIKTOK_HOOK_SOURCES,
     tiktok_text_bank: textBank ? DEFAULT_TIKTOK_TEXT_BANK_PATH : null,
+    hook_variation_bank: textBank?._hook_variation_bank_path || null,
+    hook_variation_bank_summary: textBank?._hook_variation_bank_summary || null,
     hook_source: selectedHook,
     slide_text_source: selectedSlideSet
       ? {
@@ -1122,14 +1910,191 @@ function viralHookPackForProblem(problem, textBank = null, avoidHookKeys = null,
   };
 }
 
-function slideDraftForProblem(problem, schemaName, viralPack = null) {
-  if (viralPack?.slideshow?.length) {
-    return viralPack.slideshow.map((slide) => slide.text);
-  }
+function hookForDraft(problem, viralPack) {
+  return viralPack?.best_hook
+    || viralPack?.slideshow?.find((slide) => slide.role === "hook")?.text
+    || viralPack?.slideshow?.[0]?.text
+    || hookForProblem(problem);
+}
 
+function feltArcLinesForProblem(problem, core) {
+  const byType = {
+    "easy-run pace drift": [
+      "Minute one always feels easier than it is.",
+      "The run pays for that split later.",
+      "Start slower than pride wants.",
+      "Hold back before breathing changes.",
+      "Coachi nudges me before easy stops being easy."
+    ],
+    "heart-rate panic": [
+      "The first spike can feel like proof you failed.",
+      "Panic turns an easy run into a test.",
+      "Give the first 10 minutes context.",
+      "Slow down before the watch scares you.",
+      "Coachi keeps one number from running the run."
+    ],
+    "zone-2 confusion": [
+      "Zone 2 can feel embarrassingly slow.",
+      "Forcing pace quietly turns it into zone 3.",
+      "Let boring effort be the target.",
+      "Use walk breaks before you need them.",
+      "Coachi tells me when easy stops being easy."
+    ],
+    "beginner uncertainty": [
+      "Minute one can feel like a verdict.",
+      "Forcing nonstop turns practice into dread.",
+      "Start with time, not ego.",
+      "Walk before the run falls apart.",
+      "Coachi keeps the next run feeling possible."
+    ],
+    "watch-checking anxiety": [
+      "One glance can change the whole run.",
+      "Checking too often makes effort feel wrong.",
+      "Pick a ceiling before you start.",
+      "Let the run settle before judging it.",
+      "Coachi gives me a guardrail without the spiral."
+    ],
+    "pace disbelief": [
+      "Slow pace can feel embarrassing.",
+      "Chasing the old split makes easy hard.",
+      "Let route and fatigue explain the number.",
+      "Run the effort you can repeat tomorrow.",
+      "Coachi coaches the run, not one split."
+    ],
+    "data-without-coaching": [
+      "The number arrives without an explanation.",
+      "More data can create more second-guessing.",
+      "Ask what changed before judging the run.",
+      "Use the metric as context, not a verdict.",
+      "Coachi turns the signal into a next step."
+    ]
+  };
+
+  return byType[problem.problem_type] || [
+    core.setup,
+    "The hidden cost is overcorrecting mid-run.",
+    "Change one behavior on the next run.",
+    "Keep the session repeatable.",
+    core.coachi_connection
+  ];
+}
+
+function mythTruthSlideDraft(problem, core, hook) {
+  const topic = core.topic || "running";
+  const byType = {
+    "zone-2 confusion": [
+      "Myth: Zone 2 means one perfect pace.\nTruth: Effort moves day to day.",
+      "Myth: Walking ruins the run.\nTruth: Control is the point.",
+      "Myth: Slow means unfit.\nTruth: Slow can be correct.",
+      "Myth: The watch always knows.\nTruth: Context still matters.",
+      "Coachi treats the zone like a guardrail."
+    ],
+    "heart-rate panic": [
+      "Myth: 176 bpm means failure.\nTruth: First spikes need context.",
+      "Myth: High HR ruins easy.\nTruth: Effort decides the day.",
+      "Myth: Pace fixes panic.\nTruth: Slowing early fixes more.",
+      "Myth: One number is truth.\nTruth: Heat and sleep matter.",
+      "Coachi keeps one spike from owning the run."
+    ]
+  };
+  const lines = byType[problem.problem_type] || [
+    `Myth: ${topic} is one number.\nTruth: The run needs context.`,
+    "Myth: Faster always means better.\nTruth: Repeatable beats impressive.",
+    "Myth: One bad split proves failure.\nTruth: The trend matters.",
+    "Myth: Easy should look fast.\nTruth: Easy should feel controlled.",
+    "Coachi turns the signal into guidance."
+  ];
+  return [
+    hook,
+    ...lines,
+    "Comment the myth you believed."
+  ];
+}
+
+function founderBuiltThisSlideDraft(problem, core, hook) {
+  return [
+    hook || "I built this because of one run",
+    "My easy run turned hard before I noticed.",
+    "The app gave numbers, not coaching.",
+    "So I built guidance during the run.",
+    "It is early. The feedback loop is real.",
+    "Tell me what your watch never explains.",
+    "Comment what your app misses."
+  ];
+}
+
+function beforeAfterSlideDraft(problem, core, hook) {
+  const lines = feltArcLinesForProblem(problem, core);
+  return [
+    hook || "Same runner. Two easy runs.",
+    `Without: ${lines[0].replace(/[.!?]+$/, "")}.`,
+    `Without: ${lines[1].replace(/[.!?]+$/, "")}.`,
+    `With: ${lines[2].replace(/[.!?]+$/, "")}.`,
+    `With: ${lines[3].replace(/[.!?]+$/, "")}.`,
+    "The difference is hearing it during the run.",
+    "Save this before your next easy run."
+  ];
+}
+
+function redditQuestionSlideDraft(problem, core, hook) {
+  const lines = feltArcLinesForProblem(problem, core);
+  return [
+    hook,
+    "You are not broken.",
+    lines[0],
+    lines[1],
+    lines[2],
+    "What number makes you second-guess the run?",
+    "Comment your confusing run signal."
+  ];
+}
+
+function appDemoProofSlideDraft(problem, core, hook) {
+  const lines = feltArcLinesForProblem(problem, core);
+  return [
+    hook || "What my AI coach said at minute 12",
+    "Your effort is drifting. Ease off now.",
+    lines[2] || "I slowed before the run got hard.",
+    "Keep this boring for five more minutes.",
+    lines[3] || "I finished like I could repeat it.",
+    "The useful part was hearing it during the run.",
+    "Comment the nudge you need mid-run."
+  ];
+}
+
+function feltArcSlideDraft(problem, core, hook) {
+  const lines = feltArcLinesForProblem(problem, core);
+  return [
+    hook,
+    lines[0],
+    lines[1],
+    lines[2],
+    lines[3],
+    lines[4],
+    core.cta || "Save this before your next run."
+  ];
+}
+
+function slideDraftForProblem(problem, schemaName, viralPack = null) {
+  const core = coreIdeaForProblem(problem);
+  core.simple_topic = SIMPLE_TOPIC_BY_TYPE[problem.problem_type] || core.topic;
+  const hook = hookForDraft(problem, viralPack);
+
+  if (schemaName === "top_5_mistakes_v1" || schemaName === "top_5_rules_v1") {
+    return [
+      hook,
+      ...topFivePointsForProblem(problem, core),
+      core.cta
+    ];
+  }
+  if (schemaName === "myth_vs_truth_v1") return mythTruthSlideDraft(problem, core, hook);
+  if (schemaName === "founder_built_this_v1") return founderBuiltThisSlideDraft(problem, core, hook);
+  if (schemaName === "before_after_coaching_v1") return beforeAfterSlideDraft(problem, core, hook);
+  if (schemaName === "reddit_question_v1") return redditQuestionSlideDraft(problem, core, hook);
+  if (schemaName === "app_demo_proof_v1") return appDemoProofSlideDraft(problem, core, hook);
   if (schemaName === "data_is_not_coaching_v1") {
     return [
-      hookForProblem(problem),
+      hook,
       "Your watch gives you numbers.",
       "It does not always tell you why.",
       "A coach asks what changed today.",
@@ -1141,48 +2106,17 @@ function slideDraftForProblem(problem, schemaName, viralPack = null) {
 
   if (schemaName === "beginner_confidence_reset_v1") {
     return [
-      hookForProblem(problem),
+      hook,
       "You think progress means faster every run.",
       "Early progress is usually control.",
       "That is why easy days turn hard.",
       "Your next run only needs patience.",
+      "Coachi keeps the next run feeling possible.",
       "Save this before your next easy run."
     ];
   }
 
-  if (problem.problem_type === "heart-rate panic") {
-    return [
-      hookForProblem(problem),
-      "You think high means failure.",
-      "Heat changes the number.",
-      "Stress changes it too.",
-      "The better signal is effort.",
-      "Coach the run, not the spike.",
-      "What throws you off more: pace or heart rate?"
-    ];
-  }
-
-  if (problem.problem_type === "easy-run pace drift") {
-    return [
-      hookForProblem(problem),
-      "You think easy stays easy.",
-      "Speeding up adds up.",
-      "Ego changes it too.",
-      "The better signal is control.",
-      "Win the run early.",
-      "What ruins easy days most: pace or patience?"
-    ];
-  }
-
-  return [
-    hookForProblem(problem),
-    "You think the number means truth.",
-    "Terrain changes the number.",
-    "Fatigue changes it too.",
-    "The better signal is effort.",
-    "Coach the run, not the split.",
-    "What throws you off most?"
-  ];
+  return feltArcSlideDraft(problem, core, hook);
 }
 
 function buildRecentTextIndex(text) {
@@ -1224,9 +2158,21 @@ async function main() {
   const schemas = await loadSchemas(schemasDir);
   const recentText = await readOptionalText("inputs/performance/WINNER_LIBRARY.md");
   const recentIndex = buildRecentTextIndex(recentText);
-  const tiktokTextBank = await readOptionalJson(args.get("--tiktok-text-bank") || DEFAULT_TIKTOK_TEXT_BANK_PATH, null);
+  const baseTikTokTextBank = await readOptionalJson(args.get("--tiktok-text-bank") || DEFAULT_TIKTOK_TEXT_BANK_PATH, null);
+  const hookVariationBankPath = args.get("--hook-variation-bank") || DEFAULT_TIKTOK_HOOK_VARIATION_BANK_PATH;
+  const hookVariationBank = flags.has("--disable-hook-variation-bank")
+    ? null
+    : await readOptionalJson(hookVariationBankPath, null);
+  const tiktokTextBank = mergeHookVariationBank(baseTikTokTextBank, hookVariationBank, hookVariationBankPath);
   const packsRoot = args.get("--existing-packs-root") || DEFAULT_EXISTING_PACKS_ROOT;
   const postedRegistryPath = args.get("--posted-registry") || DEFAULT_POSTED_SLIDESHOWS_PATH;
+  const accountProfile = normalizeAccountProfile(args.get("--tiktok-account") || args.get("--account") || "main");
+  const formatCooldownDays = Number(args.get("--format-cooldown-days") || 5);
+  const recentFormatUsage = await recentFormatUsageFromPacks(packsRoot, {
+    date,
+    accountProfile,
+    windowDays: formatCooldownDays
+  });
   const latestWorld = flags.has("--disable-world-rotation")
     ? null
     : await latestVisualWorldFromPacks(packsRoot);
@@ -1236,6 +2182,9 @@ async function main() {
   const avoidSlideSetIds = flags.has("--disable-slide-text-dedupe")
     ? new Set()
     : await existingSlideSetIdsFromPacks(packsRoot);
+  const existingCoreSlideCopySets = flags.has("--disable-slide-text-dedupe")
+    ? []
+    : await existingCoreSlideCopySetsFromPacks(packsRoot);
   const avoidHookKeys = flags.has("--disable-hook-dedupe")
     ? new Set()
     : new Set([
@@ -1245,16 +2194,42 @@ async function main() {
 
   assert(Array.isArray(problemsFile.problems), `${problemsPath}: missing problems array.`);
 
+  const redditHookSourcesEnabled = flags.has("--include-reddit-hook-sources")
+    || process.env.COACHI_INCLUDE_REDDIT_HOOK_SOURCES === "1";
+  const sourceProblems = redditHookSourcesEnabled
+    ? problemsFile.problems
+    : problemsFile.problems.filter((problem) => !isRedditHookSourceProblem(problem));
+  const redditHookSourcesFilteredCount = problemsFile.problems.length - sourceProblems.length;
   const usedHooks = new Set();
   const copyDedupe = { avoidSlideSetIds };
-  const candidates = problemsFile.problems
+  const workingSchemaCounts = new Map(recentFormatUsage.schemaCounts);
+  const allCandidates = sourceProblems
     .map((problem) => {
-      const schemaName = schemaForProblem(problem.problem_type);
+      const schemaName = schemaForProblem(problem, workingSchemaCounts);
+      workingSchemaCounts.set(schemaName, (workingSchemaCounts.get(schemaName) || 0) + 1);
       const schema = schemas.get(schemaName);
       assert(schema, `Missing schema ${schemaName}.`);
       const formatId = formatIdForProblem(problem, schemaName);
+      const recentFormatCount = recentFormatUsage.formatCounts.get(formatId) || 0;
       const viralPack = viralHookPackForProblem(problem, tiktokTextBank, avoidHookKeys, copyDedupe);
-      const slides = slideDraftForProblem(problem, schemaName, viralPack);
+      const originalSlides = slideDraftForProblem(problem, schemaName, viralPack);
+      const originalDraft = originalSlides.map((text, index) => ({
+        slide_number: index + 1,
+        role: viralPack.slideshow?.[index]?.role || schema.slides[index]?.role || "slide",
+        text
+      }));
+      const originalDuplicateMatch = duplicateSlideCopyMatch(originalDraft, existingCoreSlideCopySets);
+      const copyRepair = originalDuplicateMatch
+        ? freshenDuplicateSlideCopy({
+            problem,
+            bestHook: originalSlides[0],
+            existingCoreSlideCopySets
+          })
+        : null;
+      const finalDraft = copyRepair?.slideshow || originalDraft;
+      const finalSlideshow = finalDraft;
+      const finalDuplicateMatch = duplicateSlideCopyMatch(finalDraft, existingCoreSlideCopySets);
+      const slides = finalDraft.map((slide) => slide.text);
       const hook = slides[0];
       return {
         problem_id: problem.id,
@@ -1274,6 +2249,13 @@ async function main() {
         score: scoreProblem(problem),
         schema: schemaName,
         format_id: formatId,
+        format_cooldown: {
+          window_days: formatCooldownDays,
+          account_profile: accountProfile,
+          recent_count: recentFormatCount,
+          allowed: recentFormatCount === 0,
+          fallback_used: false
+        },
         format_catalog: DEFAULT_FORMAT_CATALOG_PATH,
         hook,
         hooks: viralPack.hooks,
@@ -1281,30 +2263,45 @@ async function main() {
         hook_candidates: viralPack.hook_candidates,
         selected_hook_quality: viralPack.selected_hook_quality,
         hook_source: viralPack.hook_source,
+        hook_variation_bank: viralPack.hook_variation_bank,
+        hook_variation_bank_summary: viralPack.hook_variation_bank_summary,
         slide_text_source: viralPack.slide_text_source,
         tiktok_text_bank: viralPack.tiktok_text_bank,
         recent_duplicate_risk: recentIndex.has(hook.toLowerCase()),
         why_this_can_work: viralPack.problem,
         product_angle: problem.product_angle,
-        slide_draft: slides.map((text, index) => ({
-          slide_number: index + 1,
-          role: viralPack.slideshow?.[index]?.role || schema.slides[index]?.role || "slide",
-          text
-        })),
-        slideshow: viralPack.slideshow,
+        slide_draft: finalDraft,
+        duplicate_slide_copy_match: finalDuplicateMatch,
+        original_duplicate_slide_copy_match: originalDuplicateMatch,
+        copy_freshness: copyRepair?.copy_freshness || {
+          repaired_duplicate_core_copy: false,
+          rewrite_source: null
+        },
+        slideshow: finalSlideshow,
         visual_mapping: viralPack.visual_mapping
       };
     })
-    .filter((candidate) => candidate.score >= minScore && !candidate.recent_duplicate_risk)
+    .filter((candidate) => candidate.score >= minScore)
+    .filter((candidate) => !candidate.duplicate_slide_copy_match)
     .filter((candidate) => candidate.selected_hook_quality?.passes_quality_gate === true)
-    .sort((left, right) => right.score - left.score)
+    .sort((left, right) => {
+      if (left.format_cooldown?.allowed !== right.format_cooldown?.allowed) {
+        return left.format_cooldown?.allowed ? -1 : 1;
+      }
+      if (right.score !== left.score) return right.score - left.score;
+      return (left.format_cooldown?.recent_count || 0) - (right.format_cooldown?.recent_count || 0);
+    })
     .filter((candidate) => {
       const key = candidate.hook.toLowerCase();
       if (usedHooks.has(key)) return false;
       usedHooks.add(key);
       return true;
-    })
-    .slice(0, limit)
+    });
+  const selectedCandidates = selectWithFormatCooldown(allCandidates, {
+    limit,
+    disabled: flags.has("--disable-format-cooldown")
+  });
+  const candidates = selectedCandidates
     .map((candidate, index) => {
       if (flags.has("--disable-world-rotation")) return candidate;
       return applyVisualWorldRotation(candidate, visualWorldAtOffset(rotationStartWorld, index), {
@@ -1316,7 +2313,23 @@ async function main() {
     generated_at: new Date().toISOString(),
     date,
     source_problem_file: problemsPath,
+    source_problem_count: problemsFile.problems.length,
+    reddit_hook_sources: {
+      enabled: redditHookSourcesEnabled,
+      filtered_count: redditHookSourcesFilteredCount,
+      opt_in_flag: "--include-reddit-hook-sources",
+      opt_in_env: "COACHI_INCLUDE_REDDIT_HOOK_SOURCES=1"
+    },
     format_catalog: DEFAULT_FORMAT_CATALOG_PATH,
+    format_diversity: {
+      cooldown_enabled: !flags.has("--disable-format-cooldown"),
+      window_days: formatCooldownDays,
+      account_profile: accountProfile,
+      recent_schema_counts: Object.fromEntries(recentFormatUsage.schemaCounts),
+      recent_format_counts: Object.fromEntries(recentFormatUsage.formatCounts),
+      recent_pack_count: recentFormatUsage.entries.length,
+      eligible_before_cooldown: allCandidates.length
+    },
     visual_world_rotation: flags.has("--disable-world-rotation")
       ? { enabled: false }
       : {
@@ -1324,6 +2337,8 @@ async function main() {
           order: VISUAL_WORLD_ROTATION,
           previous_world: latestWorld?.visual_world || null,
           previous_world_source: latestWorld?.file_path ? path.relative(process.cwd(), latestWorld.file_path) : null,
+          previous_world_status: latestWorld?.source_status || null,
+          previous_world_qa_report: latestWorld?.qa_report_path ? path.relative(process.cwd(), latestWorld.qa_report_path) : null,
           start_world: rotationStartWorld
         },
     rule: "Raw problem first. AI may rewrite only after the candidate comes from a sourced problem.",
