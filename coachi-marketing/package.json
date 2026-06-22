@@ -43,6 +43,7 @@
     "growth:preflight-approval-queue": "node scripts/preflight_approval_queue.mjs",
     "growth:appstore-readiness": "node scripts/appstore_campaign_readiness.mjs",
     "growth:audit-appstore-listing": "node scripts/audit_appstore_listing.mjs",
+    "growth:validate-appstore-metadata": "node scripts/validate_appstore_metadata_pack.mjs",
     "growth:log-appstore-result": "node scripts/log_appstore_campaign_result.mjs",
     "growth:recycle-winners": "node scripts/recycle_winners.mjs",
     "growth:weekly-batch": "node scripts/generate_weekly_batch.mjs",

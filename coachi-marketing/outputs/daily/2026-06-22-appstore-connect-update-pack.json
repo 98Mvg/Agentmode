@@ -1,0 +1,125 @@
+{
+  "created_at": "2026-06-22T22:55:00+02:00",
+  "app_id": "6760587172",
+  "objective": "Move Coachi toward 10,000 App Store downloads by improving App Store product-page conversion before scaling traffic.",
+  "public_actions_taken": 0,
+  "source_audit": "outputs/daily/2026-06-22-appstore-conversion-audit.md",
+  "apple_constraints": {
+    "name_max_characters": 30,
+    "subtitle_max_characters": 30,
+    "promotional_text_max_characters": 170,
+    "description_max_characters": 4000,
+    "keywords_max_bytes": 100,
+    "keyword_separator": "comma-separated, no spaces",
+    "notes": [
+      "Promotional text can be updated without submitting a new app version.",
+      "Name, subtitle, screenshots, keywords, and description should be prepared for the next App Store Connect version update.",
+      "Avoid duplicate keyword terms already present in app name, subtitle, or category."
+    ]
+  },
+  "current_listing_findings": {
+    "score": 43,
+    "grade": "conversion_risk",
+    "current_name": "Coachi: Voice fitness Coach",
+    "current_subtitle": "Voice Coaching by Heart Rate",
+    "us_rating_count": 0,
+    "norway_rating_count": 4,
+    "public_screenshot_count": 6,
+    "primary_risks": [
+      "Title casing reads unfinished.",
+      "Title and subtitle do not clearly claim running.",
+      "First copy is broader than the runner-led traffic promise.",
+      "US listing has no visible rating proof.",
+      "First screenshot leads with setup instead of live AI run coaching.",
+      "App Store Connect campaign provider token is still missing."
+    ]
+  },
+  "recommended_update": {
+    "locale": "en-US",
+    "name": "Coachi: AI Run Coach",
+    "subtitle": "Voice cues by heart rate",
+    "promotional_text": "New: clearer zones and smoother Apple Watch heart-rate connection. Get live voice cues during runs so you know when to slow down or hold steady.",
+    "keywords": "zone,watch,workout,training,intervals,pace,runner,cardio,feedback,bpm,effort,tempo,beginner",
+    "description": "Coachi is an AI run coach that gives you live voice guidance during your run, using heart rate and workout context to tell you when to slow down, hold steady, or recover.\n\nIt is built for runners who want Apple Watch and iPhone guidance while the run is still happening, not another chart after it is over.\n\nWhy runners use Coachi:\n- Hear real-time cues instead of staring at your watch\n- Stay closer to the right heart-rate zone on easy runs and workouts\n- Build timed runs, free runs, and intervals in seconds\n- Connect Apple Watch or a supported heart-rate monitor\n- Choose coach voices that fit how you like to train\n- Review Coachi Score after each workout to see what went well and what to improve\n\nCoachi is for runners who want simple guidance before a run turns too hard. It helps you keep easy runs easy, control intervals, and understand your training without needing to interpret every number alone.",
+    "screenshot_sequence": [
+      {
+        "position": 1,
+        "headline": "Live AI run coaching",
+        "support": "Hear when to slow down, hold steady, or recover.",
+        "visual_direction": "Runner in motion with iPhone and Apple Watch visible; show active workout voice cue, not setup.",
+        "reason": "Fixes the current first screenshot, which leads with setup instead of the core conversion promise."
+      },
+      {
+        "position": 2,
+        "headline": "Heart-rate cues mid-run",
+        "support": "Stay in the right zone without staring at your watch.",
+        "visual_direction": "Apple Watch heart-rate context plus iPhone run screen; cue appears while workout is active.",
+        "reason": "Matches TikTok/Reddit traffic that cares about HR confusion and zone control."
+      },
+      {
+        "position": 3,
+        "headline": "Easy should stay easy",
+        "support": "Catch effort drift before the run turns hard.",
+        "visual_direction": "Zone drift or pace/heart-rate contrast, framed as a calm correction.",
+        "reason": "Makes the emotional runner problem concrete instead of listing generic features."
+      },
+      {
+        "position": 4,
+        "headline": "Build the run in seconds",
+        "support": "Timed runs, free runs, intervals, and zone targets.",
+        "visual_direction": "Workout setup screen, but after live coaching and HR value have been established.",
+        "reason": "Setup is useful, but it should not be screenshot 1."
+      },
+      {
+        "position": 5,
+        "headline": "Post-run Coachi Score",
+        "support": "See what worked and what to improve next.",
+        "visual_direction": "Post-run summary with Coachi Score and one clear coaching takeaway.",
+        "reason": "Shows coaching after the workout without making Coachi look like only a tracker."
+      },
+      {
+        "position": 6,
+        "headline": "Share the result",
+        "support": "Keep the workout story clear after the run.",
+        "visual_direction": "Share card or workout result, cleaner and less stock-like than current group-running frame.",
+        "reason": "Keeps social proof last, after the buyer understands the product."
+      }
+    ]
+  },
+  "secondary_variants": {
+    "name": [
+      "Coachi: Voice Run Coach",
+      "Coachi: Heart Rate Coach",
+      "Coachi: AI Running Coach"
+    ],
+    "subtitle": [
+      "Live cues for easier runs",
+      "Run in the right zone",
+      "Heart-rate coaching"
+    ],
+    "promotional_text": [
+      "Run with live voice cues from Coachi. Stay closer to the right heart-rate zone without staring at your watch.",
+      "Your run can drift before you notice. Coachi gives live voice cues so you know when to slow down, hold steady, or recover."
+    ]
+  },
+  "execution_notes": {
+    "update_without_new_build": [
+      "promotional_text"
+    ],
+    "prepare_for_next_version_submission": [
+      "name",
+      "subtitle",
+      "description",
+      "keywords",
+      "screenshots"
+    ],
+    "rating_request": "Before scaling cold traffic, ask recent happy iOS users for App Store ratings. The US listing currently has 0 ratings.",
+    "measurement_gate": "Set APP_STORE_CAMPAIGN_PROVIDER_TOKEN before judging App Store Connect campaign performance."
+  },
+  "sources": [
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/app-information/",
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/",
+    "https://developer.apple.com/app-store/search/",
+    "https://developer.apple.com/app-store/product-page/"
+  ]
+}
