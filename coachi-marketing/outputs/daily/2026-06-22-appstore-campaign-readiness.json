@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-06-22T20:31:34.852Z",
+  "queue": "outputs/daily/2026-06-22-appstore-high-intent-approval-queue-v2.md",
+  "x_pack": "content/x-posts/2026-06-22-appstore-builder-daily-pack.md",
+  "ready_for_approval_execution": true,
+  "provider_token_required": false,
+  "provider_token_complete": false,
+  "public_actions_taken": 0,
+  "checks": {
+    "queue_preflight": {
+      "ok": true,
+      "action_count": 10,
+      "url_count": 10,
+      "campaign_link_count": 6,
+      "errors": [],
+      "warnings": []
+    },
+    "appstore_links": {
+      "ok": true,
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "provider_token_present": 0
+    },
+    "x_pack": {
+      "ok": true
+    }
+  },
+  "next_gate": "Set APP_STORE_CAMPAIGN_PROVIDER_TOKEN in Render before treating App Store Connect campaign attribution as complete; Coachi-side click tracking is still usable.",
+  "commands": [
+    {
+      "name": "preflight_approval_queue",
+      "command": "node",
+      "args": [
+        "scripts/preflight_approval_queue.mjs",
+        "--input",
+        "outputs/daily/2026-06-22-appstore-high-intent-approval-queue-v2.md",
+        "--expect-actions",
+        "10",
+        "--out",
+        "outputs/daily/2026-06-22-appstore-high-intent-v2-preflight.json"
+      ],
+      "status": 0,
+      "ok": true
+    },
+    {
+      "name": "verify_appstore_campaign_links",
+      "command": "node",
+      "args": [
+        "scripts/verify_appstore_campaign_links.mjs",
+        "--input",
+        "outputs/daily/2026-06-22-appstore-high-intent-approval-queue-v2.md",
+        "--out",
+        "outputs/daily/2026-06-22-appstore-high-intent-v2-link-verification.json"
+      ],
+      "status": 0,
+      "ok": true
+    },
+    {
+      "name": "validate_x_pack",
+      "command": "python3",
+      "args": [
+        "scripts/validate_x_pack.py",
+        "content/x-posts/2026-06-22-appstore-builder-daily-pack.md"
+      ],
+      "status": 0,
+      "ok": true
+    }
+  ]
+}

@@ -41,6 +41,7 @@
     "growth:metrics": "node scripts/capture_post_metrics.mjs",
     "growth:verify-appstore-links": "node scripts/verify_appstore_campaign_links.mjs",
     "growth:preflight-approval-queue": "node scripts/preflight_approval_queue.mjs",
+    "growth:appstore-readiness": "node scripts/appstore_campaign_readiness.mjs",
     "growth:recycle-winners": "node scripts/recycle_winners.mjs",
     "growth:weekly-batch": "node scripts/generate_weekly_batch.mjs",
     "growth:loop": "zsh scripts/coachi_growth_loop_4h.sh"
