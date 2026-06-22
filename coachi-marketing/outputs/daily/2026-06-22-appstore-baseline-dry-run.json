@@ -1,0 +1,27 @@
+{
+  "dry_run": true,
+  "entry": {
+    "logged_at": "2026-06-22T20:35:00.610Z",
+    "measured_at": "2026-06-22T20:35:00.610Z",
+    "campaign": "x_product_proof_20260622",
+    "source": "x",
+    "window": "baseline",
+    "readiness_report": "outputs/daily/2026-06-22-appstore-campaign-readiness.json",
+    "ready_for_approval_execution": true,
+    "provider_token_complete": false,
+    "provider_token_present": false,
+    "public_actions_posted": 0,
+    "post_urls": [],
+    "posthog_app_store_clicks": 0,
+    "clicks_by_source": null,
+    "clicks_by_campaign": null,
+    "app_store_product_page_views": 0,
+    "app_store_first_time_downloads": 0,
+    "app_store_total_downloads": null,
+    "app_store_conversion_rate": null,
+    "app_store_campaign_rows_visible": null,
+    "best_campaign": null,
+    "notes": null,
+    "decision": "increase_distribution"
+  }
+}
