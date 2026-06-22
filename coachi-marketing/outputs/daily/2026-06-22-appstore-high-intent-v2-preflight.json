@@ -1,0 +1,11 @@
+{
+  "input": "outputs/daily/2026-06-22-appstore-high-intent-approval-queue-v2.md",
+  "ok": true,
+  "action_count": 10,
+  "url_count": 10,
+  "campaign_link_count": 6,
+  "errors": [],
+  "warnings": [],
+  "checked_at": "2026-06-22T20:28:12.453Z",
+  "ledger": "/Volumes/Riot APFS/Agentmode/coachi-marketing/inputs/performance/engagement-ledger.json"
+}
