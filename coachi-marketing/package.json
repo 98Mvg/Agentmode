@@ -3,11 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node --test",
     "slideshow:validate": "node scripts/validate_slideshow_engine.mjs",
     "slideshow:render": "node scripts/render_slideshow_deck.mjs",
     "slideshow:assets": "node scripts/prepare_slideshow_assets.mjs",
     "slideshow:materialize": "node scripts/materialize_slideshow_sources.mjs",
     "slideshow:import-pinterest": "node scripts/import_pinterest_library.mjs",
+    "slideshow:verify-pinterest": "node scripts/verify_pinterest_intake.mjs",
+    "slideshow:promote-pinterest": "node scripts/promote_pinterest_curation_to_library.mjs",
     "slideshow:owned-assets": "node scripts/generate_owned_visual_library_assets.mjs",
     "slideshow:approve-library": "node scripts/approve_visual_library_assets.mjs",
     "slideshow:supabase-library": "node scripts/build_supabase_visual_library_manifest.mjs",
@@ -23,13 +26,22 @@
     "slideshow:readiness": "node scripts/slideshow_readiness_report.mjs",
     "slideshow:carousel-pack": "node scripts/prepare_slideshow_carousel_pack.mjs",
     "slideshow:video": "node scripts/export_slideshow_video_with_music.mjs",
+    "slideshow:tiktok-inbox-upload": "zsh scripts/tiktok_inbox_file_upload.sh",
+    "slideshow:tiktok-direct-upload": "zsh scripts/tiktok_direct_file_upload.sh",
+    "slideshow:upload-both": "node scripts/slideshow_upload_both.mjs",
+    "slideshow:inbox-schedule": "node scripts/run_tiktok_inbox_schedule.mjs",
     "slideshow:qa": "node scripts/qa_slideshow_pack.mjs",
+    "slideshow:repurpose": "node scripts/repurpose_pack.mjs",
     "slideshow:pipeline": "node scripts/run_slideshow_pipeline.mjs",
     "slideshow:full-loop": "node scripts/slideshow_full_loop.mjs",
     "slideshow:social-loop": "scripts/slideshow_social_loop_4h.sh run-now",
     "growth:daily": "node scripts/coachi_growth_daily.mjs",
     "growth:engagement-candidates": "node scripts/build_engagement_candidates.mjs",
     "growth:log-engagement": "node scripts/log_engagement_action.mjs",
+    "growth:metrics": "node scripts/capture_post_metrics.mjs",
+    "growth:verify-appstore-links": "node scripts/verify_appstore_campaign_links.mjs",
+    "growth:recycle-winners": "node scripts/recycle_winners.mjs",
+    "growth:weekly-batch": "node scripts/generate_weekly_batch.mjs",
     "growth:loop": "zsh scripts/coachi_growth_loop_4h.sh"
   },
   "dependencies": {
@@ -37,6 +49,7 @@
     "bullmq": "^5.34.2",
     "dotenv": "^16.4.7",
     "ioredis": "^5.4.2",
+    "playwright": "^1.60.0",
     "sharp": "^0.34.0"
   }
 }
