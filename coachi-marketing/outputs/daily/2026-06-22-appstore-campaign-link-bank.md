@@ -30,6 +30,8 @@ Important: set `APP_STORE_CAMPAIGN_PROVIDER_TOKEN` from App Store Connect before
 | X pinned/profile follow-up | `https://coachi.no/app-store?source=x&campaign=x_pinned_profile_20260622` |
 | Dedicated download page CTA | `https://coachi.no/app-store?source=download&campaign=download_page` |
 | Reddit explicit app ask | `https://coachi.no/app-store?source=reddit&campaign=reddit_app_ask_20260622` |
+| Reddit HR audio cue app ask | `https://coachi.no/app-store?source=reddit&campaign=reddit_hr_audio_cues_20260622` |
+| Reddit generic app ask | `https://coachi.no/app-store?source=reddit&campaign=reddit_generic_app_20260622` |
 | Instagram bio | `https://coachi.no/app-store?source=instagram&campaign=instagram_bio_20260622` |
 | TikTok bio | `https://coachi.no/app-store?source=tiktok&campaign=tiktok_bio_20260622` |
 | Pinterest slideshow pins | `https://coachi.no/app-store?source=pinterest&campaign=pinterest_slideshow_20260622` |

@@ -1,8 +1,12 @@
 # Coachi App Store Builder Growth Queue - 2026-06-22
 
-Status: approval-gated, not posted.
+Status: superseded, do not execute directly.
 Goal: move toward 10,000 App Store downloads with builder-led X content plus earned social mentions.
 Browser rule for execution: use the Codex in-app browser; do not use Clawbot/OpenClaw.
+
+Superseded by: `outputs/daily/2026-06-22-appstore-high-intent-approval-queue-v2.md`
+
+Reason: follow-up ledger check found that Reddit targets `1q6ux3g`, `1n5duqr`, and `1tnd7jf` already had Coachi replies logged on 2026-06-12. Use the v2 queue to avoid duplicate Reddit comments.
 
 ## Deployment Gate
 

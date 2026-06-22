@@ -1,9 +1,9 @@
 {
   "input": "outputs/daily/2026-06-22-appstore-campaign-link-bank.md",
-  "checked_at": "2026-06-22T20:13:13.763Z",
+  "checked_at": "2026-06-22T20:23:13.291Z",
   "require_provider_token": false,
-  "total": 11,
-  "passed": 11,
+  "total": 13,
+  "passed": 13,
   "failed": 0,
   "provider_token_present": 0,
   "results": [
@@ -58,6 +58,28 @@
       "ok": true,
       "expected_ct": "reddit_app_ask_20260622",
       "actual_ct": "reddit_app_ask_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=reddit&campaign=reddit_hr_audio_cues_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=reddit_hr_audio_cues_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "reddit_hr_audio_cues_20260622",
+      "actual_ct": "reddit_hr_audio_cues_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=reddit&campaign=reddit_generic_app_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=reddit_generic_app_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "reddit_generic_app_20260622",
+      "actual_ct": "reddit_generic_app_20260622",
       "actual_mt": "8",
       "provider_token_present": false,
       "errors": []

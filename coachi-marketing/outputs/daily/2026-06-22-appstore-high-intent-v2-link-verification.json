@@ -1,0 +1,77 @@
+{
+  "input": "outputs/daily/2026-06-22-appstore-high-intent-approval-queue-v2.md",
+  "checked_at": "2026-06-22T20:23:11.877Z",
+  "require_provider_token": false,
+  "total": 6,
+  "passed": 6,
+  "failed": 0,
+  "provider_token_present": 0,
+  "results": [
+    {
+      "source_url": "https://coachi.no/app-store?source=release_check&campaign=release_check",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=release_check&mt=8",
+      "ok": true,
+      "expected_ct": "release_check",
+      "actual_ct": "release_check",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=x&campaign=x_product_proof_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=x_product_proof_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "x_product_proof_20260622",
+      "actual_ct": "x_product_proof_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=reddit&campaign=reddit_hr_audio_cues_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=reddit_hr_audio_cues_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "reddit_hr_audio_cues_20260622",
+      "actual_ct": "reddit_hr_audio_cues_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=reddit&campaign=reddit_generic_app_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=reddit_generic_app_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "reddit_generic_app_20260622",
+      "actual_ct": "reddit_generic_app_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=tiktok&campaign=tiktok_bio_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=tiktok_bio_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "tiktok_bio_20260622",
+      "actual_ct": "tiktok_bio_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    },
+    {
+      "source_url": "https://coachi.no/app-store?source=instagram&campaign=instagram_bio_20260622",
+      "status": 302,
+      "location": "https://apps.apple.com/app/coachi-voice-fitness-coach/id6760587172?ct=instagram_bio_20260622&mt=8",
+      "ok": true,
+      "expected_ct": "instagram_bio_20260622",
+      "actual_ct": "instagram_bio_20260622",
+      "actual_mt": "8",
+      "provider_token_present": false,
+      "errors": []
+    }
+  ]
+}
