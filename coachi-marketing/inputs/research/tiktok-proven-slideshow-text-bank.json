@@ -9,6 +9,14 @@
     "preferred_text_length": "Prefer 6-12 words for hook slides when that preserves the question, contradiction, number, or felt runner problem; payoff slides should usually stay 3-10 words. Never shorten a proven TikTok mechanic into a generic label.",
     "complexity_rule": "No abstract coaching language on slides 1-6. Prefer concrete runner words: run, easy, slow, watch, pace, breath, walk, week, effort."
   },
+  "hook_rotation_policy": {
+    "updated": "2026-06-26T14:45:00.000+02:00",
+    "mode": "maximum_rotation",
+    "batch_rule": "In a multi-post slideshow batch, maximize rotation across format_id, source_family_id, and problem_type before allowing any repeat.",
+    "selection_rule": "Choose the most diverse viable batch first: fresh format, fresh hook family, and fresh problem type outrank small score differences between otherwise production-safe hooks.",
+    "fallback_rule": "A repeated format, hook family, or problem type can be used only when the pool cannot fill the requested count otherwise, and the fallback must be marked in content_rotation.",
+    "main_account_guardrail": "Do not let easy-run talk dominate consecutive main-account uploads. Rotate across first-mile, recovery, Zone 2, heart-rate, watch-checking, comparison, and workout-control families before repeating adjacent easy-run language."
+  },
   "source_files": [
     {
       "path": "inputs/research/tiktok-viral-running-hooks-2026-04-28.md",
@@ -1024,6 +1032,20 @@
             "Leave 5% in the tank.",
             "Consistency beats hero days."
           ]
+        },
+        {
+          "id": "workout_rep_one_too_easy_v1",
+          "source_family_ids": [
+            "most_runners_train_wrong"
+          ],
+          "slides_1_to_6": [
+            "Rep 1 should feel too easy",
+            "Workout control starts early.",
+            "If rep 1 bites, you raced it.",
+            "Calm recoveries keep the set honest.",
+            "Let the last rep match the first.",
+            "Save the test for race day."
+          ]
         }
       ]
     },
@@ -1715,6 +1737,21 @@
             "Back off 10–20%. Keep it boring.",
             "Then settle into your zone.",
             "Save this for minute 1."
+          ]
+        },
+        {
+          "id": "beginner_minute_two_pacing_clue_v1",
+          "source_family_ids": [
+            "start_of_run_lies",
+            "run_walk_approach_fix"
+          ],
+          "slides_1_to_6": [
+            "Minute 2 is a pacing clue",
+            "Early breathing noise is not failure.",
+            "Urgent that early? Back off now.",
+            "Let effort settle before the watch.",
+            "Short resets beat panic pushes.",
+            "Start calm enough to repeat tomorrow."
           ]
         },
         {

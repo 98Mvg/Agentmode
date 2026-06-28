@@ -1,0 +1,2697 @@
+{
+  "schema_version": 1,
+  "updated": "2026-06-26T17:20:56.752Z",
+  "purpose": "Registry of slideshow posts already scheduled through Postiz so daily growth avoids duplicate live scheduling.",
+  "posts": [
+    {
+      "scheduled_at": "2026-05-04T18:51:28.063Z",
+      "slideshow_id": "2026-05-04-top-5-easy-run-mistakes",
+      "platform": "tiktok",
+      "account_id": "cmoikbpne0001q96s054598iz",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "final_state": {
+        "checked_at": "2026-05-04T19:09:58.554Z",
+        "state": "ERROR",
+        "releaseURL": null,
+        "releaseId": null,
+        "error": "TikTok access token invalid; re-authenticate the TikTok integration in Postiz."
+      },
+      "postiz_result": [
+        {
+          "postId": "cmork2muq0001nt6rw1thtenj",
+          "integration": "cmoikbpne0001q96s054598iz"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-05-04T20:11:39.030Z",
+      "slideshow_id": "2026-05-04-top-5-easy-run-mistakes",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmormxqx30004nt6rwjityxtc",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T05:44:28.862Z",
+      "slideshow_id": "2026-06-04-top-5-easy-runs-are-too-hard",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz2lyv30000o971bis98tdq",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T05:47:10.772Z",
+      "slideshow_id": "2026-06-04-top-5-easy-run-control-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz2pftr0001o971l9vex418",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T05:49:26.700Z",
+      "slideshow_id": "2026-06-04-top-5-easy-run-drift-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz2scpf0002o971z8iteaz6",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T05:52:58.828Z",
+      "slideshow_id": "2026-06-04-top-5-heart-rate-panic-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz2wwdt0003o971omxkvrou",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T05:55:22.900Z",
+      "slideshow_id": "2026-06-04-top-5-zone-2-slow-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz2zzk70004o971fczrh5hf",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T06:00:36.547Z",
+      "slideshow_id": "2026-06-04-top-5-slow-zone-2-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz36pjz0005o971r4r9tn3c",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T06:04:36.666Z",
+      "slideshow_id": "2026-06-04-top-5-watch-checking-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz3buuh0006o971yjqwdfsf",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T06:07:14.241Z",
+      "slideshow_id": "2026-06-04-top-5-pace-rules-for-easy-runs",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz3f8fo0007o971nwlluc5x",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T06:09:38.069Z",
+      "slideshow_id": "2026-06-04-top-5-watch-rules-for-runners",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz3ibei0008o9715905ldpj",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-04T06:11:57.777Z",
+      "slideshow_id": "2026-06-04-top-5-zone-setup-rules",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmpz3lb7m0009o97116kr006b",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-06T10:08:01.152Z",
+      "slideshow_id": "2026-06-06-why-your-easy-pace-feels-embarrassing",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmq26wkxb0000qu69clhans5y",
+          "integration": "cmorm85va0003nt6ro6b502fk"
+        }
+      ]
+    },
+    {
+      "scheduled_at": "2026-06-08T16:09:33.885Z",
+      "slideshow_id": "2026-06-07-stop-losing-easy-runs-early",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-08T16:09:33.885Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649055012538124311",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649055012538124311",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-07-stop-losing-easy-runs-early/exports/2026-06-07-stop-losing-easy-runs-early-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-08T16:09:33.885Z",
+      "slideshow_id": "2026-06-07-5-ways-easy-runs-go-wrong",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-08T16:09:33.885Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649056719259371542",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649056719259371542",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-07-5-ways-easy-runs-go-wrong/exports/2026-06-07-5-ways-easy-runs-go-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-08T16:09:33.885Z",
+      "slideshow_id": "2026-06-07-stop-overstriding-easy-runs",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-08T16:09:33.885Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649056719259617302",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649056719259617302",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-07-stop-overstriding-easy-runs/exports/2026-06-07-stop-overstriding-easy-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-08T16:09:33.885Z",
+      "slideshow_id": "2026-06-07-why-zone-2-feels-embarrassing",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-08T16:09:33.885Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649056787060508675",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649056787060508675",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-07-why-zone-2-feels-embarrassing/exports/2026-06-07-why-zone-2-feels-embarrassing-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-08T16:49:50.689Z",
+      "slideshow_id": "2026-06-08-stop-overbuying-running-watches",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmq5jur3g0006lj6rv9hus3ln",
+          "integration": "cmq43gqc30001lj6wjsp99t8q"
+        }
+      ],
+      "replaced_postiz_post_id": "cmq5g51c70000lj6r5qi1u4x3",
+      "updated_at": "2026-06-08T18:34:11.422Z",
+      "status": "cancelled_direct_public_wrong_mode",
+      "cancelled_at": "2026-06-08T18:46:24.669Z",
+      "note": "Cancelled because watch account should use TikTok MEDIA_UPLOAD inbox handoff like Everyday Runner Lab, not Postiz DIRECT_POST."
+    },
+    {
+      "scheduled_at": "2026-06-08T16:52:43.106Z",
+      "slideshow_id": "2026-06-08-stop-fearing-zone-2",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmq5k64xx000alj6radduf9g7",
+          "integration": "cmq43gqc30001lj6wjsp99t8q"
+        }
+      ],
+      "replaced_postiz_post_id": "cmq5g8qh90001lj6roh6tvoje",
+      "updated_at": "2026-06-08T18:42:59.602Z",
+      "status": "cancelled_direct_public_wrong_mode",
+      "cancelled_at": "2026-06-08T18:46:24.680Z",
+      "note": "Cancelled because watch account should use TikTok MEDIA_UPLOAD inbox handoff like Everyday Runner Lab, not Postiz DIRECT_POST."
+    },
+    {
+      "scheduled_at": "2026-06-08T17:00:42.008Z",
+      "slideshow_id": "2026-06-08-top-5-easy-day-hr-rules",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmq5k655l000blj6ryehxg4os",
+          "integration": "cmq43gqc30001lj6wjsp99t8q"
+        }
+      ],
+      "replaced_postiz_post_id": "cmq5gizze0002lj6r1aglklay",
+      "updated_at": "2026-06-08T18:42:59.602Z",
+      "status": "cancelled_direct_public_wrong_mode",
+      "cancelled_at": "2026-06-08T18:46:24.680Z",
+      "note": "Cancelled because watch account should use TikTok MEDIA_UPLOAD inbox handoff like Everyday Runner Lab, not Postiz DIRECT_POST."
+    },
+    {
+      "scheduled_at": "2026-06-08T17:08:47.790Z",
+      "slideshow_id": "2026-06-08-apple-watch-is-not-wrong",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmq5gtesr0003lj6rad9bun91",
+          "integration": "cmq43gqc30001lj6wjsp99t8q"
+        }
+      ],
+      "status": "cancelled_direct_public_wrong_mode",
+      "cancelled_at": "2026-06-08T18:46:24.680Z",
+      "note": "Cancelled because watch account should use TikTok MEDIA_UPLOAD inbox handoff like Everyday Runner Lab, not Postiz DIRECT_POST."
+    },
+    {
+      "scheduled_at": "2026-06-08T17:12:03.688Z",
+      "slideshow_id": "2026-06-08-why-easy-run-form-falls-apart",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_mode": "direct-public",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "postiz_result": [
+        {
+          "postId": "cmq5gxlyh0004lj6rwvy3dikx",
+          "integration": "cmq43gqc30001lj6wjsp99t8q"
+        }
+      ],
+      "status": "cancelled_direct_public_wrong_mode",
+      "cancelled_at": "2026-06-08T18:46:24.680Z",
+      "note": "Cancelled because watch account should use TikTok MEDIA_UPLOAD inbox handoff like Everyday Runner Lab, not Postiz DIRECT_POST."
+    },
+    {
+      "scheduled_at": "2026-06-08T18:54:43.910Z",
+      "slideshow_id": "2026-06-08-stop-overbuying-running-watches",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "Runner Watch Lab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-08T18:54:43.910Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649097866430007299",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649097866430007299",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-08-stop-overbuying-running-watches/exports/2026-06-08-stop-overbuying-running-watches-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-09T18:21:57.826Z",
+      "slideshow_id": "2026-06-08-stop-fearing-zone-2",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-09T18:21:57.826Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649462421832124438",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649462421832124438",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-08-stop-fearing-zone-2/exports/2026-06-08-stop-fearing-zone-2-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-09T18:22:21.289Z",
+      "slideshow_id": "2026-06-08-top-5-easy-day-hr-rules",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-09T18:22:21.289Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649462382900840470",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649462382900840470",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-08-top-5-easy-day-hr-rules/exports/2026-06-08-top-5-easy-day-hr-rules-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-09T18:23:16.060Z",
+      "slideshow_id": "2026-06-08-apple-watch-is-not-wrong",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-09T18:23:16.060Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649462637306415127",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649462637306415127",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-08-apple-watch-is-not-wrong/exports/2026-06-08-apple-watch-is-not-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-09T18:23:36.245Z",
+      "slideshow_id": "2026-06-08-why-easy-run-form-falls-apart",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-09T18:23:36.245Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7649462756483106818",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7649462756483106818",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-08-why-easy-run-form-falls-apart/exports/2026-06-08-why-easy-run-form-falls-apart-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T06:15:46.021Z",
+      "slideshow_id": "2026-06-11-main-01-stop-forcing-easy-pace",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T06:15:46.021Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650017021040003094",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650017021040003094",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-main-01-stop-forcing-easy-pace/exports/2026-06-11-main-01-stop-forcing-easy-pace-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T06:16:02.402Z",
+      "slideshow_id": "2026-06-11-watch-01-do-not-buy-the-wrong-watch",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T06:16:02.402Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650016996621240342",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650016996621240342",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-watch-01-do-not-buy-the-wrong-watch/exports/2026-06-11-watch-01-do-not-buy-the-wrong-watch-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T10:06:49.361Z",
+      "slideshow_id": "2026-06-11-main-02-why-easy-pace-feels-awkward",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T10:06:49.361Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650077080666900502",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650077080666900502",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-main-02-why-easy-pace-feels-awkward/exports/2026-06-11-main-02-why-easy-pace-feels-awkward-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T10:07:07.755Z",
+      "slideshow_id": "2026-06-11-watch-02-apple-watch-zone-rules-may-be-wrong",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T10:07:07.755Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650077215971477526",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650077215971477526",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-watch-02-apple-watch-zone-rules-may-be-wrong/exports/2026-06-11-watch-02-apple-watch-zone-rules-may-be-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T14:08:14.007Z",
+      "slideshow_id": "2026-06-11-main-03-why-easy-never-feels-easy",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T14:08:14.007Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650139296644565014",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650139296644565014",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-main-03-why-easy-never-feels-easy/exports/2026-06-11-main-03-why-easy-never-feels-easy-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T14:08:30.844Z",
+      "slideshow_id": "2026-06-11-watch-03-your-watch-is-not-a-coach",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T14:08:30.844Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650139320136861718",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650139320136861718",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-watch-03-your-watch-is-not-a-coach/exports/2026-06-11-watch-03-your-watch-is-not-a-coach-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T18:07:46.760Z",
+      "slideshow_id": "2026-06-11-main-04-your-easy-run-should-feel-boring",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T18:07:46.760Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650200894638245910",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650200894638245910",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-main-04-your-easy-run-should-feel-boring/exports/2026-06-11-main-04-your-easy-run-should-feel-boring-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-11T18:08:03.949Z",
+      "slideshow_id": "2026-06-11-watch-04-stop-trusting-one-heart-rate-spike",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-11T18:08:03.949Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650201046987917334",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650201046987917334",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-11-watch-04-stop-trusting-one-heart-rate-spike/exports/2026-06-11-watch-04-stop-trusting-one-heart-rate-spike-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-12T18:39:01.006Z",
+      "slideshow_id": "2026-06-12-main-01-reframe-high-hr-on-easy-runs",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-12T18:39:01.006Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650579906116274198",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650579906116274198",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-main-01-reframe-high-hr-on-easy-runs/exports/2026-06-12-main-01-reframe-high-hr-on-easy-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-12T18:39:25.316Z",
+      "slideshow_id": "2026-06-12-watch-01-app-demo-watch-specs-miss-context",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-12T18:39:25.316Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7650579906116306966",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7650579906116306966",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-watch-01-app-demo-watch-specs-miss-context/exports/2026-06-12-watch-01-app-demo-watch-specs-miss-context-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-14T19:58:06.310Z",
+      "slideshow_id": "2026-06-12-watch-02-reframe-cadence-lock-breaks-hr",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-14T19:58:06.310Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651342539361929238",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651342539361929238",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-watch-02-reframe-cadence-lock-breaks-hr/exports/2026-06-12-watch-02-reframe-cadence-lock-breaks-hr-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-14T19:58:21.675Z",
+      "slideshow_id": "2026-06-12-main-03-mvt-5-zone-2-lies",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-14T19:58:21.675Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651342539361978390",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651342539361978390",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-main-03-mvt-5-zone-2-lies/exports/2026-06-12-main-03-mvt-5-zone-2-lies-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-15T18:55:49.564Z",
+      "slideshow_id": "2026-06-12-watch-03-before-after-you-are-not-running-free",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-15T18:55:49.564Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651697631014078486",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651697631014078486",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-watch-03-before-after-you-are-not-running-free/exports/2026-06-12-watch-03-before-after-you-are-not-running-free-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-14T19:58:46.727Z",
+      "slideshow_id": "2026-06-12-main-04-mvt-why-slow-pace-can-be-right",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-14T19:58:46.727Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651342467493857302",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651342467493857302",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-main-04-mvt-why-slow-pace-can-be-right/exports/2026-06-12-main-04-mvt-why-slow-pace-can-be-right-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-15T19:17:08.205Z",
+      "slideshow_id": "2026-06-12-watch-04-reframe-training-zones-are-not-tests",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-15T19:17:08.205Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651703117972572182",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651703117972572182",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-watch-04-reframe-training-zones-are-not-tests/exports/2026-06-12-watch-04-reframe-training-zones-are-not-tests-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-14T19:59:14.441Z",
+      "slideshow_id": "2026-06-12-main-05-t5r-why-heart-rate-drifts-up",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-14T19:59:14.441Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651342574183204886",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651342574183204886",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-main-05-t5r-why-heart-rate-drifts-up/exports/2026-06-12-main-05-t5r-why-heart-rate-drifts-up-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-15T19:17:20.792Z",
+      "slideshow_id": "2026-06-12-watch-05-mvt-5-zone-2-lies",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-15T19:17:20.792Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651703117972686870",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651703117972686870",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-watch-05-mvt-5-zone-2-lies/exports/2026-06-12-watch-05-mvt-5-zone-2-lies-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-14T19:57:55.780Z",
+      "slideshow_id": "2026-06-12-main-02-tips-easy-runs-start-too-fast",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-14T19:57:55.780Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7651342223359133718",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7651342223359133718",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-12-main-02-tips-easy-runs-start-too-fast/exports/2026-06-12-main-02-tips-easy-runs-start-too-fast-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:25:28.752Z",
+      "slideshow_id": "2026-06-16-main-01-fix-your-running-progress-is-not-a-test",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:25:28.752Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045350546901014",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045350546901014",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-main-01-fix-your-running-progress-is-not-a-test/exports/2026-06-16-main-01-fix-your-running-progress-is-not-a-test-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:25:36.101Z",
+      "slideshow_id": "2026-06-16-main-02-fix-i-can-t-stop-racing-the-reps",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:25:36.101Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045324269422614",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045324269422614",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-main-02-fix-i-can-t-stop-racing-the-reps/exports/2026-06-16-main-02-fix-i-can-t-stop-racing-the-reps-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:25:49.637Z",
+      "slideshow_id": "2026-06-16-main-03-wish-beginner-running-does-not-need-perfect",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:25:49.637Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045417186068503",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045417186068503",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-main-03-wish-beginner-running-does-not-need-perfect/exports/2026-06-16-main-03-wish-beginner-running-does-not-need-perfect-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:25:58.349Z",
+      "slideshow_id": "2026-06-16-main-04-reframe-one-number-is-not-easy-run",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:25:58.349Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045672199604246",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045672199604246",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-main-04-reframe-one-number-is-not-easy-run/exports/2026-06-16-main-04-reframe-one-number-is-not-easy-run-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:26:07.161Z",
+      "slideshow_id": "2026-06-16-main-05-mvt-your-watch-zones-can-lie",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:26:07.161Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045636115646486",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045636115646486",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-main-05-mvt-your-watch-zones-can-lie/exports/2026-06-16-main-05-mvt-your-watch-zones-can-lie-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:26:15.149Z",
+      "slideshow_id": "2026-06-16-watch-01-t5r-training-zone-isn-t-a-test",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:26:15.149Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045636115941398",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045636115941398",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-watch-01-t5r-training-zone-isn-t-a-test/exports/2026-06-16-watch-01-t5r-training-zone-isn-t-a-test-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:26:22.936Z",
+      "slideshow_id": "2026-06-16-watch-02-myth-zone-2-is-not-pace",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:26:22.936Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045672199784470",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045672199784470",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-watch-02-myth-zone-2-is-not-pace/exports/2026-06-16-watch-02-myth-zone-2-is-not-pace-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:26:37.149Z",
+      "slideshow_id": "2026-06-16-watch-03-reframe-your-watch-can-structure-workouts",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:26:37.149Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652045847786637334",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652045847786637334",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-watch-03-reframe-your-watch-can-structure-workouts/exports/2026-06-16-watch-03-reframe-your-watch-can-structure-workouts-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:42:18.706Z",
+      "slideshow_id": "2026-06-16-watch-04-redditq-wrist-heart-rate-can-spike",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:42:18.706Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652049566132537366",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652049566132537366",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-watch-04-redditq-wrist-heart-rate-can-spike/exports/2026-06-16-watch-04-redditq-wrist-heart-rate-can-spike-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T17:42:31.291Z",
+      "slideshow_id": "2026-06-16-watch-05-before-after-which-watch-fits-your-actual-running",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T17:42:31.291Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652049566132586518",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652049566132586518",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-watch-05-before-after-which-watch-fits-your-actual-running/exports/2026-06-16-watch-05-before-after-which-watch-fits-your-actual-running-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-16T19:54:08.454Z",
+      "slideshow_id": "2026-06-16-myth-your-running-is-not-a-test",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-16T19:54:08.454Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652083515219626006",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652083515219626006",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-16-myth-your-running-is-not-a-test/exports/2026-06-16-myth-your-running-is-not-a-test-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:25:28.008Z",
+      "slideshow_id": "2026-06-18-main-01-before-after-do-not-panic-mid-run",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:25:28.008Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818485617133590",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818485617133590",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-main-01-before-after-do-not-panic-mid-run/exports/2026-06-18-main-01-before-after-do-not-panic-mid-run-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:25:38.090Z",
+      "slideshow_id": "2026-06-18-main-02-founder-why-your-watch-needs-context",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:25:38.090Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818485617215510",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818485617215510",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-main-02-founder-why-your-watch-needs-context/exports/2026-06-18-main-02-founder-why-your-watch-needs-context-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:25:52.391Z",
+      "slideshow_id": "2026-06-18-main-03-t5r-zone-2-should-feel-boring",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:25:52.391Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818443032643606",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818443032643606",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-main-03-t5r-zone-2-should-feel-boring/exports/2026-06-18-main-03-t5r-zone-2-should-feel-boring-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:05.484Z",
+      "slideshow_id": "2026-06-18-main-04-t5m-your-workout-is-not-a-test",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:05.484Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818580186236951",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818580186236951",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-main-04-t5m-your-workout-is-not-a-test/exports/2026-06-18-main-04-t5m-your-workout-is-not-a-test-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:20.694Z",
+      "slideshow_id": "2026-06-18-main-05-t5m-easy-runs-are-not-random",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:20.694Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818580186433559",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818580186433559",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-main-05-t5m-easy-runs-are-not-random/exports/2026-06-18-main-05-t5m-easy-runs-are-not-random-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:30.125Z",
+      "slideshow_id": "2026-06-18-watch-01-app-demo-a-watch-shows-not-coaches",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:30.125Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818711468738562",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818711468738562",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-watch-01-app-demo-a-watch-shows-not-coaches/exports/2026-06-18-watch-01-app-demo-a-watch-shows-not-coaches-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:38.577Z",
+      "slideshow_id": "2026-06-18-watch-02-t5m-zone-2-should-feel-boring",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:38.577Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818767713568790",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818767713568790",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-watch-02-t5m-zone-2-should-feel-boring/exports/2026-06-18-watch-02-t5m-zone-2-should-feel-boring-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:46.271Z",
+      "slideshow_id": "2026-06-18-watch-03-before-after-slow-pace-can-still-spike",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:46.271Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818711468935170",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818711468935170",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-watch-03-before-after-slow-pace-can-still-spike/exports/2026-06-18-watch-03-before-after-slow-pace-can-still-spike-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:52.823Z",
+      "slideshow_id": "2026-06-18-watch-04-t5m-do-not-pace-hills-flat",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:52.823Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818880762562582",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818880762562582",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-watch-04-t5m-do-not-pace-hills-flat/exports/2026-06-18-watch-04-t5m-do-not-pace-hills-flat-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T19:26:59.704Z",
+      "slideshow_id": "2026-06-18-watch-05-t5r-auto-zones-can-be-wrong",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T19:26:59.704Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652818767713650710",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652818767713650710",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-watch-05-t5r-auto-zones-can-be-wrong/exports/2026-06-18-watch-05-t5r-auto-zones-can-be-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-18T21:19:17.467Z",
+      "slideshow_id": "2026-06-18-myth-the-ring-is-not-the-same-thing-as-the-workout",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-18T21:19:17.467Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7652847712652331030",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7652847712652331030",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-18-myth-the-ring-is-not-the-same-thing-as-the-workout/exports/2026-06-18-myth-the-ring-is-not-the-same-thing-as-the-workout-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:18:22.108Z",
+      "slideshow_id": "2026-06-21-main-01-reframe-heart-rate-can-lie",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:18:22.108Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653790855438321686",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653790855438321686",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-main-01-reframe-heart-rate-can-lie/exports/2026-06-21-main-01-reframe-heart-rate-can-lie-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:18:29.264Z",
+      "slideshow_id": "2026-06-21-main-02-app-demo-slow-is-not-lazy-running",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:18:29.264Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653790986048374806",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653790986048374806",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-main-02-app-demo-slow-is-not-lazy-running/exports/2026-06-21-main-02-app-demo-slow-is-not-lazy-running-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:18:40.572Z",
+      "slideshow_id": "2026-06-21-main-03-mvt-5-ways-zone-2-goes-wrong",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:18:40.572Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791043426502678",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791043426502678",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-main-03-mvt-5-ways-zone-2-goes-wrong/exports/2026-06-21-main-03-mvt-5-ways-zone-2-goes-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:18:48.111Z",
+      "slideshow_id": "2026-06-21-main-04-myth-your-easy-pace-can-move",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:18:48.111Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791032320034838",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791032320034838",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-main-04-myth-your-easy-pace-can-move/exports/2026-06-21-main-04-myth-your-easy-pace-can-move-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:18:54.769Z",
+      "slideshow_id": "2026-06-21-main-05-t5r-top-5-heart-rate-mistakes",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:18:54.769Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791032320067606",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791032320067606",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-main-05-t5r-top-5-heart-rate-mistakes/exports/2026-06-21-main-05-t5r-top-5-heart-rate-mistakes-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:19:02.004Z",
+      "slideshow_id": "2026-06-21-watch-01-myth-your-watch-can-pace-you",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:19:02.004Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653790986048636950",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653790986048636950",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-watch-01-myth-your-watch-can-pace-you/exports/2026-06-21-watch-01-myth-your-watch-can-pace-you-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:19:09.680Z",
+      "slideshow_id": "2026-06-21-watch-02-data-numbers-are-not-coaching",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:19:09.680Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791032320198678",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791032320198678",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-watch-02-data-numbers-are-not-coaching/exports/2026-06-21-watch-02-data-numbers-are-not-coaching-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:19:17.354Z",
+      "slideshow_id": "2026-06-21-watch-03-redditq-fitbit-heart-rate-can-drift",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:19:17.354Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791032320215062",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791032320215062",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-watch-03-redditq-fitbit-heart-rate-can-drift/exports/2026-06-21-watch-03-redditq-fitbit-heart-rate-can-drift-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:19:31.024Z",
+      "slideshow_id": "2026-06-21-watch-04-reframe-5-zone-2-lies",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:19:31.024Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791085570885654",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791085570885654",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-watch-04-reframe-5-zone-2-lies/exports/2026-06-21-watch-04-reframe-5-zone-2-lies-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-21T10:19:37.686Z",
+      "slideshow_id": "2026-06-21-watch-05-t5r-your-watch-can-be-wrong",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-21T10:19:37.686Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7653791085571000342",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7653791085571000342",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-21-watch-05-t5r-your-watch-can-be-wrong/exports/2026-06-21-watch-05-t5r-your-watch-can-be-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:41:58.131Z",
+      "slideshow_id": "2026-06-23-main-01-tips-easy-runs-should-be-controlled",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:41:58.131Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492297475917846",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492297475917846",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-main-01-tips-easy-runs-should-be-controlled/exports/2026-06-23-main-01-tips-easy-runs-should-be-controlled-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:06.340Z",
+      "slideshow_id": "2026-06-23-main-02-reframe-slow-runs-should-not-need-ego",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:06.340Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492534290434070",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492534290434070",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-main-02-reframe-slow-runs-should-not-need-ego/exports/2026-06-23-main-02-reframe-slow-runs-should-not-need-ego-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:12.962Z",
+      "slideshow_id": "2026-06-23-main-03-before-after-heart-rate-is-not-the-whole-run",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:12.962Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492534290450454",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492534290450454",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-main-03-before-after-heart-rate-is-not-the-whole-run/exports/2026-06-23-main-03-before-after-heart-rate-is-not-the-whole-run-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:25.775Z",
+      "slideshow_id": "2026-06-23-main-04-myth-pace-can-lie-on-hilly-routes",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:25.775Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492534290466838",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492534290466838",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-main-04-myth-pace-can-lie-on-hilly-routes/exports/2026-06-23-main-04-myth-pace-can-lie-on-hilly-routes-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:32.714Z",
+      "slideshow_id": "2026-06-23-main-05-app-demo-easy-run-should-feel-too-slow",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:32.714Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492576560810006",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492576560810006",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-main-05-app-demo-easy-run-should-feel-too-slow/exports/2026-06-23-main-05-app-demo-easy-run-should-feel-too-slow-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:39.481Z",
+      "slideshow_id": "2026-06-23-watch-01-app-demo-watch-gives-numbers-not-decisions",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:39.481Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492576560859158",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492576560859158",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-watch-01-app-demo-watch-gives-numbers-not-decisions/exports/2026-06-23-watch-01-app-demo-watch-gives-numbers-not-decisions-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:51.776Z",
+      "slideshow_id": "2026-06-23-watch-02-t5m-heart-rate-formulas-can-be-wrong",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:51.776Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492787575883798",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492787575883798",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-watch-02-t5m-heart-rate-formulas-can-be-wrong/exports/2026-06-23-watch-02-t5m-heart-rate-formulas-can-be-wrong-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:42:58.339Z",
+      "slideshow_id": "2026-06-23-watch-03-myth-which-watch-fits-your-actual-running",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:42:58.339Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492787575932950",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492787575932950",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-watch-03-myth-which-watch-fits-your-actual-running/exports/2026-06-23-watch-03-myth-which-watch-fits-your-actual-running-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:43:05.364Z",
+      "slideshow_id": "2026-06-23-watch-04-reframe-watch-can-structure-workouts",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:43:05.364Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492866093271062",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492866093271062",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-watch-04-reframe-watch-can-structure-workouts/exports/2026-06-23-watch-04-reframe-watch-can-structure-workouts-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-23T07:43:11.217Z",
+      "slideshow_id": "2026-06-23-watch-05-t5r-watch-zones-are-not-verdicts",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-23T07:43:11.217Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7654492866093287446",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7654492866093287446",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-23-watch-05-t5r-watch-zones-are-not-verdicts/exports/2026-06-23-watch-05-t5r-watch-zones-are-not-verdicts-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:44:29.981Z",
+      "slideshow_id": "2026-06-24-main-01-reframe-a-hill-should-not-ruin-your-easy-run",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:44:29.981Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203703288416278",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203703288416278",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-main-01-reframe-a-hill-should-not-ruin-your-easy-run/exports/2026-06-24-main-01-reframe-a-hill-should-not-ruin-your-easy-run-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:45:35.199Z",
+      "slideshow_id": "2026-06-24-main-03-howtofix-zone-2-should-feel-almost-too-slow",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:45:35.199Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203922423990294",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203922423990294",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-main-03-howtofix-zone-2-should-feel-almost-too-slow/exports/2026-06-24-main-03-howtofix-zone-2-should-feel-almost-too-slow-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:45:42.000Z",
+      "slideshow_id": "2026-06-24-main-04-howtofix-why-easy-runs-get-too-hard",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:45:42.000Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203922424006678",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203922424006678",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-main-04-howtofix-why-easy-runs-get-too-hard/exports/2026-06-24-main-04-howtofix-why-easy-runs-get-too-hard-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:45:50.357Z",
+      "slideshow_id": "2026-06-24-main-05-appdemo-why-easy-runs-need-coaching",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:45:50.357Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203922424023062",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203922424023062",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-main-05-appdemo-why-easy-runs-need-coaching/exports/2026-06-24-main-05-appdemo-why-easy-runs-need-coaching-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:45:56.727Z",
+      "slideshow_id": "2026-06-24-watch-01-settings-set-hr-alerts-before-easy-runs",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:45:56.727Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203634200102934",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203634200102934",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-watch-01-settings-set-hr-alerts-before-easy-runs/exports/2026-06-24-watch-01-settings-set-hr-alerts-before-easy-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:46:03.715Z",
+      "slideshow_id": "2026-06-24-watch-02-topwatch-best-running-watch-depends-on-your-run",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:46:03.715Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203922424039446",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203922424039446",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-watch-02-topwatch-best-running-watch-depends-on-your-run/exports/2026-06-24-watch-02-topwatch-best-running-watch-depends-on-your-run-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:46:09.638Z",
+      "slideshow_id": "2026-06-24-watch-03-fit-your-watch-fit-changes-heart-rate",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:46:09.638Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655204479976884246",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655204479976884246",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-watch-03-fit-your-watch-fit-changes-heart-rate/exports/2026-06-24-watch-03-fit-your-watch-fit-changes-heart-rate-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:46:16.937Z",
+      "slideshow_id": "2026-06-24-watch-04-battery-watch-battery-matters-on-long-runs",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:46:16.937Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203922424137750",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203922424137750",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-watch-04-battery-watch-battery-matters-on-long-runs/exports/2026-06-24-watch-04-battery-watch-battery-matters-on-long-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T05:46:23.056Z",
+      "slideshow_id": "2026-06-24-watch-05-zones-check-watch-zones-before-easy-runs",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T05:46:23.056Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655203634200217622",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655203634200217622",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-24-watch-05-zones-check-watch-zones-before-easy-runs/exports/2026-06-24-watch-05-zones-check-watch-zones-before-easy-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T08:02:51.252Z",
+      "slideshow_id": "2026-06-25-wish-your-running-pace-is-not-the-test",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T08:02:51.252Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655240395797858326",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655240395797858326",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-25-wish-your-running-pace-is-not-the-test/exports/2026-06-25-wish-your-running-pace-is-not-the-test-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-25T20:04:56.687Z",
+      "slideshow_id": "2026-06-25-wish-why-running-feels-too-hard-early",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-25T20:04:56.687Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655426304623413270",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655426304623413270",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-25-wish-why-running-feels-too-hard-early/exports/2026-06-25-wish-why-running-feels-too-hard-early-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T00:02:41.641Z",
+      "slideshow_id": "2026-06-26-reframe-why-watch-checks-make-easy-runs-harder",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T00:02:41.641Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655487305456650262",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655487305456650262",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-reframe-why-watch-checks-make-easy-runs-harder/exports/2026-06-26-reframe-why-watch-checks-make-easy-runs-harder-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:40:18.228Z",
+      "slideshow_id": "2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:40:18.228Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589423754709014",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589423754709014",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy/exports/2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:40:26.217Z",
+      "slideshow_id": "2026-06-26-main-02-notworkout-stop-turning-easy-runs-into-workouts",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:40:26.217Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589589540833302",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589589540833302",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-main-02-notworkout-stop-turning-easy-runs-into-workouts/exports/2026-06-26-main-02-notworkout-stop-turning-easy-runs-into-workouts-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:40:32.835Z",
+      "slideshow_id": "2026-06-26-main-03-zoneboring-zone-2-should-feel-almost-boring",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:40:32.835Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589285617534998",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589285617534998",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-main-03-zoneboring-zone-2-should-feel-almost-boring/exports/2026-06-26-main-03-zoneboring-zone-2-should-feel-almost-boring-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:40:41.178Z",
+      "slideshow_id": "2026-06-26-main-04-minute10-why-easy-runs-get-hard-after-minute-10",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:40:41.178Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589855732205590",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589855732205590",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-main-04-minute10-why-easy-runs-get-hard-after-minute-10/exports/2026-06-26-main-04-minute10-why-easy-runs-get-hard-after-minute-10-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:40:55.622Z",
+      "slideshow_id": "2026-06-26-watch-01-applezones-set-apple-watch-zones-before-easy-runs",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:40:55.622Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589982895982614",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589982895982614",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-watch-01-applezones-set-apple-watch-zones-before-easy-runs/exports/2026-06-26-watch-01-applezones-set-apple-watch-zones-before-easy-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:41:02.186Z",
+      "slideshow_id": "2026-06-26-watch-02-strapreadings-a-loose-strap-can-cause-bad-hr-readings",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:41:02.186Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589855732320278",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589855732320278",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-watch-02-strapreadings-a-loose-strap-can-cause-bad-hr-readings/exports/2026-06-26-watch-02-strapreadings-a-loose-strap-can-cause-bad-hr-readings-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:41:08.760Z",
+      "slideshow_id": "2026-06-26-watch-03-longrunwatch-best-running-watch-depends-on-your-long-run",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:41:08.760Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655589982896031766",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655589982896031766",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-watch-03-longrunwatch-best-running-watch-depends-on-your-long-run/exports/2026-06-26-watch-03-longrunwatch-best-running-watch-depends-on-your-long-run-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:41:23.024Z",
+      "slideshow_id": "2026-06-26-watch-05-gpsbattery-gps-mode-matters-before-long-runs",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:41:23.024Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655590361570609174",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655590361570609174",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-watch-05-gpsbattery-gps-mode-matters-before-long-runs/exports/2026-06-26-watch-05-gpsbattery-gps-mode-matters-before-long-runs-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T06:43:17.417Z",
+      "slideshow_id": "2026-06-26-watch-04-hralerts-use-hr-alerts-before-checking-pace",
+      "platform": "tiktok",
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "account_name": "runwatchlab",
+      "account_profile": "runwatchlab",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T06:43:17.417Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655590567006554134",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655590567006554134",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-watch-04-hralerts-use-hr-alerts-before-checking-pace/exports/2026-06-26-watch-04-hralerts-use-hr-alerts-before-checking-pace-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T12:19:49.983Z",
+      "slideshow_id": "2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy-text-rotation-v2",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T12:19:49.983Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655677565578774550",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655677565578774550",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy-text-rotation-v2/exports/2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy-text-rotation-v2-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    },
+    {
+      "scheduled_at": "2026-06-26T17:20:56.752Z",
+      "slideshow_id": "2026-06-26-main-02-notworkout-stop-turning-easy-runs-into-workouts-text-rotation-v2",
+      "platform": "tiktok",
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "account_name": "Everyday Runner Lab",
+      "account_profile": "everydayrunnerlab0",
+      "publish_mode": "inbox-file",
+      "output_mode": "photo_carousel",
+      "media_type": "PHOTO",
+      "status": "sent_to_inbox",
+      "final_state": {
+        "checked_at": "2026-06-26T17:20:56.752Z",
+        "state": "SEND_TO_USER_INBOX",
+        "releaseURL": null,
+        "releaseId": "p_inbox_url~v2.7655755026858002435",
+        "error": null
+      },
+      "tiktok_result": {
+        "mode": "tiktok_photo_media_upload_inbox",
+        "publish_id": "p_inbox_url~v2.7655755026858002435",
+        "status": "SEND_TO_USER_INBOX"
+      },
+      "payload": "content/slideshows/2026-06-26-main-02-notworkout-stop-turning-easy-runs-into-workouts-text-rotation-v2/exports/2026-06-26-main-02-notworkout-stop-turning-easy-runs-into-workouts-text-rotation-v2-tiktok-photo-inbox-payload.json",
+      "note": "TikTok photo slideshow was sent to the account inbox. User still presses Post in TikTok."
+    }
+  ]
+}

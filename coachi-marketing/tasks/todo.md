@@ -1,5 +1,42 @@
 # tasks/todo.md
 
+- 2026-06-27 (10:04 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred queue and one run-local sourced recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` at `outputs/full-loop/2026-06-27-080203/full-loop-report.json`; recovery bank `outputs/full-loop/2026-06-27-direct-body-gets-tense/single-problem-bank.json` with source id `rp_2026_06_27_body_gets_tense_before_hard_reddit_tiktok` also returned zero candidates at `outputs/full-loop/2026-06-27-direct-body-gets-tense/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, inbox upload, placeholder upload, direct-public post, or Postiz public schedule.
+- 2026-06-27 (10:04 CEST): Full engagement loop **queued-only with OpenClaw/CDP proof and no public actions**. Candidate queue rebuilt at `outputs/daily/2026-06-27-1003-post-slideshow-engagement-candidates.json` (`32` candidates; Reddit `19`, TikTok `5`, Instagram `4`, X `4`; build command reported `2` duplicates suppressed). Canonical `growth:daily --skip-slideshow --execute` still fails on the app-side daily-pack resolver. OpenClaw health was live and Chrome CDP `127.0.0.1:18800` returned version metadata, but `/json/list` had zero tabs; Clawbot CDP `127.0.0.1:9333` was down. Public actions completed: `0`; ledger, viral storagebag, and shared hook/text banks unchanged. Run note: `outputs/daily/2026-06-27-1004-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-27 (06:04 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred queue and one run-local sourced recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` at `outputs/full-loop/2026-06-27-040231/full-loop-report.json`; recovery bank `outputs/full-loop/2026-06-27-direct-hills-change-the-run/single-problem-bank.json` with source id `rp_2026_06_27_hills_change_the_run_tiktok_reddit` also returned zero candidates at `outputs/full-loop/2026-06-27-direct-hills-change-the-run/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, inbox upload, placeholder upload, direct-public post, or Postiz public schedule.
+- 2026-06-27 (06:04 CEST): Full engagement loop **queued-only with OpenClaw/CDP proof and no public actions**. Candidate queue rebuilt at `outputs/daily/2026-06-27-0604-post-slideshow-engagement-candidates.json` (`32` candidates; Reddit `19`, TikTok `5`, Instagram `4`, X `4`; `2` duplicates suppressed). Canonical `growth:daily --skip-slideshow --execute` still fails on the app-side daily-pack resolver. OpenClaw health was live and Chrome CDP `127.0.0.1:18800` returned version metadata, but `/json/list` had zero tabs and Playwright CDP attach failed with `Browser.setDownloadBehavior`; Clawbot CDP `127.0.0.1:9333` was down. Public actions completed: `0`; ledger, viral storagebag, and shared hook/text banks unchanged. Run note: `outputs/daily/2026-06-27-0604-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-26 (22:01 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred queue and one run-local sourced recovery bank**. Preferred `npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` at `outputs/full-loop/2026-06-26-195907/full-loop-report.json`; recovery bank `outputs/full-loop/2026-06-26-direct-stop-judging-minute-one/single-problem-bank.json` with source id `rp_2026_06_26_stop_judging_minute_one_tiktok_reddit` also returned zero candidates at `outputs/full-loop/2026-06-26-direct-stop-judging-minute-one/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, inbox upload, placeholder upload, direct-public post, or Postiz public schedule.
+- 2026-06-26 (22:01 CEST): Full engagement loop **queued-only with OpenClaw proof and no public actions**. Candidate queue rebuilt at `outputs/daily/2026-06-26-2000-post-slideshow-engagement-candidates.json` (`32` candidates; Reddit `19`, TikTok `5`, Instagram `4`, X `4`; `2` duplicates suppressed). Canonical `growth:daily --skip-slideshow --execute` still fails on the app-side daily-pack resolver. OpenClaw health and CDP `127.0.0.1:18800` were reachable, but TikTok showed `Log in`, Instagram stayed at saved-profile `Continue everydayrunnerlab`, Reddit was logged out and showed an account-banned/challenge surface, and X was logged out. Ledger, viral storagebag, and shared hook/text banks unchanged. Run note: `outputs/daily/2026-06-26-2201-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-26 (21:59 CEST): TikTok slideshow inbox retry **still blocked by pending-share limit**. Retried `Why Zone 2 feels boring`; readiness, duplicate check, JPEG export, public media prep, and payload generation passed, then TikTok returned `403 spam_risk_too_many_pending_share` at `/v2/post/publish/content/init/`. No new inbox upload created. Still in TikTok inbox: `Why your first running mile lies` (`p_inbox_url~v2.7655677565578774550`) and `Why your recovery run turns hard` (`p_inbox_url~v2.7655755026858002435`). Remaining unsent but QA-ready: `Why Zone 2 feels boring`, `Why heart rate climbs late`, and `Why watch checks feel urgent`.
+- 2026-06-26 (19:21 CEST): Updated TikTok slideshow inbox retry **sent 1 more repaired pack and stopped at TikTok pending-share block**. Now in TikTok inbox: `Why your first running mile lies` (`p_inbox_url~v2.7655677565578774550`) and `Why your recovery run turns hard` (`p_inbox_url~v2.7655755026858002435`). Attempted `Why Zone 2 feels boring`; preflight/media/payload passed but TikTok returned `403 spam_risk_too_many_pending_share`. Remaining unsent but QA-ready: `Why Zone 2 feels boring`, `Why heart rate climbs late`, and `Why watch checks feel urgent`.
+- 2026-06-26 (18:04 CEST): TikTok slideshow upload loop **blocked before pack creation**. Preferred production command returned zero safe candidates at `outputs/full-loop/2026-06-26-155752/full-loop-report.json`; one run-local sourced recovery bank from `inputs/research/reddit-winning-language-bank.md` (`outputs/full-loop/2026-06-26-direct-breath-before-pace/single-problem-bank.json`) also returned `candidate_count: 0` at `outputs/full-loop/2026-06-26-direct-breath-before-pace/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, placeholder upload, direct-public post, or Postiz public schedule.
+- 2026-06-26 (18:04 CEST): Full engagement loop **queued-only with OpenClaw proof**. Candidate queue rebuilt at `outputs/daily/2026-06-26-1600-post-slideshow-engagement-candidates.json` (`32` candidates; Reddit `19`, TikTok `5`, Instagram `4`, X `4`). Canonical `growth:daily --skip-slideshow --execute` is still blocked by the app-side daily-pack resolver. OpenClaw browser started on CDP `127.0.0.1:18800`, but TikTok exposed `Log in`, Instagram stopped at saved-profile `Continue everydayrunnerlab`, Reddit hit JS/recaptcha verification, and X was logged out. Public actions completed: `0`; ledger, viral storagebag, and shared hook/text banks unchanged. Run note: `outputs/daily/2026-06-26-1804-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-26 (15:05 CEST): Maximum slideshow rotation rule **implemented and verified**. The topic generator now prefers fresh `format_id`, fresh hook `source_family_id`, and fresh `problem_type` before allowing any repeat in a batch, and marks fallbacks in `content_rotation`, `hook_family_rotation`, and `problem_type_rotation`. Updated `inputs/research/tiktok-proven-slideshow-text-bank.json` to `hook_rotation_policy.mode = maximum_rotation`. Verification passed: `npm test -- scripts/__tests__/generate_slideshow_topics_hook_dedupe.test.mjs` and `npm run slideshow:validate`.
+- 2026-06-26 (14:21 CEST): TikTok slideshow text-rotation repair **created 5 repaired `-text-rotation-v2` packs** after the last uploads looked too similar. New hook set: `Why your first running mile lies`, `Why your recovery run turns hard`, `Why Zone 2 feels boring`, `Why heart rate climbs late`, and `Why watch checks feel urgent`. Captions now use the product-description language around live voice guidance, workout goals/heart-rate zones, slow down/speed up/keep going, and too hard/not hard enough/on target. Run note: `outputs/daily/2026-06-26-1421-tiktok-slideshow-text-rotation-repair.md`.
+- 2026-06-26 (14:21 CEST): Upload/review status: first repaired pack `2026-06-26-main-01-firstmile-your-first-mile-should-feel-too-easy-text-rotation-v2` uploaded to TikTok inbox with publish id `p_inbox_url~v2.7655677565578774550` and `SEND_TO_USER_INBOX`. Second repaired pack passed production preflight and public-media prep but TikTok blocked the init call with `403 spam_risk_too_many_pending_share`; stopped remaining upload attempts. The other `3` repaired packs passed inbox preflight and are ready once pending TikTok inbox shares are cleared.
+- 2026-06-26 (14:21 CEST): Review notes: added hook-family rotation to `scripts/generate_slideshow_topics.mjs`, documented `hook_rotation_policy` in `inputs/research/tiktok-proven-slideshow-text-bank.json`, and added regression coverage. Verification passed: render + production QA for all `5`, inbox preflight for all `5`, `npm test -- scripts/__tests__/generate_slideshow_topics_hook_dedupe.test.mjs`, and `npm run slideshow:validate`.
+- 2026-06-26 (13:14 CEST): Finish-20 Android Coachi mention batch **completed at 20/20 verified no-link public actions**. The 12:56 continuation added the final `10`: TikTok `5` comments (`revclip.llc`, `solja370`, `franziskaschoebel`, `jaypicksthingsup`, `bstoner`), TikTok `2` replies under `bstoner`, Reddit `2` no-link `r/androidapps` replies from `AlarmingTradition961`, and Instagram `1` comment on `DNjB_ZLxcZl`. Direct links: `0`. Ledger rows added: `10` posted. Full run note: `outputs/daily/2026-06-25-2110-android-coachi-20-mention-run.md`.
+- 2026-06-26 (13:14 CEST): Review notes: TikTok stopped at `5` comments + `2` replies for the window; Reddit stopped at `2` earned no-link mentions and required a cooldown wait before the second reply; Instagram was limited to one carefully scoped comment because the account still had an earlier removed-comment notice in notifications. X remains blocked at `x.com/account/access`. Skipped duplicate-visible TikToks (`lawyerontherun`, `cnozrun`), a lead-magnet Garmin thread (`djc_fitness`), a medical-risk HR thread (`millieeet`), and thin context (`nick.endurance`).
+- 2026-06-26 (08:14 CEST): Finish-20 Android Coachi mention continuation **posted 8 additional verified no-link public comments** using one claimed Chrome tab and the user-provided App Store/product-description language. TikTok posted and verified `5` comments (`runyonder`, `the_26.2`, `thekatiemadden`, `runwithrally`, `feji.studios`); Instagram posted and verified `3` comments (`DXfOC8BjdrE`, `DVANfVzEqw_`, `DZHt-vrgC_S`). Android early-test CTA remained `DM/comment Android`; direct links: `0`. Batch status is now `10/20` verified posted. Ledger rows added: `9` (`8` posted, `1` Instagram `removed_after_post`). Full run note: `outputs/daily/2026-06-25-2110-android-coachi-20-mention-run.md`.
+- 2026-06-26 (08:14 CEST): Review notes: Instagram initially verified `https://www.instagram.com/p/DYKhGEoEkT2/`, then surfaced a removal notice, so it is not counted and Instagram posting stopped. TikTok is at the stretch comment cap for the window. Skipped `socialtrail.app` as competitor-adjacent poaching risk and `liamhenderson.run` as coach lead-gen; `marianne.grm` loaded blank. X remains blocked at account-access/security verification. Reddit remains exact-prepared-batch approval-gated.
+- 2026-06-26 (05:57 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred queue and one run-local sourced recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` for `beginner_runner`; the other active niches returned `no_new_matching_sourced_problems` at `outputs/full-loop/2026-06-26-035513/full-loop-report.json`. Created recovery bank `outputs/full-loop/2026-06-26-direct-boring-start-saves-run/single-problem-bank.json` from TikTok easy-run start-too-fast language plus `inputs/research/reddit-winning-language-bank.md` with source id `rp_2026_06_26_boring_start_saves_run_tiktok`; recovery rerun also produced zero valid topic candidates at `outputs/full-loop/2026-06-26-direct-boring-start-saves-run/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, or inbox upload. Run note: `outputs/daily/2026-06-26-0557-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-26 (05:57 CEST): Full engagement loop **approval-queued with no public actions**. Rebuilt `outputs/daily/2026-06-26-0556-post-slideshow-engagement-candidates.json` with viral hook research disabled (`34` candidates, `2` duplicates suppressed; Reddit `19`, TikTok `5`, Instagram `4`, X `6`). Canonical `growth:daily --skip-slideshow --execute` failed because the app-side `run-todays-pack.sh --date 2026-06-26 --json` resolver returned non-zero. OpenClaw health was live, Chrome CDP `127.0.0.1:9333` was unavailable, TikTok/Instagram public pages were reachable but not signed-in verified, Reddit returned public/challenge HTML, and X returned `403`. Public actions completed: `0`; engagement ledger unchanged; viral storagebag unchanged; hook/text banks unchanged.
+- 2026-06-25 (21:58 CEST): Finish-20 Coachi mention attempt **stopped before new public actions**. TikTok was already at the stretch cap for the active 4-hour window, X remained blocked by account-access/security verification, and Reddit still requires exact prepared-batch approval. Instagram was the only remaining safe live channel, but Chrome could only expose tab metadata for `https://www.instagram.com/p/DXfOC8BjdrE/`; claim/selected/direct-tab access timed out or returned browser-unavailable errors, so no duplicate-check or repost was attempted. Current finish status: `2/20` verified posted, `18/20` queued/blocked. Next safe live step is to verify `DXfOC8BjdrE` for an existing `everydayrunnerlab` comment, then use remaining Instagram capacity only if Chrome is stable.
+- 2026-06-25 (21:10 CEST): Android Coachi mention run **found 20 targets and posted 2 verified no-link Coachi/Android tester invitations**. TikTok posted on `https://www.tiktok.com/@laurasrunninglife/photo/7624444731589676310` for Runna/Garmin app mismatch; Instagram posted on `https://www.instagram.com/p/DZo9MXojHmr/` for Zone 2 drift/session-control pain. Both invited Android early testers to DM/comment `Android`; direct links: `0`; ledger rows added: `2`. Full run note: `outputs/daily/2026-06-25-2110-android-coachi-20-mention-run.md`; generated queue: `outputs/daily/2026-06-25-2110-android-coachi-mention-candidates.json`.
+- 2026-06-25 (21:10 CEST): Review notes: stopped live posting after Chrome extension instability during Instagram `https://www.instagram.com/p/DXfOC8BjdrE/`; that attempted comment is **unverified** and must be checked before any repost. X is still blocked at account-access/security verification. Reddit Android/app-intent targets were found but not posted because public Reddit actions require exact prepared-batch confirmation.
+- 2026-06-25 (20:52 CEST): Engagement loop **posted and logged 5 verified no-link comments** using one claimed Chrome tab. TikTok: `4` comments as `Everyday Runner Lab` on `@aannnnnnnnnniiee`, `@the_jetlag_runner`, `@puddyruns`, and `@liamt_fit`; Instagram: `1` comment as `everydayrunnerlab` on `https://www.instagram.com/p/DVML_ZYj7P2/`. Coachi mentions: `3`; direct links: `0`; ledger rows added: `5`. Run note: `outputs/daily/2026-06-25-2052-engagement-loop.md`; candidate queue: `outputs/daily/2026-06-25-2052-engagement-candidates.json`.
+- 2026-06-25 (20:52 CEST): Review notes: skipped TikTok `@boltinben` as low-value, skipped Instagram `DYffyc0OLjw` because an existing `everydayrunnerlab` comment was visible, and skipped Instagram `DZDye4bjUxu` / `DSyKTqhCI9m` because they were mostly keyword lead-magnet replies. X remains blocked by account-access verification. Reddit was not used because public Coachi Reddit comments still require exact prepared-batch confirmation.
+- 2026-06-25 (08:24 CEST): Cross-social Coachi mention run **posted 10 and found 20 total targets**. Used one claimed Chrome tab. Posted and verified `5` TikTok no-link Coachi comments and `5` Instagram no-link Coachi comments; all `10` were logged to `inputs/performance/engagement-ledger.json`. Full run note: `outputs/daily/2026-06-25-cross-social-coachi-20-mention-run.md`; candidate queue: `outputs/daily/2026-06-25-coachi-20-mention-candidates.json`; scorecard: `inputs/performance/2026-06-25-scorecard.md`.
+- 2026-06-25 (08:24 CEST): Remaining `10/20` Coachi mention targets **queued, not posted**. X had `4` project-drop threads queued but Chrome is blocked at `x.com/account/access` Cloudflare verification. Reddit had `4` app/request-fit threads queued but the Reddit workflow requires specific prepared-batch confirmation before posting Coachi mentions. Two extra TikTok/Instagram targets were held because platform comment caps were reached. Direct links used in posted comments: `0`.
+- 2026-06-25 (08:04 CEST): Reddit discussion loop **posted and logged**. Used one claimed Chrome tab to submit a no-link `r/beginnerrunning` discussion thread: `https://old.reddit.com/r/beginnerrunning/comments/1uf1ppe/when_your_watch_number_and_your_body_disagree_on/`. Chrome verified author `AlarmingTradition961`, visible title/body, no Coachi mention, and no App Store link. Logged the action with `growth:log-engagement`. Run note: `outputs/daily/2026-06-25-reddit-discussion-thread-and-subreddit-access.md`.
+- 2026-06-25 (08:04 CEST): Reddit access scan **found postable surfaces but not promotion approval**. Signed-in old-Reddit submit-form checks showed self-post access for `r/beginnerrunning`, `r/C25K`, `r/AppleWatchFitness`, `r/Garmin`, `r/runninglifestyle`, `r/AppleWatchApps`, `r/applewatchultra`, `r/Strava`, `r/indianrunners`, and `r/running`. Keep `r/AppleWatch` avoided because the prior live loop confirmed the account is banned there. Future generic subreddit actions should stay no-link/reply-first unless a thread explicitly asks for app recommendations or the subreddit explicitly allows developer posts.
+- 2026-06-25 (05:55 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred queue and one run-local sourced recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` for `beginner_runner`; the other active niches returned `no_new_matching_sourced_problems` at `outputs/full-loop/2026-06-25-035129/full-loop-report.json`. Created recovery bank `outputs/full-loop/2026-06-25-direct-protect-minute-2/single-problem-bank.json` from `inputs/research/reddit-winning-language-bank.md` with source id `rp_2026_06_25_protect_minute_2_reddit`; recovery rerun still produced zero valid topic candidates at `outputs/full-loop/2026-06-25-direct-protect-minute-2/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, or FILE_UPLOAD attempt. Run note: `outputs/daily/2026-06-25-0555-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-25 (05:55 CEST): Full engagement loop **approval-queued with CDP surface proof and no public actions**. Rebuilt `outputs/daily/2026-06-25-engagement-candidates.json` with viral hook research disabled (`34` candidates, `2` duplicates suppressed; Reddit `19`, TikTok `5`, Instagram `4`, X `6`). Canonical `growth:daily --execute --skip-slideshow` failed because the app-side `run-todays-pack.sh --date 2026-06-25 --json` resolver returned non-zero. OpenClaw health and Chrome CDP were reachable; TikTok exposed usable search result links, Reddit search was noisy/off-topic, Instagram lacked reliable post context, and X was blocked by Cloudflare. Exact TikTok approval candidates saved in the run note. Public actions completed: `0`; engagement ledger unchanged; viral storagebag unchanged; hook/text banks unchanged.
+- 2026-06-25 (01:58 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred production queue and one run-local sourced recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` for `beginner_runner`; the other active niches returned `no_new_matching_sourced_problems` at `outputs/full-loop/2026-06-24-235130/full-loop-report.json`. Created recovery bank `outputs/full-loop/2026-06-25-direct-let-alert-stay-quiet/single-problem-bank.json` from `inputs/research/reddit-winning-language-bank.md` with source id `rp_2026_06_25_let_alert_stay_quiet_reddit`; after one targeted hook/problem-type adjustment, the recovery rerun still produced zero valid topic candidates at `outputs/full-loop/2026-06-25-direct-let-alert-stay-quiet-rerun/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, or FILE_UPLOAD attempt. Run note: `outputs/daily/2026-06-25-0158-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-25 (01:58 CEST): Full engagement loop **approval-queued with live-browser verification and no public actions**. Rebuilt `outputs/daily/2026-06-25-engagement-candidates.json` with viral hook research disabled (`32` candidates, `2` duplicates suppressed). Canonical `growth:daily --execute --skip-slideshow` failed because the app-side `run-todays-pack.sh --date 2026-06-25 --json` resolver returned non-zero. Started live Chrome through `clawbot-browser.sh`; Reddit, TikTok, and Instagram were signed in, X was blocked by Cloudflare verification, TikTok search exposed no usable result cards, and Instagram search stayed loading. Prepared approval-gated Reddit/TikTok/Instagram/X action queue in the run note. Public actions completed: `0`; engagement ledger unchanged; viral storagebag unchanged; hook/text banks unchanged.
+- 2026-06-23 (21:03 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred production queue and one fresh dated recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` for `beginner_runner`; the other active niches returned `no_new_matching_sourced_problems` at `outputs/full-loop/2026-06-23-190100/full-loop-report.json`. Created run-local recovery bank `outputs/full-loop/2026-06-23-direct-warmup-not-proof/single-problem-bank.json` from existing TikTok runner-language research plus Reddit language-bank support with source id `rp_2026_06_23_warmup_not_proof_tiktok` and angle `The warm-up is not proof`; recovery rerun also produced zero valid topic candidates at `outputs/full-loop/2026-06-23-190231/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, or FILE_UPLOAD attempt. Run note: `outputs/daily/2026-06-23-2103-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-23 (21:03 CEST): Full engagement loop **approval-queued with no public actions**. Rebuilt `outputs/daily/2026-06-23-engagement-candidates.json` with viral hook research disabled (command reported `32` candidates and `2` duplicate suppressions; parsed queue contains Reddit `19`, TikTok `5`, Instagram `4`, X `6`). Canonical `growth:daily --skip-slideshow --execute` failed because app-side `run-todays-pack.sh --date 2026-06-23 --json` returned non-zero. No callable in-app browser controls were exposed, Clawbot CDP refused `127.0.0.1:9333`, and the fallback executor also failed before output because it depends on the same app-side pack resolver. Public actions completed: `0`; engagement ledger unchanged; viral storagebag unchanged; hook/text banks unchanged.
+- 2026-06-23 (15:13 CEST): TikTok slideshow upload loop **blocked before pack creation after preferred production queue and one fresh dated recovery bank**. Preferred `/opt/homebrew/bin/npm run slideshow:full-loop -- --mode production --count 1 --generate-openai-hook --publish-mode manual-review` returned `candidate_count: 0` for `beginner_runner`; the other active niches returned `no_new_matching_sourced_problems` at `outputs/full-loop/2026-06-23-131141/full-loop-report.json`. Created run-local recovery bank `outputs/full-loop/2026-06-23-direct-run-one-not-test/single-problem-bank.json` from existing TikTok runner-language research plus Reddit language-bank support with source id `rp_2026_06_23_run_one_not_test_tiktok` and angle `Run one is not a test`; recovery rerun also produced zero valid topic candidates at `outputs/full-loop/2026-06-23-131221/full-loop-report.json`. No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, or FILE_UPLOAD attempt. Run note: `outputs/daily/2026-06-23-1513-tiktok-slideshow-upload-engagement-loop.md`.
+- 2026-06-23 (15:13 CEST): Full engagement loop **approval-queued with no public actions**. Rebuilt `outputs/daily/2026-06-23-engagement-candidates.json` with viral hook research disabled (`34` candidates, `2` duplicate suppressions; Reddit `19`, TikTok `5`, Instagram `4`, X `6`). Canonical `growth:daily --skip-slideshow --execute` failed because app-side `run-todays-pack.sh --date 2026-06-23 --json` returned non-zero. OpenClaw health and Chrome CDP were reachable, but Chrome CDP `/json/list` returned zero tabs, so signed-in social surfaces/composers could not be verified safely. Safe fallback wrote `outputs/daily/2026-06-23-clawbot-engagement-fallback.md` and `.json`; exact approval queue is in the combined run note. Public actions completed: `0`; engagement ledger unchanged; viral storagebag unchanged; hook/text banks unchanged.
 - 2026-06-22 (22:51 CEST): Added App Store Connect metadata/screenshot update pack to improve product-page conversion before scaling traffic. New artifacts: `outputs/daily/2026-06-22-appstore-connect-update-pack.md` and `.json`. Primary fields: app name `Coachi: AI Run Coach` (`20/30`), subtitle `Voice cues by heart rate` (`24/30`), promotional text `144/170`, keywords `91/100` bytes, runner-first description `911/4000`, and a 6-frame screenshot sequence that opens with live AI run coaching instead of setup. Added validator `scripts/validate_appstore_metadata_pack.mjs`, npm alias `growth:validate-appstore-metadata`, and tests in `scripts/__tests__/validate_appstore_metadata_pack.test.mjs` to enforce App Store field limits, keyword hygiene, no public-action contamination, and screenshot sequencing. Verification: `node --test scripts/__tests__/validate_appstore_metadata_pack.test.mjs scripts/__tests__/audit_appstore_listing.test.mjs` -> `9` passed; `npm run growth:validate-appstore-metadata -- --input outputs/daily/2026-06-22-appstore-connect-update-pack.json` -> passed. Landing page unchanged; public actions completed: `0`; engagement ledger unchanged.
 - 2026-06-22 (22:45 CEST): Added repeatable App Store listing conversion audit for the 10,000-download push. New script `scripts/audit_appstore_listing.mjs` fetches live Apple lookup metadata, parses the public App Store page screenshot shelf, reads campaign readiness when present, and writes both JSON and Markdown reports. Added npm alias `growth:audit-appstore-listing` and focused tests in `scripts/__tests__/audit_appstore_listing.test.mjs`. Live output: `outputs/daily/2026-06-22-appstore-listing-audit.json` and `outputs/daily/2026-06-22-appstore-conversion-audit.md`; current download-readiness score is `43/100` (`conversion_risk`). Findings: title `Coachi: Voice fitness Coach` needs casing/runner alignment, US listing has `0` ratings, NO listing has `4` ratings at `5`, the public page has `6` screenshots despite lookup API returning `0`, screenshot 1 leads with setup instead of live AI run coaching, and `APP_STORE_CAMPAIGN_PROVIDER_TOKEN` is still missing for App Store Connect campaign attribution. Verification: `node --test scripts/__tests__/audit_appstore_listing.test.mjs scripts/__tests__/appstore_campaign_readiness.test.mjs scripts/__tests__/log_appstore_campaign_result.test.mjs` -> `9` passed; live `npm run growth:audit-appstore-listing -- --out-json outputs/daily/2026-06-22-appstore-listing-audit.json --out-md outputs/daily/2026-06-22-appstore-conversion-audit.md` -> passed. Landing page unchanged; public actions completed: `0`; engagement ledger unchanged.
 - 2026-06-22 (22:34 CEST): Added App Store campaign result logger for baseline and follow-up measurement. New script `scripts/log_appstore_campaign_result.mjs` appends real measured campaign rows to `inputs/performance/appstore-campaign-results.json` and supports `--dry-run` previews to avoid fake metrics. Added npm alias `growth:log-appstore-result` and focused tests in `scripts/__tests__/log_appstore_campaign_result.test.mjs`. Verification: `node --test scripts/__tests__/log_appstore_campaign_result.test.mjs scripts/__tests__/appstore_campaign_readiness.test.mjs scripts/__tests__/preflight_approval_queue.test.mjs` -> 11 passed; dry-run baseline preview wrote `outputs/daily/2026-06-22-appstore-baseline-dry-run.json` with `public_actions_posted: 0`; readiness gate rerun stayed ready for approval execution with provider token incomplete. Public actions completed: `0`; engagement ledger unchanged.
@@ -1177,3 +1214,567 @@
 - Added `outputs/daily/2026-06-22-appstore-campaign-link-bank.md` after the app repo gained non-landing `/app-store` and `/ios` redirect routes. The link bank maps X, Reddit, TikTok, Instagram, Pinterest, email, DM, and offline sources to Coachi-owned short links.
 - Updated the sprint copy to use `https://coachi.no/app-store?source=<source>&campaign=<campaign>` links instead of raw App Store URLs where public short links are appropriate.
 - No public actions were taken and no engagement ledger rows were added.
+
+## Review (2026-06-22 23:12 TikTok slideshow upload + engagement loop)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory, and synced `Codebase_guide.MD` before acting.
+- Ran the preferred production slideshow command with Images 2.0 hook generation and manual-review publish mode.
+- Normal queue result: no pack created. `beginner_runner` produced `candidate_count: 0`; other active niches returned `no_new_matching_sourced_problems`.
+- Created one dated recovery bank at `outputs/full-loop/2026-06-22-direct-protect-minute-2-again/single-problem-bank.json` from `inputs/research/reddit-winning-language-bank.md`, without mutating shared hook/text banks.
+- Recovery angle was `Protect minute 2 on easy runs`, source problem `rp_2026_06_22_protect_minute_2_again_reddit`.
+- Recovery production rerun also produced zero valid topic candidates, so no Images 2.0 hook, CTA, caption export, MP4, TikTok publish id, or inbox upload was created.
+- Rebuilt the ranked engagement queue with `growth:engagement-candidates`: 34 candidates and 2 duplicate suppressions.
+- `growth:daily --skip-slideshow --execute` still failed because app-side `run-todays-pack.sh --date 2026-06-22 --json` returned non-zero.
+- Verified Chrome CDP and OpenClaw health are reachable, but direct Playwright CDP attach failed with `Browser.setDownloadBehavior`; ran the safe Clawbot fallback as approval-queue only.
+- Saved the run note and exact approval queue in `outputs/daily/2026-06-22-2312-tiktok-slideshow-upload-engagement-loop.md`.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text banks were mutated.
+
+## Review (2026-06-23 07:11 TikTok slideshow upload + engagement loop)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory, and synced `Codebase_guide.MD` before acting.
+- Ran preferred production slideshow command with Images 2.0 hook generation and manual-review publish mode.
+- Normal queue result: no pack created. `beginner_runner` produced `candidate_count: 0`; other active niches returned `no_new_matching_sourced_problems`.
+- Created one dated recovery bank at `outputs/full-loop/2026-06-23-direct-watch-number-not-coach/single-problem-bank.json` from `inputs/research/reddit-winning-language-bank.md`, without mutating shared hook/text banks.
+- Recovery angle was `A watch number is not a coach`, source problem `rp_2026_06_23_watch_number_not_coach_reddit`.
+- Recovery production rerun also produced zero valid topic candidates, so no Images 2.0 hook, CTA, caption export, MP4, TikTok publish id, or inbox upload was created.
+- Rebuilt the ranked engagement queue with `growth:engagement-candidates`: 34 candidates and 2 duplicate suppressions.
+- `growth:daily --skip-slideshow --execute` failed because app-side `run-todays-pack.sh --date 2026-06-23 --json` returned non-zero.
+- Ran the safe Clawbot fallback; Clawbot/OpenClaw health was reachable, but raw CDP reported zero tabs and direct Clawbot snapshots failed with `Browser.setDownloadBehavior`, so signed-in social surfaces could not be verified or controlled safely.
+- Saved the run note in `outputs/daily/2026-06-23-0711-tiktok-slideshow-upload-engagement-loop.md` and fallback queue in `outputs/daily/2026-06-23-clawbot-engagement-fallback.md`.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text banks were mutated.
+
+## Review (2026-06-23 dual-channel TikTok slideshow inbox batch)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, and synced `Codebase_guide.MD` before acting.
+- Generated 10 production slideshow packs in `outputs/full-loop/2026-06-23-dual-channel-5x/`: 5 main and 5 Watch.
+- Applied prior corrections: disabled hook fallback, kept fresh Images 2.0 hook images, enforced short two-line slide-1 hooks, used batch-local Supabase usage rotation, and generated Watch packs with the Runner Watch Lab identity reference only.
+- Repaired render/QA issues found during generation: shortened over-wrapping hooks, changed one metric-only Watch hook to runner language, rotated duplicated CTA assets, and changed repeated CTA text before upload.
+- Verification passed in `outputs/full-loop/2026-06-23-dual-channel-5x/artifact-audit.json`: 10 QA-passing packs, 10 unique hook images, 60/60 unique non-hook assets, no hook fallbacks, and Watch provenance using `runner-watch-lab-lifelong-runner-v1-reference.png`.
+- Contact sheet saved at `outputs/full-loop/2026-06-23-dual-channel-5x/hook-contact-sheet.png`.
+- TikTok inbox dry-run preflight passed for all 10 packs in `outputs/full-loop/2026-06-23-dual-channel-5x/inbox-preflight-results.json`.
+- Live TikTok PHOTO MEDIA_UPLOAD inbox handoff succeeded for all 10 packs in `outputs/full-loop/2026-06-23-dual-channel-5x/inbox-send-status-summary.json`; each reached `SEND_TO_USER_INBOX`.
+- Operational lesson: packs generated with `--no-schedule` need a local `postiz-schedule.json` scaffold before `scripts/tiktok_inbox_file_upload.sh` can build the TikTok photo inbox payload.
+
+## Review (2026-06-23 post-slideshow engagement queue)
+
+- Refreshed the local engagement candidate queue at `outputs/daily/2026-06-23-post-slideshow-engagement-candidates.json`; it produced 34 candidates and suppressed 2 duplicate/cooldown items.
+- Rechecked Codex in-app browser control; it is blocked in this runtime with `privileged native pipe bridge is not available; browser-client is not trusted`.
+- Did not use Clawbot/OpenClaw and did not post, like, follow, or submit any public action.
+- Prepared an approval-gated 10-action Coachi mention queue at `outputs/daily/2026-06-23-post-slideshow-engagement-approval-queue.md`, with X kept founder/building/technology focused and Reddit capped to app/tool contexts only.
+- Captured the engagement lesson: clean Coachi mentions should favor owned/builder contexts and explicit app/tool requests; do not force brand mentions into `r/beginnerrunning` because public rules prohibit app promotion.
+
+## Review (2026-06-23 App Store goal continuation)
+
+- Continued the active `10,000 App Store downloads` goal after the TikTok inbox batch.
+- Verified `outputs/daily/2026-06-23-post-slideshow-engagement-approval-queue.md` with the approval preflight: 10 actions, 9 external URLs, no campaign-link misuse.
+- Rechecked App Store campaign links: 6/6 redirects passed, but Apple `pt` provider-token attribution is still absent.
+- Confirmed local marketing and app repo `.env` files do not contain `APP_STORE_CAMPAIGN_PROVIDER_TOKEN`; production should be updated before relying on App Store Connect campaign attribution.
+- Created a validated X builder/product-proof pack at `content/x-posts/2026-06-23-appstore-goal-builder-pack.md`, keeping X technology/founder-led with only one direct Coachi/App Store CTA.
+- Saved the acquisition continuation package at `outputs/daily/2026-06-23-appstore-goal-continuation.md`.
+
+## Review (2026-06-23 11:12 TikTok slideshow upload + engagement loop)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory, and synced `Codebase_guide.MD` before acting.
+- Ran the preferred production slideshow command with Images 2.0 hook generation and manual-review publish mode.
+- Normal queue result: no pack created. `beginner_runner` produced `candidate_count: 0`; the other active niches returned `no_new_matching_sourced_problems`.
+- Created one dated recovery bank at `outputs/full-loop/2026-06-23-direct-watch-verdict-spiral/single-problem-bank.json` from `inputs/research/reddit-winning-language-bank.md`, without mutating shared hook/text banks.
+- Recovery angle was `One number is not the whole run`, source problem `rp_2026_06_23_watch_verdict_spiral_reddit`.
+- Recovery production rerun also produced zero valid topic candidates, so no Images 2.0 hook, CTA, caption export, MP4, TikTok publish id, or inbox upload was created.
+- Rebuilt the ranked engagement queue with `growth:engagement-candidates`: 34 candidates and 2 duplicate suppressions.
+- `growth:daily --skip-slideshow --execute` failed because app-side `run-todays-pack.sh --date 2026-06-23 --json` returned non-zero.
+- Chrome CDP was reachable but exposed zero tabs; OpenClaw health was live. Ran the safe Clawbot fallback as approval-queue only.
+- Saved the run note and exact approval queue in `outputs/daily/2026-06-23-1112-tiktok-slideshow-upload-engagement-loop.md`.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text banks were mutated.
+
+## Review (2026-06-24 dual-channel TikTok slideshow batch)
+
+- Read `AGENTS.md`, checked the current slideshow runtime, and synced `Codebase_guide.MD`.
+- Prepared 10 frozen slideshow topics at `outputs/full-loop/2026-06-24-dual-channel-5x/`: 5 for main and 5 for Watch.
+- Applied prior corrections before render: short two-line hooks, stronger hook scorer variants, format rotation, no hook fallback, Watch account separation, and batch-local Supabase/imagebank usage tracking.
+- Batch plan lives at `outputs/full-loop/2026-06-24-dual-channel-5x/batch-plan.json`; run note lives at `outputs/full-loop/2026-06-24-dual-channel-5x/run-blocked.md`.
+- Production render is blocked before QA because Images 2.0 cannot run with current credentials. The marketing `.env` key returned `Billing hard limit has been reached`; shell and OpenClaw key-file overrides returned `Incorrect API key provided`.
+- Did not enable fallback or reuse old hook images, because the user explicitly wanted fresh unique Images 2.0 hook images.
+- No TikTok inbox upload, public action, engagement ledger update, viral storagebag mutation, or hook/text-bank mutation was performed.
+
+## Review (2026-06-24 21:55 TikTok slideshow upload + engagement loop)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory path, and synced `Codebase_guide.MD` before acting.
+- Ran the preferred production slideshow command with Images 2.0 hook generation and manual-review publish mode.
+- Normal queue result: no pack created. `beginner_runner` produced `candidate_count: 0`; other active niches returned `no_new_matching_sourced_problems`.
+- Created run-local sourced recovery banks at `outputs/full-loop/2026-06-24-direct-trust-effort-before-pace/single-problem-bank.json` and `outputs/full-loop/2026-06-24-direct-use-alerts-not-staring/single-problem-bank.json`; no shared hook/text/research bank was mutated.
+- Recovery pack `content/slideshows/2026-06-24-t5m-use-your-watch-without-chasing-every-number` blocked because Images 2.0 returned `Billing hard limit has been reached`, the generator used `fallback_used: true`, and slide 1 wrapped to 4 lines.
+- Stopped slideshow/upload per automation policy: no MP4, caption-to-paste export, TikTok publish id, or inbox upload was created.
+- Rebuilt ranked engagement candidates with viral hook research disabled: command output reported 32 candidates and 2 duplicate suppressions; parsed queue contains Reddit 19, TikTok 5, Instagram 4, X 6.
+- `growth:daily --skip-slideshow --execute` failed before public action because app-side `run-todays-pack.sh --date 2026-06-24 --json` returned non-zero.
+- OpenClaw health was live, but CDP `127.0.0.1:9333` was unavailable and no direct in-app browser control tool was exposed, so engagement remained approval-queue only.
+- Saved the run note and exact approval queue in `outputs/daily/2026-06-24-2155-tiktok-slideshow-upload-engagement-loop.md`.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made during engagement.
+
+## Review (2026-06-24 Chrome download engagement loop)
+
+- Read Coachi marketing instructions, synced `Codebase_guide.MD`, and used the Chrome extension path requested by `@chrome`.
+- Verified the existing high-intent App Store approval queue with `growth:preflight-approval-queue`: 10 actions, 10 URLs, 6 Coachi campaign links, passed.
+- Verified the App Store campaign link bank with `growth:verify-appstore-links`: 13/13 links passed with `ct` and `mt=8`; Apple `pt` provider-token attribution is still absent.
+- Inspected live signed-in TikTok, Instagram, Reddit, and X surfaces in Chrome.
+- Found a fresh TikTok inbound comment on Coachi-owned post `https://www.tiktok.com/@everydayrunnerlab0/photo/7654987467996630294` and drafted a no-link clarifying reply.
+- Confirmed TikTok and Instagram bios use raw `coachi.no`; queued campaign-link profile updates as the highest-ROI conversion action.
+- Confirmed X is signed in as `@DailyRun49173` and queued the existing three-post App Store product-proof set.
+- Rechecked Reddit targets: skipped `r/AppleWatch` because the account is banned there; kept only restrained `r/beginnerrunning` drafts and marked the direct-link app-request reply as high moderation risk.
+- Saved exact approval batch and findings in `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`.
+- No public comments, posts, likes, follows, profile edits, ledger rows, viral storagebag appends, or hook/text-bank mutations were performed.
+
+## Review (2026-06-24 22:34 Chrome download engagement refresh)
+
+- Reused the signed-in Chrome extension session for the active 10,000 App Store downloads goal.
+- Rechecked X live discovery queries; no current reply target beat the already queued owned X post set.
+- Verified `r/AppleWatchApps` as the strongest new direct-download surface because visible rules allow developer posts and recent examples include self-promotion/Health & Fitness apps.
+- Added approval-gated items 10 and 11 to `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`: one Apple Watch Apps self-promotion post with an App Store campaign link and one no-link runninglifestyle recovery-aware coaching reply.
+- Verification passed: queue preflight found 11 actions, 13 URLs, and 5 Coachi campaign links; App Store link verification passed 5/5 but still found no Apple `pt` provider token; focused tests passed 11/11.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made.
+
+## Review (2026-06-24 22:40 Chrome download engagement refresh)
+
+- Reconfirmed `r/AppleWatchApps` submit page in signed-in Chrome: text post path is available, no required post flair surfaced, and visible rules still fit a transparent `[iOS]` developer post.
+- Checked narrow high-intent Reddit searches for running app, Apple Watch, heart-rate audio, zone 2, running coach app, and workout alerts; no stronger direct-download target appeared.
+- Inspected the fresh `Running app - Scale` cluster and skipped it because it is another founder waitlist-promo thread with pushback, not a Coachi audience conversation.
+- Rechecked TikTok activity: the same `Chris.bfd` inbound comment remains the only useful reply opportunity, and the profile still uses raw `Coachi.no` copy.
+- Updated `outputs/daily/2026-06-24-chrome-download-engagement-loop.md` with a clear approval priority: `#5`, `#6`, `#10`, `#1`, `#4`, optionally `#11`; keep `#9` skipped unless moderation risk is explicitly accepted.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made.
+
+## Review (2026-06-24 22:44 Chrome download engagement refresh)
+
+- Inspected owned Reddit submitted posts and found several older discussion posts removed by Reddit filters; keep generic Reddit discussion posting de-prioritized.
+- Confirmed X profile `@DailyRun49173` is editable and still uses raw `coachi.no` as the website plus raw `https://coachi.no` in the pinned post.
+- Added approval-gated item `#12` to `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`: update the X profile website to `https://coachi.no/app-store?source=x&campaign=x_profile_20260624`.
+- Noted that a newly opened TikTok profile tab rendered public/logged-out, so any approved TikTok execution needs an immediate signed-in state check before action.
+- Verification passed after adding `#12`: queue preflight found 12 actions, 15 URLs, and 6 Coachi campaign links; App Store link verification passed 6/6 but still found no Apple `pt` provider token; focused tests passed 11/11.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made.
+
+## Review (2026-06-24 22:46 Chrome download engagement refresh)
+
+- Added approval-gated item `#13` to `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`: publish and pin a replacement X product-proof post with `https://coachi.no/app-store?source=x&campaign=x_pinned_appstore_20260624`.
+- Rationale: the current X pinned post has good positioning but links to raw `https://coachi.no`; the replacement keeps the same profile-conversion role while making App Store-intent clicks measurable.
+- Follow-up Chrome validation at 22:50 confirmed the X profile still exposes raw `coachi.no`, the pinned post still links to raw `https://coachi.no`, no X App Store campaign link appears in the live profile DOM, and `Edit profile` is visible for approved execution.
+- Verification passed after adding `#13` and was rerun after the 22:50 Chrome validation: queue preflight found 13 actions, 16 URLs, and 7 Coachi campaign links; App Store link verification passed 7/7 but still found no Apple `pt` provider token; focused tests passed 11/11.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made.
+
+## Review (2026-06-24 22:55 Chrome download engagement continuation)
+
+- Rebuilt the local ranked engagement candidate queue with viral hook research disabled: `outputs/daily/2026-06-24-download-loop-candidates-refresh.json` has 32 candidates and 2 duplicate suppressions.
+- Used Chrome read-only for fresh Reddit app/alert/zone-guidance searches; most results were noisy and did not beat the existing `r/AppleWatchApps` direct-download candidate.
+- Added approval-gated item `#14` to `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`: a no-link `r/Garmin` reply to a fresh heart-rate target confusion thread.
+- Rationale: the thread matches the proven `watch as guardrail, not verdict` and `easy enough to repeat tomorrow` language patterns, but it is Garmin-specific and not an app request, so no Coachi mention or link is appropriate.
+- Verification passed after adding `#14`: queue preflight found 14 actions, 17 URLs, and 7 Coachi campaign links; App Store link verification passed 7/7 but still found no Apple `pt` provider token; focused tests passed 11/11.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made.
+
+## Review (2026-06-24 23:01 Chrome download engagement continuation)
+
+- Used Chrome read-only to inspect direct app-discovery subreddits: `r/iOSApps`, `r/AppleWatchApps`, and `r/AppHookup`.
+- Found `r/iOSApps` June 2026 App Shelf megathread as a new broad iOS install-intent surface; visible rules route AI/generative app promotion into the megathread and require ABC format with pricing and App Store link.
+- Added approval-gated item `#15` to `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`: a transparent Coachi ABC-format App Shelf comment with `https://coachi.no/app-store?source=reddit&campaign=reddit_iosapps_20260624`.
+- Risk noted: the thread warns Reddit filters may auto-remove low-trust or first-interaction promotion, so execution needs approval plus a live comment-box check.
+- Verification passed after adding `#15`: queue preflight found 15 actions, 19 URLs, and 8 Coachi campaign links; App Store link verification passed 8/8 but still found no Apple `pt` provider token; focused tests passed 11/11.
+- No public actions were taken, no ledger rows were added, and no viral storagebag or hook/text-bank mutations were made.
+
+## Review (2026-06-24 23:40 approved Chrome download engagement execution)
+
+- User approved the full batch and required a single Chrome tab; execution reused one claimed tab and did not open additional tabs.
+- Verified and logged four public actions: X profile website update, Instagram bio update, Reddit Zone 2 no-link reply, and Reddit iOSApps App Shelf comment.
+- Added ledger rows with `growth:log-engagement` for `x_profile_appstore_20260624`, `instagram_bio_appstore_20260624`, `zone_2_guardrail_20260624`, and `reddit_iosapps_app_shelf_20260624`.
+- Blocked items were not logged as posted: TikTok returned a logged-out shell, X redirected to `x.com/account/access`, Reddit rate-limited after one reply, and AppleWatchApps required post flair that the old-Reddit picker did not apply.
+- Stopped before further Reddit attempts after prioritizing the install-intent iOSApps slot over lower-conversion no-link replies during the rate-limit window.
+- Post-execution link verification passed 8/8 and focused tests passed 11/11; post-execution queue preflight now fails as expected because the newly posted Reddit targets are in the ledger.
+- Updated `outputs/daily/2026-06-24-chrome-download-engagement-loop.md` and `Codebase_guide.MD`; no likes, follows, viral storagebag appends, or hook/text-bank mutations were performed.
+
+## Review (2026-06-24 23:29 watch-specific TikTok slideshow repair)
+
+- Reworked the Watch TikTok direction after user correction: secondary account now focuses on watch settings, HR alerts, zones, battery/GPS, fit/comfort, and running-watch buying tradeoffs instead of generic watch/coaching statements.
+- Updated the shared hook scorer in `scripts/slideshow_quality_rules.mjs` to credit concrete watch-specific intent only in watch contexts, and added regression tests for HR alerts, running-watch choice, battery, wrist fit, zones, and comfort hooks.
+- Kept the corrected main packs from `outputs/full-loop/2026-06-24-dual-channel-5x-v2/` and replaced the generic watch attempts with 5 new Watch packs under `outputs/full-loop/2026-06-24-watch-specific-5x/`.
+- Corrected two QA failures during generation by changing hardware-only hooks to runner-language hooks: `Watch battery matters on long runs` and `Check watch zones before easy runs`.
+- Archived failed intermediate battery/zones attempts under `outputs/full-loop/2026-06-24-watch-specific-5x/failed-packs/` so production copy freshness scans do not treat rejected drafts as live packs.
+- Final manifest: `outputs/full-loop/2026-06-24-watch-specific-5x/final-10-pack-manifest.json`; audit: `outputs/full-loop/2026-06-24-watch-specific-5x/final-10-pack-artifact-audit.json`; hook contact sheet: `outputs/full-loop/2026-06-24-watch-specific-5x/final-hook-contact-sheet.png`.
+- Audit passed: 10 final packs, 7 rendered slides each, production QA passed, no hook fallbacks, unique Images 2.0 hook images, correct Watch avatar reference, no Watch style reference, and no visible `Myth:`, `Truth:`, `can lie`, or `Hilly pace` copy.
+- Focused tests passed: `node --test scripts/__tests__/slideshow_quality_gates.test.mjs scripts/__tests__/generate_slideshow_topics_hook_dedupe.test.mjs` reported 28/28 passing.
+
+## Review (2026-06-24 23:46 Chrome download engagement continuation)
+
+- Continued the active 10,000 App Store downloads goal without marking it complete; no download-count movement has been verified.
+- Rebuilt the post-execution candidate queue at `outputs/daily/2026-06-24-post-execution-engagement-candidates.json` with 34 candidates and 2 duplicate suppressions.
+- Reused a single Chrome tab on the already-open `r/AppleWatchApps` submit page; no additional tabs were opened.
+- Confirmed the AppleWatchApps draft remains filled, but old Reddit still requires flair and the `select` control did not attach one; no submit action was taken.
+- Created `outputs/daily/2026-06-24-post-execution-continuation-approval-queue.md` with exact approval-gated TikTok and AppleWatchApps actions.
+- Added `inputs/performance/2026-06-24-scorecard.md` and updated `inputs/performance/WINNER_LIBRARY.md`, `inputs/research/reddit-winning-language-bank.md`, `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`, and `Codebase_guide.MD`.
+- Verification passed: continuation queue preflight found 2 actions, 3 URLs, and 1 Coachi campaign link; App Store link verification passed 1/1 but still no Apple `pt`; focused tests passed 9/9.
+- No public actions, profile edits, likes, follows, ledger rows, viral storagebag appends, or hook-bank mutations happened during this continuation.
+
+## Review (2026-06-24 23:51 Chrome download engagement continuation)
+
+- Reclaimed the one existing Chrome tab on the `r/AppleWatchApps` submit page; no second tab was opened.
+- Inspected the old-Reddit flair controls and selected `Health & Fitness`; hidden `flair_id` and `flair_template_id` now match `234b9c4e-6a13-11f0-918e-22cfc006f4d6`.
+- Did not click the public submit button and did not add a ledger row.
+- Updated `outputs/daily/2026-06-24-post-execution-continuation-approval-queue.md`, `inputs/performance/2026-06-24-scorecard.md`, `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`, and `Codebase_guide.MD`.
+- Verification rerun passed: queue preflight 2 actions / 3 URLs / 1 Coachi campaign link, App Store link verification 1/1 with no Apple `pt`, and focused tests 9/9.
+
+## Review (2026-06-24 23:54 Chrome download engagement continuation)
+
+- Re-read AGENTS and the active Coachi engagement rules, then reclaimed the same single Chrome tab.
+- Rechecked the prepared `r/AppleWatchApps` draft: account `AlarmingTradition961`, subreddit `AppleWatchApps`, title/body unchanged, App Store campaign link present, `Health & Fitness` flair still attached, submit enabled.
+- Did not click public submit; no ledger row was added.
+- Updated `outputs/daily/2026-06-24-post-execution-continuation-approval-queue.md`, `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`, and `Codebase_guide.MD`.
+- Verification rerun passed: queue preflight 2 actions / 3 URLs / 1 Coachi campaign link, App Store link verification 1/1 with no Apple `pt`, and focused tests 9/9.
+
+## Review (2026-06-24 23:57 App Store measurement continuation)
+
+- Inspected App Store readiness/result scripts and confirmed no real `inputs/performance/appstore-campaign-results.json` ledger exists yet.
+- Generated current readiness artifact for the continuation queue: `outputs/daily/2026-06-24-post-execution-continuation-readiness.json`.
+- Generated dry-run baseline preview only, not a real result row: `outputs/daily/2026-06-24-reddit-applewatchapps-baseline-dry-run.json`.
+- Created measurement handoff: `outputs/daily/2026-06-24-reddit-applewatchapps-measurement-handoff.md`.
+- Updated `inputs/performance/2026-06-24-scorecard.md`, `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`, and `Codebase_guide.MD`.
+- Verification passed: readiness command completed, baseline dry-run completed with `ready_for_approval_execution: true`, and focused measurement tests passed 5/5.
+- Final combined verification passed: continuation queue preflight 2 actions / 3 URLs / 1 Coachi campaign link, App Store link verification 1/1, and focused queue/candidate/readiness/result tests 14/14.
+
+## Review (2026-06-25 00:00 Chrome download engagement recheck)
+
+- Reclaimed the same single Chrome tab on the prepared `r/AppleWatchApps` submit form; no additional tabs were opened.
+- Rechecked draft state: account `AlarmingTradition961`, subreddit `AppleWatchApps`, title unchanged, body length `852`, campaign link present, `Health & Fitness` flair attached, and submit enabled.
+- Did not click public submit and did not add a ledger row.
+- Updated `outputs/daily/2026-06-24-post-execution-continuation-approval-queue.md`, `outputs/daily/2026-06-24-chrome-download-engagement-loop.md`, and `Codebase_guide.MD`.
+- Verification rerun passed: queue preflight 2 actions / 3 URLs / 1 Coachi campaign link, App Store link verification 1/1 with no Apple `pt`, and focused queue/candidate/readiness/result tests 14/14.
+
+## Review (2026-06-25 00:06 download engagement refresh)
+
+- Rebuilt June 25 ranked candidates at `outputs/daily/2026-06-25-engagement-candidates.json`: 34 queued candidates and 2 duplicate suppressions.
+- Created `outputs/daily/2026-06-25-download-engagement-refresh.md` with quick repo recon, business flow, architecture map, risk list, current approval gate, and next high-ROI action.
+- Confirmed the last verified public actions remain the four June 24 actions in `inputs/performance/engagement-ledger.json`; no new download movement is proven.
+- Kept all public actions approval-gated. Did not submit the prepared `r/AppleWatchApps` post, did not navigate Chrome, and did not add ledger or App Store result rows.
+- Current highest-ROI next step is still exact approval to submit the prepared `r/AppleWatchApps` post from the existing single Chrome tab, followed by immediate post URL verification and only then a ledger row.
+
+## Review (2026-06-25 00:10 Chrome download gate recheck)
+
+- Used Chrome read-only and claimed only the existing `AppleWatchApps: submit` tab; no second tab was opened.
+- Verified the prepared `r/AppleWatchApps` draft remains filled: account signal `AlarmingTradition961`, subreddit `AppleWatchApps`, exact Coachi title, full body with `reddit_applewatchapps_20260624` campaign URL, matching hidden flair ids, and visible enabled submit button.
+- Stale validation text still says `Your post must contain post flair.`, so any approved submit must be followed by immediate post URL verification before a ledger row is added.
+- Finalized the Chrome tab as a handoff and did not click public `submit`.
+- Updated `outputs/daily/2026-06-25-download-engagement-refresh.md` and `Codebase_guide.MD`; no ledger, profile, App Store result, viral storagebag, or hook-bank changes were made.
+
+## Review (2026-06-25 00:13 action-time approval packet)
+
+- Created `outputs/daily/2026-06-25-action-time-approval-packet.md` for the prepared `r/AppleWatchApps` action.
+- Packet includes the exact approval sentence, single-tab Chrome pre-click checks, stale-flair warning handling, immediate post-submit verification steps, the post-submit `growth:log-engagement` command, and the real-metrics-only `growth:log-appstore-result` command.
+- Kept the scope to the current highest-ROI App Store action; did not add new public targets, submit the Reddit post, or mutate the ledger/results files.
+- Current gate remains exact user approval before publishing the Reddit post as `AlarmingTradition961`.
+
+## Review (2026-06-25 00:17 Reddit post-submit verifier)
+
+- Added `scripts/verify_reddit_post_submission.mjs` and package alias `growth:verify-reddit-post`.
+- Added focused tests in `scripts/__tests__/verify_reddit_post_submission.test.mjs` covering a verified live Reddit post, rejection of a submit-form URL, and HTML-entity normalization.
+- Updated `outputs/daily/2026-06-25-action-time-approval-packet.md` so the resulting Reddit post URL must pass the verifier before `growth:log-engagement` is run.
+- This is still pre-execution work only: no Reddit post was submitted, no ledger row was added, and no App Store campaign result was written.
+
+## Review (2026-06-25 00:21 App Store goal-status guard)
+
+- Added `scripts/appstore_download_goal_status.mjs` and package alias `growth:appstore-goal-status`.
+- Added focused tests in `scripts/__tests__/appstore_download_goal_status.test.mjs` to ensure the 10,000-download goal is not marked complete without real `app_store_total_downloads` evidence.
+- Generated `outputs/daily/2026-06-25-appstore-goal-status.json`; current status is `achieved: false`, `verified_total_downloads: null`, no App Store result entries, provider token incomplete, and next action is exact approval for the ready queue.
+- Updated `outputs/daily/2026-06-25-action-time-approval-packet.md` with the goal-status command and `--require-achieved` hard gate.
+- No public action, ledger row, or App Store result row was created.
+
+## Review (2026-06-25 00:24 download sprint report)
+
+- Added `scripts/appstore_download_sprint_report.mjs` and package alias `growth:download-sprint-report`.
+- Added focused tests in `scripts/__tests__/appstore_download_sprint_report.test.mjs` so the report surfaces goal status, evidence gaps, exact approval text, and candidate counts without claiming completion.
+- Generated `outputs/daily/2026-06-25-download-sprint-report.md`; it reports the 10,000-download goal as not achieved, App Store total downloads missing, readiness yes, provider token incomplete, and the exact approval sentence still required for the prepared `r/AppleWatchApps` Chrome post.
+- No browser action, public action, engagement ledger row, or App Store result row was created.
+
+## Review (2026-06-25 00:29 Chrome download gate recheck)
+
+- Used Chrome read-only and claimed only the existing `AppleWatchApps: submit` tab; no second tab was opened.
+- Verified the prepared `r/AppleWatchApps` draft remains filled: account signal `AlarmingTradition961`, subreddit `AppleWatchApps`, exact Coachi title, full body with `reddit_applewatchapps_20260624` campaign URL, matching hidden flair ids, and visible enabled submit button.
+- Title verification uses the old-Reddit `textarea[name="title"]` control; the earlier `input[name="title"]` selector is not correct for this page.
+- Stale validation text still says `Your post must contain post flair.`, so any approved submit must be followed by immediate post URL verification before a ledger row is added.
+- Finalized the Chrome tab as a handoff and did not click public `submit`.
+- Updated `outputs/daily/2026-06-25-download-engagement-refresh.md`, `outputs/daily/2026-06-25-action-time-approval-packet.md`, and `Codebase_guide.MD`; no ledger, profile, App Store result, viral storagebag, or hook-bank changes were made.
+- Verification passed: appstore readiness `yes` with provider token incomplete, action-time approval packet link check `1/1`, goal status still `achieved: false` because verified App Store total downloads are missing, and focused tests `23/23`.
+
+## Review (2026-06-25 00:34 Chrome download gate and App Store conversion prep)
+
+- Re-read AGENTS, Codebase guide, Reddit/TikTok/Instagram engagement rules, and Chrome rules.
+- Used Chrome read-only and claimed only the existing `AppleWatchApps: submit` tab; no second tab was opened, no navigation happened, and public `submit` was not clicked.
+- Verified the prepared `r/AppleWatchApps` draft remains filled: account signal `AlarmingTradition961`, subreddit `AppleWatchApps`, exact Coachi title, full body with `reddit_applewatchapps_20260624` campaign URL, matching hidden flair ids, and visible enabled submit button.
+- Regenerated the June 25 engagement candidate queue: `34` queued candidates and `2` duplicate suppressions.
+- Ran the live App Store listing audit for US and Norway: `outputs/daily/2026-06-25-appstore-conversion-audit.md` scored `51/100` with `conversion_risk`.
+- Created fresh App Store Connect conversion handoff pack: `outputs/daily/2026-06-25-appstore-connect-update-pack.json` and `.md`.
+- Validated the metadata pack: app name `20/30`, subtitle `24/30`, promo text `144/170`, description `911/4000`, keywords `91/100` bytes, screenshots `6`.
+- Refreshed readiness and goal status: readiness remains `yes`, provider token remains incomplete, and goal status remains `achieved: false` because verified App Store total downloads are missing.
+- Final verification passed: action-packet App Store link check `1/1`, metadata pack validation passed, and focused tests `32/32`.
+- No public action, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 00:42 sprint report generator hardening)
+
+- Used Chrome read-only and claimed only the existing `AppleWatchApps: submit` tab; no second tab was opened, no navigation happened, and public `submit` was not clicked.
+- Verified the prepared `r/AppleWatchApps` draft remains filled: account signal `AlarmingTradition961`, subreddit `AppleWatchApps`, exact Coachi title, body length `852`, `reddit_applewatchapps_20260624` campaign token, matching hidden flair ids, and visible enabled submit button.
+- Updated `scripts/appstore_download_sprint_report.mjs` so `growth:download-sprint-report` includes Browser Handoff and Conversion Readiness sections from structured artifacts instead of relying on manual report edits.
+- Updated `scripts/__tests__/appstore_download_sprint_report.test.mjs` to cover browser timestamp, conversion score, ratings, prepared metadata lengths, top conversion risks, and the strict no-completion gate.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`; it now preserves the exact approval sentence, latest Chrome handoff timestamp, conversion audit score `51/100`, US ratings `0`, prepared metadata summary, and queued candidate snapshot.
+- Verification passed: readiness `yes`, provider token incomplete, action-packet link check `1/1`, metadata pack validation passed, focused tests `32/32`, and goal status remains `achieved: false` because verified App Store total downloads are missing.
+- No public action, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 00:47 provider-token attribution handoff)
+
+- Finalized the same single Chrome `AppleWatchApps: submit` tab as a handoff after the read-only draft check; no new tabs, navigation, or public submit happened.
+- Created `outputs/daily/2026-06-25-provider-token-deployment-handoff.md` documenting the no-secret App Store Connect `pt` deployment path through the existing Coachi runtime.
+- Updated `scripts/appstore_download_sprint_report.mjs` and its focused test so generated sprint reports preserve the provider-token deployment handoff.
+- Updated `outputs/daily/2026-06-25-action-time-approval-packet.md`, `outputs/daily/2026-06-25-download-engagement-refresh.md`, and `Codebase_guide.MD`.
+- Verification passed: readiness `yes`, provider token still incomplete, action-packet link check `1/1`, metadata pack validation passed, sprint report regenerated with the handoff, and focused tests passed `32/32`.
+- Goal remains incomplete until real App Store total downloads are verified at or above `10000`; no ledger row or App Store campaign result row was created.
+
+## Review (2026-06-25 00:56 provider-token verifier redaction)
+
+- Hardened `scripts/verify_appstore_campaign_links.mjs` so App Store provider-token verification does not write raw `pt` values into console output or JSON artifacts.
+- Added `scripts/__tests__/verify_appstore_campaign_links.test.mjs` covering direct URL redaction and a local redirect with `pt` present.
+- Updated `outputs/daily/2026-06-25-provider-token-deployment-handoff.md` and `scripts/appstore_download_sprint_report.mjs` so the deployment handoff includes the redaction gate.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`.
+- Verification passed: new redaction test `2/2`, full focused suite `34/34`, action-packet link check `1/1`, readiness `yes`, provider token still incomplete, and goal status still `achieved: false`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:02 Chrome recheck and App Store CSV import)
+
+- Used Chrome read-only on the same single `AppleWatchApps: submit` tab; no new tabs, navigation, or public submit happened.
+- Verified the prepared draft remains intact: `AlarmingTradition961`, `r/AppleWatchApps`, exact title/body/campaign link, `Health & Fitness` visible flair, matching hidden flair ids, enabled submit button, and stale flair validation warning still present.
+- Added `--app-store-csv` / `--app-store-connect-csv` support to `scripts/log_appstore_campaign_result.mjs` so real App Store Connect campaign exports can populate result rows without manually retyping measured App Store metrics.
+- Added focused CSV import tests in `scripts/__tests__/log_appstore_campaign_result.test.mjs`; explicit CLI values still override imported CSV values.
+- Updated `outputs/daily/2026-06-25-action-time-approval-packet.md`, `outputs/daily/2026-06-25-download-engagement-refresh.md`, `outputs/daily/2026-06-25-download-sprint-report.md`, and `Codebase_guide.MD`.
+- Verification passed: focused tests `37/37`, action-packet link check `1/1`, readiness `yes`, provider token still incomplete, metadata pack valid, sprint report regenerated, and goal status still `achieved: false`.
+- No public action, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:11 Chrome recheck and clicks-only result guard)
+
+- Used Chrome read-only on the same single `AppleWatchApps: submit` tab; no new tabs, navigation, or public submit happened.
+- Verified the prepared draft remains intact: `AlarmingTradition961`, `r/AppleWatchApps`, exact title/body/campaign link, `Health & Fitness` visible flair, matching hidden flair ids, enabled submit button, and stale flair validation warning still present.
+- Hardened `scripts/log_appstore_campaign_result.mjs` so clicks-only rows cannot be written as App Store result rows; at least one real App Store metric is required.
+- Added focused test coverage in `scripts/__tests__/log_appstore_campaign_result.test.mjs`; measured zero values remain valid.
+- Updated `outputs/daily/2026-06-25-action-time-approval-packet.md`, `outputs/daily/2026-06-25-download-engagement-refresh.md`, `outputs/daily/2026-06-25-download-sprint-report.md`, and `Codebase_guide.MD`.
+- Verification passed: focused tests `38/38`, action-packet link check `1/1`, readiness `yes`, provider token still incomplete, metadata pack valid, sprint report regenerated, and goal status still `achieved: false`.
+- No public action, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:20 App Store measurement queue)
+
+- Added `scripts/build_appstore_measurement_queue.mjs` and npm alias `growth:appstore-measurement-queue`.
+- Added focused tests in `scripts/__tests__/appstore_measurement_queue.test.mjs`.
+- Generated `outputs/daily/2026-06-25-appstore-measurement-queue.md` and `.json`.
+- The queue currently tracks three posted direct-install campaigns for measurement: `x_profile_20260624`, `instagram_bio_20260622`, and `reddit_iosapps_20260624`.
+- The queue keeps `reddit_applewatchapps_20260624` in pending approval status and ignores stale same-subreddit ledger actions before the current App Store sprint.
+- Updated `scripts/appstore_download_sprint_report.mjs` and its test so `outputs/daily/2026-06-25-download-sprint-report.md` includes the measurement queue.
+- Verification passed: focused tests `41/41`, action-packet App Store link check `1/1`, readiness `yes`, provider token still incomplete, metadata pack valid, measurement queue regenerated, sprint report regenerated, and goal status still `achieved: false`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:24 Chrome recheck and due measurement windows)
+
+- Used Chrome read-only on the same single `AppleWatchApps: submit` tab; no new tabs, navigation, or public submit happened.
+- Verified the prepared draft remains intact: `AlarmingTradition961`, `r/AppleWatchApps`, exact title/body/campaign link, `Health & Fitness` visible flair, matching hidden flair ids, enabled submit button, and stale flair validation warning still present.
+- Regenerated `outputs/daily/2026-06-25-appstore-measurement-queue.md` and `.json` after the first 2h due threshold.
+- Measurement queue now has two due windows: `x_profile_20260624` `2h` and `instagram_bio_20260622` `2h`; `reddit_iosapps_20260624` `2h` is next due at `2026-06-25 01:33:33 CEST`.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md` so the due-window count is current.
+- Refreshed action-packet link verification, readiness, and goal status; readiness remains `yes`, provider token remains incomplete, and goal status remains `achieved: false`.
+- No public action, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:33 all 2h measurement windows due)
+
+- Regenerated `outputs/daily/2026-06-25-appstore-measurement-queue.md` and `.json` after the `reddit_iosapps_20260624` 2h threshold crossed.
+- Measurement queue now has three due 2h windows: `x_profile_20260624`, `instagram_bio_20260622`, and `reddit_iosapps_20260624`.
+- Next scheduled measurement window is `x_profile_20260624` `24h` at `2026-06-25 23:24:05 CEST`.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`.
+- Refreshed action-packet link verification, readiness, goal status, and focused tests; tests passed `29/29`, readiness remains `yes`, provider token remains incomplete, and goal status remains `achieved: false`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:39 measurement queue duplicate-window guard)
+
+- Updated `scripts/build_appstore_measurement_queue.mjs` so it reads `inputs/performance/appstore-campaign-results.json` and marks already logged campaign/window rows as `measured`.
+- Added focused coverage in `scripts/__tests__/appstore_measurement_queue.test.mjs` for a logged `2h` result row with zero downloads, ensuring it is not requeued as due and the next pending window remains `24h`.
+- Regenerated `outputs/daily/2026-06-25-appstore-measurement-queue.md` and `.json`; current due windows remain the three unmeasured `2h` windows because no real result rows exist yet.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`, refreshed action-packet link verification, and refreshed goal status.
+- Verification passed: focused tests `30/30`, action-packet App Store link check `1/1`, goal status `achieved: false`, `verified_total_downloads: null`, and `results_entries: 0`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:45 App Store batch measurement intake)
+
+- Extended `scripts/build_appstore_measurement_queue.mjs` with `--csv-out` and generated `outputs/daily/2026-06-25-appstore-measurement-intake-template.csv` for the three due `2h` measurement windows.
+- Extended `scripts/log_appstore_campaign_result.mjs` with `--batch-csv` so filled measurement intake rows can be validated and appended in one command.
+- Preserved the result safety rules: batch rows still require at least one real App Store metric, clicks-only rows fail, and existing campaign/window rows are rejected unless `--allow-duplicate-window` is explicitly passed for a correction.
+- Updated `scripts/appstore_download_sprint_report.mjs` so the sprint report includes the intake template and the dry-run import command.
+- Added focused tests in `scripts/__tests__/appstore_measurement_queue.test.mjs`, `scripts/__tests__/log_appstore_campaign_result.test.mjs`, and `scripts/__tests__/appstore_download_sprint_report.test.mjs`.
+- Regenerated `outputs/daily/2026-06-25-appstore-measurement-queue.md`, `.json`, `outputs/daily/2026-06-25-download-sprint-report.md`, action-packet link verification, and goal status.
+- Verification passed: focused tests `34/34`, action-packet App Store link check `1/1`, goal status `achieved: false`, `verified_total_downloads: null`, and `results_entries: 0`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:50 PostHog/App Store export-enriched intake)
+
+- Extended `scripts/log_appstore_campaign_result.mjs` so `--batch-csv` rows can be enriched from `--posthog-export` and `--app-store-csv` before validation.
+- The PostHog export parser supports JSON, JSONL, and CSV with nested `properties` or flattened `properties.apple_campaign_token` fields, and counts only `app_store_click` events.
+- The App Store Connect CSV enrichment reuses the existing campaign-row parser, filling product-page views, first-time downloads, and total downloads by campaign token.
+- The same guardrails still apply: no row can be written without at least one real App Store metric, and duplicate campaign/window result rows fail unless explicitly allowed for a correction.
+- Updated `scripts/appstore_download_sprint_report.mjs` so the report includes the export-enriched dry-run command:
+  `npm run growth:log-appstore-result -- --batch-csv outputs/daily/2026-06-25-appstore-measurement-intake-template.csv --posthog-export <POSTHOG_APP_STORE_CLICKS_EXPORT> --app-store-csv <APP_STORE_CONNECT_CAMPAIGNS_CSV> --dry-run`
+- Added focused tests in `scripts/__tests__/log_appstore_campaign_result.test.mjs` and `scripts/__tests__/appstore_download_sprint_report.test.mjs`.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`, action-packet link verification, and goal status.
+- Verification passed: focused tests `36/36`, action-packet App Store link check `1/1`, goal status `achieved: false`, `verified_total_downloads: null`, and `results_entries: 0`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 01:55 App Store metric export handoff)
+
+- Updated `scripts/appstore_download_sprint_report.mjs` so the measurement section names the exact export requirements for turning due windows into verified download evidence.
+- The report now requires PostHog exports to filter `app_store_click` and include one campaign-token field: `properties.apple_campaign_token`, `properties.campaign`, or `properties.ct`.
+- The report now requires App Store Connect exports to include `Campaign`, `Product Page Views`, `First-Time Downloads`, and `Total Downloads`, with one measured row per campaign token before writing result rows.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`, refreshed action-packet link verification, refreshed goal status, and synced `Codebase_guide.MD`.
+- Verification passed: focused tests `23/23`, action-packet App Store link check `1/1` with no provider token, goal status `achieved: false`, `verified_total_downloads: null`, and `results_entries: 0`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 02:00 App Store measurement-priority goal status)
+
+- Updated `scripts/appstore_download_goal_status.mjs` so due App Store measurement windows take priority over executing more approval-queued public actions.
+- The goal status now reads the measurement queue, exposes `measurement_queue.due_window_count`, and adds `due_appstore_measurement_windows` when real metrics are due.
+- Regenerated `outputs/daily/2026-06-25-appstore-goal-status.json`; current `next_action` is `collect_due_app_store_measurements`, with three due `2h` windows and zero App Store result rows.
+- Regenerated `outputs/daily/2026-06-25-download-sprint-report.md`; it now shows measurement collection as the next action while keeping the exact Reddit approval sentence available for later.
+- Verification passed: focused tests `37/37`, action-packet App Store link check `1/1` with no provider token, goal status `achieved: false`, `verified_total_downloads: null`, and `results_entries: 0`.
+- No public action, Chrome navigation, engagement ledger row, App Store result row, profile edit, viral storagebag append, or hook-bank mutation was made.
+
+## Review (2026-06-25 07:54 public posts and TikTok inbox handoff)
+
+- Sent `9/10` already-made final June 24 slideshow packs to TikTok inbox through the official TikTok `MEDIA_UPLOAD` handoff.
+- Left slot 2 unsent because production QA blocked repeated final CTA text; no unsupported preflight bypass was used.
+- Used one Chrome tab only. Submitted the approved `r/AppleWatchApps` Coachi post and verified the live comments page with author, flair, campaign link, and campaign token visible.
+- Posted the approved TikTok reply to `Chris.bfd` from `Everyday Runner Lab · Creator`; verified the reply rendered and comment count changed to `2`.
+- Added verified engagement ledger rows for the Reddit post and TikTok reply.
+- Regenerated App Store measurement queue/report/goal status; queue now tracks `4` posted direct-install campaigns and `0` pending approval campaigns.
+- Patched the sprint report generator so stale approval-packet handoff text is suppressed once the measurement queue has no pending approval campaigns.
+- Verification passed: focused tests `19/19`, goal status still `achieved: false`, `verified_total_downloads: null`, and `results_entries: 0`.
+
+## Review (2026-06-25 09:24 hourly Coachi mention continuation)
+
+- Continued the one-tab Chrome engagement loop one hour after the 08:24 cross-social batch.
+- Posted `2/5` requested hourly Coachi mentions as no-link Reddit replies in `r/AppleWatchFitness`.
+- Verified both replies visible as `AlarmingTradition961` and logged both in `inputs/performance/engagement-ledger.json`.
+- Held the missing `3/5` instead of forcing volume: X is locked at account-access email verification, TikTok/Instagram broad comments already hit the same-day stretch batch, and Reddit hit a cooldown after the first reply.
+- Saved the run note at `outputs/daily/2026-06-25-0924-hourly-coachi-mention-continuation.md`.
+- Updated `inputs/performance/2026-06-25-scorecard.md`, `inputs/performance/WINNER_LIBRARY.md`, and `inputs/research/reddit-winning-language-bank.md`.
+
+## Review (2026-06-25 10:08 TikTok slideshow inbox handoff plus engagement)
+
+- Generated fresh production slideshow `content/slideshows/2026-06-25-wish-your-running-pace-is-not-the-test` after the normal queue returned no new sourced problems.
+- Used a run-local recovery problem/text bank under `outputs/full-loop/2026-06-25-catch-drift-before-panic/`; shared hook/text banks were not mutated.
+- Images 2.0 hook generation succeeded with `fallback_used: false`; QA passed with owned Coachi app-proof CTA `coachi_cta_013_phone_mountain_morning_51min`.
+- Sent the photo carousel through TikTok `MEDIA_UPLOAD` inbox fallback; publish id `p_inbox_url~v2.7655240395797858326`, final status `SEND_TO_USER_INBOX`.
+- Verified `exports/2026-06-25-wish-your-running-pace-is-not-the-test-caption-to-paste.txt` exists and exactly matches `copy/tiktok-postiz-caption.txt`.
+- Rebuilt engagement candidates with viral hook research disabled: `32` candidates across Reddit, TikTok, Instagram, and X.
+- Checked live browser surfaces: TikTok, Instagram, and Reddit signed in; X still blocked by Cloudflare account-access verification.
+- Public engagement actions completed: none. Saved approval-gated TikTok/Instagram queues and blockers in `outputs/daily/2026-06-25-1008-tiktok-slideshow-upload-engagement-loop.md`.
+- No engagement ledger update, viral storagebag append, public direct post, staging, or commit was made.
+
+## Review (2026-06-25 14:05 TikTok slideshow upload loop blocked plus engagement)
+
+- Ran the preferred production slideshow command; normal sourced queue was dry (`beginner_runner` produced zero candidates, other niches had no new matching sourced problems).
+- Created run-local recovery banks under `outputs/full-loop/2026-06-25-direct-stop-negotiating-mid-run/` and `outputs/full-loop/2026-06-25-direct-easy-effort-not-pace/` without mutating shared hook/text banks.
+- Stopped the recovery pack `content/slideshows/2026-06-25-tips-your-easy-pace-is-not-embarrassing` because it had no Images 2.0 hook provenance/QA and selected reused text-bank slide set `easy_runs_feel_pointless_v1`.
+- Skipped TikTok inbox upload: no caption-to-paste export, video, publish id, or `SEND_TO_USER_INBOX` result was produced.
+- Rebuilt engagement candidates with viral hook research disabled (`32` candidates, `2` duplicate suppressions).
+- `growth:daily --skip-slideshow --execute` failed in the app-side social coordinator on `run-todays-pack.sh --date 2026-06-25 --json`.
+- Verified live surfaces through Chrome CDP/OpenClaw: TikTok search visible but post pages blank, Instagram readable but one inspected target already had a same-day comment, Reddit signed in but search was noisy, and X blocked by Cloudflare account access.
+- Saved approval-gated TikTok/Instagram candidates and blockers in `outputs/daily/2026-06-25-1405-tiktok-slideshow-upload-engagement-loop.md`.
+- Public engagement actions completed: none. No engagement ledger update, viral storagebag append, direct-public post, staging, or commit was made.
+
+## Review (2026-06-25 15:47 engagement loop)
+
+- Refreshed the engagement candidate queue at `outputs/daily/2026-06-25-1547-engagement-candidates.json` (`34` candidates, `2` duplicate suppressions).
+- Used one claimed Chrome tab only.
+- Posted and verified `5` public no-link comments: `3` TikTok comments from `Everyday Runner Lab` and `2` Instagram comments from `everydayrunnerlab`.
+- Posted `2` Coachi mentions, both on TikTok, with no links.
+- Skipped one TikTok target because a visible `Everyday Runner Lab` comment was already present on the post.
+- Logged all `5` posted actions in `inputs/performance/engagement-ledger.json`.
+- Saved the run note at `outputs/daily/2026-06-25-1547-engagement-loop.md`.
+- Updated `inputs/performance/2026-06-25-scorecard.md` and `inputs/performance/WINNER_LIBRARY.md`.
+## Review (2026-06-25 22:06 TikTok slideshow inbox handoff plus engagement)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory path, and synced `Codebase_guide.MD` before acting.
+- Preferred slideshow command was dry at `outputs/full-loop/2026-06-25-195433/full-loop-report.json`; normal queue had no new matching sourced problems.
+- Created run-local recovery problem/text banks under `outputs/full-loop/2026-06-25-direct-run-by-feel-not-panic/` without mutating shared hook/text banks.
+- Generated fresh pack `content/slideshows/2026-06-25-wish-why-running-feels-too-hard-early`; Images 2.0 hook provenance exists with `fallback_used: false`.
+- Fixed a production QA copy-freshness block by rewriting repeated core slide copy, then reran render and production QA successfully.
+- Uploaded through TikTok photo `MEDIA_UPLOAD` inbox fallback; publish id `p_inbox_url~v2.7655426304623413270`, final status `SEND_TO_USER_INBOX`.
+- Verified `exports/2026-06-25-wish-why-running-feels-too-hard-early-caption-to-paste.txt` exists and exactly matches `copy/tiktok-postiz-caption.txt`.
+- Rebuilt engagement candidates with viral hook research disabled: `34` candidates and `2` duplicate suppressions across Reddit, TikTok, Instagram, and X.
+- `growth:daily --skip-slideshow --execute` failed in app-side social coordinator because `run-todays-pack.sh --date 2026-06-25 --json` returned non-zero.
+- Public engagement actions completed: none. No engagement ledger update, viral storagebag append, direct-public post, staging, or commit was made.
+- Saved run note and approval queue in `outputs/daily/2026-06-25-2206-tiktok-slideshow-upload-engagement-loop.md`.
+
+## Review (2026-06-26 02:06 TikTok slideshow inbox handoff plus engagement)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory path, and synced `Codebase_guide.MD` before acting.
+- Preferred slideshow command was dry at `outputs/full-loop/2026-06-25-235449/full-loop-report.json`; normal queue had no new matching sourced problems.
+- Created run-local recovery problem/text banks under `outputs/full-loop/2026-06-26-direct-catch-drift-early/` without mutating shared hook/text banks.
+- Generated fresh pack `content/slideshows/2026-06-26-reframe-why-watch-checks-make-easy-runs-harder`; Images 2.0 hook provenance exists with `fallback_used: false`.
+- Fixed a production QA copy-freshness block by rewriting repeated core slide copy, then reran render and production QA successfully.
+- Uploaded through TikTok photo `MEDIA_UPLOAD` inbox fallback; publish id `p_inbox_url~v2.7655487305456650262`, final status `SEND_TO_USER_INBOX`.
+- Verified `exports/2026-06-26-reframe-why-watch-checks-make-easy-runs-harder-caption-to-paste.txt` exists and exactly matches `copy/tiktok-postiz-caption.txt`.
+- Rebuilt engagement candidates with viral hook research disabled: `32` candidates and `2` duplicate suppressions across Reddit, TikTok, Instagram, and X.
+- `growth:daily --skip-slideshow --execute` failed in app-side social coordinator because `run-todays-pack.sh --date 2026-06-26 --json` returned non-zero.
+- Read-only browser probe saved at `proofs/browser/2026-06-26-engagement-loop/signed-in-state.json`; TikTok and Instagram were not signed in, Reddit hit a JS challenge URL, and X was not signed in.
+- Public engagement actions completed: none. No engagement ledger update, viral storagebag append, direct-public post, staging, or commit was made.
+- Saved run note and approval queue in `outputs/daily/2026-06-26-0202-tiktok-slideshow-upload-engagement-loop.md`.
+
+## Review (2026-06-26 08:44 dual-channel TikTok slideshow inbox batch)
+
+- Generated 10 production slideshow packs: 5 for main and 5 for Runner Watch Lab, using run-local frozen topics under `outputs/full-loop/2026-06-26-dual-channel-5x/frozen-topics/`.
+- Applied the watch-copy correction from the user: avoided `Your watch fit changes heart rate`, `changes heart rate`, `can lie`, `Hilly pace`, and visible `Myth:`/`Truth:` wording. Watch fit copy now frames the issue as bad HR readings from a loose strap, not a changed heart rate.
+- Audit passed in `outputs/full-loop/2026-06-26-dual-channel-5x/artifact-audit.json`: production QA passed, 7 slides each, no hook fallbacks, unique hook images, correct Watch avatar reference, and rejected visible copy absent.
+- Sent 9/10 packs to TikTok inbox. Watch is complete at 5/5. Main is 4/5 because TikTok blocked `content/slideshows/2026-06-26-main-05-slowhard-slow-pace-can-still-get-too-hard` with `spam_risk_too_many_pending_share` on initial upload and controlled retry.
+- Retry main slot 5 after clearing/posting pending main-account inbox shares: `/opt/homebrew/bin/npm run slideshow:upload-both -- --pack content/slideshows/2026-06-26-main-05-slowhard-slow-pace-can-still-get-too-hard --skip-instagram --tiktok-account main`.
+- Verification passed: focused slideshow/inbox/profile tests `25/25`; batch audit `ok: true`; inbox summary saved at `outputs/full-loop/2026-06-26-dual-channel-5x/inbox-send-status-summary.json`.
+
+## Review (2026-06-26 22:08 engagement loop)
+
+- Refreshed ranked candidates at `outputs/daily/2026-06-26-2208-engagement-candidates.json`: 34 candidates across Reddit, TikTok, Instagram, and X.
+- Used the Codex in-app browser with one tab reused sequentially; no OpenClaw/Clawbot path was used.
+- Live state: TikTok and Instagram were browsable/signed in enough for target review, Reddit was signed in as `AlarmingTradition961`, and X was blocked at Cloudflare account-access verification.
+- Own Reddit-post follow-up was low value because recent own posts were Reddit-filtered or had no comments.
+- Prepared an exact approval queue with 3 TikTok comments, 1 Instagram comment, and 3 Reddit replies, all no-link and no Coachi mention. Saved queue at `outputs/daily/2026-06-26-2208-engagement-loop.md` and `.json`.
+- Public actions completed: none yet. Status is `needs_user_confirmation` because public replies/comments require exact action-time approval.
+
+## Review (2026-06-26 10:02 TikTok slideshow upload loop blocked plus engagement)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory path, the Coachi engagement skill, and synced `Codebase_guide.MD`.
+- Preferred production slideshow command was dry at `outputs/full-loop/2026-06-26-075550/full-loop-report.json`.
+- Created run-local fallback problem bank `outputs/full-loop/2026-06-26-direct-not-every-slow-run-is-easy/single-problem-bank.json`; shared hook/text banks were not mutated.
+- Recovery production command also returned zero topic candidates at `outputs/full-loop/2026-06-26-direct-not-every-slow-run-is-easy/full-loop-report.json`.
+- Inspected existing fresh pack `content/slideshows/2026-06-26-main-05-slowhard-slow-pace-can-still-get-too-hard`; QA/preflight passed and Images 2.0 hook provenance had `fallback_used: false`.
+- Edited TikTok caption/hashtags to remove forced Coachi tagging on the generic Supabase CTA path, then verified the caption-to-paste export matches `copy/tiktok-postiz-caption.txt`.
+- TikTok inbox upload was attempted once through the official photo `MEDIA_UPLOAD` path and blocked by TikTok with `spam_risk_too_many_pending_share`; no retry and no direct-public post.
+- Rebuilt engagement candidates with viral hook research disabled: `34` candidates and `2` duplicate suppressions across Reddit, TikTok, Instagram, and X.
+- `growth:daily --skip-slideshow --execute` failed in app-side social coordinator because `run-todays-pack.sh --date 2026-06-26 --json` returned non-zero.
+- Browser checks found Chrome CDP unavailable, OpenClaw live but no browser profile running, and Clawbot down, so public engagement actions were queued only.
+- Public engagement actions completed: none. No engagement ledger update, viral storagebag append, staging, or commit was made.
+
+## Review (2026-06-26 12:00 TikTok slideshow upload loop blocked plus engagement)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory path, the Coachi engagement skill, and synced `Codebase_guide.MD`.
+- Preferred production slideshow command was dry at `outputs/full-loop/2026-06-26-115708/full-loop-report.json`: `beginner_runner` produced zero candidates and the remaining niches had no new matching sourced problems.
+- Created run-local recovery problem bank `outputs/full-loop/2026-06-26-direct-easy-runs-won-early/single-problem-bank.json`; shared hook/text/viral banks were not mutated.
+- Recovery full-loop and direct production pipeline still returned zero safe topic candidates. A diagnostic with hook/slide dedupe disabled could only form reused hook `Your easy run should feel boring`, so no pack, video, caption export, TikTok publish id, or inbox upload was produced.
+- Rebuilt engagement candidates with viral hook research disabled: `32` candidates and `2` duplicate suppressions across Reddit, TikTok, Instagram, and X.
+- `growth:daily --skip-slideshow --execute` failed in app-side social coordinator because `run-todays-pack.sh --date 2026-06-26 --json` returned non-zero.
+- Ran the safe Clawbot fallback; OpenClaw was ready but Clawbot live Chrome was not ready because `127.0.0.1:9333` refused connection.
+- Prepared approval-gated Reddit, TikTok, Instagram, and X queues in `outputs/daily/2026-06-26-1200-tiktok-slideshow-upload-engagement-loop.md`.
+- Public engagement actions completed: none. No engagement ledger update, viral storagebag append, direct-public post, staging, or commit was made.
+
+## Review (2026-06-27 02:05 TikTok slideshow upload loop blocked plus engagement)
+
+- Read `AGENTS.md`, `CURRENT_STATE.md`, automation memory path, the Coachi engagement skill, and synced `Codebase_guide.MD`.
+- Preferred production slideshow command was dry at `outputs/full-loop/2026-06-27-000046/full-loop-report.json`: `beginner_runner` produced zero candidates and the remaining niches had no new matching sourced problems.
+- Created run-local recovery bank `outputs/full-loop/2026-06-27-direct-protect-minute-two/single-problem-bank.json` from existing TikTok/reddit runner language; shared hook/text/viral banks were not mutated.
+- Recovery production command also returned zero safe non-duplicate topic candidates at `outputs/full-loop/2026-06-27-direct-protect-minute-two/full-loop-report.json`.
+- No pack, Images 2.0 hook, CTA, caption export, video, TikTok publish id, inbox upload, placeholder, direct-public post, or Postiz public schedule was produced.
+- Rebuilt engagement candidates with viral hook research disabled: `32` candidates and `2` duplicate suppressions across Reddit, TikTok, Instagram, and X.
+- `growth:daily --skip-slideshow --execute` failed in app-side social coordinator because `run-todays-pack.sh --date 2026-06-27 --json` returned non-zero.
+- Safe Clawbot fallback wrote `outputs/daily/2026-06-27-clawbot-engagement-fallback.md` and `.json`, but Clawbot CDP `127.0.0.1:9333` was down; OpenClaw was lower-level ready, but Playwright CDP attach to `127.0.0.1:18800` failed with `Browser.setDownloadBehavior`.
+- Public Reddit JSON search returned `403`, so no exact approval queue could be prepared from current live posts.
+- Public engagement actions completed: none. No engagement ledger update, viral storagebag append, staging, or commit was made.

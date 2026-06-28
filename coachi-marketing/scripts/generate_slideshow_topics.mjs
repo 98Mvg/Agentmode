@@ -1253,39 +1253,175 @@ function candidateSelectionKey(candidate) {
   return [candidate.problem_id, candidate.hook, candidate.schema, candidate.format_id].filter(Boolean).join("|");
 }
 
-function selectWithFormatCooldown(candidates, { limit, disabled = false } = {}) {
-  if (disabled) return candidates.slice(0, limit);
+function hookFamilyKeyForCandidate(candidate) {
+  const selectedHookKey = hookKey(candidate?.hook);
+  const selectedCandidate = (candidate?.hook_candidates || [])
+    .find((entry) => hookKey(entry?.hook) === selectedHookKey);
+  return candidate?.hook_source?.source_family_id
+    || candidate?.selected_hook_quality?.source_family_id
+    || selectedCandidate?.source_family_id
+    || candidate?.problem_type
+    || "unknown";
+}
+
+function problemTypeKeyForCandidate(candidate) {
+  return candidate?.problem_type || candidate?.source_problem_type || "unknown";
+}
+
+function formatKeyForCandidate(candidate) {
+  return candidate?.format_id || candidate?.schema || "unknown";
+}
+
+function withHookFamilyRotation(candidate, selectedHookFamilies, fallbackReason = null, {
+  enabled = true,
+  selectedProblemTypes = new Set(),
+  problemTypeFallback = null
+} = {}) {
+  if (!enabled) return candidate;
+  const sourceFamilyId = hookFamilyKeyForCandidate(candidate);
+  const problemTypeId = problemTypeKeyForCandidate(candidate);
+  return {
+    ...candidate,
+    hook_family_rotation: {
+      enabled: true,
+      source_family_id: sourceFamilyId === "unknown" ? null : sourceFamilyId,
+      duplicate_family_in_batch: selectedHookFamilies.has(sourceFamilyId),
+      fallback_used: Boolean(fallbackReason),
+      fallback_reason: fallbackReason
+    },
+    problem_type_rotation: {
+      enabled: true,
+      problem_type: problemTypeId === "unknown" ? null : problemTypeId,
+      duplicate_problem_type_in_batch: selectedProblemTypes.has(problemTypeId),
+      fallback_used: Boolean(problemTypeFallback),
+      fallback_reason: problemTypeFallback
+    },
+    content_rotation: {
+      enabled: true,
+      mode: "maximum_rotation",
+      axes: ["format_id", "source_family_id", "problem_type"],
+      repeated_axes: [
+        selectedHookFamilies.has(sourceFamilyId) ? "source_family_id" : null,
+        selectedProblemTypes.has(problemTypeId) ? "problem_type" : null
+      ].filter(Boolean),
+      fallback_used: Boolean(fallbackReason || problemTypeFallback),
+      fallback_reasons: [fallbackReason, problemTypeFallback].filter(Boolean)
+    }
+  };
+}
+
+function selectWithFormatCooldown(candidates, { limit, disabled = false, hookFamilyRotation = true } = {}) {
+  if (disabled) {
+    const selectedHookFamilies = new Set();
+    const selectedProblemTypes = new Set();
+    return candidates.slice(0, limit).map((candidate) => {
+      const annotated = withHookFamilyRotation(candidate, selectedHookFamilies, null, {
+        enabled: hookFamilyRotation,
+        selectedProblemTypes
+      });
+      selectedHookFamilies.add(hookFamilyKeyForCandidate(candidate));
+      selectedProblemTypes.add(problemTypeKeyForCandidate(candidate));
+      return annotated;
+    });
+  }
   const selected = [];
   const selectedKeys = new Set();
   const selectedFormats = new Set();
-  const pushCandidate = (candidate, fallbackMeta = null) => {
+  const selectedHookFamilies = new Set();
+  const selectedProblemTypes = new Set();
+  const pushCandidate = (candidate, {
+    formatFallback = null,
+    hookFamilyFallback = null,
+    problemTypeFallback = null
+  } = {}) => {
     const key = candidateSelectionKey(candidate);
     if (selectedKeys.has(key)) return false;
     selectedKeys.add(key);
-    const formatId = candidate.format_id || candidate.schema || "unknown";
+    const formatId = formatKeyForCandidate(candidate);
     selectedFormats.add(formatId);
-    selected.push(fallbackMeta
+    const annotatedCandidate = withHookFamilyRotation(candidate, selectedHookFamilies, hookFamilyFallback, {
+      enabled: hookFamilyRotation,
+      selectedProblemTypes,
+      problemTypeFallback
+    });
+    selectedHookFamilies.add(hookFamilyKeyForCandidate(candidate));
+    selectedProblemTypes.add(problemTypeKeyForCandidate(candidate));
+    selected.push(formatFallback
       ? {
-          ...candidate,
+          ...annotatedCandidate,
           format_cooldown: {
-            ...(candidate.format_cooldown || {}),
+            ...(annotatedCandidate.format_cooldown || {}),
             fallback_used: true,
-            fallback_reason: fallbackMeta
+            fallback_reason: formatFallback
           }
         }
-      : candidate);
+      : annotatedCandidate);
     return selected.length >= limit;
   };
 
   for (const candidate of candidates) {
-    const formatId = candidate.format_id || candidate.schema || "unknown";
+    const formatId = formatKeyForCandidate(candidate);
     if ((candidate.format_cooldown?.recent_count || 0) > 0) continue;
     if (selectedFormats.has(formatId)) continue;
+    if (selectedHookFamilies.has(hookFamilyKeyForCandidate(candidate))) continue;
+    if (selectedProblemTypes.has(problemTypeKeyForCandidate(candidate))) continue;
     if (pushCandidate(candidate)) return selected;
   }
 
   for (const candidate of candidates) {
-    if (pushCandidate(candidate, "insufficient fresh format families after cooldown")) return selected;
+    const formatId = formatKeyForCandidate(candidate);
+    if ((candidate.format_cooldown?.recent_count || 0) > 0) continue;
+    if (selectedFormats.has(formatId)) continue;
+    if (selectedProblemTypes.has(problemTypeKeyForCandidate(candidate))) continue;
+    if (pushCandidate(candidate, { hookFamilyFallback: "insufficient fresh hook families before format cooldown" })) return selected;
+  }
+
+  for (const candidate of candidates) {
+    const formatId = formatKeyForCandidate(candidate);
+    if ((candidate.format_cooldown?.recent_count || 0) > 0) continue;
+    if (selectedFormats.has(formatId)) continue;
+    if (selectedHookFamilies.has(hookFamilyKeyForCandidate(candidate))) continue;
+    if (pushCandidate(candidate, { problemTypeFallback: "insufficient fresh problem types before format cooldown" })) return selected;
+  }
+
+  for (const candidate of candidates) {
+    const formatId = formatKeyForCandidate(candidate);
+    if ((candidate.format_cooldown?.recent_count || 0) > 0) continue;
+    if (selectedFormats.has(formatId)) continue;
+    if (pushCandidate(candidate, {
+      hookFamilyFallback: "insufficient fresh hook families before format cooldown",
+      problemTypeFallback: "insufficient fresh problem types before format cooldown"
+    })) return selected;
+  }
+
+  for (const candidate of candidates) {
+    if (selectedHookFamilies.has(hookFamilyKeyForCandidate(candidate))) continue;
+    if (selectedProblemTypes.has(problemTypeKeyForCandidate(candidate))) continue;
+    if (pushCandidate(candidate, { formatFallback: "insufficient fresh format families after cooldown" })) return selected;
+  }
+
+  for (const candidate of candidates) {
+    if (selectedProblemTypes.has(problemTypeKeyForCandidate(candidate))) continue;
+    if (pushCandidate(candidate, {
+      formatFallback: "insufficient fresh format families after cooldown",
+      hookFamilyFallback: "insufficient fresh hook families after format fallback"
+    })) return selected;
+  }
+
+  for (const candidate of candidates) {
+    if (selectedHookFamilies.has(hookFamilyKeyForCandidate(candidate))) continue;
+    if (pushCandidate(candidate, {
+      formatFallback: "insufficient fresh format families after cooldown",
+      problemTypeFallback: "insufficient fresh problem types after format fallback"
+    })) return selected;
+  }
+
+  for (const candidate of candidates) {
+    if (pushCandidate(candidate, {
+      formatFallback: "insufficient fresh format families after cooldown",
+      hookFamilyFallback: "insufficient fresh hook families after format fallback",
+      problemTypeFallback: "insufficient fresh problem types after format fallback"
+    })) return selected;
   }
 
   return selected;
@@ -1889,6 +2025,10 @@ function viralHookPackForProblem(problem, textBank = null, avoidHookKeys = null,
     hook_candidates: hookSelection.candidates,
     selected_hook_quality: {
       hook: bestHook,
+      source: hookSelection.selected.source || null,
+      source_family_id: hookSelection.selected.source_family_id || null,
+      source_signal: hookSelection.selected.source_signal || null,
+      source_url: hookSelection.selected.source_url || null,
       score: hookSelection.selected.score,
       max_score: hookSelection.selected.max_score,
       min_score: MIN_HOOK_QUALITY_SCORE,
@@ -2299,7 +2439,8 @@ async function main() {
     });
   const selectedCandidates = selectWithFormatCooldown(allCandidates, {
     limit,
-    disabled: flags.has("--disable-format-cooldown")
+    disabled: flags.has("--disable-format-cooldown"),
+    hookFamilyRotation: !flags.has("--disable-hook-family-rotation")
   });
   const candidates = selectedCandidates
     .map((candidate, index) => {
@@ -2330,6 +2471,30 @@ async function main() {
       recent_pack_count: recentFormatUsage.entries.length,
       eligible_before_cooldown: allCandidates.length
     },
+    hook_family_rotation: flags.has("--disable-hook-family-rotation")
+      ? { enabled: false }
+      : {
+          enabled: true,
+          rule: "Maximum rotation: prefer fresh format_id, source_family_id, and problem_type before allowing any repeat in the same batch.",
+          selected_family_count: new Set(candidates.map((candidate) => hookFamilyKeyForCandidate(candidate))).size,
+          repeated_family_count: candidates.filter((candidate) => candidate.hook_family_rotation?.duplicate_family_in_batch).length,
+          fallback_count: candidates.filter((candidate) => candidate.hook_family_rotation?.fallback_used).length
+        },
+    content_rotation: flags.has("--disable-hook-family-rotation")
+      ? { enabled: false }
+      : {
+          enabled: true,
+          mode: "maximum_rotation",
+          axes: ["format_id", "source_family_id", "problem_type"],
+          rule: "Select the most diverse viable batch first; reuse a format, hook family, or problem type only when the candidate pool cannot fill the requested limit otherwise.",
+          selected_format_count: new Set(candidates.map((candidate) => formatKeyForCandidate(candidate))).size,
+          selected_family_count: new Set(candidates.map((candidate) => hookFamilyKeyForCandidate(candidate))).size,
+          selected_problem_type_count: new Set(candidates.map((candidate) => problemTypeKeyForCandidate(candidate))).size,
+          repeated_format_count: Math.max(0, candidates.length - new Set(candidates.map((candidate) => formatKeyForCandidate(candidate))).size),
+          repeated_family_count: candidates.filter((candidate) => candidate.hook_family_rotation?.duplicate_family_in_batch).length,
+          repeated_problem_type_count: candidates.filter((candidate) => candidate.problem_type_rotation?.duplicate_problem_type_in_batch).length,
+          fallback_count: candidates.filter((candidate) => candidate.content_rotation?.fallback_used).length
+        },
     visual_world_rotation: flags.has("--disable-world-rotation")
       ? { enabled: false }
       : {
