@@ -5402,7 +5402,7 @@
       ]
     },
     {
-      "pattern_id": "watch_not_coach",
+      "pattern_id": "zone2_watch_context",
       "rank": 46,
       "source": {
         "platform": "tiktok",
@@ -5417,99 +5417,99 @@
       "problem_types": [
         "data-without-coaching"
       ],
-      "why_it_works": "Adapts a visible TikTok watch/running hook mechanic into plain runner language for RunWatchLab without copying creator wording.",
-      "variation_rule": "Rotate one variation per slideshow. Keep slide 1 specific and legible, preserving the question, contradiction, number, or watch pain before teaching one mistake or setup idea.",
+      "why_it_works": "Works only when framed as runner decision pain. Avoid flat anti-watch lines; lead with the behavior of letting numbers control the workout.",
+      "variation_rule": "Rotate one variation per slideshow. Prefer proven TikTok storage-bank runner-language patterns and safe variations over invented abstract watch hooks. Avoid hooks like \"watch is not a coach\" or \"shows, not coaches\"; use runner-action wording around watch numbers, decisions, and mid-run cues.",
       "watch_account_fit": "coachiLayer",
       "variations": [
         {
-          "variation_id": "watch_not_coach_v1",
-          "hook": "Your watch is not a coach",
-          "hook_word_count": 6,
-          "slide_text_1_to_6": [
-            "Your watch is not a coach",
-            "It shows pace.",
-            "It shows heart rate.",
-            "It cannot feel your effort.",
-            "It rarely explains what next.",
-            "You need timely decisions."
-          ],
-          "caption_starter": "Your watch is not a coach. It shows pace.",
-          "cta_options": [
-            "Save this before your next run",
-            "Follow for smarter watch use",
-            "Try Coachi when the watch is not enough"
-          ]
-        },
-        {
-          "variation_id": "watch_not_coach_v2",
-          "hook": "The watch is not enough",
-          "hook_word_count": 5,
-          "slide_text_1_to_6": [
-            "The watch is not enough",
-            "It shows heart rate.",
-            "It cannot feel your effort.",
-            "It rarely explains what next.",
-            "You need timely decisions.",
-            "That gap is the product."
-          ],
-          "caption_starter": "The watch is not enough. It shows heart rate.",
-          "cta_options": [
-            "Save this before your next run",
-            "Follow for smarter watch use",
-            "Try Coachi when the watch is not enough"
-          ]
-        },
-        {
-          "variation_id": "watch_not_coach_v3",
-          "hook": "A watch shows, not coaches",
-          "hook_word_count": 5,
-          "slide_text_1_to_6": [
-            "A watch shows, not coaches",
-            "It cannot feel your effort.",
-            "It rarely explains what next.",
-            "You need timely decisions.",
-            "That gap is the product.",
-            "It shows pace."
-          ],
-          "caption_starter": "A watch shows, not coaches. It cannot feel your effort.",
-          "cta_options": [
-            "Save this before your next run",
-            "Follow for smarter watch use",
-            "Try Coachi when the watch is not enough"
-          ]
-        },
-        {
-          "variation_id": "watch_not_coach_v4",
-          "hook": "Your watch reports the run",
-          "hook_word_count": 5,
-          "slide_text_1_to_6": [
-            "Your watch reports the run",
-            "It rarely explains what next.",
-            "You need timely decisions.",
-            "That gap is the product.",
-            "It shows pace.",
-            "It shows heart rate."
-          ],
-          "caption_starter": "Your watch reports the run. It rarely explains what next.",
-          "cta_options": [
-            "Save this before your next run",
-            "Follow for smarter watch use",
-            "Try Coachi when the watch is not enough"
-          ]
-        },
-        {
-          "variation_id": "watch_not_coach_v5",
-          "hook": "Coaching starts after numbers",
+          "variation_id": "zone2_easy_storage_v1",
+          "hook": "Trying to keep Zone 2 easy?",
           "hook_word_count": 4,
           "slide_text_1_to_6": [
-            "Coaching starts after numbers",
-            "You need timely decisions.",
-            "That gap is the product.",
-            "It shows pace.",
-            "It shows heart rate.",
-            "It cannot feel your effort."
+            "Trying to keep Zone 2 easy?",
+            "Pick the workout goal.",
+            "Watch the drift.",
+            "Change one thing.",
+            "Slow, hold, or speed up.",
+            "Keep the run honest."
           ],
-          "caption_starter": "Coaching starts after numbers. You need timely decisions.",
+          "caption_starter": "Trying to keep Zone 2 easy? Pick the workout goal, then use the number to make one clear decision.",
+          "cta_options": [
+            "Save this before your next run",
+            "Follow for smarter watch use",
+            "Try Coachi when the watch is not enough"
+          ]
+        },
+        {
+          "variation_id": "watch_number_context_v2",
+          "hook": "Do not let one number decide",
+          "hook_word_count": 6,
+          "slide_text_1_to_6": [
+            "Do not let one number decide",
+            "Check the goal first.",
+            "Easy means controlled.",
+            "Hard means intentional.",
+            "React before drift wins.",
+            "Use cues, not panic."
+          ],
+          "caption_starter": "Do not let one number decide. Your watch needs workout context before it means anything.",
+          "cta_options": [
+            "Save this before your next run",
+            "Follow for smarter watch use",
+            "Try Coachi when the watch is not enough"
+          ]
+        },
+        {
+          "variation_id": "watch_number_context_v3",
+          "hook": "Your watch number needs context",
+          "hook_word_count": 5,
+          "slide_text_1_to_6": [
+            "Your watch number needs context",
+            "Heat changes effort.",
+            "Hills change effort.",
+            "Fatigue changes effort.",
+            "The goal decides the cue.",
+            "Do not chase the screen."
+          ],
+          "caption_starter": "Your watch number needs context. The same heart rate can mean different decisions in different workouts.",
+          "cta_options": [
+            "Save this before your next run",
+            "Follow for smarter watch use",
+            "Try Coachi when the watch is not enough"
+          ]
+        },
+        {
+          "variation_id": "watch_midrun_cue_v4",
+          "hook": "Watch drift needs a clear cue",
+          "hook_word_count": 6,
+          "slide_text_1_to_6": [
+            "Watch drift needs a clear cue",
+            "Pace can lag.",
+            "Heart rate can jump.",
+            "The goal decides the cue.",
+            "Slow, hold, or speed up.",
+            "Decide before panic."
+          ],
+          "caption_starter": "Watch drift needs a clear cue. The number matters when it changes what you do next.",
+          "cta_options": [
+            "Save this before your next run",
+            "Follow for smarter watch use",
+            "Try Coachi when the watch is not enough"
+          ]
+        },
+        {
+          "variation_id": "watch_data_decision_v5",
+          "hook": "Watch data needs a decision",
+          "hook_word_count": 5,
+          "slide_text_1_to_6": [
+            "Watch data needs a decision",
+            "Slow down.",
+            "Hold steady.",
+            "Speed up.",
+            "That is the missing layer.",
+            "Use cues during the run."
+          ],
+          "caption_starter": "Watch data needs a decision. The useful question is what to change while you are still running.",
           "cta_options": [
             "Save this before your next run",
             "Follow for smarter watch use",

@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "mode": "tiktok_photo_media_upload_inbox",
+  "note": "No access token printed. TikTok requires the user to open the inbox notification and finish posting.",
+  "token_refreshed": false,
+  "integration": {
+    "id": "cmq43gqc30001lj6wjsp99t8q",
+    "name": "runwatchlab",
+    "profile": "runwatchlab",
+    "tokenExpiration": "2026-06-29T15:46:28.937Z",
+    "refreshNeeded": false,
+    "disabled": false
+  },
+  "slideshow_id": "2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy",
+  "photo_count": 7,
+  "publish_id": "p_inbox_url~v2.7656494509328631831",
+  "statuses": [
+    {
+      "status": "PROCESSING_DOWNLOAD",
+      "fail_reason": null
+    },
+    {
+      "status": "SEND_TO_USER_INBOX",
+      "fail_reason": null
+    }
+  ]
+}

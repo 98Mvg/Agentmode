@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "generated_at": "2026-06-28T15:36:18.372Z",
+  "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong",
+  "date": "2026-06-28",
+  "hook": "Why your easy pace feels wrong",
+  "schema": "myth_breaker_v1",
+  "format_id": "heart_rate_training_myths",
+  "artifacts": {
+    "instagram_carousel": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/instagram-carousel.md",
+    "instagram_stories": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/instagram-stories.md",
+    "x_post": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/x-post.md",
+    "reddit_angle": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/reddit-discussion-angle.md",
+    "pinterest_pin": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/pinterest-pin.md",
+    "daily_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/daily-pack.md"
+  },
+  "channel_files": {
+    "instagram": "content/Instagram/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-derived-carousel.md",
+    "tiktok": "content/Tiktok/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-derived-reel.md",
+    "x": "content/x-posts/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-derived-x.md",
+    "reddit": "content/Reddit/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-discussion-angle.md"
+  }
+}

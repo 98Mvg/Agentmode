@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-06-28T17:17:15.200Z",
+  "pack": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Trying to keep Zone 2 easy?",
+    "candidate_file": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/hook-candidates.json",
+    "selected_score": 69,
+    "candidates": 8
+  },
+  "prompt_artifacts": {
+    "hook": "Trying to keep Zone 2 easy?",
+    "theme": "data-without-coaching",
+    "prompt_coherence": {
+      "phase": "post_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "lake_calm_036",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "lake_calm_037",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "lake_calm_038",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "lake_calm_039",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "lake_calm_040",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_011_phone_lake_calm_47min",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "owned_coachi_phone_ui_cta_image2",
+        "selection_score": 105,
+        "quality_score": 92,
+        "visual_match_score": 13,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/hook-provenance.json",
+      "generator": "chatgpt_images_2_0",
+      "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+      "expected_reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "lake_calm_036",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "lake_calm_037",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "lake_calm_038",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "lake_calm_039",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "lake_calm_040",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "coachi_cta_011_phone_lake_calm_47min",
+        "source_rights": "owned",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "owned_coachi_phone_ui_cta_image2"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 5,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "cta_text_rotation": {
+    "current_cta": "Coachi tells you when to slow down.",
+    "checked_recent_decks": 5,
+    "window_size": 5
+  },
+  "creative_rules": {
+    "coachi_mentions": 1,
+    "first_coachi_mention_slide": 7,
+    "canonical_slideshow": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/02-setup.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/03-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/04-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/05-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/06-coachi-connection.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 1,
+    "dry_run": true
+  }
+}

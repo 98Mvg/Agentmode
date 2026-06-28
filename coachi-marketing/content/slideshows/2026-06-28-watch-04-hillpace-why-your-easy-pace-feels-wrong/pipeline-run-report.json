@@ -1,0 +1,168 @@
+{
+  "ok": true,
+  "status": "production_ready",
+  "generated_at": "2026-06-28T15:36:18.377Z",
+  "source_article": "https://x.com/alexcooldev/status/2047715075457507452",
+  "mode": "production_pack",
+  "publish_mode": "manual-review",
+  "hook_image_fallback": {
+    "fallback_used": false
+  },
+  "steps": [
+    "validated engine",
+    "generated sourced topic candidates",
+    "created schema-based render manifest",
+    "created Images 2.0 hook-only prompt",
+    "selected and materialized Supabase/library assets",
+    "rendered slides through Sharp + Canvas compositor",
+    "kept local media paths for manual/Postiz upload",
+    "derived Instagram/X/Reddit/Pinterest channel copy",
+    "built Postiz dry-run schedule",
+    "skipped queue dry-run by flag"
+  ],
+  "candidate": {
+    "problem_id": "rp_2026_06_28_watch_hills_make_pace_noisy_softcta",
+    "schema": "myth_breaker_v1",
+    "format_id": "heart_rate_training_myths",
+    "hook": "Why your easy pace feels wrong",
+    "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "exact_words": "My watch pace looks wrong on hills, so I stop trusting the whole run.",
+    "problem_type": "pace disbelief",
+    "selected_hook_quality": {
+      "hook": "Why your easy pace feels wrong",
+      "source": "tiktok_text_bank",
+      "source_family_id": "proper_easy_run",
+      "source_signal": "relevant easy-run format",
+      "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+      "score": 68,
+      "max_score": 70,
+      "min_score": 56,
+      "passes_quality_gate": true,
+      "word_count": 6,
+      "breakdown": {
+        "runner_pain_specificity": 9,
+        "curiosity": 10,
+        "simplicity": 10,
+        "emotional_relatability": 9,
+        "coachi_fit": 10,
+        "tiktok_native_wording": 10,
+        "non_marketing_tone": 10,
+        "score": 68,
+        "max_score": 70,
+        "word_count": 6,
+        "curiosity_signals": {
+          "concrete_number": false,
+          "first_person_confession": false,
+          "direct_address_contradiction": false,
+          "question_or_choice": false,
+          "plain_contradiction": true,
+          "watch_specific_decision": false
+        },
+        "watch_specific_intent": false,
+        "banned_matches": []
+      },
+      "rationale": "68/70; 6 words; bank family proper_easy_run; pain 9/10; curiosity 10/10; simplicity 10/10; passes quality gate"
+    },
+    "hook_source": {
+      "hook": "Why your easy pace feels wrong",
+      "source_family_id": "proper_easy_run",
+      "source_signal": "relevant easy-run format",
+      "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+      "why_it_works": "simple instruction shape from source-backed TikTok hook (relevant easy-run format)."
+    },
+    "slide_text_source": {
+      "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+      "slide_set_id": "pace_context_simple",
+      "source_family_ids": [
+        "mistakes_new_runners"
+      ]
+    },
+    "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json"
+  },
+  "hook_brief": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook-brief.json",
+  "slideshow_json": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/slideshow.json",
+  "hook_candidates": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook-candidates.json",
+  "hook_text": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook.txt",
+  "theme": "pace context",
+  "reddit_background_and_vibe": {
+    "background": "calm lakeside running path with visible water and route context",
+    "vibe": "context changes the run, practical and grounded",
+    "reddit_background": "My watch pace looks wrong on hills, so I stop trusting the whole run.",
+    "visual_keywords": [
+      "lake path",
+      "water edge",
+      "calm daylight",
+      "open path",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "route-world switching",
+      "watch checking",
+      "extreme terrain",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "pack_dir": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong",
+  "render_manifest": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/render-manifest.json",
+  "images_2_0_prompt": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/images-2-0-hook-prompt.md",
+  "hook_provenance": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook-provenance.json",
+  "hook": {
+    "mode": "existing_hook_image",
+    "path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/source/01-hook.png"
+  },
+  "schedule": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/postiz-schedule.json",
+  "media_transport": "local_media_paths",
+  "public_media_manifest": null,
+  "repurposed_outputs": {
+    "ok": true,
+    "generated_at": "2026-06-28T15:36:18.372Z",
+    "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong",
+    "date": "2026-06-28",
+    "hook": "Why your easy pace feels wrong",
+    "schema": "myth_breaker_v1",
+    "format_id": "heart_rate_training_myths",
+    "artifacts": {
+      "instagram_carousel": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/instagram-carousel.md",
+      "instagram_stories": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/instagram-stories.md",
+      "x_post": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/x-post.md",
+      "reddit_angle": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/reddit-discussion-angle.md",
+      "pinterest_pin": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/pinterest-pin.md",
+      "daily_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/repurposed/daily-pack.md"
+    },
+    "channel_files": {
+      "instagram": "content/Instagram/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-derived-carousel.md",
+      "tiktok": "content/Tiktok/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-derived-reel.md",
+      "x": "content/x-posts/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-derived-x.md",
+      "reddit": "content/Reddit/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong-discussion-angle.md"
+    }
+  },
+  "live_schedule": false,
+  "tiktok_account_profile": {
+    "profile": "watch",
+    "label": "Runner Watch Lab",
+    "lane": "watch problems, setup tips, comparisons, and Coachi as live coaching layer",
+    "aliases": [
+      "watch",
+      "watches",
+      "watch-lab",
+      "runner-watch-lab",
+      "secondary",
+      "second"
+    ],
+    "env_keys": [
+      "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH",
+      "POSTIZ_TIKTOK_ACCOUNT_ID_SECONDARY"
+    ],
+    "account_id": "cmq43gqc30001lj6wjsp99t8q",
+    "env_key": "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH"
+  },
+  "schedule_platform": [
+    "tiktok"
+  ],
+  "rendered_dir": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered"
+}

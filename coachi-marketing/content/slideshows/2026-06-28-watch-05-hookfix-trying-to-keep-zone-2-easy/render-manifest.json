@@ -1,0 +1,228 @@
+{
+  "base_dir": ".",
+  "output_dir": "slides/rendered",
+  "width": 1080,
+  "height": 1920,
+  "output_format": "png",
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "estimated_generation_cost_usd": 0.15,
+  "source_problem_id": "rp_2026_06_28_watch_numbers_not_decisions",
+  "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "schema": "founder_built_this_v1",
+  "format_id": "why_you_plateau",
+  "tiktok_account_profile": {
+    "profile": "watch",
+    "label": "Runner Watch Lab",
+    "lane": "watch problems, setup tips, comparisons, and Coachi as live coaching layer",
+    "aliases": [
+      "watch",
+      "watches",
+      "watch-lab",
+      "runner-watch-lab",
+      "secondary",
+      "second"
+    ],
+    "env_keys": [
+      "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH",
+      "POSTIZ_TIKTOK_ACCOUNT_ID_SECONDARY"
+    ],
+    "account_id": "cmq43gqc30001lj6wjsp99t8q",
+    "env_key": "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH"
+  },
+  "format_catalog": "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json",
+  "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+  "format_library_required": true,
+  "hook_quality": {
+    "hook": "Trying to keep Zone 2 easy?",
+    "source": "tiktok_storage_bank_safe_variation",
+    "source_family_id": "zone2_watch_meme",
+    "source_signal": "TikTok storage bag: trying to stay in Zone 2 / watch says high HR",
+    "source_url": "inputs/research/tiktok-viral-storagebag.jsonl",
+    "score": 69,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 9,
+      "simplicity": 10,
+      "emotional_relatability": 10,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 69,
+      "max_score": 70,
+      "word_count": 6,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "69/70; safe variation of proven Zone 2 watch-meme storage-bank structure; plain runner language."
+  },
+  "emotion": "overwhelmed",
+  "visual_world": "lake",
+  "lighting_family": "calm lake daylight",
+  "avatar_world_required": true,
+  "cta_required": true,
+  "coachi_app_cta_policy": {
+    "target_share": 0.7,
+    "selected_for_this_pack": true,
+    "text": "Coachi tells you when to slow down.",
+    "cta_id": "cta_app_watch_context",
+    "cta_class": "soft app-proof",
+    "app_cta_asset_ids": [
+      "coachi_cta_003_phone_image2_48min",
+      "coachi_cta_004_watch_image2_52min",
+      "coachi_cta_009_phone_forest_morning_44min",
+      "coachi_cta_010_watch_forest_morning_39min",
+      "coachi_cta_011_phone_lake_calm_47min",
+      "coachi_cta_012_watch_lake_calm_35min",
+      "coachi_cta_013_phone_mountain_morning_51min"
+    ]
+  },
+  "marketing_banks": {
+    "cta_id": "cta_app_watch_context",
+    "cta_class": "soft app-proof",
+    "caption_template_id": "cap_default_01",
+    "hashtag_set_id": "hs_race_01"
+  },
+  "defaults": {
+    "font_family": "Arial Black, Impact, sans-serif",
+    "font_weight": 900,
+    "text_color": "#FFFFFF",
+    "stroke_color": "#111111",
+    "stroke_width": 8,
+    "gradient_opacity": 0.64,
+    "safe_margin": 96,
+    "text_position": "lower_middle",
+    "font_size": 76,
+    "max_chars_per_line": 24
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "input_image": "slides/source/01-hook.png",
+      "output_file": "01-hook.png",
+      "text": "Trying to keep Zone 2 easy?",
+      "asset_source": "images_2_0",
+      "visual_collection": "details_emotion",
+      "text_position": "center",
+      "font_size": 92,
+      "max_chars_per_line": 25
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "input_image": "slides/source/02-setup.png",
+      "output_file": "02-setup.png",
+      "text": "Your watch says too high.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "input_image": "slides/source/03-value.png",
+      "output_file": "03-value.png",
+      "text": "That does not mean panic.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "input_image": "slides/source/04-value.png",
+      "output_file": "04-value.png",
+      "text": "Start easier for 10 minutes.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "center",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "input_image": "slides/source/05-value.png",
+      "output_file": "05-value.png",
+      "text": "Keep the ceiling simple.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "center",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "input_image": "slides/source/06-coachi-connection.png",
+      "output_file": "06-coachi-connection.png",
+      "text": "Back off before it turns hard.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "center",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "input_image": "slides/source/07-cta.png",
+      "output_file": "07-cta.png",
+      "text": "Coachi tells you when to slow down.",
+      "asset_source": "supabase_template",
+      "visual_collection": "cta_ending",
+      "text_position": "top",
+      "font_size": 58,
+      "max_chars_per_line": 20,
+      "cta_id": "cta_app_watch_context",
+      "cta_class": "soft app-proof",
+      "preferred_asset_ids": [
+        "coachi_cta_003_phone_image2_48min",
+        "coachi_cta_004_watch_image2_52min",
+        "coachi_cta_009_phone_forest_morning_44min",
+        "coachi_cta_010_watch_forest_morning_39min",
+        "coachi_cta_011_phone_lake_calm_47min",
+        "coachi_cta_012_watch_lake_calm_35min",
+        "coachi_cta_013_phone_mountain_morning_51min"
+      ],
+      "coachi_app_cta": true
+    }
+  ],
+  "manual_correction": {
+    "corrected_at": "2026-06-28T17:03:37.883Z",
+    "reason": "User rejected vague/AI-generated watch hooks and requested TikTok storage bank as source of truth.",
+    "rejected_hooks": [
+      "Your watch shows, it does not coach",
+      "Stop letting watch numbers run your workout",
+      "Stop chasing every watch number",
+      "Stop chasing watch numbers",
+      "Your watch tells you too late",
+      "Your watch catches drift too late"
+    ],
+    "selected_hook": "Trying to keep Zone 2 easy?",
+    "rule": "Use safe variations of proven storage-bank structures; prefer plain runner language over invented abstract hooks.",
+    "storage_source": {
+      "source_file": "inputs/research/tiktok-viral-storagebag.jsonl",
+      "source_pattern": "Trying to stay in Zone 2 / Heart rate said: 176 watch-meme structure",
+      "safe_variation": "Trying to keep Zone 2 easy?",
+      "reason": "User asked to use TikTok storage bank as source of truth and avoid AI-generated hooks."
+    }
+  },
+  "updated_at": "2026-06-28T16:51:08.294Z"
+}

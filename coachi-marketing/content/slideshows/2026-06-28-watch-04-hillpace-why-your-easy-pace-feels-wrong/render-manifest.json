@@ -1,0 +1,189 @@
+{
+  "base_dir": ".",
+  "output_dir": "slides/rendered",
+  "width": 1080,
+  "height": 1920,
+  "output_format": "png",
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "estimated_generation_cost_usd": 0.15,
+  "source_problem_id": "rp_2026_06_28_watch_hills_make_pace_noisy_softcta",
+  "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "schema": "myth_breaker_v1",
+  "format_id": "heart_rate_training_myths",
+  "tiktok_account_profile": {
+    "profile": "watch",
+    "label": "Runner Watch Lab",
+    "lane": "watch problems, setup tips, comparisons, and Coachi as live coaching layer",
+    "aliases": [
+      "watch",
+      "watches",
+      "watch-lab",
+      "runner-watch-lab",
+      "secondary",
+      "second"
+    ],
+    "env_keys": [
+      "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH",
+      "POSTIZ_TIKTOK_ACCOUNT_ID_SECONDARY"
+    ],
+    "account_id": "cmq43gqc30001lj6wjsp99t8q",
+    "env_key": "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH"
+  },
+  "format_catalog": "strategy/automation/tiktok-instagram-slideshow-content-engine/formats/coachi-formats.json",
+  "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+  "format_library_required": true,
+  "hook_quality": {
+    "hook": "Why your easy pace feels wrong",
+    "source": "tiktok_text_bank",
+    "source_family_id": "proper_easy_run",
+    "source_signal": "relevant easy-run format",
+    "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+    "score": 68,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 10,
+      "emotional_relatability": 9,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 68,
+      "max_score": 70,
+      "word_count": 6,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": true,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "68/70; 6 words; bank family proper_easy_run; pain 9/10; curiosity 10/10; simplicity 10/10; passes quality gate"
+  },
+  "emotion": "doubtful",
+  "visual_world": "lake",
+  "lighting_family": "calm lake daylight",
+  "avatar_world_required": true,
+  "cta_required": true,
+  "coachi_app_cta_policy": {
+    "target_share": 0.7,
+    "selected_for_this_pack": false,
+    "text": "Comment below if your easy run turns hard.",
+    "cta_id": "cta_comment_drift",
+    "cta_class": "comment-bait",
+    "app_cta_asset_ids": []
+  },
+  "marketing_banks": {
+    "cta_id": "cta_comment_drift",
+    "cta_class": "comment-bait",
+    "caption_template_id": "cap_default_03",
+    "hashtag_set_id": "hs_cardio_01"
+  },
+  "defaults": {
+    "font_family": "Arial Black, Impact, sans-serif",
+    "font_weight": 900,
+    "text_color": "#FFFFFF",
+    "stroke_color": "#111111",
+    "stroke_width": 8,
+    "gradient_opacity": 0.64,
+    "safe_margin": 96,
+    "text_position": "lower_middle",
+    "font_size": 76,
+    "max_chars_per_line": 24
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "input_image": "slides/source/01-hook.png",
+      "output_file": "01-hook.png",
+      "text": "Why your easy pace feels wrong",
+      "asset_source": "images_2_0",
+      "visual_collection": "details_emotion",
+      "text_position": "center",
+      "font_size": 92,
+      "max_chars_per_line": 25
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "input_image": "slides/source/02-setup.png",
+      "output_file": "02-setup.png",
+      "text": "Hills bend the split.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "input_image": "slides/source/03-value.png",
+      "output_file": "03-value.png",
+      "text": "Flat pace rules break uphill.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "input_image": "slides/source/04-value.png",
+      "output_file": "04-value.png",
+      "text": "Use effort on the climb.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "input_image": "slides/source/05-value.png",
+      "output_file": "05-value.png",
+      "text": "Let downhill settle gently.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "center",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "input_image": "slides/source/06-coachi-connection.png",
+      "output_file": "06-coachi-connection.png",
+      "text": "Judge route, not one mile.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "text_position": "center",
+      "font_size": 76,
+      "max_chars_per_line": 24
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "input_image": "slides/source/07-cta.png",
+      "output_file": "07-cta.png",
+      "text": "Comment below if your easy run turns hard.",
+      "asset_source": "supabase_template",
+      "visual_collection": "cta_ending",
+      "text_position": "center",
+      "font_size": 76,
+      "max_chars_per_line": 24,
+      "cta_id": "cta_comment_drift",
+      "cta_class": "comment-bait"
+    }
+  ]
+}

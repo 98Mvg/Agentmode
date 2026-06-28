@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "hook": "Trying to keep Zone 2 easy?",
+  "problem_id": "rp_2026_06_28_watch_numbers_not_decisions",
+  "problem_type": "data-without-coaching",
+  "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "source_problem": "The problem is not more numbers. It is knowing what the watch means.",
+  "exact_reddit_language": "The watch gives numbers, but it does not tell me what to change while I am running.",
+  "emotion": "overwhelmed",
+  "pattern": "number anxiety",
+  "format_id": "why_you_plateau",
+  "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "hook_source": null,
+  "slide_text_source": {
+    "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "slide_set_id": "watch_context_simple",
+    "source_family_ids": [
+      "scary_but_simple",
+      "watch_utility"
+    ]
+  },
+  "hook_quality": {
+    "hook": "Trying to keep Zone 2 easy?",
+    "source": "tiktok_storage_bank_safe_variation",
+    "source_family_id": "zone2_watch_meme",
+    "source_signal": "TikTok storage bag: trying to stay in Zone 2 / watch says high HR",
+    "source_url": "inputs/research/tiktok-viral-storagebag.jsonl",
+    "score": 69,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 9,
+      "simplicity": 10,
+      "emotional_relatability": 10,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 69,
+      "max_score": 70,
+      "word_count": 6,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "69/70; safe variation of proven Zone 2 watch-meme storage-bank structure; plain runner language."
+  },
+  "theme": "data-without-coaching",
+  "route_tag": "lake",
+  "visual_world": "lake",
+  "lighting_family": "calm lake daylight",
+  "cta": "Comment what your app misses.",
+  "avatar_world_required": true,
+  "avatar_source": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "viral_face_style_reference": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "cta_required": true,
+  "reddit_background_and_vibe": {
+    "background": "calm lakeside running path with visible water and route context",
+    "vibe": "realistic, calm, premium, useful, not overproduced",
+    "reddit_background": "The watch gives numbers, but it does not tell me what to change while I am running.",
+    "visual_keywords": [
+      "lake path",
+      "water edge",
+      "calm daylight",
+      "open path",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "watch close-up",
+      "baked-in text",
+      "logos",
+      "fake steam",
+      "blurred background",
+      "unnatural stride",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "background_world_lock": {
+    "selected_visual_world": "lake",
+    "required_background": "calm lakeside running path with visible water and route context",
+    "reference_background_policy": "Reference image controls runner appearance only; its original background is non-transferable.",
+    "generated_background_rule": "Generate a new lake background that matches the deck visual world and lighting family.",
+    "allowed_background_context": [
+      "mountain backdrop",
+      "large hill backdrop"
+    ],
+    "forbidden_background_elements": [
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "first_image_prompt_adaptation": "show a runner in a believable post-run or easy-run moment with clean negative space for overlay text",
+  "character_anchor": {
+    "identity_id": "runner_watch_lab_lifelong_runner_v1",
+    "account_profile": "watch",
+    "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+    "style_reference_image": null,
+    "identity_prompt": "photorealistic male lifelong runner, early-to-mid 40s, age 42-48, lean durable endurance-athlete build, weathered but healthy face, subtle smile lines and sun texture, short dark hair with slight grey at the temples, calm experienced runner presence, natural sweat, technical running kit or realistic shirtless warm-weather running look, visible Apple Watch-style or Garmin-style running watch on one wrist, real outdoor running moment",
+    "brand_anchor_prompt": "photorealistic experienced male runner in his 40s, lifelong runner, lean durable endurance build, masculine, sun-weathered tan complexion, short dark hair with subtle grey at the temples, steady confident runner expression, natural sweat, selected wardrobe category from the 50/50 clothing rotation, visible Apple Watch-style or Garmin-style running watch on one wrist, selected visual world environment, believable TikTok-native running creator aesthetic",
+    "reference_instruction": "Use only the Runner Watch Lab lifelong-runner reference as the identity reference. Do not use or imitate the 2026-04-26 watch-stole-the-run runner, younger face, hands-on-hips pose, centered hero crop, or original background.",
+    "stable_traits": [
+      "use an older lifelong runner identity for the watch-focused account",
+      "male runner, early-to-mid 40s, age 42-48",
+      "lean durable endurance-athlete build, not bulky and not model-polished",
+      "sun-weathered tan complexion with subtle smile lines and realistic skin texture",
+      "short dark slightly textured hair with a small amount of grey at the temples",
+      "calm experienced runner presence, like someone who has run for decades",
+      "the face must be visible enough to read the mature Runner Watch Lab identity on hook images",
+      "identity must carry through face, build, posture, efficient stride, kit, watch, and veteran runner energy",
+      "realistic sweat and outdoor running texture",
+      "technical running tops and shirtless warm-weather looks rotate with a 50/50 target",
+      "shirtless images are allowed only when they read like real training, not model posing",
+      "no glasses, sunglasses, or sport eyewear for now",
+      "visible Apple Watch-style or Garmin-style running watch on one wrist, small and natural, no readable UI or logos",
+      "natural outdoor running context"
+    ],
+    "variation_policy": "Use this as the Runner Watch Lab avatar: an experienced male runner in his 40s who looks like he has been running his whole life. He should feel credible, durable, calm, and slightly weathered, not like a young fitness model or generic ad thumbnail. Do not use the 2026-04-26 watch-stole-the-run runner as a style, face, body, pose, or age reference for the watch account. Rotate route, weather, light, camera angle, crop distance, subject scale, expression, shirtless/clothed kit, and Apple Watch/Garmin-style watch type per pack. Keep the mature face visible enough to verify identity. Keep shirtless images athletic, runner-realistic, and non-sexual. Default to no headwear. Eyewear is disabled for now: no glasses, sunglasses, sport eyewear, or clear lenses.",
+    "watch_rule": "Use the selected visible watch type as a natural selfie detail for watch-comparison hooks: it can sit in the lower foreground on the runner's wrist or forearm, but the frame must remain a runner selfie, not a wrist-only macro close-up. No readable screen UI, no logo, and no watch-checking pose.",
+    "selected_variation_id": "shirtless_black_shorts_real_run_warm_weather"
+  },
+  "workout_phase": {
+    "id": "post_workout",
+    "label": "post-workout",
+    "moment": "runner just finished or is cooling down after the session",
+    "body_language": "sweaty, satisfied, grounded, breathing settling, no exaggerated celebration",
+    "prompt_cue": "show a realistic cooldown or post-run moment with sweat, calm satisfaction, and a premium but believable feel"
+  },
+  "avatar_variation": {
+    "id": "shirtless_black_shorts_real_run_warm_weather",
+    "watch": "visible Apple Watch-style smartwatch on one wrist",
+    "top": "shirtless warm-weather running look",
+    "headwear": "no headwear",
+    "eyewear": "no glasses",
+    "shorts": "black 5-inch running shorts",
+    "angle": "medium-close real running or cooldown angle, not a posed fitness shoot",
+    "expression": "focused strain with controlled breathing, not a beauty pose",
+    "weather": "warm dry training conditions",
+    "lighting": "calm lake daylight",
+    "identity_profile": {
+      "profile": "watch",
+      "identity_id": "runner_watch_lab_lifelong_runner_v1",
+      "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+      "style_reference_image": null,
+      "identity_prompt": "photorealistic male lifelong runner, early-to-mid 40s, age 42-48, lean durable endurance-athlete build, weathered but healthy face, subtle smile lines and sun texture, short dark hair with slight grey at the temples, calm experienced runner presence, natural sweat, technical running kit or realistic shirtless warm-weather running look, visible Apple Watch-style or Garmin-style running watch on one wrist, real outdoor running moment",
+      "brand_anchor_prompt": "photorealistic experienced male runner in his 40s, lifelong runner, lean durable endurance build, masculine, sun-weathered tan complexion, short dark hair with subtle grey at the temples, steady confident runner expression, natural sweat, selected wardrobe category from the 50/50 clothing rotation, visible Apple Watch-style or Garmin-style running watch on one wrist, selected visual world environment, believable TikTok-native running creator aesthetic",
+      "stable_traits": [
+        "use an older lifelong runner identity for the watch-focused account",
+        "male runner, early-to-mid 40s, age 42-48",
+        "lean durable endurance-athlete build, not bulky and not model-polished",
+        "sun-weathered tan complexion with subtle smile lines and realistic skin texture",
+        "short dark slightly textured hair with a small amount of grey at the temples",
+        "calm experienced runner presence, like someone who has run for decades",
+        "the face must be visible enough to read the mature Runner Watch Lab identity on hook images",
+        "identity must carry through face, build, posture, efficient stride, kit, watch, and veteran runner energy",
+        "realistic sweat and outdoor running texture",
+        "technical running tops and shirtless warm-weather looks rotate with a 50/50 target",
+        "shirtless images are allowed only when they read like real training, not model posing",
+        "no glasses, sunglasses, or sport eyewear for now",
+        "visible Apple Watch-style or Garmin-style running watch on one wrist, small and natural, no readable UI or logos",
+        "natural outdoor running context"
+      ],
+      "variation_policy": "Use this as the Runner Watch Lab avatar: an experienced male runner in his 40s who looks like he has been running his whole life. He should feel credible, durable, calm, and slightly weathered, not like a young fitness model or generic ad thumbnail. Do not use the 2026-04-26 watch-stole-the-run runner as a style, face, body, pose, or age reference for the watch account. Rotate route, weather, light, camera angle, crop distance, subject scale, expression, shirtless/clothed kit, and Apple Watch/Garmin-style watch type per pack. Keep the mature face visible enough to verify identity. Keep shirtless images athletic, runner-realistic, and non-sexual. Default to no headwear. Eyewear is disabled for now: no glasses, sunglasses, sport eyewear, or clear lenses.",
+      "reference_instruction": "Use only the Runner Watch Lab lifelong-runner reference as the identity reference. Do not use or imitate the 2026-04-26 watch-stole-the-run runner, younger face, hands-on-hips pose, centered hero crop, or original background."
+    },
+    "watch_brand_family": "Apple Watch",
+    "watch_detail_rule": "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up. For watch-comparison hooks, use a natural runner selfie where the selected watch is clearly visible on the watch-side wrist or forearm in the lower foreground, but never as a wrist-only macro close-up. No readable screen UI, no visible brand logo, no fake watch ad pose, and no watch-checking pose.",
+    "watch_context_rule": "Use the selected visible watch type as a natural selfie detail for watch-comparison hooks: it can sit in the lower foreground on the runner's wrist or forearm, but the frame must remain a runner selfie, not a wrist-only macro close-up. No readable screen UI, no logo, and no watch-checking pose.",
+    "watch_rotation_policy": "visible watch on every hook image, stable 50/50 rotation between Apple Watch-style and Garmin-style running watches",
+    "clothing_category": "shirtless",
+    "shirtless_hook_image_rate_target": 50,
+    "clothing_rotation_policy": "50/50 stable hash split between shirtless and clothed hook images"
+  },
+  "hook_composition": {
+    "id": "watch_comparison_selfie_starter",
+    "label": "watch comparison selfie starter",
+    "allowed_phases": [
+      "pre_workout",
+      "post_workout"
+    ],
+    "requires_watch_comparison": true,
+    "camera_distance": "arm-length runner selfie frame",
+    "camera_height": "handheld phone selfie height, slightly above eye line",
+    "lens_feel": "front-camera TikTok creator selfie with natural wide phone perspective",
+    "subject_scale": "runner face, upper torso, and watch-side forearm fill 45-60% of frame without blocking text",
+    "face_visibility": "face visible like a real runner selfie, natural and slightly imperfect",
+    "movement_state": "runner holding the phone before or after a run with the watch-side wrist naturally visible in frame",
+    "negative_space_zone": "upper side sky, trail, forest, lake, or mountain background away from face and watch",
+    "background_depth": "selected route world stays visible behind the selfie so it is not a plain portrait",
+    "watch_comparison_rule": "For watch-comparison hooks only, the selected watch can be clearly visible in the lower foreground of the selfie, but the image must remain a runner selfie, not a wrist-only macro close-up. No readable screen UI, no brand logo, no fake watch ad pose, and no watch-checking pose.",
+    "direction": "start watch-comparison decks with a realistic runner selfie where the running watch is clearly visible near the lower foreground, but never as a wrist-only close-up; keep the selected route world visible behind him",
+    "selected_by": "watch_comparison_rule",
+    "rotation_policy": "Watch-comparison decks start with a watch-and-selfie hook frame before rotating the supporting visual world.",
+    "composition_priority": "Watch-comparison selfie starter overrides the avatar variation angle when they conflict."
+  },
+  "prompt_compiler": {
+    "version": 1,
+    "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    "selected_by": "problem_type_mapping",
+    "coherence_status": "passed",
+    "conflict_patterns": [],
+    "checks": [
+      "single workout phase selected before prompt generation",
+      "avatar lighting normalized to deck lighting family",
+      "weather normalized to selected lighting family",
+      "reference image background locked out of generated avatar world",
+      "hook image remains slide-1-only",
+      "hook composition selected independently from wardrobe and workout phase",
+      "composition controls camera distance, face visibility, subject scale, and negative-space zone",
+      "do not repeat centered medium-close hero framing unless the selected composition asks for it",
+      "base image remains text-free for local Sharp/Canvas overlay"
+    ]
+  },
+  "schema_prompt_template": "photorealistic runner paused after a real training run in {scene}, honest expression, clean space for headline",
+  "production_rules": [
+    "Every slideshow has an explicit emotion, one Images 2.0 hook, one generated avatar world, and one final CTA.",
+    "Slide hook and slides 1-6 should use the source-backed TikTok slideshow text bank before any generic AI wording.",
+    "Images 2.0 generates slide 1 only.",
+    "Do not generate all slideshow images in one Images 2.0 request.",
+    "Do not bake overlay text into the image.",
+    "Keep the full deck in one visual world and one lighting family.",
+    "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
+    "Keep one primary visual world per slideshow; lake worlds may include mountains or hills as background context.",
+    "Use Supabase/curated library assets for slides 2 through the CTA slide.",
+    "Composite all text locally with Sharp/Canvas."
+  ],
+  "manual_correction": {
+    "corrected_at": "2026-06-28T17:03:37.883Z",
+    "reason": "User rejected vague/AI-generated watch hooks and requested TikTok storage bank as source of truth.",
+    "rejected_hooks": [
+      "Your watch shows, it does not coach",
+      "Stop letting watch numbers run your workout",
+      "Stop chasing every watch number",
+      "Stop chasing watch numbers",
+      "Your watch tells you too late",
+      "Your watch catches drift too late"
+    ],
+    "selected_hook": "Trying to keep Zone 2 easy?",
+    "rule": "Use safe variations of proven storage-bank structures; prefer plain runner language over invented abstract hooks.",
+    "storage_source": {
+      "source_file": "inputs/research/tiktok-viral-storagebag.jsonl",
+      "source_pattern": "Trying to stay in Zone 2 / Heart rate said: 176 watch-meme structure",
+      "safe_variation": "Trying to keep Zone 2 easy?",
+      "reason": "User asked to use TikTok storage bank as source of truth and avoid AI-generated hooks."
+    }
+  },
+  "updated_at": "2026-06-28T16:51:08.294Z"
+}

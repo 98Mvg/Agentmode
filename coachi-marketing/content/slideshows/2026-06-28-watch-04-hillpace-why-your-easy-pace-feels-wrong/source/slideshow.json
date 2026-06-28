@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong",
+  "format_id": "heart_rate_training_myths",
+  "schema": "myth_breaker_v1",
+  "topic": "Watch pace gets noisy on hills",
+  "selected_hook": "Why your easy pace feels wrong",
+  "hook_score": 68,
+  "hook_quality": {
+    "hook": "Why your easy pace feels wrong",
+    "source": "tiktok_text_bank",
+    "source_family_id": "proper_easy_run",
+    "source_signal": "relevant easy-run format",
+    "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+    "score": 68,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 10,
+      "emotional_relatability": 9,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 68,
+      "max_score": 70,
+      "word_count": 6,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": true,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "68/70; 6 words; bank family proper_easy_run; pain 9/10; curiosity 10/10; simplicity 10/10; passes quality gate"
+  },
+  "target_audience": "pace-focused runners / easy-run runners",
+  "source_problem": {
+    "id": "rp_2026_06_28_watch_hills_make_pace_noisy_softcta",
+    "problem_type": "pace disbelief",
+    "exact_words": "My watch pace looks wrong on hills, so I stop trusting the whole run.",
+    "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json"
+  },
+  "visual_system": {
+    "emotion": "doubtful",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why your easy pace feels wrong",
+      "visual_direction": "doubtful; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "pace disbelief hook lake calm lake daylight doubtful",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "Hills bend the split.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "pace disbelief setup lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "Flat pace rules break uphill.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "pace disbelief value lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Use effort on the climb.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "pace disbelief value lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Let downhill settle gently.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "pace disbelief value lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Judge route, not one mile.",
+      "visual_direction": "controlled and useful; controlled movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "runner controlled effort voice coaching moment lake calm lake daylight controlled and useful",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Comment below if your easy run turns hard.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background lake calm lake daylight calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "soft_engagement"
+    }
+  ],
+  "caption": "Why your easy pace feels wrong\n\nMost runners do not need more pressure. They need the right correction while the run is still happening.\n\nComment below if your easy run turns hard.",
+  "hashtags": [
+    "#running",
+    "#cardio",
+    "#breathwork",
+    "#runninghacks",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/qa-report.json",
+  "qa_checked_at": "2026-06-28T17:27:02.578Z"
+}

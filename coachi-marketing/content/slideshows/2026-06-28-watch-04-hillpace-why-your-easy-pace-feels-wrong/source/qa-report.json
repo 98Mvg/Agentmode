@@ -1,0 +1,271 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-06-28T17:27:02.580Z",
+  "pack": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Why your easy pace feels wrong",
+    "candidate_file": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook-candidates.json",
+    "selected_score": 68,
+    "candidates": 10
+  },
+  "prompt_artifacts": {
+    "hook": "Why your easy pace feels wrong",
+    "theme": "pace context",
+    "prompt_coherence": {
+      "phase": "during_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "lake_calm_026",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "lake_calm_027",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "lake_calm_028",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "lake_calm_029",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "lake_calm_030",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "cta_ending_007",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 72,
+        "quality_score": 87,
+        "visual_match_score": 13,
+        "freshness_penalty": 28,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-06-28T15:12:38.132Z",
+          "slideshow_ids": [
+            "2026-06-28-main-05-hrshame-high-heart-rate-is-not-shame"
+          ],
+          "recent_use_rank": 4
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/hook-provenance.json",
+      "generator": "chatgpt_images_2_0",
+      "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+      "expected_reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "lake_calm_026",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "lake_calm_027",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "lake_calm_028",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "lake_calm_029",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "lake_calm_030",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "cta_ending_007",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 5,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "cta_text_rotation": {
+    "current_cta": "Comment below if your easy run turns hard.",
+    "checked_recent_decks": 5,
+    "window_size": 5
+  },
+  "creative_rules": {
+    "coachi_mentions": 0,
+    "first_coachi_mention_slide": null,
+    "canonical_slideshow": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/02-setup.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/03-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/04-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/05-value.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/06-coachi-connection.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 1,
+    "dry_run": true
+  }
+}

@@ -1,0 +1,4354 @@
+{
+  "generated_at": "2026-06-28T15:39:29.200Z",
+  "manifest": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/render-manifest.json",
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "estimated_generation_cost_usd": 0.15,
+  "default_library_source": "supabase_visual_library",
+  "supabase_library_manifest": "content/slideshows/visual-library/supabase-library-manifest.json",
+  "pinterest_source_manifest": "content/slideshows/visual-library/pinterest-source-manifest.json",
+  "owned_source_manifest": "content/slideshows/visual-library/owned-source-manifest.json",
+  "usage_log": "outputs/full-loop/2026-06-28-dual-channel-5x/batch-visual-usage-log.json",
+  "usage_rotation_scope": "posted, published, legacy, selected, rendered, materialized, and dry-run-selected usage entries exhaust assets for this batch",
+  "source_policy": {
+    "allowed": [
+      "Coachi-generated images",
+      "user-approved original assets",
+      "licensed stock or owned photography",
+      "Marketing Supabase public bucket assets",
+      "Pinterest-inspired style notes without copying the image"
+    ],
+    "blocked": [
+      "recognizable unlicensed people",
+      "watermarked images",
+      "creator-owned images copied directly from social platforms",
+      "images with baked-in text unless intentionally marked as final"
+    ]
+  },
+  "production_asset_policy": "approved, owned, or licensed assets only, with middle-slide usage freshness enforced",
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Trying to keep Zone 2 easy?",
+      "asset_source": "images_2_0",
+      "visual_collection": "details_emotion",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/01-hook.png",
+      "output_file": "01-hook.png",
+      "instruction": {
+        "action": "generate_with_images_2_0",
+        "candidate_assets": [],
+        "prompt_hint": "photorealistic athletic male runner, age 25-35, lean muscular endurance-athlete build, masculine, tan complexion, short dark slightly textured hair, same face family across posts, realistic sweat, rotating believable runner expression, stronger 2026-04-26 watch-stole-the-run viral face style, 50/50 rotation between fitted technical running tops and shirtless warm-weather running looks when they read like real training and not model posing, visible Apple Watch-style or Garmin-style running watch on one wrist, no glasses or sport eyewear, real outdoor running moment in one selected route world, premium fitness-editorial aesthetic. realistic close detail from a run, controlled breathing, hands relaxed, legs/shoes/torso/back angle, natural emotion through body language, no clear face, no distorted limbs or fake sweat. photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
+      }
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "Your watch says too high.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/02-setup.png",
+      "output_file": "02-setup.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Lake (calm)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "reflective",
+            "controlled"
+          ],
+          "subject_tags": [
+            "lake",
+            "easy_run",
+            "recovery",
+            "open_path"
+          ],
+          "color_tags": [
+            "blue",
+            "green",
+            "soft_gold"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "lake_calm_036",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_036-p50x3-136.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_036-p50x3-136.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_036",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:136",
+            "source_candidate_id": "pinterest_50x3_136",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_036-p50x3-136.jpg",
+            "original_name": "lake_calm_036-p50x3-136.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_037",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_037-p50x3-137.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_037-p50x3-137.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_037",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:137",
+            "source_candidate_id": "pinterest_50x3_137",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_037-p50x3-137.jpg",
+            "original_name": "lake_calm_037-p50x3-137.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_038",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_038-p50x3-138.png",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_038-p50x3-138.png",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_038",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:138",
+            "source_candidate_id": "pinterest_50x3_138",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_038-p50x3-138.png",
+            "original_name": "lake_calm_038-p50x3-138.png",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_039",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_039",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:139",
+            "source_candidate_id": "pinterest_50x3_139",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "original_name": "lake_calm_039-p50x3-139.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_040",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_040",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:140",
+            "source_candidate_id": "pinterest_50x3_140",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "original_name": "lake_calm_040-p50x3-140.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_041",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_041",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:141",
+            "source_candidate_id": "pinterest_50x3_141",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "original_name": "lake_calm_041-p50x3-141.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_042",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_042",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:142",
+            "source_candidate_id": "pinterest_50x3_142",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "original_name": "lake_calm_042-p50x3-142.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_043",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_043",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:143",
+            "source_candidate_id": "pinterest_50x3_143",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "original_name": "lake_calm_043-p50x3-143.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 2,
+                "role": "setup",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for lower-tension middle or ending slides",
+          "good for effort, recovery, and confidence resets",
+          "prefer lake, path, back-view runner, tiny runner, or side-view runner with no clear face",
+          "keep text short and reflective"
+        ],
+        "face_visibility_rule": "For slides 2-6, prefer environments, route context, distant runners, back/side angles, silhouettes, or cropped body-language details. Avoid clear face/portrait/selfie assets so the viewer does not read the image as a different Coachi character.",
+        "prompt_translation": "calm lake-side running route, soft natural light, relaxed distant/back-view runner posture or no runner, premium but believable fitness image, no clear face",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "That does not mean panic.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/03-value.png",
+      "output_file": "03-value.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Lake (calm)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "reflective",
+            "controlled"
+          ],
+          "subject_tags": [
+            "lake",
+            "easy_run",
+            "recovery",
+            "open_path"
+          ],
+          "color_tags": [
+            "blue",
+            "green",
+            "soft_gold"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "lake_calm_037",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_037-p50x3-137.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_037-p50x3-137.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_037",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:137",
+            "source_candidate_id": "pinterest_50x3_137",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_037-p50x3-137.jpg",
+            "original_name": "lake_calm_037-p50x3-137.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_038",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_038-p50x3-138.png",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_038-p50x3-138.png",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_038",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:138",
+            "source_candidate_id": "pinterest_50x3_138",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_038-p50x3-138.png",
+            "original_name": "lake_calm_038-p50x3-138.png",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_039",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_039",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:139",
+            "source_candidate_id": "pinterest_50x3_139",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "original_name": "lake_calm_039-p50x3-139.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_040",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_040",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:140",
+            "source_candidate_id": "pinterest_50x3_140",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "original_name": "lake_calm_040-p50x3-140.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_041",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_041",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:141",
+            "source_candidate_id": "pinterest_50x3_141",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "original_name": "lake_calm_041-p50x3-141.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_042",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_042",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:142",
+            "source_candidate_id": "pinterest_50x3_142",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "original_name": "lake_calm_042-p50x3-142.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_043",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_043",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:143",
+            "source_candidate_id": "pinterest_50x3_143",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "original_name": "lake_calm_043-p50x3-143.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_044",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_044",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:144",
+            "source_candidate_id": "pinterest_50x3_144",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "original_name": "lake_calm_044-p50x3-144.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 3,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for lower-tension middle or ending slides",
+          "good for effort, recovery, and confidence resets",
+          "prefer lake, path, back-view runner, tiny runner, or side-view runner with no clear face",
+          "keep text short and reflective"
+        ],
+        "face_visibility_rule": "For slides 2-6, prefer environments, route context, distant runners, back/side angles, silhouettes, or cropped body-language details. Avoid clear face/portrait/selfie assets so the viewer does not read the image as a different Coachi character.",
+        "prompt_translation": "calm lake-side running route, soft natural light, relaxed distant/back-view runner posture or no runner, premium but believable fitness image, no clear face",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Start easier for 10 minutes.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/04-value.png",
+      "output_file": "04-value.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Lake (calm)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "reflective",
+            "controlled"
+          ],
+          "subject_tags": [
+            "lake",
+            "easy_run",
+            "recovery",
+            "open_path"
+          ],
+          "color_tags": [
+            "blue",
+            "green",
+            "soft_gold"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "lake_calm_038",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_038-p50x3-138.png",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_038-p50x3-138.png",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_038",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:138",
+            "source_candidate_id": "pinterest_50x3_138",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_038-p50x3-138.png",
+            "original_name": "lake_calm_038-p50x3-138.png",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_039",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_039",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:139",
+            "source_candidate_id": "pinterest_50x3_139",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "original_name": "lake_calm_039-p50x3-139.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_040",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_040",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:140",
+            "source_candidate_id": "pinterest_50x3_140",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "original_name": "lake_calm_040-p50x3-140.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_041",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_041",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:141",
+            "source_candidate_id": "pinterest_50x3_141",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "original_name": "lake_calm_041-p50x3-141.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_042",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_042",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:142",
+            "source_candidate_id": "pinterest_50x3_142",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "original_name": "lake_calm_042-p50x3-142.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_043",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_043",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:143",
+            "source_candidate_id": "pinterest_50x3_143",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "original_name": "lake_calm_043-p50x3-143.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_044",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_044",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:144",
+            "source_candidate_id": "pinterest_50x3_144",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "original_name": "lake_calm_044-p50x3-144.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_045",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_045",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:145",
+            "source_candidate_id": "pinterest_50x3_145",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "original_name": "lake_calm_045-p50x3-145.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 4,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for lower-tension middle or ending slides",
+          "good for effort, recovery, and confidence resets",
+          "prefer lake, path, back-view runner, tiny runner, or side-view runner with no clear face",
+          "keep text short and reflective"
+        ],
+        "face_visibility_rule": "For slides 2-6, prefer environments, route context, distant runners, back/side angles, silhouettes, or cropped body-language details. Avoid clear face/portrait/selfie assets so the viewer does not read the image as a different Coachi character.",
+        "prompt_translation": "calm lake-side running route, soft natural light, relaxed distant/back-view runner posture or no runner, premium but believable fitness image, no clear face",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Keep the ceiling simple.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/05-value.png",
+      "output_file": "05-value.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Lake (calm)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "reflective",
+            "controlled"
+          ],
+          "subject_tags": [
+            "lake",
+            "easy_run",
+            "recovery",
+            "open_path"
+          ],
+          "color_tags": [
+            "blue",
+            "green",
+            "soft_gold"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "lake_calm_039",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_039",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:139",
+            "source_candidate_id": "pinterest_50x3_139",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_039-p50x3-139.jpg",
+            "original_name": "lake_calm_039-p50x3-139.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_040",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_040",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:140",
+            "source_candidate_id": "pinterest_50x3_140",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "original_name": "lake_calm_040-p50x3-140.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_041",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_041",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:141",
+            "source_candidate_id": "pinterest_50x3_141",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "original_name": "lake_calm_041-p50x3-141.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_042",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_042",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:142",
+            "source_candidate_id": "pinterest_50x3_142",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "original_name": "lake_calm_042-p50x3-142.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_043",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_043",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:143",
+            "source_candidate_id": "pinterest_50x3_143",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "original_name": "lake_calm_043-p50x3-143.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_044",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_044",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:144",
+            "source_candidate_id": "pinterest_50x3_144",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "original_name": "lake_calm_044-p50x3-144.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_045",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_045",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:145",
+            "source_candidate_id": "pinterest_50x3_145",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "original_name": "lake_calm_045-p50x3-145.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_046",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_046-p50x3-146.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_046-p50x3-146.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_046",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:146",
+            "source_candidate_id": "pinterest_50x3_146",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_046-p50x3-146.jpg",
+            "original_name": "lake_calm_046-p50x3-146.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 5,
+                "role": "value",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for lower-tension middle or ending slides",
+          "good for effort, recovery, and confidence resets",
+          "prefer lake, path, back-view runner, tiny runner, or side-view runner with no clear face",
+          "keep text short and reflective"
+        ],
+        "face_visibility_rule": "For slides 2-6, prefer environments, route context, distant runners, back/side angles, silhouettes, or cropped body-language details. Avoid clear face/portrait/selfie assets so the viewer does not read the image as a different Coachi character.",
+        "prompt_translation": "calm lake-side running route, soft natural light, relaxed distant/back-view runner posture or no runner, premium but believable fitness image, no clear face",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Back off before it turns hard.",
+      "asset_source": "supabase_library",
+      "visual_collection": "lake_calm",
+      "coachi_app_cta": false,
+      "preferred_asset_ids": [],
+      "expected_input_image": "slides/source/06-coachi-connection.png",
+      "output_file": "06-coachi-connection.png",
+      "instruction": {
+        "action": "select_from_supabase_library",
+        "board": "Lake (calm)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "reflective",
+            "controlled"
+          ],
+          "subject_tags": [
+            "lake",
+            "easy_run",
+            "recovery",
+            "open_path"
+          ],
+          "color_tags": [
+            "blue",
+            "green",
+            "soft_gold"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "lake_calm_040",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_040",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:140",
+            "source_candidate_id": "pinterest_50x3_140",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_040-p50x3-140.jpg",
+            "original_name": "lake_calm_040-p50x3-140.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_041",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_041",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:141",
+            "source_candidate_id": "pinterest_50x3_141",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_041-p50x3-141.jpg",
+            "original_name": "lake_calm_041-p50x3-141.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_042",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_042",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:142",
+            "source_candidate_id": "pinterest_50x3_142",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_042-p50x3-142.jpg",
+            "original_name": "lake_calm_042-p50x3-142.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_043",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_043",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:143",
+            "source_candidate_id": "pinterest_50x3_143",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_043-p50x3-143.jpg",
+            "original_name": "lake_calm_043-p50x3-143.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_044",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_044",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:144",
+            "source_candidate_id": "pinterest_50x3_144",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_044-p50x3-144.jpg",
+            "original_name": "lake_calm_044-p50x3-144.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_045",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_045",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:145",
+            "source_candidate_id": "pinterest_50x3_145",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_045-p50x3-145.jpg",
+            "original_name": "lake_calm_045-p50x3-145.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_046",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_046-p50x3-146.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_046-p50x3-146.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_046",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:146",
+            "source_candidate_id": "pinterest_50x3_146",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_046-p50x3-146.jpg",
+            "original_name": "lake_calm_046-p50x3-146.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "lake_calm_047",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "pinterest_approved_v7_no_sunset",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/lake_calm/lake_calm_047-p50x3-147.jpg",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/lake_calm/lake_calm_047-p50x3-147.jpg",
+            "workflow_label": "lake:lake_calm_middle_slide",
+            "pull_label": "lake:lake_calm:lake_calm_047",
+            "world_rotation_key": "lake",
+            "asset_use_case": "lake_calm_middle_slide",
+            "workflow_tags": [
+              "lake",
+              "lake_calm",
+              "lake_calm_middle_slide",
+              "pinterest_v7_no_sunset",
+              "owner_approved",
+              "no_girls_no_women",
+              "no_sunset_no_sunrise",
+              "pinterest_approved_v7_no_sunset"
+            ],
+            "source_pull_id": "lake:pinterest-v7:147",
+            "source_candidate_id": "pinterest_50x3_147",
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/pinterest-source/lake_calm/lake_calm_047-p50x3-147.jpg",
+            "original_name": "lake_calm_047-p50x3-147.jpg",
+            "status": "supabase_library_candidate",
+            "source_rights": "approved",
+            "mood_tags": [
+              "calm",
+              "reflective",
+              "controlled"
+            ],
+            "subject_tags": [
+              "lake",
+              "easy_run",
+              "recovery",
+              "open_path",
+              "environment_first",
+              "no_clear_face",
+              "no_girls_no_women"
+            ],
+            "color_tags": [
+              "blue",
+              "green",
+              "soft_gold"
+            ],
+            "aesthetic_tags": [
+              "premium_editorial_running",
+              "calm_nature_running"
+            ],
+            "best_for_slide_roles": [
+              "reframe",
+              "rule",
+              "save"
+            ],
+            "best_for_platforms": [
+              "instagram",
+              "pinterest"
+            ],
+            "cta_device_family": null,
+            "workout_duration_display": null,
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 87,
+              "visual_match_score": 48,
+              "freshness_penalty": 0,
+              "selection_score": 135,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "prefer environment, distant runner, back/side angle, cropped body, or no clear face",
+              "requested_context": {
+                "slide_number": 6,
+                "role": "coachi_connection",
+                "visual_collection": "lake_calm",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use for lower-tension middle or ending slides",
+          "good for effort, recovery, and confidence resets",
+          "prefer lake, path, back-view runner, tiny runner, or side-view runner with no clear face",
+          "keep text short and reflective"
+        ],
+        "face_visibility_rule": "For slides 2-6, prefer environments, route context, distant runners, back/side angles, silhouettes, or cropped body-language details. Avoid clear face/portrait/selfie assets so the viewer does not read the image as a different Coachi character.",
+        "prompt_translation": "calm lake-side running route, soft natural light, relaxed distant/back-view runner posture or no runner, premium but believable fitness image, no clear face",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "use Supabase public_url when available; local_fallback_path is only for dry-run or offline render"
+      }
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Coachi tells you when to slow down.",
+      "asset_source": "supabase_template",
+      "visual_collection": "cta_ending",
+      "coachi_app_cta": true,
+      "preferred_asset_ids": [
+        "coachi_cta_003_phone_image2_48min",
+        "coachi_cta_004_watch_image2_52min",
+        "coachi_cta_009_phone_forest_morning_44min",
+        "coachi_cta_010_watch_forest_morning_39min",
+        "coachi_cta_011_phone_lake_calm_47min",
+        "coachi_cta_012_watch_lake_calm_35min",
+        "coachi_cta_013_phone_mountain_morning_51min"
+      ],
+      "expected_input_image": "slides/source/07-cta.png",
+      "output_file": "07-cta.png",
+      "instruction": {
+        "action": "select_from_owned_or_supabase_library",
+        "board": "CTA (ending)",
+        "rotation_policy": {
+          "max_uses_per_asset_per_30_days": 2,
+          "max_reuse_in_last_posts": 8,
+          "prefer_zero_use_assets": true,
+          "usage_log_path": "content/slideshows/visual-library/usage-log.json"
+        },
+        "preferred_asset_ids": [
+          "coachi_cta_003_phone_image2_48min",
+          "coachi_cta_004_watch_image2_52min",
+          "coachi_cta_009_phone_forest_morning_44min",
+          "coachi_cta_010_watch_forest_morning_39min",
+          "coachi_cta_011_phone_lake_calm_47min",
+          "coachi_cta_012_watch_lake_calm_35min",
+          "coachi_cta_013_phone_mountain_morning_51min"
+        ],
+        "collection_tags": {
+          "mood_tags": [
+            "calm",
+            "clear",
+            "actionable"
+          ],
+          "subject_tags": [
+            "open_path",
+            "negative_space",
+            "finish_prompt"
+          ],
+          "color_tags": [
+            "green",
+            "gold",
+            "neutral"
+          ]
+        },
+        "candidate_assets": [
+          {
+            "id": "coachi_cta_011_phone_lake_calm_47min",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "owned_coachi_phone_ui_cta_image2",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/coachi-cta-011-phone-lake-calm-47min.png",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/coachi-cta-011-phone-lake-calm-47min.png",
+            "workflow_label": "cta:cta_ending_slide",
+            "pull_label": "cta:cta_ending:coachi_cta_011_phone_lake_calm_47min",
+            "world_rotation_key": "cta",
+            "asset_use_case": "cta_ending_slide",
+            "workflow_tags": [
+              "cta",
+              "cta_ending",
+              "cta_ending_slide",
+              "owned_coachi_phone_ui_cta_image2",
+              "owned_coachi_asset"
+            ],
+            "source_pull_id": "cta:coachi_cta_011_phone_lake_calm_47min",
+            "source_candidate_id": null,
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-011-phone-lake-calm-47min.png",
+            "original_name": "Coachi Image 2.0 phone-in-hand CTA, calm lake path, 47-minute workout",
+            "status": "supabase_library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_phone_ui",
+              "iphone",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "47_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "phone_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "phone_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "phone",
+            "workout_duration_display": "47:00",
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 92,
+              "visual_match_score": 13,
+              "freshness_penalty": 0,
+              "selection_score": 105,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "hook/cta rules apply",
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_012_watch_lake_calm_35min",
+            "source_kind": "supabase_visual_library",
+            "original_source_kind": "owned_coachi_watch_ui_cta_image2",
+            "supabase_public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/visual-library/cta_ending/coachi-cta-012-watch-lake-calm-35min.png",
+            "bucket_id": "slideshow-public",
+            "object_path": "visual-library/cta_ending/coachi-cta-012-watch-lake-calm-35min.png",
+            "workflow_label": "cta:cta_ending_slide",
+            "pull_label": "cta:cta_ending:coachi_cta_012_watch_lake_calm_35min",
+            "world_rotation_key": "cta",
+            "asset_use_case": "cta_ending_slide",
+            "workflow_tags": [
+              "cta",
+              "cta_ending",
+              "cta_ending_slide",
+              "owned_coachi_watch_ui_cta_image2",
+              "owned_coachi_asset"
+            ],
+            "source_pull_id": "cta:coachi_cta_012_watch_lake_calm_35min",
+            "source_candidate_id": null,
+            "local_path": null,
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-012-watch-lake-calm-35min.png",
+            "original_name": "Coachi Image 2.0 watch-on-runner-wrist CTA, calm lake path, 35-minute workout",
+            "status": "supabase_library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_watch_ui",
+              "apple_watch",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "35_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "watch_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "watch_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "watch",
+            "workout_duration_display": "35:00",
+            "usage": {
+              "total_uses": 0,
+              "last_used_at": null,
+              "slideshow_ids": []
+            },
+            "selection_quality": {
+              "quality_score": 92,
+              "visual_match_score": 13,
+              "freshness_penalty": 0,
+              "selection_score": 105,
+              "recent_use_rank": null
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "hook/cta rules apply",
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          },
+          {
+            "id": "coachi_cta_003_phone_image2_48min",
+            "source_kind": "owned_coachi_phone_ui_cta_image2",
+            "original_source_kind": "owned_coachi_phone_ui_cta_image2",
+            "supabase_public_url": null,
+            "bucket_id": null,
+            "object_path": null,
+            "workflow_label": null,
+            "pull_label": null,
+            "world_rotation_key": "calm lake path",
+            "asset_use_case": null,
+            "workflow_tags": [],
+            "source_pull_id": null,
+            "source_candidate_id": null,
+            "local_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-003-phone-image2-48min.png",
+            "local_fallback_path": "content/slideshows/visual-library/owned-source/coachi-app-cta-rotation/coachi-cta-003-phone-image2-48min.png",
+            "original_name": "Coachi Image 2.0 phone-in-hand CTA, 48-minute workout",
+            "status": "library_candidate",
+            "source_rights": "owned",
+            "mood_tags": [
+              "clear",
+              "confident",
+              "actionable"
+            ],
+            "subject_tags": [
+              "coachi_phone_ui",
+              "iphone",
+              "heart_rate_zone",
+              "voice_coaching",
+              "app_proof",
+              "48_minute_workout"
+            ],
+            "color_tags": [
+              "black",
+              "orange",
+              "white",
+              "dark"
+            ],
+            "aesthetic_tags": [
+              "owned_coachi_app_ui",
+              "phone_ui_cta",
+              "builder_proof",
+              "premium_dark"
+            ],
+            "best_for_slide_roles": [
+              "cta",
+              "app_proof",
+              "phone_try_on"
+            ],
+            "best_for_platforms": [
+              "tiktok",
+              "instagram"
+            ],
+            "cta_device_family": "phone",
+            "workout_duration_display": "48:00",
+            "usage": {
+              "total_uses": 1,
+              "last_used_at": "2026-06-28T15:38:43.012Z",
+              "slideshow_ids": [
+                "2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy"
+              ],
+              "recent_use_rank": 0
+            },
+            "selection_quality": {
+              "quality_score": 88,
+              "visual_match_score": 13,
+              "freshness_penalty": 40,
+              "selection_score": 61,
+              "recent_use_rank": 0
+            },
+            "visual_fit_metadata": {
+              "visual_world_tags": [],
+              "lighting_tags": [],
+              "workout_phase_tags": [],
+              "negative_space_zone": null,
+              "face_visibility_preference": "hook/cta rules apply",
+              "requested_context": {
+                "slide_number": 7,
+                "role": "cta",
+                "visual_collection": "cta_ending",
+                "visual_world": "lake",
+                "route_tag": null,
+                "lighting_family": "calm lake daylight",
+                "workout_phase": null
+              }
+            }
+          }
+        ],
+        "selection_notes": [
+          "use clean negative space",
+          "prefer route, environment, or open-path endings over a clear non-Coachi face",
+          "avoid cluttered endings",
+          "make the viewer know what to do next"
+        ],
+        "face_visibility_rule": null,
+        "prompt_translation": "minimal running path, calm finish scene, distant runner, or open environment with strong negative space for a final question or save prompt; no clear non-Coachi face",
+        "production_asset_policy": "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation",
+        "allow_needs_review": false,
+        "legal_check": [
+          "no recognizable public figure",
+          "no watermark",
+          "owned, licensed, or approved for reuse",
+          "crop/color-grade before final use"
+        ],
+        "render_rule": "prefer owned Coachi local assets when they fit the slide; otherwise use Supabase public_url when available"
+      }
+    }
+  ]
+}

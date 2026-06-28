@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-06-28",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 379536,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "71b01fa4f294c1e910783c7b735c9e1db95a76c2e45bcc0500c666f5468978a9"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 313661,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/02-setup.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/02-setup.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/02-setup.jpg",
+      "sha256": "6816cbde07ae37daae687dbf28de32b8b787849fb4fb8c905a72be3267fac8cb"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 364270,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/03-value.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/03-value.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/03-value.jpg",
+      "sha256": "f7c12fc746def30628f8586c9cc9886a3c1ea886131230fd27b09fd4f7a2533e"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 285268,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/04-value.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/04-value.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/04-value.jpg",
+      "sha256": "d4bc0e169d63a1123bbfc7865c312b710dfdfe07f1c9343955fe0b71ca4aa4d7"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 466468,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/05-value.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/05-value.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/05-value.jpg",
+      "sha256": "671f19fe242d701c08c6a8307b58ab3a220fe99bbd8ac4138f3def6a0575d3a7"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 263450,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/06-coachi-connection.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/06-coachi-connection.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/06-coachi-connection.jpg",
+      "sha256": "c5a3e406194f4fec23d775d5f86c946f7c3c491870543efe63f50499e0b7886a"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 193736,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-05-hookfix-trying-to-keep-zone-2-easy/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "b607c23ae1d894b7a186e5bcbd45e4dcc4ae0c9dc2a531dcdaf4f97059557f2c"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-05-hookfix-trying-to-keep-zone-2-easy",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

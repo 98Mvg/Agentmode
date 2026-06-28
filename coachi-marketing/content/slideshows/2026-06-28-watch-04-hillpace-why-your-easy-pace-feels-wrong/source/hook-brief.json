@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "hook": "Why your easy pace feels wrong",
+  "problem_id": "rp_2026_06_28_watch_hills_make_pace_noisy_softcta",
+  "problem_type": "pace disbelief",
+  "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "source_problem": "Watch pace gets noisy on hills",
+  "exact_reddit_language": "My watch pace looks wrong on hills, so I stop trusting the whole run.",
+  "emotion": "doubtful",
+  "pattern": "effort vs pace",
+  "format_id": "heart_rate_training_myths",
+  "tiktok_text_bank": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+  "hook_source": {
+    "hook": "Why your easy pace feels wrong",
+    "source_family_id": "proper_easy_run",
+    "source_signal": "relevant easy-run format",
+    "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+    "why_it_works": "simple instruction shape from source-backed TikTok hook (relevant easy-run format)."
+  },
+  "slide_text_source": {
+    "bank_path": "inputs/research/tiktok-proven-slideshow-text-bank.json",
+    "slide_set_id": "pace_context_simple",
+    "source_family_ids": [
+      "mistakes_new_runners"
+    ]
+  },
+  "hook_quality": {
+    "hook": "Why your easy pace feels wrong",
+    "source": "tiktok_text_bank",
+    "source_family_id": "proper_easy_run",
+    "source_signal": "relevant easy-run format",
+    "source_url": "https://www.tiktok.com/@trainwithabbey/video/7572964194274823479",
+    "score": 68,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 6,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 10,
+      "emotional_relatability": 9,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 68,
+      "max_score": 70,
+      "word_count": 6,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": true,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "68/70; 6 words; bank family proper_easy_run; pain 9/10; curiosity 10/10; simplicity 10/10; passes quality gate"
+  },
+  "theme": "pace context",
+  "route_tag": "lake",
+  "visual_world": "lake",
+  "lighting_family": "calm lake daylight",
+  "cta": "Save before hilly easy runs.",
+  "avatar_world_required": true,
+  "avatar_source": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "viral_face_style_reference": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "cta_required": true,
+  "reddit_background_and_vibe": {
+    "background": "calm lakeside running path with visible water and route context",
+    "vibe": "context changes the run, practical and grounded",
+    "reddit_background": "My watch pace looks wrong on hills, so I stop trusting the whole run.",
+    "visual_keywords": [
+      "lake path",
+      "water edge",
+      "calm daylight",
+      "open path",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "route-world switching",
+      "watch checking",
+      "extreme terrain",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "background_world_lock": {
+    "selected_visual_world": "lake",
+    "required_background": "calm lakeside running path with visible water and route context",
+    "reference_background_policy": "Reference image controls runner appearance only; its original background is non-transferable.",
+    "generated_background_rule": "Generate a new lake background that matches the deck visual world and lighting family.",
+    "allowed_background_context": [
+      "mountain backdrop",
+      "large hill backdrop"
+    ],
+    "forbidden_background_elements": [
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "first_image_prompt_adaptation": "runner in a believable lake running moment with clean negative space for overlay text",
+  "character_anchor": {
+    "identity_id": "runner_watch_lab_lifelong_runner_v1",
+    "account_profile": "watch",
+    "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+    "style_reference_image": null,
+    "identity_prompt": "photorealistic male lifelong runner, early-to-mid 40s, age 42-48, lean durable endurance-athlete build, weathered but healthy face, subtle smile lines and sun texture, short dark hair with slight grey at the temples, calm experienced runner presence, natural sweat, technical running kit or realistic shirtless warm-weather running look, visible Apple Watch-style or Garmin-style running watch on one wrist, real outdoor running moment",
+    "brand_anchor_prompt": "photorealistic experienced male runner in his 40s, lifelong runner, lean durable endurance build, masculine, sun-weathered tan complexion, short dark hair with subtle grey at the temples, steady confident runner expression, natural sweat, selected wardrobe category from the 50/50 clothing rotation, visible Apple Watch-style or Garmin-style running watch on one wrist, selected visual world environment, believable TikTok-native running creator aesthetic",
+    "reference_instruction": "Use only the Runner Watch Lab lifelong-runner reference as the identity reference. Do not use or imitate the 2026-04-26 watch-stole-the-run runner, younger face, hands-on-hips pose, centered hero crop, or original background.",
+    "stable_traits": [
+      "use an older lifelong runner identity for the watch-focused account",
+      "male runner, early-to-mid 40s, age 42-48",
+      "lean durable endurance-athlete build, not bulky and not model-polished",
+      "sun-weathered tan complexion with subtle smile lines and realistic skin texture",
+      "short dark slightly textured hair with a small amount of grey at the temples",
+      "calm experienced runner presence, like someone who has run for decades",
+      "the face must be visible enough to read the mature Runner Watch Lab identity on hook images",
+      "identity must carry through face, build, posture, efficient stride, kit, watch, and veteran runner energy",
+      "realistic sweat and outdoor running texture",
+      "technical running tops and shirtless warm-weather looks rotate with a 50/50 target",
+      "shirtless images are allowed only when they read like real training, not model posing",
+      "no glasses, sunglasses, or sport eyewear for now",
+      "visible Apple Watch-style or Garmin-style running watch on one wrist, small and natural, no readable UI or logos",
+      "natural outdoor running context"
+    ],
+    "variation_policy": "Use this as the Runner Watch Lab avatar: an experienced male runner in his 40s who looks like he has been running his whole life. He should feel credible, durable, calm, and slightly weathered, not like a young fitness model or generic ad thumbnail. Do not use the 2026-04-26 watch-stole-the-run runner as a style, face, body, pose, or age reference for the watch account. Rotate route, weather, light, camera angle, crop distance, subject scale, expression, shirtless/clothed kit, and Apple Watch/Garmin-style watch type per pack. Keep the mature face visible enough to verify identity. Keep shirtless images athletic, runner-realistic, and non-sexual. Default to no headwear. Eyewear is disabled for now: no glasses, sunglasses, sport eyewear, or clear lenses.",
+    "watch_rule": "Use the selected visible watch type naturally on one wrist. The watch may read as Apple Watch-style or Garmin-style by silhouette only. Keep it small and believable in-frame. No readable screen UI, no logo, no wrist close-up, and no watch-checking pose.",
+    "selected_variation_id": "shirtless_charcoal_shorts_lake_cooldown"
+  },
+  "workout_phase": {
+    "id": "during_workout",
+    "label": "during-workout",
+    "moment": "runner in the middle of the session with steady controlled effort",
+    "body_language": "natural stride, consistent cadence, focused breathing, no stutter step or unnatural turn",
+    "prompt_cue": "show the runner moving naturally during the run with visible route context and believable motion"
+  },
+  "avatar_variation": {
+    "id": "shirtless_charcoal_shorts_lake_cooldown",
+    "watch": "visible Apple Watch-style smartwatch on one wrist",
+    "top": "shirtless post-run cooldown look with realistic sweat",
+    "headwear": "no headwear",
+    "eyewear": "no glasses",
+    "shorts": "charcoal 5-inch running shorts",
+    "angle": "waist-up walking cooldown angle with relaxed shoulders and route visible",
+    "expression": "post-run relief with breathing settling, grounded and human",
+    "weather": "warm calm lake daylight",
+    "lighting": "calm lake daylight",
+    "identity_profile": {
+      "profile": "watch",
+      "identity_id": "runner_watch_lab_lifelong_runner_v1",
+      "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+      "style_reference_image": null,
+      "identity_prompt": "photorealistic male lifelong runner, early-to-mid 40s, age 42-48, lean durable endurance-athlete build, weathered but healthy face, subtle smile lines and sun texture, short dark hair with slight grey at the temples, calm experienced runner presence, natural sweat, technical running kit or realistic shirtless warm-weather running look, visible Apple Watch-style or Garmin-style running watch on one wrist, real outdoor running moment",
+      "brand_anchor_prompt": "photorealistic experienced male runner in his 40s, lifelong runner, lean durable endurance build, masculine, sun-weathered tan complexion, short dark hair with subtle grey at the temples, steady confident runner expression, natural sweat, selected wardrobe category from the 50/50 clothing rotation, visible Apple Watch-style or Garmin-style running watch on one wrist, selected visual world environment, believable TikTok-native running creator aesthetic",
+      "stable_traits": [
+        "use an older lifelong runner identity for the watch-focused account",
+        "male runner, early-to-mid 40s, age 42-48",
+        "lean durable endurance-athlete build, not bulky and not model-polished",
+        "sun-weathered tan complexion with subtle smile lines and realistic skin texture",
+        "short dark slightly textured hair with a small amount of grey at the temples",
+        "calm experienced runner presence, like someone who has run for decades",
+        "the face must be visible enough to read the mature Runner Watch Lab identity on hook images",
+        "identity must carry through face, build, posture, efficient stride, kit, watch, and veteran runner energy",
+        "realistic sweat and outdoor running texture",
+        "technical running tops and shirtless warm-weather looks rotate with a 50/50 target",
+        "shirtless images are allowed only when they read like real training, not model posing",
+        "no glasses, sunglasses, or sport eyewear for now",
+        "visible Apple Watch-style or Garmin-style running watch on one wrist, small and natural, no readable UI or logos",
+        "natural outdoor running context"
+      ],
+      "variation_policy": "Use this as the Runner Watch Lab avatar: an experienced male runner in his 40s who looks like he has been running his whole life. He should feel credible, durable, calm, and slightly weathered, not like a young fitness model or generic ad thumbnail. Do not use the 2026-04-26 watch-stole-the-run runner as a style, face, body, pose, or age reference for the watch account. Rotate route, weather, light, camera angle, crop distance, subject scale, expression, shirtless/clothed kit, and Apple Watch/Garmin-style watch type per pack. Keep the mature face visible enough to verify identity. Keep shirtless images athletic, runner-realistic, and non-sexual. Default to no headwear. Eyewear is disabled for now: no glasses, sunglasses, sport eyewear, or clear lenses.",
+      "reference_instruction": "Use only the Runner Watch Lab lifelong-runner reference as the identity reference. Do not use or imitate the 2026-04-26 watch-stole-the-run runner, younger face, hands-on-hips pose, centered hero crop, or original background."
+    },
+    "watch_brand_family": "Apple Watch",
+    "watch_detail_rule": "rectangular Apple Watch-style running watch silhouette, small in-frame, no readable screen UI, no Apple logo, no watch-checking pose, never a wrist close-up",
+    "watch_context_rule": null,
+    "watch_rotation_policy": "visible watch on every hook image, stable 50/50 rotation between Apple Watch-style and Garmin-style running watches",
+    "clothing_category": "shirtless",
+    "shirtless_hook_image_rate_target": 50,
+    "clothing_rotation_policy": "50/50 stable hash split between shirtless and clothed hook images"
+  },
+  "hook_composition": {
+    "id": "reflection_or_shadow_detail",
+    "label": "reflection or shadow detail",
+    "allowed_phases": [
+      "pre_workout",
+      "during_workout",
+      "post_workout"
+    ],
+    "camera_distance": "detail-led frame with runner partly indirect",
+    "camera_height": "low phone angle near ground, water, or wet path",
+    "lens_feel": "specific creator detail shot",
+    "subject_scale": "runner body can be partial or reflected; environment fills the frame",
+    "face_visibility": "no direct face required",
+    "movement_state": "subtle movement, shadow, reflection, or passing stride",
+    "negative_space_zone": "natural open area in reflection, path, sky, or tree gap",
+    "background_depth": "selected visual world must still be identifiable",
+    "direction": "use reflection, shadow, or partial body detail to break the repeated full-runner look",
+    "phase_specific_movement_state": false,
+    "selected_by": "stable_hash_candidate_phase_world",
+    "rotation_policy": "Hook composition rotates independently from clothing, workout phase, and visual world so Picture 1 does not default to repeated centered medium-close hero shots.",
+    "composition_priority": "Hook composition overrides the avatar variation angle when they conflict."
+  },
+  "prompt_compiler": {
+    "version": 1,
+    "source_of_truth": "strategy/automation/tiktok-instagram-slideshow-content-engine/SOURCE_OF_TRUTH_X_ARTICLE.md",
+    "selected_by": "problem_type_mapping",
+    "coherence_status": "passed",
+    "conflict_patterns": [],
+    "checks": [
+      "single workout phase selected before prompt generation",
+      "avatar lighting normalized to deck lighting family",
+      "weather normalized to selected lighting family",
+      "reference image background locked out of generated avatar world",
+      "hook image remains slide-1-only",
+      "hook composition selected independently from wardrobe and workout phase",
+      "composition controls camera distance, face visibility, subject scale, and negative-space zone",
+      "do not repeat centered medium-close hero framing unless the selected composition asks for it",
+      "base image remains text-free for local Sharp/Canvas overlay"
+    ]
+  },
+  "schema_prompt_template": "photorealistic runner in {scene}, grounded expression, clean text space, no text",
+  "production_rules": [
+    "Every slideshow has an explicit emotion, one Images 2.0 hook, one generated avatar world, and one final CTA.",
+    "Slide hook and slides 1-6 should use the source-backed TikTok slideshow text bank before any generic AI wording.",
+    "Images 2.0 generates slide 1 only.",
+    "Do not generate all slideshow images in one Images 2.0 request.",
+    "Do not bake overlay text into the image.",
+    "Keep the full deck in one visual world and one lighting family.",
+    "For the hook image, reference-image background is non-transferable; the generated background must match visual_world.",
+    "Keep one primary visual world per slideshow; lake worlds may include mountains or hills as background context.",
+    "Use Supabase/curated library assets for slides 2 through the CTA slide.",
+    "Composite all text locally with Sharp/Canvas."
+  ]
+}

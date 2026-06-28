@@ -1115,7 +1115,7 @@
           "source_family_id": "watch_utility"
         },
         {
-          "text": "Your watch is not your coach",
+          "text": "Trying to keep Zone 2 easy?",
           "source_family_id": "watch_utility"
         }
       ],
@@ -1136,17 +1136,17 @@
           ]
         },
         {
-          "id": "watch_is_not_your_coach",
+          "id": "zone2_watch_context",
           "source_family_ids": [
             "watch_utility"
           ],
           "slides_1_to_6": [
-            "Your watch is not your coach",
-            "Zones are estimates.",
+            "Trying to keep Zone 2 easy?",
+            "Numbers need context.",
             "Pick one target (HR or effort).",
             "Use alerts, not staring.",
             "Adjust after the run.",
-            "Control beats guessing."
+            "Cues beat guessing."
           ]
         },
         {
@@ -1157,7 +1157,7 @@
           ],
           "slides_1_to_6": [
             "Your watch needs context",
-            "Zones are estimates.",
+            "Numbers need context.",
             "Routes change effort.",
             "Heat changes effort.",
             "Use alerts, not staring.",

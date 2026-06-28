@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "generated_at": "2026-06-28T15:39:36.318Z",
+  "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy",
+  "date": "2026-06-28",
+  "hook": "Trying to keep Zone 2 easy?",
+  "schema": "founder_built_this_v1",
+  "format_id": "why_you_plateau",
+  "artifacts": {
+    "instagram_carousel": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/repurposed/instagram-carousel.md",
+    "instagram_stories": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/repurposed/instagram-stories.md",
+    "x_post": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/repurposed/x-post.md",
+    "reddit_angle": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/repurposed/reddit-discussion-angle.md",
+    "pinterest_pin": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/repurposed/pinterest-pin.md",
+    "daily_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/repurposed/daily-pack.md"
+  },
+  "channel_files": {
+    "instagram": "content/Instagram/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy-derived-carousel.md",
+    "tiktok": "content/Tiktok/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy-derived-reel.md",
+    "x": "content/x-posts/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy-derived-x.md",
+    "reddit": "content/Reddit/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy-discussion-angle.md"
+  }
+}

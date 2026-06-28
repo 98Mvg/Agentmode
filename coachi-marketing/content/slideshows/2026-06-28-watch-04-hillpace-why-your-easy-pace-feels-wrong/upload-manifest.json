@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-06-28",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 319136,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "f5da535f8cf0cd88be9053c77785de1976e956eb591024ee048095c5cd95a1a6"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 464779,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/02-setup.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/02-setup.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/02-setup.jpg",
+      "sha256": "e89d61d74635d77e7e85d5055c0aa37634596e9ac6fb96b731cd38fbd70df1ba"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 468354,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/03-value.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/03-value.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/03-value.jpg",
+      "sha256": "caa7a881ac683b55d1a151a79c461cbcb6f7fee87713fbcf0f40a94528bb6a13"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 224486,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/04-value.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/04-value.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/04-value.jpg",
+      "sha256": "4a24a933afde684751667665d1f5647f7531f7583872083d02a4fe8bb51c1970"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 172200,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/05-value.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/05-value.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/05-value.jpg",
+      "sha256": "5b80f16dec31f61e9060b969f3fa3633b09e4cacc74efe43100b42a1c8cd69a2"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 341650,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/06-coachi-connection.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/06-coachi-connection.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/06-coachi-connection.jpg",
+      "sha256": "96cb36273521a4c4905a2a55ff30212f78d2f27c8568bd68c18bf3a0cad1f2fb"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 101477,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-04-hillpace-why-your-easy-pace-feels-wrong/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://zdpnherzigrywjynasqf.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-06-28/watch-04-hillpace-why-your-easy-pace-feels-wrong/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "90017b649076066be8b74132321dafe4004909bcbc8f5bd4f52b7bc639bc8eca"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-04-hillpace-why-your-easy-pace-feels-wrong",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

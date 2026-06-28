@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "generator": "chatgpt_images_2_0",
+  "api_model": "gpt-image-2",
+  "endpoint": "https://api.openai.com/v1/images/edits",
+  "size": "1024x1536",
+  "quality": "high",
+  "mode": "edit_with_reference_image",
+  "reference_images": [
+    "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png"
+  ],
+  "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+  "style_reference_image": null,
+  "input_fidelity": "high",
+  "prompt_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/images-2-0-hook-prompt.md",
+  "output_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/slides/source/01-hook.png",
+  "created_at": "2026-06-28T15:38:38.969Z",
+  "requested_at": "2026-06-28T15:36:28.257Z",
+  "fallback_used": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "success",
+      "started_at": "2026-06-28T15:36:28.257Z",
+      "completed_at": "2026-06-28T15:38:38.942Z"
+    }
+  ],
+  "retry_policy": {
+    "timeout_ms": 180000,
+    "retries": 1,
+    "retry_base_delay_ms": 2000
+  },
+  "key_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/.env",
+  "revised_prompt": null,
+  "source_problem_id": "rp_2026_06_28_watch_numbers_not_decisions",
+  "hook": "Trying to keep Zone 2 easy?",
+  "note": "Generated exactly one contextual hook image for slide 1 using the pack identity reference from source/hook-brief.json. Slides 2+ must use the approved library/Supabase path.",
+  "manual_correction": {
+    "corrected_at": "2026-06-28T17:03:37.883Z",
+    "reason": "User rejected vague/AI-generated watch hooks and requested TikTok storage bank as source of truth.",
+    "rejected_hooks": [
+      "Your watch shows, it does not coach",
+      "Stop letting watch numbers run your workout",
+      "Stop chasing every watch number",
+      "Stop chasing watch numbers",
+      "Your watch tells you too late",
+      "Your watch catches drift too late"
+    ],
+    "selected_hook": "Trying to keep Zone 2 easy?",
+    "rule": "Use safe variations of proven storage-bank structures; prefer plain runner language over invented abstract hooks.",
+    "storage_source": {
+      "source_file": "inputs/research/tiktok-viral-storagebag.jsonl",
+      "source_pattern": "Trying to stay in Zone 2 / Heart rate said: 176 watch-meme structure",
+      "safe_variation": "Trying to keep Zone 2 easy?",
+      "reason": "User asked to use TikTok storage bank as source of truth and avoid AI-generated hooks."
+    }
+  }
+}

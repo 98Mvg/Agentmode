@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy",
+  "format_id": "why_you_plateau",
+  "schema": "founder_built_this_v1",
+  "topic": "The problem is not more numbers. It is knowing what the watch means.",
+  "selected_hook": "Trying to keep Zone 2 easy?",
+  "hook_score": 67,
+  "hook_quality": {
+    "hook": "Trying to keep Zone 2 easy?",
+    "source": "problem_content_angle",
+    "source_family_id": null,
+    "source_signal": null,
+    "source_url": null,
+    "score": 69,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 4,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 10,
+      "simplicity": 10,
+      "emotional_relatability": 9,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 69,
+      "max_score": 70,
+      "word_count": 4,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": true,
+        "question_or_choice": false,
+        "plain_contradiction": true,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "69/70; user-corrected watch hook; concise runner behavior; watch-number decision pain; avoids flat anti-watch phrasing."
+  },
+  "target_audience": "watch users / runners who want coaching",
+  "source_problem": {
+    "id": "rp_2026_06_28_watch_numbers_not_decisions",
+    "problem_type": "data-without-coaching",
+    "exact_words": "The watch gives numbers, but it does not tell me what to change while I am running.",
+    "source_url": "inputs/performance/WINNER_LIBRARY.md + inputs/research/reddit-winning-language-bank.md + inputs/research/tiktok-proven-slideshow-text-bank.json"
+  },
+  "visual_system": {
+    "emotion": "overwhelmed",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "post_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Trying to keep Zone 2 easy?",
+      "visual_direction": "overwhelmed; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "data-without-coaching hook lake calm lake daylight overwhelmed",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "setup",
+      "text": "Your watch says too high.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "data-without-coaching setup lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "value",
+      "text": "That does not mean panic.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "data-without-coaching value lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "value",
+      "text": "Start easier for 10 minutes.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "data-without-coaching value lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "value",
+      "text": "Keep the ceiling simple.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "data-without-coaching value lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "coachi_connection",
+      "text": "Back off before it turns hard.",
+      "visual_direction": "controlled and useful; controlled movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "runner controlled effort voice coaching moment lake calm lake daylight controlled and useful",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Coachi tells you when to slow down.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background lake calm lake daylight calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Trying to keep Zone 2 easy?\n\nMost runners lose the easy run before it settles. Start calmer, cap the effort, and let the run stay easy.\n\nCoachi gives live voice guidance to slow down, speed up, or keep going.",
+  "hashtags": [
+    "#running",
+    "#10k",
+    "#halfmarathon",
+    "#racetraining",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-06-28-watch-05-hookfix-trying-to-keep-zone-2-easy/source/qa-report.json",
+  "qa_checked_at": "2026-06-28T17:17:15.198Z",
+  "updated_at": "2026-06-28T17:03:37.883Z",
+  "manual_correction": {
+    "corrected_at": "2026-06-28T17:03:37.883Z",
+    "reason": "User rejected vague/AI-generated watch hooks and requested TikTok storage bank as source of truth.",
+    "rejected_hooks": [
+      "Your watch shows, it does not coach",
+      "Stop letting watch numbers run your workout",
+      "Stop chasing every watch number",
+      "Stop chasing watch numbers",
+      "Your watch tells you too late",
+      "Your watch catches drift too late"
+    ],
+    "selected_hook": "Trying to keep Zone 2 easy?",
+    "rule": "Use safe variations of proven storage-bank structures; prefer plain runner language over invented abstract hooks.",
+    "storage_source": {
+      "source_file": "inputs/research/tiktok-viral-storagebag.jsonl",
+      "source_pattern": "Trying to stay in Zone 2 / Heart rate said: 176 watch-meme structure",
+      "safe_variation": "Trying to keep Zone 2 easy?",
+      "reason": "User asked to use TikTok storage bank as source of truth and avoid AI-generated hooks."
+    }
+  }
+}

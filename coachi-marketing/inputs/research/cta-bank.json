@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "updated": "2026-06-28",
+  "language": "en",
+  "purpose": "Rotating short CTA lines for Coachi slideshow final slides and captions. Never use hard download-now language.",
+  "entries": [
+    {
+      "id": "cta_comment_drift",
+      "class": "comment-bait",
+      "text": "Comment below if your easy run turns hard.",
+      "usage_count": 5,
+      "last_used_at": "2026-06-28T15:36:18.303Z"
+    },
+    {
+      "id": "cta_comment_number",
+      "class": "comment-bait",
+      "text": "Which mistake is yours? Number below.",
+      "usage_count": 4,
+      "last_used_at": "2026-06-28T14:39:03.869Z"
+    },
+    {
+      "id": "cta_comment_watch",
+      "class": "comment-bait",
+      "text": "What does your watch say?",
+      "usage_count": 4,
+      "last_used_at": "2026-06-28T15:09:21.013Z"
+    },
+    {
+      "id": "cta_save_minute_one",
+      "class": "save-bait",
+      "text": "Save this for minute one.",
+      "usage_count": 4,
+      "last_used_at": "2026-06-28T14:24:04.860Z"
+    },
+    {
+      "id": "cta_send_partner",
+      "class": "save-bait",
+      "text": "Send this to your fast-start friend.",
+      "usage_count": 4,
+      "last_used_at": "2026-06-28T15:26:07.243Z"
+    },
+    {
+      "id": "cta_follow_sense",
+      "class": "follow",
+      "text": "Follow for runs that make sense.",
+      "usage_count": 4,
+      "last_used_at": "2026-06-28T15:16:10.332Z"
+    },
+    {
+      "id": "cta_follow_new_runner",
+      "class": "follow",
+      "text": "New runner lesson tomorrow.",
+      "usage_count": 4,
+      "last_used_at": "2026-06-28T15:23:15.014Z"
+    },
+    {
+      "id": "cta_app_easy_stops",
+      "class": "soft app-proof",
+      "text": "Coachi tells me when easy stops.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-26T06:35:26.998Z"
+    },
+    {
+      "id": "cta_app_watch_not_coach",
+      "class": "soft app-proof",
+      "text": "I built Coachi so the watch isn't coach.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-26T06:29:59.579Z"
+    },
+    {
+      "id": "cta_app_quieter_runs",
+      "class": "soft app-proof",
+      "text": "The link shows how runs get quieter.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-28T15:13:19.031Z"
+    },
+    {
+      "id": "cta_app_speaks_before_drift",
+      "class": "soft app-proof",
+      "text": "Coachi speaks before the run drifts.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-28T15:02:20.388Z"
+    },
+    {
+      "id": "cta_app_catches_easy_hard",
+      "class": "soft app-proof",
+      "text": "Coachi catches easy turning hard.",
+      "usage_count": 5,
+      "last_used_at": "2026-06-26T06:27:08.004Z"
+    },
+    {
+      "id": "cta_app_coaching_during_run",
+      "class": "soft app-proof",
+      "text": "Coachi adds coaching during the run.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-26T06:38:06.767Z"
+    },
+    {
+      "id": "cta_app_watch_context",
+      "class": "soft app-proof",
+      "text": "Coachi warns before zones drift.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-28T15:39:36.249Z"
+    },
+    {
+      "id": "cta_app_nudges_effort",
+      "class": "soft app-proof",
+      "text": "Coachi nudges before effort runs away.",
+      "usage_count": 6,
+      "last_used_at": "2026-06-28T14:55:07.768Z"
+    },
+    {
+      "id": "cta_android_beta_google_group",
+      "class": "beta-access",
+      "text": "Join the Coachi Android beta group.",
+      "target_url": "https://groups.google.com/g/coachi-android-beta",
+      "usage_count": 0,
+      "last_used_at": null
+    }
+  ]
+}
