@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generator": "codex_imagegen_tool",
+  "mode": "edit_with_reference_image",
+  "reference_images": [
+    "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png"
+  ],
+  "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+  "style_reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+  "prompt_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/source/images-2-0-hook-prompt.md",
+  "imported_image_path": "/Users/mariusgaarder/.codex/generated_images/019ebcbf-7e68-7130-bf82-d6e0a3d5c2ad/call_cEedc0DZ59UPdsvUXzNnbd1j.png",
+  "output_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/slides/source/01-hook.png",
+  "created_at": "2026-07-27T17:22:28.004Z",
+  "fallback_used": false,
+  "source_problem_id": null,
+  "hook": "Garmin SatIQ saves battery without giving up the best GPS mode",
+  "note": "Generated as one unique hook image with the Codex image generation tool using the pack identity reference."
+}

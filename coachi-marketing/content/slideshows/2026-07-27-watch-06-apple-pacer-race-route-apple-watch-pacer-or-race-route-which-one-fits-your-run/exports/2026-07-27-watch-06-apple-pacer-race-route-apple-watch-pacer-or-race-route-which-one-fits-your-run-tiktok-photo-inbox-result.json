@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "mode": "tiktok_photo_media_upload_inbox",
+  "note": "No access token printed. TikTok requires the user to open the inbox notification and finish posting.",
+  "token_refreshed": false,
+  "integration": {
+    "id": "cmq43gqc30001lj6wjsp99t8q",
+    "name": "runwatchlab",
+    "profile": "runwatchlab",
+    "tokenExpiration": "2026-07-28T12:55:43.716Z",
+    "refreshNeeded": false,
+    "disabled": false
+  },
+  "slideshow_id": "2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run",
+  "photo_count": 7,
+  "publish_id": "p_inbox_url~v2.7667278436557228054",
+  "statuses": [
+    {
+      "status": "SEND_TO_USER_INBOX",
+      "fail_reason": null
+    }
+  ]
+}

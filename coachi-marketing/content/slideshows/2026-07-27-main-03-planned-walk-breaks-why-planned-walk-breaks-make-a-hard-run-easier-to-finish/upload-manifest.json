@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 280555,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "bab43a299697f91da8393a6ad38d1fcef034efa8e3a6723c84d3a965d6ab1d78"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 244190,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "884021213c4dbb8027db2c1ea0feee9047351330ec9e89ece293c761bf2fe047"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 274401,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "87390b0016ddefb9449cc8e78d0dc52cb40a5ce1e7334e4aa99d5e7f0d0be6d2"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 141713,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "6b496327b17bbc3f66290ed8a1caeccd9a0e71fc4e9720327e80525afde7c329"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 203930,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "69d12f95421b3543a92923877c3da2935d1d5b9a1fe7145b57b1bd3ba467c3b6"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 197973,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "67d7378ebd00080d209529d6dcb9d298f1c11e0049e5a8fc1a3088a83958b661"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 159760,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "ee884c42048f2c6ac79e344f8dacd258ddb5b0c720b4ef4022dd18dbf21320ff"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

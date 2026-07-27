@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 365253,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "d36793bc625f6dfced0841e8ad6729cad503cd24fa937cf5acb77bf5ba03d238"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 334073,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "2ecae6b3d5aed6a54c71ee6d7e26c0bde5594762584166810ccc07fd1ea0e2d9"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 198816,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "dedf8291caaef04c5d330d1eb6c6bf5969f169c072f670618c9e07914bc9576a"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 479595,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "f5252aa8146f6023d14558c985ebb812e88aa990ba5dc034ea19c11a39550d45"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 249202,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "3ee46ef508810ac40236618eb95e99a8a1c9dc155b1fb0900e02becd92bfce9c"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 197605,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "050158423500bdcdbadaaebc0430374a2e401f46fb2699cad5ffba09018045a0"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 103520,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "e6255ca1ec61a278a4961d2484db2c23666dafc8a82b185ea676feeaf2056d1a"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

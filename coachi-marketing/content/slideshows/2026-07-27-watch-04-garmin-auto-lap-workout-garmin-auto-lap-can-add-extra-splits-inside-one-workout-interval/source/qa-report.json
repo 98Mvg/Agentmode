@@ -1,0 +1,287 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-07-27T18:36:39.223Z",
+  "pack": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Choose what one COROS dial press does during a run",
+    "candidate_file": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/hook-candidates.json",
+    "selected_score": 59,
+    "candidates": 8
+  },
+  "prompt_artifacts": {
+    "hook": "Choose what one COROS dial press does during a run",
+    "theme": "watch controls",
+    "prompt_coherence": {
+      "phase": "post_workout",
+      "coherence_status": "passed",
+      "selected_by": "stable_hash_fallback"
+    },
+    "prompt": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_018",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:10.318Z",
+          "slideshow_ids": [
+            "2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_019",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:10.318Z",
+          "slideshow_ids": [
+            "2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_020",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:10.318Z",
+          "slideshow_ids": [
+            "2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_021",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:15.175Z",
+          "slideshow_ids": [
+            "2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run"
+          ],
+          "recent_use_rank": 14
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_022",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:15.175Z",
+          "slideshow_ids": [
+            "2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run"
+          ],
+          "recent_use_rank": 14
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "cta_ending_001",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library",
+        "selection_score": 83,
+        "quality_score": 87,
+        "visual_match_score": 28,
+        "freshness_penalty": 32,
+        "usage": {
+          "total_uses": 2,
+          "last_used_at": "2026-07-27T18:01:12.759Z",
+          "slideshow_ids": [
+            "2026-07-27-main-01-tempo-minute-20-why-your-tempo-run-falls-apart-after-20-minutes",
+            "2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals"
+          ],
+          "recent_use_rank": 6
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/hook-provenance.json",
+      "generator": "codex_imagegen_tool",
+      "reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png",
+      "expected_reference_image": "content/slideshows/visual-library/owned-source/watch-account-avatar/runner-watch-lab-lifelong-runner-v1-reference.png"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_018",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_019",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_020",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_021",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_022",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "pinterest_approved_v7_no_sunset"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "cta_ending_001",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "local_curated_library"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 5,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "cta_text_rotation": {
+    "current_cta": "Save this before changing your COROS dial.",
+    "checked_recent_decks": 5,
+    "window_size": 5
+  },
+  "creative_rules": {
+    "coachi_mentions": 0,
+    "first_coachi_mention_slide": null,
+    "canonical_slideshow": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:branded_template"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/02-felt-moment.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/03-hidden-cost.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/04-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/05-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/06-proof.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

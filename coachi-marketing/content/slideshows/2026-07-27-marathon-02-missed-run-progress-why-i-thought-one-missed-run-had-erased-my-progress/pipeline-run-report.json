@@ -1,0 +1,164 @@
+{
+  "ok": true,
+  "status": "production_ready",
+  "generated_at": "2026-07-27T18:01:24.456Z",
+  "source_article": "https://x.com/alexcooldev/status/2047715075457507452",
+  "mode": "production_pack",
+  "publish_mode": "manual-review",
+  "hook_image_fallback": {
+    "fallback_used": false
+  },
+  "steps": [
+    "validated engine",
+    "generated sourced topic candidates",
+    "created schema-based render manifest",
+    "created Images 2.0 hook-only prompt",
+    "selected and materialized Supabase/library assets",
+    "rendered slides through Sharp + Canvas compositor",
+    "kept local media paths for manual/Postiz upload",
+    "derived Instagram/X/Reddit/Pinterest channel copy",
+    "built Postiz dry-run schedule",
+    "skipped queue dry-run by flag"
+  ],
+  "candidate": {
+    "problem_id": "rtmf_week08_missed_run_progress",
+    "schema": "runner_mistake_reframe_v1",
+    "format_id": "marathon_missed_run_progress_v1",
+    "content_pillar": "marathon_journal",
+    "research_status": null,
+    "hook": "Why I thought one missed run had erased my progress",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_missed_run_progress",
+    "exact_words": "Life got in the way and I missed one run. I left the week alone instead of squeezing it in.",
+    "problem_type": "recovery day guilt",
+    "selected_hook_quality": {
+      "score": 58,
+      "max_score": 70,
+      "min_score": 56,
+      "passes_quality_gate": true,
+      "word_count": 10,
+      "breakdown": {
+        "runner_pain_specificity": 9,
+        "curiosity": 10,
+        "simplicity": 8,
+        "emotional_relatability": 3,
+        "coachi_fit": 8,
+        "tiktok_native_wording": 10,
+        "non_marketing_tone": 10,
+        "score": 58,
+        "max_score": 70,
+        "word_count": 10,
+        "curiosity_signals": {
+          "concrete_number": false,
+          "first_person_confession": true,
+          "direct_address_contradiction": false,
+          "question_or_choice": false,
+          "plain_contradiction": false,
+          "personal_app_stack": false,
+          "watch_specific_decision": false
+        },
+        "watch_specific_intent": false,
+        "banned_matches": []
+      },
+      "rationale": "58/70; 10 words; bank family marathon_missed_run_progress_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+      "source": "frozen_topic"
+    },
+    "hook_source": {
+      "source": "curated_topic_bank",
+      "source_family_id": "marathon_missed_run_progress_v1",
+      "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_missed_run_progress",
+      "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+    },
+    "slide_text_source": null,
+    "tiktok_text_bank": null
+  },
+  "hook_brief": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/hook-brief.json",
+  "slideshow_json": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/slideshow.json",
+  "hook_candidates": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/hook-candidates.json",
+  "hook_text": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/hook.txt",
+  "theme": "recovery day guilt",
+  "reddit_background_and_vibe": {
+    "background": "calm lakeside running path with visible water and route context",
+    "vibe": "realistic, calm, premium, useful, not overproduced",
+    "reddit_background": "Life got in the way and I missed one run. I left the week alone instead of squeezing it in.",
+    "visual_keywords": [
+      "lake path",
+      "water edge",
+      "calm daylight",
+      "open path",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "watch close-up",
+      "baked-in text",
+      "logos",
+      "fake steam",
+      "blurred background",
+      "unnatural stride",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "pack_dir": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress",
+  "render_manifest": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/render-manifest.json",
+  "images_2_0_prompt": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/images-2-0-hook-prompt.md",
+  "hook_provenance": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/hook-provenance.json",
+  "hook": {
+    "mode": "existing_hook_image",
+    "path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/slides/source/01-hook.png"
+  },
+  "schedule": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/postiz-schedule.json",
+  "media_transport": "local_media_paths",
+  "public_media_manifest": null,
+  "repurposed_outputs": {
+    "ok": true,
+    "generated_at": "2026-07-27T18:01:24.450Z",
+    "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress",
+    "date": "2026-07-27",
+    "hook": "Why I thought one missed run had erased my progress",
+    "schema": "runner_mistake_reframe_v1",
+    "format_id": "marathon_missed_run_progress_v1",
+    "artifacts": {
+      "instagram_carousel": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/repurposed/instagram-carousel.md",
+      "instagram_stories": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/repurposed/instagram-stories.md",
+      "x_post": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/repurposed/x-post.md",
+      "reddit_angle": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/repurposed/reddit-discussion-angle.md",
+      "pinterest_pin": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/repurposed/pinterest-pin.md",
+      "daily_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/repurposed/daily-pack.md"
+    },
+    "channel_files": {
+      "instagram": "content/Instagram/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run--derived-carousel.md",
+      "tiktok": "content/Tiktok/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run--derived-reel.md",
+      "x": "content/x-posts/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run--derived-x.md",
+      "reddit": "content/Reddit/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run--discussion-angle.md"
+    }
+  },
+  "live_schedule": false,
+  "tiktok_account_profile": {
+    "profile": "marathon",
+    "label": "Road to Marathon Fit",
+    "lane": "fictional AI marathon-training journey; one Images 2.0 hook image plus approved Pinterest/library support slides",
+    "aliases": [
+      "marathon",
+      "road-to-marathon-fit",
+      "roadtomarathonfit",
+      "marathon-fit",
+      "third",
+      "third-account"
+    ],
+    "env_keys": [
+      "POSTIZ_TIKTOK_ACCOUNT_ID_MARATHON",
+      "POSTIZ_TIKTOK_ACCOUNT_ID_THIRD"
+    ],
+    "account_id": "cmrc26jve0001ox7feiejsm8w",
+    "env_key": "POSTIZ_TIKTOK_ACCOUNT_ID_MARATHON"
+  },
+  "schedule_platform": [
+    "tiktok",
+    "instagram"
+  ],
+  "rendered_dir": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/slides/rendered"
+}

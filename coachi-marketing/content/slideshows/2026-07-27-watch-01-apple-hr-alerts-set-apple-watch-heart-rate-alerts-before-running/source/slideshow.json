@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running",
+  "format_id": "watch_apple_hr_alerts_v1",
+  "schema": "how_to_fix_v1",
+  "content_pillar": "watch_setup",
+  "research_status": null,
+  "topic": "I want the Action button to start my usual running workout immediately.",
+  "selected_hook": "Apple Watch Ultra can start a run with one button",
+  "hook_score": 61,
+  "hook_quality": {
+    "score": 61,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 61,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "61/70; 10 words; bank family watch_apple_hr_alerts_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "heart-rate zone runners / watch users",
+  "source_problem": {
+    "id": "rp_2026_07_27_watch_apple_hr_alerts",
+    "problem_type": "apple watch ultra action button",
+    "exact_words": "I want the Action button to start my usual running workout immediately.",
+    "source_url": "https://support.apple.com/en-ie/guide/watch/apdd16e8761a/watchos"
+  },
+  "visual_system": {
+    "emotion": "ready to start without opening menus",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Apple Watch Ultra can start a run with one button",
+      "visual_direction": "ready to start without opening menus; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hook forest soft green morning forest light ready to start without opening menus",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "Opening Workout and finding Outdoor Run adds taps before every start.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "The Action button does nothing useful until you assign it.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Open Settings, Action Button, then choose Workout.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Set First Press to start your preferred workout.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "One press can now open the run without searching menus.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before setting up Apple Watch Ultra.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Apple Watch Ultra can start a run with one button\n\nMost runners do not need more pressure. They need the right correction while the run is still happening.\n\nSave this before setting up Apple Watch Ultra.",
+  "hashtags": [
+    "#runtok",
+    "#zone2training",
+    "#heartratetraining",
+    "#runnersoftiktok",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:36:16.545Z"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint",
+  "format_id": "main_last_interval_sprint_v1",
+  "schema": "easy_run_simple_tips_v1",
+  "content_pillar": "workout_execution",
+  "research_status": null,
+  "topic": "I save energy, then sprint the final interval because I want the workout to look strong.",
+  "selected_hook": "The last interval should not become an all-out sprint",
+  "hook_score": 58,
+  "hook_quality": {
+    "score": 58,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 9,
+    "breakdown": {
+      "runner_pain_specificity": 6,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 7,
+      "coachi_fit": 7,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 9,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": true,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 9 words; bank family main_last_interval_sprint_v1; pain 6/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "intermediate runners / interval runners / overpacers",
+  "source_problem": {
+    "id": "rp_2026_07_27_main_last_interval_sprint",
+    "problem_type": "workout-racing",
+    "exact_words": "I save energy, then sprint the final interval because I want the workout to look strong.",
+    "source_url": "local://2026-07-27-three-account-personal-6x"
+  },
+  "visual_system": {
+    "emotion": "tempted to prove fitness at the end",
+    "visual_world": "mountain",
+    "lighting": "clear mountain morning light",
+    "workout_phase": "post_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "The last interval should not become an all-out sprint",
+      "visual_direction": "tempted to prove fitness at the end; natural running moment; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "workout-racing hook mountain clear mountain morning light tempted to prove fitness at the end",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "Extra energy at the end makes a sprint feel earned.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "workout-racing felt_moment mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "That finish hides whether the planned pace was actually repeatable.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "workout-racing hidden_cost mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Run the final interval at the same target as the others.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "workout-racing fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Judge the workout by consistency, not the fastest closing seconds.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "workout-racing fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "Progress the next session only when every interval stayed controlled.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "workout-racing proof mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before your next interval session.",
+      "visual_direction": "calm confidence; static; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background mountain clear mountain morning light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "The last interval should not become an all-out sprint\n\nThe run usually gives you the clue before the watch makes it obvious.\n\nSave this before your next interval session.",
+  "hashtags": [
+    "#running",
+    "#easyrun",
+    "#beginnerrunner",
+    "#runningtips",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:35:12.326Z"
+}

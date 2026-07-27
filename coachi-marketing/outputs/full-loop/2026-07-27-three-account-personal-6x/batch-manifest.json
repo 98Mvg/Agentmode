@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-07-27T18:29:26.415Z",
+  "date": "2026-07-27",
+  "count": 18,
+  "account_counts": {
+    "main": 6,
+    "watch": 6,
+    "marathon": 6
+  },
+  "coachi_marathon_cta_count": 1,
+  "sent_to_tiktok": true,
+  "packs": [
+    {
+      "slug": "2026-07-27-main-01-tempo-minute-20-why-your-tempo-run-falls-apart-after-20-minutes",
+      "profile": "main",
+      "hook": "Should you jog, walk, or stand between hard intervals?",
+      "format_id": "main_tempo_minute_20_v1",
+      "problem_id": "rp_2026_07_27_main_tempo_minute_20",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_id": "p_inbox_url~v2.7667277706371254294"
+    },
+    {
+      "slug": "2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run",
+      "profile": "main",
+      "hook": "Why waiting until minute 45 can ruin your long run",
+      "format_id": "main_long_run_fuel_45_v1",
+      "problem_id": "rp_2026_07_27_main_long_run_fuel_45",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_id": "p_inbox_url~v2.7667277706371336214"
+    },
+    {
+      "slug": "2026-07-27-main-03-planned-walk-breaks-why-planned-walk-breaks-make-a-hard-run-easier-to-finish",
+      "profile": "main",
+      "hook": "Why downhill running can make tomorrow morning hurt",
+      "format_id": "main_planned_walk_breaks_v1",
+      "problem_id": "rp_2026_07_27_main_planned_walk_breaks",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_id": "p_inbox_url~v2.7667277706371385366"
+    },
+    {
+      "slug": "2026-07-27-main-04-weekly-mileage-jump-your-weekly-mileage-should-not-jump-because-one-run-felt-good",
+      "profile": "main",
+      "hook": "Why slowing your easy run can calm a side stitch",
+      "format_id": "main_weekly_mileage_jump_v1",
+      "problem_id": "rp_2026_07_27_main_weekly_mileage_jump",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_id": "p_inbox_url~v2.7667277743821850646"
+    },
+    {
+      "slug": "2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart",
+      "profile": "main",
+      "hook": "Why forcing 180 cadence can make an easy run worse",
+      "format_id": "main_loud_stride_fatigue_v1",
+      "problem_id": "rp_2026_07_27_main_loud_stride_fatigue",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_id": "p_inbox_url~v2.7667277916099037206"
+    },
+    {
+      "slug": "2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint",
+      "profile": "main",
+      "hook": "The last interval should not become an all-out sprint",
+      "format_id": "main_last_interval_sprint_v1",
+      "problem_id": "rp_2026_07_27_main_last_interval_sprint",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmorm85va0003nt6ro6b502fk",
+      "publish_id": "p_inbox_url~v2.7667277807743502359"
+    },
+    {
+      "slug": "2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running",
+      "profile": "watch",
+      "hook": "Apple Watch Ultra can start a run with one button",
+      "format_id": "watch_apple_hr_alerts_v1",
+      "problem_id": "rp_2026_07_27_watch_apple_hr_alerts",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_id": "p_inbox_url~v2.7667278193196156950"
+    },
+    {
+      "slug": "2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode",
+      "profile": "watch",
+      "hook": "Wait before saving if you want Garmin recovery heart rate",
+      "format_id": "watch_garmin_satiq_v1",
+      "problem_id": "rp_2026_07_27_watch_garmin_satiq",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_id": "p_inbox_url~v2.7667278205912762390"
+    },
+    {
+      "slug": "2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing",
+      "profile": "watch",
+      "hook": "Lock your Garmin before rain or sleeves press the screen",
+      "format_id": "watch_coros_effort_pace_v1",
+      "problem_id": "rp_2026_07_27_watch_coros_effort_pace",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_id": "p_inbox_url~v2.7667278193196255254"
+    },
+    {
+      "slug": "2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval",
+      "profile": "watch",
+      "hook": "Choose what one COROS dial press does during a run",
+      "format_id": "watch_garmin_auto_lap_workout_v1",
+      "problem_id": "rp_2026_07_27_watch_garmin_auto_lap_workout",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_id": "p_inbox_url~v2.7667278205912877078"
+    },
+    {
+      "slug": "2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals",
+      "profile": "watch",
+      "hook": "Why COROS Auto Lock matters when watch buttons get pressed",
+      "format_id": "watch_wrist_hr_fast_intervals_v1",
+      "problem_id": "rp_2026_07_27_watch_wrist_hr_fast_intervals",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_id": "p_inbox_url~v2.7667278371264481302"
+    },
+    {
+      "slug": "2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run",
+      "profile": "watch",
+      "hook": "Why my Polar watch moved the carb alert mid-run",
+      "format_id": "watch_apple_pacer_race_route_v1",
+      "problem_id": "rp_2026_07_27_watch_apple_pacer_race_route",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmq43gqc30001lj6wjsp99t8q",
+      "publish_id": "p_inbox_url~v2.7667278436557228054"
+    },
+    {
+      "slug": "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home",
+      "profile": "marathon",
+      "hook": "Why I stopped my run after 7 minutes in wet shoes",
+      "format_id": "marathon_rain_minute_6_v1",
+      "problem_id": "rtmf_week08_rain_nearly_home",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmrc26jve0001ox7feiejsm8w",
+      "publish_id": "p_inbox_url~v2.7667278371264694294"
+    },
+    {
+      "slug": "2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress",
+      "profile": "marathon",
+      "hook": "Why I thought one missed run had erased my progress",
+      "format_id": "marathon_missed_run_progress_v1",
+      "problem_id": "rtmf_week08_missed_run_progress",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmrc26jve0001ox7feiejsm8w",
+      "publish_id": "p_inbox_url~v2.7667278637036914710"
+    },
+    {
+      "slug": "2026-07-27-marathon-03-legs-minute-12-my-legs-felt-awful-for-12-minutes-was-the-run-already-bad",
+      "profile": "marathon",
+      "hook": "My legs felt awful for 12 minutes. Was the run already bad?",
+      "format_id": "marathon_legs_minute_12_v1",
+      "problem_id": "rtmf_week08_legs_bad_twelve_minutes",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmrc26jve0001ox7feiejsm8w",
+      "publish_id": "p_inbox_url~v2.7667278559572019222"
+    },
+    {
+      "slug": "2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run",
+      "profile": "marathon",
+      "hook": "Why I ran out of food 35 minutes into my longest run",
+      "format_id": "marathon_food_minute_35_v1",
+      "problem_id": "rtmf_week08_long_run_food_miss",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmrc26jve0001ox7feiejsm8w",
+      "publish_id": "p_inbox_url~v2.7667278637036996630"
+    },
+    {
+      "slug": "2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse",
+      "profile": "marathon",
+      "hook": "I sprinted the last hill. Why did my next run feel worse?",
+      "format_id": "marathon_last_hill_sprint_v1",
+      "problem_id": "rtmf_week08_last_hill_sprint",
+      "coachi_app_cta": false,
+      "sent_to_tiktok": true,
+      "account_id": "cmrc26jve0001ox7feiejsm8w",
+      "publish_id": "p_inbox_url~v2.7667278559572084758"
+    },
+    {
+      "slug": "2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running",
+      "profile": "marathon",
+      "hook": "Top 5 running apps I use when running",
+      "format_id": "marathon_app_stack_week8_v1",
+      "problem_id": "rtmf_week08_personal_app_stack",
+      "coachi_app_cta": true,
+      "sent_to_tiktok": true,
+      "account_id": "cmrc26jve0001ox7feiejsm8w",
+      "publish_id": "p_inbox_url~v2.7667278637037045782"
+    }
+  ],
+  "uploaded_at": "2026-07-27T18:39:55.969Z",
+  "upload_summary": {
+    "sent": 18,
+    "failed": 0,
+    "pending": 0,
+    "by_profile": {
+      "main": 6,
+      "watch": 6,
+      "marathon": 6
+    }
+  }
+}

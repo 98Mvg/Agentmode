@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home",
+  "format_id": "marathon_rain_minute_6_v1",
+  "schema": "things_i_wish_i_knew_v1",
+  "content_pillar": "marathon_journal",
+  "research_status": null,
+  "topic": "Rain soaked my shoes and one heel started rubbing after seven minutes.",
+  "selected_hook": "Why I stopped my run after 7 minutes in wet shoes",
+  "hook_score": 58,
+  "hook_quality": {
+    "score": 58,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 11,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 3,
+      "coachi_fit": 8,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 11,
+      "curiosity_signals": {
+        "concrete_number": true,
+        "first_person_confession": true,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 11 words; bank family marathon_rain_minute_6_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rtmf_week08_rain_nearly_home",
+    "problem_type": "wet shoe blister",
+    "exact_words": "Rain soaked my shoes and one heel started rubbing after seven minutes.",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_rain_nearly_home"
+  },
+  "visual_system": {
+    "emotion": "annoyed by stopping, relieved the next day",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "post_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_follow_along_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why I stopped my run after 7 minutes in wet shoes",
+      "visual_direction": "annoyed by stopping, relieved the next day; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "shoes hook forest soft green morning forest light annoyed by stopping, relieved the next day",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "I expected light rain, but my socks soaked through immediately.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "shoes felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "One heel started feeling hot before it actually hurt.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "shoes hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "I stopped instead of pretending the rubbing would disappear.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "shoes fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Dry socks and blister tape are joining my long-run bag.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "shoes fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "Cutting one run short protected the next training day.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "shoes proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Follow the next honest marathon-training mistake.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal marathon training follow-along background forest soft green morning forest light calm confidence",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "follow"
+    }
+  ],
+  "caption": "Why I stopped my run after 7 minutes in wet shoes\n\nTrying to make this feel repeatable, not perfect.\n\nFollow the next honest marathon-training mistake.",
+  "hashtags": [
+    "#running",
+    "#marathontraining",
+    "#beginnerrunner",
+    "#runtok",
+    "#runningjourney"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:37:40.995Z"
+}

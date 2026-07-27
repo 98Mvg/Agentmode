@@ -34,7 +34,12 @@ PUBLIC_FILENAMES = {
     "cover.webp",
 }
 PRIVATE_DIRS = {"source", "copy", "private", "drafts"}
-GENERATED_FILENAMES = {"upload-manifest.json"}
+GENERATED_FILENAMES = {
+    "upload-manifest.json",
+    "slideshow-concat.txt",
+    "video-export-manifest.json",
+}
+SYSTEM_FILENAMES = {".DS_Store", "Thumbs.db"}
 
 
 def load_env_file(path: Path) -> None:
@@ -84,6 +89,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--private-bucket",
         default=os.getenv("MARKETING_SUPABASE_PRIVATE_BUCKET", "slideshow-private"),
+    )
+    parser.add_argument(
+        "--public-media-dir",
+        action="append",
+        default=[],
+        help=(
+            "Only include files under this pack-relative directory. "
+            "Use for lean social uploads, e.g. exports/tiktok-photo-slides."
+        ),
+    )
+    parser.add_argument(
+        "--skip-private",
+        action="store_true",
+        help="Skip files classified into the private bucket.",
+    )
+    parser.add_argument(
+        "--skip-rendered-png",
+        action="store_true",
+        help="Skip slides/rendered/*.png when a compressed public media export is used.",
     )
     parser.add_argument(
         "--skip-metadata",
@@ -182,7 +206,45 @@ def public_url(supabase_url: str | None, bucket_id: str, public_bucket: str, obj
 
 
 def should_upload(path: Path) -> bool:
+    if path.name in SYSTEM_FILENAMES or path.name.startswith("."):
+        return False
+    if any(part.startswith(".") for part in path.parts):
+        return False
     return path.name.lower() not in GENERATED_FILENAMES
+
+
+def normalize_relative_dir(value: str) -> str:
+    return Path(value).as_posix().strip("/")
+
+
+def is_under_relative_dir(relative_path: Path, directory: str) -> bool:
+    normalized_path = relative_path.as_posix()
+    normalized_dir = normalize_relative_dir(directory)
+    return normalized_path == normalized_dir or normalized_path.startswith(f"{normalized_dir}/")
+
+
+def should_skip_for_upload_mode(
+    relative_path: Path,
+    bucket_id: str,
+    args: argparse.Namespace,
+) -> bool:
+    if args.public_media_dir and not any(
+        is_under_relative_dir(relative_path, directory)
+        for directory in args.public_media_dir
+    ):
+        return True
+
+    if args.skip_private and bucket_id == args.private_bucket:
+        return True
+
+    if (
+        args.skip_rendered_png
+        and relative_path.parts[:2] == ("slides", "rendered")
+        and relative_path.suffix.lower() == ".png"
+    ):
+        return True
+
+    return False
 
 
 def upload_file(supabase_url: str, api_key: str, bucket_id: str, object_path: str, path: Path, mime: str) -> None:
@@ -259,6 +321,8 @@ def build_manifest(args: argparse.Namespace, supabase_url: str | None) -> dict[s
     for path in sorted(item for item in root.rglob("*") if item.is_file() and should_upload(item)):
         relative = path.relative_to(root)
         bucket_id = classify_bucket(relative, args.public_bucket, args.private_bucket)
+        if should_skip_for_upload_mode(relative, bucket_id, args):
+            continue
         object_path = remote_path(args.campaign_date, args.slug, bucket_id, args.private_bucket, relative)
         mime = content_type(path)
         objects.append(
@@ -283,6 +347,11 @@ def build_manifest(args: argparse.Namespace, supabase_url: str | None) -> dict[s
         "private_bucket": args.private_bucket,
         "metadata_upsert": bool(args.execute and not args.skip_metadata),
         "metadata_table": "marketing_asset_objects",
+        "upload_policy": {
+            "public_media_dirs": [normalize_relative_dir(item) for item in args.public_media_dir],
+            "skip_private": bool(args.skip_private),
+            "skip_rendered_png": bool(args.skip_rendered_png),
+        },
         "objects": objects,
         "safety": {
             "uses_app_supabase_project": False,

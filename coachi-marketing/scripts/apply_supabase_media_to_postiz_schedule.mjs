@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import {
+  publicMediaPathsForMediaDir,
   publicMediaPathsForRenderedSlides
 } from "./slideshow_public_media_manifest.mjs";
 
@@ -29,7 +30,8 @@ function printHelp() {
   console.log(`Usage:
   node scripts/apply_supabase_media_to_postiz_schedule.mjs --pack content/slideshows/YYYY-MM-DD-slug --manifest content/slideshows/YYYY-MM-DD-slug/upload-manifest.json
 
-Rewrites the pack's postiz-schedule.json media_paths to the public HTTPS Supabase URLs from upload-manifest.json.`);
+Rewrites the pack's postiz-schedule.json media_paths to the public HTTPS Supabase URLs from upload-manifest.json.
+Use --media-dir exports/tiktok-photo-slides to point a TikTok photo inbox payload at JPEG carousel exports.`);
 }
 
 function assert(condition, message) {
@@ -62,11 +64,18 @@ async function main() {
   const uploadManifestPath = path.resolve(manifestArg);
   const renderManifest = await readJson(path.join(packDir, "render-manifest.json"));
   const uploadManifest = await readJson(uploadManifestPath);
-  const publicMediaPaths = publicMediaPathsForRenderedSlides({
-    packDir,
-    manifest: renderManifest,
-    uploadManifest
-  });
+  const mediaDir = args.get("--media-dir");
+  const publicMediaPaths = mediaDir
+    ? publicMediaPathsForMediaDir({
+      packDir,
+      mediaDir,
+      uploadManifest
+    })
+    : publicMediaPathsForRenderedSlides({
+      packDir,
+      manifest: renderManifest,
+      uploadManifest
+    });
 
   const schedulePath = path.join(packDir, "postiz-schedule.json");
   const schedule = await readJson(schedulePath);
@@ -79,6 +88,7 @@ async function main() {
     safety: {
       ...(schedule.safety || {}),
       public_media_host: "coachi-marketing-assets Supabase storage",
+      public_media_dir: mediaDir || renderManifest.output_dir || "slides/rendered",
       local_postiz_ok_when_media_paths_are_public_https: true
     },
     posts: schedule.posts.map((post) => ({

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run",
+  "format_id": "watch_apple_pacer_race_route_v1",
+  "schema": "things_i_wish_i_knew_v1",
+  "content_pillar": "watch_fueling",
+  "research_status": null,
+  "topic": "I want my Polar watch fueling alert to react when the run gets harder.",
+  "selected_hook": "Why my Polar watch moved the carb alert mid-run",
+  "hook_score": 61,
+  "hook_quality": {
+    "score": 61,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 9,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 61,
+      "max_score": 70,
+      "word_count": 9,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "61/70; 9 words; bank family watch_apple_pacer_race_route_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "heart-rate zone runners / watch users",
+  "source_problem": {
+    "id": "rp_2026_07_27_watch_apple_pacer_race_route",
+    "problem_type": "polar fuelwise carb reminder",
+    "exact_words": "I want my Polar watch fueling alert to react when the run gets harder.",
+    "source_url": "https://support.polar.com/en/fuelwise"
+  },
+  "visual_system": {
+    "emotion": "surprised by a changing fuel reminder",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why my Polar watch moved the carb alert mid-run",
+      "visual_direction": "surprised by a changing fuel reminder; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hook forest soft green morning forest light surprised by a changing fuel reminder",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "The next reminder arrived sooner after the run became harder.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "A fixed timer cannot react when your energy use changes.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Set Smart Carbs Reminder before starting the session.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Enter planned duration, intensity, and carbs per serving.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "FuelWise adjusts reminder timing from your actual intensity.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before your next long Polar run.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Why my Polar watch moved the carb alert mid-run\n\nThe run usually gives you the clue before the watch makes it obvious.\n\nSave this before your next long Polar run.",
+  "hashtags": [
+    "#running",
+    "#cardio",
+    "#breathwork",
+    "#runninghacks",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:36:59.143Z"
+}

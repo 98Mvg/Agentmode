@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T18:29:26.411Z",
+  "date": "2026-07-27",
+  "account_profile": "marathon",
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "problem_id": "rtmf_week08_legs_bad_twelve_minutes",
+      "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_legs_bad_twelve_minutes",
+      "source_type": "road_to_marathon_fit_personal_experience_bank",
+      "schema": "q_and_a_comment_prompt_v1",
+      "format_id": "marathon_legs_minute_12_v1",
+      "account_profile": "marathon",
+      "hook": "My legs felt awful for 12 minutes. Was the run already bad?",
+      "problem_type": "easy_run",
+      "semantic_problem_type": null,
+      "content_pillar": "marathon_journal",
+      "marathon_content_category": "easy_run",
+      "is_workout_post": true,
+      "training_day": 51,
+      "workout_outfit_key": "day_51_rust_long_sleeve_navy_tights",
+      "coachi_app_cta_allowed": false,
+      "coachi_app_cta_text": null,
+      "exact_words": "My legs felt stiff for twelve minutes, then the run finally settled without me forcing the pace.",
+      "problem": "My legs felt stiff for twelve minutes, then the run finally settled without me forcing the pace.",
+      "emotion": "worried early, calmer later",
+      "pattern": "first-person marathon training diary",
+      "visual_world": "mountain",
+      "route_tag": "mountain",
+      "lighting_family": "cool mountain morning light",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "hook_source": {
+        "source": "curated_topic_bank",
+        "source_family_id": "marathon_legs_minute_12_v1",
+        "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_legs_bad_twelve_minutes",
+        "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+      },
+      "selected_hook_quality": {
+        "score": 57,
+        "max_score": 70,
+        "min_score": 56,
+        "passes_quality_gate": true,
+        "word_count": 12,
+        "breakdown": {
+          "runner_pain_specificity": 6,
+          "curiosity": 9,
+          "simplicity": 8,
+          "emotional_relatability": 7,
+          "coachi_fit": 7,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 57,
+          "max_score": 70,
+          "word_count": 12,
+          "curiosity_signals": {
+            "concrete_number": true,
+            "first_person_confession": true,
+            "direct_address_contradiction": false,
+            "question_or_choice": true,
+            "plain_contradiction": false,
+            "personal_app_stack": false,
+            "watch_specific_decision": false
+          },
+          "watch_specific_intent": false,
+          "banned_matches": []
+        },
+        "rationale": "57/70; 12 words; bank family marathon_legs_minute_12_v1; pain 6/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+        "source": "frozen_topic"
+      },
+      "hook_candidates": [
+        {
+          "hook": "My legs felt awful for 12 minutes. Was the run already bad?",
+          "score": 57,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": true,
+          "word_count": 12,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 9,
+            "simplicity": 8,
+            "emotional_relatability": 7,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 57,
+            "max_score": 70,
+            "word_count": 12,
+            "curiosity_signals": {
+              "concrete_number": true,
+              "first_person_confession": true,
+              "direct_address_contradiction": false,
+              "question_or_choice": true,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "57/70; 12 words; bank family marathon_legs_minute_12_v1; pain 6/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What changed in this run",
+          "score": 53,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 53,
+            "max_score": 70,
+            "word_count": 5,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "53/70; 5 words; bank family marathon_legs_minute_12_v1; pain 6/10; curiosity 7/10; simplicity 10/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The mistake that showed up later than expected",
+          "score": 39,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 39,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "39/70; 8 words; bank family marathon_legs_minute_12_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "Why the first few minutes changed the whole session",
+          "score": 44,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 8,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 44,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "44/70; 9 words; bank family marathon_legs_minute_12_v1; pain 3/10; curiosity 8/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What I would change before doing this again",
+          "score": 43,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 43,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "43/70; 8 words; bank family marathon_legs_minute_12_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The small decision that made the second half different",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 9 words; bank family marathon_legs_minute_12_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What looked normal until the run got harder",
+          "score": 51,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 51,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "51/70; 8 words; bank family marathon_legs_minute_12_v1; pain 6/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "A clearer way to handle the same problem",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 8 words; bank family marathon_legs_minute_12_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        }
+      ],
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "My legs felt awful for 12 minutes. Was the run already bad?"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "Minute three felt stiff enough to judge the whole day."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "I nearly sped up just to make the run feel normal."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "I kept the pace boring and gave my legs more time."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "At minute 12, my breathing and stride finally settled."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "The bad start stayed at the start."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Do your legs need time before a run feels normal?"
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "My legs felt awful for 12 minutes. Was the run already bad?"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "Minute three felt stiff enough to judge the whole day."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "I nearly sped up just to make the run feel normal."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "I kept the pace boring and gave my legs more time."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "At minute 12, my breathing and stride finally settled."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "The bad start stayed at the start."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Do your legs need time before a run feels normal?"
+        }
+      ],
+      "batch_index": 14
+    }
+  ]
+}

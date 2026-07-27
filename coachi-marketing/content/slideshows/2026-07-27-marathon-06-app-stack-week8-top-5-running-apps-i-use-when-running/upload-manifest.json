@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 317100,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "cc779118a6bbcaac853b8b5792dd075c291b4900c07a63baf94319e7d5f0bb1f"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 485044,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "ae99e944e4e998ff2f106677005dab4f54aba10defd3b7461ff2c34befc1edec"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 479886,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "b5a4d397af059ef66fc7b2626846a960176858a56997c9740f1bf0fd278b98c4"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 520521,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "d7e93257fc45508349932e11185f986f1ea9c5529cb3b1383454819ba4521016"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 464385,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "120269ad6db2f310e481949742a5c0a9f54cea0cde4a5852d4fa5f7dfbc4d511"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 538582,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "22cf93c8c63d998d9b62e8aad5a265fc80f8bb43dfcb8426af65213bdc62255f"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 219687,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "604142bddc81d74cd1a4202446366ee7073de2f828b6c5660bdeea663c41a412"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

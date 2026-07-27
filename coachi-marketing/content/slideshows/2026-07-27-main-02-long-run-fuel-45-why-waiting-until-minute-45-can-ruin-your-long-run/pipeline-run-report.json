@@ -1,0 +1,163 @@
+{
+  "ok": true,
+  "status": "production_ready",
+  "generated_at": "2026-07-27T18:00:53.081Z",
+  "source_article": "https://x.com/alexcooldev/status/2047715075457507452",
+  "mode": "production_pack",
+  "publish_mode": "manual-review",
+  "hook_image_fallback": {
+    "fallback_used": false
+  },
+  "steps": [
+    "validated engine",
+    "generated sourced topic candidates",
+    "created schema-based render manifest",
+    "created Images 2.0 hook-only prompt",
+    "selected and materialized Supabase/library assets",
+    "rendered slides through Sharp + Canvas compositor",
+    "kept local media paths for manual/Postiz upload",
+    "derived Instagram/X/Reddit/Pinterest channel copy",
+    "built Postiz dry-run schedule",
+    "skipped queue dry-run by flag"
+  ],
+  "candidate": {
+    "problem_id": "rp_2026_07_27_main_long_run_fuel_45",
+    "schema": "things_i_wish_i_knew_v1",
+    "format_id": "main_long_run_fuel_45_v1",
+    "content_pillar": "endurance_building",
+    "research_status": null,
+    "hook": "Why waiting until minute 45 can ruin your long run",
+    "source_url": "local://2026-07-27-three-account-personal-6x",
+    "exact_words": "I wait until I feel hungry on longer runs, then the final part gets much harder.",
+    "problem_type": "food",
+    "selected_hook_quality": {
+      "score": 56,
+      "max_score": 70,
+      "min_score": 56,
+      "passes_quality_gate": true,
+      "word_count": 10,
+      "breakdown": {
+        "runner_pain_specificity": 6,
+        "curiosity": 10,
+        "simplicity": 8,
+        "emotional_relatability": 5,
+        "coachi_fit": 7,
+        "tiktok_native_wording": 10,
+        "non_marketing_tone": 10,
+        "score": 56,
+        "max_score": 70,
+        "word_count": 10,
+        "curiosity_signals": {
+          "concrete_number": true,
+          "first_person_confession": false,
+          "direct_address_contradiction": false,
+          "question_or_choice": true,
+          "plain_contradiction": false,
+          "personal_app_stack": false,
+          "watch_specific_decision": false
+        },
+        "watch_specific_intent": false,
+        "banned_matches": []
+      },
+      "rationale": "56/70; 10 words; bank family main_long_run_fuel_45_v1; pain 6/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+      "source": "frozen_topic"
+    },
+    "hook_source": {
+      "source": "curated_topic_bank",
+      "source_family_id": "main_long_run_fuel_45_v1",
+      "source_url": "local://2026-07-27-three-account-personal-6x",
+      "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+    },
+    "slide_text_source": null,
+    "tiktok_text_bank": null
+  },
+  "hook_brief": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/hook-brief.json",
+  "slideshow_json": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/slideshow.json",
+  "hook_candidates": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/hook-candidates.json",
+  "hook_text": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/hook.txt",
+  "theme": "food",
+  "reddit_background_and_vibe": {
+    "background": "calm lakeside running path with visible water and route context",
+    "vibe": "realistic, calm, premium, useful, not overproduced",
+    "reddit_background": "I wait until I feel hungry on longer runs, then the final part gets much harder.",
+    "visual_keywords": [
+      "lake path",
+      "water edge",
+      "calm daylight",
+      "open path",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "watch close-up",
+      "baked-in text",
+      "logos",
+      "fake steam",
+      "blurred background",
+      "unnatural stride",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "pack_dir": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run",
+  "render_manifest": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/render-manifest.json",
+  "images_2_0_prompt": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/images-2-0-hook-prompt.md",
+  "hook_provenance": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/hook-provenance.json",
+  "hook": {
+    "mode": "existing_hook_image",
+    "path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/slides/source/01-hook.png"
+  },
+  "schedule": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/postiz-schedule.json",
+  "media_transport": "local_media_paths",
+  "public_media_manifest": null,
+  "repurposed_outputs": {
+    "ok": true,
+    "generated_at": "2026-07-27T18:00:53.076Z",
+    "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run",
+    "date": "2026-07-27",
+    "hook": "Why waiting until minute 45 can ruin your long run",
+    "schema": "things_i_wish_i_knew_v1",
+    "format_id": "main_long_run_fuel_45_v1",
+    "artifacts": {
+      "instagram_carousel": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/repurposed/instagram-carousel.md",
+      "instagram_stories": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/repurposed/instagram-stories.md",
+      "x_post": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/repurposed/x-post.md",
+      "reddit_angle": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/repurposed/reddit-discussion-angle.md",
+      "pinterest_pin": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/repurposed/pinterest-pin.md",
+      "daily_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/repurposed/daily-pack.md"
+    },
+    "channel_files": {
+      "instagram": "content/Instagram/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-derived-carousel.md",
+      "tiktok": "content/Tiktok/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-derived-reel.md",
+      "x": "content/x-posts/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-derived-x.md",
+      "reddit": "content/Reddit/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-discussion-angle.md"
+    }
+  },
+  "live_schedule": false,
+  "tiktok_account_profile": {
+    "profile": "main",
+    "label": "Everyday Runner Lab",
+    "lane": "beginner/easy-run/Zone 2 Coachi funnel",
+    "aliases": [
+      "main",
+      "default",
+      "runner",
+      "everyday-runner-lab",
+      "everydayrunnerlab"
+    ],
+    "env_keys": [
+      "POSTIZ_TIKTOK_ACCOUNT_ID_MAIN",
+      "POSTIZ_TIKTOK_ACCOUNT_ID"
+    ],
+    "account_id": "cmorm85va0003nt6ro6b502fk",
+    "env_key": "POSTIZ_TIKTOK_ACCOUNT_ID_MAIN"
+  },
+  "schedule_platform": [
+    "tiktok",
+    "instagram"
+  ],
+  "rendered_dir": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/slides/rendered"
+}

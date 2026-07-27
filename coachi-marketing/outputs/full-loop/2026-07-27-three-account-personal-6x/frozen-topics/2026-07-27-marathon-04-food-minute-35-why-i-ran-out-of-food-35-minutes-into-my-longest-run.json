@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T18:29:26.411Z",
+  "date": "2026-07-27",
+  "account_profile": "marathon",
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "problem_id": "rtmf_week08_long_run_food_miss",
+      "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_long_run_food_miss",
+      "source_type": "road_to_marathon_fit_personal_experience_bank",
+      "schema": "things_i_wish_i_knew_v1",
+      "format_id": "marathon_food_minute_35_v1",
+      "account_profile": "marathon",
+      "hook": "Why I ran out of food 35 minutes into my longest run",
+      "problem_type": "food",
+      "semantic_problem_type": null,
+      "content_pillar": "marathon_journal",
+      "marathon_content_category": "food",
+      "is_workout_post": true,
+      "training_day": 52,
+      "workout_outfit_key": "day_52_blue_singlet_black_shorts",
+      "coachi_app_cta_allowed": false,
+      "coachi_app_cta_text": null,
+      "exact_words": "I packed less than planned and spent the second half thinking about the snack I left at home.",
+      "problem": "I packed less than planned and spent the second half thinking about the snack I left at home.",
+      "emotion": "fine early, distracted and hungry later",
+      "pattern": "first-person marathon training diary",
+      "visual_world": "lake",
+      "route_tag": "lake",
+      "lighting_family": "bright lake morning light",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "hook_source": {
+        "source": "curated_topic_bank",
+        "source_family_id": "marathon_food_minute_35_v1",
+        "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_long_run_food_miss",
+        "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+      },
+      "selected_hook_quality": {
+        "score": 58,
+        "max_score": 70,
+        "min_score": 56,
+        "passes_quality_gate": true,
+        "word_count": 12,
+        "breakdown": {
+          "runner_pain_specificity": 9,
+          "curiosity": 10,
+          "simplicity": 8,
+          "emotional_relatability": 3,
+          "coachi_fit": 8,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 58,
+          "max_score": 70,
+          "word_count": 12,
+          "curiosity_signals": {
+            "concrete_number": true,
+            "first_person_confession": false,
+            "direct_address_contradiction": false,
+            "question_or_choice": false,
+            "plain_contradiction": false,
+            "personal_app_stack": false,
+            "watch_specific_decision": false
+          },
+          "watch_specific_intent": false,
+          "banned_matches": []
+        },
+        "rationale": "58/70; 12 words; bank family marathon_food_minute_35_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+        "source": "frozen_topic"
+      },
+      "hook_candidates": [
+        {
+          "hook": "Why I ran out of food 35 minutes into my longest run",
+          "score": 58,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": true,
+          "word_count": 12,
+          "breakdown": {
+            "runner_pain_specificity": 9,
+            "curiosity": 10,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 8,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 58,
+            "max_score": 70,
+            "word_count": 12,
+            "curiosity_signals": {
+              "concrete_number": true,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "58/70; 12 words; bank family marathon_food_minute_35_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What changed in this run",
+          "score": 53,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 53,
+            "max_score": 70,
+            "word_count": 5,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "53/70; 5 words; bank family marathon_food_minute_35_v1; pain 6/10; curiosity 7/10; simplicity 10/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The mistake that showed up later than expected",
+          "score": 43,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 3,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 43,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "43/70; 8 words; bank family marathon_food_minute_35_v1; pain 6/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "Why the first few minutes changed the whole session",
+          "score": 44,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 8,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 44,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "44/70; 9 words; bank family marathon_food_minute_35_v1; pain 3/10; curiosity 8/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What I would change before doing this again",
+          "score": 43,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 43,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "43/70; 8 words; bank family marathon_food_minute_35_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The small decision that made the second half different",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 9 words; bank family marathon_food_minute_35_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What looked normal until the run got harder",
+          "score": 51,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 51,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "51/70; 8 words; bank family marathon_food_minute_35_v1; pain 6/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "A clearer way to handle the same problem",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 8 words; bank family marathon_food_minute_35_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        }
+      ],
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Why I ran out of food 35 minutes into my longest run"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "I left one snack at home because the run felt manageable."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "At minute 35, food became the only thing I could think about."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "I slowed down and stopped pretending the plan had not changed."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "Next time, the extra snack is coming even if I feel confident."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "I finished, but the second half felt much longer than planned."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Follow the next long-run attempt."
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Why I ran out of food 35 minutes into my longest run"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "I left one snack at home because the run felt manageable."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "At minute 35, food became the only thing I could think about."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "I slowed down and stopped pretending the plan had not changed."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "Next time, the extra snack is coming even if I feel confident."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "I finished, but the second half felt much longer than planned."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Follow the next long-run attempt."
+        }
+      ],
+      "batch_index": 15
+    }
+  ]
+}

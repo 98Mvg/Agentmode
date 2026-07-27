@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "mode": "tiktok_photo_media_upload_inbox",
+  "note": "No access token printed. TikTok requires the user to open the inbox notification and finish posting.",
+  "token_refreshed": false,
+  "integration": {
+    "id": "cmorm85va0003nt6ro6b502fk",
+    "name": "Everyday Runner Lab",
+    "profile": "everydayrunnerlab0",
+    "tokenExpiration": "2026-07-28T12:55:40.654Z",
+    "refreshNeeded": false,
+    "disabled": false
+  },
+  "slideshow_id": "2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint",
+  "photo_count": 7,
+  "publish_id": "p_inbox_url~v2.7667277807743502359",
+  "statuses": [
+    {
+      "status": "SEND_TO_USER_INBOX",
+      "fail_reason": null
+    }
+  ]
+}

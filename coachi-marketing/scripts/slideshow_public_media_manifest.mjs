@@ -31,6 +31,30 @@ export function publicMediaPathsForRenderedSlides({ packDir, manifest, uploadMan
   });
 }
 
+export function publicMediaPathsForMediaDir({ packDir, mediaDir, uploadManifest }) {
+  assert(Array.isArray(uploadManifest.objects), "Upload manifest missing objects array.");
+  const publicUrlByLocalPath = new Map();
+
+  for (const item of uploadManifest.objects) {
+    if (!item.local_path || !item.public_url) continue;
+    publicUrlByLocalPath.set(path.resolve(item.local_path), item.public_url);
+  }
+
+  const absoluteMediaDir = path.resolve(packDir, mediaDir);
+  const mediaObjects = uploadManifest.objects
+    .filter((item) => item.local_path && path.dirname(path.resolve(item.local_path)) === absoluteMediaDir)
+    .sort((left, right) => path.basename(left.local_path).localeCompare(path.basename(right.local_path)));
+
+  assert(mediaObjects.length >= 2, `Upload manifest missing uploaded media for directory: ${absoluteMediaDir}`);
+
+  return mediaObjects.map((item) => {
+    const publicUrl = publicUrlByLocalPath.get(path.resolve(item.local_path));
+    assert(publicUrl, `Upload manifest missing public URL for media: ${item.local_path}`);
+    assert(isPublicHttpsUrl(publicUrl), `Media public URL must be HTTPS: ${publicUrl}`);
+    return publicUrl;
+  });
+}
+
 export function storageSlugForPack(campaignDate, slug) {
   const prefix = `${campaignDate}-`;
   return String(slug || "slideshow").startsWith(prefix)

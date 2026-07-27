@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
 import fs from "node:fs/promises";
+import { realpathSync } from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   BANNED_HOOK_WORDS as HOOK_BANNED_WORDS,
+  disallowedPublicCopyMatches,
   MAX_HOOK_WORDS,
   MAX_SLIDE_WORDS,
   MIN_HOOK_QUALITY_SCORE,
@@ -24,6 +27,7 @@ await import("dotenv").then(({ config }) => {
 const ALLOWED_TEXT_POSITIONS = new Set(["top", "center", "lower_middle"]);
 const DEFAULT_POSTED_REGISTRY_PATH = "inputs/performance/posted-slideshows.json";
 const RAW_PROBLEM_BANK_PATH = "inputs/research/raw-runner-problems.json";
+const MARATHON_PERSONAL_BANK_PATH = "inputs/research/road-to-marathon-fit-personal-experience-bank.json";
 const PRODUCTION_RIGHTS = new Set(["approved", "owned", "licensed"]);
 const APPROVED_VISUAL_WORLDS = new Set(["forest", "mountain", "lake"]);
 const DEFAULT_MAX_USES_PER_ASSET = 2;
@@ -272,6 +276,10 @@ async function validateCopy({ manifest, packDir, production }) {
     assert(slide.text && slide.text.trim().length > 0, `Slide ${slide.slide_number} missing text.`);
     assert(ALLOWED_TEXT_POSITIONS.has(slide.text_position), `Slide ${slide.slide_number} text_position is too low or invalid: ${slide.text_position}`);
     validateNoRejectedAbstractCopy(slide.text, `Slide ${slide.slide_number}`);
+    assert(
+      !disallowedPublicCopyMatches(slide.text),
+      `Slide ${slide.slide_number} uses shorthand that should be written as a running term: ${slide.text}`
+    );
   }
 
   const sourceBacking = production
@@ -286,6 +294,8 @@ async function validateCopy({ manifest, packDir, production }) {
 
   validateNoRejectedAbstractCopy(tiktokCaption, "TikTok caption");
   validateNoRejectedAbstractCopy(instagramCaption, "Instagram caption");
+  assert(!disallowedPublicCopyMatches(tiktokCaption), "TikTok caption uses rep/reps; write interval or the specific running phase.");
+  assert(!disallowedPublicCopyMatches(instagramCaption), "Instagram caption uses rep/reps; write interval or the specific running phase.");
 
   assert(tiktokCaption.trim().length >= 12, "TikTok caption is too short.");
   assert(instagramCaption.trim().length >= 12, "Instagram caption is too short.");
@@ -328,7 +338,7 @@ async function loadManifestForCopyFreshness(packDir) {
   return null;
 }
 
-async function validateFreshSlideCopy({ manifest, packDir, production }) {
+export async function validateFreshSlideCopy({ manifest, packDir, production }) {
   if (!production) return null;
 
   const currentCopy = coreSlideCopy(manifest);
@@ -347,6 +357,11 @@ async function validateFreshSlideCopy({ manifest, packDir, production }) {
     if (!entry.isDirectory()) continue;
     const otherPackDir = path.join(packRoot, entry.name);
     if (path.resolve(otherPackDir) === path.resolve(packDir)) continue;
+
+    // Failed or incomplete packs never became production content. They must not
+    // block a corrected rerun that intentionally keeps the same slide copy.
+    const otherQa = await readOptionalJson(path.join(otherPackDir, "source/qa-report.json"), null);
+    if (!(otherQa?.ok === true && otherQa?.pass === true && otherQa?.production === true)) continue;
 
     const otherManifest = await loadManifestForCopyFreshness(otherPackDir);
     if (!otherManifest?.slides?.length) continue;
@@ -384,6 +399,7 @@ async function validateCreativeRules({ manifest, packDir, production }) {
   const mentionCount = coachiMentionCount(slides);
   const firstMention = firstCoachiMentionSlide(slides);
   const finalSlide = slides[slides.length - 1] || {};
+  const earliestCoachiSlide = isPersonalAppStack(manifest) ? 5 : 6;
 
   assert(
     hasRunnerLanguage(firstTwoSlides),
@@ -394,7 +410,7 @@ async function validateCreativeRules({ manifest, packDir, production }) {
     `Creative QA failed: Coachi is mentioned too often (${mentionCount} slides).`
   );
   assert(
-    firstMention == null || firstMention >= 6,
+    firstMention == null || firstMention >= earliestCoachiSlide,
     `Creative QA failed: Coachi is mentioned too early on slide ${firstMention}.`
   );
   assert(
@@ -460,13 +476,32 @@ function validateListHookDelivery(manifest) {
 
   const slides = (manifest.slides || []).filter((slide) => slide.slide_number >= 2 && slide.slide_number <= 6);
   assert(slides.length >= 5, "Top 5 hook must deliver five point slides.");
+  const personalAppStack = isPersonalAppStack(manifest);
+  const expectedOrder = personalAppStack ? [5, 4, 3, 2, 1] : [1, 2, 3, 4, 5];
   slides.slice(0, 5).forEach((slide, index) => {
-    const expected = index + 1;
+    const expected = expectedOrder[index];
     assert(
       new RegExp(`^${expected}[\\.)]\\s+`).test(String(slide.text || "").trim()),
       `Top 5 hook slide ${slide.slide_number} must start with "${expected}." or "${expected})".`
     );
   });
+
+  if (personalAppStack) {
+    const finalText = String(manifest.slides?.find((slide) => slide.slide_number === 7)?.text || "");
+    for (const [rank, app] of [[1, "Strava"], [2, "Coachi"], [3, "Nike Run Club"], [4, "Apple Fitness"], [5, "AllTrails"]]) {
+      assert(
+        new RegExp(`(?:^|\\n)${rank}[\\.)]?\\s+${app}(?:$|\\n)`, "i").test(finalText),
+        `Personal app-stack final slide must list ${rank} ${app}.`
+      );
+    }
+  }
+}
+
+function isPersonalAppStack(manifest) {
+  const hook = String(manifest.slides?.[0]?.text || "").trim();
+  return manifest.account_profile === "marathon"
+    && /app_stack/i.test(String(manifest.format_id || ""))
+    && /^top\s*5\s+running apps?\s+i\s+(?:use|still use)\b/i.test(hook);
 }
 
 function isTopFiveHook(manifest) {
@@ -546,6 +581,24 @@ async function validateTopFiveSourceBacking(manifest) {
 
   const sourceProblemId = manifest.source_problem_id;
   assert(sourceProblemId, "Production Top 5 QA requires render-manifest.json source_problem_id.");
+  if (isPersonalAppStack(manifest)) {
+    const marathonBank = await readJson(path.resolve(MARATHON_PERSONAL_BANK_PATH));
+    const topic = (marathonBank.topics || []).find((item) => item.id === sourceProblemId);
+    assert(topic, `Production personal app-stack QA could not find source topic ${sourceProblemId}.`);
+    assert(
+      topic.hook === manifest.slides?.[0]?.text,
+      `Production personal app-stack hook must match source topic ${sourceProblemId}.`
+    );
+    assert(
+      topic.coachi_app_cta_allowed === true && /\b2\s+Coachi\b/i.test(topic.coachi_app_cta_text || ""),
+      `Production personal app-stack source ${sourceProblemId} must explicitly disclose Coachi at rank 2.`
+    );
+    return {
+      source_problem_id: sourceProblemId,
+      source_type: "road_to_marathon_fit_personal_app_stack",
+      source_bank: MARATHON_PERSONAL_BANK_PATH
+    };
+  }
 
   const problemBank = await readJson(path.resolve(RAW_PROBLEM_BANK_PATH));
   const problem = (problemBank.problems || []).find((item) => item.id === sourceProblemId);
@@ -751,9 +804,12 @@ async function validatePromptArtifacts({ manifest, packDir }) {
   assert(imagesPrompt.includes("Selected visual world"), "Images 2.0 prompt must include the selected visual world.");
   assert(imagesPrompt.includes("Background World Lock"), "Images 2.0 prompt must include the background world lock.");
   assert(/Reference image background is non-transferable/i.test(imagesPrompt), "Images 2.0 prompt must block reference-background leakage.");
-  assert(/no visible watch/i.test(hookBrief.avatar_variation.watch), "source/hook-brief.json avatar variation must disable visible watches.");
-  assert(/No visible watch|No watch should be visible/i.test(imagesPrompt), "Images 2.0 prompt must disable visible watches.");
-  assert(/Do not include Apple Watch,\s*Garmin watch/i.test(imagesPrompt), "Images 2.0 prompt must block Apple Watch and Garmin watch while watches are disabled.");
+  assert(/Apple Watch-style|Garmin-style/i.test(hookBrief.avatar_variation.watch), "source/hook-brief.json avatar variation must include a visible Apple Watch-style or Garmin-style watch.");
+  assert(/watch_detail_rule/i.test(JSON.stringify(hookBrief.avatar_variation)) || hookBrief.avatar_variation.watch_detail_rule, "source/hook-brief.json avatar variation missing watch_detail_rule.");
+  assert(/Apple Watch-style|Garmin-style/i.test(imagesPrompt), "Images 2.0 prompt must include visible Apple Watch/Garmin-style watch rotation.");
+  assert(/no readable (screen )?UI|no readable watch UI/i.test(imagesPrompt), "Images 2.0 prompt must block readable watch UI.");
+  assert(/no (visible )?logos?|no brand logos/i.test(imagesPrompt), "Images 2.0 prompt must block watch/logos.");
+  assert(/no wrist close-up|never a wrist close-up/i.test(imagesPrompt), "Images 2.0 prompt must block wrist close-ups.");
 
   return {
     hook,
@@ -770,10 +826,38 @@ function validateHookProvenanceData(provenance) {
     "images_2_0",
     "chatgpt_images_2_0",
     "chatgpt images 2.0",
-    "gpt_image_2_0"
+    "gpt_image_2_0",
+    "codex_imagegen_tool"
   ]);
-  assert(allowedGenerators.has(generator), "source/hook-provenance.json must prove the hook came from Images 2.0.");
+  assert(allowedGenerators.has(generator), "source/hook-provenance.json must prove the hook came from an approved image generator.");
+  assert(
+    provenance.fallback_used !== true,
+    "source/hook-provenance.json uses a fallback hook image. Production inbox uploads require a fresh unique Images 2.0 hook image."
+  );
   assert(provenance.created_at || provenance.generated_at, "source/hook-provenance.json missing created_at or generated_at.");
+}
+
+function normalizeReferencePath(value) {
+  if (!value) return null;
+  const text = String(value);
+  const relative = path.isAbsolute(text)
+    ? path.relative(process.cwd(), text)
+    : text;
+  return relative.replaceAll(path.sep, "/").replace(/^\.\//, "");
+}
+
+async function expectedHookReferenceContext(packDir) {
+  const hookBriefPath = path.join(packDir, "source/hook-brief.json");
+  if (!(await exists(hookBriefPath))) return null;
+  const hookBrief = await readJson(hookBriefPath);
+  return {
+    reference_image: hookBrief.character_anchor?.reference_image
+      || hookBrief.avatar_variation?.identity_profile?.reference_image
+      || null,
+    account_profile: hookBrief.character_anchor?.account_profile
+      || hookBrief.avatar_variation?.identity_profile?.profile
+      || null
+  };
 }
 
 async function validateProductionHookProvenance(packDir) {
@@ -781,9 +865,39 @@ async function validateProductionHookProvenance(packDir) {
   assert(await exists(provenancePath), "Production QA requires source/hook-provenance.json.");
   const provenance = await readJson(provenancePath);
   validateHookProvenanceData(provenance);
+  const expectedContext = await expectedHookReferenceContext(packDir);
+  const expectedReference = normalizeReferencePath(expectedContext?.reference_image);
+  const actualReference = normalizeReferencePath(provenance.reference_image || provenance.images_api?.reference_image);
+  const actualReferenceImages = (provenance.reference_images || provenance.images_api?.reference_images || [])
+    .map(normalizeReferencePath)
+    .filter(Boolean);
+  const styleReference = normalizeReferencePath(provenance.style_reference_image || provenance.images_api?.style_reference_image);
+  if (expectedReference) {
+    assert(
+      actualReference === expectedReference,
+      `source/hook-provenance.json reference_image must match source/hook-brief.json identity reference. Expected ${expectedReference}, got ${actualReference || "none"}.`
+    );
+    assert(
+      actualReferenceImages.includes(expectedReference),
+      `source/hook-provenance.json reference_images must include identity reference ${expectedReference}.`
+    );
+    if (expectedContext?.account_profile === "watch") {
+      const nonIdentityReferences = actualReferenceImages.filter((reference) => reference !== expectedReference);
+      assert(
+        nonIdentityReferences.length === 0,
+        `Runner Watch Lab hook images must use only the Watch identity reference. Remove extra style references: ${nonIdentityReferences.join(", ") || "none"}.`
+      );
+      assert(
+        !styleReference || styleReference === expectedReference,
+        `Runner Watch Lab hook provenance must not use a non-Watch style reference. Expected none or ${expectedReference}, got ${styleReference}.`
+      );
+    }
+  }
   return {
     path: path.relative(process.cwd(), provenancePath),
-    generator: provenance.generator || provenance.source
+    generator: provenance.generator || provenance.source,
+    reference_image: actualReference,
+    expected_reference_image: expectedReference
   };
 }
 
@@ -826,6 +940,35 @@ function sourceKindValues(asset) {
 
 function isOwnedGeneratedVisualAsset(asset) {
   return sourceKindValues(asset).some((value) => value === "owned_generated_visual_library");
+}
+
+function marathonSupportAssetText(asset) {
+  return [
+    asset?.source_query,
+    asset?.source_alt_text,
+    asset?.id,
+    asset?.original_name,
+    ...(asset?.workflow_tags || []),
+    ...(asset?.subject_tags || [])
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+function isExplicitlyEmptyMarathonSupportAsset(asset) {
+  const text = marathonSupportAssetText(asset);
+  const explicitlyEmpty = /\b(?:empty|no[\s_-]*(?:people|persons?|humans?|runners?))\b/.test(text);
+  const withoutNoPeopleMarkers = text.replace(/\bno[\s_-]*(?:people|persons?|humans?|runners?)\b/g, "");
+  const personBearing = /\b(?:runner|runners|man|men|male|boy|boys|guy|guys|woman|women|female|girl|girls|person|people|human|humans)\b/.test(withoutNoPeopleMarkers);
+  return explicitlyEmpty && !personBearing;
+}
+
+function assertMarathonSupportAssetHasNoPeople(slide, asset) {
+  const accountProfile = asset?.visual_fit_metadata?.requested_context?.account_profile;
+  if (accountProfile !== "marathon") return;
+  if (slide.coachi_app_cta === true && isCoachiAppCtaAsset(asset)) return;
+  assert(
+    isExplicitlyEmptyMarathonSupportAsset(asset),
+    `Road to Marathon Fit support slide ${slide.slide_number} must use an explicitly empty/no-person visual. Rejected ${asset.id}.`
+  );
 }
 
 function middleSlideAllowsOwnedGenerated(slide, allowOwnedGeneratedMiddleSlides) {
@@ -887,6 +1030,58 @@ function assertProductionAssetFreshness({ slide, asset, finalSlideNumber }) {
   );
 }
 
+function normalizeCtaText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/["'“”]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function validateRecentCtaText({ packDir, manifest, production, windowSize = 5 }) {
+  if (!production) return null;
+  const finalSlideNumber = Math.max(...(manifest.slides || []).map((slide) => Number(slide.slide_number || 0)));
+  const finalSlide = (manifest.slides || []).find((slide) => Number(slide.slide_number) === finalSlideNumber);
+  const current = normalizeCtaText(finalSlide?.text);
+  if (!current) return null;
+
+  const root = path.dirname(packDir);
+  let entries = [];
+  try {
+    entries = await fs.readdir(root, { withFileTypes: true });
+  } catch (error) {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  }
+
+  const recent = [];
+  for (const entry of entries
+    .filter((item) => item.isDirectory() && item.name !== path.basename(packDir))
+    .sort((left, right) => right.name.localeCompare(left.name))) {
+    if (recent.length >= windowSize) break;
+    const other = await readOptionalJson(path.join(root, entry.name, "render-manifest.json"), null);
+    const otherFinalNumber = Math.max(...(other?.slides || []).map((slide) => Number(slide.slide_number || 0)));
+    const otherFinal = (other?.slides || []).find((slide) => Number(slide.slide_number) === otherFinalNumber);
+    if (!otherFinal?.text) continue;
+    recent.push({
+      slideshow_id: entry.name,
+      text: otherFinal.text,
+      normalized: normalizeCtaText(otherFinal.text)
+    });
+  }
+
+  const duplicate = recent.find((entry) => entry.normalized === current);
+  if (duplicate) {
+    throw new Error(`Final CTA text repeats ${duplicate.slideshow_id} within the last ${windowSize} decks: ${finalSlide.text}`);
+  }
+  return {
+    current_cta: finalSlide.text,
+    checked_recent_decks: recent.length,
+    window_size: windowSize
+  };
+}
+
 async function validateAssetPicklistQuality({ packDir, production, allowOwnedGeneratedMiddleSlides }) {
   const picklistPath = path.join(packDir, "asset-picklist.json");
   if (!(await exists(picklistPath))) {
@@ -925,6 +1120,7 @@ async function validateAssetPicklistQuality({ packDir, production, allowOwnedGen
       continue;
     }
     assert(first.selection_quality, `Slide ${slide.slide_number} top asset missing selection_quality metadata.`);
+    assertMarathonSupportAssetHasNoPeople(slide, first);
     if (production && slide.slide_number >= 2 && slide.slide_number <= 6) {
       assert(
         !isOwnedGeneratedVisualAsset(first) || middleSlideAllowsOwnedGenerated(slide, allowOwnedGeneratedMiddleSlides),
@@ -1032,10 +1228,11 @@ async function main() {
 
     validateHybridSplit(manifest, "render-manifest.json");
     const hook_quality = await validateHookQuality({ manifest, packDir, production });
-    const copy = await validateCopy({ manifest, packDir, production });
-    const copy_freshness = await validateFreshSlideCopy({ manifest, packDir, production });
-    const creative_rules = await validateCreativeRules({ manifest, packDir, production });
-    const prompt_artifacts = await validatePromptArtifacts({ manifest, packDir });
+	    const copy = await validateCopy({ manifest, packDir, production });
+	    const copy_freshness = await validateFreshSlideCopy({ manifest, packDir, production });
+	    const creative_rules = await validateCreativeRules({ manifest, packDir, production });
+	    const cta_text_rotation = await validateRecentCtaText({ packDir, manifest, production });
+	    const prompt_artifacts = await validatePromptArtifacts({ manifest, packDir });
     const asset_quality = await validateAssetPicklistQuality({ packDir, production, allowOwnedGeneratedMiddleSlides });
     const production_checks = production
       ? {
@@ -1070,9 +1267,10 @@ async function main() {
       prompt_artifacts,
       asset_quality,
       production_checks,
-      copy,
-      copy_freshness,
-      creative_rules,
+	      copy,
+	      copy_freshness,
+	      cta_text_rotation,
+	      creative_rules,
       images,
       schedule
     };
@@ -1096,7 +1294,19 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+function isDirectExecution() {
+  if (!process.argv[1]) return false;
+
+  try {
+    return realpathSync(process.argv[1]) === realpathSync(fileURLToPath(import.meta.url));
+  } catch {
+    return path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+  }
+}
+
+if (isDirectExecution()) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });
+}

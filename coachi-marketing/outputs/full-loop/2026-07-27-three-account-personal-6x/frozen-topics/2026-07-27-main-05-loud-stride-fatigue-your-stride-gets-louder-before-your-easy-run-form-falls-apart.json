@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T18:29:26.394Z",
+  "date": "2026-07-27",
+  "account_profile": "main",
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "problem_id": "rp_2026_07_27_main_loud_stride_fatigue",
+      "source_url": "local://2026-07-27-three-account-personal-6x",
+      "source_type": "dated_account_specific_recovery_topic",
+      "schema": "q_and_a_comment_prompt_v1",
+      "format_id": "main_loud_stride_fatigue_v1",
+      "account_profile": "main",
+      "hook": "Why forcing 180 cadence can make an easy run worse",
+      "problem_type": "easy-run form breakdown",
+      "semantic_problem_type": "cadence target fixation",
+      "content_pillar": "running_form",
+      "marathon_content_category": null,
+      "is_workout_post": null,
+      "training_day": null,
+      "workout_outfit_key": null,
+      "coachi_app_cta_allowed": null,
+      "coachi_app_cta_text": null,
+      "exact_words": "I keep trying to force 180 steps per minute at every running pace.",
+      "problem": "I keep trying to force 180 steps per minute at every running pace.",
+      "emotion": "focused on a number, then relaxed into natural rhythm",
+      "pattern": "specific runner decision guide",
+      "visual_world": "lake",
+      "route_tag": "lake",
+      "lighting_family": "soft lake evening light",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "hook_source": {
+        "source": "curated_topic_bank",
+        "source_family_id": "main_loud_stride_fatigue_v1",
+        "source_url": "local://2026-07-27-three-account-personal-6x",
+        "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+      },
+      "selected_hook_quality": {
+        "score": 61,
+        "max_score": 70,
+        "min_score": 56,
+        "passes_quality_gate": true,
+        "word_count": 10,
+        "breakdown": {
+          "runner_pain_specificity": 10,
+          "curiosity": 10,
+          "simplicity": 8,
+          "emotional_relatability": 3,
+          "coachi_fit": 10,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 61,
+          "max_score": 70,
+          "word_count": 10,
+          "curiosity_signals": {
+            "concrete_number": false,
+            "first_person_confession": false,
+            "direct_address_contradiction": false,
+            "question_or_choice": true,
+            "plain_contradiction": false,
+            "personal_app_stack": false,
+            "watch_specific_decision": false
+          },
+          "watch_specific_intent": false,
+          "banned_matches": []
+        },
+        "rationale": "61/70; 10 words; bank family main_loud_stride_fatigue_v1; pain 10/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+        "source": "frozen_topic"
+      },
+      "hook_candidates": [
+        {
+          "hook": "Why forcing 180 cadence can make an easy run worse",
+          "score": 61,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": true,
+          "word_count": 10,
+          "breakdown": {
+            "runner_pain_specificity": 10,
+            "curiosity": 10,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 10,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 61,
+            "max_score": 70,
+            "word_count": 10,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": true,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "61/70; 10 words; bank family main_loud_stride_fatigue_v1; pain 10/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What changed in this run",
+          "score": 53,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 5,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 53,
+            "max_score": 70,
+            "word_count": 5,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "53/70; 5 words; bank family main_loud_stride_fatigue_v1; pain 6/10; curiosity 7/10; simplicity 10/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The mistake that showed up later than expected",
+          "score": 39,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 39,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "39/70; 8 words; bank family main_loud_stride_fatigue_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "Why the first few minutes changed the whole session",
+          "score": 44,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 8,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 44,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "44/70; 9 words; bank family main_loud_stride_fatigue_v1; pain 3/10; curiosity 8/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What I would change before doing this again",
+          "score": 43,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 43,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "43/70; 8 words; bank family main_loud_stride_fatigue_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The small decision that made the second half different",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 9 words; bank family main_loud_stride_fatigue_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What looked normal until the run got harder",
+          "score": 51,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 7,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 51,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "51/70; 8 words; bank family main_loud_stride_fatigue_v1; pain 6/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "A clearer way to handle the same problem",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 8 words; bank family main_loud_stride_fatigue_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        }
+      ],
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Why forcing 180 cadence can make an easy run worse"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "The watch shows 172, so you force quicker steps."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "Your stride gets tense while the easy run stops feeling natural."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "Let cadence change with speed, hills, height, and fatigue."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "Use your normal range before chasing one famous number."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "A smooth repeatable stride matters more than exactly 180."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Save this before changing your cadence."
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Why forcing 180 cadence can make an easy run worse"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "The watch shows 172, so you force quicker steps."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "Your stride gets tense while the easy run stops feeling natural."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "Let cadence change with speed, hills, height, and fatigue."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "Use your normal range before chasing one famous number."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "A smooth repeatable stride matters more than exactly 180."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Save this before changing your cadence."
+        }
+      ],
+      "batch_index": 4
+    }
+  ]
+}

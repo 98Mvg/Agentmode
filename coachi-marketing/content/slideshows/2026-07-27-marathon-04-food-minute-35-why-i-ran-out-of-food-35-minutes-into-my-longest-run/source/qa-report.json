@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-07-27T18:38:04.530Z",
+  "pack": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Why I ran out of food 35 minutes into my longest run",
+    "candidate_file": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/hook-candidates.json",
+    "selected_score": 58,
+    "candidates": 8
+  },
+  "prompt_artifacts": {
+    "hook": "Why I ran out of food 35 minutes into my longest run",
+    "theme": "food",
+    "prompt_coherence": {
+      "phase": "pre_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "lake_calm_023",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "lake_calm_025",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "lake_calm_027",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "lake_calm_031",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "lake_calm_033",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 135,
+        "quality_score": 87,
+        "visual_match_score": 48,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "lake_calm_034",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 117,
+        "quality_score": 87,
+        "visual_match_score": 30,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/hook-provenance.json",
+      "generator": "codex_imagegen_tool",
+      "reference_image": "content/slideshows/visual-library/owned-source/road-to-marathon-fit-avatar/road-to-marathon-fit-female-runner-v1-reference.png",
+      "expected_reference_image": "content/slideshows/visual-library/owned-source/road-to-marathon-fit-avatar/road-to-marathon-fit-female-runner-v1-reference.png"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "lake_calm_023",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "lake_calm_025",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "lake_calm_027",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "lake_calm_031",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "lake_calm_033",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "lake_calm_034",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 5,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "cta_text_rotation": {
+    "current_cta": "Follow the next long-run attempt.",
+    "checked_recent_decks": 5,
+    "window_size": 5
+  },
+  "creative_rules": {
+    "coachi_mentions": 0,
+    "first_coachi_mention_slide": null,
+    "canonical_slideshow": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:library"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/02-felt-moment.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/03-hidden-cost.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/04-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/05-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/06-proof.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

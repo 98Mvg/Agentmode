@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run",
+  "format_id": "marathon_food_minute_35_v1",
+  "schema": "things_i_wish_i_knew_v1",
+  "content_pillar": "marathon_journal",
+  "research_status": null,
+  "topic": "I packed less than planned and spent the second half thinking about the snack I left at home.",
+  "selected_hook": "Why I ran out of food 35 minutes into my longest run",
+  "hook_score": 58,
+  "hook_quality": {
+    "score": 58,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 12,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 3,
+      "coachi_fit": 8,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 12,
+      "curiosity_signals": {
+        "concrete_number": true,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 12 words; bank family marathon_food_minute_35_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rtmf_week08_long_run_food_miss",
+    "problem_type": "food",
+    "exact_words": "I packed less than planned and spent the second half thinking about the snack I left at home.",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_long_run_food_miss"
+  },
+  "visual_system": {
+    "emotion": "fine early, distracted and hungry later",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_follow_along_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why I ran out of food 35 minutes into my longest run",
+      "visual_direction": "fine early, distracted and hungry later; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food hook lake calm lake daylight fine early, distracted and hungry later",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "I left one snack at home because the run felt manageable.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food felt_moment lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "At minute 35, food became the only thing I could think about.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food hidden_cost lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "I slowed down and stopped pretending the plan had not changed.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Next time, the extra snack is coming even if I feel confident.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "I finished, but the second half felt much longer than planned.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food proof lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Follow the next long-run attempt.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal marathon training follow-along background lake calm lake daylight calm confidence",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "follow"
+    }
+  ],
+  "caption": "Why I ran out of food 35 minutes into my longest run\n\nThe win this week is showing up without turning every run into a test.\n\nFollow the next long-run attempt.",
+  "hashtags": [
+    "#runtok",
+    "#realrunning",
+    "#marathonprep",
+    "#runningcommunity",
+    "#beginnerfitness"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-marathon-04-food-minute-35-why-i-ran-out-of-food-35-minutes-into-my-longest-run/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:38:04.528Z"
+}

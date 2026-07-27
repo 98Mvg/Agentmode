@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 362337,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "a15145efd85d135c27f1d72abe08f2940fe7cb810319861195790d649057854d"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 827985,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "3e29684dbae503edd5a20cebf7fdd2c00e5b00cd06baf958df00d21ea4ec296f"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 594716,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "068e97fcc7af95c36cc491840d8ac1136a14685ef719fd8398de825bed2157d9"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 376471,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "5cba14ba08efe6ea8d09a08e83720e7b188703b047252594573a901a26cb0c69"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 597222,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "b9b8751a90220d33df23013bf741e66d26fe1b70008b7544f5b1f2f0106f57f3"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 562040,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "9a205b042433aab351c6bd367d6a6de7be2f54c5b902dae22fa221186df77859"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 465282,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "9d07661cba01b189c725aa1096628d560ec49eb9a35b48f87d61eed6aad6d3d6"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

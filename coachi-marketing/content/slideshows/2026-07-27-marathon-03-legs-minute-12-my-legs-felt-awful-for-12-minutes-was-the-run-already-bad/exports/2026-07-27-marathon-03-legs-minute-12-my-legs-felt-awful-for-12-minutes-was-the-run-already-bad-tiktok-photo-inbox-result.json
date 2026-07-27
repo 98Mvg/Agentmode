@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "mode": "tiktok_photo_media_upload_inbox",
+  "note": "No access token printed. TikTok requires the user to open the inbox notification and finish posting.",
+  "token_refreshed": false,
+  "integration": {
+    "id": "cmrc26jve0001ox7feiejsm8w",
+    "name": "roadtoMarathon",
+    "profile": "roadtomarathon2",
+    "tokenExpiration": "2026-07-28T12:55:45.821Z",
+    "refreshNeeded": false,
+    "disabled": false
+  },
+  "slideshow_id": "2026-07-27-marathon-03-legs-minute-12-my-legs-felt-awful-for-12-minutes-was-the-run-already-bad",
+  "photo_count": 7,
+  "publish_id": "p_inbox_url~v2.7667278559572019222",
+  "statuses": [
+    {
+      "status": "SEND_TO_USER_INBOX",
+      "fail_reason": null
+    }
+  ]
+}

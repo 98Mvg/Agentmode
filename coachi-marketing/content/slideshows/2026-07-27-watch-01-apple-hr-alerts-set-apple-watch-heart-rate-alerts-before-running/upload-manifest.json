@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 485879,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "c6215747acd12f8bae6332286a2c8499aa07d780ea83d3e9c099d91a1f8fddd0"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 419537,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "5f4d7e066842297988322747ba23d5cf8bd7d10e5c559a1ae2f20770f79a44c5"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 239355,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "18f5aabc2bb584dafdb51084f3d3ff1ce077d06648269c84a93cd3b3ecc82c04"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 531695,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "3fa4ce53c03a9416f359eafd7d7265f94482e819a11850fe281da0a86effc349"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 539628,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "f98a8288059601ace09096bd3b6a95f58070f779cd78250f7f28e704a45a1e15"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 578137,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "0672af3b2e0a30741c58bddf35f2feab7b38c5fe7aa0b650b349f5b233b42a48"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 90749,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "8d507662bd4ae056b0319c77f70381c9e40450de3c941ff1740f0d37653010ec"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-01-apple-hr-alerts-set-apple-watch-heart-rate-alerts-before-running",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

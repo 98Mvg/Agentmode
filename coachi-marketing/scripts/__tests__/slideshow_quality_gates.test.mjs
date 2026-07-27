@@ -5,10 +5,13 @@ import path from "node:path";
 import fs from "node:fs/promises";
 import { spawn } from "node:child_process";
 import {
+  disallowedPublicCopyMatches,
+  hasRunnerLanguage,
   MIN_HOOK_QUALITY_SCORE,
   scoreCoachiHook,
   textSoundsLikeAd
 } from "../slideshow_quality_rules.mjs";
+import { validateFreshSlideCopy } from "../qa_slideshow_pack.mjs";
 
 function runNode(args, options = {}) {
   return new Promise((resolve, reject) => {
@@ -218,6 +221,52 @@ test("hook scorer preserves specific TikTok mechanics up to twelve words", () =>
   assert.ok(specific.score > generic.score);
 });
 
+test("public slideshow copy rejects rep shorthand in favor of running terms", () => {
+  assert.equal(disallowedPublicCopyMatches("The first two reps felt easy."), "reps");
+  assert.equal(disallowedPublicCopyMatches("Control the first interval."), null);
+  assert.equal(disallowedPublicCopyMatches("Use the first ten minutes to settle in."), null);
+});
+
+test("copy freshness ignores failed packs but still blocks production-passed duplicates", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-copy-freshness-"));
+  const failedPack = path.join(tmpDir, "failed-pack");
+  const currentPack = path.join(tmpDir, "current-pack");
+  const slides = [
+    { slide_number: 1, text: "My easy run started slower" },
+    { slide_number: 2, text: "I kept looking at the pace." },
+    { slide_number: 3, text: "Every part of me wanted to speed up." },
+    { slide_number: 4, text: "But I could still breathe normally." },
+    { slide_number: 5, text: "So I left the pace alone." },
+    { slide_number: 6, text: "I got home without feeling wiped." },
+    { slide_number: 7, text: "Follow the Week 2 updates." }
+  ];
+
+  await writeJson(path.join(failedPack, "render-manifest.json"), { slides });
+  await writeJson(path.join(failedPack, "source/qa-report.json"), {
+    ok: false,
+    pass: false,
+    production: true
+  });
+  await writeJson(path.join(currentPack, "render-manifest.json"), { slides });
+
+  const skipped = await validateFreshSlideCopy({
+    manifest: { slides },
+    packDir: currentPack,
+    production: true
+  });
+  assert.equal(skipped.duplicate_matches, 0);
+
+  await writeJson(path.join(failedPack, "source/qa-report.json"), {
+    ok: true,
+    pass: true,
+    production: true
+  });
+  await assert.rejects(
+    validateFreshSlideCopy({ manifest: { slides }, packDir: currentPack, production: true }),
+    /Production copy freshness failed/
+  );
+});
+
 test("hook scorer credits watch questions and plain contradictions", () => {
   const watchChoice = scoreCoachiHook("Garmin or Apple Watch for running?", {
     problem_type: "watch-buying confusion",
@@ -232,6 +281,83 @@ test("hook scorer credits watch questions and plain contradictions", () => {
   assert.equal(numbersContradiction.passes_quality_gate, true);
   assert.equal(watchChoice.breakdown.curiosity_signals.question_or_choice, true);
   assert.equal(numbersContradiction.breakdown.curiosity_signals.plain_contradiction, true);
+});
+
+test("hook scorer credits practical watch-specific hooks", () => {
+  const watchHooks = [
+    [
+      "Set HR alerts before easy runs",
+      {
+        problem_type: "watch-checking anxiety",
+        exact_words: "I keep staring at my watch because I do not trust easy pace."
+      }
+    ],
+    [
+      "Best running watch depends on your run",
+      {
+        problem_type: "watch-buying confusion",
+        exact_words: "I do not know whether Garmin or Apple Watch is better for running."
+      }
+    ],
+    [
+      "Battery matters after 90 minutes",
+      {
+        problem_type: "watch-buying confusion",
+        exact_words: "I need a running watch for long runs but battery and GPS confuse me."
+      }
+    ],
+    [
+      "Tighten your watch before trusting heart rate",
+      {
+        problem_type: "heart-rate panic",
+        exact_words: "My watch heart rate spikes on easy runs and I wonder if the wrist fit is wrong."
+      }
+    ],
+    [
+      "Set zones before trusting alerts",
+      {
+        problem_type: "metric setup confusion",
+        exact_words: "My watch zones and alerts feel wrong on easy runs."
+      }
+    ],
+    [
+      "Watch comfort beats extra features",
+      {
+        problem_type: "watch-buying confusion",
+        exact_words: "I want a running watch but comfort matters more than features."
+      }
+    ]
+  ];
+
+  for (const [hook, problem] of watchHooks) {
+    const quality = scoreCoachiHook(hook, problem);
+    assert.equal(quality.passes_quality_gate, true, quality.rationale);
+    assert.equal(quality.breakdown.watch_specific_intent, true);
+  }
+});
+
+test("runner-language guard accepts plural long-run wording", () => {
+  assert.equal(hasRunnerLanguage("GPS battery mode matters before long runs"), true);
+  assert.equal(hasRunnerLanguage("Easy runs should not become a race"), true);
+  assert.equal(hasRunnerLanguage("Garmin SatIQ saves battery without giving up the best GPS mode"), true);
+});
+
+test("hook scorer blocks visible myth truth wording and rejected vague one-offs", () => {
+  const blockedHooks = [
+    "Hilly pace can lie",
+    "Your watch fit changes heart rate",
+    "Apple Watch is not truth",
+    "Myths runners still believe about zone 2"
+  ];
+
+  for (const hook of blockedHooks) {
+    const quality = scoreCoachiHook(hook, {
+      problem_type: "watch-checking anxiety",
+      exact_words: "My watch gives numbers but I do not know what to do mid-run."
+    });
+    assert.equal(quality.passes_quality_gate, false, hook);
+    assert.ok(quality.breakdown.banned_matches.length > 0, hook);
+  }
 });
 
 test("generate_slideshow_topics writes scored hook candidates", async () => {
@@ -380,6 +506,28 @@ test("shared hook scorer keeps generic list hooks below production bar", () => {
   assert.ok(quality.score < MIN_HOOK_QUALITY_SCORE);
 });
 
+test("shared hook scorer accepts a personal running-app stack without lifting generic lists", () => {
+  const personal = scoreCoachiHook(
+    "Top 5 running apps I use when running",
+    {
+      problem_type: "data-without-coaching",
+      exact_words: "I use five running apps for different jobs."
+    },
+    { source_family_id: "marathon_personal_app_stack" }
+  );
+  const generic = scoreCoachiHook(
+    "Top 5 running apps",
+    {
+      problem_type: "data-without-coaching",
+      exact_words: "running apps"
+    },
+    { source_family_id: "generic_app_list" }
+  );
+
+  assert.equal(personal.passes_quality_gate, true);
+  assert.equal(generic.passes_quality_gate, false);
+});
+
 test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
   const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-qa-conflict-"));
   const packDir = path.join(tmpDir, "2026-05-14-conflict-pack");
@@ -428,7 +576,7 @@ test("qa_slideshow_pack rejects workout-phase prompt conflicts", async () => {
       { slide_number: 2, role: "setup", input_image: "slides/source/02-setup.png", output_file: "02-setup.png", text: "Hard is not always better.", asset_source: "supabase_library", visual_collection: "hills_effort", text_position: "lower_middle" },
       { slide_number: 3, role: "value", input_image: "slides/source/03-value.png", output_file: "03-value.png", text: "Do not race practice.", asset_source: "supabase_library", visual_collection: "hills_effort", text_position: "lower_middle" },
       { slide_number: 4, role: "rule", input_image: "slides/source/04-rule.png", output_file: "04-rule.png", text: "Finish with control.", asset_source: "supabase_library", visual_collection: "hills_effort", text_position: "center" },
-      { slide_number: 5, role: "cta", input_image: "slides/source/05-cta.png", output_file: "05-cta.png", text: "Comment if you race reps.", asset_source: "supabase_template", text_position: "center" }
+      { slide_number: 5, role: "cta", input_image: "slides/source/05-cta.png", output_file: "05-cta.png", text: "Comment if you race intervals.", asset_source: "supabase_template", text_position: "center" }
     ]
   });
 
@@ -1497,6 +1645,124 @@ test("prepare_slideshow_assets ranks fresh assets and emits selection quality", 
   assert.equal(typeof topAsset.selection_quality.selection_score, "number");
   assert.equal(typeof topAsset.selection_quality.visual_match_score, "number");
   assert.ok(topAsset.visual_fit_metadata.requested_context);
+});
+
+test("prepare_slideshow_assets can count selected usage for batch-local Supabase variation", async () => {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "coachi-asset-batch-variation-"));
+  const manifestPath = path.join(tmpDir, "render-manifest.json");
+  const usagePath = path.join(tmpDir, "usage-log.json");
+  const supabaseManifestPath = path.join(tmpDir, "supabase-library-manifest.json");
+  const defaultOutPath = path.join(tmpDir, "asset-picklist-default.json");
+  const batchOutPath = path.join(tmpDir, "asset-picklist-batch.json");
+
+  await writeJson(manifestPath, {
+    base_dir: ".",
+    output_dir: "slides/rendered",
+    hybrid_cost_model: "one_ai_hook_six_library_assets",
+    visual_world: "forest",
+    slides: [
+      {
+        slide_number: 1,
+        role: "hook",
+        asset_source: "images_2_0",
+        visual_collection: "details_emotion",
+        input_image: "slides/source/01-hook.png",
+        output_file: "01-hook.png",
+        text: "Hook"
+      },
+      {
+        slide_number: 2,
+        role: "setup",
+        asset_source: "supabase_library",
+        visual_collection: "nature_context",
+        input_image: "slides/source/02-setup.png",
+        output_file: "02-setup.png",
+        text: "Setup"
+      }
+    ]
+  });
+  await writeJson(supabaseManifestPath, {
+    schema_version: 1,
+    collections: [
+      {
+        collection_id: "nature_context",
+        items: [
+          {
+            id: "batch_used_asset",
+            source_kind: "supabase_visual_library",
+            original_source_kind: "pinterest_approved_test",
+            source_rights: "approved",
+            public_url: "https://example.com/batch-used.jpg",
+            quality_score: 98,
+            visual_world: "forest",
+            visual_world_tags: ["forest"],
+            subject_tags: ["forest", "route_context"],
+            best_for_slide_roles: ["setup"]
+          },
+          {
+            id: "fresh_batch_asset",
+            source_kind: "supabase_visual_library",
+            original_source_kind: "pinterest_approved_test",
+            source_rights: "approved",
+            public_url: "https://example.com/fresh.jpg",
+            quality_score: 90,
+            visual_world: "forest",
+            visual_world_tags: ["forest"],
+            subject_tags: ["forest", "route_context"],
+            best_for_slide_roles: ["setup"]
+          }
+        ]
+      }
+    ]
+  });
+  await writeJson(usagePath, {
+    schema_version: 1,
+    uses: [
+      {
+        used_at: "2026-06-16T09:00:00.000Z",
+        stage: "selected",
+        slideshow_id: "same-batch-pack-1",
+        slide_number: 2,
+        asset_id: "batch_used_asset",
+        visual_collection: "nature_context"
+      }
+    ]
+  });
+
+  await runNode([
+    "scripts/prepare_slideshow_assets.mjs",
+    "--manifest",
+    manifestPath,
+    "--out",
+    defaultOutPath,
+    "--production",
+    "--supabase-library",
+    supabaseManifestPath,
+    "--usage-log",
+    usagePath
+  ]);
+  await runNode([
+    "scripts/prepare_slideshow_assets.mjs",
+    "--manifest",
+    manifestPath,
+    "--out",
+    batchOutPath,
+    "--production",
+    "--supabase-library",
+    supabaseManifestPath,
+    "--usage-log",
+    usagePath,
+    "--include-selected-usage"
+  ]);
+
+  const defaultPicklist = JSON.parse(await fs.readFile(defaultOutPath, "utf8"));
+  const batchPicklist = JSON.parse(await fs.readFile(batchOutPath, "utf8"));
+  const defaultSlide = defaultPicklist.slides.find((item) => item.slide_number === 2);
+  const batchSlide = batchPicklist.slides.find((item) => item.slide_number === 2);
+
+  assert.equal(defaultSlide.instruction.candidate_assets[0].id, "batch_used_asset");
+  assert.equal(batchSlide.instruction.candidate_assets[0].id, "fresh_batch_asset");
+  assert.match(batchPicklist.usage_rotation_scope, /selected/);
 });
 
 test("prepare_slideshow_assets prefers no-face environment assets on middle slides", async () => {

@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 396500,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "384c42d702dc57269fed8c0104acde758892fba20b1b3d8f7ff8fffdd010d7ec"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 966923,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "1bd1fbe942691f38ab37b670a3501c19e8c3787da6c7d8cf02659708f8a0c8d2"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 435154,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "a2331db6000924203ebd0485ba363a0df4dcd022f9ed9051126419bd75294180"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 559505,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "e41f6173ad6421ac7295b38ea27dddc8a0b1c3719bac916e47d273ede9c5df05"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 402300,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "b9956b670e624808bedda0b2f2c0778d65b2008cadbce938cfc7171f48a6d6c5"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 587115,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "72731db1039f7e970bfc35c4b0d0a3d0d074d25ef67fc54295ba35da1bcaef59"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 94765,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "b2618ddf170b0ba29d6efcc0fc0826db80042f6706195e88a2b6590359334fac"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-06-apple-pacer-race-route-apple-watch-pacer-or-race-route-which-one-fits-your-run",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

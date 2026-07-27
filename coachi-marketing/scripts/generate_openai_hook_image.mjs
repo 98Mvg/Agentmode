@@ -14,9 +14,13 @@ const DEFAULT_SIZE = process.env.OPENAI_IMAGE_SIZE || "1024x1536";
 const DEFAULT_QUALITY = process.env.OPENAI_IMAGE_QUALITY || "high";
 const DEFAULT_ENDPOINT = process.env.OPENAI_IMAGES_ENDPOINT || "https://api.openai.com/v1/images/generations";
 const DEFAULT_EDIT_ENDPOINT = process.env.OPENAI_IMAGES_EDIT_ENDPOINT || "https://api.openai.com/v1/images/edits";
+const DEFAULT_FETCH_TIMEOUT_MS = Number.parseInt(process.env.OPENAI_FETCH_TIMEOUT_MS || "180000", 10);
+const DEFAULT_MAX_RETRIES = Number.parseInt(process.env.OPENAI_IMAGE_MAX_RETRIES || "3", 10);
+const DEFAULT_RETRY_BASE_DELAY_MS = Number.parseInt(process.env.OPENAI_IMAGE_RETRY_BASE_DELAY_MS || "2000", 10);
 const WATCH_STOLE_THE_RUN_HOOK_IMAGE = "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png";
 const DEFAULT_HOOK_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
 const DEFAULT_HOOK_STYLE_REFERENCE_IMAGE = WATCH_STOLE_THE_RUN_HOOK_IMAGE;
+const DEFAULT_FALLBACK_SEARCH_ROOT = "content/slideshows";
 
 function parseArgs(argv) {
   const args = new Map();
@@ -53,12 +57,18 @@ The API key is resolved without printing it:
 
 Default model: ${DEFAULT_MODEL}
 Default size: ${DEFAULT_SIZE}
-Default pack references:
+Default pack references are read from source/hook-brief.json. If the pack has no identity reference, the legacy default is:
 - ${DEFAULT_HOOK_REFERENCE_IMAGE}
 - ${DEFAULT_HOOK_STYLE_REFERENCE_IMAGE}
 
+Reliability defaults:
+- timeout: ${DEFAULT_FETCH_TIMEOUT_MS}ms
+- retries: ${DEFAULT_MAX_RETRIES}
+- retry base delay: ${DEFAULT_RETRY_BASE_DELAY_MS}ms
+
 Use --dry-run to validate inputs and key presence without calling the API.
-Use --no-default-references only for non-Coachi experiments.`);
+Use --no-default-references only for non-Coachi experiments.
+Use --disable-fallback to fail instead of reusing a previously approved hook image.`);
 }
 
 async function exists(filePath) {
@@ -83,6 +93,11 @@ async function readJsonIfExists(filePath) {
 async function writeJson(filePath, data) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+}
+
+function parsePositiveInt(value, fallback) {
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : fallback;
 }
 
 function parseEnvText(text) {
@@ -112,6 +127,10 @@ async function readKeyFromOpenClawContext() {
 }
 
 async function resolveOpenAiApiKey() {
+  if (process.env.OPENAI_IMAGE_API_KEY) {
+    return { key: process.env.OPENAI_IMAGE_API_KEY, source: "process.env.OPENAI_IMAGE_API_KEY" };
+  }
+
   if (process.env.OPENCLAW_OPENAI_API_KEY) {
     return { key: process.env.OPENCLAW_OPENAI_API_KEY, source: "process.env.OPENCLAW_OPENAI_API_KEY" };
   }
@@ -146,7 +165,7 @@ async function resolveOpenAiApiKey() {
     return { key: openClawKey, source: path.join(APP_REPO_ROOT, "OPENCLAW_FOR_CODEX.md") };
   }
 
-  throw new Error("Missing OPENAI_API_KEY. Set it in env, marketing .env, app .env, or the OpenClaw context file.");
+  throw new Error("Missing OpenAI API key. Set OPENAI_IMAGE_API_KEY, OPENAI_API_KEY, a supported env file, or the OpenClaw context file.");
 }
 
 function extractPrompt(text) {
@@ -162,6 +181,84 @@ function redactSecrets(value) {
     .replace(/Bearer\s+[A-Za-z0-9_\-.]+/gi, "Bearer [REDACTED]");
 }
 
+async function fetchWithTimeout(url, options = {}, timeoutMs = DEFAULT_FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } catch (error) {
+    if (error?.name === "AbortError") {
+      throw new Error(`OpenAI image request timed out after ${timeoutMs}ms`);
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
+  }
+}
+
+class OpenAiImageRequestError extends Error {
+  constructor(message, { status = null, retryable = true } = {}) {
+    super(message);
+    this.name = "OpenAiImageRequestError";
+    this.status = status;
+    this.retryable = retryable;
+  }
+}
+
+function shouldRetryError(error) {
+  if (error instanceof OpenAiImageRequestError) return error.retryable;
+  const message = String(error?.message || "");
+  return /timed out|fetch failed|network|ECONNRESET|ETIMEDOUT|EAI_AGAIN|ENOTFOUND/i.test(message);
+}
+
+function retryDelayMs({ attemptIndex, baseDelayMs }) {
+  if (baseDelayMs <= 0) return 0;
+  return baseDelayMs * Math.max(1, attemptIndex);
+}
+
+async function sleep(ms) {
+  if (ms <= 0) return;
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function runWithRetries(operation, { maxRetries, baseDelayMs }) {
+  const attempts = [];
+  const maxAttempts = Math.max(1, maxRetries + 1);
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const startedAt = new Date().toISOString();
+    try {
+      const result = await operation(attempt);
+      attempts.push({
+        attempt,
+        status: "success",
+        started_at: startedAt,
+        completed_at: new Date().toISOString()
+      });
+      return { result, attempts };
+    } catch (error) {
+      const retryable = shouldRetryError(error);
+      const willRetry = retryable && attempt < maxAttempts;
+      attempts.push({
+        attempt,
+        status: "failed",
+        started_at: startedAt,
+        completed_at: new Date().toISOString(),
+        retryable,
+        will_retry: willRetry,
+        error: redactSecrets(error?.message || error)
+      });
+      if (!willRetry) {
+        error.attempts = attempts;
+        throw error;
+      }
+      await sleep(retryDelayMs({ attemptIndex: attempt, baseDelayMs }));
+    }
+  }
+
+  throw new Error("OpenAI image retry loop exhausted unexpectedly.");
+}
+
 async function resolvePrompt({ args }) {
   const pack = args.get("--pack");
   const promptPath = args.get("--prompt")
@@ -175,14 +272,37 @@ async function resolvePrompt({ args }) {
   return { prompt, promptPath: absolutePromptPath, pack: pack ? path.resolve(pack) : null };
 }
 
+function hookBriefIdentityProfile(hookBrief) {
+  return hookBrief?.avatar_variation?.identity_profile || null;
+}
+
+function hookBriefReferenceImage(hookBrief) {
+  return hookBrief?.character_anchor?.reference_image
+    || hookBriefIdentityProfile(hookBrief)?.reference_image
+    || null;
+}
+
+function hookBriefStyleReferenceImage(hookBrief) {
+  return hookBrief?.character_anchor?.style_reference_image
+    || hookBriefIdentityProfile(hookBrief)?.style_reference_image
+    || null;
+}
+
+function hookBriefUsesSingleReferenceIdentity(hookBrief) {
+  const accountProfile = hookBrief?.character_anchor?.account_profile;
+  const identityProfile = hookBriefIdentityProfile(hookBrief)?.profile;
+  return ["watch", "marathon"].includes(accountProfile)
+    || ["watch", "marathon"].includes(identityProfile);
+}
+
 function resolveOutput({ args, pack }) {
   const out = args.get("--out") || (pack ? path.join(pack, "slides/source/01-hook.png") : null);
   if (!out) throw new Error("--out is required when --pack is not provided.");
   return path.resolve(out);
 }
 
-async function callOpenAiImages({ apiKey, prompt, model, size, quality, endpoint }) {
-  const response = await fetch(endpoint, {
+async function callOpenAiImages({ apiKey, prompt, model, size, quality, endpoint, timeoutMs }) {
+  const response = await fetchWithTimeout(endpoint, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -195,7 +315,7 @@ async function callOpenAiImages({ apiKey, prompt, model, size, quality, endpoint
       quality,
       n: 1
     })
-  });
+  }, timeoutMs);
 
   const bodyText = await response.text();
   let body;
@@ -207,7 +327,10 @@ async function callOpenAiImages({ apiKey, prompt, model, size, quality, endpoint
 
   if (!response.ok) {
     const message = body?.error?.message || bodyText || `HTTP ${response.status}`;
-    throw new Error(`OpenAI image generation failed: ${redactSecrets(message)}`);
+    throw new OpenAiImageRequestError(`OpenAI image generation failed: ${redactSecrets(message)}`, {
+      status: response.status,
+      retryable: [408, 409, 425, 429, 500, 502, 503, 504].includes(response.status)
+    });
   }
 
   const image = body?.data?.[0];
@@ -232,7 +355,7 @@ async function imageReferencePayload(filePath) {
   return { absoluteReference, payload: { image_url: imageUrl } };
 }
 
-async function callOpenAiImageEdit({ apiKey, prompt, model, size, quality, endpoint, referenceImages, inputFidelity }) {
+async function callOpenAiImageEdit({ apiKey, prompt, model, size, quality, endpoint, referenceImages, inputFidelity, timeoutMs }) {
   const references = [];
   for (const filePath of referenceImages) {
     references.push(await imageReferencePayload(filePath));
@@ -249,14 +372,14 @@ async function callOpenAiImageEdit({ apiKey, prompt, model, size, quality, endpo
     requestBody.input_fidelity = inputFidelity;
   }
 
-  const response = await fetch(endpoint, {
+  const response = await fetchWithTimeout(endpoint, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`
     },
     body: JSON.stringify(requestBody)
-  });
+  }, timeoutMs);
 
   const bodyText = await response.text();
   let body;
@@ -268,7 +391,10 @@ async function callOpenAiImageEdit({ apiKey, prompt, model, size, quality, endpo
 
   if (!response.ok) {
     const message = body?.error?.message || bodyText || `HTTP ${response.status}`;
-    throw new Error(`OpenAI image edit failed: ${redactSecrets(message)}`);
+    throw new OpenAiImageRequestError(`OpenAI image edit failed: ${redactSecrets(message)}`, {
+      status: response.status,
+      retryable: [408, 409, 425, 429, 500, 502, 503, 504].includes(response.status)
+    });
   }
 
   const image = body?.data?.[0];
@@ -283,6 +409,121 @@ async function callOpenAiImageEdit({ apiKey, prompt, model, size, quality, endpo
   };
 }
 
+function validImages20Provenance(provenance) {
+  const generator = String(provenance?.generator || provenance?.source || "").toLowerCase();
+  return new Set([
+    "images_2_0",
+    "chatgpt_images_2_0",
+    "chatgpt images 2.0",
+    "gpt_image_2_0"
+  ]).has(generator) && Boolean(provenance?.created_at || provenance?.generated_at);
+}
+
+async function findHookFallbackCandidates({ searchRoot, outPath, pack }) {
+  const absoluteSearchRoot = path.resolve(searchRoot);
+  const absoluteOutPath = path.resolve(outPath);
+  const absolutePack = pack ? path.resolve(pack) : null;
+  const candidates = [];
+
+  async function walk(directory) {
+    let entries;
+    try {
+      entries = await fs.readdir(directory, { withFileTypes: true });
+    } catch (error) {
+      if (error.code === "ENOENT") return;
+      throw error;
+    }
+
+    const hookPath = path.join(directory, "slides/source/01-hook.png");
+    const provenancePath = path.join(directory, "source/hook-provenance.json");
+    if (
+      hookPath !== absoluteOutPath
+      && (!absolutePack || path.resolve(directory) !== absolutePack)
+      && await exists(hookPath)
+      && await exists(provenancePath)
+    ) {
+      try {
+        const provenance = JSON.parse(await fs.readFile(provenancePath, "utf8"));
+        if (validImages20Provenance(provenance)) {
+          const stat = await fs.stat(hookPath);
+          candidates.push({
+            hookPath,
+            provenancePath,
+            provenance,
+            mtimeMs: stat.mtimeMs
+          });
+        }
+      } catch {
+        // Ignore malformed old provenance files; fallback must be auditable.
+      }
+    }
+
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      if (entry.name === "node_modules" || entry.name === ".git") continue;
+      await walk(path.join(directory, entry.name));
+    }
+  }
+
+  await walk(absoluteSearchRoot);
+  candidates.sort((left, right) => right.mtimeMs - left.mtimeMs);
+  return candidates;
+}
+
+async function resolveFallbackHook({ args, outPath, pack }) {
+  const explicitImage = args.get("--fallback-hook-image");
+  const explicitProvenance = args.get("--fallback-hook-provenance");
+  if (explicitImage) {
+    const hookPath = path.resolve(explicitImage);
+    if (!(await exists(hookPath))) throw new Error(`Fallback hook image missing: ${hookPath}`);
+    let provenance = null;
+    let provenancePath = explicitProvenance ? path.resolve(explicitProvenance) : null;
+    if (provenancePath) {
+      provenance = JSON.parse(await fs.readFile(provenancePath, "utf8"));
+      if (!validImages20Provenance(provenance)) {
+        throw new Error(`Fallback hook provenance is not valid Images 2.0 provenance: ${provenancePath}`);
+      }
+    }
+    return { hookPath, provenancePath, provenance, mode: "explicit_fallback_hook_image" };
+  }
+
+  const searchRoot = args.get("--fallback-search-root") || DEFAULT_FALLBACK_SEARCH_ROOT;
+  const candidates = await findHookFallbackCandidates({ searchRoot, outPath, pack });
+  const candidate = candidates[0];
+  if (!candidate) return null;
+  return { ...candidate, mode: "latest_approved_hook_image" };
+}
+
+async function copyFallbackHookImage({ fallback, outPath, provenancePath, context }) {
+  await fs.mkdir(path.dirname(outPath), { recursive: true });
+  await fs.copyFile(fallback.hookPath, outPath);
+  const createdAt = new Date().toISOString();
+  await writeJson(provenancePath, {
+    schema_version: 1,
+    generator: "chatgpt_images_2_0",
+    api_model: context.model,
+    endpoint: context.endpoint,
+    size: context.size,
+    quality: context.quality,
+    mode: "fallback_reused_approved_hook_image",
+    fallback_used: true,
+    fallback_mode: fallback.mode,
+    fallback_reason: redactSecrets(context.error?.message || "OpenAI hook generation failed after retries."),
+    attempts: context.attempts || [],
+    retry_policy: context.retryPolicy,
+    fallback_source_image: path.relative(ROOT, fallback.hookPath),
+    fallback_source_provenance: fallback.provenancePath ? path.relative(ROOT, fallback.provenancePath) : null,
+    fallback_original_provenance: fallback.provenance || null,
+    prompt_path: context.promptPath,
+    output_path: outPath,
+    created_at: createdAt,
+    requested_at: context.startedAt,
+    source_problem_id: context.hookBrief?.problem_id || null,
+    hook: context.hookBrief?.hook || null,
+    note: "OpenAI Images 2.0 hook generation failed after retries. Reused the latest approved Images 2.0 hook image so the daily slideshow pipeline can continue. Replace with a fresh hook image before publishing if visual specificity matters."
+  });
+}
+
 async function main() {
   const { args, flags } = parseArgs(process.argv.slice(2));
   if (flags.has("--help") || flags.has("-h")) {
@@ -294,11 +535,21 @@ async function main() {
   const size = args.get("--size") || DEFAULT_SIZE;
   const quality = args.get("--quality") || DEFAULT_QUALITY;
   const inputFidelity = args.get("--input-fidelity") || "high";
+  const timeoutMs = parsePositiveInt(args.get("--timeout-ms") || process.env.OPENAI_FETCH_TIMEOUT_MS, DEFAULT_FETCH_TIMEOUT_MS);
+  const maxRetries = parsePositiveInt(args.get("--retries") || process.env.OPENAI_IMAGE_MAX_RETRIES, DEFAULT_MAX_RETRIES);
+  const retryBaseDelayMs = parsePositiveInt(args.get("--retry-base-delay-ms") || process.env.OPENAI_IMAGE_RETRY_BASE_DELAY_MS, DEFAULT_RETRY_BASE_DELAY_MS);
   const dryRun = flags.has("--dry-run");
   const { prompt, promptPath, pack } = await resolvePrompt({ args });
+  const hookBrief = pack ? await readJsonIfExists(path.join(pack, "source/hook-brief.json")) : null;
   const useDefaultReferences = Boolean(pack) && !flags.has("--no-default-references");
-  const referenceImage = args.get("--reference-image") || (useDefaultReferences ? DEFAULT_HOOK_REFERENCE_IMAGE : null);
-  const styleReferenceImage = args.get("--style-reference-image") || (useDefaultReferences ? DEFAULT_HOOK_STYLE_REFERENCE_IMAGE : null);
+  const referenceImage = args.get("--reference-image")
+    || (useDefaultReferences ? hookBriefReferenceImage(hookBrief) || DEFAULT_HOOK_REFERENCE_IMAGE : null);
+  const styleReferenceImage = args.get("--style-reference-image")
+    || (useDefaultReferences
+      ? hookBriefUsesSingleReferenceIdentity(hookBrief)
+        ? null
+        : hookBriefStyleReferenceImage(hookBrief) || DEFAULT_HOOK_STYLE_REFERENCE_IMAGE
+      : null);
   const referenceImages = [...new Set([referenceImage, styleReferenceImage].filter(Boolean))];
   const endpoint = args.get("--endpoint") || (referenceImages.length > 0 ? DEFAULT_EDIT_ENDPOINT : DEFAULT_ENDPOINT);
   const outPath = resolveOutput({ args, pack });
@@ -307,7 +558,6 @@ async function main() {
     : pack
       ? path.join(pack, "source/hook-provenance.json")
       : `${outPath}.provenance.json`;
-  const hookBrief = pack ? await readJsonIfExists(path.join(pack, "source/hook-brief.json")) : null;
   const { key, source } = await resolveOpenAiApiKey();
 
   if (dryRun) {
@@ -325,6 +575,11 @@ async function main() {
       style_reference_image: styleReferenceImage ? path.resolve(styleReferenceImage) : null,
       reference_image_count: referenceImages.length,
       input_fidelity: referenceImage ? inputFidelity : null,
+      timeout_ms: timeoutMs,
+      retries: maxRetries,
+      retry_base_delay_ms: retryBaseDelayMs,
+      fallback_enabled: !flags.has("--disable-fallback"),
+      fallback_search_root: args.get("--fallback-search-root") || DEFAULT_FALLBACK_SEARCH_ROOT,
       key_source: source,
       key_present: Boolean(key),
       prompt_chars: prompt.length
@@ -333,9 +588,58 @@ async function main() {
   }
 
   const startedAt = new Date().toISOString();
-  const result = referenceImages.length > 0
-    ? await callOpenAiImageEdit({ apiKey: key, prompt, model, size, quality, endpoint, referenceImages, inputFidelity })
-    : await callOpenAiImages({ apiKey: key, prompt, model, size, quality, endpoint });
+  let result;
+  let attempts = [];
+  try {
+    const retryResult = await runWithRetries(
+      () => referenceImages.length > 0
+        ? callOpenAiImageEdit({ apiKey: key, prompt, model, size, quality, endpoint, referenceImages, inputFidelity, timeoutMs })
+        : callOpenAiImages({ apiKey: key, prompt, model, size, quality, endpoint, timeoutMs }),
+      { maxRetries, baseDelayMs: retryBaseDelayMs }
+    );
+    result = retryResult.result;
+    attempts = retryResult.attempts;
+  } catch (error) {
+    attempts = error.attempts || [];
+    if (flags.has("--disable-fallback")) throw error;
+    const fallback = await resolveFallbackHook({ args, outPath, pack });
+    if (!fallback) {
+      throw new Error(`OpenAI hook generation failed and no approved fallback hook image was found: ${redactSecrets(error.message)}`);
+    }
+    await copyFallbackHookImage({
+      fallback,
+      outPath,
+      provenancePath,
+      context: {
+        model,
+        endpoint,
+        size,
+        quality,
+        promptPath,
+        startedAt,
+        hookBrief,
+        error,
+        attempts,
+        retryPolicy: {
+          timeout_ms: timeoutMs,
+          retries: maxRetries,
+          retry_base_delay_ms: retryBaseDelayMs
+        }
+      }
+    });
+
+    console.log(JSON.stringify({
+      ok: true,
+      fallback_used: true,
+      fallback_mode: fallback.mode,
+      output_path: outPath,
+      provenance_path: provenancePath,
+      fallback_source_image: fallback.hookPath,
+      attempts: attempts.length,
+      key_source: source
+    }, null, 2));
+    return;
+  }
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, result.buffer);
   const createdAt = new Date().toISOString();
@@ -357,12 +661,19 @@ async function main() {
     output_path: outPath,
     created_at: createdAt,
     requested_at: startedAt,
+    fallback_used: false,
+    attempts,
+    retry_policy: {
+      timeout_ms: timeoutMs,
+      retries: maxRetries,
+      retry_base_delay_ms: retryBaseDelayMs
+    },
     key_source: source,
     revised_prompt: result.response?.data?.[0]?.revised_prompt || null,
     source_problem_id: hookBrief?.problem_id || null,
     hook: hookBrief?.hook || null,
     note: referenceImages.length > 0
-      ? "Generated exactly one contextual hook image for slide 1 using the 2026-04-26 watch-stole-the-run runner as the primary Coachi appearance reference. Slides 2+ must use the approved library/Supabase path."
+      ? "Generated exactly one contextual hook image for slide 1 using the pack identity reference from source/hook-brief.json. Slides 2+ must use the approved library/Supabase path."
       : "Generated exactly one hook image for slide 1. Slides 2+ must use the approved library/Supabase path."
   });
 
@@ -376,6 +687,7 @@ async function main() {
     provenance_path: provenancePath,
     reference_image: referenceImage ? path.resolve(referenceImage) : null,
     style_reference_image: styleReferenceImage ? path.resolve(styleReferenceImage) : null,
+    attempts: attempts.length,
     key_source: source
   }, null, 2));
 }

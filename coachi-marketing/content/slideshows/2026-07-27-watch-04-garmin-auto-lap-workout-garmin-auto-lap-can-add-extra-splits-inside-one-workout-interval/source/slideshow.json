@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval",
+  "format_id": "watch_garmin_auto_lap_workout_v1",
+  "schema": "q_and_a_comment_prompt_v1",
+  "content_pillar": "watch_workouts",
+  "research_status": null,
+  "topic": "I want one COROS dial press to pause, or open options without pausing.",
+  "selected_hook": "Choose what one COROS dial press does during a run",
+  "hook_score": 59,
+  "hook_quality": {
+    "score": 59,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 9,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 9,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 59,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "59/70; 10 words; bank family watch_garmin_auto_lap_workout_v1; pain 8/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rp_2026_07_27_watch_garmin_auto_lap_workout",
+    "problem_type": "coros dial press behavior",
+    "exact_words": "I want one COROS dial press to pause, or open options without pausing.",
+    "source_url": "https://support.coros.com/hc/en-us/articles/47169858848020-Customizing-Your-Dial-Press-Setting-for-Activities"
+  },
+  "visual_system": {
+    "emotion": "choosing between fast pause and more control",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "post_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Choose what one COROS dial press does during a run",
+      "visual_direction": "choosing between fast pause and more control; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch controls hook forest soft green morning forest light choosing between fast pause and more control",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "One press can pause instantly or open a larger menu.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch controls felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "Instant Pause is quick, but accidental presses stop the timer.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch controls hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Open System, Activity Interface, then Dial Press.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch controls fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Choose Pause Options if you want the run to keep recording.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch controls fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "That menu can review laps or jump workout stages.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "watch controls proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before changing your COROS dial.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "Choose what one COROS dial press does during a run\n\nMost runners do not need more pressure. They need the right correction while the run is still happening.\n\nSave this before changing your COROS dial.",
+  "hashtags": [
+    "#running",
+    "#basetraining",
+    "#slowrunning",
+    "#runclub",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:36:39.222Z"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-main-04-weekly-mileage-jump-your-weekly-mileage-should-not-jump-because-one-run-felt-good",
+  "format_id": "main_weekly_mileage_jump_v1",
+  "schema": "runner_mistake_reframe_v1",
+  "content_pillar": "running_comfort",
+  "research_status": null,
+  "topic": "A sharp side stitch makes an otherwise easy run feel impossible.",
+  "selected_hook": "Why slowing your easy run can calm a side stitch",
+  "hook_score": 63,
+  "hook_quality": {
+    "score": 63,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 63,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "63/70; 10 words; bank family main_weekly_mileage_jump_v1; pain 10/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rp_2026_07_27_main_weekly_mileage_jump",
+    "problem_type": "side stitch relief",
+    "exact_words": "A sharp side stitch makes an otherwise easy run feel impossible.",
+    "source_url": "https://health.clevelandclinic.org/why-do-i-sometimes-get-a-side-stitch-when-i-run"
+  },
+  "visual_system": {
+    "emotion": "sharp discomfort, then controlled relief",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why slowing your easy run can calm a side stitch",
+      "visual_direction": "sharp discomfort, then controlled relief; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run expectation mismatch hook forest soft green morning forest light sharp discomfort, then controlled relief",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "The sharp pull starts under your ribs while everything else feels fine.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run expectation mismatch felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "Holding the same pace can make every breath feel tighter.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run expectation mismatch hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Slow down and take several deeper, controlled breaths.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run expectation mismatch fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Press gently near the stitch while breathing out.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run expectation mismatch fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "If it does not ease, stop and let the pain settle.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "easy-run expectation mismatch proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this for the next surprise side stitch.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "Why slowing your easy run can calm a side stitch\n\nThe sharp pull starts under your ribs while everything else feels fine.\n\nSave this for the next surprise side stitch.",
+  "hashtags": [
+    "#runtok",
+    "#runningprogress",
+    "#beginnerrunner",
+    "#runsmarter",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-main-04-weekly-mileage-jump-your-weekly-mileage-should-not-jump-because-one-run-felt-good/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:34:51.659Z"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-main-01-tempo-minute-20-why-your-tempo-run-falls-apart-after-20-minutes",
+  "format_id": "main_tempo_minute_20_v1",
+  "schema": "how_to_fix_v1",
+  "content_pillar": "workout_execution",
+  "research_status": null,
+  "topic": "I do not know which recovery style makes the next hard interval useful.",
+  "selected_hook": "Should you jog, walk, or stand between hard intervals?",
+  "hook_score": 65,
+  "hook_quality": {
+    "score": 65,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 9,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 9,
+      "simplicity": 8,
+      "emotional_relatability": 9,
+      "coachi_fit": 9,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 65,
+      "max_score": 70,
+      "word_count": 9,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "65/70; 9 words; bank family main_tempo_minute_20_v1; pain 10/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "intermediate runners / interval runners / overpacers",
+  "source_problem": {
+    "id": "rp_2026_07_27_main_tempo_minute_20",
+    "problem_type": "interval recovery choice",
+    "exact_words": "I do not know which recovery style makes the next hard interval useful.",
+    "source_url": "local://2026-07-27-three-account-personal-6x"
+  },
+  "visual_system": {
+    "emotion": "uncertain between intervals, consistent afterwards",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "post_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Should you jog, walk, or stand between hard intervals?",
+      "visual_direction": "uncertain between intervals, consistent afterwards; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "workout-racing hook forest soft green morning forest light uncertain between intervals, consistent afterwards",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "Standing helps when the interval is short and very hard.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "workout-racing felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "Jogging can quietly steal recovery from the next interval.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "workout-racing hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Walk when you want movement without adding much extra work.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "workout-racing fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Stand when the workout needs almost complete recovery.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "workout-racing fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "Choose what lets the next interval match the first.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "workout-racing proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before your next interval workout.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background forest soft green morning forest light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Should you jog, walk, or stand between hard intervals?\n\nThe run usually gives you the clue before the watch makes it obvious.\n\nSave this before your next interval workout.",
+  "hashtags": [
+    "#running",
+    "#10k",
+    "#halfmarathon",
+    "#racetraining",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-main-01-tempo-minute-20-why-your-tempo-run-falls-apart-after-20-minutes/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:34:25.557Z"
+}

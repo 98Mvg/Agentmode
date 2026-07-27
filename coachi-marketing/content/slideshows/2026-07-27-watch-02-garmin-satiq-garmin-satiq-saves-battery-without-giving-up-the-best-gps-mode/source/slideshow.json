@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode",
+  "format_id": "watch_garmin_satiq_v1",
+  "schema": "data_is_not_coaching_v1",
+  "content_pillar": "watch_recovery",
+  "research_status": null,
+  "topic": "My Garmin recovery heart rate disappears when I save the activity immediately.",
+  "selected_hook": "Wait before saving if you want Garmin recovery heart rate",
+  "hook_score": 59,
+  "hook_quality": {
+    "score": 59,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 5,
+      "curiosity": 9,
+      "simplicity": 8,
+      "emotional_relatability": 7,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 59,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "59/70; 10 words; bank family watch_garmin_satiq_v1; pain 5/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "heart-rate zone runners / watch users",
+  "source_problem": {
+    "id": "rp_2026_07_27_watch_garmin_satiq",
+    "problem_type": "garmin recovery heart rate",
+    "exact_words": "My Garmin recovery heart rate disappears when I save the activity immediately.",
+    "source_url": "https://support.garmin.com/en-NZ/?faq=3HTTUrSoRF51m8vGUtMhY9"
+  },
+  "visual_system": {
+    "emotion": "finished, curious about recovery",
+    "visual_world": "mountain",
+    "lighting": "clear mountain morning light",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Wait before saving if you want Garmin recovery heart rate",
+      "visual_direction": "finished, curious about recovery; natural running moment; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hook mountain clear mountain morning light finished, curious about recovery",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "You stop the timer and immediately press Save.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion felt_moment mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "Some Garmin watches need two minutes before showing recovery heart rate.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hidden_cost mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Stop the activity, then open Recovery Heart Rate.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Wait for the reading before saving the run.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "Saving immediately or using Resume Later can hide that reading.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion proof mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before finishing your next Garmin run.",
+      "visual_direction": "calm confidence; static; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background mountain clear mountain morning light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "Wait before saving if you want Garmin recovery heart rate\n\nYou stop the timer and immediately press Save.\n\nSave this before finishing your next Garmin run.",
+  "hashtags": [
+    "#running",
+    "#couchto5k",
+    "#newrunner",
+    "#runningmotivation",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:36:25.259Z"
+}

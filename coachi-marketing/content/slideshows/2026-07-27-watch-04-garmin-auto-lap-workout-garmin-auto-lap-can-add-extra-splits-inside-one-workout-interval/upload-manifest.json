@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 339349,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "55d614cfc94aaa9c3e7c4967f665e6fea8ddd303b3a999f86da7b8ae4c412a39"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 593423,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "f9e3105f69e5c1d96916de83ce9c2a1433f74a602b99ffdd1df91b202dcfa5fa"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 799397,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "1c998660d8f2e9b9321136dd5c20c986e41444b5f57756c75475a47621fe8e06"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 723050,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "7f87b330bb214df96963a66d768dd3846063762437f637fd1f1dbdb1db3dafbf"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 538398,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "d695fdaec11ef0eff77ae15faf655cbc80763dc2a5f625cf33516f7d24030b16"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 272256,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "7dd20d4f7ea6526e1b50487195deb4632c2d4c715729239ccefdaf4539a82b3f"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 206578,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "0a43962e909de21d712a544729c989ca3ee672c00896605876cebe82df8b28cd"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-04-garmin-auto-lap-workout-garmin-auto-lap-can-add-extra-splits-inside-one-workout-interval",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 313715,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "18ed9727c37d98f40baf63efcd9b4a58762be4239582c7ede0a7a964a2d2f408"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 452867,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "c8388cf5ec081e89b938fb931d98dc0290715bb9f34fb43730e08f1463173814"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 630420,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "c556c4863a60df0cc4b4316800c4d79846bfbc56c68a2dc4a413653629bc59e4"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 393813,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "ab9ac23084bc69f7d4d025f66afc1520770d514de72ec7282a6f5cd713a8dae9"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 622843,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "5be7ede0cddbb189d35518daa8950bfbfcbc52e1a0df2e5c4bfc94208c5ec89a"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 176478,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "29b4ff6327f58153922f6d0967e9aa086fe98305cf1ddf6f0abbd582f159107c"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 326668,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://xknqeaidthopojllyfcq.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "d50eacd7dfe0c579ae9ca23ac69901acfdb5410dd377d32372f45a0ddfccfe62"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

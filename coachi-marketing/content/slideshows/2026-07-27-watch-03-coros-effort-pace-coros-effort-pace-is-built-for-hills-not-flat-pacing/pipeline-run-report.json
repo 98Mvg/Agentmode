@@ -1,0 +1,166 @@
+{
+  "ok": true,
+  "status": "production_ready",
+  "generated_at": "2026-07-27T18:17:18.342Z",
+  "source_article": "https://x.com/alexcooldev/status/2047715075457507452",
+  "mode": "production_pack",
+  "publish_mode": "manual-review",
+  "hook_image_fallback": {
+    "fallback_used": false
+  },
+  "steps": [
+    "validated engine",
+    "generated sourced topic candidates",
+    "created schema-based render manifest",
+    "created Images 2.0 hook-only prompt",
+    "selected and materialized Supabase/library assets",
+    "rendered slides through Sharp + Canvas compositor",
+    "kept local media paths for manual/Postiz upload",
+    "derived Instagram/X/Reddit/Pinterest channel copy",
+    "built Postiz dry-run schedule",
+    "skipped queue dry-run by flag"
+  ],
+  "candidate": {
+    "problem_id": "rp_2026_07_27_watch_coros_effort_pace",
+    "schema": "runner_mistake_reframe_v1",
+    "format_id": "watch_coros_effort_pace_v1",
+    "content_pillar": "watch_controls",
+    "research_status": null,
+    "hook": "Lock your Garmin before rain or sleeves press the screen",
+    "source_url": "https://support.garmin.com/en-AU/?faq=EZ9NRkq23J4KcI8L3SKdt7",
+    "exact_words": "Rain and sleeves can touch my Garmin screen and change it during a run.",
+    "problem_type": "metric setup confusion",
+    "selected_hook_quality": {
+      "score": 62,
+      "max_score": 70,
+      "min_score": 56,
+      "passes_quality_gate": true,
+      "word_count": 10,
+      "breakdown": {
+        "runner_pain_specificity": 8,
+        "curiosity": 10,
+        "simplicity": 8,
+        "emotional_relatability": 7,
+        "coachi_fit": 9,
+        "tiktok_native_wording": 10,
+        "non_marketing_tone": 10,
+        "score": 62,
+        "max_score": 70,
+        "word_count": 10,
+        "curiosity_signals": {
+          "concrete_number": false,
+          "first_person_confession": false,
+          "direct_address_contradiction": false,
+          "question_or_choice": true,
+          "plain_contradiction": false,
+          "personal_app_stack": false,
+          "watch_specific_decision": true
+        },
+        "watch_specific_intent": true,
+        "banned_matches": []
+      },
+      "rationale": "62/70; 10 words; bank family watch_coros_effort_pace_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+      "source": "frozen_topic"
+    },
+    "hook_source": {
+      "source": "official_watch_documentation",
+      "source_family_id": "watch_coros_effort_pace_v1",
+      "source_url": "https://support.garmin.com/en-AU/?faq=EZ9NRkq23J4KcI8L3SKdt7",
+      "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+    },
+    "slide_text_source": null,
+    "tiktok_text_bank": null
+  },
+  "hook_brief": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/hook-brief.json",
+  "slideshow_json": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/slideshow.json",
+  "hook_candidates": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/hook-candidates.json",
+  "hook_text": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/hook.txt",
+  "theme": "metric setup confusion",
+  "reddit_background_and_vibe": {
+    "background": "mountain running route with visible climb or ridge context",
+    "vibe": "realistic, calm, premium, useful, not overproduced",
+    "reddit_background": "Rain and sleeves can touch my Garmin screen and change it during a run.",
+    "visual_keywords": [
+      "mountain route",
+      "gradient",
+      "open sky",
+      "clear morning light",
+      "clean overlay space"
+    ],
+    "avoid": [
+      "watch close-up",
+      "baked-in text",
+      "logos",
+      "fake steam",
+      "blurred background",
+      "unnatural stride",
+      "lake",
+      "lakeside",
+      "dense forest route",
+      "track lane",
+      "stadium",
+      "gym",
+      "treadmill",
+      "city street"
+    ]
+  },
+  "pack_dir": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing",
+  "render_manifest": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/render-manifest.json",
+  "images_2_0_prompt": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/images-2-0-hook-prompt.md",
+  "hook_provenance": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/hook-provenance.json",
+  "hook": {
+    "mode": "existing_hook_image",
+    "path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/slides/source/01-hook.png"
+  },
+  "schedule": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/postiz-schedule.json",
+  "media_transport": "local_media_paths",
+  "public_media_manifest": null,
+  "repurposed_outputs": {
+    "ok": true,
+    "generated_at": "2026-07-27T18:17:18.337Z",
+    "pack_dir": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing",
+    "date": "2026-07-27",
+    "hook": "Lock your Garmin before rain or sleeves press the screen",
+    "schema": "runner_mistake_reframe_v1",
+    "format_id": "watch_coros_effort_pace_v1",
+    "artifacts": {
+      "instagram_carousel": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/repurposed/instagram-carousel.md",
+      "instagram_stories": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/repurposed/instagram-stories.md",
+      "x_post": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/repurposed/x-post.md",
+      "reddit_angle": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/repurposed/reddit-discussion-angle.md",
+      "pinterest_pin": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/repurposed/pinterest-pin.md",
+      "daily_pack": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/repurposed/daily-pack.md"
+    },
+    "channel_files": {
+      "instagram": "content/Instagram/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hil-derived-carousel.md",
+      "tiktok": "content/Tiktok/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hil-derived-reel.md",
+      "x": "content/x-posts/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hil-derived-x.md",
+      "reddit": "content/Reddit/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hil-discussion-angle.md"
+    }
+  },
+  "live_schedule": false,
+  "tiktok_account_profile": {
+    "profile": "watch",
+    "label": "Runner Watch Lab",
+    "lane": "watch problems, setup tips, comparisons, and Coachi as live coaching layer",
+    "aliases": [
+      "watch",
+      "watches",
+      "watch-lab",
+      "runner-watch-lab",
+      "secondary",
+      "second"
+    ],
+    "env_keys": [
+      "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH",
+      "POSTIZ_TIKTOK_ACCOUNT_ID_SECONDARY"
+    ],
+    "account_id": "cmq43gqc30001lj6wjsp99t8q",
+    "env_key": "POSTIZ_TIKTOK_ACCOUNT_ID_WATCH"
+  },
+  "schedule_platform": [
+    "tiktok",
+    "instagram"
+  ],
+  "rendered_dir": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/slides/rendered"
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-14T00:00:00.000Z",
+  "source": "strategy/channels/road-to-marathon-fit.md",
+  "account_profile": "marathon",
+  "language": "en",
+  "purpose": "Later marathon posts written like a runner talking about what happened, not generic running lessons.",
+  "policy": {
+    "max_workout_posts_per_calendar_day": 1,
+    "coachi_mentions_per_fourteen_posts": 1,
+    "top_5_running_apps_post_allowed": "once_per_fourteen_posts_with_exact_personal_hook_and_transparent_ranking",
+    "generic_teaching_hook_allowed": false,
+    "spoken_tiktok_voice_required": true,
+    "images_2_0_rule": "slide_1_only",
+    "support_assets": "approved local or Supabase marathon library only"
+  },
+  "topics": [
+    {
+      "id": "rtmf_week05_long_run_not_easier",
+      "week": 5,
+      "category": "long_run",
+      "is_workout_post": true,
+      "hook": "I thought a longer run would feel easier by now",
+      "story_focus": "It didn't. The last ten minutes were mostly me bargaining with myself to keep going.",
+      "concrete_detail": "The first half was fine, then every little hill felt bigger.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week05_almost_skipped",
+      "week": 5,
+      "category": "easy_run",
+      "is_workout_post": true,
+      "hook": "I nearly stayed home because my legs felt heavy",
+      "story_focus": "I told myself I only had to do ten minutes before deciding whether to keep going.",
+      "concrete_detail": "The first eight minutes felt worse than the last twenty.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week05_breakfast_that_worked",
+      "week": 5,
+      "category": "food",
+      "is_workout_post": false,
+      "hook": "The boring breakfast that got me through a longer run",
+      "story_focus": "I kept it simple instead of trying a runner breakfast I saw online.",
+      "concrete_detail": "My stomach felt fine at minute 20 and still fine at minute 55.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week05_wrong_shoes",
+      "week": 5,
+      "category": "shoes",
+      "is_workout_post": false,
+      "hook": "I wore the wrong shoes for this route",
+      "story_focus": "They felt fine at first, then the sloped bit of road made one foot ache.",
+      "concrete_detail": "I only noticed it after an hour, not when I tried them on.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week05_poor_sleep_plan_change",
+      "week": 5,
+      "category": "recovery",
+      "is_workout_post": false,
+      "hook": "I slept badly and changed the run",
+      "story_focus": "I dropped the hard finish because I felt flat before I even started.",
+      "concrete_detail": "The run was shorter and actually easy for once.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week05_scorecard",
+      "week": 5,
+      "category": "progress",
+      "is_workout_post": false,
+      "hook": "My Week 5 looked slow, but I got it done",
+      "story_focus": "One run was slow, one was rough, and I still got through the week without forcing anything.",
+      "concrete_detail": "I made fewer last-minute changes than last week.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week06_hill_confidence",
+      "week": 6,
+      "category": "easy_run",
+      "is_workout_post": true,
+      "hook": "I let that hill get in my head",
+      "story_focus": "I walked for a bit, felt embarrassed, then kept going instead of turning around.",
+      "concrete_detail": "The hill took a few minutes. I thought about it for the whole run.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week06_walk_break",
+      "week": 6,
+      "category": "long_run",
+      "is_workout_post": true,
+      "hook": "I took a walk break before I was desperate",
+      "story_focus": "Stopping for a minute early made the rest of the long run feel much less panicky.",
+      "concrete_detail": "I started running again with enough left for the last section.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week06_sore_not_broken",
+      "week": 6,
+      "category": "health",
+      "is_workout_post": false,
+      "hook": "My legs were sore and I had no idea what to do",
+      "story_focus": "I ate, drank water, slept, and waited before making a big call about the next run.",
+      "concrete_detail": "They felt way better the following morning.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week06_route_choice",
+      "week": 6,
+      "category": "routine",
+      "is_workout_post": false,
+      "hook": "I took the boring route because I needed to",
+      "story_focus": "Fewer hills and fewer decisions let me notice how I actually felt.",
+      "concrete_detail": "I didn't change the route halfway through for once.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week06_watch_screen",
+      "week": 6,
+      "category": "watches",
+      "is_workout_post": false,
+      "hook": "I hid half my watch data and felt calmer",
+      "story_focus": "I stopped looking at every split and checked the watch when I actually needed it.",
+      "concrete_detail": "I only looked at it at the points I planned to.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week06_midrun_coachi_cue",
+      "week": 6,
+      "category": "journey",
+      "is_workout_post": true,
+      "hook": "I stopped chasing pace when the run started drifting",
+      "story_focus": "I kept speeding up without meaning to, then got a cue to ease off and settled back down.",
+      "concrete_detail": "It happened while I was still running, before the whole run went sideways.",
+      "coachi_app_cta_allowed": true,
+      "coachi_app_cta_text": "Coachi told me to ease off while I was still running.",
+      "coachi_mention_reason": "A real mid-run problem, not an app list or feature pitch."
+    },
+    {
+      "id": "rtmf_week06_finish_with_energy",
+      "week": 6,
+      "category": "long_run",
+      "is_workout_post": true,
+      "hook": "I finished with energy and it felt weird",
+      "story_focus": "I expected to be wrecked. Instead, I felt like I could have walked around normally afterwards.",
+      "concrete_detail": "I didn't need the rest of the day to recover from the run.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week07_morning_doubt",
+      "week": 7,
+      "category": "journey",
+      "is_workout_post": true,
+      "hook": "I felt like a marathon runner for about ten minutes",
+      "story_focus": "Not because I was fast. I just got out the door when I said I would.",
+      "concrete_detail": "The feeling hit after the first stoplight, not at the start.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week07_training_streak",
+      "week": 7,
+      "category": "progress",
+      "is_workout_post": false,
+      "hook": "I stopped caring so much about the streak",
+      "story_focus": "The rest between sessions did more for me than another number on the calendar.",
+      "concrete_detail": "One proper rest day meant I wasn't forcing the next workout.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week07_long_run_food",
+      "week": 7,
+      "category": "food",
+      "is_workout_post": false,
+      "hook": "I ate before I got desperate for once",
+      "story_focus": "I tried eating a little earlier and the second half of the run felt different.",
+      "concrete_detail": "I ate before the warning signs showed up.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week07_small_win",
+      "week": 7,
+      "category": "progress",
+      "is_workout_post": false,
+      "hook": "My smallest win this week was not quitting early",
+      "story_focus": "The run was slower than planned, but I stayed out and finished it.",
+      "concrete_detail": "It wasn't pretty, but it still counted.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week08_rain_nearly_home",
+      "week": 8,
+      "category": "easy_run",
+      "is_workout_post": true,
+      "hook": "My easy run met heavy rain at minute 6. I nearly went home.",
+      "story_focus": "The rain felt miserable at first, but I shortened the route and kept moving instead of abandoning the day.",
+      "concrete_detail": "By minute 16, my clothes were soaked and I had stopped arguing with the weather.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week08_missed_run_progress",
+      "week": 8,
+      "category": "recovery",
+      "is_workout_post": false,
+      "hook": "Why I thought one missed run had erased my progress",
+      "story_focus": "Life got in the way and I missed the session. I wanted to squeeze it in the next day, but left the week alone.",
+      "concrete_detail": "The next planned run felt normal, which was the reminder I needed.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week08_legs_bad_twelve_minutes",
+      "week": 8,
+      "category": "easy_run",
+      "is_workout_post": true,
+      "hook": "My legs felt awful for 12 minutes. Was the run already bad?",
+      "story_focus": "I nearly judged the whole run from the opening minutes, then the stiffness eased and my breathing settled.",
+      "concrete_detail": "Minute 12 felt completely different from minute 3.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week08_long_run_food_miss",
+      "week": 8,
+      "category": "food",
+      "is_workout_post": true,
+      "hook": "Why I ran out of food 35 minutes into my longest run",
+      "story_focus": "I packed less than I planned and spent the second half thinking about the snack I had left at home.",
+      "concrete_detail": "The run did not suddenly become impossible, but my focus disappeared after minute 35.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week08_last_hill_sprint",
+      "week": 8,
+      "category": "hills",
+      "is_workout_post": true,
+      "hook": "I sprinted the last hill. Why did my next run feel worse?",
+      "story_focus": "I wanted one strong finish, pushed the last climb much harder than planned, and carried it into the next day.",
+      "concrete_detail": "The hill lasted less than a minute. My legs remembered it the next morning.",
+      "coachi_app_cta_allowed": false
+    },
+    {
+      "id": "rtmf_week08_midrun_coachi_drift",
+      "week": 8,
+      "category": "easy_run",
+      "is_workout_post": true,
+      "hook": "My easy-run pace drifted at minute 18 before I noticed",
+      "story_focus": "I felt fine and kept speeding up a little at a time. The mid-run warning arrived before the effort became obviously hard.",
+      "concrete_detail": "I eased off at minute 18 and the rest of the run stopped climbing.",
+      "coachi_app_cta_allowed": true,
+      "coachi_app_cta_text": "Coachi told me to slow down before I felt the drift.",
+      "coachi_mention_reason": "A real mid-run intensity problem with an immediate adjustment."
+    },
+    {
+      "id": "rtmf_week08_personal_app_stack",
+      "week": 8,
+      "category": "apps",
+      "is_workout_post": false,
+      "hook": "Top 5 running apps I use when running",
+      "story_focus": "Each app has one job in my training week. Coachi is second because it helps during the run instead of only showing another recap.",
+      "concrete_detail": "The final ranking is Strava, Coachi, Nike Run Club, Apple Fitness, and AllTrails.",
+      "coachi_app_cta_allowed": true,
+      "coachi_app_cta_text": "1 Strava\n2 Coachi\n3 Nike Run Club\n4 Apple Fitness\n5 AllTrails",
+      "coachi_mention_reason": "A transparent personal app ranking with a concrete role for every app."
+    }
+  ]
+}

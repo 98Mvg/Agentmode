@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T18:29:26.404Z",
+  "date": "2026-07-27",
+  "account_profile": "watch",
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "problem_id": "rp_2026_07_27_watch_wrist_hr_fast_intervals",
+      "source_url": "https://support.coros.com/hc/en-us/articles/360039836552-Auto-Lock-Settings-on-Your-COROS-Watch",
+      "source_type": "official_watch_documentation",
+      "schema": "how_to_fix_v1",
+      "format_id": "watch_wrist_hr_fast_intervals_v1",
+      "account_profile": "watch",
+      "hook": "Why COROS Auto Lock matters when watch buttons get pressed",
+      "problem_type": "metric setup confusion",
+      "semantic_problem_type": "coros activity auto lock",
+      "content_pillar": "watch_controls",
+      "marathon_content_category": null,
+      "is_workout_post": null,
+      "training_day": null,
+      "workout_outfit_key": null,
+      "coachi_app_cta_allowed": null,
+      "coachi_app_cta_text": null,
+      "exact_words": "My COROS watch buttons can pause a run accidentally.",
+      "problem": "My COROS watch buttons can pause a run accidentally.",
+      "emotion": "frustrated by accidental pauses",
+      "pattern": "technical watch guide",
+      "visual_world": "lake",
+      "route_tag": "lake",
+      "lighting_family": "bright lake daylight",
+      "avatar_world_required": true,
+      "images_2_0_rule": "slide_1_only",
+      "cta_required": true,
+      "hook_source": {
+        "source": "official_watch_documentation",
+        "source_family_id": "watch_wrist_hr_fast_intervals_v1",
+        "source_url": "https://support.coros.com/hc/en-us/articles/360039836552-Auto-Lock-Settings-on-Your-COROS-Watch",
+        "why_it_works": "A concrete problem, recognizable moment, and clear payoff."
+      },
+      "selected_hook_quality": {
+        "score": 61,
+        "max_score": 70,
+        "min_score": 56,
+        "passes_quality_gate": true,
+        "word_count": 10,
+        "breakdown": {
+          "runner_pain_specificity": 8,
+          "curiosity": 10,
+          "simplicity": 8,
+          "emotional_relatability": 5,
+          "coachi_fit": 10,
+          "tiktok_native_wording": 10,
+          "non_marketing_tone": 10,
+          "score": 61,
+          "max_score": 70,
+          "word_count": 10,
+          "curiosity_signals": {
+            "concrete_number": false,
+            "first_person_confession": false,
+            "direct_address_contradiction": false,
+            "question_or_choice": false,
+            "plain_contradiction": false,
+            "personal_app_stack": false,
+            "watch_specific_decision": true
+          },
+          "watch_specific_intent": true,
+          "banned_matches": []
+        },
+        "rationale": "61/70; 10 words; bank family watch_wrist_hr_fast_intervals_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+        "source": "frozen_topic"
+      },
+      "hook_candidates": [
+        {
+          "hook": "Why COROS Auto Lock matters when watch buttons get pressed",
+          "score": 61,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": true,
+          "word_count": 10,
+          "breakdown": {
+            "runner_pain_specificity": 8,
+            "curiosity": 10,
+            "simplicity": 8,
+            "emotional_relatability": 5,
+            "coachi_fit": 10,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 61,
+            "max_score": 70,
+            "word_count": 10,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": true
+            },
+            "watch_specific_intent": true,
+            "banned_matches": []
+          },
+          "rationale": "61/70; 10 words; bank family watch_wrist_hr_fast_intervals_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What changed in this watch setup",
+          "score": 55,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 6,
+          "breakdown": {
+            "runner_pain_specificity": 6,
+            "curiosity": 7,
+            "simplicity": 10,
+            "emotional_relatability": 3,
+            "coachi_fit": 9,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 55,
+            "max_score": 70,
+            "word_count": 6,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "55/70; 6 words; bank family watch_wrist_hr_fast_intervals_v1; pain 6/10; curiosity 7/10; simplicity 10/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The mistake that showed up later than expected",
+          "score": 39,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 39,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "39/70; 8 words; bank family watch_wrist_hr_fast_intervals_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "Why the first few minutes changed the whole session",
+          "score": 44,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 8,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 44,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "44/70; 9 words; bank family watch_wrist_hr_fast_intervals_v1; pain 3/10; curiosity 8/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What I would change before doing this again",
+          "score": 43,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 43,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "43/70; 8 words; bank family watch_wrist_hr_fast_intervals_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "The small decision that made the second half different",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 9,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 9,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 9 words; bank family watch_wrist_hr_fast_intervals_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "What looked normal until the run got harder",
+          "score": 47,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 7,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 6,
+            "tiktok_native_wording": 10,
+            "non_marketing_tone": 10,
+            "score": 47,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "47/70; 8 words; bank family watch_wrist_hr_fast_intervals_v1; pain 3/10; curiosity 7/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        },
+        {
+          "hook": "A clearer way to handle the same problem",
+          "score": 35,
+          "max_score": 70,
+          "min_score": 56,
+          "passes_quality_gate": false,
+          "word_count": 8,
+          "breakdown": {
+            "runner_pain_specificity": 3,
+            "curiosity": 3,
+            "simplicity": 8,
+            "emotional_relatability": 3,
+            "coachi_fit": 2,
+            "tiktok_native_wording": 6,
+            "non_marketing_tone": 10,
+            "score": 35,
+            "max_score": 70,
+            "word_count": 8,
+            "curiosity_signals": {
+              "concrete_number": false,
+              "first_person_confession": false,
+              "direct_address_contradiction": false,
+              "question_or_choice": false,
+              "plain_contradiction": false,
+              "personal_app_stack": false,
+              "watch_specific_decision": false
+            },
+            "watch_specific_intent": false,
+            "banned_matches": []
+          },
+          "rationale": "35/70; 8 words; bank family watch_wrist_hr_fast_intervals_v1; pain 3/10; curiosity 3/10; simplicity 8/10",
+          "source": "frozen_topic_variant"
+        }
+      ],
+      "slide_draft": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Why COROS Auto Lock matters when watch buttons get pressed"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "A sleeve or bent wrist can touch the dial mid-run."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "An accidental press can pause or finish the activity."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "Open System, More Settings, then Auto Lock."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "Choose the hold or scroll option for Activity Mode."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "The Back/Lap button still records a lap while locked."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Save this before your next COROS run."
+        }
+      ],
+      "slideshow": [
+        {
+          "slide_number": 1,
+          "role": "hook",
+          "text": "Why COROS Auto Lock matters when watch buttons get pressed"
+        },
+        {
+          "slide_number": 2,
+          "role": "felt_moment",
+          "text": "A sleeve or bent wrist can touch the dial mid-run."
+        },
+        {
+          "slide_number": 3,
+          "role": "hidden_cost",
+          "text": "An accidental press can pause or finish the activity."
+        },
+        {
+          "slide_number": 4,
+          "role": "fix",
+          "text": "Open System, More Settings, then Auto Lock."
+        },
+        {
+          "slide_number": 5,
+          "role": "fix",
+          "text": "Choose the hold or scroll option for Activity Mode."
+        },
+        {
+          "slide_number": 6,
+          "role": "proof",
+          "text": "The Back/Lap button still records a lap while locked."
+        },
+        {
+          "slide_number": 7,
+          "role": "cta",
+          "text": "Save this before your next COROS run."
+        }
+      ],
+      "batch_index": 10
+    }
+  ]
+}

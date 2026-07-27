@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generator": "codex_imagegen_tool",
+  "mode": "edit_with_reference_image",
+  "reference_images": [
+    "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png"
+  ],
+  "reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "style_reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "prompt_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/source/images-2-0-hook-prompt.md",
+  "imported_image_path": "/Users/mariusgaarder/.codex/generated_images/019ebcbf-7e68-7130-bf82-d6e0a3d5c2ad/call_pZ7VndXXCnKJpBy98LWAoicq.png",
+  "output_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/slides/source/01-hook.png",
+  "created_at": "2026-07-27T17:14:31.622Z",
+  "fallback_used": false,
+  "source_problem_id": null,
+  "hook": "The last interval should not become an all-out sprint",
+  "note": "Generated as one unique hook image with the Codex image generation tool using the pack identity reference."
+}

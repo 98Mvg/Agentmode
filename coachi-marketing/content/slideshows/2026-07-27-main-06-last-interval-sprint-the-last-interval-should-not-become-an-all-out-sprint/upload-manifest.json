@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 244574,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "4b796f861df83eb604b42079f730e614b579f08754d91567de25d8a294edd512"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 359248,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "93cd9cc60265e1e28fbbef1f17b6adb46faabd242533c042760a11f8bd1330ef"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 441607,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "81d1c5adcc427803006195b7de86fc577fd5658af4334514db1216030abd45ca"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 403858,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "c302eba2495b4bfdc2ac3d888f6ad4a2ad9d57d1b554ee5b46505d7d49e7e339"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 444582,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "55aabe4cab8b8395e73799059e051062af66431c20c22ec23fb3ba5d81e0c83b"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 169097,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "ce37b0c85620a513c59009c3edfffebd04ccfdf305676598e040281a3ead1866"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 103976,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "0087917541dbf6b7a99adf14aa8f9f8f02b785cd4b272cd285dd7bda03ccb32e"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "main-06-last-interval-sprint-the-last-interval-should-not-become-an-all-out-sprint",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

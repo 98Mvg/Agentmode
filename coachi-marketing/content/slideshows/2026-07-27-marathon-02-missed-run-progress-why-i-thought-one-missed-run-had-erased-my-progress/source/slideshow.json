@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress",
+  "format_id": "marathon_missed_run_progress_v1",
+  "schema": "runner_mistake_reframe_v1",
+  "content_pillar": "marathon_journal",
+  "research_status": null,
+  "topic": "Life got in the way and I missed one run. I left the week alone instead of squeezing it in.",
+  "selected_hook": "Why I thought one missed run had erased my progress",
+  "hook_score": 58,
+  "hook_quality": {
+    "score": 58,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 3,
+      "coachi_fit": 8,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 58,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": true,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "58/70; 10 words; bank family marathon_missed_run_progress_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rtmf_week08_missed_run_progress",
+    "problem_type": "recovery day guilt",
+    "exact_words": "Life got in the way and I missed one run. I left the week alone instead of squeezing it in.",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_missed_run_progress"
+  },
+  "visual_system": {
+    "emotion": "guilty, then relieved",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_follow_along_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why I thought one missed run had erased my progress",
+      "visual_direction": "guilty, then relieved; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "recovery day guilt hook lake calm lake daylight guilty, then relieved",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "I missed the session and immediately wanted to move everything.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "recovery day guilt felt_moment lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "Squeezing it in would have stacked two hard days together.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "recovery day guilt hidden_cost lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "I left the missed run where it was.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "recovery day guilt fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "The next planned session felt completely normal.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "recovery day guilt fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "One empty box did not erase the work already done.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "recovery day guilt proof lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Follow the messy weeks, not only the perfect ones.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal marathon training follow-along background lake calm lake daylight calm confidence",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "follow"
+    }
+  ],
+  "caption": "Why I thought one missed run had erased my progress\n\nTrying to make this feel repeatable, not perfect.\n\nFollow the messy weeks, not only the perfect ones.",
+  "hashtags": [
+    "#running",
+    "#marathontraining",
+    "#beginnerrunner",
+    "#runtok",
+    "#runningjourney"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-marathon-02-missed-run-progress-why-i-thought-one-missed-run-had-erased-my-progress/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:37:50.825Z"
+}

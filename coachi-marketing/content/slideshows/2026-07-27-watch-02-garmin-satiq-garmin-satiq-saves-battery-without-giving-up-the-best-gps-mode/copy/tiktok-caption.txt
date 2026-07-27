@@ -1,0 +1,5 @@
+Wait before saving if you want Garmin recovery heart rate
+
+You stop the timer and immediately press Save.
+
+Save this before finishing your next Garmin run.

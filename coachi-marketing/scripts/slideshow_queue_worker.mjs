@@ -11,6 +11,7 @@ import {
   publishModeForPost,
   settingsForPost
 } from "./slideshow_postiz_payload.mjs";
+import { isWatchTiktokAccountReference } from "./postiz_account_profiles.mjs";
 
 await import("dotenv").then(({ config }) => {
   config();
@@ -82,6 +83,13 @@ function platformLimit(manifest, platform, key, fallback) {
   return manifest.platform_rate_limits?.[platform]?.[key] ?? fallback;
 }
 
+function assertWatchAccountUsesInboxHandoff(post, account) {
+  if ((post.platform || account?.platform || "tiktok") !== "tiktok") return;
+  if (publishModeForPost(post) !== "direct-public") return;
+  if (!isWatchTiktokAccountReference({ post, account })) return;
+  throw new Error("Runner Watch Lab uses TikTok MEDIA_UPLOAD inbox handoff like Everyday Runner Lab. Do not create Postiz DIRECT_POST jobs for the watch account; use npm run slideshow:upload-both -- --pack <pack> --skip-instagram --tiktok-account watch.");
+}
+
 async function uploadToPostiz(filePath) {
   const absolutePath = path.resolve(filePath);
   const buffer = await fs.readFile(absolutePath);
@@ -130,6 +138,7 @@ function validateScheduleManifest(manifest) {
       assert(post.output_mode === "photo_carousel", `Live TikTok post ${post.slideshow_id} missing output_mode=photo_carousel.`);
       assert(post.media_type === "PHOTO", `Live TikTok post ${post.slideshow_id} missing media_type=PHOTO.`);
       assert(post.publish_mode, `Live TikTok post ${post.slideshow_id} missing publish_mode.`);
+      assertWatchAccountUsesInboxHandoff(post, account);
       const content = post.content || "";
       assertDirectPublicTikTokPost(post, settingsForPost(post, account, content));
     }
@@ -282,6 +291,7 @@ async function ensureHookImage({ renderManifest, generateOpenAiHook }) {
   const packDir = path.dirname(absoluteRenderManifest);
   const manifest = await readJson(absoluteRenderManifest);
   const hookPath = resolveHookImagePath({ renderManifestPath: absoluteRenderManifest, manifest });
+  const hookBrief = await readJson(path.join(packDir, "source/hook-brief.json"));
 
   if (await exists(hookPath)) {
     return { status: "existing_hook_image", hook_path: hookPath };
@@ -291,17 +301,31 @@ async function ensureHookImage({ renderManifest, generateOpenAiHook }) {
     throw new Error(`Missing hook image: ${hookPath}. Enqueue with --generate-openai-hook or set SLIDESHOW_QUEUE_GENERATE_OPENAI_HOOK=1.`);
   }
 
-  await runCommand("npm", [
+  const isWatchPack = hookBrief.character_anchor?.account_profile === "watch"
+    || hookBrief.avatar_variation?.identity_profile?.profile === "watch";
+  const referenceImage = process.env.SLIDESHOW_HOOK_REFERENCE_IMAGE
+    || hookBrief.character_anchor?.reference_image
+    || hookBrief.avatar_variation?.identity_profile?.reference_image
+    || DEFAULT_HOOK_REFERENCE_IMAGE;
+  const styleReferenceImage = process.env.SLIDESHOW_HOOK_STYLE_REFERENCE_IMAGE
+    || (isWatchPack
+      ? null
+      : hookBrief.character_anchor?.style_reference_image
+        || hookBrief.avatar_variation?.identity_profile?.style_reference_image
+        || DEFAULT_HOOK_STYLE_REFERENCE_IMAGE);
+  const hookArgs = [
     "run",
     "slideshow:openai-hook",
     "--",
     "--pack",
     packDir,
     "--reference-image",
-    process.env.SLIDESHOW_HOOK_REFERENCE_IMAGE || DEFAULT_HOOK_REFERENCE_IMAGE,
-    "--style-reference-image",
-    process.env.SLIDESHOW_HOOK_STYLE_REFERENCE_IMAGE || DEFAULT_HOOK_STYLE_REFERENCE_IMAGE
-  ]);
+    referenceImage
+  ];
+  if (styleReferenceImage) {
+    hookArgs.push("--style-reference-image", styleReferenceImage);
+  }
+  await runCommand("npm", hookArgs);
   assert(await exists(hookPath), `OpenAI hook generation finished but hook image is still missing: ${hookPath}`);
   return { status: "generated_openai_hook_image", hook_path: hookPath };
 }
@@ -417,6 +441,7 @@ async function runWorker() {
       account_id: job.data.account_id,
       platform: job.data.platform || "tiktok"
     }]]);
+    assertWatchAccountUsesInboxHandoff(job.data, accounts.get(job.data.account_id));
     return postToPostiz(job.data, {
       dryRun: process.env.POSTIZ_ENABLE_LIVE_POSTING !== "1",
       accounts

@@ -37,7 +37,8 @@ Supabase visual-library assets are preferred when content/slideshows/visual-libr
 No images are downloaded or uploaded.
 
 Use --production to require approved/owned/licensed non-hook assets.
-Use --allow-needs-review only for local tests or draft packs.`);
+Use --allow-needs-review only for local tests or draft packs.
+Use --include-selected-usage for batch runs where already-selected draft assets must rotate too.`);
 }
 
 async function readJson(filePath) {
@@ -92,15 +93,18 @@ function hasSupabaseUrl(candidate) {
   return Boolean(candidate?.public_url || candidate?.supabase_public_url);
 }
 
-function usageContributesToRotation(use) {
+function usageContributesToRotation(use, { includeSelected = false } = {}) {
   const stage = use?.stage || use?.event_type || "legacy";
+  if (includeSelected && ["selected", "rendered", "materialized", "dry_run_selected"].includes(stage)) {
+    return true;
+  }
   return stage === "posted" || stage === "published" || stage === "legacy";
 }
 
-function buildUsageIndex(usageLog) {
+function buildUsageIndex(usageLog, options = {}) {
   const index = new Map();
   const seen = new Set();
-  const rotationUses = (usageLog?.uses || []).filter((use) => usageContributesToRotation(use));
+  const rotationUses = (usageLog?.uses || []).filter((use) => usageContributesToRotation(use, options));
   const sortedUses = [...rotationUses].sort((left, right) => String(right.used_at || "").localeCompare(String(left.used_at || "")));
   const recentSlideshows = [];
   for (const use of sortedUses) {
@@ -210,6 +214,89 @@ function tagsContain(tags, wanted) {
   });
 }
 
+function textHasAny(text, patterns) {
+  return patterns.some((pattern) => pattern.test(text));
+}
+
+function isMiddleLibrarySlideContext(requestedContext = {}) {
+  const slideNumber = Number(requestedContext.slide_number);
+  return Number.isFinite(slideNumber)
+    && slideNumber >= 2
+    && slideNumber <= 6;
+}
+
+function candidateFaceVisibilityPreferenceScore(candidate, requestedContext = {}) {
+  if (!isMiddleLibrarySlideContext(requestedContext)) return 0;
+
+  const text = [
+    candidate?.id,
+    candidate?.original_name,
+    candidate?.prompt_translation,
+    ...(candidate?.mood_tags || []),
+    ...(candidate?.subject_tags || []),
+    ...(candidate?.aesthetic_tags || []),
+    ...(candidate?.selection_notes || []),
+    ...(candidate?.source_review_tags || [])
+  ].filter(Boolean).join(" ").toLowerCase();
+
+  let score = 0;
+  if (textHasAny(text, [
+    /\bno[-_\s]?face\b/,
+    /\bface[-_\s]?obscured\b/,
+    /\bback[-_\s]?view\b/,
+    /\bfrom[-_\s]?behind\b/,
+    /\bdistant\b/,
+    /\bwide\b/,
+    /\benvironment(?:al)?\b/,
+    /\blandscape\b/,
+    /\broute[-_\s]?context\b/,
+    /\bopen[-_\s]?path\b/,
+    /\bnegative[-_\s]?space\b/,
+    /\btrail\b/,
+    /\bterrain\b/,
+    /\bforest\b/,
+    /\blake\b/,
+    /\bshore(?:line)?\b/,
+    /\bmountain\b/,
+    /\bhill\b/,
+    /\bgradient\b/,
+    /\bwater[-_\s]?route\b/,
+    /\boutdoor[-_\s]?route\b/,
+    /\bpath\b/
+  ])) {
+    score += 18;
+  }
+
+  if (textHasAny(text, [
+    /\brunner[-_\s]?detail\b/,
+    /\bportrait\b/,
+    /\bselfie\b/,
+    /\bface[-_\s]?only\b/,
+    /\bclose[-_\s]?up\b/,
+    /\bcloseup\b/,
+    /\bvisible[-_\s]?face\b/,
+    /\bfacial\b/,
+    /\bsprint[-_\s]?face\b/,
+    /\binfluencer\b/,
+    /\bmodel\b/
+  ])) {
+    score -= 18;
+  }
+
+  if (requestedContext.visual_collection === "details_emotion") {
+    score += textHasAny(text, [
+      /\bbody[-_\s]?language\b/,
+      /\bhands?\b/,
+      /\bshoes?\b/,
+      /\blegs?\b/,
+      /\bcropped\b/,
+      /\bsilhouette\b/
+    ]) ? 10 : -8;
+  }
+
+  return Math.max(-28, Math.min(24, score));
+}
+
 function canonicalWorld(value) {
   const text = normalized(value);
   if (!text) return null;
@@ -283,10 +370,11 @@ function candidateVisualMatchScore(candidate, requestedContext = {}) {
     && ["setup", "value", "insight", "insight_1", "insight_2", "insight_3", "coachi_connection"].includes(requestedContext.role)
     && (tagsContain(roleTags, "runner_detail") || tagsContain(roleTags, "body_language") || tagsContain(roleTags, "breathing"))
   ) {
-    score += 20;
+    score += 8;
   }
   if (candidate.negative_space_zone || candidate.safe_text_zone) score += 7;
   if ((candidate.mood_tags || []).length > 0) score += 5;
+  score += candidateFaceVisibilityPreferenceScore(candidate, requestedContext);
 
   return Math.min(70, score);
 }
@@ -340,14 +428,64 @@ function isProductionMiddleSlide(slide, finalSlideNumber) {
 }
 
 function filterOwnedGeneratedMiddleSlideCandidates(candidates, {
-  production,
   allowOwnedGeneratedMiddleSlides,
   slide,
   finalSlideNumber
 }) {
-  if (!production || allowOwnedGeneratedMiddleSlides) return candidates || [];
+  if (allowOwnedGeneratedMiddleSlides) return candidates || [];
   if (!isProductionMiddleSlide(slide, finalSlideNumber)) return candidates || [];
   return (candidates || []).filter((candidate) => !isOwnedGeneratedVisualCandidate(candidate));
+}
+
+function isPinterestDerivedCandidate(candidate) {
+  const sourceText = [
+    candidate?.original_source_kind,
+    candidate?.source_kind,
+    candidate?.source_pull_id,
+    candidate?.source_candidate_id,
+    candidate?.local_fallback_path,
+    ...(candidate?.workflow_tags || [])
+  ].filter(Boolean).join(" ");
+  return /pinterest/i.test(sourceText);
+}
+
+function filterMarathonPinterestOnlyCandidates(candidates, { requestedContext, slide }) {
+  if (requestedContext?.account_profile !== "marathon") return candidates || [];
+  if (slide.asset_source === "images_2_0") return candidates || [];
+  return (candidates || []).filter((candidate) => (
+    (slide.coachi_app_cta === true && isCoachiAppCtaCandidate(candidate))
+    ||
+    candidate.source_rights === "approved"
+    && isPinterestDerivedCandidate(candidate)
+  ));
+}
+
+function marathonSupportCandidateText(candidate) {
+  return [
+    candidate?.source_query,
+    candidate?.source_alt_text,
+    candidate?.id,
+    candidate?.original_name,
+    ...(candidate?.workflow_tags || []),
+    ...(candidate?.subject_tags || [])
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+function isExplicitlyEmptyMarathonSupportCandidate(candidate) {
+  const text = marathonSupportCandidateText(candidate);
+  const explicitlyEmpty = /\b(?:empty|no[\s_-]*(?:people|persons?|humans?|runners?))\b/.test(text);
+  const withoutNoPeopleMarkers = text.replace(/\bno[\s_-]*(?:people|persons?|humans?|runners?)\b/g, "");
+  const personBearing = /\b(?:runner|runners|man|men|male|boy|boys|guy|guys|woman|women|female|girl|girls|person|people|human|humans)\b/.test(withoutNoPeopleMarkers);
+  return explicitlyEmpty && !personBearing;
+}
+
+function filterMarathonNoPeopleSupportCandidates(candidates, { requestedContext, slide }) {
+  if (requestedContext?.account_profile !== "marathon") return candidates || [];
+  if (slide.asset_source === "images_2_0") return candidates || [];
+  return (candidates || []).filter((candidate) => (
+    (slide.coachi_app_cta === true && isCoachiAppCtaCandidate(candidate))
+    || isExplicitlyEmptyMarathonSupportCandidate(candidate)
+  ));
 }
 
 function isOwnedLocalCandidate(candidate) {
@@ -449,9 +587,15 @@ function filterCtaCandidatesForSlide(slide, candidates, finalSlideNumber) {
   });
 }
 
-function avoidAlreadySelectedWhenPossible(candidates, selectedAssetIds) {
+function avoidAlreadySelectedWhenPossible(candidates, selectedAssetIds, fallbackCandidates = [], {
+  allowFallback = true
+} = {}) {
   const filtered = (candidates || []).filter((candidate) => !selectedAssetIds.has(candidate.id));
-  return filtered.length > 0 ? filtered : candidates;
+  if (filtered.length > 0) return filtered;
+  if (!allowFallback) return [];
+  const fallbackFiltered = (fallbackCandidates || []).filter((candidate) => !selectedAssetIds.has(candidate.id));
+  if (fallbackFiltered.length > 0) return fallbackFiltered;
+  return candidates;
 }
 
 function requestedContextForSlide(slide, manifest) {
@@ -462,7 +606,9 @@ function requestedContextForSlide(slide, manifest) {
     visual_world: manifest.visual_world || null,
     route_tag: manifest.route_tag || null,
     lighting_family: manifest.lighting_family || null,
-    workout_phase: manifest.workout_phase?.id || manifest.workout_phase || null
+    workout_phase: manifest.workout_phase?.id || manifest.workout_phase || null,
+    account_profile: manifest.account_profile || manifest.tiktok_account_profile?.key || null,
+    hook_identity: manifest.hook_identity || null
   };
 }
 
@@ -475,6 +621,15 @@ function candidatePayload(candidate, usageIndex, requestedContext = {}) {
     supabase_public_url: candidate.public_url || candidate.supabase_public_url || null,
     bucket_id: candidate.bucket_id || null,
     object_path: candidate.object_path || null,
+    workflow_label: candidate.workflow_label || null,
+    pull_label: candidate.pull_label || null,
+    source_query: candidate.source_query || null,
+    source_alt_text: candidate.source_alt_text || null,
+    world_rotation_key: candidate.world_rotation_key || candidate.visual_world || null,
+    asset_use_case: candidate.asset_use_case || null,
+    workflow_tags: candidate.workflow_tags || [],
+    source_pull_id: candidate.source_pull_id || null,
+    source_candidate_id: candidate.source_candidate_id || null,
     local_path: candidate.local_path || null,
     local_fallback_path: candidate.local_fallback_path || candidate.local_path || null,
     original_name: candidate.original_name || null,
@@ -499,6 +654,9 @@ function candidatePayload(candidate, usageIndex, requestedContext = {}) {
       lighting_tags: candidate.lighting_tags || [],
       workout_phase_tags: candidate.workout_phase_tags || candidate.phase_tags || [],
       negative_space_zone: candidate.negative_space_zone || candidate.safe_text_zone || null,
+      face_visibility_preference: isMiddleLibrarySlideContext(requestedContext)
+        ? "prefer environment, distant runner, back/side angle, cropped body, or no clear face"
+        : "hook/cta rules apply",
       requested_context: requestedContext
     }
   };
@@ -528,6 +686,9 @@ function libraryInstruction({ slide, collection, library, candidates, usageIndex
     },
     candidate_assets: sortedCandidates.slice(0, 8).map((candidate) => candidatePayload(candidate, usageIndex, requestedContext)),
     selection_notes: collection?.selection_notes || [],
+    face_visibility_rule: isMiddleLibrarySlideContext(requestedContext)
+      ? "For slides 2-6, prefer environments, route context, distant runners, back/side angles, silhouettes, or cropped body-language details. Avoid clear face/portrait/selfie assets so the viewer does not read the image as a different Coachi character."
+      : null,
     prompt_translation: collection?.prompt_translation || null,
     production_asset_policy: production
       ? "approved, owned, or licensed assets only, and middle-slide visuals must pass usage freshness rotation"
@@ -550,11 +711,13 @@ function libraryInstruction({ slide, collection, library, candidates, usageIndex
 function sourceInstruction({ slide, collection, library, candidates, localFallbackCandidates, usageIndex, sourceKind, production, allowNeedsReview, requestedContext }) {
   if (slide.asset_source === "images_2_0") {
     const identity = (library.identities || []).find((item) => item.id === library.default_identity);
+    const hookIdentity = requestedContext.hook_identity || {};
+    const identityPrompt = hookIdentity.brand_anchor_prompt || hookIdentity.identity_prompt || identity?.prompt_anchor;
     return {
       action: "generate_with_images_2_0",
       candidate_assets: [],
       prompt_hint: [
-        identity?.prompt_anchor,
+        identityPrompt,
         collection?.prompt_translation,
         "photorealistic vertical 9:16, no text, no logos, no app UI, clean negative space for overlay text"
       ].filter(Boolean).join(". ")
@@ -608,13 +771,15 @@ async function main() {
   const production = flags.has("--production");
   const allowNeedsReview = flags.has("--allow-needs-review");
   const allowOwnedGeneratedMiddleSlides = flags.has("--allow-owned-generated-middle-slides");
+  const includeSelectedUsage = flags.has("--include-selected-usage") || flags.has("--count-selected-usage");
   const collections = buildCollectionIndex(library);
   const localCandidatesByCollection = mergeCandidateIndexes(
     buildCandidateIndex(sourceManifest),
     buildCandidateIndex(ownedSourceManifest)
   );
+  const allLocalCandidates = [...localCandidatesByCollection.values()].flat();
   const supabaseCandidatesByCollection = buildCandidateIndex(supabaseManifest);
-  const usageIndex = buildUsageIndex(usageLog);
+  const usageIndex = buildUsageIndex(usageLog, { includeSelected: includeSelectedUsage });
   const preferSupabase = !flags.has("--local-library") && Boolean(supabaseManifest);
 
   assert(Array.isArray(manifest.slides) && manifest.slides.length > 0, "Manifest must include slides.");
@@ -627,19 +792,38 @@ async function main() {
     if (slide.visual_collection) {
       assert(collection, `Unknown visual_collection: ${slide.visual_collection}`);
     }
-    const localFallbackCandidates = filterOwnedGeneratedMiddleSlideCandidates(
-      filterCandidatesByRights(
-        localCandidatesByCollection.get(slide.visual_collection) || [],
-        { production, allowNeedsReview }
+    const crossCollectionPreferredCandidates = slide.coachi_app_cta === true
+      ? preferredOwnedCandidates(allLocalCandidates, slide.preferred_asset_ids)
+      : [];
+    const localCollectionCandidates = [
+      ...crossCollectionPreferredCandidates,
+      ...(localCandidatesByCollection.get(slide.visual_collection) || [])
+    ];
+    const localFallbackCandidates = filterMarathonNoPeopleSupportCandidates(
+      filterMarathonPinterestOnlyCandidates(
+        filterOwnedGeneratedMiddleSlideCandidates(
+          filterCandidatesByRights(
+            localCollectionCandidates,
+            { production, allowNeedsReview }
+          ),
+          { production, allowOwnedGeneratedMiddleSlides, slide, finalSlideNumber }
+        ),
+        { requestedContext, slide }
       ),
-      { production, allowOwnedGeneratedMiddleSlides, slide, finalSlideNumber }
+      { requestedContext, slide }
     );
-    const supabaseCandidates = filterOwnedGeneratedMiddleSlideCandidates(
-      filterCandidatesByRights(
-        supabaseCandidatesByCollection.get(slide.visual_collection) || [],
-        { production, allowNeedsReview }
+    const supabaseCandidates = filterMarathonNoPeopleSupportCandidates(
+      filterMarathonPinterestOnlyCandidates(
+        filterOwnedGeneratedMiddleSlideCandidates(
+          filterCandidatesByRights(
+            supabaseCandidatesByCollection.get(slide.visual_collection) || [],
+            { production, allowNeedsReview }
+          ),
+          { production, allowOwnedGeneratedMiddleSlides, slide, finalSlideNumber }
+        ),
+        { requestedContext, slide }
       ),
-      { production, allowOwnedGeneratedMiddleSlides, slide, finalSlideNumber }
+      { requestedContext, slide }
     );
     const shouldUseSupabase = preferSupabase && slide.asset_source !== "images_2_0";
     const preferWorldSpecificCta = slideAllowsCoachiAppCta(slide, finalSlideNumber);
@@ -680,13 +864,21 @@ async function main() {
       rotationPolicy,
       { production, enforceFreshness }
     );
+    const ctaFilteredRawCandidates = filterCtaCandidatesForSlide(slide, worldCompatibleRawCandidates, finalSlideNumber);
+    const ctaFilteredLocalCandidates = filterCtaCandidatesForSlide(slide, worldCompatibleLocalCandidates, finalSlideNumber);
+    const freshCandidates = filterCtaCandidatesForSlide(slide, freshRawCandidates, finalSlideNumber);
+    const freshFallbackCandidates = filterCtaCandidatesForSlide(slide, freshLocalFallbackCandidates, finalSlideNumber);
     const candidates = avoidAlreadySelectedWhenPossible(
-      filterCtaCandidatesForSlide(slide, freshRawCandidates, finalSlideNumber),
-      selectedAssetIds
+      freshCandidates,
+      selectedAssetIds,
+      ctaFilteredRawCandidates,
+      { allowFallback: !enforceFreshness }
     );
     const fallbackCandidates = avoidAlreadySelectedWhenPossible(
-      filterCtaCandidatesForSlide(slide, freshLocalFallbackCandidates, finalSlideNumber),
-      selectedAssetIds
+      freshFallbackCandidates,
+      selectedAssetIds,
+      ctaFilteredLocalCandidates,
+      { allowFallback: !enforceFreshness }
     );
     if (production && slide.asset_source !== "images_2_0") {
       assert(
@@ -747,7 +939,9 @@ async function main() {
     pinterest_source_manifest: sourceManifest ? PINTEREST_SOURCE_MANIFEST_PATH : null,
     owned_source_manifest: ownedSourceManifest ? OWNED_SOURCE_MANIFEST_PATH : null,
     usage_log: usageLog ? (args.get("--usage-log") || DEFAULT_USAGE_LOG_PATH) : null,
-    usage_rotation_scope: "posted, published, and legacy usage entries only; selected/rendered draft events do not exhaust assets",
+    usage_rotation_scope: includeSelectedUsage
+      ? "posted, published, legacy, selected, rendered, materialized, and dry-run-selected usage entries exhaust assets for this batch"
+      : "posted, published, and legacy usage entries only; selected/rendered draft events do not exhaust assets",
     source_policy: library.source_rules,
     production_asset_policy: production
       ? "approved, owned, or licensed assets only, with middle-slide usage freshness enforced"

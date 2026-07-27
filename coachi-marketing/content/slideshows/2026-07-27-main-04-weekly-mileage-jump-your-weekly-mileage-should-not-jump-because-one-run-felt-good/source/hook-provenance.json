@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "generator": "chatgpt_images_2_0",
+  "api_model": "gpt-image-2",
+  "endpoint": "https://api.openai.com/v1/images/edits",
+  "size": "1024x1536",
+  "quality": "high",
+  "mode": "edit_with_reference_image",
+  "reference_images": [
+    "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png"
+  ],
+  "reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "style_reference_image": "content/slideshows/2026-04-26-watch-stole-the-run-8-slide/slides/source/01-hook.png",
+  "input_fidelity": "high",
+  "prompt_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-04-weekly-mileage-jump-your-weekly-mileage-should-not-jump-because-one-run-felt-good/source/images-2-0-hook-prompt.md",
+  "output_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-main-04-weekly-mileage-jump-your-weekly-mileage-should-not-jump-because-one-run-felt-good/slides/source/01-hook.png",
+  "created_at": "2026-07-27T17:03:06.983Z",
+  "requested_at": "2026-07-27T17:00:23.720Z",
+  "fallback_used": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "success",
+      "started_at": "2026-07-27T17:00:23.721Z",
+      "completed_at": "2026-07-27T17:03:06.950Z"
+    }
+  ],
+  "retry_policy": {
+    "timeout_ms": 180000,
+    "retries": 3,
+    "retry_base_delay_ms": 2000
+  },
+  "key_source": "/Volumes/Riot APFS/Agentmode/coachi-marketing/.env",
+  "revised_prompt": null,
+  "source_problem_id": "rp_2026_07_27_main_weekly_mileage_jump",
+  "hook": "Your weekly mileage should not jump because one run felt good",
+  "note": "Generated exactly one contextual hook image for slide 1 using the pack identity reference from source/hook-brief.json. Slides 2+ must use the approved library/Supabase path."
+}

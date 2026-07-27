@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing",
+  "format_id": "watch_coros_effort_pace_v1",
+  "schema": "runner_mistake_reframe_v1",
+  "content_pillar": "watch_controls",
+  "research_status": null,
+  "topic": "Rain and sleeves can touch my Garmin screen and change it during a run.",
+  "selected_hook": "Lock your Garmin before rain or sleeves press the screen",
+  "hook_score": 62,
+  "hook_quality": {
+    "score": 62,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 7,
+      "coachi_fit": 9,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 62,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "62/70; 10 words; bank family watch_coros_effort_pace_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "heart-rate zone runners / watch users",
+  "source_problem": {
+    "id": "rp_2026_07_27_watch_coros_effort_pace",
+    "problem_type": "garmin device lock",
+    "exact_words": "Rain and sleeves can touch my Garmin screen and change it during a run.",
+    "source_url": "https://support.garmin.com/en-AU/?faq=EZ9NRkq23J4KcI8L3SKdt7"
+  },
+  "visual_system": {
+    "emotion": "annoyed by accidental screen touches",
+    "visual_world": "mountain",
+    "lighting": "clear mountain morning light",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Lock your Garmin before rain or sleeves press the screen",
+      "visual_direction": "annoyed by accidental screen touches; natural running moment; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hook mountain clear mountain morning light annoyed by accidental screen touches",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "Wet sleeves can brush a touchscreen while you keep running.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion felt_moment mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "One accidental touch can change pages or trigger controls.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hidden_cost mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Add Lock Device to the Garmin Controls menu.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Some models can also assign Lock Device as a Hot Key.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "Hold a button when you need the controls again.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "metric setup confusion proof mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before your next wet Garmin run.",
+      "visual_direction": "calm confidence; static; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background mountain clear mountain morning light calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Lock your Garmin before rain or sleeves press the screen\n\nThe run usually gives you the clue before the watch makes it obvious.\n\nSave this before your next wet Garmin run.",
+  "hashtags": [
+    "#running",
+    "#applewatch",
+    "#garmin",
+    "#heartrate",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-watch-03-coros-effort-pace-coros-effort-pace-is-built-for-hills-not-flat-pacing/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:36:32.201Z"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run",
+  "format_id": "main_long_run_fuel_45_v1",
+  "schema": "things_i_wish_i_knew_v1",
+  "content_pillar": "endurance_building",
+  "research_status": null,
+  "topic": "I wait until I feel hungry on longer runs, then the final part gets much harder.",
+  "selected_hook": "Why waiting until minute 45 can ruin your long run",
+  "hook_score": 56,
+  "hook_quality": {
+    "score": 56,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 6,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 7,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 56,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": true,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "56/70; 10 words; bank family main_long_run_fuel_45_v1; pain 6/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rp_2026_07_27_main_long_run_fuel_45",
+    "problem_type": "food",
+    "exact_words": "I wait until I feel hungry on longer runs, then the final part gets much harder.",
+    "source_url": "local://2026-07-27-three-account-personal-6x"
+  },
+  "visual_system": {
+    "emotion": "fine early, empty and distracted later",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why waiting until minute 45 can ruin your long run",
+      "visual_direction": "fine early, empty and distracted later; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food hook lake calm lake daylight fine early, empty and distracted later",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "You feel fine early, so eating seems completely unnecessary.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food felt_moment lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "When hunger arrives, concentration and pace may already be slipping.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food hidden_cost lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "On longer runs, carry fuel you have already tested.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Practice eating before you feel empty, not once the run unravels.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "Good fueling keeps the final section about running, not finding food.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "food proof lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before your next longer run.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background lake calm lake daylight calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "Why waiting until minute 45 can ruin your long run\n\nThe run usually gives you the clue before the watch makes it obvious.\n\nSave this before your next longer run.",
+  "hashtags": [
+    "#running",
+    "#cardio",
+    "#breathwork",
+    "#runninghacks",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-main-02-long-run-fuel-45-why-waiting-until-minute-45-can-ruin-your-long-run/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:34:33.588Z"
+}

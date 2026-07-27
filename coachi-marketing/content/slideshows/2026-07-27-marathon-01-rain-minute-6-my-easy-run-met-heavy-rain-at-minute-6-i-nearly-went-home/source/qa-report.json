@@ -1,0 +1,286 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-07-27T18:37:41.008Z",
+  "pack": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/slideshow.json",
+  "hook_quality": {
+    "hook": "Why I stopped my run after 7 minutes in wet shoes",
+    "candidate_file": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/hook-candidates.json",
+    "selected_score": 58,
+    "candidates": 8
+  },
+  "prompt_artifacts": {
+    "hook": "Why I stopped my run after 7 minutes in wet shoes",
+    "theme": "shoes",
+    "prompt_coherence": {
+      "phase": "post_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_028",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:18.832Z",
+          "slideshow_ids": [
+            "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_029",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:18.832Z",
+          "slideshow_ids": [
+            "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_030",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:18.832Z",
+          "slideshow_ids": [
+            "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_031",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:01:18.832Z",
+          "slideshow_ids": [
+            "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home"
+          ],
+          "recent_use_rank": 16
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_032",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 140,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:03:00.330Z",
+          "slideshow_ids": [
+            "2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse"
+          ],
+          "recent_use_rank": 12
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "nature_context_033",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 122,
+        "quality_score": 87,
+        "visual_match_score": 45,
+        "freshness_penalty": 10,
+        "usage": {
+          "total_uses": 1,
+          "last_used_at": "2026-07-27T18:03:00.330Z",
+          "slideshow_ids": [
+            "2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse"
+          ],
+          "recent_use_rank": 12
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/hook-provenance.json",
+      "generator": "codex_imagegen_tool",
+      "reference_image": "content/slideshows/visual-library/owned-source/road-to-marathon-fit-avatar/road-to-marathon-fit-female-runner-v1-reference.png",
+      "expected_reference_image": "content/slideshows/visual-library/owned-source/road-to-marathon-fit-avatar/road-to-marathon-fit-female-runner-v1-reference.png"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_028",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_029",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_030",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_031",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_032",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "nature_context_033",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 5,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "cta_text_rotation": {
+    "current_cta": "Follow the next honest marathon-training mistake.",
+    "checked_recent_decks": 5,
+    "window_size": 5
+  },
+  "creative_rules": {
+    "coachi_mentions": 0,
+    "first_coachi_mention_slide": null,
+    "canonical_slideshow": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:library"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/02-felt-moment.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/03-hidden-cost.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/04-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/05-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/06-proof.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-01-rain-minute-6-my-easy-run-met-heavy-rain-at-minute-6-i-nearly-went-home/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

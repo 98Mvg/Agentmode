@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart",
+  "format_id": "main_loud_stride_fatigue_v1",
+  "schema": "q_and_a_comment_prompt_v1",
+  "content_pillar": "running_form",
+  "research_status": null,
+  "topic": "I keep trying to force 180 steps per minute at every running pace.",
+  "selected_hook": "Why forcing 180 cadence can make an easy run worse",
+  "hook_score": 61,
+  "hook_quality": {
+    "score": 61,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 10,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 3,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 61,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "61/70; 10 words; bank family main_loud_stride_fatigue_v1; pain 10/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rp_2026_07_27_main_loud_stride_fatigue",
+    "problem_type": "cadence target fixation",
+    "exact_words": "I keep trying to force 180 steps per minute at every running pace.",
+    "source_url": "local://2026-07-27-three-account-personal-6x"
+  },
+  "visual_system": {
+    "emotion": "focused on a number, then relaxed into natural rhythm",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why forcing 180 cadence can make an easy run worse",
+      "visual_direction": "focused on a number, then relaxed into natural rhythm; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "easy-run form breakdown hook lake calm lake daylight focused on a number, then relaxed into natural rhythm",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "The watch shows 172, so you force quicker steps.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "easy-run form breakdown felt_moment lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "Your stride gets tense while the easy run stops feeling natural.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "easy-run form breakdown hidden_cost lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Let cadence change with speed, hills, height, and fatigue.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "easy-run form breakdown fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Use your normal range before chasing one famous number.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "easy-run form breakdown fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "A smooth repeatable stride matters more than exactly 180.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "easy-run form breakdown proof lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before changing your cadence.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background lake calm lake daylight calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Why forcing 180 cadence can make an easy run worse\n\nThe run usually gives you the clue before the watch makes it obvious.\n\nSave this before changing your cadence.",
+  "hashtags": [
+    "#running",
+    "#easyrun",
+    "#beginnerrunner",
+    "#runningtips",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-main-05-loud-stride-fatigue-your-stride-gets-louder-before-your-easy-run-form-falls-apart/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:35:05.051Z"
+}

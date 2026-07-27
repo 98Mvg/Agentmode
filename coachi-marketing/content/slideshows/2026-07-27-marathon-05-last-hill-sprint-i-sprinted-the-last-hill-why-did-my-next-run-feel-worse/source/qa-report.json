@@ -1,0 +1,268 @@
+{
+  "ok": true,
+  "pass": true,
+  "generated_at": "2026-07-27T18:38:11.633Z",
+  "pack": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse",
+  "slides": 7,
+  "hybrid_cost_model": "one_ai_hook_six_library_assets",
+  "production": true,
+  "allow_needs_review": false,
+  "allow_owned_generated_middle_slides": false,
+  "reasons": [],
+  "suggested_fixes": [],
+  "improved_version": null,
+  "canonical_slideshow": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/slideshow.json",
+  "hook_quality": {
+    "hook": "I sprinted the last hill. Why did my next run feel worse?",
+    "candidate_file": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/hook-candidates.json",
+    "selected_score": 62,
+    "candidates": 8
+  },
+  "prompt_artifacts": {
+    "hook": "I sprinted the last hill. Why did my next run feel worse?",
+    "theme": "hills",
+    "prompt_coherence": {
+      "phase": "during_workout",
+      "coherence_status": "passed",
+      "selected_by": "problem_type_mapping"
+    },
+    "prompt": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/images-2-0-hook-prompt.md",
+    "hook_brief": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/hook-brief.json"
+  },
+  "asset_quality": {
+    "path": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/asset-picklist.json",
+    "non_hook_slides_checked": 6,
+    "checked_assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_032",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 150,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_033",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 150,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_034",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 150,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_035",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 150,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_040",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 150,
+        "quality_score": 87,
+        "visual_match_score": 63,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "nature_context_042",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source",
+        "selection_score": 132,
+        "quality_score": 87,
+        "visual_match_score": 45,
+        "freshness_penalty": 0,
+        "usage": {
+          "total_uses": 0,
+          "last_used_at": null,
+          "slideshow_ids": []
+        }
+      }
+    ]
+  },
+  "production_checks": {
+    "hook_provenance": {
+      "path": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/hook-provenance.json",
+      "generator": "codex_imagegen_tool",
+      "reference_image": "content/slideshows/visual-library/owned-source/road-to-marathon-fit-avatar/road-to-marathon-fit-female-runner-v1-reference.png",
+      "expected_reference_image": "content/slideshows/visual-library/owned-source/road-to-marathon-fit-avatar/road-to-marathon-fit-female-runner-v1-reference.png"
+    },
+    "assets": [
+      {
+        "slide_number": 2,
+        "asset_id": "nature_context_032",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 3,
+        "asset_id": "nature_context_033",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 4,
+        "asset_id": "nature_context_034",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 5,
+        "asset_id": "nature_context_035",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 6,
+        "asset_id": "nature_context_040",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      },
+      {
+        "slide_number": 7,
+        "asset_id": "nature_context_042",
+        "source_rights": "approved",
+        "source_kind": "supabase_visual_library",
+        "original_source_kind": "road_to_marathon_fit_pinterest_source"
+      }
+    ],
+    "posted_registry": {
+      "registry": "inputs/performance/posted-slideshows.json",
+      "slideshow_id": "2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse",
+      "posted_before": false
+    }
+  },
+  "copy": {
+    "hashtag_count": 5,
+    "source_backing": null
+  },
+  "copy_freshness": {
+    "checked": true,
+    "core_slide_lines": 5,
+    "duplicate_matches": 0
+  },
+  "cta_text_rotation": {
+    "current_cta": "Follow the next workout, including the bad decisions.",
+    "checked_recent_decks": 5,
+    "window_size": 5
+  },
+  "creative_rules": {
+    "coachi_mentions": 0,
+    "first_coachi_mention_slide": null,
+    "canonical_slideshow": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/slideshow.json",
+    "image_source_preferences": [
+      "1:ai",
+      "2:library",
+      "3:library",
+      "4:library",
+      "5:library",
+      "6:library",
+      "7:library"
+    ]
+  },
+  "images": [
+    {
+      "slide_number": 1,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/01-hook.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 2,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/02-felt-moment.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 3,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/03-hidden-cost.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 4,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/04-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 5,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/05-fix.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 6,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/06-proof.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "slide_number": 7,
+      "source_exists": true,
+      "rendered": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/slides/rendered/07-cta.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "schedule": {
+    "posts": 2,
+    "dry_run": true
+  }
+}

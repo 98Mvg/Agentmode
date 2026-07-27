@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running",
+  "format_id": "marathon_app_stack_week8_v1",
+  "schema": "top_5_rules_v1",
+  "content_pillar": "marathon_journal",
+  "research_status": null,
+  "topic": "I use five running apps for five different jobs, and Coachi is second because it helps while I am running.",
+  "selected_hook": "Top 5 running apps I use when running",
+  "hook_score": 56,
+  "hook_quality": {
+    "score": 56,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 8,
+    "breakdown": {
+      "runner_pain_specificity": 7,
+      "curiosity": 9,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 7,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 56,
+      "max_score": 70,
+      "word_count": 8,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": true,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": true,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "56/70; 8 words; bank family marathon_app_stack_week8_v1; pain 7/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "watch users / runners who want coaching",
+  "source_problem": {
+    "id": "rtmf_week08_personal_app_stack",
+    "problem_type": "data-without-coaching",
+    "exact_words": "I use five running apps for five different jobs, and Coachi is second because it helps while I am running.",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_personal_app_stack"
+  },
+  "visual_system": {
+    "emotion": "honest about which apps stayed useful",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "post_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_follow_along_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Top 5 running apps I use when running",
+      "visual_direction": "honest about which apps stayed useful; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "data-without-coaching hook forest soft green morning forest light honest about which apps stayed useful",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "5. AllTrails helps when I need a route that feels new.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "data-without-coaching felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "4. Apple Fitness gives me the quick Apple Watch recap.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "data-without-coaching hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "3. Nike Run Club helps when I want a guided run.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "data-without-coaching fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "2. Coachi tells me when my effort drifts during the run.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "data-without-coaching fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "1. Strava keeps my route history and running friends together.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "data-without-coaching proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "1 Strava\n2 Coachi\n3 Nike Run Club\n4 Apple Fitness\n5 AllTrails",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal marathon training follow-along background forest soft green morning forest light calm confidence",
+      "image_source_preference": "library",
+      "text_position": "top",
+      "font_size": 58,
+      "cta_type": "coachi_app_proof"
+    }
+  ],
+  "caption": "Top 5 running apps I use when running\n\nSix months is long enough to build this properly, if the early weeks stay honest.\n\n1 Strava\n2 Coachi\n3 Nike Run Club\n4 Apple Fitness\n5 AllTrails",
+  "hashtags": [
+    "#running",
+    "#marathontraining",
+    "#beginnerrunner",
+    "#runtok",
+    "#runningjourney"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-marathon-06-app-stack-week8-top-5-running-apps-i-use-when-running/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:38:18.855Z"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals",
+  "format_id": "watch_wrist_hr_fast_intervals_v1",
+  "schema": "how_to_fix_v1",
+  "content_pillar": "watch_controls",
+  "research_status": null,
+  "topic": "My COROS watch buttons can pause a run accidentally.",
+  "selected_hook": "Why COROS Auto Lock matters when watch buttons get pressed",
+  "hook_score": 61,
+  "hook_quality": {
+    "score": 61,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 10,
+    "breakdown": {
+      "runner_pain_specificity": 8,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 5,
+      "coachi_fit": 10,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 61,
+      "max_score": 70,
+      "word_count": 10,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": false,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": true
+      },
+      "watch_specific_intent": true,
+      "banned_matches": []
+    },
+    "rationale": "61/70; 10 words; bank family watch_wrist_hr_fast_intervals_v1; pain 8/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "heart-rate zone runners / watch users",
+  "source_problem": {
+    "id": "rp_2026_07_27_watch_wrist_hr_fast_intervals",
+    "problem_type": "coros activity auto lock",
+    "exact_words": "My COROS watch buttons can pause a run accidentally.",
+    "source_url": "https://support.coros.com/hc/en-us/articles/360039836552-Auto-Lock-Settings-on-Your-COROS-Watch"
+  },
+  "visual_system": {
+    "emotion": "frustrated by accidental pauses",
+    "visual_world": "lake",
+    "lighting": "calm lake daylight",
+    "workout_phase": "pre_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_branded_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "Why COROS Auto Lock matters when watch buttons get pressed",
+      "visual_direction": "frustrated by accidental pauses; natural running moment; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hook lake calm lake daylight frustrated by accidental pauses",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "A sleeve or bent wrist can touch the dial mid-run.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "metric setup confusion felt_moment lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "An accidental press can pause or finish the activity.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "metric setup confusion hidden_cost lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "Open System, More Settings, then Auto Lock.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "Choose the hold or scroll option for Activity Mode.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "metric setup confusion fix lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "The Back/Lap button still records a lap while locked.",
+      "visual_direction": "real runner effort; movement; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "metric setup confusion proof lake calm lake daylight real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Save this before your next COROS run.",
+      "visual_direction": "calm confidence; static; lake; calm lake daylight; clean negative space for local overlay text",
+      "image_query": "minimal branded running app proof background lake calm lake daylight calm confidence",
+      "image_source_preference": "branded_template",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "save"
+    }
+  ],
+  "caption": "Why COROS Auto Lock matters when watch buttons get pressed\n\nA sleeve or bent wrist can touch the dial mid-run.\n\nSave this before your next COROS run.",
+  "hashtags": [
+    "#runtok",
+    "#runningform",
+    "#easypace",
+    "#runningcoach",
+    "#coachi"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:36:52.057Z"
+}

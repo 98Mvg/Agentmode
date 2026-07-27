@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-marathon-03-legs-minute-12-my-legs-felt-awful-for-12-minutes-was-the-run-already-bad",
+  "format_id": "marathon_legs_minute_12_v1",
+  "schema": "q_and_a_comment_prompt_v1",
+  "content_pillar": "marathon_journal",
+  "research_status": null,
+  "topic": "My legs felt stiff for twelve minutes, then the run finally settled without me forcing the pace.",
+  "selected_hook": "My legs felt awful for 12 minutes. Was the run already bad?",
+  "hook_score": 57,
+  "hook_quality": {
+    "score": 57,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 12,
+    "breakdown": {
+      "runner_pain_specificity": 6,
+      "curiosity": 9,
+      "simplicity": 8,
+      "emotional_relatability": 7,
+      "coachi_fit": 7,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 57,
+      "max_score": 70,
+      "word_count": 12,
+      "curiosity_signals": {
+        "concrete_number": true,
+        "first_person_confession": true,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "57/70; 12 words; bank family marathon_legs_minute_12_v1; pain 6/10; curiosity 9/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rtmf_week08_legs_bad_twelve_minutes",
+    "problem_type": "easy_run",
+    "exact_words": "My legs felt stiff for twelve minutes, then the run finally settled without me forcing the pace.",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_legs_bad_twelve_minutes"
+  },
+  "visual_system": {
+    "emotion": "worried early, calmer later",
+    "visual_world": "mountain",
+    "lighting": "clear mountain morning light",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_follow_along_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "My legs felt awful for 12 minutes. Was the run already bad?",
+      "visual_direction": "worried early, calmer later; natural running moment; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "easy_run hook mountain clear mountain morning light worried early, calmer later",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "Minute three felt stiff enough to judge the whole day.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "easy_run felt_moment mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "I nearly sped up just to make the run feel normal.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "easy_run hidden_cost mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "I kept the pace boring and gave my legs more time.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "easy_run fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "At minute 12, my breathing and stride finally settled.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "easy_run fix mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "The bad start stayed at the start.",
+      "visual_direction": "real runner effort; movement; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "easy_run proof mountain clear mountain morning light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Do your legs need time before a run feels normal?",
+      "visual_direction": "calm confidence; static; mountain; clear mountain morning light; clean negative space for local overlay text",
+      "image_query": "minimal marathon training follow-along background mountain clear mountain morning light calm confidence",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "soft_engagement"
+    }
+  ],
+  "caption": "My legs felt awful for 12 minutes. Was the run already bad?\n\nSix months is long enough to build this properly, if the early weeks stay honest.\n\nDo your legs need time before a run feels normal?",
+  "hashtags": [
+    "#running",
+    "#weeklytraining",
+    "#marathontraining",
+    "#newrunner",
+    "#trainingdiary"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-marathon-03-legs-minute-12-my-legs-felt-awful-for-12-minutes-was-the-run-already-bad/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:37:57.460Z"
+}

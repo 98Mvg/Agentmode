@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "slideshow_id": "2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse",
+  "format_id": "marathon_last_hill_sprint_v1",
+  "schema": "runner_mistake_reframe_v1",
+  "content_pillar": "marathon_journal",
+  "research_status": null,
+  "topic": "I pushed the last climb much harder than planned and carried it into the next day.",
+  "selected_hook": "I sprinted the last hill. Why did my next run feel worse?",
+  "hook_score": 62,
+  "hook_quality": {
+    "score": 62,
+    "max_score": 70,
+    "min_score": 56,
+    "passes_quality_gate": true,
+    "word_count": 12,
+    "breakdown": {
+      "runner_pain_specificity": 9,
+      "curiosity": 10,
+      "simplicity": 8,
+      "emotional_relatability": 7,
+      "coachi_fit": 8,
+      "tiktok_native_wording": 10,
+      "non_marketing_tone": 10,
+      "score": 62,
+      "max_score": 70,
+      "word_count": 12,
+      "curiosity_signals": {
+        "concrete_number": false,
+        "first_person_confession": false,
+        "direct_address_contradiction": false,
+        "question_or_choice": true,
+        "plain_contradiction": false,
+        "personal_app_stack": false,
+        "watch_specific_decision": false
+      },
+      "watch_specific_intent": false,
+      "banned_matches": []
+    },
+    "rationale": "62/70; 12 words; bank family marathon_last_hill_sprint_v1; pain 9/10; curiosity 10/10; simplicity 8/10; passes quality gate",
+    "source": "frozen_topic"
+  },
+  "target_audience": "beginner runners / zone 2 runners / overpacers",
+  "source_problem": {
+    "id": "rtmf_week08_last_hill_sprint",
+    "problem_type": "hills",
+    "exact_words": "I pushed the last climb much harder than planned and carried it into the next day.",
+    "source_url": "local://inputs/research/road-to-marathon-fit-personal-experience-bank.json#rtmf_week08_last_hill_sprint"
+  },
+  "visual_system": {
+    "emotion": "proud for one minute, regretful the next day",
+    "visual_world": "forest",
+    "lighting": "soft green morning forest light",
+    "workout_phase": "during_workout",
+    "hybrid_strategy": "slide_1_ai_slides_2_6_library_final_follow_along_template"
+  },
+  "slides": [
+    {
+      "slide_number": 1,
+      "role": "hook",
+      "text": "I sprinted the last hill. Why did my next run feel worse?",
+      "visual_direction": "proud for one minute, regretful the next day; natural running moment; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "hills hook forest soft green morning forest light proud for one minute, regretful the next day",
+      "image_source_preference": "ai",
+      "text_position": "center",
+      "font_size": 92,
+      "cta_type": null
+    },
+    {
+      "slide_number": 2,
+      "role": "felt_moment",
+      "text": "I wanted one strong finish after a controlled workout.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "hills felt_moment forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 3,
+      "role": "hidden_cost",
+      "text": "The hill lasted seconds. My legs remembered it the next morning.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "hills hidden_cost forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 4,
+      "role": "fix",
+      "text": "I should have finished the climb at the effort I planned.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "hills fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "lower_middle",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 5,
+      "role": "fix",
+      "text": "The next run started heavy before I reached the first corner.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "hills fix forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 6,
+      "role": "proof",
+      "text": "That tiny victory took more than it gave.",
+      "visual_direction": "real runner effort; movement; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "hills proof forest soft green morning forest light real runner effort",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": null
+    },
+    {
+      "slide_number": 7,
+      "role": "cta",
+      "text": "Follow the next workout, including the bad decisions.",
+      "visual_direction": "calm confidence; static; forest; soft green morning forest light; clean negative space for local overlay text",
+      "image_query": "minimal marathon training follow-along background forest soft green morning forest light calm confidence",
+      "image_source_preference": "library",
+      "text_position": "center",
+      "font_size": 76,
+      "cta_type": "follow"
+    }
+  ],
+  "caption": "I sprinted the last hill. Why did my next run feel worse?\n\nSix months is long enough to build this properly, if the early weeks stay honest.\n\nFollow the next workout, including the bad decisions.",
+  "hashtags": [
+    "#running",
+    "#marathontraining",
+    "#beginnerrunner",
+    "#runtok",
+    "#runningjourney"
+  ],
+  "qa_status": "passed",
+  "qa_report": "content/slideshows/2026-07-27-marathon-05-last-hill-sprint-i-sprinted-the-last-hill-why-did-my-next-run-feel-worse/source/qa-report.json",
+  "qa_checked_at": "2026-07-27T18:38:11.632Z"
+}

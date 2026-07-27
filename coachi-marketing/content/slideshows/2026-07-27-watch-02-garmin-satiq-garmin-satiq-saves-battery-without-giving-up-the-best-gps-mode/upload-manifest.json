@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 306776,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "8f9494f1fb847bb430cbc94fa24f97908edeb9e62671db4090a05e7143e8d275"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 205181,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "d7b711858e3f101fee859aec630aa31870b1a30e55d289a12328aebc1661ecb2"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 222414,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "d220cd3cbbb50225c65f698f85794e1e0ce103fe227e35ad9516155ef1a14ad3"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 257409,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "d7ef69c339bfdaed2d89be8467b5d9ea857b80de7650c9707ec0670c045e305c"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 388184,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "e05d3b9a4e0b107e77baf5e0f37c204d6981ae988fc509af6f97b4693401444e"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 316195,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "f72557a325239b5219e3d3a3555b6cef6ac0596a902a28feaaf1c960ef3c0b0e"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 191413,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "f24fe83bf331a6b4e5997689c1b40b29f61d1dea5337ce3d744d5b18e6322e0b"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-02-garmin-satiq-garmin-satiq-saves-battery-without-giving-up-the-best-gps-mode",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}

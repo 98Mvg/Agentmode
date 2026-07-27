@@ -1,0 +1,101 @@
+{
+  "campaign_date": "2026-07-27",
+  "dry_run": false,
+  "metadata_table": "marketing_asset_objects",
+  "metadata_upsert": false,
+  "objects": [
+    {
+      "asset_role": "hook_slide",
+      "bucket_id": "slideshow-public",
+      "byte_size": 268061,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/01-hook.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/01-hook.jpg",
+      "sha256": "fc7ff2c7b93ee0fe0f3b0e6f5cffad56ba88e22c4f190a9fa3758495405c7a69"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 297643,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/02-felt-moment.jpg",
+      "sha256": "78ae3b62252509dc233b46f4c7ff740eb80dc0595b363d2831f61d39dfba51b2"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 475879,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/03-hidden-cost.jpg",
+      "sha256": "b9ee74909d113e497a99ed5f0dbd3cd2953d406c2c8797708ef719ebfeff3e02"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 278216,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/04-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/04-fix.jpg",
+      "sha256": "16e5339f9e9e13333b4bfa9ba54fc35c264f02a9a327cc6247ade16c5c66ee07"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 253457,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/05-fix.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/05-fix.jpg",
+      "sha256": "42fdf4be52435964deca8376b1199f1a92529a1a30664f6c75c79cd45b7f32d9"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 244760,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/06-proof.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/06-proof.jpg",
+      "sha256": "5a35db18e6528ef587abf67f6c315d2f955f2d9e8be338f219c5feb5d6f398ea"
+    },
+    {
+      "asset_role": "asset",
+      "bucket_id": "slideshow-public",
+      "byte_size": 420096,
+      "content_type": "image/jpeg",
+      "local_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/slideshows/2026-07-27-watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/exports/tiktok-photo-slides/07-cta.jpg",
+      "object_path": "slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "platform": "tiktok",
+      "public_url": "https://msmexidhfjsilgslmfge.supabase.co/storage/v1/object/public/slideshow-public/slideshows/2026-07-27/watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals/public/exports/tiktok-photo-slides/07-cta.jpg",
+      "sha256": "00f665f2ca4b2d27f12f42238cad7e81f4ccb0e9201f94169b0dedb687b9cd66"
+    }
+  ],
+  "private_bucket": "slideshow-private",
+  "public_bucket": "slideshow-public",
+  "safety": {
+    "contains_app_secrets": false,
+    "contains_user_data": false,
+    "final_publish_automated": false,
+    "uses_app_supabase_project": false
+  },
+  "slug": "watch-05-wrist-hr-fast-intervals-why-wrist-heart-rate-lags-behind-fast-intervals",
+  "upload_policy": {
+    "public_media_dirs": [
+      "exports/tiktok-photo-slides"
+    ],
+    "skip_private": true,
+    "skip_rendered_png": true
+  }
+}
