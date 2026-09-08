@@ -1,5 +1,11 @@
 # Codebase guide (coachi-marketing)
 
+## Coachi Ad Director skill — September 8
+
+Version-controlled distribution: `skills/coachi-cinematic-production/` contains the same six files as the installed skill and portable ZIP. It is a copy of the same skill, not another runtime; verify byte parity when updating/distributing it. The skill's source media, provider credentials and actual ad exports remain separate dependencies and are not included in the skill-only commit.
+
+Single installed skill: `/Users/mariusgaarder/.codex/skills/coachi-cinematic-production/SKILL.md`, UI name **Coachi Ad Director**. Marius clarified the contract: develop/agree strategy and meaningful shot/product/voice/music/ending/budget details together, then produce/refine autonomously without clip-by-clip approvals. New entrypoint separates proposed strategy, versioned approved brief, bounded delegated execution and final QA. Targeted references capture user taste, production/finish gates and actual workspace/tool/accepted-film anchors; a working brief template records locked/delegated/unresolved details. Image2reference/BytePlusvideo/real iOS/Performance cue choices are scoped paid-ad preferences, not changes to organic defaults. No new renderer or campaign engine. Authoring/validation record: `tasks/2026-09-08-coachi-ad-director-skill.md`; portable skill-only package and validation under `outputs/skills/2026-09-08-coachi-ad-director/`. No ad generation, paid calls or campaign actions in this skill-authoring task.
+
 Last synced: 2026-06-28 16:16 CEST
 
 Note (2026-06-28 16:16 CEST marketing learnings commit handoff): Synced the latest marketing learning state before committing. Scope is the Coachi marketing learning/runtime-guard set: `Codebase_guide.MD`, `tasks/todo.md`, current scorecards/run notes, winning-language banks, TikTok slideshow hook rotation policy, and the focused generator/test changes that enforce maximum hook/content rotation. Excluded bulk generated slideshow/media/output artifacts and unrelated dirty worktree files.

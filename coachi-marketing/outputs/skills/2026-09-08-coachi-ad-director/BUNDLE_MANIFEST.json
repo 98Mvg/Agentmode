@@ -1,0 +1,31 @@
+{
+  "zip_sha256": "665c45049c34aa8737fcc806c9e7ab54a56922bb606d97b16638dbe332905082",
+  "bytes": 23061,
+  "files": [
+    {
+      "path": "coachi-cinematic-production/SKILL.md",
+      "sha256": "33c0e1ada0c7df44b50f12f3ffd4cc17c0fe557675882eaa667217a9550967d3"
+    },
+    {
+      "path": "coachi-cinematic-production/agents/openai.yaml",
+      "sha256": "4bcd0ee73057969c38b73b8aff9b0b6025e93ff9898aafe14c3a90d25c5a3428"
+    },
+    {
+      "path": "coachi-cinematic-production/assets/production-brief.md",
+      "sha256": "7ebc756636ac2e419ce35ac482aadce7cfe4160c6031fcc0a79c7f4f9fc7e335"
+    },
+    {
+      "path": "coachi-cinematic-production/references/creative-direction.md",
+      "sha256": "3eb8cbedfa7621b3570592d68a088ebd5d2420b50c2d1429b48351e1073d2831"
+    },
+    {
+      "path": "coachi-cinematic-production/references/production-playbook.md",
+      "sha256": "8e06cfc6ff58f8740cd1802c1880b7a093d15831c54faa57cdb1b8db209dd77b"
+    },
+    {
+      "path": "coachi-cinematic-production/references/workspace-map.md",
+      "sha256": "05f7f2af541645779cb4dad99f3b079bf0f0b5cb940018a94aeae1aa6183de5c"
+    }
+  ],
+  "byte_identical_to_installed_skill": true
+}

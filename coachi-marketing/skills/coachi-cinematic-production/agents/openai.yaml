@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coachi Ad Director"
+  short_description: "Agree the ad strategy, then produce autonomously"
+  default_prompt: "Use $coachi-cinematic-production to agree the Coachi ad strategy and details with me, then produce and refine the full ad autonomously within the approved brief and budget."
