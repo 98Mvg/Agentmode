@@ -1,0 +1,264 @@
+{
+  "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+  "flat_exports_unchanged": true,
+  "generated_ui": false,
+  "published": false,
+  "renders": [
+    {
+      "id": "workouts-en",
+      "label": "Choose your workout",
+      "locale": "en",
+      "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+      "hardware": "unbranded procedural handset",
+      "source_id": "C012",
+      "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/C012.png",
+      "source_sha256": "f1783a0f2f3ca970fb52c6c599e143bc64ab545b20943d6645ded3ba582d4e99",
+      "source_dimensions": [
+        1179,
+        2556
+      ],
+      "source_aspect": 2.16793893129771,
+      "screen_aspect": 2.16793893129771,
+      "source_ui_redrawn": false,
+      "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+      "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+      "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+      "yaw_degrees": -8,
+      "pitch_degrees": 0,
+      "camera_roll_degrees": 0,
+      "projection": {
+        "max_output_pixels_per_source_pixel": 0.7335456658715539,
+        "corners_tl_tr_br_bl": [
+          [
+            240.56661987304688,
+            267.0498962402344
+          ],
+          [
+            1080.6785888671875,
+            293.3252258300781
+          ],
+          [
+            1080.6785888671875,
+            2106.6748046875
+          ],
+          [
+            240.56661987304688,
+            2132.9501953125
+          ]
+        ]
+      },
+      "size": [
+        1320,
+        2400
+      ],
+      "engine": "CYCLES",
+      "samples": 256,
+      "blender_version": "5.2.1 LTS",
+      "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+      "render": "workouts-en.png",
+      "sha256": "0e584be40b051146f593843b8323881c2ba18af0d6ea37f623fd6ce0d6d5b396",
+      "editable_scene": "workouts-en.blend",
+      "editable_scene_sha256": "70b86ce6713ecf70bef34b79bda93bf8b3bb88398793145d0b3eb0757f142978",
+      "published": false,
+      "file": "phone-mockups-v3/workouts-en.png",
+      "visible_bounds": {
+        "x": 172,
+        "y": 218,
+        "width": 962,
+        "height": 1964
+      }
+    },
+    {
+      "id": "target-en",
+      "label": "Set your distance",
+      "locale": "en",
+      "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+      "hardware": "unbranded procedural handset",
+      "source_id": "target-en",
+      "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/target-en.png",
+      "source_sha256": "ae6c74d26584d1b14d92fdf85dec7cb9d833869b159cfbae86e6c21859e130dd",
+      "source_dimensions": [
+        886,
+        1920
+      ],
+      "source_aspect": 2.1670428893905194,
+      "screen_aspect": 2.167042889390519,
+      "source_ui_redrawn": false,
+      "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+      "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+      "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+      "yaw_degrees": 0,
+      "pitch_degrees": 0,
+      "camera_roll_degrees": 0,
+      "projection": {
+        "max_output_pixels_per_source_pixel": 0.9578248448081264,
+        "corners_tl_tr_br_bl": [
+          [
+            235.75936889648438,
+            280.65234375
+          ],
+          [
+            1084.24072265625,
+            280.65234375
+          ],
+          [
+            1084.24072265625,
+            2119.34765625
+          ],
+          [
+            235.75936889648438,
+            2119.34765625
+          ]
+        ]
+      },
+      "size": [
+        1320,
+        2400
+      ],
+      "engine": "CYCLES",
+      "samples": 256,
+      "blender_version": "5.2.1 LTS",
+      "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+      "render": "target-en.png",
+      "sha256": "f9c7be6388c16bb3f7f7e1cd332b3fa486d97f8a13a081b72fbb42fbac0fa886",
+      "editable_scene": "target-en.blend",
+      "editable_scene_sha256": "a9fe779c4ed18b0bc1e71b8a9f7c8922fd13d06e32f525b1e990ebcc06df6e69",
+      "published": false,
+      "file": "phone-mockups-v3/target-en.png",
+      "visible_bounds": {
+        "x": 175,
+        "y": 230,
+        "width": 970,
+        "height": 1940
+      }
+    },
+    {
+      "id": "intervals-sets-en",
+      "label": "Build your intervals",
+      "locale": "en",
+      "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+      "hardware": "unbranded procedural handset",
+      "source_id": "C052",
+      "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/C052.png",
+      "source_sha256": "c39b045a4d7b28132b97b427986a4616a5f846f2aca1b77aa4e84de9579cd365",
+      "source_dimensions": [
+        886,
+        1920
+      ],
+      "source_aspect": 2.1670428893905194,
+      "screen_aspect": 2.167042889390519,
+      "source_ui_redrawn": false,
+      "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+      "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+      "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+      "yaw_degrees": 8,
+      "pitch_degrees": 0,
+      "camera_roll_degrees": 0,
+      "projection": {
+        "max_output_pixels_per_source_pixel": 0.9513802585809487,
+        "corners_tl_tr_br_bl": [
+          [
+            249.55328369140625,
+            315.7434997558594
+          ],
+          [
+            1068.943359375,
+            290.7587585449219
+          ],
+          [
+            1068.943359375,
+            2109.2412109375
+          ],
+          [
+            249.55328369140625,
+            2084.256591796875
+          ]
+        ]
+      },
+      "size": [
+        1320,
+        2400
+      ],
+      "engine": "CYCLES",
+      "samples": 256,
+      "blender_version": "5.2.1 LTS",
+      "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+      "render": "intervals-sets-en.png",
+      "sha256": "f20657efd8ba69004b453d91bb2461c409018b3327e70058cdcd855345ad5f84",
+      "editable_scene": "intervals-sets-en.blend",
+      "editable_scene_sha256": "8df43a788832e79c489b19e4a208fd70b3eadf878c6483074e65733450ad13c8",
+      "published": false,
+      "file": "phone-mockups-v3/intervals-sets-en.png",
+      "visible_bounds": {
+        "x": 196,
+        "y": 242,
+        "width": 940,
+        "height": 1916
+      }
+    },
+    {
+      "id": "target-no",
+      "label": "Velg distansen din",
+      "locale": "nb",
+      "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+      "hardware": "unbranded procedural handset",
+      "source_id": "C087",
+      "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/C087.png",
+      "source_sha256": "f664c20e724b1294eb89b5edf23634074558706b08e261e6d945f6c924eb1d7b",
+      "source_dimensions": [
+        1179,
+        2556
+      ],
+      "source_aspect": 2.16793893129771,
+      "screen_aspect": 2.16793893129771,
+      "source_ui_redrawn": false,
+      "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+      "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+      "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+      "yaw_degrees": 0,
+      "pitch_degrees": 0,
+      "camera_roll_degrees": 0,
+      "projection": {
+        "max_output_pixels_per_source_pixel": 0.7197903413910093,
+        "corners_tl_tr_br_bl": [
+          [
+            235.75936889648438,
+            280.2722473144531
+          ],
+          [
+            1084.24072265625,
+            280.2722473144531
+          ],
+          [
+            1084.24072265625,
+            2119.727783203125
+          ],
+          [
+            235.75936889648438,
+            2119.727783203125
+          ]
+        ]
+      },
+      "size": [
+        1320,
+        2400
+      ],
+      "engine": "CYCLES",
+      "samples": 256,
+      "blender_version": "5.2.1 LTS",
+      "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+      "render": "target-no.png",
+      "sha256": "83eb6cd65eb7ebed51425cf190eba92b67bdf5d0418ba23e959c04f75c558540",
+      "editable_scene": "target-no.blend",
+      "editable_scene_sha256": "acc1f6f4438c88e1468b2914f3d235cc7cdedd0855604b3b00f48d3e480cea10",
+      "published": false,
+      "file": "phone-mockups-v3/target-no.png",
+      "visible_bounds": {
+        "x": 175,
+        "y": 230,
+        "width": 970,
+        "height": 1941
+      }
+    }
+  ]
+}

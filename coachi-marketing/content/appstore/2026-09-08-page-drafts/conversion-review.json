@@ -1,0 +1,306 @@
+{
+  "status": "STORYBOARD_ONLY",
+  "published": false,
+  "upload_cleared": false,
+  "experiment_started": false,
+  "release_context": {
+    "version": "4.0.2",
+    "status": "OWNER_CONFIRMED_LIVE",
+    "owner_confirmation_date": "2026-09-09",
+    "public_lookup": {
+      "checked_at": "2026-09-09T05:56:37.178Z",
+      "country": "no",
+      "version": "4.0.1",
+      "current_version_release_date": "2026-09-05T20:37:43Z",
+      "url": "https://itunes.apple.com/lookup?id=6760587172&country=no"
+    },
+    "note": "Owner reports 4.0.2 is live. The public Norway lookup still returned 4.0.1 at the recorded check; release propagation and the exact public build are not independently confirmed here. This release update does not publish or clear the new creative package."
+  },
+  "brief_sha256": "3439ba6415fe24b0cebd4b48bd8f504bdb573ff4d92c0196e4b583827191c4ba",
+  "copy_verified_against": "Coachi 4.0.2 (130), immutable tag testflight-4.0.2-130 / 7ca4c8ddb17a27e724078dd2ee33e345ca1689f4. CoachPersonality.swift: CoachVoiceMode has three existing styles, with Personal Trainer free and the other two Premium-only. LiveCoachConversationView.swift: LiveCoachPreviewCopy states realtime AI, three voices and usage limits. Models.swift: LiveVoiceSessionMode supports coach_preview, workout and post_workout. Source verification only; no live session or device capture initiated.",
+  "capture_record_fields": [
+    "app_version",
+    "build_number",
+    "device",
+    "os_version",
+    "app_language",
+    "captured_at",
+    "source_sha256",
+    "real_session_or_labelled_demo",
+    "usage_rights_checked",
+    "privacy_checked"
+  ],
+  "sequences": {
+    "main-listing": [
+      "live-guidance",
+      "realtime",
+      "voices",
+      "watch-guidance",
+      "learn",
+      "target",
+      "intervals"
+    ],
+    "guided-runs": [
+      "live-guidance",
+      "target",
+      "learn",
+      "realtime",
+      "voices",
+      "intervals"
+    ],
+    "watch-coaching": [
+      "watch-guidance",
+      "live-guidance",
+      "intervals",
+      "realtime",
+      "voices",
+      "learn"
+    ]
+  },
+  "cards": [
+    {
+      "id": "live-guidance",
+      "capture_state": "missing",
+      "upload_cleared": false,
+      "candidates": [],
+      "localizations": {
+        "en-US": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        }
+      }
+    },
+    {
+      "id": "watch-guidance",
+      "capture_state": "missing",
+      "upload_cleared": false,
+      "candidates": [],
+      "localizations": {
+        "en-US": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        }
+      }
+    },
+    {
+      "id": "realtime",
+      "capture_state": "missing",
+      "upload_cleared": false,
+      "candidates": [],
+      "localizations": {
+        "en-US": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        }
+      }
+    },
+    {
+      "id": "voices",
+      "capture_state": "missing",
+      "upload_cleared": false,
+      "candidates": [],
+      "localizations": {
+        "en-US": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        }
+      }
+    },
+    {
+      "id": "learn",
+      "capture_state": "recapture",
+      "upload_cleared": false,
+      "candidates": [
+        {
+          "locale": "en-US",
+          "source_id": "C119",
+          "source_sha256": "0a1325565fa702a708961f43c95b9e5cce78e1f8850d84a70660723d7884b804",
+          "file": "sources/C119.jpg",
+          "release_verified": false
+        },
+        {
+          "locale": "no",
+          "source_id": "C119",
+          "source_sha256": "0a1325565fa702a708961f43c95b9e5cce78e1f8850d84a70660723d7884b804",
+          "file": "sources/C119.jpg",
+          "release_verified": false
+        }
+      ],
+      "localizations": {
+        "en-US": {
+          "capture_state": "recapture",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "recapture",
+          "upload_cleared": false
+        }
+      }
+    },
+    {
+      "id": "target",
+      "capture_state": "verify",
+      "upload_cleared": false,
+      "candidates": [
+        {
+          "locale": "en-US",
+          "source_id": "target-en",
+          "source_sha256": "ae6c74d26584d1b14d92fdf85dec7cb9d833869b159cfbae86e6c21859e130dd",
+          "file": "sources/target-en.png",
+          "release_verified": false
+        },
+        {
+          "locale": "no",
+          "source_id": "C087",
+          "source_sha256": "f664c20e724b1294eb89b5edf23634074558706b08e261e6d945f6c924eb1d7b",
+          "file": "sources/C087.png",
+          "release_verified": false
+        }
+      ],
+      "localizations": {
+        "en-US": {
+          "capture_state": "verify",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "verify",
+          "upload_cleared": false
+        }
+      }
+    },
+    {
+      "id": "intervals",
+      "capture_state": "verify",
+      "upload_cleared": false,
+      "candidates": [
+        {
+          "locale": "en-US",
+          "source_id": "C052",
+          "source_sha256": "c39b045a4d7b28132b97b427986a4616a5f846f2aca1b77aa4e84de9579cd365",
+          "file": "sources/C052.png",
+          "release_verified": false
+        }
+      ],
+      "localizations": {
+        "en-US": {
+          "capture_state": "verify",
+          "upload_cleared": false
+        },
+        "no": {
+          "capture_state": "missing",
+          "upload_cleared": false
+        }
+      }
+    }
+  ],
+  "global_gates": [
+    "Verify all source screens against the release being promoted; export dates alone do not establish the installed build.",
+    "Replace missing and low-resolution media. Verify native language, source rights and privacy for every selected card.",
+    "Check full size and App Store search-thumbnail size; verify browser layout after Mac unlock.",
+    "Approve the final creative and Apple hardware treatment before any upload. Keep Shared Workouts out while gated.",
+    "Obtain separate authorization for upload, submission and experiment activation, then read back each external state."
+  ],
+  "preview": {
+    "status": "NOT_RENDERABLE_MISSING_FOOTAGE",
+    "duration_seconds": 24,
+    "segments": [
+      {
+        "start": 0,
+        "end": 5,
+        "card": "live-guidance",
+        "note": "Lead with a genuine coaching moment. Any caption must match the actual cue."
+      },
+      {
+        "start": 5,
+        "end": 8,
+        "card": "target",
+        "note": "Native distance selection. Existing 2.6-second excerpt is an ingredient; do not stretch it into the whole preview."
+      },
+      {
+        "start": 8,
+        "end": 15,
+        "card": "realtime",
+        "note": "Actual conversation with visible Coachi+ disclosure. Existing approved audio only."
+      },
+      {
+        "start": 15,
+        "end": 18,
+        "card": "voices",
+        "note": "Show the real three-voice selector; no new audio generation."
+      },
+      {
+        "start": 18,
+        "end": 24,
+        "card": "learn",
+        "note": "End on actual workout feedback. Avoid maps containing private locations."
+      }
+    ],
+    "note": "Editorial timing proposal, not a rendered video. Use native iPhone footage, keep it understandable muted and leave cinematic ad scenes outside the App Store preview."
+  },
+  "experiment": {
+    "status": "NOT_STARTED",
+    "treatments": 1,
+    "proposed_treatment_traffic_percent": 50,
+    "spend_authorized": false,
+    "control_order": [
+      "target",
+      "intervals",
+      "live-guidance",
+      "realtime",
+      "voices",
+      "watch-guidance",
+      "learn"
+    ],
+    "treatment_order": [
+      "live-guidance",
+      "realtime",
+      "voices",
+      "watch-guidance",
+      "learn",
+      "target",
+      "intervals"
+    ],
+    "hypothesis": "A coaching-first first-three-image sequence communicates Coachi's distinct value more clearly than setup-first screenshots.",
+    "isolate": "After media clearance, compare one coaching-first treatment with a setup-first control using the SAME seven approved screenshots. Only their order changes: keep font, palette, copy, icon, metadata, subscription offer and all image bytes fixed. The proposed control is not today's live listing; the order-only experiment requires this matched control to be approved and established first. If instead testing the entire new design against today's listing, report a package-level result, not an isolated ordering or font effect.",
+    "measurement": "Use Apple's product-page-optimization conversion rate, impressions and confidence for the randomized comparison. Keep App Store downloads, PostHog workout activation, trials and verified paid subscriptions as separate measures; do not equate installs or sandbox Premium with revenue.",
+    "decision": "Record the control and traffic allocation before launch. Use Apple's duration estimate and confidence readout; if volume cannot support a meaningful result within the allowed test duration, report inconclusive. No calendar-only winner and no promised uplift."
+  },
+  "distribution": [
+    {
+      "source": "Summer Dream / general running demos",
+      "destination": "main-listing",
+      "action": "Keep the promise about useful coaching during the run. Reuse native ingredients, not cinematic composites as screenshots."
+    },
+    {
+      "source": "Recovery / easy-run content",
+      "destination": "guided-runs",
+      "action": "Match the page to effort guidance; do not imply captured live-walking proof from a setup-only clip."
+    },
+    {
+      "source": "Watch-specific runner content",
+      "destination": "watch-coaching",
+      "action": "Hold until authentic current Watch proof exists. Use only the unique URL returned by an approved custom page."
+    },
+    {
+      "source": "Stadium / interval content",
+      "destination": "main-listing",
+      "action": "Use the interval benefit in follow-up media. The current Watch page is not an interval-ad destination without Watch-specific messaging."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "workouts-en",
+  "label": "Choose your workout",
+  "locale": "en",
+  "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+  "hardware": "unbranded procedural handset",
+  "source_id": "C012",
+  "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/C012.png",
+  "source_sha256": "f1783a0f2f3ca970fb52c6c599e143bc64ab545b20943d6645ded3ba582d4e99",
+  "source_dimensions": [
+    1179,
+    2556
+  ],
+  "source_aspect": 2.16793893129771,
+  "screen_aspect": 2.16793893129771,
+  "source_ui_redrawn": false,
+  "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+  "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+  "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+  "yaw_degrees": -8,
+  "pitch_degrees": 0,
+  "camera_roll_degrees": 0,
+  "projection": {
+    "max_output_pixels_per_source_pixel": 0.7335456658715539,
+    "corners_tl_tr_br_bl": [
+      [
+        240.56661987304688,
+        267.0498962402344
+      ],
+      [
+        1080.6785888671875,
+        293.3252258300781
+      ],
+      [
+        1080.6785888671875,
+        2106.6748046875
+      ],
+      [
+        240.56661987304688,
+        2132.9501953125
+      ]
+    ]
+  },
+  "size": [
+    1320,
+    2400
+  ],
+  "engine": "CYCLES",
+  "samples": 256,
+  "blender_version": "5.2.1 LTS",
+  "hardware_refinement": {
+    "body_corner_radius": 1.02,
+    "front_glass_corner_radius": 0.885,
+    "source_screen_mask_unchanged": true,
+    "source_screen_fully_enclosed": true,
+    "ui_geometry_before": "c6ff1e939e7bac726fdf4f5149b8cdbc87f540a26f032c5d4cb41ad4bed19b94",
+    "ui_geometry_after": "c6ff1e939e7bac726fdf4f5149b8cdbc87f540a26f032c5d4cb41ad4bed19b94",
+    "geometry_helper": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-04-coachi-cinematic-v2/pilot/blender/build_phone.py",
+    "geometry_helper_sha256": "3bc7c0821f02114f7fe98dbd5ea1fca5d87ad2f5ab71aaa2a48f656c979eb77a"
+  },
+  "finish": "satin graphite with rounded hardware rings and neutral softbox reflections",
+  "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+  "render": "workouts-en.png",
+  "sha256": "1f0a2a83bd4e654a09a6f25a762f74eb440e922691cc4517ad7d8c3d23d2d716",
+  "editable_scene": "workouts-en.blend",
+  "editable_scene_sha256": "4e93501744473baebb86e1bbc13476056391a5886823f000b87743ab397738cb",
+  "published": false
+}

@@ -1,0 +1,1481 @@
+{
+  "status": "LOCAL_REVIEW_ONLY",
+  "app_id": "6760587172",
+  "default_metadata_unchanged": true,
+  "published": false,
+  "upload_cleared": false,
+  "sets": [
+    {
+      "page_id": "guided-runs",
+      "locale": "en-US",
+      "promotional_text": "Find your running rhythm with live guidance. Unlock Coachi+ for realtime AI coaching and 3 unique coach voices. Subscription required for Coachi+.",
+      "promotional_text_characters": 146,
+      "cards": [
+        {
+          "id": "01-coach",
+          "position": 1,
+          "source_id": "C097",
+          "source_sha256": "bf506ddc6d0874bb59791527e31140552467d88e1911aa9aba054c578ada952a",
+          "crop": [
+            0,
+            470,
+            886,
+            1320
+          ],
+          "file": "screenshots/guided-runs/en-US/01-coach.png",
+          "thumbnail": "thumbnails/guided-runs/en-US/01-coach.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "4412d2422403c2f9b7807bb557dc2d46f2865fa294703bb149af86e89a38a665",
+          "body": [
+            "Follow the countdown.",
+            "Start sooner when you're ready."
+          ],
+          "title": [
+            "Warm up.",
+            "Start ready."
+          ],
+          "footer": "Genuine iPhone app detail",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen with existing map redaction"
+        },
+        {
+          "id": "02-intensity",
+          "position": 2,
+          "source_id": "C032",
+          "source_sha256": "003e5d1c2d4ca7811ef9c35c44c06f5558de4880a02b88ec04ab2df79caebb08",
+          "crop": [
+            0,
+            485,
+            886,
+            928
+          ],
+          "file": "screenshots/guided-runs/en-US/02-intensity.png",
+          "thumbnail": "thumbnails/guided-runs/en-US/02-intensity.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "eb2c64a44b797035d8cc6c829198e04e183353e1848b81db52b08fd55831359e",
+          "body": [
+            "Choose your intensity.",
+            "Let Coachi guide the effort."
+          ],
+          "title": [
+            "Easy day?",
+            "Keep it easy."
+          ],
+          "footer": "Example settings · Your heart-rate target is personal",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen"
+        },
+        {
+          "id": "03-distance",
+          "position": 3,
+          "source_id": "target-en",
+          "source_sha256": "ae6c74d26584d1b14d92fdf85dec7cb9d833869b159cfbae86e6c21859e130dd",
+          "crop": null,
+          "file": "screenshots/guided-runs/en-US/03-distance.png",
+          "thumbnail": "thumbnails/guided-runs/en-US/03-distance.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "0500d5bcc1e97b5bf72750e6e129d8fbffaf775c7327f639246c079b15319d99",
+          "body": [
+            "Choose your distance",
+            "with Target Run."
+          ],
+          "title": [
+            "Set a goal.",
+            "Make it a run."
+          ],
+          "footer": "Genuine Target Run setup",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS video frame"
+        },
+        {
+          "id": "04-workout",
+          "position": 4,
+          "source_id": "C012",
+          "source_sha256": "f1783a0f2f3ca970fb52c6c599e143bc64ab545b20943d6645ded3ba582d4e99",
+          "crop": null,
+          "file": "screenshots/guided-runs/en-US/04-workout.png",
+          "thumbnail": "thumbnails/guided-runs/en-US/04-workout.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "b530860b3bf5cf0e06bf9e0a39cf17963b2dc803b666d06228ec3781e781606a",
+          "body": [
+            "Timed, free runs, intervals",
+            "or a distance goal."
+          ],
+          "title": [
+            "Your day.",
+            "Your workout."
+          ],
+          "footer": "Genuine workout selection",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine_ios_screen"
+        },
+        {
+          "id": "05-review",
+          "position": 5,
+          "source_id": "C119",
+          "source_sha256": "0a1325565fa702a708961f43c95b9e5cce78e1f8850d84a70660723d7884b804",
+          "crop": null,
+          "file": "screenshots/guided-runs/en-US/05-review.png",
+          "thumbnail": "thumbnails/guided-runs/en-US/05-review.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "741494d3daa32666a9adebd4deca0a234bd4461fc089abd84f0604e2f2ea0399",
+          "body": [
+            "Review your Coachi Score",
+            "and open your feedback."
+          ],
+          "title": [
+            "Finish proud.",
+            "Learn more."
+          ],
+          "footer": "One real workout example · Results vary",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine Coachi screenshot"
+        }
+      ]
+    },
+    {
+      "page_id": "guided-runs",
+      "locale": "no",
+      "promotional_text": "Finn løperytmen med veiledning underveis. Lås opp Coachi+ for AI-coaching i sanntid og 3 unike coachstemmer. Coachi+ krever abonnement.",
+      "promotional_text_characters": 135,
+      "cards": [
+        {
+          "id": "01-coach",
+          "position": 1,
+          "source_id": "C097",
+          "source_sha256": "bf506ddc6d0874bb59791527e31140552467d88e1911aa9aba054c578ada952a",
+          "crop": [
+            0,
+            470,
+            886,
+            1320
+          ],
+          "file": "screenshots/guided-runs/no/01-coach.png",
+          "thumbnail": "thumbnails/guided-runs/no/01-coach.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "ad355d41e1acdc9f4620b0cfc7f3ec4e7b7ce36c087d8990a95a5491b4852f75",
+          "body": [
+            "Følg nedtellingen.",
+            "Start tidligere når du er klar."
+          ],
+          "title": [
+            "Varm opp.",
+            "Start klar."
+          ],
+          "footer": "Ekte utsnitt fra iPhone-appen",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen with existing map redaction"
+        },
+        {
+          "id": "02-intensity",
+          "position": 2,
+          "source_id": "C032",
+          "source_sha256": "003e5d1c2d4ca7811ef9c35c44c06f5558de4880a02b88ec04ab2df79caebb08",
+          "crop": [
+            0,
+            485,
+            886,
+            928
+          ],
+          "file": "screenshots/guided-runs/no/02-intensity.png",
+          "thumbnail": "thumbnails/guided-runs/no/02-intensity.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "2d9a684538afb85c7d5eb4222322fb35379f1ff8c743335403abc49aeaf1b676",
+          "body": [
+            "Velg intensitet.",
+            "Få veiledning underveis."
+          ],
+          "title": [
+            "Rolig dag?",
+            "Hold det rolig."
+          ],
+          "footer": "Eksempelinnstillinger · Pulsmålet ditt er personlig",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen"
+        },
+        {
+          "id": "03-distance",
+          "position": 3,
+          "source_id": "C087",
+          "source_sha256": "f664c20e724b1294eb89b5edf23634074558706b08e261e6d945f6c924eb1d7b",
+          "crop": null,
+          "file": "screenshots/guided-runs/no/03-distance.png",
+          "thumbnail": "thumbnails/guided-runs/no/03-distance.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "49a879f7e8184fa6f16cc056c3197ac7e9f73b58c6d720d26be32244cd8e3233",
+          "body": [
+            "Velg distansen din",
+            "med Target Run."
+          ],
+          "title": [
+            "Sett et mål.",
+            "Ta løpeturen."
+          ],
+          "footer": "Ekte distansevalg i appen",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "no",
+          "source_kind": "genuine iOS screenshot"
+        },
+        {
+          "id": "04-workout",
+          "position": 4,
+          "source_id": "C012",
+          "source_sha256": "f1783a0f2f3ca970fb52c6c599e143bc64ab545b20943d6645ded3ba582d4e99",
+          "crop": null,
+          "file": "screenshots/guided-runs/no/04-workout.png",
+          "thumbnail": "thumbnails/guided-runs/no/04-workout.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "4e2fbf269d7a5b2f1f3c76d0b048cb6ece29f7661b6f515785a8ff829a814aaa",
+          "body": [
+            "Tid, fri løping, intervaller",
+            "eller et distansemål."
+          ],
+          "title": [
+            "Din dag.",
+            "Din økt."
+          ],
+          "footer": "Ekte øktvalg · Engelsk appvisning i utkastet",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine_ios_screen"
+        },
+        {
+          "id": "05-review",
+          "position": 5,
+          "source_id": "C119",
+          "source_sha256": "0a1325565fa702a708961f43c95b9e5cce78e1f8850d84a70660723d7884b804",
+          "crop": null,
+          "file": "screenshots/guided-runs/no/05-review.png",
+          "thumbnail": "thumbnails/guided-runs/no/05-review.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "02b6c52784a2eee9e1dd2d4b99e182c945901e370c9df67f913fa570e00d6d93",
+          "body": [
+            "Se din Coachi Score",
+            "og åpne tilbakemeldingen."
+          ],
+          "title": [
+            "Fullført.",
+            "Mer å lære."
+          ],
+          "footer": "Eksempel fra én ekte økt · Resultater varierer",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine Coachi screenshot"
+        }
+      ]
+    },
+    {
+      "page_id": "watch-coaching",
+      "locale": "en-US",
+      "promotional_text": "Use your heart rate for live guidance with a compatible watch and iPhone. Coachi+ adds realtime AI coaching and 3 unique voices. Subscription required.",
+      "promotional_text_characters": 151,
+      "cards": [
+        {
+          "id": "01-heart-rate",
+          "position": 1,
+          "source_id": "C097",
+          "source_sha256": "bf506ddc6d0874bb59791527e31140552467d88e1911aa9aba054c578ada952a",
+          "crop": [
+            0,
+            470,
+            886,
+            1320
+          ],
+          "file": "screenshots/watch-coaching/en-US/01-heart-rate.png",
+          "thumbnail": "thumbnails/watch-coaching/en-US/01-heart-rate.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "615b6953d71a54399150a2979084419177a6b072b0be33c86510de6aac164049",
+          "body": [
+            "See the countdown on iPhone.",
+            "Start sooner when you're ready."
+          ],
+          "title": [
+            "Warm up.",
+            "Then go."
+          ],
+          "footer": "Genuine iPhone app detail",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen with existing map redaction"
+        },
+        {
+          "id": "02-target",
+          "position": 2,
+          "source_id": "C042",
+          "source_sha256": "b140639465ff7957035229da34d2e6aa1dcca6a89fd9c36a0f0a16888e6a6729",
+          "crop": [
+            0,
+            485,
+            886,
+            928
+          ],
+          "file": "screenshots/watch-coaching/en-US/02-target.png",
+          "thumbnail": "thumbnails/watch-coaching/en-US/02-target.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "f065d48b1e08363faba9aa57fc5c65e2d9f913f6573d6bf93772ac0dbdbf17e4",
+          "body": [
+            "Choose the intensity",
+            "that fits today's session."
+          ],
+          "title": [
+            "Know your",
+            "target effort."
+          ],
+          "footer": "Example target, not a live reading · Targets vary",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen"
+        },
+        {
+          "id": "03-intervals",
+          "position": 3,
+          "source_id": "C062",
+          "source_sha256": "40a9e9d36ab53064341f6962f83df9cb58a4e6d1643cc7b12e4356e166480fc6",
+          "crop": null,
+          "file": "screenshots/watch-coaching/en-US/03-intervals.png",
+          "thumbnail": "thumbnails/watch-coaching/en-US/03-intervals.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "f4001ba8c3c1ef66ab9b8fa6974ab9bafed13f7c9d247ff4b6db6ee41394e346",
+          "body": [
+            "Choose your work duration.",
+            "Build the session around you."
+          ],
+          "title": [
+            "Intervals.",
+            "Your way."
+          ],
+          "footer": "Genuine interval setup · Example settings",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen"
+        },
+        {
+          "id": "04-review",
+          "position": 4,
+          "source_id": "C119",
+          "source_sha256": "0a1325565fa702a708961f43c95b9e5cce78e1f8850d84a70660723d7884b804",
+          "crop": null,
+          "file": "screenshots/watch-coaching/en-US/04-review.png",
+          "thumbnail": "thumbnails/watch-coaching/en-US/04-review.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "5ffa5f4154016331357d2d6836858250891375631abd258377b7899fd558ed0a",
+          "body": [
+            "See your Coachi Score",
+            "alongside your workout stats."
+          ],
+          "title": [
+            "More than",
+            "a finish time."
+          ],
+          "footer": "One real workout example · Results vary",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine Coachi screenshot"
+        }
+      ]
+    },
+    {
+      "page_id": "watch-coaching",
+      "locale": "no",
+      "promotional_text": "Bruk pulsen til veiledning med kompatibel klokke og iPhone. Coachi+ gir AI-coaching i sanntid og 3 unike coachstemmer. Abonnement kreves.",
+      "promotional_text_characters": 137,
+      "cards": [
+        {
+          "id": "01-heart-rate",
+          "position": 1,
+          "source_id": "C097",
+          "source_sha256": "bf506ddc6d0874bb59791527e31140552467d88e1911aa9aba054c578ada952a",
+          "crop": [
+            0,
+            470,
+            886,
+            1320
+          ],
+          "file": "screenshots/watch-coaching/no/01-heart-rate.png",
+          "thumbnail": "thumbnails/watch-coaching/no/01-heart-rate.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "8ca6dc016b0fc05772360eebb76f477daadfda89a4244b47ece2517045732b33",
+          "body": [
+            "Se nedtellingen på iPhone.",
+            "Start tidligere når du er klar."
+          ],
+          "title": [
+            "Varm opp.",
+            "Så er du klar."
+          ],
+          "footer": "Ekte utsnitt fra iPhone-appen",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen with existing map redaction"
+        },
+        {
+          "id": "02-target",
+          "position": 2,
+          "source_id": "C042",
+          "source_sha256": "b140639465ff7957035229da34d2e6aa1dcca6a89fd9c36a0f0a16888e6a6729",
+          "crop": [
+            0,
+            485,
+            886,
+            928
+          ],
+          "file": "screenshots/watch-coaching/no/02-target.png",
+          "thumbnail": "thumbnails/watch-coaching/no/02-target.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "b05a00e21bca71e899af4c22c200645b3be9893c1cef661f3458f854ef0dec4c",
+          "body": [
+            "Finn intensiteten",
+            "som passer økten din."
+          ],
+          "title": [
+            "Velg innsats",
+            "for dagen."
+          ],
+          "footer": "Eksempel på pulsmål, ikke en direkte pulsmåling",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen"
+        },
+        {
+          "id": "03-intervals",
+          "position": 3,
+          "source_id": "C062",
+          "source_sha256": "40a9e9d36ab53064341f6962f83df9cb58a4e6d1643cc7b12e4356e166480fc6",
+          "crop": null,
+          "file": "screenshots/watch-coaching/no/03-intervals.png",
+          "thumbnail": "thumbnails/watch-coaching/no/03-intervals.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "663ec9958b39b2ae60a86d7c41d1a5554184be7096476096b1307fd1f3f36d2b",
+          "body": [
+            "Velg varigheten på dragene.",
+            "Bygg økten som passer deg."
+          ],
+          "title": [
+            "Intervaller.",
+            "På din måte."
+          ],
+          "footer": "Ekte intervalloppsett · Eksempelinnstillinger",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine iOS screen"
+        },
+        {
+          "id": "04-review",
+          "position": 4,
+          "source_id": "C119",
+          "source_sha256": "0a1325565fa702a708961f43c95b9e5cce78e1f8850d84a70660723d7884b804",
+          "crop": null,
+          "file": "screenshots/watch-coaching/no/04-review.png",
+          "thumbnail": "thumbnails/watch-coaching/no/04-review.jpg",
+          "width": 1320,
+          "height": 2868,
+          "sha256": "2973a85a10eae86b20035df3afb135143ee1173eca4c8a858d5aaaa6d3850563",
+          "body": [
+            "Se din Coachi Score",
+            "sammen med øktens nøkkeltall."
+          ],
+          "title": [
+            "Mer enn",
+            "en sluttid."
+          ],
+          "footer": "Eksempel fra én ekte økt · Resultater varierer",
+          "status": "DRAFT_NOT_UPLOAD_CLEARED",
+          "ui_locale": "en-US",
+          "source_kind": "genuine Coachi screenshot"
+        }
+      ]
+    }
+  ],
+  "text_bounds": [
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Warm up.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 596.4500122070312
+    },
+    {
+      "text": "Start ready.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 716.530029296875
+    },
+    {
+      "text": "Follow the countdown.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 527.3599853515625
+    },
+    {
+      "text": "Start sooner when you're ready.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 745.6500244140625
+    },
+    {
+      "text": "Stationary warmup example",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 495.7799987792969
+    },
+    {
+      "text": "Genuine iPhone app detail",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 495.05999755859375
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Easy day?",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 653.0399780273438
+    },
+    {
+      "text": "Keep it easy.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 797.2899780273438
+    },
+    {
+      "text": "Choose your intensity.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 520.4500122070312
+    },
+    {
+      "text": "Let Coachi guide the effort.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 635.4600219726562
+    },
+    {
+      "text": "Example of a personal heart-rate target",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 695.9400024414062
+    },
+    {
+      "text": "Example settings · Your heart-rate target is personal",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 968.8499755859375
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Set a goal.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 660.1900024414062
+    },
+    {
+      "text": "Make it a run.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 843.5599975585938
+    },
+    {
+      "text": "Choose your distance",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 512.6400146484375
+    },
+    {
+      "text": "with Target Run.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 382
+    },
+    {
+      "text": "Genuine Target Run setup",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 489.55999755859375
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Your day.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 581.8800048828125
+    },
+    {
+      "text": "Your workout.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 877.530029296875
+    },
+    {
+      "text": "Timed, free runs, intervals",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 610.6900024414062
+    },
+    {
+      "text": "or a distance goal.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 433.1099853515625
+    },
+    {
+      "text": "Genuine workout selection",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 494.9599914550781
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Finish proud.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 835.8900146484375
+    },
+    {
+      "text": "Learn more.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 755.5800170898438
+    },
+    {
+      "text": "Review your Coachi Score",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 624.47998046875
+    },
+    {
+      "text": "and open your feedback.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 583.4400024414062
+    },
+    {
+      "text": "One real workout · Results vary",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 560.2000122070312
+    },
+    {
+      "text": "One real workout example · Results vary",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 758.6300048828125
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Varm opp.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 638.1500244140625
+    },
+    {
+      "text": "Start klar.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 601.6699829101562
+    },
+    {
+      "text": "Følg nedtellingen.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 421.30999755859375
+    },
+    {
+      "text": "Start tidligere når du er klar.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 651.0399780273438
+    },
+    {
+      "text": "Eksempel fra en stillestående test",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 598.0900268554688
+    },
+    {
+      "text": "Ekte utsnitt fra iPhone-appen",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 541.6699829101562
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Rolig dag?",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 681.9099731445312
+    },
+    {
+      "text": "Hold det rolig.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 887.260009765625
+    },
+    {
+      "text": "Velg intensitet.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 344.7300109863281
+    },
+    {
+      "text": "Få veiledning underveis.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 574.510009765625
+    },
+    {
+      "text": "Eksempel på personlig pulsmål",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 553.6099853515625
+    },
+    {
+      "text": "Eksempelinnstillinger · Pulsmålet ditt er personlig",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 915.0599975585938
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Sett et mål.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 704.2100219726562
+    },
+    {
+      "text": "Ta løpeturen.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 818.9400024414062
+    },
+    {
+      "text": "Velg distansen din",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 430.2099914550781
+    },
+    {
+      "text": "med Target Run.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 390.8500061035156
+    },
+    {
+      "text": "Ekte distansevalg i appen",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 478.6499938964844
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Din dag.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 520.6500244140625
+    },
+    {
+      "text": "Din økt.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 483.9800109863281
+    },
+    {
+      "text": "Tid, fri løping, intervaller",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 563.5399780273438
+    },
+    {
+      "text": "eller et distansemål.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 471.3299865722656
+    },
+    {
+      "text": "Ekte øktvalg · Engelsk appvisning i utkastet",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 810.0599975585938
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Fullført.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 491.20001220703125
+    },
+    {
+      "text": "Mer å lære.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 697
+    },
+    {
+      "text": "Se din Coachi Score",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 483.1600036621094
+    },
+    {
+      "text": "og åpne tilbakemeldingen.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 618.7899780273438
+    },
+    {
+      "text": "Én ekte økt · Resultater varierer",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 566.8599853515625
+    },
+    {
+      "text": "Eksempel fra én ekte økt · Resultater varierer",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 847.2999877929688
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Warm up.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 596.4500122070312
+    },
+    {
+      "text": "Then go.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 549.9099731445312
+    },
+    {
+      "text": "See the countdown on iPhone.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 721.9400024414062
+    },
+    {
+      "text": "Start sooner when you're ready.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 745.6500244140625
+    },
+    {
+      "text": "Stationary warmup example · Watch image pending",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 916.739990234375
+    },
+    {
+      "text": "Genuine iPhone app detail",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 495.05999755859375
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Know your",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 681.97998046875
+    },
+    {
+      "text": "target effort.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 777.3699951171875
+    },
+    {
+      "text": "Choose the intensity",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 480.2300109863281
+    },
+    {
+      "text": "that fits today's session.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 561
+    },
+    {
+      "text": "Example of a personal heart-rate target",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 695.9400024414062
+    },
+    {
+      "text": "Example target, not a live reading · Targets vary",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 891
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "Intervals.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 579.6300048828125
+    },
+    {
+      "text": "Your way.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 603.9299926757812
+    },
+    {
+      "text": "Choose your work duration.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 648.1099853515625
+    },
+    {
+      "text": "Build the session around you.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 695.3400268554688
+    },
+    {
+      "text": "Genuine interval setup · Example settings",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 777.4099731445312
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "LIVE RUNNING GUIDANCE",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 380.04998779296875
+    },
+    {
+      "text": "More than",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 630.6699829101562
+    },
+    {
+      "text": "a finish time.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 806.8200073242188
+    },
+    {
+      "text": "See your Coachi Score",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 545.010009765625
+    },
+    {
+      "text": "alongside your workout stats.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 686.4099731445312
+    },
+    {
+      "text": "One real workout · Results vary",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 560.2000122070312
+    },
+    {
+      "text": "One real workout example · Results vary",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 758.6300048828125
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Varm opp.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 638.1500244140625
+    },
+    {
+      "text": "Så er du klar.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 821.780029296875
+    },
+    {
+      "text": "Se nedtellingen på iPhone.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 633.5700073242188
+    },
+    {
+      "text": "Start tidligere når du er klar.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 651.0399780273438
+    },
+    {
+      "text": "Stillestående test · Klokkebilde mangler",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 700.3699951171875
+    },
+    {
+      "text": "Ekte utsnitt fra iPhone-appen",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 541.6699829101562
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Velg innsats",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 770.280029296875
+    },
+    {
+      "text": "for dagen.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 638.02001953125
+    },
+    {
+      "text": "Finn intensiteten",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 388.9100036621094
+    },
+    {
+      "text": "som passer økten din.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 521.3800048828125
+    },
+    {
+      "text": "Eksempel på personlig pulsmål",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 553.6099853515625
+    },
+    {
+      "text": "Eksempel på pulsmål, ikke en direkte pulsmåling",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 905.77001953125
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Intervaller.",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 660.3900146484375
+    },
+    {
+      "text": "På din måte.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 777.5599975585938
+    },
+    {
+      "text": "Velg varigheten på dragene.",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 663.02001953125
+    },
+    {
+      "text": "Bygg økten som passer deg.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 674.6099853515625
+    },
+    {
+      "text": "Ekte intervalloppsett · Eksempelinnstillinger",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 810.0399780273438
+    },
+    {
+      "text": "coachi",
+      "x": 84,
+      "y": 124,
+      "size": 62,
+      "width": 196.41000366210938
+    },
+    {
+      "text": "VEILEDNING UNDERVEIS",
+      "x": 430,
+      "y": 119,
+      "size": 30,
+      "width": 364.5400085449219
+    },
+    {
+      "text": "Mer enn",
+      "x": 84,
+      "y": 343,
+      "size": 132,
+      "width": 506.0899963378906
+    },
+    {
+      "text": "en sluttid.",
+      "x": 84,
+      "y": 486,
+      "size": 132,
+      "width": 623.3300170898438
+    },
+    {
+      "text": "Se din Coachi Score",
+      "x": 88,
+      "y": 589,
+      "size": 53,
+      "width": 483.1600036621094
+    },
+    {
+      "text": "sammen med øktens nøkkeltall.",
+      "x": 88,
+      "y": 657,
+      "size": 53,
+      "width": 748.1300048828125
+    },
+    {
+      "text": "Én ekte økt · Resultater varierer",
+      "x": 88,
+      "y": 733,
+      "size": 40,
+      "width": 566.8599853515625
+    },
+    {
+      "text": "Eksempel fra én ekte økt · Resultater varierer",
+      "x": 84,
+      "y": 2738,
+      "size": 42,
+      "width": 847.2999877929688
+    }
+  ]
+}

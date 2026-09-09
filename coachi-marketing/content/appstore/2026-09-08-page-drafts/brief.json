@@ -1,0 +1,213 @@
+{
+  "status": "LOCAL_REVIEW_ONLY",
+  "app_id": "6760587172",
+  "release_context": {
+    "version": "4.0.2",
+    "status": "OWNER_CONFIRMED_LIVE",
+    "owner_confirmation_date": "2026-09-09",
+    "public_lookup": {
+      "checked_at": "2026-09-09T05:56:37.178Z",
+      "country": "no",
+      "version": "4.0.1",
+      "current_version_release_date": "2026-09-05T20:37:43Z",
+      "url": "https://itunes.apple.com/lookup?id=6760587172&country=no"
+    },
+    "note": "Owner reports 4.0.2 is live. The public Norway lookup still returned 4.0.1 at the recorded check; release propagation and the exact public build are not independently confirmed here. This release update does not publish or clear the new creative package."
+  },
+  "output_size": [1320, 2868],
+  "default_metadata_unchanged": true,
+  "publication_authorized": false,
+  "source_collection": "content/ads/reference/2026-09-08-coachi-cta-phone-collection/manifest.json",
+  "selected_sources": ["C008", "C012", "C016", "C020", "C022", "C032", "C042", "C052", "C062", "C087", "C088", "C097", "C119", "C120", "C122"],
+  "blocked_sources": {
+    "fastlane/screenshots": "User explicitly rejected outdated cards and copied versions, 2026-09-08.",
+    "C072": "Incorrect native total-time footer; do not repaint.",
+    "C082": "Sheet dismissal transition.",
+    "C083": "Unsettled rest value.",
+    "C084": "Unsettled rest value.",
+    "C085": "Unsettled rest value.",
+    "C115": "Historical generated phone UI.",
+    "C117": "Historical generated watch UI."
+  },
+  "pages": [
+    {
+      "id": "guided-runs",
+      "internal_name": "Coachi — Right intensity",
+      "audience": "Easy-run, recovery and everyday-run traffic. Recovery ad is a candidate match, not a demonstrated conversion winner.",
+      "localizations": {
+        "en-US": {
+          "label": "Guided runs",
+          "promotional_text": "Find your running rhythm with live guidance. Unlock Coachi+ for realtime AI coaching and 3 unique coach voices. Subscription required for Coachi+.",
+          "keyword_candidates": ["running coach", "easy run", "heart rate training"],
+          "cards": [
+            {"id":"01-coach","title":["Warm up.","Start ready."],"body":["Follow the countdown.","Start sooner when you're ready."],"source":"C097","crop":[0,470,886,1320],"evidence_note":"Stationary warmup example","footer":"Genuine iPhone app detail"},
+            {"id":"02-intensity","title":["Easy day?","Keep it easy."],"body":["Choose your intensity.","Let Coachi guide the effort."],"source":"C032","crop":[0,485,886,928],"footer":"Example settings · Your heart-rate target is personal"},
+            {"id":"03-distance","title":["Set a goal.","Make it a run."],"body":["Choose your distance","with Target Run."],"source":"target-en","footer":"Genuine Target Run setup"},
+            {"id":"04-workout","title":["Your day.","Your workout."],"body":["Timed, free runs, intervals","or a distance goal."],"source":"C012","footer":"Genuine workout selection"},
+            {"id":"05-review","title":["Finish proud.","Learn more."],"body":["Review your Coachi Score","and open your feedback."],"source":"C119","max_image_width":760,"footer":"One real workout example · Results vary"}
+          ]
+        },
+        "no": {
+          "label": "Løp med veiledning",
+          "promotional_text": "Finn løperytmen med veiledning underveis. Lås opp Coachi+ for AI-coaching i sanntid og 3 unike coachstemmer. Coachi+ krever abonnement.",
+          "keyword_candidates": ["løpecoach", "rolig løping", "pulstrening"],
+          "cards": [
+            {"id":"01-coach","title":["Varm opp.","Start klar."],"body":["Følg nedtellingen.","Start tidligere når du er klar."],"source":"C097","crop":[0,470,886,1320],"evidence_note":"Eksempel fra en stillestående test","footer":"Ekte utsnitt fra iPhone-appen"},
+            {"id":"02-intensity","title":["Rolig dag?","Hold det rolig."],"body":["Velg intensitet.","Få veiledning underveis."],"source":"C032","crop":[0,485,886,928],"footer":"Eksempelinnstillinger · Pulsmålet ditt er personlig"},
+            {"id":"03-distance","title":["Sett et mål.","Ta løpeturen."],"body":["Velg distansen din","med Target Run."],"source":"C087","footer":"Ekte distansevalg i appen"},
+            {"id":"04-workout","title":["Din dag.","Din økt."],"body":["Tid, fri løping, intervaller","eller et distansemål."],"source":"C012","footer":"Ekte øktvalg · Engelsk appvisning i utkastet"},
+            {"id":"05-review","title":["Fullført.","Mer å lære."],"body":["Se din Coachi Score","og åpne tilbakemeldingen."],"source":"C119","max_image_width":760,"footer":"Eksempel fra én ekte økt · Resultater varierer"}
+          ]
+        }
+      },
+      "capture_gaps": ["Current mid-run coaching with a stable connected heart-rate reading; replace the warmup-only first card.", "Native active Talk to Coach and three-voice selection for the paid benefit.", "Higher-resolution copy of the real score result.", "Norwegian UI recaptures for the English-only source screens."]
+    },
+    {
+      "id": "watch-coaching",
+      "internal_name": "Coachi — Watch-connected coaching",
+      "audience": "Watch-data-to-guidance traffic. Apple Watch-specific artwork is held until a current native Watch capture exists; no Garmin photo is presented as Apple Watch.",
+      "localizations": {
+        "en-US": {
+          "label": "Watch-connected coaching",
+          "promotional_text": "Use your heart rate for live guidance with a compatible watch and iPhone. Coachi+ adds realtime AI coaching and 3 unique voices. Subscription required.",
+          "keyword_candidates": ["heart rate coach", "watch running", "interval training"],
+          "cards": [
+            {"id":"01-heart-rate","title":["Warm up.","Then go."],"body":["See the countdown on iPhone.","Start sooner when you're ready."],"source":"C097","crop":[0,470,886,1320],"evidence_note":"Stationary warmup example · Watch image pending","footer":"Genuine iPhone app detail"},
+            {"id":"02-target","title":["Know your","target effort."],"body":["Choose the intensity","that fits today's session."],"source":"C042","crop":[0,485,886,928],"footer":"Example target, not a live reading · Targets vary"},
+            {"id":"03-intervals","title":["Intervals.","Your way."],"body":["Choose your work duration.","Build the session around you."],"source":"C062","footer":"Genuine interval setup · Example settings"},
+            {"id":"04-review","title":["More than","a finish time."],"body":["See your Coachi Score","alongside your workout stats."],"source":"C119","max_image_width":760,"footer":"One real workout example · Results vary"}
+          ]
+        },
+        "no": {
+          "label": "Coaching med pulsklokke",
+          "promotional_text": "Bruk pulsen til veiledning med kompatibel klokke og iPhone. Coachi+ gir AI-coaching i sanntid og 3 unike coachstemmer. Abonnement kreves.",
+          "keyword_candidates": ["pulsklokke", "løpecoach", "intervalltrening"],
+          "cards": [
+            {"id":"01-heart-rate","title":["Varm opp.","Så er du klar."],"body":["Se nedtellingen på iPhone.","Start tidligere når du er klar."],"source":"C097","crop":[0,470,886,1320],"evidence_note":"Stillestående test · Klokkebilde mangler","footer":"Ekte utsnitt fra iPhone-appen"},
+            {"id":"02-target","title":["Velg innsats","for dagen."],"body":["Finn intensiteten","som passer økten din."],"source":"C042","crop":[0,485,886,928],"footer":"Eksempel på pulsmål, ikke en direkte pulsmåling"},
+            {"id":"03-intervals","title":["Intervaller.","På din måte."],"body":["Velg varigheten på dragene.","Bygg økten som passer deg."],"source":"C062","footer":"Ekte intervalloppsett · Eksempelinnstillinger"},
+            {"id":"04-review","title":["Mer enn","en sluttid."],"body":["Se din Coachi Score","sammen med øktens nøkkeltall."],"source":"C119","max_image_width":760,"footer":"Eksempel fra én ekte økt · Resultater varierer"}
+          ]
+        }
+      },
+      "capture_gaps": ["Current native Apple Watch workout capture paired with iPhone. None of ads 1–3 provides this proof.", "Real connected mid-run iPhone guidance, not stationary warmup.", "Native active Talk to Coach and three-voice selection.", "Norwegian UI recaptures and higher-resolution score."]
+    }
+  ],
+  "video_sources": [
+    {"id":"ad-01","role":"Social traffic / source reference only","path":"content/video/generated/2026-09-04-coachi-cinematic-v2/female-cut-v3/edit/coachi-route-v12-summer-dream-tiktok.mp4","note":"Summer Dream V12. Native phone ingredient C097 is reusable. Reconstructed Apple Watch display is excluded from native proof; cinematic ad is not an App Store preview."},
+    {"id":"ad-02","role":"Social traffic / source reference only","path":"content/video/generated/2026-09-07-coachi-stadium-follow-along/edit/tap-phone-v7/coachi-stadium-tap-phone-v7-tiktok-bt709.mp4","note":"Stadium V7. Reuse original interval setup captures, not generated hand scenes or illustrative Garmin data."},
+    {"id":"ad-03","role":"Social traffic / source reference only","path":"content/video/generated/2026-09-06-coachi-cocker-walk/edit/tap-phone-v13/coachi-recovery-tap-phone-v13-tiktok-bt709.mp4","note":"Recovery V13. Reuse actual walking/Recovery setup. No live walking session was captured."},
+    {"id":"native-target","role":"Native preview ingredient","path":"/Users/mariusgaarder/Downloads/ScreenRecording_09-05-2026 12-59-32_1.MP4","safe_segment_seconds":[0.2,2.8],"note":"Native 886×1920; use the distance-picker excerpt, mute original audio. Later 80 km test excluded."},
+    {"id":"native-walking","role":"Native preview ingredient","path":"content/video/generated/2026-09-07-native-captures/originals/ScreenRecording_09-07-2026 17-36-43_1.mov","safe_segment_seconds":[0.7,5.7],"note":"886×1920. Free Walking to Recovery setup; target HR is personal. Audio excluded."},
+    {"id":"native-intervals","role":"Native preview ingredient","path":"content/video/generated/2026-09-07-native-captures/originals/ScreenRecording_09-07-2026 17-40-03_1.MP4","safe_still_times_seconds":[20.8,28.5,34.7],"note":"886×1920. Work and sets are usable. Rest footer, camera, app switcher, active location map and incidental source audio excluded."},
+    {"id":"website-target","role":"Existing silent website excerpt","path":"/Users/mariusgaarder/.codex/worktrees/21c2/treningscoach/static/site-v2/target-run/distance-picker.mp4","note":"640×1386, 2.6 seconds. Native video within a generated webpage handset. Reuse underlying native footage, not surrounding device rendering."}
+  ],
+  "conversion_plan": {
+    "status": "STORYBOARD_ONLY",
+    "publication_authorized": false,
+    "experiment_started": false,
+    "copy_verified_against": "Coachi 4.0.2 (130), immutable tag testflight-4.0.2-130 / 7ca4c8ddb17a27e724078dd2ee33e345ca1689f4. CoachPersonality.swift: CoachVoiceMode has three existing styles, with Personal Trainer free and the other two Premium-only. LiveCoachConversationView.swift: LiveCoachPreviewCopy states realtime AI, three voices and usage limits. Models.swift: LiveVoiceSessionMode supports coach_preview, workout and post_workout. Source verification only; no live session or device capture initiated.",
+    "sequences": {
+      "main-listing": ["live-guidance", "realtime", "voices", "watch-guidance", "learn", "target", "intervals"],
+      "guided-runs": ["live-guidance", "target", "learn", "realtime", "voices", "intervals"],
+      "watch-coaching": ["watch-guidance", "live-guidance", "intervals", "realtime", "voices", "learn"]
+    },
+    "cards": [
+      {
+        "id": "live-guidance", "capture_state": "missing", "paid": false,
+        "en-US": {"title": ["Your run.", "A coach with you."], "body": "Live voice guidance to help you judge your effort."},
+        "no": {"title": ["Løpeturen din.", "Med coach underveis."], "body": "Stemmeveiledning som hjelper deg å styre innsatsen."},
+        "capture": "Record 8–10 seconds of the main workout phase with a stable connected heart-rate signal and a genuine coach cue. Keep the actual workout values and cue together. Avoid the map and personal location; do not substitute stationary warmup or add invented subtitles.",
+        "acceptance": "Readable current iPhone UI, main workout phase, stable signal, actual cue, known build and no private location. A live run must be recorded by the runner; fixture data must be clearly labelled and cannot prove connectivity."
+      },
+      {
+        "id": "watch-guidance", "capture_state": "missing", "paid": false,
+        "en-US": {"title": ["Your heart rate.", "Useful guidance."], "body": "Use a compatible watch with Coachi on your iPhone."},
+        "no": {"title": ["Pulsen din.", "Veiledning underveis."], "body": "Bruk en kompatibel klokke sammen med Coachi på iPhone."},
+        "capture": "Capture the current Apple Watch main-workout screen and matching iPhone state. The located approved Watch HTML is a design reference only; it is not a captured run. Do not rehost it to bypass the browser block.",
+        "acceptance": "Current native Watch screen, identified build/device and accurate companion-phone wording. Simulator metrics labelled demo; paired connectivity requires a real-device check."
+      },
+      {
+        "id": "realtime", "capture_state": "missing", "paid": true,
+        "en-US": {"title": ["Talk to your coach.", "Find your energy."], "body": "Realtime AI coaching before, during and after your run.", "disclosure": "Coachi+ subscription required. Usage limits apply."},
+        "no": {"title": ["Snakk med coachen.", "Få ny energi."], "body": "AI-coaching i sanntid før, under og etter løpeturen.", "disclosure": "Krever Coachi+-abonnement. Bruksgrenser gjelder."},
+        "capture": "Capture an active Talk to Coach conversation, with permission/startup dialogs finished. Use only an existing approved recording or a user-run session; this marketing task does not start a paid AI session. Keep a visible Coachi+ qualification outside the app UI.",
+        "acceptance": "Actual active conversation, not a loading or preview-exhausted screen. Verify the demonstrated access and current limits; do not imply unlimited or permanently free conversation."
+      },
+      {
+        "id": "voices", "capture_state": "missing", "paid": true,
+        "en-US": {"title": ["3 unique voices.", "Find your coach."], "body": "Calm, driven or encouraging. Choose your coaching style.", "disclosure": "All three available with Coachi+. Subscription required."},
+        "no": {"title": ["3 unike stemmer.", "Finn din coach."], "body": "Rolig, energisk eller oppmuntrende. Velg stilen din.", "disclosure": "Alle tre er tilgjengelige med Coachi+. Abonnement kreves."},
+        "capture": "Open Your Coach and capture all three existing voice choices on the current build. Capture labels and selected state unchanged. No voice generation, new voice names or fabricated waveform transcript.",
+        "acceptance": "All three existing choices visible and matched to current app labels. One default voice is free; the copy must describe unlocking the full choice, not claim every voice requires payment."
+      },
+      {
+        "id": "learn", "capture_state": "recapture", "paid": false,
+        "candidate_sources": {"en-US": "C119", "no": "C119"},
+        "en-US": {"title": ["Finish proud.", "Learn for next time."], "body": "Review your workout and read your coach's feedback."},
+        "no": {"title": ["Fullført.", "Mer å ta med videre."], "body": "Se tilbake på økten og les coachens tilbakemelding."},
+        "capture": "Capture the current post-workout summary and opened written feedback at native resolution. The existing score-100 image is a low-resolution reference, not proof of a typical outcome or of the latest results layout. Avoid precise route endpoints.",
+        "acceptance": "Current readable summary plus actual written feedback; no invented learning claim, hidden personal data or guaranteed score. Fully Norwegian UI is needed for the Norwegian set."
+      },
+      {
+        "id": "target", "capture_state": "verify", "paid": false,
+        "candidate_sources": {"en-US": "target-en", "no": "C087"},
+        "en-US": {"title": ["Set a goal.", "Go for it."], "body": "Choose your distance with Target Run."},
+        "no": {"title": ["Sett et mål.", "Gå for det."], "body": "Velg distansen din med Target Run."},
+        "capture": "Reuse the selected native 5 km picker after verifying it against the release. Both English and Norwegian source candidates already exist. Keep the source pixels and selected distance unchanged.",
+        "acceptance": "Known current build, correct locale, complete readable controls and original source hash. A target picker is setup evidence, not proof of completing that distance."
+      },
+      {
+        "id": "intervals", "capture_state": "verify", "paid": false,
+        "candidate_sources": {"en-US": "C052"},
+        "en-US": {"title": ["Run. Recover.", "Repeat."], "body": "Choose the sets that make up your interval session."},
+        "no": {"title": ["Løp. Hent deg inn.", "Gjenta."], "body": "Velg antall drag i intervalløkten din."},
+        "capture": "Use the clean C052 four-set screen after release verification. Capture the equivalent Norwegian screen. Do not reuse C062's truncated label or C072's incorrect total-time footer.",
+        "acceptance": "Clean sets screen, complete labels and known current build. No English native UI in the final Norwegian set."
+      }
+    ],
+    "capture_order": ["live-guidance", "realtime", "voices", "watch-guidance", "learn", "target", "intervals"],
+    "capture_record_fields": ["app_version", "build_number", "device", "os_version", "app_language", "captured_at", "source_sha256", "real_session_or_labelled_demo", "usage_rights_checked", "privacy_checked"],
+    "global_gates": [
+      "Verify all source screens against the release being promoted; export dates alone do not establish the installed build.",
+      "Replace missing and low-resolution media. Verify native language, source rights and privacy for every selected card.",
+      "Check full size and App Store search-thumbnail size; verify browser layout after Mac unlock.",
+      "Approve the final creative and Apple hardware treatment before any upload. Keep Shared Workouts out while gated.",
+      "Obtain separate authorization for upload, submission and experiment activation, then read back each external state."
+    ],
+    "preview": {
+      "status": "NOT_RENDERABLE_MISSING_FOOTAGE", "duration_seconds": 24,
+      "segments": [
+        {"start": 0, "end": 5, "card": "live-guidance", "note": "Lead with a genuine coaching moment. Any caption must match the actual cue."},
+        {"start": 5, "end": 8, "card": "target", "note": "Native distance selection. Existing 2.6-second excerpt is an ingredient; do not stretch it into the whole preview."},
+        {"start": 8, "end": 15, "card": "realtime", "note": "Actual conversation with visible Coachi+ disclosure. Existing approved audio only."},
+        {"start": 15, "end": 18, "card": "voices", "note": "Show the real three-voice selector; no new audio generation."},
+        {"start": 18, "end": 24, "card": "learn", "note": "End on actual workout feedback. Avoid maps containing private locations."}
+      ],
+      "note": "Editorial timing proposal, not a rendered video. Use native iPhone footage, keep it understandable muted and leave cinematic ad scenes outside the App Store preview."
+    },
+    "experiment": {
+      "status": "NOT_STARTED", "treatments": 1, "proposed_treatment_traffic_percent": 50, "spend_authorized": false,
+      "control_order": ["target", "intervals", "live-guidance", "realtime", "voices", "watch-guidance", "learn"],
+      "treatment_order": ["live-guidance", "realtime", "voices", "watch-guidance", "learn", "target", "intervals"],
+      "hypothesis": "A coaching-first first-three-image sequence communicates Coachi's distinct value more clearly than setup-first screenshots.",
+      "isolate": "After media clearance, compare one coaching-first treatment with a setup-first control using the SAME seven approved screenshots. Only their order changes: keep font, palette, copy, icon, metadata, subscription offer and all image bytes fixed. The proposed control is not today's live listing; the order-only experiment requires this matched control to be approved and established first. If instead testing the entire new design against today's listing, report a package-level result, not an isolated ordering or font effect.",
+      "measurement": "Use Apple's product-page-optimization conversion rate, impressions and confidence for the randomized comparison. Keep App Store downloads, PostHog workout activation, trials and verified paid subscriptions as separate measures; do not equate installs or sandbox Premium with revenue.",
+      "decision": "Record the control and traffic allocation before launch. Use Apple's duration estimate and confidence readout; if volume cannot support a meaningful result within the allowed test duration, report inconclusive. No calendar-only winner and no promised uplift."
+    },
+    "distribution": [
+      {"source": "Summer Dream / general running demos", "destination": "main-listing", "action": "Keep the promise about useful coaching during the run. Reuse native ingredients, not cinematic composites as screenshots."},
+      {"source": "Recovery / easy-run content", "destination": "guided-runs", "action": "Match the page to effort guidance; do not imply captured live-walking proof from a setup-only clip."},
+      {"source": "Watch-specific runner content", "destination": "watch-coaching", "action": "Hold until authentic current Watch proof exists. Use only the unique URL returned by an approved custom page."},
+      {"source": "Stadium / interval content", "destination": "main-listing", "action": "Use the interval benefit in follow-up media. The current Watch page is not an interval-ad destination without Watch-specific messaging."}
+    ]
+  },
+  "apple_sources": [
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/",
+    "https://developer.apple.com/help/app-store-connect/reference/app-information/app-preview-specifications/",
+    "https://developer.apple.com/app-store/app-previews/",
+    "https://developer.apple.com/app-store/custom-product-pages/",
+    "https://developer.apple.com/app-store/review/guidelines/#accurate-metadata",
+    "https://developer.apple.com/app-store/marketing/guidelines/"
+  ]
+}

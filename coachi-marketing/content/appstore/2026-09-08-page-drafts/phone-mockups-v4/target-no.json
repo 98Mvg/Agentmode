@@ -1,0 +1,68 @@
+{
+  "id": "target-no",
+  "label": "Velg distansen din",
+  "locale": "nb",
+  "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+  "hardware": "unbranded procedural handset",
+  "source_id": "C087",
+  "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/C087.png",
+  "source_sha256": "f664c20e724b1294eb89b5edf23634074558706b08e261e6d945f6c924eb1d7b",
+  "source_dimensions": [
+    1179,
+    2556
+  ],
+  "source_aspect": 2.16793893129771,
+  "screen_aspect": 2.16793893129771,
+  "source_ui_redrawn": false,
+  "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+  "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+  "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+  "yaw_degrees": 0,
+  "pitch_degrees": 0,
+  "camera_roll_degrees": 0,
+  "projection": {
+    "max_output_pixels_per_source_pixel": 0.7197903413910093,
+    "corners_tl_tr_br_bl": [
+      [
+        235.75936889648438,
+        280.2722473144531
+      ],
+      [
+        1084.24072265625,
+        280.2722473144531
+      ],
+      [
+        1084.24072265625,
+        2119.727783203125
+      ],
+      [
+        235.75936889648438,
+        2119.727783203125
+      ]
+    ]
+  },
+  "size": [
+    1320,
+    2400
+  ],
+  "engine": "CYCLES",
+  "samples": 256,
+  "blender_version": "5.2.1 LTS",
+  "hardware_refinement": {
+    "body_corner_radius": 1.02,
+    "front_glass_corner_radius": 0.885,
+    "source_screen_mask_unchanged": true,
+    "source_screen_fully_enclosed": true,
+    "ui_geometry_before": "c6ff1e939e7bac726fdf4f5149b8cdbc87f540a26f032c5d4cb41ad4bed19b94",
+    "ui_geometry_after": "c6ff1e939e7bac726fdf4f5149b8cdbc87f540a26f032c5d4cb41ad4bed19b94",
+    "geometry_helper": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-04-coachi-cinematic-v2/pilot/blender/build_phone.py",
+    "geometry_helper_sha256": "3bc7c0821f02114f7fe98dbd5ea1fca5d87ad2f5ab71aaa2a48f656c979eb77a"
+  },
+  "finish": "satin graphite with rounded hardware rings and neutral softbox reflections",
+  "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+  "render": "target-no.png",
+  "sha256": "aa4b0ab24e6c905a89ce4143d1a7681246b110c87f2d844b872bdde0b7eebc59",
+  "editable_scene": "target-no.blend",
+  "editable_scene_sha256": "864d1a269d60df499ce3cce64b52aeab2f9446122d1db084e8bed90aafc9d866",
+  "published": false
+}

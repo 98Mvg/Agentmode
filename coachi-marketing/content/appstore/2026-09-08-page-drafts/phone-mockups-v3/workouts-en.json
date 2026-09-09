@@ -1,0 +1,57 @@
+{
+  "id": "workouts-en",
+  "label": "Choose your workout",
+  "locale": "en",
+  "status": "LOCAL_3D_DESIGN_REVIEW_NOT_UPLOAD_CLEARED",
+  "hardware": "unbranded procedural handset",
+  "source_id": "C012",
+  "source_path": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/appstore/2026-09-08-page-drafts/sources/C012.png",
+  "source_sha256": "f1783a0f2f3ca970fb52c6c599e143bc64ab545b20943d6645ded3ba582d4e99",
+  "source_dimensions": [
+    1179,
+    2556
+  ],
+  "source_aspect": 2.16793893129771,
+  "screen_aspect": 2.16793893129771,
+  "source_ui_redrawn": false,
+  "base_scene": "/Volumes/Riot APFS/Agentmode/coachi-marketing/content/video/generated/2026-09-07-native-captures/phones/walking-free/scene/coachi-phone.blend",
+  "base_scene_sha256": "6e72691aacacc04beaacc487d06f0777bf5940ab19be1a96dcc98f6ee2e67385",
+  "inventory_sha256": "10795e9987948e95f5adb5c249e6c9193054b087ea41ad39b50b7034ad417551",
+  "yaw_degrees": -8,
+  "pitch_degrees": 0,
+  "camera_roll_degrees": 0,
+  "projection": {
+    "max_output_pixels_per_source_pixel": 0.7335456658715539,
+    "corners_tl_tr_br_bl": [
+      [
+        240.56661987304688,
+        267.0498962402344
+      ],
+      [
+        1080.6785888671875,
+        293.3252258300781
+      ],
+      [
+        1080.6785888671875,
+        2106.6748046875
+      ],
+      [
+        240.56661987304688,
+        2132.9501953125
+      ]
+    ]
+  },
+  "size": [
+    1320,
+    2400
+  ],
+  "engine": "CYCLES",
+  "samples": 256,
+  "blender_version": "5.2.1 LTS",
+  "color": "sRGB Standard; screen emission 1; no overlaid reflection, grade, glow or invented controls",
+  "render": "workouts-en.png",
+  "sha256": "0e584be40b051146f593843b8323881c2ba18af0d6ea37f623fd6ce0d6d5b396",
+  "editable_scene": "workouts-en.blend",
+  "editable_scene_sha256": "70b86ce6713ecf70bef34b79bda93bf8b3bb88398793145d0b3eb0757f142978",
+  "published": false
+}
